@@ -1,3 +1,19 @@
+# Stage 2 — финальный статус, 20.09.2026
+
+**Stage 2 завершён как техническая поставка. Stage 3 не начинался.**
+
+Проверенный commit: `52d552efb9472fc0852043f4d661c2977ca7d4d0`.  
+Tag: `stage2-apk` → тот же commit.  
+Успешный GitHub Actions run на `master`: №24 (`35523975266`).
+
+Свежие результаты: debug/release build SUCCESS; 52 JVM/Android unit tests без failures/errors/skips; Android Lint без errors; APK verification успешно; Room instrumentation на Android-эмуляторе успешно. Финальный отчёт: `docs/STAGE2_FINAL_REPORT.md`.
+
+Отдельно после установки на реальный телефон остаётся ручная проверка UI и реального звучания установленного чешского TTS-голоса. Это не заменяется CI и не означает начало Stage 3.
+
+Ниже сохранён прежний промежуточный handoff как историческая запись.
+
+---
+
 # Stage 2 — промежуточная передача, 20.09.2026
 
 Stage 2 не объявлен завершённым. Stage 3 не начинался.
