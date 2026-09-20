@@ -1,0 +1,39 @@
+name: Finalize Stage 2 delivery
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/finalize-stage2.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create Stage 2 tag
+        env:
+          TARGET_SHA: 52d552efb9472fc0852043f4d661c2977ca7d4d0
+        run: |
+          set -euo pipefail
+          if git rev-parse -q --verify refs/tags/stage2-apk >/dev/null; then
+            test "$(git rev-list -n 1 stage2-apk)" = "$TARGET_SHA"
+          else
+            git tag stage2-apk "$TARGET_SHA"
+            git push origin refs/tags/stage2-apk
+          fi
+      - name: Create verified source archive
+        env:
+          TARGET_SHA: 52d552efb9472fc0852043f4d661c2977ca7d4d0
+        run: |
+          git archive --format=zip --prefix=AutoSkolaCZ-stage2-source/ "$TARGET_SHA" -o AutoSkolaCZ-stage2-source.zip
+          sha256sum AutoSkolaCZ-stage2-source.zip > AutoSkolaCZ-stage2-source.sha256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AutoSkolaCZ-stage2-source
+          path: |
+            AutoSkolaCZ-stage2-source.zip
+            AutoSkolaCZ-stage2-source.sha256.txt
+          if-no-files-found: error
