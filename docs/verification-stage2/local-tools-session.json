@@ -1,0 +1,31 @@
+{
+  "session": "2026-09-20 local continuation after SSH setup",
+  "verified_source_commit": "8f5baee",
+  "checks": {
+    "python_tool_tests": {
+      "command": "python -m unittest discover -s tools -p 'test_*.py' -v",
+      "tests": 10,
+      "passed": 10,
+      "failures": 0,
+      "exit_code": 0
+    },
+    "structure": {
+      "command": "python tools/validate_structure.py",
+      "exit_code": 0,
+      "room_tables": 29,
+      "room_version": 1,
+      "main_locale_keys_each": 166
+    },
+    "github_dns": {
+      "command": "getent hosts github.com",
+      "attempts_this_session": 2,
+      "initial_exit_code": 2,
+      "final_exit_code": 2,
+      "stdout": ""
+    }
+  },
+  "android_tests_this_session": "not run",
+  "android_lint_this_session": "not run",
+  "apk_build_this_session": "not run",
+  "push_this_session": "not attempted because DNS failed"
+}

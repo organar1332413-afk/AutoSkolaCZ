@@ -1,0 +1,73 @@
+name: Android stage 2
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Build and test
+        run: |
+          mkdir -p build/verification
+          set -o pipefail
+          gradle :core:domain:test :core:data:testDebugUnitTest :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease --stacktrace 2>&1 | tee build/verification/build.log
+      - run: python tools/validate_structure.py
+      - run: python -m unittest discover -s tools -p 'test_*.py' -v
+      - run: python tools/verify_apks.py > build/verification/apk-variants.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AutoSkolaCZ-stage2-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - name: Android Lint
+        run: |
+          set -o pipefail
+          gradle :app:lintDebug :app:lintRelease --stacktrace 2>&1 | tee build/verification/lint.log
+      - run: python tools/collect_stage2_verification.py > build/verification/test-and-lint-summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports-and-room-schema
+          path: |
+            build/verification
+            core/domain/build/reports/tests
+            core/domain/build/test-results
+            core/data/build/reports/tests
+            core/data/build/test-results
+            app/build/reports/tests
+            app/build/test-results
+            app/build/reports
+            core/data/schemas
+  room-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          arch: x86_64
+          script: gradle :core:data:connectedDebugAndroidTest
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: room-device-test-reports
+          path: |
+            core/data/build/reports/androidTests
+            core/data/build/outputs/androidTest-results

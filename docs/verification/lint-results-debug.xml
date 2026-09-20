@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.9.2">
+
+    <issue
+        id="AppBundleLocaleChanges"
+        severity="Warning"
+        message="Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the `bundle` configuration"
+        category="Correctness"
+        priority="5"
+        summary="App Bundle handling of runtime locale changes"
+        explanation="When changing locales at runtime (e.g. to provide an in-app language switcher), the Android App Bundle must be configured to not split by locale or the Play Core library must be used to download additional locales at runtime."
+        url="https://developer.android.com/guide/app-bundle/configure-base#handling_language_changes"
+        urls="https://developer.android.com/guide/app-bundle/configure-base#handling_language_changes"
+        errorLine1="                config.setLocale(Locale.forLanguageTag(settings.uiLanguage.tag))"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/src/main/kotlin/cz/autoskola/app/MainActivity.kt"
+            line="26"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DataExtractionRules"
+        severity="Warning"
+        message="The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+        category="Security"
+        priority="3"
+        summary="Missing data extraction rules"
+        explanation="Before Android 12, the attributes `android:allowBackup` and `android:fullBackupContent` were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.&#xA;&#xA;In Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute `android:dataExtractionRules`, specifying an `@xml` resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your `minSdkVersion` supports older versions, you&apos;ll still want to specify an `android:fullBackupContent` resource if the default behavior is not right for your app."
+        url="https://developer.android.com/about/versions/12/backup-restore#xml-changes"
+        urls="https://developer.android.com/about/versions/12/backup-restore#xml-changes,https://goo.gle/DataExtractionRules"
+        errorLine1="    &lt;application android:name=&quot;.AutoSkolaApplication&quot; android:allowBackup=&quot;false&quot; android:label=&quot;Autoškola CZ&quot; android:supportsRtl=&quot;true&quot; android:theme=&quot;@style/Theme.AutoSkola&quot;>"
+        errorLine2="                                                                           ~~~~~">
+        <location
+            file="/workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/src/main/AndroidManifest.xml"
+            line="2"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.app_name` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;app_name&quot;>Autoškola CZ&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/src/main/res/values/strings.xml"
+            line="2"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.not_started` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;string name=&quot;not_started&quot;>Вы ещё не начали обучение&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/src/main/res/values/strings.xml"
+            line="43"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingApplicationIcon"
+        severity="Warning"
+        message="Should explicitly set `android:icon`, there is no default"
+        category="Usability:Icons"
+        priority="5"
+        summary="Missing application icon"
+        explanation="You should set an icon for the application as whole because there is no default. This attribute must be set as a reference to a drawable resource containing the image (for example `@drawable/icon`)."
+        url="https://developer.android.com/studio/publish/preparing#publishing-configure"
+        urls="https://developer.android.com/studio/publish/preparing#publishing-configure"
+        errorLine1="    &lt;application android:name=&quot;.AutoSkolaApplication&quot; android:allowBackup=&quot;false&quot; android:label=&quot;Autoškola CZ&quot; android:supportsRtl=&quot;true&quot; android:theme=&quot;@style/Theme.AutoSkola&quot;>"
+        errorLine2="     ~~~~~~~~~~~">
+        <location
+            file="/workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/src/main/AndroidManifest.xml"
+            line="2"
+            column="6"/>
+    </issue>
+
+</issues>

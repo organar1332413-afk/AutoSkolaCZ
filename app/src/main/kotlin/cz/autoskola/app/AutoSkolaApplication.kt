@@ -1,0 +1,19 @@
+package cz.autoskola.app
+import android.app.Application
+import androidx.room.Room
+import cz.autoskola.data.*
+import cz.autoskola.data.db.AutoSkolaDatabase
+import cz.autoskola.data.importer.ContentImporter
+import java.io.File
+class AutoSkolaApplication : Application() {
+    val container by lazy { AppContainer(this) }
+}
+class AppContainer(internal val application: Application) {
+    internal val db = Room.databaseBuilder(application, AutoSkolaDatabase::class.java, "autoskola.db").build()
+    val settings = SettingsStore(application)
+    val study = RoomStudyRepository(db)
+    val learning = LearningRepository(db)
+    val exams = ExamRepository(db)
+    private val importer = ContentImporter(db, File(application.filesDir, "content"))
+    val bootstrap = Bootstrap(application, db, importer, BuildConfig.DEBUG)
+}

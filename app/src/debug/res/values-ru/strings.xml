@@ -1,0 +1,18 @@
+<resources>
+  <string name="dev_title">Инструменты разработчика</string>
+  <string name="dev_note">Только debug-сборка. Эти инструменты не входят в release.</string>
+  <string name="dev_reset_onboarding">Сбросить onboarding</string>
+  <string name="dev_reset_progress">Сбросить локальный прогресс</string>
+  <string name="dev_clear_attempts">Очистить попытки</string>
+  <string name="dev_clear_favorites">Очистить избранное</string>
+  <string name="dev_clear_words">Очистить мои слова</string>
+  <string name="dev_room">Версия Room: %1$d</string>
+  <string name="dev_version">Версия контента: %1$s</string>
+  <string name="dev_count">Количество вопросов: %1$d</string>
+  <string name="dev_complete">Полная база B: %1$s</string>
+  <string name="dev_yes">Да</string>
+  <string name="dev_no">Нет</string>
+  <string name="dev_tts">Проверка чешского голоса</string>
+  <string name="dev_sample">Открыть sample-вопросы</string>
+  <string name="dev_confirm">Это действие удалит выбранные локальные данные. Официальный контент сохранится.</string>
+</resources>

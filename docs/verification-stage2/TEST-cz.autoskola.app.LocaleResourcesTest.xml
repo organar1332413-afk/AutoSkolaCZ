@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.autoskola.app.LocaleResourcesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-09-19T17:25:52" hostname="localhost" time="1.744">
+  <properties/>
+  <testcase name="russianNavigationUsesRussianResources" classname="cz.autoskola.app.LocaleResourcesTest" time="1.522"/>
+  <testcase name="czechNavigationUsesCzechResources" classname="cz.autoskola.app.LocaleResourcesTest" time="0.085"/>
+  <testcase name="switchingContextDoesNotModifyOtherLocaleResources" classname="cz.autoskola.app.LocaleResourcesTest" time="0.032"/>
+  <testcase name="ukrainianNavigationUsesUkrainianResources" classname="cz.autoskola.app.LocaleResourcesTest" time="0.035"/>
+  <testcase name="translatedFormatArgumentsRenderWithoutCrashing" classname="cz.autoskola.app.LocaleResourcesTest" time="0.067"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

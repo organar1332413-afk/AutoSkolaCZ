@@ -1,0 +1,44 @@
+{
+  "debug": {
+    "apk": "app-debug.apk",
+    "size_bytes": 11404191,
+    "sha256": "81bf8c731ff3183fbd0da3a5d63a0a7636d9eabe4e3e28ace51a3fe253d33af6",
+    "debuggable": true,
+    "developer_resources": true,
+    "developer_class_markers": {
+      "DeveloperController": true,
+      "resetOnboardingForDevelopment": true,
+      "SeedWord": true
+    },
+    "sample_assets": [
+      "assets/content/dictionary-v1.json",
+      "assets/content/lesson-demo.json",
+      "assets/content/sample-v1.json"
+    ],
+    "badging": [
+      "package: name='cz.autoskola.study.debug' versionCode='2' versionName='0.2.0-stage2' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'",
+      "sdkVersion:'26'",
+      "targetSdkVersion:'35'",
+      "uses-permission: name='cz.autoskola.study.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'"
+    ]
+  },
+  "release": {
+    "apk": "app-release-unsigned.apk",
+    "size_bytes": 8329660,
+    "sha256": "3060413b0ec6ac007d2f6cdbccc62f60f36b8c421dcf915c5dc869ee197164f9",
+    "debuggable": false,
+    "developer_resources": false,
+    "developer_class_markers": {
+      "DeveloperController": false,
+      "resetOnboardingForDevelopment": false,
+      "SeedWord": false
+    },
+    "sample_assets": [],
+    "badging": [
+      "package: name='cz.autoskola.study' versionCode='2' versionName='0.2.0-stage2' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'",
+      "sdkVersion:'26'",
+      "targetSdkVersion:'35'",
+      "uses-permission: name='cz.autoskola.study.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'"
+    ]
+  }
+}

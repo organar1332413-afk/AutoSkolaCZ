@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.autoskola.domain.SettingsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-09-19T17:22:46" hostname="localhost" time="0.001">
+  <properties/>
+  <testcase name="corruptSettingsHaveSafeDefaults" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <testcase name="onboardingPresetsAreCoherent" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <testcase name="legacySettingsKeepIndependentChoicesWithoutReset" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <testcase name="everyInterfaceCanUseEveryMaterialMode" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <testcase name="interfaceSwitchDoesNotChangeLearningChoices" classname="cz.autoskola.domain.SettingsTest" time="0.001"/>
+  <testcase name="explicitOnboardingResetWinsOverLegacyDetection" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <testcase name="realExamNeverEnablesAnyLanguageAssistance" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <testcase name="newInstallUsesDeviceLanguageAndRequiresOnboarding" classname="cz.autoskola.domain.SettingsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

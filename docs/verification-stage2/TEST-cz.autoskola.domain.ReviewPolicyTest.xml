@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.autoskola.domain.ReviewPolicyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-19T17:22:46" hostname="localhost" time="0.002">
+  <properties/>
+  <testcase name="newRevisionStartsFreshStreak" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.0"/>
+  <testcase name="revisionChangeRetainsMistakeAndUnseenFilter" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.002"/>
+  <testcase name="rapidNewSessionDoesNotInflateMastery" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.0"/>
+  <testcase name="counterIsCappedAndMasteryDateStable" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.0"/>
+  <testcase name="wrongAnswerClearsMastery" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.0"/>
+  <testcase name="masteryRequiresThreeSeparatedSessions" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.0"/>
+  <testcase name="repetitionInSameSessionDoesNotInflateMastery" classname="cz.autoskola.domain.ReviewPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

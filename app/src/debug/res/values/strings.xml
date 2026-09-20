@@ -1,0 +1,18 @@
+<resources>
+  <string name="dev_title">Vývojářské nástroje</string>
+  <string name="dev_note">Pouze ladicí sestavení. Tyto nástroje nejsou součástí vydané aplikace.</string>
+  <string name="dev_reset_onboarding">Spustit úvodní nastavení znovu</string>
+  <string name="dev_reset_progress">Smazat místní pokrok</string>
+  <string name="dev_clear_attempts">Smazat pokusy</string>
+  <string name="dev_clear_favorites">Smazat oblíbené</string>
+  <string name="dev_clear_words">Smazat moje slova</string>
+  <string name="dev_room">Verze Room: %1$d</string>
+  <string name="dev_version">Verze obsahu: %1$s</string>
+  <string name="dev_count">Počet otázek: %1$d</string>
+  <string name="dev_complete">Úplná databáze B: %1$s</string>
+  <string name="dev_yes">Ano</string>
+  <string name="dev_no">Ne</string>
+  <string name="dev_tts">Zkouška českého hlasu</string>
+  <string name="dev_sample">Otevřít ukázkové otázky</string>
+  <string name="dev_confirm">Tato akce trvale smaže vybraná místní data. Oficiální obsah zůstane zachován.</string>
+</resources>

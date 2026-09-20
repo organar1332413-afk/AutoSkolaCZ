@@ -1,0 +1,417 @@
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/4f17c26b67c4/build-tools/sdk/licenses
+License for package Android SDK Platform-Tools accepted.
+Preparing "Install Android SDK Platform-Tools v.37.0.1".
+"Install Android SDK Platform-Tools v.37.0.1" ready.
+Installing Android SDK Platform-Tools in /workspace/scratch/4f17c26b67c4/build-tools/sdk/platform-tools
+"Install Android SDK Platform-Tools v.37.0.1" complete.
+"Install Android SDK Platform-Tools v.37.0.1" finished.
+> Task :core:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:domain:compileKotlin
+> Task :core:domain:processResources NO-SOURCE
+> Task :core:domain:processTestResources
+> Task :core:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:data:preBuild UP-TO-DATE
+> Task :core:data:preDebugBuild UP-TO-DATE
+> Task :core:data:generateDebugResValues
+> Task :core:data:generateDebugResources
+> Task :core:data:packageDebugResources
+> Task :core:data:parseDebugLocalResources
+> Task :core:data:generateDebugRFile
+> Task :core:domain:compileJava NO-SOURCE
+> Task :core:domain:classes UP-TO-DATE
+> Task :core:data:javaPreCompileDebug
+> Task :core:domain:jar
+> Task :core:domain:compileTestKotlin
+> Task :core:data:kspDebugKotlin
+> Task :core:domain:compileTestJava NO-SOURCE
+> Task :core:domain:testClasses
+
+> Task :core:domain:test
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+
+> Task :core:data:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:data:writeDebugAarMetadata
+> Task :core:data:checkDebugUnitTestAarMetadata
+> Task :core:data:compileDebugKotlin
+> Task :core:data:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:data:compileDebugLibraryResources
+> Task :core:data:bundleLibRuntimeToJarDebug
+> Task :core:data:generateDebugUnitTestResValues
+> Task :core:data:bundleLibCompileToJarDebug
+> Task :core:data:mapDebugUnitTestSourceSetPaths
+> Task :core:data:generateDebugUnitTestResources
+> Task :core:data:mergeDebugUnitTestResources
+> Task :core:data:extractDeepLinksDebug
+> Task :core:data:processDebugManifest
+> Task :core:data:processDebugUnitTestManifest
+> Task :core:data:processDebugUnitTestResources
+> Task :core:data:javaPreCompileDebugUnitTest
+> Task :core:data:generateDebugUnitTestAssets UP-TO-DATE
+> Task :core:data:mergeDebugShaders
+> Task :core:data:compileDebugShaders NO-SOURCE
+> Task :core:data:generateDebugAssets UP-TO-DATE
+> Task :core:data:mergeDebugAssets
+> Task :core:data:mergeDebugUnitTestAssets
+> Task :core:data:packageDebugUnitTestForUnitTest
+> Task :core:data:generateDebugUnitTestConfig
+> Task :core:data:processDebugJavaRes
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :core:designsystem:preBuild UP-TO-DATE
+> Task :core:designsystem:preDebugBuild UP-TO-DATE
+> Task :core:designsystem:writeDebugAarMetadata
+> Task :core:data:kspDebugUnitTestKotlin
+> Task :app:checkDebugAarMetadata
+> Task :app:generateDebugResValues
+> Task :core:designsystem:generateDebugResValues
+> Task :core:designsystem:generateDebugResources
+> Task :core:designsystem:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :core:data:compileDebugUnitTestKotlin
+> Task :core:data:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :core:data:processDebugUnitTestJavaRes
+> Task :app:mergeDebugResources
+
+> Task :core:data:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :core:designsystem:extractDeepLinksDebug
+> Task :core:designsystem:processDebugManifest
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :core:designsystem:compileDebugLibraryResources
+> Task :app:processDebugManifestForPackage
+> Task :core:designsystem:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:designsystem:parseDebugLocalResources
+> Task :core:designsystem:javaPreCompileDebug
+> Task :app:javaPreCompileDebug
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:designsystem:generateDebugRFile
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:processDebugResources
+> Task :core:designsystem:compileDebugKotlin
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :core:designsystem:mergeDebugShaders
+> Task :core:designsystem:compileDebugShaders NO-SOURCE
+> Task :core:designsystem:generateDebugAssets UP-TO-DATE
+> Task :core:designsystem:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:packageDebugUnitTestForUnitTest
+> Task :app:generateDebugUnitTestConfig
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :core:designsystem:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:designsystem:bundleLibCompileToJarDebug
+> Task :app:checkDebugDuplicateClasses
+> Task :core:designsystem:bundleLibRuntimeToJarDebug
+> Task :core:designsystem:processDebugJavaRes
+> Task :app:compileDebugKotlin
+
+> Task :app:compileDebugJavaWithJavac
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+
+
+> Task :app:mergeExtDexDebug
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:dexBuilderDebug
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+> Task :app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34959 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34959 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Drobolectric.dependency.repo.url=https://repo.maven.apache.org/maven2
+
+> Task :app:mergeDebugGlobalSynthetics
+> Task :core:data:bundleLibRuntimeToDirDebug
+> Task :app:mergeDebugJavaResource
+> Task :core:designsystem:bundleLibRuntimeToDirDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :core:data:mergeDebugJniLibFolders
+> Task :core:data:mergeDebugNativeLibs NO-SOURCE
+> Task :core:data:copyDebugJniLibsProjectOnly
+> Task :app:mergeLibDexDebug
+> Task :core:designsystem:mergeDebugJniLibFolders
+> Task :core:designsystem:mergeDebugNativeLibs NO-SOURCE
+> Task :core:designsystem:copyDebugJniLibsProjectOnly
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:mergeDebugNativeLibs
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :core:data:preReleaseBuild UP-TO-DATE
+> Task :core:data:mergeReleaseJniLibFolders
+> Task :core:data:mergeReleaseNativeLibs NO-SOURCE
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :core:data:copyReleaseJniLibsProjectOnly
+> Task :core:designsystem:preReleaseBuild UP-TO-DATE
+> Task :core:designsystem:mergeReleaseJniLibFolders
+> Task :core:designsystem:mergeReleaseNativeLibs NO-SOURCE
+> Task :core:designsystem:copyReleaseJniLibsProjectOnly
+> Task :app:mergeReleaseNativeLibs
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :core:data:generateReleaseResValues
+> Task :core:data:generateReleaseResources
+> Task :core:data:packageReleaseResources
+> Task :core:data:parseReleaseLocalResources
+> Task :core:data:generateReleaseRFile
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :core:data:javaPreCompileRelease
+> Task :core:designsystem:generateReleaseResValues
+> Task :core:designsystem:generateReleaseResources
+> Task :core:designsystem:packageReleaseResources
+> Task :core:designsystem:parseReleaseLocalResources
+> Task :core:designsystem:generateReleaseRFile
+> Task :core:designsystem:compileReleaseKotlin
+> Task :core:designsystem:javaPreCompileRelease
+> Task :core:designsystem:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:designsystem:bundleLibRuntimeToDirRelease
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:buildKotlinToolingMetadata
+> Task :app:generateReleaseBuildConfig
+> Task :core:data:writeReleaseAarMetadata
+> Task :core:designsystem:writeReleaseAarMetadata
+> Task :app:checkReleaseAarMetadata
+> Task :app:generateReleaseResValues
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:mergeReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:parseReleaseLocalResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :core:data:extractDeepLinksRelease
+> Task :core:data:processReleaseManifest
+> Task :core:designsystem:extractDeepLinksRelease
+> Task :core:designsystem:processReleaseManifest
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :core:data:compileReleaseLibraryResources
+> Task :core:designsystem:compileReleaseLibraryResources
+> Task :app:processReleaseResources
+> Task :core:designsystem:bundleLibCompileToJarRelease
+> Task :app:javaPreCompileRelease
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile
+> Task :core:data:kspReleaseKotlin
+> Task :app:mergeExtDexRelease
+> Task :core:data:prepareReleaseArtProfile
+> Task :core:designsystem:prepareReleaseArtProfile
+> Task :app:mergeReleaseArtProfile
+> Task :core:designsystem:bundleLibRuntimeToJarRelease
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :core:data:mergeReleaseShaders
+> Task :core:data:compileReleaseShaders NO-SOURCE
+> Task :core:data:generateReleaseAssets UP-TO-DATE
+> Task :core:data:mergeReleaseAssets
+> Task :core:designsystem:mergeReleaseShaders
+> Task :core:designsystem:compileReleaseShaders NO-SOURCE
+> Task :core:designsystem:generateReleaseAssets UP-TO-DATE
+> Task :core:designsystem:mergeReleaseAssets
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:extractProguardFiles
+> Task :core:data:extractProguardFiles
+> Task :core:data:prepareLintJarForPublish
+> Task :core:designsystem:processReleaseJavaRes
+> Task :core:designsystem:createFullJarRelease
+> Task :core:designsystem:extractProguardFiles
+> Task :core:data:compileReleaseKotlin
+> Task :core:designsystem:generateReleaseLintModel
+> Task :core:data:compileReleaseJavaWithJavac NO-SOURCE
+> Task :core:data:bundleLibCompileToJarRelease
+> Task :core:data:bundleLibRuntimeToDirRelease
+> Task :core:data:bundleLibRuntimeToJarRelease
+> Task :core:data:processReleaseJavaRes
+> Task :core:data:createFullJarRelease
+> Task :core:data:generateReleaseLintModel
+> Task :core:designsystem:prepareLintJarForPublish
+> Task :core:data:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:data:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:data:extractDeepLinksForAarRelease
+> Task :app:compileReleaseKotlin
+> Task :core:data:extractReleaseAnnotations
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:dexBuilderRelease
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:mergeDexRelease
+> Task :app:generateReleaseLintVitalReportModel
+> Task :core:data:mergeReleaseGeneratedProguardFiles
+> Task :core:data:mergeReleaseConsumerProguardFiles
+> Task :core:data:mergeReleaseJavaResource
+> Task :core:data:syncReleaseLibJars
+> Task :core:data:bundleReleaseLocalLintAar
+> Task :core:designsystem:stripReleaseDebugSymbols NO-SOURCE
+> Task :core:designsystem:copyReleaseJniLibsProjectAndLocalJars
+> Task :core:designsystem:extractDeepLinksForAarRelease
+> Task :core:designsystem:extractReleaseAnnotations
+> Task :core:designsystem:mergeReleaseGeneratedProguardFiles
+> Task :core:designsystem:mergeReleaseConsumerProguardFiles
+> Task :core:designsystem:mergeReleaseJavaResource
+> Task :core:designsystem:syncReleaseLibJars
+> Task :core:designsystem:bundleReleaseLocalLintAar
+> Task :app:compileReleaseArtProfile
+> Task :core:data:writeReleaseLintModelMetadata
+> Task :core:designsystem:lintVitalAnalyzeRelease
+> Task :core:designsystem:writeReleaseLintModelMetadata
+> Task :core:data:generateReleaseLintVitalModel
+> Task :core:designsystem:generateReleaseLintVitalModel
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseJavaResource
+> Task :app:optimizeReleaseResources
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :core:data:stripDebugDebugSymbols NO-SOURCE
+> Task :core:data:copyDebugJniLibsProjectAndLocalJars
+> Task :core:data:extractDebugAnnotations
+> Task :core:data:extractDeepLinksForAarDebug
+> Task :core:data:mergeDebugGeneratedProguardFiles
+> Task :core:data:mergeDebugConsumerProguardFiles
+> Task :core:data:prepareDebugArtProfile
+> Task :core:data:mergeDebugJavaResource
+> Task :core:data:syncDebugLibJars
+> Task :core:data:bundleDebugLocalLintAar
+> Task :core:designsystem:stripDebugDebugSymbols NO-SOURCE
+> Task :core:designsystem:copyDebugJniLibsProjectAndLocalJars
+> Task :core:designsystem:extractDebugAnnotations
+> Task :core:designsystem:extractDeepLinksForAarDebug
+> Task :core:designsystem:mergeDebugGeneratedProguardFiles
+> Task :core:designsystem:mergeDebugConsumerProguardFiles
+> Task :core:designsystem:prepareDebugArtProfile
+> Task :core:designsystem:mergeDebugJavaResource
+> Task :core:designsystem:syncDebugLibJars
+> Task :core:designsystem:bundleDebugLocalLintAar
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugAndroidTestResValues
+> Task :core:data:createFullJarDebug
+> Task :core:data:writeDebugLintModelMetadata
+> Task :core:designsystem:createFullJarDebug
+> Task :core:designsystem:writeDebugLintModelMetadata
+> Task :core:data:lintVitalAnalyzeRelease
+> Task :app:generateDebugAndroidTestLintModel
+> Task :core:data:generateDebugLintModel
+> Task :core:designsystem:generateDebugLintModel
+> Task :app:generateDebugLintReportModel
+> Task :app:generateDebugUnitTestLintModel
+> Task :core:data:lintAnalyzeDebug
+> Task :core:designsystem:lintAnalyzeDebug
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintAnalyzeDebug
+> Task :app:lintVitalReportRelease SKIPPED
+> Task :app:lintVitalRelease SKIPPED
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :core:data:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:data:generateDebugAndroidTestResValues
+> Task :core:data:generateDebugAndroidTestLintModel
+> Task :core:data:generateDebugUnitTestLintModel
+> Task :core:data:lintAnalyzeDebugAndroidTest
+> Task :core:designsystem:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:designsystem:generateDebugAndroidTestResValues
+> Task :core:designsystem:generateDebugAndroidTestLintModel
+> Task :core:designsystem:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:designsystem:generateDebugUnitTestLintModel
+> Task :core:designsystem:lintAnalyzeDebugAndroidTest
+> Task :core:designsystem:lintAnalyzeDebugUnitTest
+> Task :app:generateReleaseLintReportModel
+> Task :app:bundleReleaseClassesToCompileJar
+> Task :app:preReleaseUnitTestBuild UP-TO-DATE
+> Task :app:generateReleaseUnitTestLintModel
+> Task :core:data:lintAnalyzeDebugUnitTest
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/build/reports/lint-results-debug.html
+
+> Task :app:lintDebug
+> Task :core:designsystem:lintAnalyzeRelease
+> Task :core:data:lintAnalyzeRelease
+> Task :app:lintAnalyzeReleaseUnitTest
+> Task :app:lintAnalyzeRelease
+> Task :core:data:preReleaseUnitTestBuild UP-TO-DATE
+> Task :core:data:generateReleaseUnitTestLintModel
+> Task :core:data:lintAnalyzeReleaseUnitTest
+> Task :core:designsystem:preReleaseUnitTestBuild UP-TO-DATE
+> Task :core:designsystem:generateReleaseUnitTestLintModel
+> Task :core:designsystem:lintAnalyzeReleaseUnitTest
+> Task :core:data:checkDebugAndroidTestAarMetadata
+> Task :core:data:mapDebugAndroidTestSourceSetPaths
+> Task :core:data:generateDebugAndroidTestResources
+> Task :core:data:mergeDebugAndroidTestResources
+> Task :core:data:processDebugAndroidTestManifest
+> Task :core:data:processDebugAndroidTestResources
+> Task :core:data:kspDebugAndroidTestKotlin
+> Task :core:data:compileDebugAndroidTestKotlin
+> Task :core:data:javaPreCompileDebugAndroidTest
+> Task :core:data:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :core:data:mergeDebugAndroidTestShaders
+> Task :core:data:compileDebugAndroidTestShaders NO-SOURCE
+> Task :core:data:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :core:data:mergeDebugAndroidTestAssets
+> Task :core:data:compressDebugAndroidTestAssets
+> Task :core:data:desugarDebugAndroidTestFileDependencies
+> Task :core:data:dexBuilderDebugAndroidTest
+> Task :core:data:mergeDebugAndroidTestGlobalSynthetics
+> Task :core:data:processDebugAndroidTestJavaRes
+> Task :core:data:mergeDebugAndroidTestJavaResource
+> Task :core:data:checkDebugAndroidTestDuplicateClasses
+> Task :core:data:mergeExtDexDebugAndroidTest
+> Task :core:data:mergeLibDexDebugAndroidTest
+> Task :core:data:mergeProjectDexDebugAndroidTest
+> Task :core:data:mergeDebugAndroidTestJniLibFolders
+> Task :core:data:mergeDebugAndroidTestNativeLibs
+
+> Task :core:data:stripDebugAndroidTestDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so.
+
+> Task :core:data:validateSigningDebugAndroidTest
+> Task :core:data:writeDebugAndroidTestSigningConfigVersions
+> Task :core:data:packageDebugAndroidTest
+> Task :core:data:createDebugAndroidTestApkListingFileRedirect
+> Task :core:data:assembleDebugAndroidTest
+
+> Task :app:lintReportRelease
+Wrote HTML report to file:///workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/build/reports/lint-results-release.html
+
+> Task :app:lintRelease
+
+BUILD SUCCESSFUL in 10m 42s
+308 actionable tasks: 308 executed

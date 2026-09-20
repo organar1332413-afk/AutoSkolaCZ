@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ohrozit",
+    "lemma": "ohrozit",
+    "context": "road_traffic",
+    "exampleCs": "Nesmí ohrozit chodce.",
+    "forms": [
+      "ohrozit"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "подвергнуть опасности",
+        "meaning": "Создать угрозу безопасности участника движения.",
+        "exampleTranslation": "Не должен подвергать пешеходов опасности."
+      },
+      {
+        "locale": "uk",
+        "translation": "наражати на небезпеку",
+        "meaning": "Створити загрозу безпеці учасника руху.",
+        "exampleTranslation": "Не повинен наражати пішоходів на небезпеку."
+      }
+    ]
+  },
+  {
+    "id": "omezit",
+    "lemma": "omezit",
+    "context": "road_traffic",
+    "exampleCs": "Nesmí omezit ostatní řidiče.",
+    "forms": [
+      "omezit"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "создать помехи",
+        "meaning": "Помешать другому участнику свободно продолжать движение.",
+        "exampleTranslation": "Не должен создавать помехи другим водителям."
+      },
+      {
+        "locale": "uk",
+        "translation": "створювати перешкоди",
+        "meaning": "Завадити іншому учаснику вільно продовжувати рух.",
+        "exampleTranslation": "Не повинен створювати перешкоди іншим водіям."
+      }
+    ]
+  },
+  {
+    "id": "vozidlo",
+    "lemma": "vozidlo",
+    "context": "road_traffic",
+    "exampleCs": "Musí zastavit vozidlo.",
+    "forms": [
+      "vozidlo",
+      "vozidla",
+      "vozidlem"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "транспортное средство",
+        "meaning": "Общее обозначение транспортного средства.",
+        "exampleTranslation": "Должен остановить транспортное средство."
+      },
+      {
+        "locale": "uk",
+        "translation": "транспортний засіб",
+        "meaning": "Загальна назва транспортного засобу.",
+        "exampleTranslation": "Повинен зупинити транспортний засіб."
+      }
+    ]
+  },
+  {
+    "id": "ridic",
+    "lemma": "řidič",
+    "context": "road_traffic",
+    "exampleCs": "Řidič musí zastavit.",
+    "forms": [
+      "řidič",
+      "řidiče",
+      "řidiči"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "водитель",
+        "meaning": "Человек, управляющий транспортным средством.",
+        "exampleTranslation": "Водитель должен остановиться."
+      },
+      {
+        "locale": "uk",
+        "translation": "водій",
+        "meaning": "Людина, яка керує транспортним засобом.",
+        "exampleTranslation": "Водій повинен зупинитися."
+      }
+    ]
+  }
+]

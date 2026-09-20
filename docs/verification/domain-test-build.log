@@ -1,0 +1,26 @@
+
+Welcome to Gradle 8.11.1!
+
+Here are the highlights of this release:
+ - Parallel load and store for Configuration Cache
+ - Java compilation errors at the end of the build output
+ - Consolidated report for warnings and deprecations
+
+For more details see https://docs.gradle.org/8.11.1/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:domain:compileKotlin
+> Task :core:domain:processResources NO-SOURCE
+> Task :core:domain:processTestResources
+> Task :core:domain:compileJava NO-SOURCE
+> Task :core:domain:classes UP-TO-DATE
+> Task :core:domain:jar
+> Task :core:domain:compileTestKotlin
+> Task :core:domain:compileTestJava NO-SOURCE
+> Task :core:domain:testClasses
+> Task :core:domain:test
+
+BUILD SUCCESSFUL in 4m 36s
+5 actionable tasks: 5 executed

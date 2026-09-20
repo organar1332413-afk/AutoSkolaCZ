@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.autoskola.domain.PackageValidatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-19T06:17:29" hostname="localhost" time="0.057">
+  <properties/>
+  <testcase name="twoCorrectAnswersAreRejected" classname="cz.autoskola.domain.PackageValidatorTest" time="0.044"/>
+  <testcase name="pathTraversalIsRejected" classname="cz.autoskola.domain.PackageValidatorTest" time="0.004"/>
+  <testcase name="translationsCannotUseCsAsAnOverride" classname="cz.autoskola.domain.PackageValidatorTest" time="0.002"/>
+  <testcase name="verifiedSampleParsesButCannotBecomeAnExam" classname="cz.autoskola.domain.PackageValidatorTest" time="0.002"/>
+  <testcase name="incompleteProductionMetadataIsRejected" classname="cz.autoskola.domain.PackageValidatorTest" time="0.002"/>
+  <testcase name="duplicateIdsAreRejected" classname="cz.autoskola.domain.PackageValidatorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

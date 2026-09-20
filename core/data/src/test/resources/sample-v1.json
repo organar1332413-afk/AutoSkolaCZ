@@ -1,0 +1,163 @@
+{
+  "manifest": {
+    "formatVersion": 1,
+    "databaseVersion": "sample-observed-2026-09-18-v1",
+    "publicationDate": null,
+    "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52",
+    "retrievedAt": "2026-09-18T14:00:00Z",
+    "sample": true,
+    "completeForB": false
+  },
+  "questions": [
+    {
+      "officialId": "RP0604222",
+      "category": "rules",
+      "textCs": "Vozidlo vjíždějící na pozemní komunikaci:",
+      "points": null,
+      "licenceGroups": [],
+      "answers": [
+        {
+          "code": "A",
+          "textCs": "Musí být předem očištěno tak, aby neznečišťovalo pozemní komunikaci.",
+          "correct": true
+        },
+        {
+          "code": "B",
+          "textCs": "Musí být v případě, že tak lze učinit bez větších obtíží, předem očištěno.",
+          "correct": false
+        },
+        {
+          "code": "C",
+          "textCs": "Musí být očištěno na nejbližším vhodném místě po vjetí na pozemní komunikaci.",
+          "correct": false
+        }
+      ],
+      "media": [],
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52",
+      "translations": [
+        {
+          "locale": "ru",
+          "text": "Транспортное средство, выезжающее на дорогу:",
+          "answers": {
+            "A": "Должно быть заранее очищено так, чтобы не загрязнять дорогу.",
+            "B": "Должно быть заранее очищено, если это можно сделать без больших затруднений.",
+            "C": "Должно быть очищено в ближайшем подходящем месте после выезда на дорогу."
+          },
+          "explanation": "Очищать транспортное средство нужно до выезда: условие об отсутствии затруднений не снимает эту обязанность.",
+          "reviewStatus": "draft"
+        },
+        {
+          "locale": "uk",
+          "text": "Транспортний засіб, що виїжджає на дорогу:",
+          "answers": {
+            "A": "Має бути заздалегідь очищений так, щоб не забруднювати дорогу.",
+            "B": "Має бути заздалегідь очищений, якщо це можна зробити без значних труднощів.",
+            "C": "Має бути очищений у найближчому придатному місці після виїзду на дорогу."
+          },
+          "explanation": "Очищати транспортний засіб потрібно до виїзду: умова про відсутність труднощів не скасовує цього обов’язку.",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "officialId": "RP0606185",
+      "category": "rules",
+      "textCs": "Místní úprava provozu na pozemních komunikacích:",
+      "points": null,
+      "licenceGroups": [],
+      "answers": [
+        {
+          "code": "A",
+          "textCs": "Je úprava silničního provozu podřazená obecné úpravě silničního provozu.",
+          "correct": false
+        },
+        {
+          "code": "B",
+          "textCs": "Neplatí za snížené viditelnosti.",
+          "correct": false
+        },
+        {
+          "code": "C",
+          "textCs": "Je nadřazená obecné úpravě provozu na pozemních komunikacích.",
+          "correct": true
+        }
+      ],
+      "media": [],
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52",
+      "translations": [
+        {
+          "locale": "ru",
+          "text": "Местное регулирование дорожного движения:",
+          "answers": {
+            "A": "Подчиняется общим правилам дорожного движения.",
+            "B": "Не действует при пониженной видимости.",
+            "C": "Имеет приоритет перед общими правилами дорожного движения."
+          },
+          "explanation": "Ключевое слово nadřazená означает «имеющая приоритет». Здесь спрашивают о соотношении местного регулирования и общих правил.",
+          "reviewStatus": "draft"
+        },
+        {
+          "locale": "uk",
+          "text": "Місцеве регулювання дорожнього руху:",
+          "answers": {
+            "A": "Підпорядковується загальним правилам дорожнього руху.",
+            "B": "Не діє за зниженої видимості.",
+            "C": "Має пріоритет перед загальними правилами дорожнього руху."
+          },
+          "explanation": "Ключове слово nadřazená означає «та, що має пріоритет». Тут запитують про співвідношення місцевого регулювання та загальних правил.",
+          "reviewStatus": "draft"
+        }
+      ]
+    },
+    {
+      "officialId": "RP0605535",
+      "category": "rules",
+      "textCs": "Při jízdě v pěší zóně:",
+      "points": null,
+      "licenceGroups": [],
+      "answers": [
+        {
+          "code": "A",
+          "textCs": "Musí řidič dbát zvýšené ohleduplnosti vůči chodcům, které nesmí ohrozit, a v případě nutnosti musí zastavit vozidlo.",
+          "correct": true
+        },
+        {
+          "code": "B",
+          "textCs": "Musí řidič dbát zvýšené ohleduplnosti vůči chodcům, které nesmí ohrozit ani omezit.",
+          "correct": false
+        },
+        {
+          "code": "C",
+          "textCs": "Platí pro řidiče ve vztahu k chodcům stejná ustanovení jako na kterékoli jiné pozemní komunikaci.",
+          "correct": false
+        }
+      ],
+      "media": [],
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52",
+      "translations": [
+        {
+          "locale": "ru",
+          "text": "При движении в пешеходной зоне:",
+          "answers": {
+            "A": "Водитель должен проявлять повышенную осторожность по отношению к пешеходам, не подвергать их опасности и при необходимости остановить транспортное средство.",
+            "B": "Водитель должен проявлять повышенную осторожность по отношению к пешеходам, не подвергать их опасности и не создавать им помех.",
+            "C": "Для водителя в отношении пешеходов действуют те же положения, что и на любой другой дороге."
+          },
+          "explanation": "В этом вопросе важно различать ohrozit и omezit: официальный правильный ответ запрещает подвергать пешеходов опасности и требует при необходимости остановиться.",
+          "reviewStatus": "draft"
+        },
+        {
+          "locale": "uk",
+          "text": "Під час руху в пішохідній зоні:",
+          "answers": {
+            "A": "Водій повинен виявляти підвищену обережність щодо пішоходів, не наражати їх на небезпеку та за потреби зупинити транспортний засіб.",
+            "B": "Водій повинен виявляти підвищену обережність щодо пішоходів, не наражати їх на небезпеку та не створювати їм перешкод.",
+            "C": "Для водія щодо пішоходів діють ті самі положення, що й на будь-якій іншій дорозі."
+          },
+          "explanation": "У цьому питанні важливо розрізняти ohrozit та omezit: офіційна правильна відповідь забороняє наражати пішоходів на небезпеку та вимагає за потреби зупинитися.",
+          "reviewStatus": "draft"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.autoskola.domain.ExamEngineTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-09-19T17:22:46" hostname="localhost" time="0.104">
+  <properties/>
+  <testcase name="unverifiedCompleteFlagBlocksExam" classname="cz.autoskola.domain.ExamEngineTest" time="0.048"/>
+  <testcase name="serializedSessionPreservesPinnedRevisionsAndAnswers" classname="cz.autoskola.domain.ExamEngineTest" time="0.026"/>
+  <testcase name="incompleteBankCannotStartExam" classname="cz.autoskola.domain.ExamEngineTest" time="0.004"/>
+  <testcase name="passBoundary43AndFail42" classname="cz.autoskola.domain.ExamEngineTest" time="0.004"/>
+  <testcase name="finishedExamIsImmutable" classname="cz.autoskola.domain.ExamEngineTest" time="0.009"/>
+  <testcase name="expiredExamStopsAndResumesAsFinished" classname="cz.autoskola.domain.ExamEngineTest" time="0.002"/>
+  <testcase name="resultsStayHiddenUntilFinish" classname="cz.autoskola.domain.ExamEngineTest" time="0.002"/>
+  <testcase name="blueprintHas25UniqueBQuestionsAnd50Points" classname="cz.autoskola.domain.ExamEngineTest" time="0.002"/>
+  <testcase name="answerCanBeChangedButMustBelongToPinnedQuestion" classname="cz.autoskola.domain.ExamEngineTest" time="0.002"/>
+  <testcase name="sampleCannotStartExamEvenWithEnoughQuestions" classname="cz.autoskola.domain.ExamEngineTest" time="0.001"/>
+  <testcase name="nonBQuestionsCannotFillQuota" classname="cz.autoskola.domain.ExamEngineTest" time="0.001"/>
+  <testcase name="wrongScoreDistributionIsRejected" classname="cz.autoskola.domain.ExamEngineTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

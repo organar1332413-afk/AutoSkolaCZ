@@ -1,0 +1,180 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :core:domain:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:domain:compileKotlin UP-TO-DATE
+> Task :core:domain:compileJava NO-SOURCE
+> Task :core:domain:processResources NO-SOURCE
+> Task :core:domain:classes UP-TO-DATE
+> Task :core:domain:jar UP-TO-DATE
+> Task :core:domain:compileTestKotlin UP-TO-DATE
+> Task :core:domain:compileTestJava NO-SOURCE
+> Task :core:domain:processTestResources UP-TO-DATE
+> Task :core:domain:testClasses UP-TO-DATE
+> Task :core:domain:test UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:data:preBuild UP-TO-DATE
+> Task :core:data:preDebugBuild UP-TO-DATE
+> Task :core:data:writeDebugAarMetadata
+> Task :core:designsystem:preBuild UP-TO-DATE
+> Task :core:designsystem:preDebugBuild UP-TO-DATE
+> Task :core:designsystem:writeDebugAarMetadata
+> Task :app:checkDebugAarMetadata
+> Task :app:generateDebugResValues
+> Task :core:data:generateDebugResValues
+> Task :core:data:generateDebugResources
+> Task :core:data:packageDebugResources
+> Task :core:designsystem:generateDebugResValues
+> Task :core:designsystem:generateDebugResources
+> Task :core:designsystem:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :core:data:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :core:designsystem:extractDeepLinksDebug
+> Task :core:data:processDebugManifest
+> Task :core:designsystem:processDebugManifest
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :core:data:compileDebugLibraryResources
+> Task :core:data:parseDebugLocalResources
+> Task :core:designsystem:compileDebugLibraryResources
+> Task :core:designsystem:parseDebugLocalResources
+> Task :core:data:generateDebugRFile
+> Task :core:designsystem:generateDebugRFile
+> Task :core:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:processDebugResources
+> Task :core:data:kspDebugKotlin
+> Task :core:data:javaPreCompileDebug
+> Task :core:designsystem:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:designsystem:compileDebugKotlin
+> Task :core:designsystem:javaPreCompileDebug
+> Task :core:designsystem:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:designsystem:bundleLibCompileToJarDebug
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :core:data:mergeDebugShaders
+> Task :core:data:compileDebugShaders NO-SOURCE
+> Task :core:data:generateDebugAssets UP-TO-DATE
+> Task :core:data:mergeDebugAssets
+> Task :core:designsystem:mergeDebugShaders
+> Task :core:designsystem:compileDebugShaders NO-SOURCE
+> Task :core:designsystem:generateDebugAssets UP-TO-DATE
+> Task :core:designsystem:mergeDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :core:designsystem:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :core:designsystem:processDebugJavaRes
+> Task :core:data:compileDebugKotlin
+> Task :core:data:compileDebugJavaWithJavac NO-SOURCE
+> Task :core:data:bundleLibCompileToJarDebug
+> Task :app:checkDebugDuplicateClasses
+> Task :core:data:bundleLibRuntimeToJarDebug
+> Task :core:data:processDebugJavaRes
+
+> Task :app:compileDebugKotlin
+w: file:///workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/src/main/kotlin/cz/autoskola/app/navigation/AppNavigation.kt:25:118 'val Icons.Filled.List: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.List.
+
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeExtDexDebug
+> Task :core:data:bundleLibRuntimeToDirDebug
+> Task :core:designsystem:bundleLibRuntimeToDirDebug
+> Task :app:mergeLibDexDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :core:data:mergeDebugJniLibFolders
+> Task :core:data:mergeDebugNativeLibs NO-SOURCE
+> Task :core:data:copyDebugJniLibsProjectOnly
+> Task :core:designsystem:mergeDebugJniLibFolders
+> Task :core:designsystem:mergeDebugNativeLibs NO-SOURCE
+> Task :core:designsystem:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :app:mergeDebugJavaResource
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :core:data:stripDebugDebugSymbols NO-SOURCE
+> Task :core:data:copyDebugJniLibsProjectAndLocalJars
+> Task :app:packageDebug
+> Task :core:data:extractDebugAnnotations
+> Task :core:data:extractDeepLinksForAarDebug
+> Task :core:data:mergeDebugGeneratedProguardFiles
+> Task :core:data:mergeDebugConsumerProguardFiles
+> Task :core:data:prepareDebugArtProfile
+> Task :core:data:prepareLintJarForPublish
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :core:designsystem:stripDebugDebugSymbols NO-SOURCE
+> Task :core:designsystem:copyDebugJniLibsProjectAndLocalJars
+> Task :core:data:mergeDebugJavaResource
+> Task :core:designsystem:extractDebugAnnotations
+> Task :core:data:syncDebugLibJars
+> Task :core:data:bundleDebugLocalLintAar
+> Task :core:designsystem:extractDeepLinksForAarDebug
+> Task :core:designsystem:mergeDebugGeneratedProguardFiles
+> Task :core:designsystem:mergeDebugConsumerProguardFiles
+> Task :core:designsystem:prepareDebugArtProfile
+> Task :core:designsystem:prepareLintJarForPublish
+> Task :core:designsystem:mergeDebugJavaResource
+> Task :core:designsystem:syncDebugLibJars
+> Task :core:designsystem:bundleDebugLocalLintAar
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:generateDebugAndroidTestResValues
+> Task :core:data:createFullJarDebug
+> Task :core:data:writeDebugLintModelMetadata
+> Task :core:designsystem:createFullJarDebug
+> Task :core:designsystem:writeDebugLintModelMetadata
+> Task :app:generateDebugAndroidTestLintModel
+> Task :app:extractProguardFiles
+> Task :core:data:extractProguardFiles
+> Task :core:data:generateDebugLintModel
+> Task :core:designsystem:extractProguardFiles
+> Task :core:designsystem:generateDebugLintModel
+> Task :app:generateDebugLintReportModel
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:generateDebugUnitTestLintModel
+> Task :core:designsystem:lintAnalyzeDebug
+> Task :core:data:lintAnalyzeDebug
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebug
+> Task :core:data:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:data:generateDebugAndroidTestResValues
+> Task :core:data:generateDebugAndroidTestLintModel
+> Task :core:data:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:data:generateDebugUnitTestLintModel
+> Task :core:data:lintAnalyzeDebugAndroidTest
+> Task :core:data:lintAnalyzeDebugUnitTest
+> Task :core:designsystem:preDebugAndroidTestBuild UP-TO-DATE
+> Task :core:designsystem:generateDebugAndroidTestResValues
+> Task :core:designsystem:generateDebugAndroidTestLintModel
+> Task :core:designsystem:preDebugUnitTestBuild UP-TO-DATE
+> Task :core:designsystem:generateDebugUnitTestLintModel
+> Task :core:designsystem:lintAnalyzeDebugAndroidTest
+> Task :core:designsystem:lintAnalyzeDebugUnitTest
+> Task :app:lintAnalyzeDebugUnitTest
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///workspace/scratch/4f17c26b67c4/AutoSkolaCZ/app/build/reports/lint-results-debug.html
+
+> Task :app:lintDebug
+
+BUILD SUCCESSFUL in 7m 21s
+130 actionable tasks: 125 executed, 5 up-to-date

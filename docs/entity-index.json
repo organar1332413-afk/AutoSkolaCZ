@@ -1,0 +1,761 @@
+[
+  {
+    "name": "DatabaseVersion",
+    "fields": {
+      "id": "String",
+      "databaseVersion": "String",
+      "publicationDate": "String?",
+      "source": "String",
+      "retrievedAt": "String",
+      "importDate": "Long",
+      "sample": "Boolean",
+      "completeForB": "Boolean",
+      "packageSha256": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [],
+    "unique": []
+  },
+  {
+    "name": "ActiveContent",
+    "fields": {
+      "slot": "Int",
+      "versionId": "String"
+    },
+    "pk": [
+      "slot"
+    ],
+    "fks": [
+      [
+        "DatabaseVersion",
+        [
+          "versionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "QuestionCategory",
+    "fields": {
+      "id": "String",
+      "nameCs": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [],
+    "unique": []
+  },
+  {
+    "name": "QuestionCategoryTranslation",
+    "fields": {
+      "categoryId": "String",
+      "locale": "String",
+      "name": "String"
+    },
+    "pk": [
+      "categoryId",
+      "locale"
+    ],
+    "fks": [
+      [
+        "QuestionCategory",
+        [
+          "categoryId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "Question",
+    "fields": {
+      "id": "String",
+      "officialId": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [],
+    "unique": [
+      [
+        "officialId"
+      ]
+    ]
+  },
+  {
+    "name": "QuestionRevision",
+    "fields": {
+      "id": "String",
+      "questionId": "String",
+      "versionId": "String",
+      "categoryId": "String",
+      "textCs": "String",
+      "points": "Int?",
+      "source": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [
+      [
+        "Question",
+        [
+          "questionId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "DatabaseVersion",
+        [
+          "versionId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "QuestionCategory",
+        [
+          "categoryId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": [
+      [
+        "versionId",
+        "questionId"
+      ]
+    ]
+  },
+  {
+    "name": "QuestionLicenceGroup",
+    "fields": {
+      "revisionId": "String",
+      "licenceGroup": "String"
+    },
+    "pk": [
+      "revisionId",
+      "licenceGroup"
+    ],
+    "fks": [
+      [
+        "QuestionRevision",
+        [
+          "revisionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "Answer",
+    "fields": {
+      "revisionId": "String",
+      "code": "String",
+      "textCs": "String",
+      "correct": "Boolean",
+      "position": "Int"
+    },
+    "pk": [
+      "revisionId",
+      "code"
+    ],
+    "fks": [
+      [
+        "QuestionRevision",
+        [
+          "revisionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "QuestionTranslation",
+    "fields": {
+      "revisionId": "String",
+      "locale": "String",
+      "text": "String",
+      "explanation": "String",
+      "reviewStatus": "String"
+    },
+    "pk": [
+      "revisionId",
+      "locale"
+    ],
+    "fks": [
+      [
+        "QuestionRevision",
+        [
+          "revisionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "AnswerTranslation",
+    "fields": {
+      "revisionId": "String",
+      "answerCode": "String",
+      "locale": "String",
+      "text": "String"
+    },
+    "pk": [
+      "revisionId",
+      "answerCode",
+      "locale"
+    ],
+    "fks": [
+      [
+        "Answer",
+        [
+          "revisionId",
+          "answerCode"
+        ],
+        [
+          "revisionId",
+          "code"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "QuestionMedia",
+    "fields": {
+      "id": "String",
+      "revisionId": "String",
+      "answerCode": "String?",
+      "path": "String",
+      "sha256": "String",
+      "mimeType": "String",
+      "position": "Int"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [
+      [
+        "QuestionRevision",
+        [
+          "revisionId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "Answer",
+        [
+          "revisionId",
+          "answerCode"
+        ],
+        [
+          "revisionId",
+          "code"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "TrafficSign",
+    "fields": {
+      "id": "String",
+      "officialCode": "String",
+      "nameCs": "String",
+      "descriptionCs": "String",
+      "imagePath": "String",
+      "source": "String",
+      "publicationDate": "String?",
+      "reviewStatus": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [],
+    "unique": []
+  },
+  {
+    "name": "TrafficSignTranslation",
+    "fields": {
+      "signId": "String",
+      "locale": "String",
+      "name": "String",
+      "explanation": "String"
+    },
+    "pk": [
+      "signId",
+      "locale"
+    ],
+    "fks": [
+      [
+        "TrafficSign",
+        [
+          "signId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "Lesson",
+    "fields": {
+      "id": "String",
+      "topic": "String",
+      "titleCs": "String",
+      "source": "String",
+      "contentVersion": "String",
+      "reviewStatus": "String",
+      "estimatedMinutes": "Int"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [],
+    "unique": []
+  },
+  {
+    "name": "LessonTranslation",
+    "fields": {
+      "lessonId": "String",
+      "locale": "String",
+      "title": "String"
+    },
+    "pk": [
+      "lessonId",
+      "locale"
+    ],
+    "fks": [
+      [
+        "Lesson",
+        [
+          "lessonId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "LessonBlock",
+    "fields": {
+      "id": "String",
+      "lessonId": "String",
+      "position": "Int",
+      "kind": "String",
+      "textCs": "String",
+      "mediaPath": "String?"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [
+      [
+        "Lesson",
+        [
+          "lessonId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": [
+      [
+        "lessonId",
+        "position"
+      ]
+    ]
+  },
+  {
+    "name": "LessonBlockTranslation",
+    "fields": {
+      "blockId": "String",
+      "locale": "String",
+      "text": "String"
+    },
+    "pk": [
+      "blockId",
+      "locale"
+    ],
+    "fks": [
+      [
+        "LessonBlock",
+        [
+          "blockId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "LessonQuestion",
+    "fields": {
+      "lessonId": "String",
+      "questionId": "String",
+      "position": "Int"
+    },
+    "pk": [
+      "lessonId",
+      "questionId"
+    ],
+    "fks": [
+      [
+        "Lesson",
+        [
+          "lessonId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "Question",
+        [
+          "questionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "DictionaryWord",
+    "fields": {
+      "id": "String",
+      "lemma": "String",
+      "context": "String",
+      "exampleCs": "String",
+      "reviewStatus": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [],
+    "unique": []
+  },
+  {
+    "name": "DictionaryForm",
+    "fields": {
+      "wordId": "String",
+      "form": "String"
+    },
+    "pk": [
+      "wordId",
+      "form"
+    ],
+    "fks": [
+      [
+        "DictionaryWord",
+        [
+          "wordId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "DictionaryTranslation",
+    "fields": {
+      "wordId": "String",
+      "locale": "String",
+      "translation": "String",
+      "meaning": "String",
+      "exampleTranslation": "String"
+    },
+    "pk": [
+      "wordId",
+      "locale"
+    ],
+    "fks": [
+      [
+        "DictionaryWord",
+        [
+          "wordId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "SavedWord",
+    "fields": {
+      "wordId": "String",
+      "addedAt": "Long",
+      "repetitions": "Int",
+      "correctCount": "Int",
+      "nextReviewAt": "Long?"
+    },
+    "pk": [
+      "wordId"
+    ],
+    "fks": [
+      [
+        "DictionaryWord",
+        [
+          "wordId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "FavoriteQuestion",
+    "fields": {
+      "questionId": "String",
+      "addedAt": "Long"
+    },
+    "pk": [
+      "questionId"
+    ],
+    "fks": [
+      [
+        "Question",
+        [
+          "questionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "QuestionAttempt",
+    "fields": {
+      "id": "String",
+      "revisionId": "String",
+      "answerCode": "String",
+      "createdAt": "Long",
+      "correct": "Boolean",
+      "errorReason": "String?",
+      "materialMode": "String",
+      "level": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [
+      [
+        "Answer",
+        [
+          "revisionId",
+          "answerCode"
+        ],
+        [
+          "revisionId",
+          "code"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "ExamAttempt",
+    "fields": {
+      "id": "String",
+      "versionId": "String",
+      "blueprintVersion": "String",
+      "startedAt": "Long",
+      "deadlineAt": "Long",
+      "completedAt": "Long?",
+      "score": "Int?",
+      "mode": "String"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [
+      [
+        "DatabaseVersion",
+        [
+          "versionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "ExamAnswer",
+    "fields": {
+      "examId": "String",
+      "position": "Int",
+      "revisionId": "String",
+      "answerCode": "String?",
+      "awardedPoints": "Int?"
+    },
+    "pk": [
+      "examId",
+      "position"
+    ],
+    "fks": [
+      [
+        "ExamAttempt",
+        [
+          "examId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "QuestionRevision",
+        [
+          "revisionId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "Answer",
+        [
+          "revisionId",
+          "answerCode"
+        ],
+        [
+          "revisionId",
+          "code"
+        ]
+      ]
+    ],
+    "unique": [
+      [
+        "examId",
+        "revisionId"
+      ]
+    ]
+  },
+  {
+    "name": "LearningProgress",
+    "fields": {
+      "lessonId": "String",
+      "blockPosition": "Int",
+      "completedAt": "Long?",
+      "updatedAt": "Long"
+    },
+    "pk": [
+      "lessonId"
+    ],
+    "fks": [
+      [
+        "Lesson",
+        [
+          "lessonId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "QuestionReview",
+    "fields": {
+      "questionId": "String",
+      "lastRevisionId": "String",
+      "correctStreak": "Int",
+      "lastCorrectAt": "Long?",
+      "nextReviewAt": "Long",
+      "masteredAt": "Long?"
+    },
+    "pk": [
+      "questionId"
+    ],
+    "fks": [
+      [
+        "Question",
+        [
+          "questionId"
+        ],
+        [
+          "id"
+        ]
+      ],
+      [
+        "QuestionRevision",
+        [
+          "lastRevisionId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  },
+  {
+    "name": "WordReview",
+    "fields": {
+      "id": "String",
+      "wordId": "String",
+      "createdAt": "Long",
+      "correct": "Boolean"
+    },
+    "pk": [
+      "id"
+    ],
+    "fks": [
+      [
+        "DictionaryWord",
+        [
+          "wordId"
+        ],
+        [
+          "id"
+        ]
+      ]
+    ],
+    "unique": []
+  }
+]

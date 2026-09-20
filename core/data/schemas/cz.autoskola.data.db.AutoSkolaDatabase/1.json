@@ -1,0 +1,1921 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "81cbd33873aab63bc39ee4c31a037fe3",
+    "entities": [
+      {
+        "tableName": "DatabaseVersion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `databaseVersion` TEXT NOT NULL, `publicationDate` TEXT, `source` TEXT NOT NULL, `retrievedAt` TEXT NOT NULL, `importDate` INTEGER NOT NULL, `sample` INTEGER NOT NULL, `completeForB` INTEGER NOT NULL, `packageSha256` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "databaseVersion",
+            "columnName": "databaseVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publicationDate",
+            "columnName": "publicationDate",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "retrievedAt",
+            "columnName": "retrievedAt",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "importDate",
+            "columnName": "importDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sample",
+            "columnName": "sample",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completeForB",
+            "columnName": "completeForB",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "packageSha256",
+            "columnName": "packageSha256",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "ActiveContent",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`slot` INTEGER NOT NULL, `versionId` TEXT NOT NULL, PRIMARY KEY(`slot`), FOREIGN KEY(`versionId`) REFERENCES `DatabaseVersion`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "slot",
+            "columnName": "slot",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "versionId",
+            "columnName": "versionId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "slot"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ActiveContent_versionId",
+            "unique": false,
+            "columnNames": [
+              "versionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ActiveContent_versionId` ON `${TABLE_NAME}` (`versionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DatabaseVersion",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "versionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionCategory",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `nameCs` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameCs",
+            "columnName": "nameCs",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "QuestionCategoryTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`categoryId` TEXT NOT NULL, `locale` TEXT NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`categoryId`, `locale`), FOREIGN KEY(`categoryId`) REFERENCES `QuestionCategory`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "categoryId",
+            "columnName": "categoryId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "categoryId",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionCategoryTranslation_categoryId",
+            "unique": false,
+            "columnNames": [
+              "categoryId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionCategoryTranslation_categoryId` ON `${TABLE_NAME}` (`categoryId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "QuestionCategory",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "categoryId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Question",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `officialId` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "officialId",
+            "columnName": "officialId",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_Question_officialId",
+            "unique": true,
+            "columnNames": [
+              "officialId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Question_officialId` ON `${TABLE_NAME}` (`officialId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionRevision",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `questionId` TEXT NOT NULL, `versionId` TEXT NOT NULL, `categoryId` TEXT NOT NULL, `textCs` TEXT NOT NULL, `points` INTEGER, `source` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`questionId`) REFERENCES `Question`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`versionId`) REFERENCES `DatabaseVersion`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`categoryId`) REFERENCES `QuestionCategory`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "versionId",
+            "columnName": "versionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryId",
+            "columnName": "categoryId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "textCs",
+            "columnName": "textCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "points",
+            "columnName": "points",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionRevision_versionId_questionId",
+            "unique": true,
+            "columnNames": [
+              "versionId",
+              "questionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_QuestionRevision_versionId_questionId` ON `${TABLE_NAME}` (`versionId`, `questionId`)"
+          },
+          {
+            "name": "index_QuestionRevision_questionId",
+            "unique": false,
+            "columnNames": [
+              "questionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionRevision_questionId` ON `${TABLE_NAME}` (`questionId`)"
+          },
+          {
+            "name": "index_QuestionRevision_versionId",
+            "unique": false,
+            "columnNames": [
+              "versionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionRevision_versionId` ON `${TABLE_NAME}` (`versionId`)"
+          },
+          {
+            "name": "index_QuestionRevision_categoryId",
+            "unique": false,
+            "columnNames": [
+              "categoryId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionRevision_categoryId` ON `${TABLE_NAME}` (`categoryId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Question",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "DatabaseVersion",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "versionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "QuestionCategory",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "categoryId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionLicenceGroup",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `licenceGroup` TEXT NOT NULL, PRIMARY KEY(`revisionId`, `licenceGroup`), FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "licenceGroup",
+            "columnName": "licenceGroup",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "revisionId",
+            "licenceGroup"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionLicenceGroup_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionLicenceGroup_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "QuestionRevision",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Answer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `code` TEXT NOT NULL, `textCs` TEXT NOT NULL, `correct` INTEGER NOT NULL, `position` INTEGER NOT NULL, PRIMARY KEY(`revisionId`, `code`), FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "textCs",
+            "columnName": "textCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correct",
+            "columnName": "correct",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "revisionId",
+            "code"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_Answer_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Answer_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "QuestionRevision",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `locale` TEXT NOT NULL, `text` TEXT NOT NULL, `explanation` TEXT NOT NULL, `reviewStatus` TEXT NOT NULL, PRIMARY KEY(`revisionId`, `locale`), FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "text",
+            "columnName": "text",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "explanation",
+            "columnName": "explanation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reviewStatus",
+            "columnName": "reviewStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "revisionId",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionTranslation_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionTranslation_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "QuestionRevision",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "AnswerTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `answerCode` TEXT NOT NULL, `locale` TEXT NOT NULL, `text` TEXT NOT NULL, PRIMARY KEY(`revisionId`, `answerCode`, `locale`), FOREIGN KEY(`revisionId`, `answerCode`) REFERENCES `Answer`(`revisionId`, `code`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answerCode",
+            "columnName": "answerCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "text",
+            "columnName": "text",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "revisionId",
+            "answerCode",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_AnswerTranslation_revisionId_answerCode",
+            "unique": false,
+            "columnNames": [
+              "revisionId",
+              "answerCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_AnswerTranslation_revisionId_answerCode` ON `${TABLE_NAME}` (`revisionId`, `answerCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Answer",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId",
+              "answerCode"
+            ],
+            "referencedColumns": [
+              "revisionId",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionMedia",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `revisionId` TEXT NOT NULL, `answerCode` TEXT, `path` TEXT NOT NULL, `sha256` TEXT NOT NULL, `mimeType` TEXT NOT NULL, `position` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`revisionId`, `answerCode`) REFERENCES `Answer`(`revisionId`, `code`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answerCode",
+            "columnName": "answerCode",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "path",
+            "columnName": "path",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sha256",
+            "columnName": "sha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mimeType",
+            "columnName": "mimeType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionMedia_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionMedia_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          },
+          {
+            "name": "index_QuestionMedia_revisionId_answerCode",
+            "unique": false,
+            "columnNames": [
+              "revisionId",
+              "answerCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionMedia_revisionId_answerCode` ON `${TABLE_NAME}` (`revisionId`, `answerCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "QuestionRevision",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "Answer",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId",
+              "answerCode"
+            ],
+            "referencedColumns": [
+              "revisionId",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "TrafficSign",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `officialCode` TEXT NOT NULL, `nameCs` TEXT NOT NULL, `descriptionCs` TEXT NOT NULL, `imagePath` TEXT NOT NULL, `source` TEXT NOT NULL, `publicationDate` TEXT, `reviewStatus` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "officialCode",
+            "columnName": "officialCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameCs",
+            "columnName": "nameCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descriptionCs",
+            "columnName": "descriptionCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imagePath",
+            "columnName": "imagePath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publicationDate",
+            "columnName": "publicationDate",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "reviewStatus",
+            "columnName": "reviewStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "TrafficSignTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`signId` TEXT NOT NULL, `locale` TEXT NOT NULL, `name` TEXT NOT NULL, `explanation` TEXT NOT NULL, PRIMARY KEY(`signId`, `locale`), FOREIGN KEY(`signId`) REFERENCES `TrafficSign`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "signId",
+            "columnName": "signId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "explanation",
+            "columnName": "explanation",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "signId",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_TrafficSignTranslation_signId",
+            "unique": false,
+            "columnNames": [
+              "signId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_TrafficSignTranslation_signId` ON `${TABLE_NAME}` (`signId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "TrafficSign",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "signId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Lesson",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `topic` TEXT NOT NULL, `titleCs` TEXT NOT NULL, `source` TEXT NOT NULL, `contentVersion` TEXT NOT NULL, `reviewStatus` TEXT NOT NULL, `estimatedMinutes` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "topic",
+            "columnName": "topic",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titleCs",
+            "columnName": "titleCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentVersion",
+            "columnName": "contentVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reviewStatus",
+            "columnName": "reviewStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estimatedMinutes",
+            "columnName": "estimatedMinutes",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "LessonTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`lessonId` TEXT NOT NULL, `locale` TEXT NOT NULL, `title` TEXT NOT NULL, PRIMARY KEY(`lessonId`, `locale`), FOREIGN KEY(`lessonId`) REFERENCES `Lesson`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lessonId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "lessonId",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_LessonTranslation_lessonId",
+            "unique": false,
+            "columnNames": [
+              "lessonId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LessonTranslation_lessonId` ON `${TABLE_NAME}` (`lessonId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Lesson",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lessonId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LessonBlock",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `lessonId` TEXT NOT NULL, `position` INTEGER NOT NULL, `kind` TEXT NOT NULL, `textCs` TEXT NOT NULL, `mediaPath` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`lessonId`) REFERENCES `Lesson`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lessonId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "textCs",
+            "columnName": "textCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mediaPath",
+            "columnName": "mediaPath",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_LessonBlock_lessonId_position",
+            "unique": true,
+            "columnNames": [
+              "lessonId",
+              "position"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_LessonBlock_lessonId_position` ON `${TABLE_NAME}` (`lessonId`, `position`)"
+          },
+          {
+            "name": "index_LessonBlock_lessonId",
+            "unique": false,
+            "columnNames": [
+              "lessonId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LessonBlock_lessonId` ON `${TABLE_NAME}` (`lessonId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Lesson",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lessonId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LessonBlockTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`blockId` TEXT NOT NULL, `locale` TEXT NOT NULL, `text` TEXT NOT NULL, PRIMARY KEY(`blockId`, `locale`), FOREIGN KEY(`blockId`) REFERENCES `LessonBlock`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "blockId",
+            "columnName": "blockId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "text",
+            "columnName": "text",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "blockId",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_LessonBlockTranslation_blockId",
+            "unique": false,
+            "columnNames": [
+              "blockId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LessonBlockTranslation_blockId` ON `${TABLE_NAME}` (`blockId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "LessonBlock",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "blockId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LessonQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`lessonId` TEXT NOT NULL, `questionId` TEXT NOT NULL, `position` INTEGER NOT NULL, PRIMARY KEY(`lessonId`, `questionId`), FOREIGN KEY(`lessonId`) REFERENCES `Lesson`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`questionId`) REFERENCES `Question`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lessonId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "lessonId",
+            "questionId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_LessonQuestion_lessonId",
+            "unique": false,
+            "columnNames": [
+              "lessonId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LessonQuestion_lessonId` ON `${TABLE_NAME}` (`lessonId`)"
+          },
+          {
+            "name": "index_LessonQuestion_questionId",
+            "unique": false,
+            "columnNames": [
+              "questionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LessonQuestion_questionId` ON `${TABLE_NAME}` (`questionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Lesson",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lessonId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "Question",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "DictionaryWord",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `lemma` TEXT NOT NULL, `context` TEXT NOT NULL, `exampleCs` TEXT NOT NULL, `reviewStatus` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lemma",
+            "columnName": "lemma",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "context",
+            "columnName": "context",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exampleCs",
+            "columnName": "exampleCs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reviewStatus",
+            "columnName": "reviewStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "DictionaryForm",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wordId` TEXT NOT NULL, `form` TEXT NOT NULL, PRIMARY KEY(`wordId`, `form`), FOREIGN KEY(`wordId`) REFERENCES `DictionaryWord`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "wordId",
+            "columnName": "wordId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "form",
+            "columnName": "form",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "wordId",
+            "form"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_DictionaryForm_wordId",
+            "unique": false,
+            "columnNames": [
+              "wordId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_DictionaryForm_wordId` ON `${TABLE_NAME}` (`wordId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DictionaryWord",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wordId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "DictionaryTranslation",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wordId` TEXT NOT NULL, `locale` TEXT NOT NULL, `translation` TEXT NOT NULL, `meaning` TEXT NOT NULL, `exampleTranslation` TEXT NOT NULL, PRIMARY KEY(`wordId`, `locale`), FOREIGN KEY(`wordId`) REFERENCES `DictionaryWord`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "wordId",
+            "columnName": "wordId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "translation",
+            "columnName": "translation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "meaning",
+            "columnName": "meaning",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "exampleTranslation",
+            "columnName": "exampleTranslation",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "wordId",
+            "locale"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_DictionaryTranslation_wordId",
+            "unique": false,
+            "columnNames": [
+              "wordId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_DictionaryTranslation_wordId` ON `${TABLE_NAME}` (`wordId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DictionaryWord",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wordId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "SavedWord",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`wordId` TEXT NOT NULL, `addedAt` INTEGER NOT NULL, `repetitions` INTEGER NOT NULL, `correctCount` INTEGER NOT NULL, `nextReviewAt` INTEGER, PRIMARY KEY(`wordId`), FOREIGN KEY(`wordId`) REFERENCES `DictionaryWord`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "wordId",
+            "columnName": "wordId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addedAt",
+            "columnName": "addedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repetitions",
+            "columnName": "repetitions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctCount",
+            "columnName": "correctCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextReviewAt",
+            "columnName": "nextReviewAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "wordId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_SavedWord_wordId",
+            "unique": false,
+            "columnNames": [
+              "wordId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_SavedWord_wordId` ON `${TABLE_NAME}` (`wordId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DictionaryWord",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wordId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FavoriteQuestion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`questionId` TEXT NOT NULL, `addedAt` INTEGER NOT NULL, PRIMARY KEY(`questionId`), FOREIGN KEY(`questionId`) REFERENCES `Question`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "addedAt",
+            "columnName": "addedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "questionId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_FavoriteQuestion_questionId",
+            "unique": false,
+            "columnNames": [
+              "questionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_FavoriteQuestion_questionId` ON `${TABLE_NAME}` (`questionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Question",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionAttempt",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `revisionId` TEXT NOT NULL, `answerCode` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `correct` INTEGER NOT NULL, `errorReason` TEXT, `materialMode` TEXT NOT NULL, `level` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`revisionId`, `answerCode`) REFERENCES `Answer`(`revisionId`, `code`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answerCode",
+            "columnName": "answerCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correct",
+            "columnName": "correct",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "errorReason",
+            "columnName": "errorReason",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "materialMode",
+            "columnName": "materialMode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionAttempt_revisionId_answerCode",
+            "unique": false,
+            "columnNames": [
+              "revisionId",
+              "answerCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionAttempt_revisionId_answerCode` ON `${TABLE_NAME}` (`revisionId`, `answerCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Answer",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId",
+              "answerCode"
+            ],
+            "referencedColumns": [
+              "revisionId",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "ExamAttempt",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `versionId` TEXT NOT NULL, `blueprintVersion` TEXT NOT NULL, `startedAt` INTEGER NOT NULL, `deadlineAt` INTEGER NOT NULL, `completedAt` INTEGER, `score` INTEGER, `mode` TEXT NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`versionId`) REFERENCES `DatabaseVersion`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "versionId",
+            "columnName": "versionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blueprintVersion",
+            "columnName": "blueprintVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAt",
+            "columnName": "startedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deadlineAt",
+            "columnName": "deadlineAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAt",
+            "columnName": "completedAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "mode",
+            "columnName": "mode",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ExamAttempt_versionId",
+            "unique": false,
+            "columnNames": [
+              "versionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ExamAttempt_versionId` ON `${TABLE_NAME}` (`versionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DatabaseVersion",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "versionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "ExamAnswer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`examId` TEXT NOT NULL, `position` INTEGER NOT NULL, `revisionId` TEXT NOT NULL, `answerCode` TEXT, `awardedPoints` INTEGER, PRIMARY KEY(`examId`, `position`), FOREIGN KEY(`examId`) REFERENCES `ExamAttempt`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`revisionId`, `answerCode`) REFERENCES `Answer`(`revisionId`, `code`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "examId",
+            "columnName": "examId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revisionId",
+            "columnName": "revisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "answerCode",
+            "columnName": "answerCode",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "awardedPoints",
+            "columnName": "awardedPoints",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "examId",
+            "position"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ExamAnswer_examId_revisionId",
+            "unique": true,
+            "columnNames": [
+              "examId",
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_ExamAnswer_examId_revisionId` ON `${TABLE_NAME}` (`examId`, `revisionId`)"
+          },
+          {
+            "name": "index_ExamAnswer_examId",
+            "unique": false,
+            "columnNames": [
+              "examId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ExamAnswer_examId` ON `${TABLE_NAME}` (`examId`)"
+          },
+          {
+            "name": "index_ExamAnswer_revisionId",
+            "unique": false,
+            "columnNames": [
+              "revisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ExamAnswer_revisionId` ON `${TABLE_NAME}` (`revisionId`)"
+          },
+          {
+            "name": "index_ExamAnswer_revisionId_answerCode",
+            "unique": false,
+            "columnNames": [
+              "revisionId",
+              "answerCode"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ExamAnswer_revisionId_answerCode` ON `${TABLE_NAME}` (`revisionId`, `answerCode`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "ExamAttempt",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "examId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "QuestionRevision",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "Answer",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "revisionId",
+              "answerCode"
+            ],
+            "referencedColumns": [
+              "revisionId",
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "LearningProgress",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`lessonId` TEXT NOT NULL, `blockPosition` INTEGER NOT NULL, `completedAt` INTEGER, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`lessonId`), FOREIGN KEY(`lessonId`) REFERENCES `Lesson`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "lessonId",
+            "columnName": "lessonId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blockPosition",
+            "columnName": "blockPosition",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAt",
+            "columnName": "completedAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "lessonId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_LearningProgress_lessonId",
+            "unique": false,
+            "columnNames": [
+              "lessonId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_LearningProgress_lessonId` ON `${TABLE_NAME}` (`lessonId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Lesson",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lessonId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "QuestionReview",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`questionId` TEXT NOT NULL, `lastRevisionId` TEXT NOT NULL, `correctStreak` INTEGER NOT NULL, `lastCorrectAt` INTEGER, `nextReviewAt` INTEGER NOT NULL, `masteredAt` INTEGER, PRIMARY KEY(`questionId`), FOREIGN KEY(`questionId`) REFERENCES `Question`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`lastRevisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "questionId",
+            "columnName": "questionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastRevisionId",
+            "columnName": "lastRevisionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctStreak",
+            "columnName": "correctStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastCorrectAt",
+            "columnName": "lastCorrectAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "nextReviewAt",
+            "columnName": "nextReviewAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "masteredAt",
+            "columnName": "masteredAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "questionId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_QuestionReview_questionId",
+            "unique": false,
+            "columnNames": [
+              "questionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionReview_questionId` ON `${TABLE_NAME}` (`questionId`)"
+          },
+          {
+            "name": "index_QuestionReview_lastRevisionId",
+            "unique": false,
+            "columnNames": [
+              "lastRevisionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_QuestionReview_lastRevisionId` ON `${TABLE_NAME}` (`lastRevisionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "Question",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "questionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "QuestionRevision",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "lastRevisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "WordReview",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `wordId` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `correct` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`wordId`) REFERENCES `DictionaryWord`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "wordId",
+            "columnName": "wordId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correct",
+            "columnName": "correct",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_WordReview_wordId",
+            "unique": false,
+            "columnNames": [
+              "wordId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_WordReview_wordId` ON `${TABLE_NAME}` (`wordId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DictionaryWord",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "wordId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '81cbd33873aab63bc39ee4c31a037fe3')"
+    ]
+  }
+}
