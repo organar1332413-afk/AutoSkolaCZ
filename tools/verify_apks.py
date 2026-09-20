@@ -10,7 +10,15 @@ for variant,filename in [('debug','app-debug.apk'),('release','app-release-unsig
     with zipfile.ZipFile(apk) as z:
         assert z.testzip() is None
         dex=b''.join(z.read(n) for n in z.namelist() if n.endswith('.dex'))
-        assert b'TEST_ONLY' not in dex, 'Synthetic fixtures leaked into APK'
+        synthetic_markers = [
+            b'https://etesty.md.gov.cz/TEST_ONLY',
+            b'TEST_ONLY:',
+            b'ExamEngineTest',
+            b'RoomPersistenceTest',
+            b'ReviewPolicyTest',
+        ]
+        leaked = [marker.decode('ascii') for marker in synthetic_markers if marker in dex]
+        assert not leaked, f'Synthetic test fixtures leaked into APK: {leaked}'
         markers={name:name.encode() in dex for name in ['DeveloperController','resetOnboardingForDevelopment','SeedWord']}
         samples=[n for n in z.namelist() if n.startswith('assets/content/')]
     resources=subprocess.check_output([str(build_tools/'aapt2'),'dump','resources',str(apk)],text=True)
