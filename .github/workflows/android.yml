@@ -11,7 +11,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.11.1'
@@ -25,9 +25,12 @@ jobs:
       - run: python -m unittest discover -s tools -p 'test_*.py' -v
       - run: python tools/verify_apks.py > build/verification/apk-variants.json
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: AutoSkolaCZ-stage2-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: AutoSkolaCZ-stage2-apks-diagnostic
+          path: |
+            app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/release/app-release-unsigned.apk
           if-no-files-found: error
       - name: Android Lint
         run: |
