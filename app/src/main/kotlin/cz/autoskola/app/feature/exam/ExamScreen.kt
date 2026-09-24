@@ -205,7 +205,7 @@ fun ExamScreen(
                 item {
                     val selected=session.answers[item.revisionId]==option.code
                     OutlinedCard(
-                        onClick={if(state.busy) ({}) else ({answer(item.revisionId,option.code)})},
+                        onClick={ if(!state.busy) answer(item.revisionId,option.code) },
                         modifier=Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
