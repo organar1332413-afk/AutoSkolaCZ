@@ -57,7 +57,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                         composable("exam") { ExamScreen() }
                         composable("words") { WordsScreen(words,true,vm::saveWord,vm::removeWord,vm::wordReview) }
                         composable("czech") { WordsScreen(words,false,vm::saveWord,vm::removeWord,vm::wordReview) }
-                        composable("profile") { ProfileScreen(settings,status,vm::ui,vm::material,vm::level,open) { BuildExtras(vm,settings,status,open) } }
+                        composable("profile") { ProfileScreen(settings,status,vm::ui,vm::material,vm::level,vm::licenceGroup,open) { BuildExtras(vm,settings,status,open) } }
                         listOf("questions" to QuestionFilter.ALL,"mistakes" to QuestionFilter.MISTAKES,"favorites" to QuestionFilter.FAVORITES).forEach { (path,filter)->composable(path) { QuestionsScreen(questions,status,learning,filter) { open("question/$it") } } }
                         composable("question/{id}") { back->
                             val index=questions.indexOfFirst { it.officialId==back.arguments?.getString("id") }
