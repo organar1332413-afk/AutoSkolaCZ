@@ -10,13 +10,19 @@ class RoomStudyRepository(private val db: AutoSkolaDatabase) : StudyRepository {
     override fun status() = combine(db.content().activeVersion(), db.content().questions()) { version, questions ->
         version?.let { ContentStatus(it.databaseVersion, it.publicationDate, it.source, it.sample, questions.size, it.completeForB) }
     }
-    override fun questions(locale: String?) = combine(db.content().questions(), db.content().answers(), db.content().translations(locale ?: ""), db.content().answerTranslations(locale ?: ""), db.content().media()) { qs, answers, translations, ats, media ->
-        qs.map { q ->
-            val t = translations.find { it.revisionId == q.id }
-            QuestionCard(q.id, q.questionId, q.categoryId, q.textCs, q.points,
-                answers.filter { it.revisionId == q.id }.sortedBy { it.position }.map { OfficialAnswer(it.code, it.textCs, it.correct) },
-                t?.let { QuestionText(it.locale, it.text, it.explanation, ats.filter { a -> a.revisionId == q.id }.associate { a -> a.answerCode to a.text }, it.reviewStatus) },media.filter { it.revisionId==q.id }.map { MediaReference(it.path,it.sha256,it.mimeType,it.answerCode) })
-        }
+    override fun questions(locale: String?) = combine(
+        combine(db.content().questions(), db.content().answers(), db.content().translations(locale ?: ""), db.content().answerTranslations(locale ?: ""), db.content().media()) { qs, answers, translations, ats, media ->
+            qs.map { q ->
+                val t = translations.find { it.revisionId == q.id }
+                QuestionCard(q.id, q.questionId, q.categoryId, q.textCs, q.points,
+                    answers.filter { it.revisionId == q.id }.sortedBy { it.position }.map { OfficialAnswer(it.code, it.textCs, it.correct) },
+                    t?.let { QuestionText(it.locale, it.text, it.explanation, ats.filter { a -> a.revisionId == q.id }.associate { a -> a.answerCode to a.text }, it.reviewStatus) },
+                    media.filter { it.revisionId==q.id }.map { MediaReference(it.path,it.sha256,it.mimeType,it.answerCode) })
+            }
+        },
+        db.content().licenceGroups()
+    ) { cards, groups ->
+        cards.map { card -> card.copy(licenceGroups = groups.filter { it.revisionId == card.revisionId }.map { it.licenceGroup }) }
     }
     override fun words(locale: String) = combine(db.words().words(), db.words().translations(locale), db.words().saved(), db.words().forms()) { words, texts, saved, forms ->
         words.map { word ->
