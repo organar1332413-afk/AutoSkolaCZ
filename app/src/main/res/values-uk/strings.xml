@@ -165,4 +165,20 @@
   <string name="lesson_media_pending">Перевірене зображення поки відсутнє.</string>
   <string name="database_empty">Базу поки не завантажено</string>
   <string name="only_czech">Лише чеська</string>
+
+  <string name="licence_category">Категорія водійських прав</string>
+  <string name="category_a">A — Мотоцикл</string>
+  <string name="category_b">B — Автомобіль</string>
+  <string name="category_be">B+E — Автомобіль із причепом</string>
+  <string name="category_t">T — Трактор</string>
+  <string name="category_c">C — Вантажний автомобіль</string>
+  <string name="category_ce">C+E — Вантажний автопоїзд</string>
+  <string name="category_d">D — Автобус</string>
+  <string name="category_de">D+E — Автобус із причепом</string>
+  <string name="onboarding_language_title">Оберіть мову застосунку</string>
+  <string name="onboarding_category_title">До якої категорії ви готуєтесь?</string>
+  <string name="onboarding_help_title">Скільки допомоги з чеською вам потрібно?</string>
+  <string name="support_full">Повна допомога — переклад видно одразу</string>
+  <string name="support_on_demand">Переклад за натисканням</string>
+  <string name="support_exam">Режим іспиту — без перекладу</string>
 </resources>
