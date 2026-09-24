@@ -181,4 +181,15 @@
   <string name="support_full">Полная помощь — перевод виден сразу</string>
   <string name="support_on_demand">Перевод по нажатию</string>
   <string name="support_exam">Режим экзамена — без перевода</string>
+
+  <string name="home_prepare_category">Подготовка к категории %1$s</string>
+  <string name="home_progress">Ваш прогресс</string>
+  <string name="home_progress_detail">%1$d из %2$d вопросов · %3$d %%</string>
+  <string name="home_continue_questions">Продолжить вопросы</string>
+  <string name="home_last_exam">Последний экзамен</string>
+  <string name="home_last_exam_score">%1$d / 50 баллов</string>
+  <string name="home_no_exams">Завершённых экзаменов пока нет.</string>
+  <string name="home_saved_words">Сохранено слов: %1$d</string>
+  <string name="home_database">База eTesty: %1$s</string>
+  <string name="study_tools">Язык, дорожные знаки, первая помощь и другие учебные материалы.</string>
 </resources>

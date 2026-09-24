@@ -181,4 +181,15 @@
   <string name="support_full">Повна допомога — переклад видно одразу</string>
   <string name="support_on_demand">Переклад за натисканням</string>
   <string name="support_exam">Режим іспиту — без перекладу</string>
+
+  <string name="home_prepare_category">Підготовка до категорії %1$s</string>
+  <string name="home_progress">Ваш прогрес</string>
+  <string name="home_progress_detail">%1$d із %2$d запитань · %3$d %%</string>
+  <string name="home_continue_questions">Продовжити запитання</string>
+  <string name="home_last_exam">Останній іспит</string>
+  <string name="home_last_exam_score">%1$d / 50 балів</string>
+  <string name="home_no_exams">Завершених іспитів поки немає.</string>
+  <string name="home_saved_words">Збережено слів: %1$d</string>
+  <string name="home_database">База eTesty: %1$s</string>
+  <string name="study_tools">Мова, дорожні знаки, перша допомога та інші навчальні матеріали.</string>
 </resources>

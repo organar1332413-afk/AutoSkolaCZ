@@ -181,4 +181,15 @@
   <string name="support_full">Plná pomoc — překlad je vidět hned</string>
   <string name="support_on_demand">Překlad na vyžádání</string>
   <string name="support_exam">Režim zkoušky — bez překladu</string>
+
+  <string name="home_prepare_category">Příprava na skupinu %1$s</string>
+  <string name="home_progress">Váš pokrok</string>
+  <string name="home_progress_detail">%1$d z %2$d otázek · %3$d %%</string>
+  <string name="home_continue_questions">Pokračovat v otázkách</string>
+  <string name="home_last_exam">Poslední zkouška</string>
+  <string name="home_last_exam_score">%1$d / 50 bodů</string>
+  <string name="home_no_exams">Zatím nemáte dokončenou zkoušku.</string>
+  <string name="home_saved_words">Uložená slova: %1$d</string>
+  <string name="home_database">Databáze eTesty: %1$s</string>
+  <string name="study_tools">Jazyk, značky, první pomoc a další učební materiály.</string>
 </resources>
