@@ -20,6 +20,8 @@ interface ContentDao {
     fun answerTranslations(locale: String): Flow<List<AnswerTranslationEntity>>
     @Query("SELECT * FROM QuestionMedia WHERE revisionId IN (SELECT id FROM QuestionRevision WHERE versionId = (SELECT versionId FROM ActiveContent WHERE slot = 1)) ORDER BY position")
     fun media(): Flow<List<QuestionMediaEntity>>
+    @Query("SELECT * FROM QuestionMedia WHERE revisionId = :revisionId ORDER BY position")
+    suspend fun mediaForRevision(revisionId: String): List<QuestionMediaEntity>
     @Query("SELECT * FROM QuestionLicenceGroup WHERE revisionId IN (SELECT id FROM QuestionRevision WHERE versionId = (SELECT versionId FROM ActiveContent WHERE slot = 1))")
     fun licenceGroups(): Flow<List<QuestionLicenceGroupEntity>>
     @Insert suspend fun insertVersion(item: DatabaseVersionEntity)

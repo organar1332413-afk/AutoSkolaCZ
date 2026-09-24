@@ -211,4 +211,26 @@
   <string name="question_database_version">Версія бази: %1$s</string>
   <string name="question_publication_date">Редакція бази: %1$s</string>
   <string name="official_original_notice">Офіційний чеський текст показується без змін. Переклад і пояснення — окремий навчальний шар Autoškola CZ.</string>
+
+  <string name="exam_category">Категорія %1$s</string>
+  <string name="exam_category_unverified">Реальний режим іспиту для категорії %1$s поки не ввімкнено: спочатку потрібно підтвердити її офіційний шаблон іспиту.</string>
+  <string name="exam_sample_blocked">Демонстраційної бази недостатньо для реального режиму іспиту.</string>
+  <string name="exam_ready">Перевірена база для категорії B готова до іспиту.</string>
+  <string name="exam_result">Результат іспиту</string>
+  <string name="exam_passed">Іспит складено</string>
+  <string name="exam_failed">Іспит не складено</string>
+  <string name="exam_result_score">Бали: %1$d / 50</string>
+  <string name="exam_result_counts">Правильно: %1$d · помилок: %2$d · без відповіді: %3$d</string>
+  <string name="exam_lost_points">Втрачено балів: %1$d</string>
+  <string name="exam_weak_topics">Помилки за темами</string>
+  <string name="exam_review_mistakes">Розібрати помилкові питання</string>
+  <string name="exam_new">Новий іспит</string>
+  <string name="exam_question_number">Питання %1$d із %2$d</string>
+  <string name="exam_answered">Відповіді: %1$d / %2$d</string>
+  <string name="exam_mark">Позначити питання</string>
+  <string name="exam_unmark">Зняти позначку</string>
+  <string name="exam_question_load_error">Не вдалося завантажити питання. Іспит можна завершити, але цей запис потребує перевірки даних.</string>
+  <string name="exam_finish">Завершити іспит</string>
+  <string name="exam_finish_confirm_title">Завершити іспит?</string>
+  <string name="exam_finish_confirm">Без відповіді залишилося %1$d питань. Вони будуть зараховані як неправильні.</string>
 </resources>

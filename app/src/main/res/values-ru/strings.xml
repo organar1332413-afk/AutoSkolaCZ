@@ -211,4 +211,26 @@
   <string name="question_database_version">Версия базы: %1$s</string>
   <string name="question_publication_date">Редакция базы: %1$s</string>
   <string name="official_original_notice">Официальный чешский текст показывается без изменений. Перевод и объяснение — отдельный учебный слой Autoškola CZ.</string>
+
+  <string name="exam_category">Категория %1$s</string>
+  <string name="exam_category_unverified">Реальный режим экзамена для категории %1$s пока не включён: сначала нужно подтвердить её официальный шаблон экзамена.</string>
+  <string name="exam_sample_blocked">Демонстрационной базы недостаточно для реального режима экзамена.</string>
+  <string name="exam_ready">Проверенная база для категории B готова к экзамену.</string>
+  <string name="exam_result">Результат экзамена</string>
+  <string name="exam_passed">Экзамен сдан</string>
+  <string name="exam_failed">Экзамен не сдан</string>
+  <string name="exam_result_score">Баллы: %1$d / 50</string>
+  <string name="exam_result_counts">Верно: %1$d · ошибок: %2$d · без ответа: %3$d</string>
+  <string name="exam_lost_points">Потеряно баллов: %1$d</string>
+  <string name="exam_weak_topics">Ошибки по темам</string>
+  <string name="exam_review_mistakes">Разобрать ошибочные вопросы</string>
+  <string name="exam_new">Новый экзамен</string>
+  <string name="exam_question_number">Вопрос %1$d из %2$d</string>
+  <string name="exam_answered">Отвечено: %1$d / %2$d</string>
+  <string name="exam_mark">Отметить вопрос</string>
+  <string name="exam_unmark">Снять отметку</string>
+  <string name="exam_question_load_error">Не удалось загрузить вопрос. Экзамен можно завершить, но эта запись требует проверки данных.</string>
+  <string name="exam_finish">Завершить экзамен</string>
+  <string name="exam_finish_confirm_title">Завершить экзамен?</string>
+  <string name="exam_finish_confirm">Без ответа осталось %1$d вопросов. Они будут засчитаны как неправильные.</string>
 </resources>

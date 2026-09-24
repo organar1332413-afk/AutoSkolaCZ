@@ -211,4 +211,26 @@
   <string name="question_database_version">Verze databáze: %1$s</string>
   <string name="question_publication_date">Vydání databáze: %1$s</string>
   <string name="official_original_notice">Oficiální český text se zobrazuje beze změn. Překlad a vysvětlení jsou samostatná výuková vrstva Autoškola CZ.</string>
+
+  <string name="exam_category">Skupina %1$s</string>
+  <string name="exam_category_unverified">Reálný režim zkoušky pro skupinu %1$s zatím není aktivní, dokud nebude ověřen její oficiální blueprint.</string>
+  <string name="exam_sample_blocked">Ukázková databáze nestačí pro reálný režim zkoušky.</string>
+  <string name="exam_ready">Ověřená databáze pro skupinu B je připravena.</string>
+  <string name="exam_result">Výsledek zkoušky</string>
+  <string name="exam_passed">Úspěšně splněno</string>
+  <string name="exam_failed">Zkouška nebyla splněna</string>
+  <string name="exam_result_score">Skóre: %1$d / 50</string>
+  <string name="exam_result_counts">Správně: %1$d · chybně: %2$d · bez odpovědi: %3$d</string>
+  <string name="exam_lost_points">Ztracené body: %1$d</string>
+  <string name="exam_weak_topics">Chyby podle témat</string>
+  <string name="exam_review_mistakes">Projít chybné otázky</string>
+  <string name="exam_new">Nová zkouška</string>
+  <string name="exam_question_number">Otázka %1$d z %2$d</string>
+  <string name="exam_answered">Zodpovězeno: %1$d / %2$d</string>
+  <string name="exam_mark">Označit otázku</string>
+  <string name="exam_unmark">Zrušit označení</string>
+  <string name="exam_question_load_error">Otázku se nepodařilo načíst. Zkoušku lze dokončit, ale tato položka potřebuje kontrolu dat.</string>
+  <string name="exam_finish">Ukončit zkoušku</string>
+  <string name="exam_finish_confirm_title">Ukončit zkoušku?</string>
+  <string name="exam_finish_confirm">Bez odpovědi zůstává %1$d otázek. Ty budou vyhodnoceny jako nesprávné.</string>
 </resources>

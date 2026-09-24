@@ -57,6 +57,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         val loadedWords by vm.words.collectAsStateWithLifecycle()
         val loadedLessons by vm.lessons.collectAsStateWithLifecycle()
         val learning by vm.learning.collectAsStateWithLifecycle()
+        val examState by vm.exam.collectAsStateWithLifecycle()
         val words=loadedWords.filter { it.locale==(settings.materialMode.translationTag ?: "cs") }
         val lessons=loadedLessons.map { l->
             if(l.locale==settings.materialMode.translationTag) l
@@ -71,6 +72,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
             Tab("learn",R.string.learn,Icons.Default.Star)
         )
         val topLevelRoutes=tabs.map { it.route }.toSet()
+        val examRunning=route=="exam" && examState.session?.completedAt==null && examState.session!=null
         val open:(String)->Unit={destination->nav.navigate(destination) { launchSingleTop=true }}
 
         Scaffold(
@@ -83,7 +85,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                         }
                     },
                     actions={
-                        if(route!="profile") {
+                        if(route!="profile" && !examRunning) {
                             IconButton(onClick={open("profile")}) {
                                 Icon(Icons.Default.Settings,contentDescription=text(R.string.profile))
                             }
@@ -92,7 +94,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                 )
             },
             bottomBar={
-                if(route in topLevelRoutes) {
+                if(route in topLevelRoutes && !examRunning) {
                     NavigationBar {
                         tabs.forEach { tab->
                             NavigationBarItem(
@@ -126,7 +128,18 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                     LoadState.READY->NavHost(navController=nav,startDestination="home") {
                         composable("home") { HomeScreen(settings,questions,status,lessons,learning,words,open) }
                         composable("questions") { QuestionsScreen(questions,status,learning,QuestionFilter.ALL) { open("question/$it") } }
-                        composable("exam") { ExamScreen() }
+                        composable("exam") {
+                            ExamScreen(
+                                settings,
+                                status,
+                                examState,
+                                vm::startExam,
+                                vm::examAnswer,
+                                vm::finishExam,
+                                vm::refreshExam,
+                                open
+                            )
+                        }
                         composable("learn") { LearnScreen(lessons,settings,open) }
 
                         composable("words") { WordsScreen(words,true,vm::saveWord,vm::removeWord,vm::wordReview) }

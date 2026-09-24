@@ -89,7 +89,8 @@ class RoomPersistenceTest {
     }
     @Test fun examResumesPinnedRevisionsAfterBankUpdateAndRecordsUnansweredMistakes()=runBlocking {
         val pack=testBank();importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),pack).encodeToByteArray())
-        var clock=100L;val exams=ExamRepository(db) { clock };val (id,session)=exams.start(pack)
+        var clock=100L;val exams=ExamRepository(db) { clock };val (id,session)=exams.start()
+        val cards=exams.cards(session);assertEquals(25,cards.size);assertEquals(session.items.map { it.revisionId },cards.map { it.revisionId })
         val q=session.items.first();exams.answer(id,q.revisionId,"A")
         val newer=pack.copy(manifest=pack.manifest.copy(databaseVersion="TEST_NEW"));importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),newer).encodeToByteArray())
         val resumed=exams.unfinished()!!.second;assertEquals("TEST_ONLY",resumed.version);assertEquals("A",resumed.answers[q.revisionId])
