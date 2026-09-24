@@ -68,6 +68,13 @@ class RoomPersistenceTest {
         val study=RoomStudyRepository(db);study.saveUnknownWord("Chodce");study.saveUnknownWord("chodce")
         val word=study.words("ru").first().single();assertTrue(word.saved);assertEquals("chodce",word.lemma);assertNull(word.translation);assertEquals("",word.exampleCs)
     }
+    @Test fun questionAssessmentPersistsAndReplacesPreviousValue()=runBlocking {
+        val store=QuestionAssessmentStore(RuntimeEnvironment.getApplication())
+        store.set("assessment-test",QuestionAssessment.DOUBTFUL)
+        assertEquals(QuestionAssessment.DOUBTFUL,store.assessments.first()["assessment-test"])
+        store.set("assessment-test",QuestionAssessment.KNOWN)
+        assertEquals(QuestionAssessment.KNOWN,store.assessments.first()["assessment-test"])
+    }
     @Test fun lessonProgressAndTranslationUseExistingTables()=runBlocking {
         db.openHelper.writableDatabase.execSQL("INSERT INTO Lesson VALUES('lesson','demo','Český název','TEST','test','draft',5)")
         db.openHelper.writableDatabase.execSQL("INSERT INTO LessonTranslation VALUES('lesson','uk','Назва')")

@@ -17,7 +17,8 @@ class RoomStudyRepository(private val db: AutoSkolaDatabase) : StudyRepository {
                 QuestionCard(q.id, q.questionId, q.categoryId, q.textCs, q.points,
                     answers.filter { it.revisionId == q.id }.sortedBy { it.position }.map { OfficialAnswer(it.code, it.textCs, it.correct) },
                     t?.let { QuestionText(it.locale, it.text, it.explanation, ats.filter { a -> a.revisionId == q.id }.associate { a -> a.answerCode to a.text }, it.reviewStatus) },
-                    media.filter { it.revisionId==q.id }.map { MediaReference(it.path,it.sha256,it.mimeType,it.answerCode) })
+                    media.filter { it.revisionId==q.id }.map { MediaReference(it.path,it.sha256,it.mimeType,it.answerCode) },
+                    source=q.source)
             }
         },
         db.content().licenceGroups()

@@ -22,7 +22,7 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val words = settings.flatMapLatest { container.study.words(it.materialMode.translationTag ?: "cs") }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val lessons = settings.flatMapLatest { container.learning.lessons(it.materialMode.translationTag) }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-    val learning = container.learning.snapshot.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LearningSnapshot())
+    val learning = combine(container.learning.snapshot, container.assessments.assessments) { snapshot, assessments -> snapshot.copy(assessments=assessments) }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LearningSnapshot())
     val sessionStartedAt = System.currentTimeMillis()
     init { initialize() }
     fun initialize() { viewModelScope.launch {
@@ -44,6 +44,7 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     fun wordReview(id:String,correct:Boolean)=update { container.learning.wordReview(id,correct) }
     fun favorite(id:String,v:Boolean)=update { container.learning.favorite(id,v) }
     fun reason(id:String,v:ErrorReason)=update { container.learning.reason(id,v) }
+    fun assessment(id:String,v:QuestionAssessment)=update { container.assessments.set(id,v) }
     fun progress(id:String,position:Int,complete:Boolean)=update { container.learning.progress(id,position,complete) }
     fun answer(id:String,revision:String,code:String,done:(Boolean?)->Unit) { viewModelScope.launch {
         try { done(container.learning.answer(id,revision,code,settings.value,sessionStartedAt)) }

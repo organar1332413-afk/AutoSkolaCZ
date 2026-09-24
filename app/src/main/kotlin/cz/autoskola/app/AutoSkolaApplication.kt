@@ -13,6 +13,7 @@ class AppContainer(internal val application: Application) {
     val settings = SettingsStore(application)
     val study = RoomStudyRepository(db)
     val learning = LearningRepository(db)
+    val assessments = QuestionAssessmentStore(application)
     val exams = ExamRepository(db)
     private val importer = ContentImporter(db, File(application.filesDir, "content"))
     val bootstrap = Bootstrap(application, db, importer, BuildConfig.DEBUG)

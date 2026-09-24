@@ -21,6 +21,7 @@ import java.util.UUID
     QuestionFilter.ALL->R.string.filter_all
     QuestionFilter.MISTAKES->R.string.mistakes
     QuestionFilter.DOUBTFUL->R.string.filter_doubtful
+    QuestionFilter.UNKNOWN->R.string.filter_unknown
     QuestionFilter.KNOWN->R.string.filter_known
     QuestionFilter.FAVORITES->R.string.favorites
     QuestionFilter.UNSEEN->R.string.filter_unseen
@@ -142,6 +143,7 @@ private fun QuestionCard.matchesSearch(raw:String):Boolean {
                 learning.isKnown(q)->R.string.filter_known
                 learning.isMistake(q)->R.string.mistakes
                 learning.isDoubtful(q)->R.string.filter_doubtful
+                learning.isUnknown(q)->R.string.filter_unknown
                 else->if(learning.attempts.any { it.revisionId==q.revisionId }) R.string.question_status_seen else R.string.question_status_new
             }
             Entry(
@@ -151,8 +153,24 @@ private fun QuestionCard.matchesSearch(raw:String):Boolean {
         }
     }
 }
-@Composable fun QuestionScreen(question:QuestionCard?,sample:Boolean,settings:UserSettings,words:List<Lexeme>,learning:LearningSnapshot,save:(String)->Unit,saveUnknown:(String)->Unit,favorite:(String,Boolean)->Unit,answer:(String,String,String,(Boolean?)->Unit)->Unit,reason:(String,ErrorReason)->Unit,previous:(()->Unit)?,next:(()->Unit)?) {
+@Composable fun QuestionScreen(
+    question:QuestionCard?,
+    status:ContentStatus?,
+    settings:UserSettings,
+    words:List<Lexeme>,
+    learning:LearningSnapshot,
+    save:(String)->Unit,
+    saveUnknown:(String)->Unit,
+    favorite:(String,Boolean)->Unit,
+    assess:(String,QuestionAssessment)->Unit,
+    answer:(String,String,String,(Boolean?)->Unit)->Unit,
+    reason:(String,ErrorReason)->Unit,
+    previous:(()->Unit)?,
+    next:(()->Unit)?
+) {
     if(question==null) { Page { item { Note(text(R.string.empty_questions)) } };return }
+
+    val sample=status?.sample!=false
     var reveal by rememberSaveable(question.revisionId,settings.materialMode,settings.level) { mutableStateOf(false) }
     var attemptId by rememberSaveable(question.revisionId) { mutableStateOf(UUID.randomUUID().toString()) }
     var selected by rememberSaveable(question.revisionId,attemptId) { mutableStateOf<String?>(null) }
@@ -161,49 +179,197 @@ private fun QuestionCard.matchesSearch(raw:String):Boolean {
     var selectedReason by rememberSaveable(question.revisionId,attemptId) { mutableStateOf<ErrorReason?>(null) }
     var word by rememberSaveable(question.revisionId,settings.materialMode,settings.level) { mutableStateOf<String?>(null) }
     var phrase by rememberSaveable(question.revisionId,settings.materialMode,settings.level) { mutableStateOf(false) }
+
     val persisted=learning.attempts.find { it.id==attemptId }
-    LaunchedEffect(persisted) { if(persisted!=null) { selected=persisted.answerCode;correct=persisted.correct;selectedReason=persisted.reason;busy=false } }
+    LaunchedEffect(persisted) {
+        if(persisted!=null) {
+            selected=persisted.answerCode
+            correct=persisted.correct
+            selectedReason=persisted.reason
+            busy=false
+        }
+    }
+
     val policy=settings.policy(revealed=reveal)
     val translation=question.translation?.takeIf { it.locale==policy.translationTag }
     val noHints=settings.level==LearningLevel.EXAM
+    val selectedAssessment=learning.assessments[question.officialId]
     val onWord:(String)->Unit={word=it}
+
     Page {
-        item { Note("${text(if(sample) R.string.question_sample else R.string.question_official)} · ${question.officialId} · ${categoryLabel(question.category)}") }
-        item { CzechText(question.textCs,policy.canLookup,onWord) }
-        if(!noHints) item { SpeechButtons(question.textCs) }
-        if(policy.canReveal && !reveal) item { TextButton(onClick={reveal=true}) { Text(text(R.string.show_translation)) } }
-        if(policy.showTranslation) item { Note(translation?.text ?: text(R.string.translation_missing)) }
-        items(question.media.filter { it.answerCode==null },key={it.path}) { LocalMedia(it) }
-        items(question.answers,key={it.code}) { option ->
-            OutlinedCard(Modifier.fillMaxWidth()) { Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-                CzechText(option.textCs,policy.canLookup,onWord)
-                question.media.filter { it.answerCode==option.code }.forEach { LocalMedia(it) }
-                if(policy.showTranslation) Note(translation?.answers?.get(option.code) ?: text(R.string.translation_missing))
-                if(!noHints) SpeechButtons(option.textCs)
-                OutlinedButton(onClick={busy=true;val pendingId=attemptId;answer(pendingId,question.revisionId,option.code) { result->if(pendingId==attemptId) { busy=false;if(result!=null) { selected=option.code;correct=result } } } },enabled=selected==null && !busy) { Text(if(selected==option.code) "✓ ${option.code}" else option.code) }
-            } }
-        }
-        if(correct!=null && !noHints) {
-            item { Text(text(if(correct==true) R.string.correct else R.string.incorrect),color=if(correct==true) CorrectColor else IncorrectColor) }
-            item { Text(text(R.string.correct_answer,question.answers.single { it.correct }.code)) }
-            if(policy.showTranslation) item { Note(translation?.explanation ?: text(R.string.translation_missing)) }
-            if(correct==false) {
-                item { Text(text(R.string.why_error)) }
-                item { Column { ErrorReason.entries.forEach { r->Choice(reasonLabel(r),selectedReason==r) { selectedReason=r;reason(attemptId,r) } } } }
+        item {
+            OutlinedCard(Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
+                    Text(text(if(sample) R.string.question_sample else R.string.question_official),style=MaterialTheme.typography.labelLarge)
+                    Note(question.officialId + " · " + categoryLabel(question.category))
+                    Note(question.points?.let { text(R.string.question_points,it) } ?: text(R.string.points_pending))
+                }
             }
         }
-        if(selected!=null) item { TextButton(onClick={attemptId=UUID.randomUUID().toString()}) { Text(text(R.string.answer_again)) } }
+
+        item { CzechText(question.textCs,policy.canLookup,onWord,prominent=true) }
+        if(policy.canLookup) item { Note(text(R.string.tap_word_hint)) }
+        if(!noHints) item { SpeechButtons(question.textCs) }
+
+        if(policy.canReveal && !reveal) item {
+            OutlinedButton(onClick={reveal=true},modifier=Modifier.fillMaxWidth()) {
+                Text(text(R.string.show_translation))
+            }
+        }
+
+        if(policy.showTranslation) item {
+            OutlinedCard(Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
+                    Text(text(R.string.translation_title),style=MaterialTheme.typography.titleMedium)
+                    Note(translation?.text ?: text(R.string.translation_missing))
+                }
+            }
+        }
+
+        items(question.media.filter { it.answerCode==null },key={it.path}) { LocalMedia(it) }
+
+        items(question.answers,key={it.code}) { option ->
+            val showResult=correct!=null && !noHints
+            val chosen=selected==option.code
+            val label=when {
+                showResult && option.correct -> "✓ " + option.code
+                showResult && chosen -> "✕ " + option.code
+                chosen -> "• " + option.code
+                else -> option.code
+            }
+            OutlinedCard(
+                onClick={
+                    if(selected==null && !busy) {
+                        busy=true
+                        val pendingId=attemptId
+                        answer(pendingId,question.revisionId,option.code) { result->
+                            if(pendingId==attemptId) {
+                                busy=false
+                                if(result!=null) {
+                                    selected=option.code
+                                    correct=result
+                                }
+                            }
+                        }
+                    }
+                },
+                modifier=Modifier.fillMaxWidth()
+            ) {
+                Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
+                    Text(label,style=MaterialTheme.typography.titleMedium)
+                    CzechText(option.textCs,policy.canLookup,onWord)
+                    question.media.filter { it.answerCode==option.code }.forEach { LocalMedia(it) }
+                    if(policy.showTranslation) Note(translation?.answers?.get(option.code) ?: text(R.string.translation_missing))
+                    if(!noHints) SpeechButtons(option.textCs)
+                    if(showResult && (option.correct || chosen)) {
+                        Text(
+                            text(if(option.correct) R.string.correct else R.string.incorrect),
+                            color=if(option.correct) CorrectColor else IncorrectColor
+                        )
+                    }
+                }
+            }
+        }
+
+        if(correct!=null && !noHints) {
+            item {
+                Text(
+                    text(if(correct==true) R.string.correct else R.string.incorrect),
+                    style=MaterialTheme.typography.titleLarge,
+                    color=if(correct==true) CorrectColor else IncorrectColor
+                )
+            }
+            item { Text(text(R.string.correct_answer,question.answers.single { it.correct }.code)) }
+
+            if(policy.showTranslation) item {
+                OutlinedCard(Modifier.fillMaxWidth()) {
+                    Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
+                        Text(text(R.string.explanation_title),style=MaterialTheme.typography.titleMedium)
+                        Note(translation?.explanation?.takeIf { it.isNotBlank() } ?: text(R.string.translation_missing))
+                    }
+                }
+            }
+
+            if(correct==false) {
+                item { Text(text(R.string.why_error),style=MaterialTheme.typography.titleMedium) }
+                item {
+                    Column {
+                        ErrorReason.entries.forEach { r->
+                            Choice(reasonLabel(r),selectedReason==r) {
+                                selectedReason=r
+                                reason(attemptId,r)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if(selected!=null) item {
+            TextButton(onClick={attemptId=UUID.randomUUID().toString()}) {
+                Text(text(R.string.answer_again))
+            }
+        }
+
         if(noHints) item { Note(text(R.string.no_hints_check)) }
-        item { Note(question.points?.let { text(R.string.question_points,it) } ?: text(R.string.points_pending)) }
-        item { val streak=learning.reviews[question.officialId]?.takeIf { it.revisionId==question.revisionId }?.streak ?: 0;Note(text(R.string.mastery,streak));Note(text(R.string.mastery_note)) }
-        item { TextButton(onClick={favorite(question.officialId,question.officialId !in learning.favorites)}) { Text(text(if(question.officialId in learning.favorites) R.string.favorite_remove else R.string.favorite_add)) } }
-        if(policy.canLookup) item { TextButton(onClick={phrase=!phrase}) { Text(text(R.string.phrase)) } }
-        if(phrase && policy.canLookup) item { Column(verticalArrangement=Arrangement.spacedBy(8.dp)) { PhraseAnalysis(question.textCs,words,save) } }
+
+        item { HorizontalDivider() }
+        item { Text(text(R.string.self_assessment),style=MaterialTheme.typography.titleMedium) }
+        item {
+            Row(
+                Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                horizontalArrangement=Arrangement.spacedBy(8.dp)
+            ) {
+                QuestionAssessment.entries.forEach { value->
+                    val label=text(when(value) {
+                        QuestionAssessment.KNOWN->R.string.filter_known
+                        QuestionAssessment.DOUBTFUL->R.string.filter_doubtful
+                        QuestionAssessment.UNKNOWN->R.string.filter_unknown
+                    })
+                    FilterChip(
+                        selected=selectedAssessment==value,
+                        onClick={assess(question.officialId,value)},
+                        label={Text(label)}
+                    )
+                }
+            }
+        }
+
+        item {
+            TextButton(onClick={favorite(question.officialId,question.officialId !in learning.favorites)}) {
+                Text(text(if(question.officialId in learning.favorites) R.string.favorite_remove else R.string.favorite_add))
+            }
+        }
+
+        if(policy.canLookup) item {
+            TextButton(onClick={phrase=!phrase}) { Text(text(R.string.phrase)) }
+        }
+        if(phrase && policy.canLookup) item {
+            Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
+                PhraseAnalysis(question.textCs,words,save)
+            }
+        }
         if(policy.showTranslation) item { Note(text(R.string.draft_translation)) }
-        item { Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
-            OutlinedButton(onClick={previous?.invoke()},enabled=previous!=null) { Text(text(R.string.previous)) }
-            Button(onClick={next?.invoke()},enabled=next!=null) { Text(text(R.string.next)) }
-        } }
+
+        item {
+            OutlinedCard(Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
+                    Text(text(R.string.question_details),style=MaterialTheme.typography.titleMedium)
+                    question.source?.let { Note(text(R.string.question_source,it)) }
+                    status?.databaseVersion?.let { Note(text(R.string.question_database_version,it)) }
+                    status?.publicationDate?.let { Note(text(R.string.question_publication_date,it)) }
+                    Note(text(R.string.official_original_notice))
+                }
+            }
+        }
+
+        item {
+            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
+                OutlinedButton(onClick={previous?.invoke()},enabled=previous!=null) { Text(text(R.string.previous)) }
+                Button(onClick={next?.invoke()},enabled=next!=null) { Text(text(R.string.next)) }
+            }
+        }
     }
+
     if(policy.canLookup) DictionarySheet(word,words,save,saveUnknown) { word=null }
 }

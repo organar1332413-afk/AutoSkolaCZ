@@ -200,4 +200,15 @@
   <string name="all_topics">Všechna témata</string>
   <string name="questions_found">Zobrazeno: %1$d z %2$d</string>
   <string name="search_empty">Pro toto hledání nebyla nalezena žádná otázka.</string>
+
+  <string name="filter_unknown">Nevím</string>
+  <string name="tap_word_hint">Klepnutím na české slovo zobrazíte slovník.</string>
+  <string name="translation_title">Překlad</string>
+  <string name="explanation_title">Proč je tato odpověď správná?</string>
+  <string name="self_assessment">Jak dobře tuto otázku znáte?</string>
+  <string name="question_details">Informace o otázce</string>
+  <string name="question_source">Zdroj otázky: %1$s</string>
+  <string name="question_database_version">Verze databáze: %1$s</string>
+  <string name="question_publication_date">Vydání databáze: %1$s</string>
+  <string name="official_original_notice">Oficiální český text se zobrazuje beze změn. Překlad a vysvětlení jsou samostatná výuková vrstva Autoškola CZ.</string>
 </resources>

@@ -200,4 +200,15 @@
   <string name="all_topics">Усі теми</string>
   <string name="questions_found">Показано: %1$d із %2$d</string>
   <string name="search_empty">За цим запитом питань не знайдено.</string>
+
+  <string name="filter_unknown">Не знаю</string>
+  <string name="tap_word_hint">Натисніть на чеське слово, щоб відкрити словник.</string>
+  <string name="translation_title">Переклад</string>
+  <string name="explanation_title">Чому ця відповідь правильна?</string>
+  <string name="self_assessment">Наскільки добре ви знаєте це питання?</string>
+  <string name="question_details">Інформація про питання</string>
+  <string name="question_source">Джерело питання: %1$s</string>
+  <string name="question_database_version">Версія бази: %1$s</string>
+  <string name="question_publication_date">Редакція бази: %1$s</string>
+  <string name="official_original_notice">Офіційний чеський текст показується без змін. Переклад і пояснення — окремий навчальний шар Autoškola CZ.</string>
 </resources>

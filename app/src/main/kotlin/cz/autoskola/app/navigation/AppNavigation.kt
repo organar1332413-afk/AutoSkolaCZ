@@ -139,6 +139,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                         listOf(
                             "mistakes" to QuestionFilter.MISTAKES,
                             "doubtful" to QuestionFilter.DOUBTFUL,
+                            "unknown" to QuestionFilter.UNKNOWN,
                             "known" to QuestionFilter.KNOWN,
                             "favorites" to QuestionFilter.FAVORITES,
                             "unseen" to QuestionFilter.UNSEEN
@@ -155,13 +156,14 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                             }
                             QuestionScreen(
                                 questions.getOrNull(index),
-                                status?.sample!=false,
+                                status,
                                 settings,
                                 words,
                                 learning,
                                 vm::saveWord,
                                 vm::saveUnknownWord,
                                 vm::favorite,
+                                vm::assessment,
                                 vm::answer,
                                 vm::reason,
                                 if(index>0) ({move(index-1)}) else null,

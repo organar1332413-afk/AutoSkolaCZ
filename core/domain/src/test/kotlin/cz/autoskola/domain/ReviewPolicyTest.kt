@@ -36,4 +36,12 @@ class ReviewPolicyTest {
         val mastered=attempted.copy(reviews=mapOf("q" to ReviewState("v:q",3,1,2)))
         assertTrue(mastered.matches(q,QuestionFilter.KNOWN));assertFalse(mastered.matches(q,QuestionFilter.DOUBTFUL))
     }
+    @Test fun explicitAssessmentOverridesDerivedProgress() {
+        val q=QuestionCard("v:q","q","rules","TEST ONLY",2,emptyList(),null)
+        val base=LearningSnapshot(listOf(AttemptRecord("a","v:q",true,null,1,false,"rules")),reviews=mapOf("q" to ReviewState("v:q",3,1,2)))
+        val unknown=base.copy(assessments=mapOf("q" to QuestionAssessment.UNKNOWN))
+        assertTrue(unknown.matches(q,QuestionFilter.UNKNOWN));assertFalse(unknown.matches(q,QuestionFilter.KNOWN))
+        val doubtful=base.copy(assessments=mapOf("q" to QuestionAssessment.DOUBTFUL))
+        assertTrue(doubtful.matches(q,QuestionFilter.DOUBTFUL));assertFalse(doubtful.matches(q,QuestionFilter.KNOWN))
+    }
 }
