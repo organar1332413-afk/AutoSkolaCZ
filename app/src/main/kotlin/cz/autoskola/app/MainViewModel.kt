@@ -15,7 +15,11 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     val settingsReady = MutableStateFlow(false)
     val settings = container.settings.settings.onEach { settingsReady.value=true }.stateIn(viewModelScope, SharingStarted.Eagerly, UserSettings(uiLanguage=UiLanguage.forTag(Locale.getDefault().language)))
     val status = container.study.status().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
-    val questions = settings.flatMapLatest { container.study.questions(it.materialMode.translationTag) }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+    val questions = settings.flatMapLatest { current ->
+        container.study.questions(current.materialMode.translationTag).map { cards ->
+            cards.filter { it.licenceGroups.isEmpty() || current.licenceGroup.code in it.licenceGroups }
+        }
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val words = settings.flatMapLatest { container.study.words(it.materialMode.translationTag ?: "cs") }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val lessons = settings.flatMapLatest { container.learning.lessons(it.materialMode.translationTag) }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val learning = container.learning.snapshot.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LearningSnapshot())
@@ -32,6 +36,7 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     fun ui(v:UiLanguage)=update { container.settings.setUiLanguage(v) }
     fun material(v:MaterialMode)=update { container.settings.setMaterialMode(v) }
     fun level(v:LearningLevel)=update { container.settings.setLevel(v) }
+    fun licenceGroup(v:LicenceGroup)=update { container.settings.setLicenceGroup(v) }
     fun onboarding(v:UserSettings)=update { container.settings.completeOnboarding(v) }
     fun saveWord(id:String)=update { container.study.saveWord(id) }
     fun saveUnknownWord(token:String)=update { container.study.saveUnknownWord(token) }
