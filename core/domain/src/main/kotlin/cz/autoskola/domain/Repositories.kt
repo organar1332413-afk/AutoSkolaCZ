@@ -7,6 +7,7 @@ interface SettingsRepository {
     suspend fun setMaterialMode(value: MaterialMode)
     suspend fun completeOnboarding(settings: UserSettings)
     suspend fun setLevel(value: LearningLevel)
+    suspend fun setLicenceGroup(value: LicenceGroup)
 }
 interface StudyRepository {
     fun status(): Flow<ContentStatus?>
