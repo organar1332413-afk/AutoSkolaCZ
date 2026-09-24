@@ -233,4 +233,20 @@
   <string name="exam_finish">Завершить экзамен</string>
   <string name="exam_finish_confirm_title">Завершить экзамен?</string>
   <string name="exam_finish_confirm">Без ответа осталось %1$d вопросов. Они будут засчитаны как неправильные.</string>
+
+  <string name="stats_best">Лучший</string>
+  <string name="stats_pass_rate">Сдано</string>
+  <string name="stats_exam_summary">Итоги экзаменов</string>
+  <string name="stats_last_exam">Последний экзамен: %1$d / 50 · %2$s</string>
+  <string name="stats_exam_history">История экзаменов</string>
+  <string name="stats_no_exam_history">Завершённых реальных экзаменов пока нет.</string>
+  <string name="stats_history_score">Баллы: %1$d / 50</string>
+  <string name="stats_history_date">Завершён: %1$s</string>
+  <string name="stats_history_duration">Время: %1$s</string>
+  <string name="stats_history_category">Категория: %1$s</string>
+  <string name="stats_history_database">База: %1$s</string>
+  <string name="stats_question_progress">Прогресс по вопросам</string>
+  <string name="stats_weak_topics">Слабые темы на экзаменах</string>
+  <string name="stats_no_weak_topics">В завершённых экзаменах пока нет ошибочных тем.</string>
+  <string name="stats_weak_topic">%1$s · ошибок: %2$d</string>
 </resources>

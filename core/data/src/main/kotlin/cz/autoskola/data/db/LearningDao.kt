@@ -25,6 +25,7 @@ data class AttemptDetails(val id: String, val revisionId: String, val correct: B
     @Query("SELECT * FROM LearningProgress ORDER BY updatedAt DESC") fun progress(): Flow<List<LearningProgressEntity>>
     @Upsert suspend fun saveProgress(item: LearningProgressEntity)
     @Query("SELECT score FROM ExamAttempt WHERE completedAt IS NOT NULL AND score IS NOT NULL ORDER BY completedAt DESC") fun scores(): Flow<List<Int>>
+    @Query("SELECT * FROM ExamAttempt WHERE completedAt IS NOT NULL AND score IS NOT NULL ORDER BY completedAt DESC") fun completedExams(): Flow<List<ExamAttemptEntity>>
     @Query("SELECT * FROM QuestionRevision WHERE id=:id") suspend fun revision(id: String): QuestionRevisionEntity?
     @Query("SELECT * FROM Answer WHERE revisionId=:id") suspend fun answers(id: String): List<AnswerEntity>
     @Query("SELECT * FROM SavedWord WHERE wordId=:id") suspend fun savedWord(id: String): SavedWordEntity?

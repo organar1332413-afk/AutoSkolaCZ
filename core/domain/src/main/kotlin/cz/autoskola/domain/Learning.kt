@@ -3,12 +3,14 @@ package cz.autoskola.domain
 enum class QuestionAssessment { KNOWN, DOUBTFUL, UNKNOWN }
 
 data class LessonProgress(val lessonId: String, val position: Int, val completedAt: Long?, val updatedAt: Long)
+data class ExamHistoryItem(val id:String,val category:String,val databaseVersion:String,val startedAt:Long,val completedAt:Long,val score:Int,val durationSeconds:Long)
 data class LearningSnapshot(
     val attempts: List<AttemptRecord> = emptyList(),
     val favorites: Set<String> = emptySet(),
     val reviews: Map<String,ReviewState> = emptyMap(),
     val progress: List<LessonProgress> = emptyList(),
     val examScores: List<Int> = emptyList(),
+    val examHistory: List<ExamHistoryItem> = emptyList(),
     val assessments: Map<String,QuestionAssessment> = emptyMap()
 )
 data class LessonBlockCard(val id: String, val kind: String, val textCs: String, val translation: String?, val mediaPath: String?)

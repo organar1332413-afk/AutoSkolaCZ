@@ -233,4 +233,20 @@
   <string name="exam_finish">Завершити іспит</string>
   <string name="exam_finish_confirm_title">Завершити іспит?</string>
   <string name="exam_finish_confirm">Без відповіді залишилося %1$d питань. Вони будуть зараховані як неправильні.</string>
+
+  <string name="stats_best">Найкращий</string>
+  <string name="stats_pass_rate">Складено</string>
+  <string name="stats_exam_summary">Підсумки іспитів</string>
+  <string name="stats_last_exam">Останній іспит: %1$d / 50 · %2$s</string>
+  <string name="stats_exam_history">Історія іспитів</string>
+  <string name="stats_no_exam_history">Завершених реальних іспитів поки немає.</string>
+  <string name="stats_history_score">Бали: %1$d / 50</string>
+  <string name="stats_history_date">Завершено: %1$s</string>
+  <string name="stats_history_duration">Час: %1$s</string>
+  <string name="stats_history_category">Категорія: %1$s</string>
+  <string name="stats_history_database">База: %1$s</string>
+  <string name="stats_question_progress">Прогрес за питаннями</string>
+  <string name="stats_weak_topics">Слабкі теми на іспитах</string>
+  <string name="stats_no_weak_topics">У завершених іспитах поки немає помилкових тем.</string>
+  <string name="stats_weak_topic">%1$s · помилок: %2$d</string>
 </resources>

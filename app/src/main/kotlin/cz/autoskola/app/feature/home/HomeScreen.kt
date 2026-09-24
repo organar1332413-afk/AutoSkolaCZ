@@ -35,7 +35,7 @@ private fun RowScope.MetricCard(title:String,value:Int,onClick:()->Unit) {
     val percent=if(questions.isEmpty()) 0 else attempted*100/questions.size
     val continued=progress.progress.firstOrNull { it.completedAt==null && lessons.any { l->l.id==it.lessonId } }
     val savedWords=words.count { it.saved }
-    val lastExam=progress.examScores.firstOrNull()
+    val lastExam=progress.examHistory.firstOrNull()
 
     Page {
         item { Heading(text(R.string.home_prepare_category,settings.licenceGroup.code)) }
@@ -70,7 +70,7 @@ private fun RowScope.MetricCard(title:String,value:Int,onClick:()->Unit) {
             item {
                 Entry(
                     text(R.string.home_last_exam),
-                    text(R.string.home_last_exam_score,lastExam)
+                    text(R.string.home_last_exam_score,lastExam.score)
                 ) { open("exam") }
             }
         } else {

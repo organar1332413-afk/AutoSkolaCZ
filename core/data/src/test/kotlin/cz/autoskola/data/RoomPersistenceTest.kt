@@ -95,7 +95,8 @@ class RoomPersistenceTest {
         val newer=pack.copy(manifest=pack.manifest.copy(databaseVersion="TEST_NEW"));importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),newer).encodeToByteArray())
         val resumed=exams.unfinished()!!.second;assertEquals("TEST_ONLY",resumed.version);assertEquals("A",resumed.answers[q.revisionId])
         clock=session.deadlineAt+1;val ended=exams.resume(id);assertNotNull(ended.completedAt);assertEquals(q.points,ExamEngine.result(ended).score)
-        assertNull(exams.unfinished());assertEquals(25,LearningRepository(db).snapshot.first().attempts.size)
+        assertNull(exams.unfinished());val snapshot=LearningRepository(db).snapshot.first();assertEquals(25,snapshot.attempts.size)
+        assertEquals(1,snapshot.examHistory.size);assertEquals(q.points,snapshot.examHistory.single().score);assertEquals("B",snapshot.examHistory.single().category)
         exams.finish(id);assertEquals(25,LearningRepository(db).snapshot.first().attempts.size)
     }
     @Test fun sampleExamStartIsRejectedWithoutPartialRows()=runBlocking {

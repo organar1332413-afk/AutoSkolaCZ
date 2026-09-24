@@ -233,4 +233,20 @@
   <string name="exam_finish">Ukončit zkoušku</string>
   <string name="exam_finish_confirm_title">Ukončit zkoušku?</string>
   <string name="exam_finish_confirm">Bez odpovědi zůstává %1$d otázek. Ty budou vyhodnoceny jako nesprávné.</string>
+
+  <string name="stats_best">Nejlepší</string>
+  <string name="stats_pass_rate">Úspěšnost</string>
+  <string name="stats_exam_summary">Souhrn zkoušek</string>
+  <string name="stats_last_exam">Poslední zkouška: %1$d / 50 · %2$s</string>
+  <string name="stats_exam_history">Historie zkoušek</string>
+  <string name="stats_no_exam_history">Zatím nemáte dokončenou reálnou zkoušku.</string>
+  <string name="stats_history_score">Skóre: %1$d / 50</string>
+  <string name="stats_history_date">Dokončeno: %1$s</string>
+  <string name="stats_history_duration">Doba: %1$s</string>
+  <string name="stats_history_category">Skupina: %1$s</string>
+  <string name="stats_history_database">Databáze: %1$s</string>
+  <string name="stats_question_progress">Postup v otázkách</string>
+  <string name="stats_weak_topics">Slabá témata ve zkouškách</string>
+  <string name="stats_no_weak_topics">Z dokončených zkoušek zatím nejsou žádná chybná témata.</string>
+  <string name="stats_weak_topic">%1$s · chyb: %2$d</string>
 </resources>
