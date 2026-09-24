@@ -73,7 +73,26 @@ jobs:
         with:
           api-level: 29
           arch: x86_64
-          script: gradle :core:data:connectedDebugAndroidTest
+          script: |
+            set +e
+            gradle :core:data:connectedDebugAndroidTest --stacktrace > /tmp/room-test.log 2>&1
+            status=$?
+            cat /tmp/room-test.log
+            if [ "$status" -eq 0 ]; then
+              exit 0
+            fi
+
+            if grep -Eq 'Failed to install|InstallException|INSTALL_FAILED' /tmp/room-test.log; then
+              echo "Transient emulator install failure detected; retrying Room device tests once."
+              adb wait-for-device
+              until adb shell pm list packages >/dev/null 2>&1; do
+                sleep 2
+              done
+              sleep 10
+              gradle :core:data:connectedDebugAndroidTest --stacktrace
+            else
+              exit "$status"
+            fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
