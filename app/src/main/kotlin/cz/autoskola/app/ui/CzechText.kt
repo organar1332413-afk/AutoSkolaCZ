@@ -4,9 +4,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.AnnotatedString
+
 /** Tokenization never rewrites CS content. */
 @Suppress("DEPRECATION")
-@Composable fun CzechText(value: String, lookupEnabled: Boolean, onWord: (String) -> Unit, prominent: Boolean = false) {
+@Composable fun CzechText(value: String, lookupEnabled: Boolean, onWord: (String) -> Unit) {
+    CzechText(value, lookupEnabled, onWord, prominent = false)
+}
+
+@Suppress("DEPRECATION")
+@Composable fun CzechText(value: String, lookupEnabled: Boolean, onWord: (String) -> Unit, prominent: Boolean) {
     val base = if (prominent) MaterialTheme.typography.titleLarge else MaterialTheme.typography.bodyLarge
     val style = base.copy(color = MaterialTheme.colorScheme.onSurface)
     if (!lookupEnabled) Text(value, style = style)
