@@ -31,6 +31,7 @@ private fun RowScope.MetricCard(title:String,value:Int,onClick:()->Unit) {
     val mistakes=questions.count { progress.isMistake(it) }
     val unseen=questions.count { q->progress.attempts.none { it.revisionId==q.revisionId } }
     val favorites=questions.count { it.officialId in progress.favorites }
+    val doubtful=questions.count { progress.isDoubtful(it) }
     val percent=if(questions.isEmpty()) 0 else attempted*100/questions.size
     val continued=progress.progress.firstOrNull { it.completedAt==null && lessons.any { l->l.id==it.lessonId } }
     val savedWords=words.count { it.saved }
@@ -59,7 +60,7 @@ private fun RowScope.MetricCard(title:String,value:Int,onClick:()->Unit) {
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
                 MetricCard(text(R.string.mistakes),mistakes) { open("mistakes") }
                 MetricCard(text(R.string.filter_unseen),unseen) { open("unseen") }
-                MetricCard(text(R.string.favorites),favorites) { open("favorites") }
+                MetricCard(text(R.string.filter_doubtful),doubtful) { open("doubtful") }
             }
         }
 

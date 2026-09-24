@@ -192,4 +192,12 @@
   <string name="home_saved_words">Сохранено слов: %1$d</string>
   <string name="home_database">База eTesty: %1$s</string>
   <string name="study_tools">Язык, дорожные знаки, первая помощь и другие учебные материалы.</string>
+
+  <string name="filter_doubtful">Сомневаюсь</string>
+  <string name="filter_known">Знаю</string>
+  <string name="search_questions">Найти вопрос, ответ или слово</string>
+  <string name="topics">Темы</string>
+  <string name="all_topics">Все темы</string>
+  <string name="questions_found">Показано: %1$d из %2$d</string>
+  <string name="search_empty">По этому запросу вопросы не найдены.</string>
 </resources>

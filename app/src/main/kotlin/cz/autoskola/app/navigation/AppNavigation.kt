@@ -138,6 +138,8 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                         }
                         listOf(
                             "mistakes" to QuestionFilter.MISTAKES,
+                            "doubtful" to QuestionFilter.DOUBTFUL,
+                            "known" to QuestionFilter.KNOWN,
                             "favorites" to QuestionFilter.FAVORITES,
                             "unseen" to QuestionFilter.UNSEEN
                         ).forEach { (path,filter)->

@@ -1,6 +1,8 @@
 package cz.autoskola.app.feature.questions
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -12,19 +14,141 @@ import cz.autoskola.app.feature.words.*
 import cz.autoskola.design.CorrectColor
 import cz.autoskola.design.IncorrectColor
 import cz.autoskola.domain.*
+import java.util.Locale
 import java.util.UUID
-@Composable fun filterLabel(filter:QuestionFilter)=text(when(filter) { QuestionFilter.ALL->R.string.filter_all;QuestionFilter.MISTAKES->R.string.mistakes;QuestionFilter.FAVORITES->R.string.favorites;QuestionFilter.UNSEEN->R.string.filter_unseen })
-@Composable fun categoryLabel(category:String)=text(when(category) { "rules"->R.string.rules;"safe_driving"->R.string.topic_15;"signs"->R.string.signs;"situations"->R.string.topic_2;"vehicle"->R.string.topic_16;"first_aid"->R.string.first_aid;else->R.string.topic_18 })
-@Composable fun reasonLabel(reason:ErrorReason)=text(when(reason) { ErrorReason.RULE_UNKNOWN->R.string.reason_rule;ErrorReason.CZECH_UNCLEAR->R.string.reason_czech;ErrorReason.SIGN_CONFUSED->R.string.reason_sign;ErrorReason.INATTENTION->R.string.reason_attention })
-@Composable fun QuestionsScreen(questions:List<QuestionCard>,status:ContentStatus?,learning:LearningSnapshot,initial:QuestionFilter=QuestionFilter.ALL,open:(String)->Unit) {
+
+@Composable fun filterLabel(filter:QuestionFilter)=text(when(filter) {
+    QuestionFilter.ALL->R.string.filter_all
+    QuestionFilter.MISTAKES->R.string.mistakes
+    QuestionFilter.DOUBTFUL->R.string.filter_doubtful
+    QuestionFilter.KNOWN->R.string.filter_known
+    QuestionFilter.FAVORITES->R.string.favorites
+    QuestionFilter.UNSEEN->R.string.filter_unseen
+})
+@Composable fun categoryLabel(category:String)=text(when(category) {
+    "rules"->R.string.rules
+    "safe_driving"->R.string.topic_15
+    "signs"->R.string.signs
+    "situations"->R.string.topic_2
+    "vehicle"->R.string.topic_16
+    "first_aid"->R.string.first_aid
+    else->R.string.topic_18
+})
+@Composable fun reasonLabel(reason:ErrorReason)=text(when(reason) {
+    ErrorReason.RULE_UNKNOWN->R.string.reason_rule
+    ErrorReason.CZECH_UNCLEAR->R.string.reason_czech
+    ErrorReason.SIGN_CONFUSED->R.string.reason_sign
+    ErrorReason.INATTENTION->R.string.reason_attention
+})
+
+private fun QuestionCard.matchesSearch(raw:String):Boolean {
+    val query=raw.trim().lowercase(Locale.ROOT)
+    if(query.isEmpty()) return true
+    val haystack=buildString {
+        append(officialId).append(' ')
+        append(textCs).append(' ')
+        answers.forEach { append(it.textCs).append(' ') }
+        translation?.let { t ->
+            append(t.text).append(' ')
+            append(t.explanation).append(' ')
+            t.answers.values.forEach { append(it).append(' ') }
+        }
+    }.lowercase(Locale.ROOT)
+    return query in haystack
+}
+
+@Composable fun QuestionsScreen(
+    questions:List<QuestionCard>,
+    status:ContentStatus?,
+    learning:LearningSnapshot,
+    initial:QuestionFilter=QuestionFilter.ALL,
+    open:(String)->Unit
+) {
     var filter by rememberSaveable(initial) { mutableStateOf(initial) }
-    val displayed=questions.filter { learning.matches(it,filter) }
+    var query by rememberSaveable { mutableStateOf("") }
+    var category by rememberSaveable { mutableStateOf<String?>(null) }
+    val categoryCounts=questions.groupingBy { it.category }.eachCount().toSortedMap()
+    val displayed=questions.asSequence()
+        .filter { learning.matches(it,filter) }
+        .filter { category==null || it.category==category }
+        .filter { it.matchesSearch(query) }
+        .toList()
+
     Page {
         item { Heading(text(R.string.questions)) }
         if(status?.sample==true) item { Note(text(R.string.sample_notice,questions.size)) }
-        item { Column { QuestionFilter.entries.forEach { f->Choice(filterLabel(f),filter==f) { filter=f } } } }
-        if(displayed.isEmpty()) item { Note(text(when(filter) { QuestionFilter.MISTAKES->R.string.no_mistakes;QuestionFilter.FAVORITES->R.string.no_favorites;else->R.string.empty_questions })) }
-        items(displayed,key={it.revisionId}) { q -> Entry(q.textCs,"${q.officialId} · ${categoryLabel(q.category)} · ${text(if(learning.attempts.any { it.revisionId==q.revisionId }) R.string.question_status_seen else R.string.question_status_new)}") { open(q.officialId) } }
+
+        item {
+            OutlinedTextField(
+                value=query,
+                onValueChange={query=it},
+                modifier=Modifier.fillMaxWidth(),
+                singleLine=true,
+                label={Text(text(R.string.search_questions))}
+            )
+        }
+
+        item {
+            Row(
+                Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                horizontalArrangement=Arrangement.spacedBy(8.dp)
+            ) {
+                QuestionFilter.entries.forEach { f->
+                    FilterChip(
+                        selected=filter==f,
+                        onClick={filter=f},
+                        label={Text(filterLabel(f))}
+                    )
+                }
+            }
+        }
+
+        item { Text(text(R.string.topics),style=MaterialTheme.typography.titleMedium) }
+        item {
+            Row(
+                Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                horizontalArrangement=Arrangement.spacedBy(8.dp)
+            ) {
+                FilterChip(
+                    selected=category==null,
+                    onClick={category=null},
+                    label={Text(text(R.string.all_topics))}
+                )
+                categoryCounts.forEach { (key,count)->
+                    FilterChip(
+                        selected=category==key,
+                        onClick={category=key},
+                        label={Text(categoryLabel(key) + " · " + count)}
+                    )
+                }
+            }
+        }
+
+        item { Note(text(R.string.questions_found,displayed.size,questions.size)) }
+
+        if(displayed.isEmpty()) item {
+            Note(
+                if(query.isNotBlank()) text(R.string.search_empty)
+                else text(when(filter) {
+                    QuestionFilter.MISTAKES->R.string.no_mistakes
+                    QuestionFilter.FAVORITES->R.string.no_favorites
+                    else->R.string.empty_questions
+                })
+            )
+        }
+
+        items(displayed,key={it.revisionId}) { q ->
+            val state=when {
+                learning.isKnown(q)->R.string.filter_known
+                learning.isMistake(q)->R.string.mistakes
+                learning.isDoubtful(q)->R.string.filter_doubtful
+                else->if(learning.attempts.any { it.revisionId==q.revisionId }) R.string.question_status_seen else R.string.question_status_new
+            }
+            Entry(
+                q.textCs,
+                q.officialId + " · " + categoryLabel(q.category) + " · " + text(state)
+            ) { open(q.officialId) }
+        }
     }
 }
 @Composable fun QuestionScreen(question:QuestionCard?,sample:Boolean,settings:UserSettings,words:List<Lexeme>,learning:LearningSnapshot,save:(String)->Unit,saveUnknown:(String)->Unit,favorite:(String,Boolean)->Unit,answer:(String,String,String,(Boolean?)->Unit)->Unit,reason:(String,ErrorReason)->Unit,previous:(()->Unit)?,next:(()->Unit)?) {

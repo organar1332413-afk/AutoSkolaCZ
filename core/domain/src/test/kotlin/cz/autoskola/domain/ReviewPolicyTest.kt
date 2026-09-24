@@ -27,5 +27,13 @@ class ReviewPolicyTest {
         val q=QuestionCard("v2:q","q","rules","TEST ONLY",2,emptyList(),null)
         val state=LearningSnapshot(listOf(AttemptRecord("a","v1:q",false,null,1,false,"rules")),setOf("q"),mapOf("q" to ReviewState("v1:q",3,100,100)))
         assertTrue(state.matches(q,QuestionFilter.MISTAKES));assertTrue(state.matches(q,QuestionFilter.UNSEEN));assertTrue(state.matches(q,QuestionFilter.FAVORITES))
+        assertFalse(state.matches(q,QuestionFilter.KNOWN));assertFalse(state.matches(q,QuestionFilter.DOUBTFUL))
+    }
+    @Test fun knownAndDoubtfulUseCurrentRevisionProgress() {
+        val q=QuestionCard("v:q","q","rules","TEST ONLY",2,emptyList(),null)
+        val attempted=LearningSnapshot(listOf(AttemptRecord("a","v:q",true,null,1,false,"rules")),reviews=mapOf("q" to ReviewState("v:q",1,1,null)))
+        assertTrue(attempted.matches(q,QuestionFilter.DOUBTFUL));assertFalse(attempted.matches(q,QuestionFilter.KNOWN))
+        val mastered=attempted.copy(reviews=mapOf("q" to ReviewState("v:q",3,1,2)))
+        assertTrue(mastered.matches(q,QuestionFilter.KNOWN));assertFalse(mastered.matches(q,QuestionFilter.DOUBTFUL))
     }
 }

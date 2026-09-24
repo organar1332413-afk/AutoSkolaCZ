@@ -192,4 +192,12 @@
   <string name="home_saved_words">Uložená slova: %1$d</string>
   <string name="home_database">Databáze eTesty: %1$s</string>
   <string name="study_tools">Jazyk, značky, první pomoc a další učební materiály.</string>
+
+  <string name="filter_doubtful">K opakování</string>
+  <string name="filter_known">Znám</string>
+  <string name="search_questions">Hledat otázku, odpověď nebo slovo</string>
+  <string name="topics">Témata</string>
+  <string name="all_topics">Všechna témata</string>
+  <string name="questions_found">Zobrazeno: %1$d z %2$d</string>
+  <string name="search_empty">Pro toto hledání nebyla nalezena žádná otázka.</string>
 </resources>

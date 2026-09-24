@@ -192,4 +192,12 @@
   <string name="home_saved_words">Збережено слів: %1$d</string>
   <string name="home_database">База eTesty: %1$s</string>
   <string name="study_tools">Мова, дорожні знаки, перша допомога та інші навчальні матеріали.</string>
+
+  <string name="filter_doubtful">Сумніваюся</string>
+  <string name="filter_known">Знаю</string>
+  <string name="search_questions">Знайти запитання, відповідь або слово</string>
+  <string name="topics">Теми</string>
+  <string name="all_topics">Усі теми</string>
+  <string name="questions_found">Показано: %1$d із %2$d</string>
+  <string name="search_empty">За цим запитом питань не знайдено.</string>
 </resources>

@@ -13,7 +13,7 @@ object ReviewPolicy {
         return ReviewState(revision, streak, at, if (streak >= 3) old.masteredAt ?: at else null)
     }
 }
-enum class QuestionFilter { ALL, MISTAKES, FAVORITES, UNSEEN }
+enum class QuestionFilter { ALL, MISTAKES, DOUBTFUL, KNOWN, FAVORITES, UNSEEN }
 data class QuestionProgress(val questionId: String, val attempted: Boolean, val mistake: Boolean, val streak: Int)
 data class AttemptRecord(val id: String, val revisionId: String, val correct: Boolean, val reason: ErrorReason?, val createdAt: Long, val sample: Boolean, val category: String, val answerCode: String? = null)
 data class Statistics(val attempted: Int, val total: Int, val correctPercent: Int?, val attempts: Int, val sampleAttempts: Int, val exams: Int, val averageScore: Double?, val recentScores: List<Int>, val savedWords: Int, val reviewedWords: Int, val reasons: Map<ErrorReason,Int>, val topics: Map<String,Pair<Int,Int>>)
