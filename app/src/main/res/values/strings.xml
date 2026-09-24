@@ -165,4 +165,20 @@
   <string name="lesson_media_pending">Ověřený obrázek zatím není k dispozici.</string>
   <string name="database_empty">Databáze zatím není nahrána</string>
   <string name="only_czech">Pouze čeština</string>
+
+  <string name="licence_category">Skupina řidičského oprávnění</string>
+  <string name="category_a">A — Motorka</string>
+  <string name="category_b">B — Auto</string>
+  <string name="category_be">B+E — Auto s přívěsem</string>
+  <string name="category_t">T — Traktor</string>
+  <string name="category_c">C — Nákladní vozidlo</string>
+  <string name="category_ce">C+E — Nákladní souprava</string>
+  <string name="category_d">D — Autobus</string>
+  <string name="category_de">D+E — Autobus s přívěsem</string>
+  <string name="onboarding_language_title">Vyberte jazyk aplikace</string>
+  <string name="onboarding_category_title">Na jakou skupinu se připravujete?</string>
+  <string name="onboarding_help_title">Kolik pomoci s češtinou chcete?</string>
+  <string name="support_full">Plná pomoc — překlad je vidět hned</string>
+  <string name="support_on_demand">Překlad na vyžádání</string>
+  <string name="support_exam">Režim zkoušky — bez překladu</string>
 </resources>
