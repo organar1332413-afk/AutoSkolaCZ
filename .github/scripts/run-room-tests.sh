@@ -3,21 +3,31 @@ set +e
 
 LOG_FILE="/tmp/room-test.log"
 
-gradle :core:data:connectedDebugAndroidTest --stacktrace >"$LOG_FILE" 2>&1
+run_tests() {
+  gradle :core:data:connectedDebugAndroidTest --stacktrace >"$LOG_FILE" 2>&1
+  status=$?
+  cat "$LOG_FILE"
+  return "$status"
+}
+
+run_tests
 status=$?
-cat "$LOG_FILE"
 
 if [ "$status" -eq 0 ]; then
   exit 0
 fi
 
-if grep -Eq 'Failed to install|InstallException|INSTALL_FAILED' "$LOG_FILE"; then
-  echo "Transient emulator install failure detected; retrying Room device tests once."
-  adb wait-for-device
+if grep -Eq 'Failed to install|InstallException|INSTALL_FAILED|ShellCommandUnresponsiveException|No compatible devices connected|Unknown API Level|device offline|device not found' "$LOG_FILE"; then
+  echo "Transient Android emulator/ADB failure detected; recovering and retrying Room device tests once."
+
+  adb kill-server >/dev/null 2>&1 || true
+  adb start-server >/dev/null 2>&1 || true
+  adb wait-for-device || true
 
   ready=0
-  for _ in $(seq 1 30); do
-    if adb shell pm list packages >/dev/null 2>&1; then
+  for _ in $(seq 1 45); do
+    boot_completed="$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')"
+    if [ "$boot_completed" = "1" ] && adb shell pm list packages >/dev/null 2>&1; then
       ready=1
       break
     fi
@@ -25,12 +35,12 @@ if grep -Eq 'Failed to install|InstallException|INSTALL_FAILED' "$LOG_FILE"; the
   done
 
   if [ "$ready" -ne 1 ]; then
-    echo "Android package manager did not become ready."
+    echo "Android emulator did not recover in time."
     exit "$status"
   fi
 
   sleep 10
-  gradle :core:data:connectedDebugAndroidTest --stacktrace
+  run_tests
   exit $?
 fi
 
