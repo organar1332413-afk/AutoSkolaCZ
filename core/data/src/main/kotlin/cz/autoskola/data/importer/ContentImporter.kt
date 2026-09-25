@@ -7,7 +7,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import kotlinx.serialization.json.Json
 import java.io.File
 import java.security.MessageDigest
 
@@ -16,10 +15,9 @@ import java.security.MessageDigest
  * No public network updater is enabled in stage 1. */
 class ContentImporter(private val db: AutoSkolaDatabase, private val contentRoot: File) {
     private val importMutex = Mutex()
-    private val json = Json { ignoreUnknownKeys = false }
     suspend fun importPackage(bytes: ByteArray, mediaRoot: File? = null): String = importMutex.withLock { withContext(Dispatchers.IO) {
         require(bytes.size <= 20 * 1024 * 1024) { "Manifest exceeds size limit" }
-        val pack = json.decodeFromString<QuestionPackage>(bytes.decodeToString(throwOnInvalidSequence = true))
+        val pack = ContentPackageCodec.decode(bytes.decodeToString(throwOnInvalidSequence = true))
         PackageValidator.validate(pack)
         val hash = sha256(bytes)
         val version = pack.manifest.databaseVersion
@@ -55,6 +53,9 @@ class ContentImporter(private val db: AutoSkolaDatabase, private val contentRoot
             db.withTransaction {
                 val m = pack.manifest
                 dao.insertVersion(DatabaseVersionEntity(version, version, m.publicationDate, m.source, m.retrievedAt, System.currentTimeMillis(), m.sample, m.completeForB, hash))
+                dao.insertReadiness(GroupReadinessPolicy.claims(m).map { claim ->
+                    ContentGroupReadinessEntity(version, claim.licenceGroup, claim.blueprintVersion, claim.eligibilityComplete, claim.contentComplete, claim.mediaComplete, claim.source)
+                })
                 dao.insertCategories(pack.questions.map { it.category }.distinct().map { QuestionCategoryEntity(it, it) })
                 dao.insertQuestions(pack.questions.map { QuestionEntity(it.officialId, it.officialId) })
                 pack.questions.forEach { q ->

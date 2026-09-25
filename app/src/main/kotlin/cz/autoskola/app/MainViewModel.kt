@@ -26,9 +26,9 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
         .onEach { settingsReady.value=true }
         .stateIn(viewModelScope, SharingStarted.Eagerly, UserSettings(uiLanguage=UiLanguage.forTag(Locale.getDefault().language)))
     val status = container.study.status().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
-    val questions = settings.flatMapLatest { current ->
+    val questions = combine(settings, status) { current, content -> current to content }.flatMapLatest { (current, content) ->
         container.study.questions(current.materialMode.translationTag).map { cards ->
-            cards.filter { it.licenceGroups.isEmpty() || current.licenceGroup.code in it.licenceGroups }
+            cards.filter { current.licenceGroup.code in it.licenceGroups || (content?.sample == true && it.licenceGroups.isEmpty()) }
         }
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val words = settings.flatMapLatest {

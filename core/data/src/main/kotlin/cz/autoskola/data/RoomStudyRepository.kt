@@ -7,8 +7,9 @@ import java.security.MessageDigest
 import cz.autoskola.domain.*
 import kotlinx.coroutines.flow.combine
 class RoomStudyRepository(private val db: AutoSkolaDatabase) : StudyRepository {
-    override fun status() = combine(db.content().activeVersion(), db.content().questions()) { version, questions ->
-        version?.let { ContentStatus(it.databaseVersion, it.publicationDate, it.source, it.sample, questions.size, it.completeForB) }
+    override fun status() = combine(db.content().activeVersion(), db.content().questions(), db.content().activeReadiness()) { version, questions, readiness ->
+        version?.let { ContentStatus(it.databaseVersion, it.publicationDate, it.source, it.sample, questions.size,
+            readiness.map { row -> GroupReadiness(row.licenceGroup, row.blueprintVersion, row.eligibilityComplete, row.contentComplete, row.mediaComplete, row.source) }) }
     }
     override fun questions(locale: String?) = combine(
         combine(db.content().questions(), db.content().answers(), db.content().translations(locale ?: ""), db.content().answerTranslations(locale ?: ""), db.content().media()) { qs, answers, translations, ats, media ->

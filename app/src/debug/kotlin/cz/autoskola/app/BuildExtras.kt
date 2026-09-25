@@ -33,7 +33,7 @@ private class DeveloperController(private val container:AppContainer) {
     TextButton(onClick={visible=true}) { Text(text(R.string.dev_title)) }
     if(visible) ModalBottomSheet(onDismissRequest={visible=false}) { Box(androidx.compose.ui.Modifier.fillMaxHeight(0.9f)) { Page {
         item { Heading(text(R.string.dev_title));Note(text(R.string.dev_note)) }
-        item { Note(text(R.string.dev_room,1));Note(text(R.string.dev_version,status?.databaseVersion ?: "—"));Note(text(R.string.dev_count,status?.count ?: 0));Note(text(R.string.dev_complete,text(if(status?.completeForB==true) R.string.dev_yes else R.string.dev_no))) }
+        item { Note(text(R.string.dev_room,2));Note(text(R.string.dev_version,status?.databaseVersion ?: "—"));Note(text(R.string.dev_count,status?.count ?: 0));Note(settings.licenceGroup.code);Note(text(R.string.dev_complete,text(if(status?.readiness(settings.licenceGroup)?.eligibilityComplete==true) R.string.dev_yes else R.string.dev_no))) }
         item { Column { SettingsChoices(settings,vm::ui,vm::material,vm::level,vm::licenceGroup) } }
         item { TextButton(onClick={vm.update { vm.container.settings.resetOnboardingForDevelopment() };visible=false}) { Text(text(R.string.dev_reset_onboarding)) } }
         listOf("progress" to R.string.dev_reset_progress,"attempts" to R.string.dev_clear_attempts,"favorites" to R.string.dev_clear_favorites,"words" to R.string.dev_clear_words).forEach { (key,label)->item { TextButton(onClick={pending=key}) { Text(text(label)) } } }
