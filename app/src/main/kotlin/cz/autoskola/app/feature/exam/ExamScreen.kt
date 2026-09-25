@@ -31,6 +31,7 @@ fun ExamScreen(
     settings:UserSettings,
     status:ContentStatus?,
     state:ExamUiState,
+    availability:ExamAvailability,
     start:()->Unit,
     answer:(String,String)->Unit,
     finish:()->Unit,
@@ -39,16 +40,16 @@ fun ExamScreen(
 ) {
     val session=state.session
     if(session==null) {
-        val isB=settings.licenceGroup==LicenceGroup.B
-        val verified=isB && status?.sample==false && status?.completeForB==true
+        val config=ExamConfigurationProvider.forGroup(settings.licenceGroup)
+        val verified=availability==ExamAvailability.READY
         Page {
             item { Heading(text(R.string.exam)) }
             item {
                 OutlinedCard(Modifier.fillMaxWidth()) {
                     Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
                         Text(text(R.string.exam_category,settings.licenceGroup.code),style=MaterialTheme.typography.titleLarge)
-                        Note(text(R.string.exam_info))
-                        Note(text(R.string.exam_score))
+                        Note(text(R.string.exam_info,config.questionCount,config.durationMinutes))
+                        Note(text(R.string.exam_score,config.maxPoints,config.passPoints))
                     }
                 }
             }
@@ -56,10 +57,12 @@ fun ExamScreen(
             item {
                 Note(
                     when {
-                        !isB -> text(R.string.exam_category_unverified,settings.licenceGroup.code)
-                        status?.sample==true -> text(R.string.exam_sample_blocked)
-                        status?.completeForB!=true -> text(R.string.exam_unavailable)
-                        else -> text(R.string.exam_ready)
+                        availability==ExamAvailability.SAMPLE_ONLY -> text(R.string.exam_sample_blocked)
+                        availability==ExamAvailability.BLUEPRINT_UNVERIFIED -> text(R.string.exam_category_unverified,settings.licenceGroup.code)
+                        availability==ExamAvailability.ELIGIBILITY_INCOMPLETE -> text(R.string.exam_unavailable,settings.licenceGroup.code)
+                        availability==ExamAvailability.CONTENT_INCOMPLETE -> text(R.string.exam_content_incomplete,settings.licenceGroup.code)
+                        availability==ExamAvailability.MEDIA_INCOMPLETE -> text(R.string.exam_media_incomplete,settings.licenceGroup.code)
+                        else -> text(R.string.exam_ready,settings.licenceGroup.code)
                     }
                 )
             }
@@ -90,6 +93,7 @@ fun ExamScreen(
         val wrong=session.items.size-correct-unanswered
         Page {
             item { Heading(text(R.string.exam_result)) }
+            item { Note(text(R.string.exam_category,session.licenceGroup.code)) }
             item {
                 OutlinedCard(Modifier.fillMaxWidth()) {
                     Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
@@ -97,7 +101,7 @@ fun ExamScreen(
                             text(if(result.passed) R.string.exam_passed else R.string.exam_failed),
                             style=MaterialTheme.typography.headlineSmall
                         )
-                        Text(text(R.string.exam_result_score,result.score),style=MaterialTheme.typography.headlineMedium)
+                        Text(text(R.string.exam_result_score,result.score,session.maxPoints),style=MaterialTheme.typography.headlineMedium)
                         Note(text(R.string.exam_result_counts,correct,wrong,unanswered))
                     }
                 }
@@ -117,7 +121,7 @@ fun ExamScreen(
             item {
                 OutlinedButton(
                     onClick=start,
-                    enabled=settings.licenceGroup==LicenceGroup.B && status?.sample==false && status?.completeForB==true && !state.busy,
+                    enabled=availability==ExamAvailability.READY && !state.busy,
                     modifier=Modifier.fillMaxWidth()
                 ) {
                     Text(text(R.string.exam_new))
@@ -156,6 +160,7 @@ fun ExamScreen(
     val unanswered=session.items.size-answered
 
     Page {
+        item { Note(text(R.string.exam_category,session.licenceGroup.code)) }
         item {
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
                 Column {

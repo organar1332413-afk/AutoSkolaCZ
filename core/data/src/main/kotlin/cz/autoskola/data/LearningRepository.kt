@@ -21,11 +21,13 @@ class LearningRepository(private val db: AutoSkolaDatabase) {
             examHistory=extra.third.map { exam ->
                 ExamHistoryItem(
                     id=exam.id,
-                    category=exam.blueprintVersion.substringBefore("-"),
+                    licenceGroup=LicenceGroup.entries.find { it.code==exam.licenceGroup } ?: LicenceGroup.B,
                     databaseVersion=exam.versionId,
                     startedAt=exam.startedAt,
                     completedAt=requireNotNull(exam.completedAt),
                     score=requireNotNull(exam.score),
+                    maxPoints=exam.maxPoints,
+                    passPoints=exam.passPoints,
                     durationSeconds=((requireNotNull(exam.completedAt)-exam.startedAt).coerceAtLeast(0L))/1000L
                 )
             }

@@ -70,7 +70,7 @@ private fun RowScope.MetricCard(title:String,value:Int,onClick:()->Unit) {
             item {
                 Entry(
                     text(R.string.home_last_exam),
-                    text(R.string.home_last_exam_score,lastExam.score)
+                    text(R.string.home_last_exam_score,lastExam.score,lastExam.maxPoints)
                 ) { open("exam") }
             }
         } else {

@@ -26,6 +26,10 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
         .onEach { settingsReady.value=true }
         .stateIn(viewModelScope, SharingStarted.Eagerly, UserSettings(uiLanguage=UiLanguage.forTag(Locale.getDefault().language)))
     val status = container.study.status().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+    val examAvailability = combine(settings,status) { current, content -> current.licenceGroup to content }
+        .mapLatest { (group, content) ->
+            if(content==null) ExamAvailability.CONTENT_INCOMPLETE else container.exams.availability(group)
+        }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), ExamAvailability.CONTENT_INCOMPLETE)
     val questions = combine(settings, status) { current, content -> current to content }.flatMapLatest { (current, content) ->
         container.study.questions(current.materialMode.translationTag).map { cards ->
             cards.filter { current.licenceGroup.code in it.licenceGroups || (content?.sample == true && it.licenceGroups.isEmpty()) }

@@ -90,14 +90,40 @@ class RoomPersistenceTest {
     @Test fun examResumesPinnedRevisionsAfterBankUpdateAndRecordsUnansweredMistakes()=runBlocking {
         val pack=testBank();importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),pack).encodeToByteArray())
         var clock=100L;val exams=ExamRepository(db) { clock };val (id,session)=exams.start(LicenceGroup.B)
+        SettingsStore(RuntimeEnvironment.getApplication()).setLicenceGroup(LicenceGroup.C)
+        assertEquals(LicenceGroup.B,session.licenceGroup)
         val cards=exams.cards(session);assertEquals(25,cards.size);assertEquals(session.items.map { it.revisionId },cards.map { it.revisionId })
         val q=session.items.first();exams.answer(id,q.revisionId,"A")
         val newer=pack.copy(manifest=pack.manifest.copy(databaseVersion="TEST_NEW"));importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),newer).encodeToByteArray())
-        val resumed=exams.unfinished()!!.second;assertEquals("TEST_ONLY",resumed.version);assertEquals("A",resumed.answers[q.revisionId])
+        val resumed=exams.unfinished()!!.second;assertEquals("TEST_ONLY",resumed.version);assertEquals("A",resumed.answers[q.revisionId]);assertEquals(LicenceGroup.B,resumed.licenceGroup)
+        assertEquals(session.items.map { it.revisionId },resumed.items.map { it.revisionId })
         clock=session.deadlineAt+1;val ended=exams.resume(id);assertNotNull(ended.completedAt);assertEquals(q.points,ExamEngine.result(ended).score)
         assertNull(exams.unfinished());val snapshot=LearningRepository(db).snapshot.first();assertEquals(25,snapshot.attempts.size)
-        assertEquals(1,snapshot.examHistory.size);assertEquals(q.points,snapshot.examHistory.single().score);assertEquals("B",snapshot.examHistory.single().category)
+        assertEquals(1,snapshot.examHistory.size);assertEquals(q.points,snapshot.examHistory.single().score);assertEquals(LicenceGroup.B,snapshot.examHistory.single().licenceGroup)
         exams.finish(id);assertEquals(25,LearningRepository(db).snapshot.first().attempts.size)
+    }
+    @Test fun v2BankStartsOnlyForItsVerifiedGroupAndPersistsSnapshot()=runBlocking {
+        val base=testBank();val source=base.manifest.source
+        val pack=base.copy(manifest=base.manifest.copy(formatVersion=2,completeForB=false,
+            groupReadiness=listOf(GroupReadiness("C",ExamConfigurationProvider.CURRENT_VERSION,true,true,true,source))),
+            questions=base.questions.map { it.copy(licenceGroups=listOf("C"),eligibility=listOf(QuestionEligibility("C",source))) })
+        importer.importPackage(ContentPackageCodec.encodeV2(pack).encodeToByteArray())
+        val exams=ExamRepository(db) { 100L }
+        assertEquals(ExamAvailability.ELIGIBILITY_INCOMPLETE,exams.availability(LicenceGroup.B))
+        assertEquals(ExamAvailability.READY,exams.availability(LicenceGroup.C))
+        var rejected=false
+        try { exams.start(LicenceGroup.B) } catch(_:IllegalArgumentException) { rejected=true }
+        assertTrue(rejected)
+        val (id,session)=exams.start(LicenceGroup.C)
+        assertEquals(LicenceGroup.C,session.licenceGroup)
+        assertEquals("C",db.learning().exam(id)!!.licenceGroup)
+        assertEquals(session,exams.resume(id))
+        val finished=exams.finish(id)
+        assertEquals(finished,exams.finish(id))
+        val history=LearningRepository(db).snapshot.first().examHistory.single()
+        assertEquals(LicenceGroup.C,history.licenceGroup)
+        assertEquals(session.maxPoints,history.maxPoints)
+        assertEquals(session.passPoints,history.passPoints)
     }
     @Test fun sampleExamStartIsRejectedWithoutPartialRows()=runBlocking {
         val bytes=sample();importer.importPackage(bytes);var rejected=false

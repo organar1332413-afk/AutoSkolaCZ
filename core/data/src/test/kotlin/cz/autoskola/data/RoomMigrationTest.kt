@@ -71,7 +71,7 @@ class RoomMigrationTest {
             assertEquals("legacy:", db.learning().examAnswers("unfinished").first().revisionId.take(7))
             assertEquals("unfinished", db.learning().unfinishedExam()!!.id)
             assertEquals(50, db.learning().exam("completed")!!.score)
-            assertEquals("B", LearningRepository(db).snapshot.first().examHistory.single().category)
+            assertEquals(cz.autoskola.domain.LicenceGroup.B, LearningRepository(db).snapshot.first().examHistory.single().licenceGroup)
             assertNull(db.content().readiness("sample", "B"))
             assertNotNull(db.content().readiness("legacy", "B"))
             db.openHelper.writableDatabase.query("PRAGMA foreign_key_check").use { assertEquals(0, it.count) }

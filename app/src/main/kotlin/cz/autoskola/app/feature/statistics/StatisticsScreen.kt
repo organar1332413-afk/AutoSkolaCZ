@@ -36,16 +36,17 @@ private fun duration(value:Long):String {
 }
 
 @Composable
-fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,status:ContentStatus?,words:List<Lexeme>) {
+fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,status:ContentStatus?,words:List<Lexeme>,selectedGroup:LicenceGroup) {
     val official=snapshot.attempts.filter { !it.sample }
     val sample=snapshot.attempts.filter { it.sample }
     val active=if(status?.sample==false) questions else emptyList()
     val learned=active.count { q->official.any { it.revisionId==q.revisionId } }
     val history=snapshot.examHistory
-    val average=history.takeIf { it.isNotEmpty() }?.map { it.score }?.average()
-    val best=history.maxOfOrNull { it.score }
-    val passed=history.count { it.score>=ExamBlueprint.passPoints }
-    val passRate=if(history.isEmpty()) null else passed*100/history.size
+    val summary=history.filter { it.licenceGroup==selectedGroup }
+    val average=summary.takeIf { it.isNotEmpty() }?.map { it.score*100.0/it.maxPoints }?.average()
+    val best=summary.maxByOrNull { it.score.toDouble()/it.maxPoints }
+    val passed=summary.count { it.passed }
+    val passRate=if(summary.isEmpty()) null else passed*100/summary.size
     val examAttempts=official.filter { it.id.startsWith("exam:") || it.id.startsWith("unanswered:") }
     val weakTopics=examAttempts.filter { !it.correct }
         .groupingBy { it.category }
@@ -58,8 +59,8 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
 
         item {
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-                StatCard(text(R.string.stats_exams),history.size.toString())
-                StatCard(text(R.string.stats_best),best?.let { "$it/50" } ?: "—")
+                StatCard(text(R.string.stats_exams),summary.size.toString())
+                StatCard(text(R.string.stats_best),best?.let { "${it.score}/${it.maxPoints}" } ?: "—")
                 StatCard(text(R.string.stats_pass_rate),passRate?.let { "$it%" } ?: "—")
             }
         }
@@ -69,8 +70,8 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
                 Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
                     Text(text(R.string.stats_exam_summary),style=MaterialTheme.typography.titleMedium)
                     Note(text(R.string.stats_average,average?.let { "%.1f".format(Locale.ROOT,it) } ?: "—"))
-                    history.firstOrNull()?.let { last->
-                        Note(text(R.string.stats_last_exam,last.score,examDate(last.completedAt)))
+                    summary.firstOrNull()?.let { last->
+                        Note(text(R.string.stats_last_exam,last.score,last.maxPoints,examDate(last.completedAt)))
                     }
                 }
             }
@@ -83,10 +84,10 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
                     Column(verticalArrangement=Arrangement.spacedBy(6.dp)) {
                         Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
                             Text(examDate(exam.completedAt))
-                            Text(exam.score.toString()+" / 50")
+                            Text(exam.licenceGroup.code + " · " + exam.score + " / " + exam.maxPoints)
                         }
                         LinearProgressIndicator(
-                            progress={ exam.score/50f },
+                            progress={ (exam.score.toFloat()/exam.maxPoints).coerceIn(0f,1f) },
                             modifier=Modifier.fillMaxWidth()
                         )
                     }
@@ -100,14 +101,14 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
                         Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
                             Text(
                                 text(
-                                    if(exam.score>=ExamBlueprint.passPoints) R.string.exam_passed else R.string.exam_failed
+                                    if(exam.passed) R.string.exam_passed else R.string.exam_failed
                                 ),
                                 style=MaterialTheme.typography.titleMedium
                             )
-                            Note(text(R.string.stats_history_score,exam.score))
+                            Note(text(R.string.stats_history_score,exam.score,exam.maxPoints))
                             Note(text(R.string.stats_history_date,examDate(exam.completedAt)))
                             Note(text(R.string.stats_history_duration,duration(exam.durationSeconds)))
-                            Note(text(R.string.stats_history_category,exam.category))
+                            Note(text(R.string.stats_history_category,exam.licenceGroup.code))
                             Note(text(R.string.stats_history_database,exam.databaseVersion))
                         }
                     }

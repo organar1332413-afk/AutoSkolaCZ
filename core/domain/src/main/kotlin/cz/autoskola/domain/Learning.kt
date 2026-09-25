@@ -3,7 +3,9 @@ package cz.autoskola.domain
 enum class QuestionAssessment { KNOWN, DOUBTFUL, UNKNOWN }
 
 data class LessonProgress(val lessonId: String, val position: Int, val completedAt: Long?, val updatedAt: Long)
-data class ExamHistoryItem(val id:String,val category:String,val databaseVersion:String,val startedAt:Long,val completedAt:Long,val score:Int,val durationSeconds:Long)
+data class ExamHistoryItem(val id:String,val licenceGroup:LicenceGroup,val databaseVersion:String,val startedAt:Long,val completedAt:Long,val score:Int,val maxPoints:Int,val passPoints:Int,val durationSeconds:Long) {
+    val passed: Boolean get() = score >= passPoints
+}
 data class LearningSnapshot(
     val attempts: List<AttemptRecord> = emptyList(),
     val favorites: Set<String> = emptySet(),

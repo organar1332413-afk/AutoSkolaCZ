@@ -58,6 +58,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         val loadedLessons by vm.lessons.collectAsStateWithLifecycle()
         val learning by vm.learning.collectAsStateWithLifecycle()
         val examState by vm.exam.collectAsStateWithLifecycle()
+        val examAvailability by vm.examAvailability.collectAsStateWithLifecycle()
         val words=loadedWords.filter { it.locale==(settings.materialMode.translationTag ?: "cs") }
         val lessons=loadedLessons.map { l->
             if(l.locale==settings.materialMode.translationTag) l
@@ -133,6 +134,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                                 settings,
                                 status,
                                 examState,
+                                examAvailability,
                                 vm::startExam,
                                 vm::examAnswer,
                                 vm::finishExam,
@@ -204,7 +206,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                         composable("aid_questions") {
                             QuestionsScreen(questions.filter { it.category=="first_aid" },status,learning) { open("question/$it") }
                         }
-                        composable("statistics") { StatisticsScreen(learning,questions,status,words) }
+                        composable("statistics") { StatisticsScreen(learning,questions,status,words,settings.licenceGroup) }
                     }
                 }
             }
