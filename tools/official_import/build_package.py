@@ -82,8 +82,14 @@ def compile_package(source_dir):
     coverage = read_json(source_dir / "coverage.json")
     require(set(meta) == {"databaseVersion", "publicationDate", "retrievedAt", "source",
                           "exportFile", "exportSha256"}, "Unexpected source metadata fields")
-    require(meta["databaseVersion"] and official_url(meta["source"]), "Invalid source metadata")
+    require(isinstance(meta["databaseVersion"], str) and meta["databaseVersion"].strip()
+            and official_url(meta["source"]), "Invalid source metadata")
+    require(isinstance(meta["publicationDate"], str)
+            and re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["publicationDate"]), "Invalid publication date")
     date.fromisoformat(meta["publicationDate"])
+    require(isinstance(meta["retrievedAt"], str)
+            and re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})",
+                             meta["retrievedAt"]), "Invalid retrieval timestamp")
     require(datetime.fromisoformat(meta["retrievedAt"].replace("Z", "+00:00")).tzinfo is not None,
             "retrievedAt needs a timezone")
     export_name = meta["exportFile"]
@@ -97,7 +103,7 @@ def compile_package(source_dir):
     require(isinstance(mappings, list) and isinstance(coverage, list), "Invalid evidence arrays")
 
     indexed = {}
-    media_paths = set()
+    media_paths = {}
     for raw in questions:
         require(set(raw) == {"officialId", "category", "textCs", "points", "answers", "media", "source"},
                 "Unexpected question fields")
@@ -118,8 +124,10 @@ def compile_package(source_dir):
         require(isinstance(raw["media"], list), f"Invalid media: {qid}")
         media = [safe_media(source_dir, m, {a["code"] for a in answers}) for m in raw["media"]]
         for item in media:
-            require(item["path"] not in media_paths, f"Duplicate media path: {item['path']}")
-            media_paths.add(item["path"])
+            prior = media_paths.get(item["path"])
+            require(prior is None or prior == (item["sha256"], item["mimeType"]),
+                    f"Conflicting media reference: {item['path']}")
+            media_paths[item["path"]] = (item["sha256"], item["mimeType"])
         indexed[qid] = {**raw, "media": media, "eligibility": [], "translations": []}
 
     mapping_pairs = set()
@@ -196,7 +204,9 @@ def write_output(source_dir, output_dir):
     require(not output_dir.resolve().is_relative_to(source_dir.resolve()), "Output cannot be inside input")
     package, report = compile_package(source_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    (output_dir / "package-v2.json").write_text(json.dumps(package, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    encoded = (json.dumps(package, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    require(len(encoded) <= 20 * 1024 * 1024, "Package exceeds Android importer 20 MiB limit")
+    (output_dir / "package-v2.json").write_bytes(encoded)
     (output_dir / "audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for path in report["mediaPaths"]:
         destination = output_dir / path

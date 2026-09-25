@@ -120,6 +120,16 @@ class OfficialIntakeTest(unittest.TestCase):
         write_output(self.root, output)
         self.assertEqual(b"original video", (output / "media" / "clip.mp4").read_bytes())
 
+    def test_shared_image_is_preserved_for_multiple_questions(self):
+        (self.root / "media").mkdir()
+        (self.root / "media" / "sign.png").write_bytes(b"synthetic image")
+        for qid in ("1", "2"):
+            self.question(qid, media=[{"path": "media/sign.png", "mimeType": "image/png"}])
+        self.save()
+        pack, audit = compile_package(self.root)
+        self.assertEqual(["media/sign.png"], audit["mediaPaths"])
+        self.assertEqual(pack["questions"][0]["media"], pack["questions"][1]["media"])
+
     def test_unsupported_group_and_duplicate_mapping_rejected(self):
         self.question()
         self.mapping("1", "T")
