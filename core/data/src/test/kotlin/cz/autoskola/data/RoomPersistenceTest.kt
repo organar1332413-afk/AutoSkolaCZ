@@ -85,11 +85,11 @@ class RoomPersistenceTest {
     }
     private fun testBank():QuestionPackage {
         val points=mapOf("rules" to 2,"safe_driving" to 2,"signs" to 1,"situations" to 4,"vehicle" to 1,"related" to 2,"first_aid" to 1)
-        return QuestionPackage(ContentManifest(databaseVersion="TEST_ONLY",publicationDate="2025-01-01",source="https://etesty.md.gov.cz/TEST_ONLY",retrievedAt="2025-01-01T00:00:00Z",sample=false,completeForB=true),ExamBlueprint.counts.flatMap { (category,n)->(0 until n).map { index->OfficialQuestion("TEST_${category}_$index",category,"TEST ONLY",points[category],listOf("B"),listOf(OfficialAnswer("A","TEST A",true),OfficialAnswer("B","TEST B",false)),source="https://etesty.md.gov.cz/TEST_ONLY") } })
+        return QuestionPackage(ContentManifest(databaseVersion="TEST_ONLY",publicationDate="2025-01-01",source="https://etesty.md.gov.cz/TEST_ONLY",retrievedAt="2025-01-01T00:00:00Z",sample=false,completeForB=true),ExamConfigurationProvider.forGroup(LicenceGroup.B).sections.associate { it.category to it.questionCount }.flatMap { (category,n)->(0 until n).map { index->OfficialQuestion("TEST_${category}_$index",category,"TEST ONLY",points[category],listOf("B"),listOf(OfficialAnswer("A","TEST A",true),OfficialAnswer("B","TEST B",false)),source="https://etesty.md.gov.cz/TEST_ONLY") } })
     }
     @Test fun examResumesPinnedRevisionsAfterBankUpdateAndRecordsUnansweredMistakes()=runBlocking {
         val pack=testBank();importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),pack).encodeToByteArray())
-        var clock=100L;val exams=ExamRepository(db) { clock };val (id,session)=exams.start()
+        var clock=100L;val exams=ExamRepository(db) { clock };val (id,session)=exams.start(LicenceGroup.B)
         val cards=exams.cards(session);assertEquals(25,cards.size);assertEquals(session.items.map { it.revisionId },cards.map { it.revisionId })
         val q=session.items.first();exams.answer(id,q.revisionId,"A")
         val newer=pack.copy(manifest=pack.manifest.copy(databaseVersion="TEST_NEW"));importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),newer).encodeToByteArray())
@@ -101,7 +101,7 @@ class RoomPersistenceTest {
     }
     @Test fun sampleExamStartIsRejectedWithoutPartialRows()=runBlocking {
         val bytes=sample();importer.importPackage(bytes);var rejected=false
-        try { ExamRepository(db).start(Json.decodeFromString(bytes.decodeToString())) } catch(_:IllegalArgumentException) { rejected=true }
+        try { ExamRepository(db).start(LicenceGroup.B, Json.decodeFromString(bytes.decodeToString())) } catch(_:IllegalArgumentException) { rejected=true }
         assertTrue(rejected);assertNull(db.learning().unfinishedExam())
     }
 }

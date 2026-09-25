@@ -15,7 +15,7 @@ class AppContainer(internal val application: Application) {
     val study = RoomStudyRepository(db)
     val learning = LearningRepository(db)
     val assessments = QuestionAssessmentStore(application)
-    val exams = ExamRepository(db)
+    val exams = ExamRepository(db, mediaRoot = File(application.filesDir, "content"))
     private val importer = ContentImporter(db, File(application.filesDir, "content"))
     val bootstrap = Bootstrap(application, db, importer, BuildConfig.DEBUG)
 }

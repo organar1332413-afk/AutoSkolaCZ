@@ -439,7 +439,7 @@
       },
       {
         "tableName": "QuestionLicenceGroup",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `licenceGroup` TEXT NOT NULL, PRIMARY KEY(`revisionId`, `licenceGroup`), FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`revisionId` TEXT NOT NULL, `licenceGroup` TEXT NOT NULL, `source` TEXT NOT NULL DEFAULT '', PRIMARY KEY(`revisionId`, `licenceGroup`), FOREIGN KEY(`revisionId`) REFERENCES `QuestionRevision`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "revisionId",
@@ -452,6 +452,13 @@
             "columnName": "licenceGroup",
             "affinity": "TEXT",
             "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
           }
         ],
         "primaryKey": {

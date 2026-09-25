@@ -5,18 +5,29 @@ import cz.autoskola.data.db.entity.*
 import cz.autoskola.domain.*
 import kotlinx.coroutines.flow.first
 import java.util.UUID
+import java.io.File
 
 /** Local unfinished exams retain immutable revision IDs even after the active bank changes. */
-class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long=System::currentTimeMillis) {
+class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long=System::currentTimeMillis,private val mediaRoot:File?=null) {
     private val dao=db.learning()
 
-    suspend fun start():Pair<String,ExamSession> = start(activePack())
+    suspend fun availability(group:LicenceGroup):ExamAvailability {
+        val pack=activePack() ?: return ExamAvailability.CONTENT_INCOMPLETE
+        val state=GroupReadinessPolicy.availability(pack,ExamConfigurationProvider.forGroup(group))
+        return if(state==ExamAvailability.READY && !mediaAvailable(pack,group)) ExamAvailability.MEDIA_INCOMPLETE else state
+    }
 
-    suspend fun start(pack:QuestionPackage):Pair<String,ExamSession> = db.withTransaction {
+    suspend fun start(group:LicenceGroup):Pair<String,ExamSession> = start(group,requireNotNull(activePack()))
+
+    suspend fun start(group:LicenceGroup,pack:QuestionPackage):Pair<String,ExamSession> = db.withTransaction {
         require(dao.unfinishedExam()==null) { "Resume or finish the previous exam" }
         val version=requireNotNull(db.content().activeVersion().first())
-        require(version.id==pack.manifest.databaseVersion && !version.sample && version.completeForB)
-        val session=ExamEngine.create(pack,clock())
+        require(version.id==pack.manifest.databaseVersion && !version.sample)
+        require(mediaAvailable(pack,group)) { "Required exam media is unavailable" }
+        val config=ExamConfigurationProvider.forGroup(group)
+        val readiness=requireNotNull(db.content().readiness(version.id,group.code)) { "Group eligibility is unknown" }
+        require(readiness.eligibilityComplete && readiness.contentComplete && readiness.mediaComplete)
+        val session=ExamEngine.create(pack,config,clock())
         session.items.forEach { item ->
             val revision=requireNotNull(dao.revision(item.revisionId))
             val answers=dao.answers(item.revisionId)
@@ -24,7 +35,8 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long
             require(answers.map { it.code }.toSet()==item.answerCodes.toSet() && answers.single { it.correct }.code==item.correctCode)
         }
         val id=UUID.randomUUID().toString()
-        dao.insertExam(ExamAttemptEntity(id,session.version,"B-stage2-v1",session.startedAt,session.deadlineAt,null,null,"REAL"))
+        dao.insertExam(ExamAttemptEntity(id,session.version,session.blueprintVersion,session.startedAt,session.deadlineAt,null,null,"REAL",
+            session.licenceGroup.code,session.questionCount,session.maxPoints,session.passPoints))
         dao.saveExamAnswers(session.items.mapIndexed { index,q->ExamAnswerEntity(id,index,q.revisionId,null,null) })
         id to session
     }
@@ -78,26 +90,32 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long
                 answers=options.map { OfficialAnswer(it.code,it.textCs,it.correct) },
                 translation=null,
                 media=media,
-                licenceGroups=listOf("B"),
+                licenceGroups=db.content().groupsForRevision(q.id).map { it.licenceGroup },
                 source=q.source
             )
         }
     }
 
-    private suspend fun activePack():QuestionPackage {
+    private suspend fun activePack():QuestionPackage? {
         val content=db.content()
-        val version=requireNotNull(content.activeVersion().first())
+        val version=content.activeVersion().first() ?: return null
         val revisions=content.questions().first()
         val answers=content.answers().first()
         val groups=content.licenceGroups().first()
+        val media=content.media().first()
+        val readiness=content.activeReadiness().first()
         return QuestionPackage(
             manifest=ContentManifest(
+                formatVersion=if(version.completeForB) 1 else 2,
                 databaseVersion=version.databaseVersion,
                 publicationDate=version.publicationDate,
                 source=version.source,
                 retrievedAt=version.retrievedAt,
                 sample=version.sample,
-                completeForB=version.completeForB
+                completeForB=version.completeForB,
+                groupReadiness=if(version.completeForB) emptyList() else readiness.map {
+                    GroupReadiness(it.licenceGroup,it.blueprintVersion,it.eligibilityComplete,it.contentComplete,it.mediaComplete,it.source)
+                }
             ),
             questions=revisions.map { q->
                 OfficialQuestion(
@@ -109,17 +127,30 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long
                     answers=answers.filter { it.revisionId==q.id }.sortedBy { it.position }.map {
                         OfficialAnswer(it.code,it.textCs,it.correct)
                     },
-                    source=q.source
+                    source=q.source,
+                    eligibility=groups.filter { it.revisionId==q.id }.map { QuestionEligibility(it.licenceGroup,it.source.ifBlank { q.source }) },
+                    media=media.filter { it.revisionId==q.id }.map { MediaReference(it.path.substringAfter('/'),it.sha256,it.mimeType,it.answerCode) }
                 )
             }
         )
     }
 
+    private suspend fun mediaAvailable(pack:QuestionPackage,group:LicenceGroup):Boolean {
+        val media=pack.questions.filter { group.code in it.licenceGroups }.flatMap { it.media }
+        if(media.isEmpty()) return true
+        val root=mediaRoot?.canonicalFile ?: return false
+        val hashDir=db.content().version(pack.manifest.databaseVersion)?.packageSha256 ?: return false
+        return media.all { ref ->
+            if(ref.mimeType !in GroupReadinessPolicy.supportedImageMimeTypes) return@all false
+            val file=File(root,"$hashDir/${ref.path}").canonicalFile
+            file.path.startsWith(root.path+File.separator) && file.isFile
+        }
+    }
+
     private suspend fun load(id:String):ExamSession {
         val exam=requireNotNull(dao.exam(id))
-        require(exam.blueprintVersion=="B-stage2-v1")
         val answers=dao.examAnswers(id)
-        require(answers.size==25 && answers.map { it.position }==(0..24).toList())
+        require(answers.size==exam.questionCount && answers.map { it.position }==(0 until exam.questionCount).toList())
         val items=answers.map { a->
             val q=requireNotNull(dao.revision(a.revisionId))
             require(q.versionId==exam.versionId)
@@ -133,14 +164,16 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long
                 options.map { it.code }
             )
         }
-        require(items.sumOf { it.points }==50)
+        require(items.sumOf { it.points }==exam.maxPoints)
         return ExamSession(
             exam.versionId,
             exam.startedAt,
             exam.deadlineAt,
             items,
             answers.mapNotNull { a->a.answerCode?.let { a.revisionId to it } }.toMap(),
-            exam.completedAt
+            exam.completedAt,
+            LicenceGroup.entries.find { it.code==exam.licenceGroup } ?: LicenceGroup.B,
+            exam.blueprintVersion,exam.questionCount,exam.maxPoints,exam.passPoints
         )
     }
 

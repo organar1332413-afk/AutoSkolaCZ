@@ -107,8 +107,7 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     } }
 
     fun startExam()=examAction {
-        require(settings.value.licenceGroup==LicenceGroup.B)
-        setExam(container.exams.start())
+        setExam(container.exams.start(settings.value.licenceGroup))
     }
 
     fun examAnswer(revision:String,code:String)=examAction {

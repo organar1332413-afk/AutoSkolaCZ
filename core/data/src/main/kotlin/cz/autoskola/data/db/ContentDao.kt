@@ -22,6 +22,8 @@ interface ContentDao {
     fun media(): Flow<List<QuestionMediaEntity>>
     @Query("SELECT * FROM QuestionMedia WHERE revisionId = :revisionId ORDER BY position")
     suspend fun mediaForRevision(revisionId: String): List<QuestionMediaEntity>
+    @Query("SELECT * FROM QuestionLicenceGroup WHERE revisionId = :revisionId")
+    suspend fun groupsForRevision(revisionId: String): List<QuestionLicenceGroupEntity>
     @Query("SELECT * FROM QuestionLicenceGroup WHERE revisionId IN (SELECT id FROM QuestionRevision WHERE versionId = (SELECT versionId FROM ActiveContent WHERE slot = 1))")
     fun licenceGroups(): Flow<List<QuestionLicenceGroupEntity>>
     @Query("SELECT * FROM ContentGroupReadiness WHERE versionId = (SELECT versionId FROM ActiveContent WHERE slot = 1)")

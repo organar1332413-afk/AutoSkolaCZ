@@ -12,5 +12,6 @@ import androidx.room.*
 )
 data class QuestionLicenceGroupEntity(
     val revisionId: String,
-    val licenceGroup: String
+    val licenceGroup: String,
+    @ColumnInfo(defaultValue = "''") val source: String = ""
 )

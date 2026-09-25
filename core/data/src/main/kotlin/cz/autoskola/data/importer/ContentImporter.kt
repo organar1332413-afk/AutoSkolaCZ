@@ -62,7 +62,7 @@ class ContentImporter(private val db: AutoSkolaDatabase, private val contentRoot
                     val id = "$version:${q.officialId}"
                     dao.insertRevisions(listOf(QuestionRevisionEntity(id, q.officialId, version, q.category, q.textCs, q.points, q.source)))
                     dao.insertAnswers(q.answers.mapIndexed { index, a -> AnswerEntity(id, a.code, a.textCs, a.correct, index) })
-                    dao.insertGroups(q.licenceGroups.map { QuestionLicenceGroupEntity(id, it) })
+                    dao.insertGroups(q.licenceGroups.map { code -> QuestionLicenceGroupEntity(id, code, q.eligibility.find { it.licenceGroup == code }?.source ?: q.source) })
                     dao.insertTranslations(q.translations.map { QuestionTranslationEntity(id, it.locale, it.text, it.explanation, it.reviewStatus) })
                     dao.insertAnswerTranslations(q.translations.flatMap { t -> t.answers.map { (code, text) -> AnswerTranslationEntity(id, code, t.locale, text) } })
                     dao.insertMedia(q.media.mapIndexed { i, media -> QuestionMediaEntity("$id:$i", id, media.answerCode, "$hash/${media.path}", media.sha256, media.mimeType, i) })
