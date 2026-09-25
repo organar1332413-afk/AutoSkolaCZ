@@ -8,7 +8,7 @@ import java.util.UUID
 import java.io.File
 
 /** Local unfinished exams retain immutable revision IDs even after the active bank changes. */
-class ExamRepository(private val db:AutoSkolaDatabase,private val clock:()->Long=System::currentTimeMillis,private val mediaRoot:File?=null) {
+class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File?=null,private val clock:()->Long=System::currentTimeMillis) {
     private val dao=db.learning()
 
     suspend fun availability(group:LicenceGroup):ExamAvailability {
