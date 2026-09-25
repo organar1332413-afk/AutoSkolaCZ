@@ -2,6 +2,11 @@ package cz.autoskola.domain
 import org.junit.Assert.*
 import org.junit.Test
 class SettingsTest {
+    @Test fun supportedGroupsExcludeTAndLegacyValueFallsBackToB() {
+        assertEquals(listOf("A", "B", "BE", "C", "CE", "D", "DE"), LicenceGroup.entries.map { it.code })
+        assertEquals(LicenceGroup.B, restoredSettings(null, null, null, null, "cs", "T").licenceGroup)
+        assertEquals(LicenceGroup.B, restoredSettings(null, null, null, null, "cs", "unknown").licenceGroup)
+    }
     @Test fun onboardingPresetsAreCoherent() {
         assertEquals(UiLanguage.CS,MaterialMode.CS_ONLY.onboardingDefaults().uiLanguage)
         assertEquals(UiLanguage.RU,MaterialMode.CS_RU.onboardingDefaults().uiLanguage)
@@ -21,7 +26,7 @@ class SettingsTest {
         assertEquals(s.policy(revealed=true),s.copy(uiLanguage=UiLanguage.CS).policy(revealed=true))
     }
     @Test fun newInstallUsesDeviceLanguageAndRequiresOnboarding() {
-        val cs=restoredSettings(null,null,null,null,"cs-CZ");assertEquals(UiLanguage.CS,cs.uiLanguage);assertFalse(cs.onboardingCompleted)
+        val cs=restoredSettings(null,null,null,null,"cs-CZ");assertEquals(UiLanguage.CS,cs.uiLanguage);assertEquals(LicenceGroup.B,cs.licenceGroup);assertFalse(cs.onboardingCompleted)
         assertEquals(UiLanguage.UK,restoredSettings(null,null,null,null,"uk-UA").uiLanguage)
         assertEquals(UiLanguage.CS,restoredSettings(null,null,null,null,"en").uiLanguage)
     }
@@ -31,8 +36,13 @@ class SettingsTest {
     }
     @Test fun explicitOnboardingResetWinsOverLegacyDetection() { assertFalse(restoredSettings("CS","CS_ONLY","BEGINNER",false,"cs").onboardingCompleted) }
     @Test fun corruptSettingsHaveSafeDefaults() {
-        val s=restoredSettings("unknown","unknown","unknown",true,"uk")
-        assertEquals(UiLanguage.RU,s.uiLanguage);assertEquals(MaterialMode.CS_RU,s.materialMode);assertEquals(LearningLevel.BEGINNER,s.level)
+        val s=restoredSettings("unknown","unknown","unknown",true,"uk","unknown")
+        assertEquals(UiLanguage.RU,s.uiLanguage);assertEquals(MaterialMode.CS_RU,s.materialMode);assertEquals(LearningLevel.BEGINNER,s.level);assertEquals(LicenceGroup.B,s.licenceGroup)
+    }
+    @Test fun licenceGroupRestoresIndependently() {
+        val s=restoredSettings("UK","CS_UK","INTERMEDIATE",true,"uk","CE")
+        assertEquals(LicenceGroup.CE,s.licenceGroup)
+        assertEquals(MaterialMode.CS_UK,s.materialMode)
     }
     @Test fun realExamNeverEnablesAnyLanguageAssistance() {
         UiLanguage.entries.forEach { ui->MaterialMode.entries.forEach { mode->LearningLevel.entries.forEach { level->

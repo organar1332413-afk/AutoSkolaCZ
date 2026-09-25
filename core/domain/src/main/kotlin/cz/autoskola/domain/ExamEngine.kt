@@ -3,21 +3,25 @@ import kotlinx.serialization.Serializable
 import kotlin.random.Random
 
 @Serializable data class ExamItem(val revisionId: String, val officialId: String, val category: String, val points: Int, val correctCode: String, val answerCodes: List<String>)
-@Serializable data class ExamSession(val version: String, val startedAt: Long, val deadlineAt: Long, val items: List<ExamItem>, val answers: Map<String,String> = emptyMap(), val completedAt: Long? = null)
+@Serializable data class ExamSession(val version: String, val startedAt: Long, val deadlineAt: Long, val items: List<ExamItem>, val answers: Map<String,String> = emptyMap(), val completedAt: Long? = null,
+    val licenceGroup: LicenceGroup, val blueprintVersion: String, val questionCount: Int, val maxPoints: Int, val passPoints: Int)
 data class ExamResult(val score: Int, val passed: Boolean, val lostPoints: Int, val wrongByCategory: Map<String,Int>)
 /** Immutable revision snapshot, serializable for persistence. Fixtures belong exclusively to tests. */
 object ExamEngine {
-    fun create(pack: QuestionPackage, now: Long, random: Random = Random.Default): ExamSession {
+    fun create(pack: QuestionPackage, configuration: ExamConfiguration, now: Long, random: Random = Random.Default): ExamSession {
         PackageValidator.validate(pack)
-        require(ExamBlueprint.canAssemble(pack)) { "Verified complete category B bank required" }
-        val items = ExamBlueprint.counts.flatMap { (category,count) ->
-            pack.questions.filter { it.category == category && "B" in it.licenceGroups && it.points != null }.shuffled(random).take(count).map { q ->
+        require(GroupReadinessPolicy.availability(pack, configuration) == ExamAvailability.READY) { "Verified complete bank for ${configuration.licenceGroup.code} required" }
+        val items = configuration.sections.flatMap { rule ->
+            pack.questions.filter { it.category == rule.category && configuration.licenceGroup.code in it.licenceGroups && it.points == rule.pointsPerQuestion }
+                .shuffled(random).take(rule.questionCount).map { q ->
                 ExamItem(pack.manifest.databaseVersion + ":" + q.officialId, q.officialId, q.category, q.points!!, q.answers.single { it.correct }.code, q.answers.map { it.code })
             }
         }
-        require(items.size == 25 && items.map { it.officialId }.distinct().size == 25)
-        require(items.sumOf { it.points } == ExamBlueprint.maxPoints) { "Invalid verified score distribution" }
-        return ExamSession(pack.manifest.databaseVersion, now, now + ExamBlueprint.minutes * 60_000L, items)
+        require(items.size == configuration.questionCount && items.map { it.officialId }.distinct().size == configuration.questionCount)
+        require(items.sumOf { it.points } == configuration.maxPoints) { "Invalid verified score distribution" }
+        return ExamSession(pack.manifest.databaseVersion, now, now + configuration.durationMinutes * 60_000L, items,
+            licenceGroup = configuration.licenceGroup, blueprintVersion = configuration.blueprintVersion,
+            questionCount = configuration.questionCount, maxPoints = configuration.maxPoints, passPoints = configuration.passPoints)
     }
     fun answer(session: ExamSession, revisionId: String, code: String, now: Long): ExamSession {
         require(session.completedAt == null && now < session.deadlineAt && now >= session.startedAt)
@@ -29,8 +33,8 @@ object ExamEngine {
     fun result(session: ExamSession): ExamResult {
         require(session.completedAt != null) { "Results are unavailable during an exam" }
         val wrong = session.items.filter { session.answers[it.revisionId] != it.correctCode }
-        val lost = wrong.sumOf { it.points }; val score = ExamBlueprint.maxPoints - lost
-        return ExamResult(score, score >= ExamBlueprint.passPoints, lost, wrong.groupingBy { it.category }.eachCount())
+        val lost = wrong.sumOf { it.points }; val score = session.maxPoints - lost
+        return ExamResult(score, score >= session.passPoints, lost, wrong.groupingBy { it.category }.eachCount())
     }
     fun resume(session: ExamSession, now: Long) = if (session.completedAt == null && now >= session.deadlineAt) finish(session, now) else session
 }

@@ -6,7 +6,19 @@ import cz.autoskola.app.ui.*
 import cz.autoskola.domain.*
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
-@Composable fun SettingsChoices(settings:UserSettings,ui:(UiLanguage)->Unit,material:(MaterialMode)->Unit,level:(LearningLevel)->Unit) {
+
+@Composable fun licenceGroupLabel(group:LicenceGroup)=text(when(group) {
+    LicenceGroup.A->R.string.category_a
+    LicenceGroup.B->R.string.category_b
+    LicenceGroup.BE->R.string.category_be
+    LicenceGroup.C->R.string.category_c
+    LicenceGroup.CE->R.string.category_ce
+    LicenceGroup.D->R.string.category_d
+    LicenceGroup.DE->R.string.category_de
+})
+@Composable fun SettingsChoices(settings:UserSettings,ui:(UiLanguage)->Unit,material:(MaterialMode)->Unit,level:(LearningLevel)->Unit,licenceGroup:(LicenceGroup)->Unit) {
+    Text(text(R.string.licence_category),style=MaterialTheme.typography.titleMedium)
+    LicenceGroup.entries.forEach { group->Choice(licenceGroupLabel(group),settings.licenceGroup==group) { licenceGroup(group) } }
     Text(text(R.string.interface_language),style=MaterialTheme.typography.titleMedium)
     UiLanguage.entries.forEach { Choice(it.nativeName,settings.uiLanguage==it) { ui(it) } }
     Text(text(R.string.material_language),style=MaterialTheme.typography.titleMedium)
@@ -15,10 +27,10 @@ import java.time.format.DateTimeFormatter
     LearningLevel.entries.forEach { Choice(levelLabel(it),settings.level==it) { level(it) } }
 }
 @Composable fun levelLabel(level:LearningLevel)=text(when(level) { LearningLevel.BEGINNER->R.string.beginner; LearningLevel.INTERMEDIATE->R.string.intermediate; LearningLevel.EXAM->R.string.exam_level })
-@Composable fun ProfileScreen(settings:UserSettings,status:ContentStatus?,ui:(UiLanguage)->Unit,material:(MaterialMode)->Unit,level:(LearningLevel)->Unit,open:(String)->Unit,extras:@Composable ()->Unit) {
+@Composable fun ProfileScreen(settings:UserSettings,status:ContentStatus?,ui:(UiLanguage)->Unit,material:(MaterialMode)->Unit,level:(LearningLevel)->Unit,licenceGroup:(LicenceGroup)->Unit,open:(String)->Unit,extras:@Composable ()->Unit) {
     Page {
         item { Heading(text(R.string.profile)) }
-        item { androidx.compose.foundation.layout.Column { SettingsChoices(settings,ui,material,level) } }
+        item { androidx.compose.foundation.layout.Column { SettingsChoices(settings,ui,material,level,licenceGroup) } }
         item { Note(text(R.string.cs_only_note)) }
         item { HorizontalDivider() }
         item { Text(text(R.string.database_version),style=MaterialTheme.typography.titleMedium) }

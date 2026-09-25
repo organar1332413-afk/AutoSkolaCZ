@@ -29,8 +29,11 @@ jobs:
       - name: Build and test
         run: |
           mkdir -p build/verification
+          cp core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json build/verification/room-v2-committed.json
+          rm core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json
           set -o pipefail
           gradle :core:domain:test :core:data:testDebugUnitTest :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease --stacktrace 2>&1 | tee build/verification/build.log
+          diff -u build/verification/room-v2-committed.json core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json
       - run: python tools/validate_structure.py
       - run: python -m unittest discover -s tools -p 'test_*.py' -v
       - run: python tools/verify_apks.py > build/verification/apk-variants.json
@@ -73,7 +76,7 @@ jobs:
         with:
           api-level: 29
           arch: x86_64
-          script: gradle :core:data:connectedDebugAndroidTest
+          script: bash .github/scripts/run-room-tests.sh
       - uses: actions/upload-artifact@v4
         if: always()
         with:

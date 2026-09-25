@@ -6,7 +6,7 @@ class PackageValidatorTest {
     private fun sample(): QuestionPackage = javaClass.getResourceAsStream("/sample-v1.json")!!.bufferedReader().use { Json.decodeFromString(it.readText()) }
     @Test fun verifiedSampleParsesButCannotBecomeAnExam() {
         val pack = sample(); PackageValidator.validate(pack)
-        assertFalse(ExamBlueprint.canAssemble(pack))
+        assertFalse(GroupReadinessPolicy.availability(pack, ExamConfigurationProvider.forGroup(LicenceGroup.B)) == ExamAvailability.READY)
     }
     @Test fun duplicateIdsAreRejected() {
         val p = sample()
