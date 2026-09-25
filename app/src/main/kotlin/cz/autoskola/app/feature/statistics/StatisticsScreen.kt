@@ -40,19 +40,12 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
     val official=snapshot.attempts.filter { !it.sample }
     val sample=snapshot.attempts.filter { it.sample }
     val active=if(status?.sample==false) questions else emptyList()
-    val learned=active.count { q->official.any { it.revisionId==q.revisionId } }
     val history=snapshot.examHistory
-    val summary=history.filter { it.licenceGroup==selectedGroup }
-    val average=summary.takeIf { it.isNotEmpty() }?.map { it.score*100.0/it.maxPoints }?.average()
-    val best=summary.maxByOrNull { it.score.toDouble()/it.maxPoints }
-    val passed=summary.count { it.passed }
-    val passRate=if(summary.isEmpty()) null else passed*100/summary.size
-    val examAttempts=official.filter { it.id.startsWith("exam:") || it.id.startsWith("unanswered:") }
-    val weakTopics=examAttempts.filter { !it.correct }
-        .groupingBy { it.category }
-        .eachCount()
-        .entries
-        .sortedByDescending { it.value }
+    val examStats=snapshot.examStatistics(selectedGroup)
+    val relevantAttempts=official.filter { it.examLicenceGroup==null } + examStats.attempts
+    val learned=active.count { q->relevantAttempts.any { it.revisionId==q.revisionId } }
+    val summary=examStats.history
+    val weakTopics=examStats.weakTopics
 
     Page {
         item { Heading(text(R.string.statistics)) }
@@ -60,8 +53,8 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
         item {
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
                 StatCard(text(R.string.stats_exams),summary.size.toString())
-                StatCard(text(R.string.stats_best),best?.let { "${it.score}/${it.maxPoints}" } ?: "—")
-                StatCard(text(R.string.stats_pass_rate),passRate?.let { "$it%" } ?: "—")
+                StatCard(text(R.string.stats_best),examStats.best?.let { "${it.score}/${it.maxPoints}" } ?: "—")
+                StatCard(text(R.string.stats_pass_rate),examStats.passRate?.let { "$it%" } ?: "—")
             }
         }
 
@@ -69,7 +62,7 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
             OutlinedCard(Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
                     Text(text(R.string.stats_exam_summary),style=MaterialTheme.typography.titleMedium)
-                    Note(text(R.string.stats_average,average?.let { "%.1f".format(Locale.ROOT,it) } ?: "—"))
+                    Note(text(R.string.stats_average,examStats.averagePercent?.let { "%.1f".format(Locale.ROOT,it) } ?: "—"))
                     summary.firstOrNull()?.let { last->
                         Note(text(R.string.stats_last_exam,last.score,last.maxPoints,examDate(last.completedAt)))
                     }
@@ -122,8 +115,8 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
         item { Text(text(R.string.stats_question_progress),style=MaterialTheme.typography.titleMedium) }
         item { Note(text(R.string.stats_questions,learned)) }
         item { Note(text(R.string.stats_remaining,(active.size-learned).coerceAtLeast(0))) }
-        if(official.isEmpty()) item { Note(text(R.string.stats_empty_official)) }
-        else item { Note(text(R.string.stats_correct,official.count { it.correct }*100/official.size)) }
+        if(examStats.correctPercent==null) item { Note(text(R.string.stats_empty_official)) }
+        else item { Note(text(R.string.stats_correct,examStats.correctPercent)) }
 
         item { Note(text(R.string.stats_words,words.count { it.saved },words.count { it.saved && it.repetitions>0 })) }
 
@@ -140,7 +133,7 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
             item { Note(text(R.string.stats_sample,sample.size,sample.count { it.correct })) }
         }
 
-        val current=if(status?.sample==true) sample else official
+        val current=if(status?.sample==true) sample else examStats.attempts
         item { Text(text(R.string.stats_reasons),style=MaterialTheme.typography.titleMedium) }
         ErrorReason.entries.forEach { reason->
             item {

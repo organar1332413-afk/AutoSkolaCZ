@@ -13,7 +13,7 @@ class LearningRepository(private val db: AutoSkolaDatabase) {
         combine(dao.progress(), dao.scores(), dao.completedExams()) { p,s,e -> Triple(p,s,e) }
     ) { state,extra ->
         LearningSnapshot(
-            attempts=state.first.map { AttemptRecord(it.id,it.revisionId,it.correct,ErrorReason.entries.find { e -> e.name==it.errorReason },it.createdAt,it.sample,it.category,it.answerCode) },
+            attempts=state.first.map { AttemptRecord(it.id,it.revisionId,it.correct,ErrorReason.entries.find { e -> e.name==it.errorReason },it.createdAt,it.sample,it.category,it.answerCode,it.examLicenceGroup?.let(::persistedLicenceGroup)) },
             favorites=state.second.map { it.questionId }.toSet(),
             reviews=state.third.associate { it.questionId to ReviewState(it.lastRevisionId,it.correctStreak,it.lastCorrectAt,it.masteredAt) },
             progress=extra.first.map { LessonProgress(it.lessonId,it.blockPosition,it.completedAt,it.updatedAt) },
@@ -21,7 +21,7 @@ class LearningRepository(private val db: AutoSkolaDatabase) {
             examHistory=extra.third.map { exam ->
                 ExamHistoryItem(
                     id=exam.id,
-                    licenceGroup=LicenceGroup.entries.find { it.code==exam.licenceGroup } ?: LicenceGroup.B,
+                    licenceGroup=persistedLicenceGroup(exam.licenceGroup),
                     databaseVersion=exam.versionId,
                     startedAt=exam.startedAt,
                     completedAt=requireNotNull(exam.completedAt),

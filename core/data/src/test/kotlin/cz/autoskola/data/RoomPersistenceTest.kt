@@ -130,4 +130,49 @@ class RoomPersistenceTest {
         try { ExamRepository(db).start(LicenceGroup.B, Json.decodeFromString(bytes.decodeToString())) } catch(_:IllegalArgumentException) { rejected=true }
         assertTrue(rejected);assertNull(db.learning().unfinishedExam())
     }
+
+    @Test fun examAttemptsAndErrorsAreJoinedToTheirPersistedGroups()=runBlocking {
+        val base=testBank();val source=base.manifest.source
+        val pack=base.copy(manifest=base.manifest.copy(formatVersion=2,completeForB=false,
+            groupReadiness=listOf("B","C").map { GroupReadiness(it,ExamConfigurationProvider.CURRENT_VERSION,true,true,true,source) }),
+            questions=base.questions.map { it.copy(licenceGroups=listOf("B","C"),
+                eligibility=listOf("B","C").map { group->QuestionEligibility(group,source) }) })
+        importer.importPackage(ContentPackageCodec.encodeV2(pack).encodeToByteArray())
+        val exams=ExamRepository(db) { 100L }
+        val (bId,bSession)=exams.start(LicenceGroup.B)
+        bSession.items.forEach { exams.answer(bId,it.revisionId,it.correctCode) }
+        exams.finish(bId)
+        val (cId,cSession)=exams.start(LicenceGroup.C)
+        cSession.items.forEach { item->exams.answer(cId,item.revisionId,item.answerCodes.single { it!=item.correctCode }) }
+        exams.finish(cId)
+        LearningRepository(db).reason("exam:$cId:${cSession.items.first().officialId}",ErrorReason.CZECH_UNCLEAR)
+        val state=LearningRepository(db).snapshot.first()
+        assertEquals(25,state.attempts.count { it.examLicenceGroup==LicenceGroup.B })
+        assertEquals(25,state.attempts.count { it.examLicenceGroup==LicenceGroup.C })
+        val b=state.examStatistics(LicenceGroup.B);val c=state.examStatistics(LicenceGroup.C)
+        assertEquals(100,b.correctPercent);assertEquals(0,c.correctPercent)
+        assertTrue(b.weakTopics.isEmpty());assertTrue(c.weakTopics.isNotEmpty())
+        assertEquals(0,b.errors(ErrorReason.CZECH_UNCLEAR));assertEquals(1,c.errors(ErrorReason.CZECH_UNCLEAR))
+        assertEquals(100,b.passRate);assertEquals(0,c.passRate)
+        assertEquals(100.0,b.averagePercent!!,0.01);assertEquals(0.0,c.averagePercent!!,0.01)
+        assertEquals(cId,state.lastExamFor(LicenceGroup.C)?.id)
+    }
+
+    @Test fun corruptedPersistedGroupAndBlueprintRejectResumeAndHistory()=runBlocking {
+        val pack=testBank();importer.importPackage(Json.encodeToString(QuestionPackage.serializer(),pack).encodeToByteArray())
+        val exams=ExamRepository(db) { 100L }
+        val (id,_)=exams.start(LicenceGroup.B)
+        db.openHelper.writableDatabase.execSQL("UPDATE ExamAttempt SET licenceGroup='XYZ' WHERE id=?", arrayOf(id))
+        try { exams.resume(id);fail("Corrupted group was accepted") } catch(e:IllegalStateException) {
+            assertTrue(e.message!!.contains("Corrupted exam licence group"))
+        }
+        db.openHelper.writableDatabase.execSQL("UPDATE ExamAttempt SET licenceGroup='B', blueprintVersion='unsupported' WHERE id=?", arrayOf(id))
+        try { exams.resume(id);fail("Unsupported blueprint was accepted") } catch(_:IllegalArgumentException) { }
+        db.openHelper.writableDatabase.execSQL("UPDATE ExamAttempt SET blueprintVersion='B-stage2-v1' WHERE id=?", arrayOf(id))
+        exams.finish(id)
+        db.openHelper.writableDatabase.execSQL("UPDATE ExamAttempt SET licenceGroup='XYZ' WHERE id=?", arrayOf(id))
+        try { LearningRepository(db).snapshot.first();fail("Corrupted history was relabelled") } catch(e:IllegalStateException) {
+            assertTrue(e.message!!.contains("Corrupted exam licence group"))
+        }
+    }
 }

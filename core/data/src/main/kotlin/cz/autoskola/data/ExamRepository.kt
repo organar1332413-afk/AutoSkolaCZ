@@ -148,12 +148,18 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File
 
     private suspend fun load(id:String):ExamSession {
         val exam=requireNotNull(dao.exam(id))
+        val group=persistedLicenceGroup(exam.licenceGroup)
+        require(ExamConfigurationProvider.supports(group,exam.blueprintVersion)) { "Unsupported persisted exam blueprint" }
+        require(exam.questionCount>0 && exam.maxPoints>0 && exam.passPoints in 1..exam.maxPoints) { "Invalid persisted exam snapshot" }
         val answers=dao.examAnswers(id)
         require(answers.size==exam.questionCount && answers.map { it.position }==(0 until exam.questionCount).toList())
+        require(answers.map { it.revisionId }.distinct().size==answers.size) { "Duplicate exam revision" }
         val items=answers.map { a->
             val q=requireNotNull(dao.revision(a.revisionId))
             require(q.versionId==exam.versionId)
             val options=dao.answers(q.id)
+            require(options.size in 2..3 && options.map { it.code }.sorted()==listOf("A","B","C").take(options.size) && options.count { it.correct }==1)
+            require(a.answerCode==null || options.any { it.code==a.answerCode }) { "Invalid persisted answer code" }
             ExamItem(
                 q.id,
                 q.questionId,
@@ -163,7 +169,7 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File
                 options.map { it.code }
             )
         }
-        require(items.sumOf { it.points }==exam.maxPoints)
+        require(items.map { it.officialId }.distinct().size==items.size && items.sumOf { it.points }==exam.maxPoints)
         return ExamSession(
             exam.versionId,
             exam.startedAt,
@@ -171,7 +177,7 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File
             items,
             answers.mapNotNull { a->a.answerCode?.let { a.revisionId to it } }.toMap(),
             exam.completedAt,
-            LicenceGroup.entries.find { it.code==exam.licenceGroup } ?: LicenceGroup.B,
+            group,
             exam.blueprintVersion,exam.questionCount,exam.maxPoints,exam.passPoints
         )
     }
