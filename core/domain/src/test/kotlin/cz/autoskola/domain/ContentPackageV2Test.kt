@@ -51,4 +51,17 @@ class ContentPackageV2Test {
         assertEquals(ExamAvailability.CONTENT_INCOMPLETE, GroupReadinessPolicy.availability(pack(q, listOf(base)), config))
         assertThrows(IllegalArgumentException::class.java) { PackageValidator.validate(pack(q, listOf(base))) }
     }
+    @Test fun requiredVideoCannotBeDeclaredCompleteUntilRendererExists() {
+        val config = ExamConfigurationProvider.forGroup(LicenceGroup.B)
+        val claim = GroupReadiness("B", config.blueprintVersion, true, true, true, source)
+        val questions = config.sections.flatMap { section ->
+            (0 until section.questionCount).map { n -> question(listOf("B")).copy(
+                officialId = "${section.category}_$n", category = section.category, points = section.pointsPerQuestion) }
+        }.toMutableList()
+        questions[0] = questions[0].copy(media = listOf(MediaReference("media/dynamic.mp4", "a".repeat(64), "video/mp4")))
+        val bank = pack(readiness = listOf(claim)).copy(questions = questions)
+        assertEquals(ExamAvailability.MEDIA_INCOMPLETE, GroupReadinessPolicy.availability(bank, config))
+        assertThrows(IllegalArgumentException::class.java) { PackageValidator.validate(bank) }
+        PackageValidator.validate(bank.copy(manifest = bank.manifest.copy(groupReadiness = listOf(claim.copy(mediaComplete = false)))))
+    }
 }
