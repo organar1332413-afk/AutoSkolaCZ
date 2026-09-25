@@ -106,14 +106,13 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File
         val readiness=content.activeReadiness().first()
         return QuestionPackage(
             manifest=ContentManifest(
-                formatVersion=if(version.completeForB) 1 else 2,
+                formatVersion=if(readiness.any { it.blueprintVersion=="B-stage2-v1" }) 1 else 2,
                 databaseVersion=version.databaseVersion,
                 publicationDate=version.publicationDate,
                 source=version.source,
                 retrievedAt=version.retrievedAt,
                 sample=version.sample,
-                completeForB=version.completeForB,
-                groupReadiness=if(version.completeForB) emptyList() else readiness.map {
+                groupReadiness=readiness.map {
                     GroupReadiness(it.licenceGroup,it.blueprintVersion,it.eligibilityComplete,it.contentComplete,it.mediaComplete,it.source)
                 }
             ),

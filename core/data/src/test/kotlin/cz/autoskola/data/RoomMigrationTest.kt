@@ -74,6 +74,7 @@ class RoomMigrationTest {
             assertEquals(cz.autoskola.domain.LicenceGroup.B, LearningRepository(db).snapshot.first().examHistory.single().licenceGroup)
             assertNull(db.content().readiness("sample", "B"))
             assertNotNull(db.content().readiness("legacy", "B"))
+            assertEquals(cz.autoskola.domain.ExamAvailability.READY, ExamRepository(db).availability(cz.autoskola.domain.LicenceGroup.B))
             db.openHelper.writableDatabase.query("PRAGMA foreign_key_check").use { assertEquals(0, it.count) }
             db.openHelper.writableDatabase.query("PRAGMA index_list('ExamAttempt')").use { assertTrue(it.count > 0) }
             assertEquals(25, ExamRepository(db) { 150L }.unfinished()!!.second.items.size)

@@ -5,9 +5,10 @@ enum class ExamAvailability { READY, SAMPLE_ONLY, BLUEPRINT_UNVERIFIED, ELIGIBIL
 object GroupReadinessPolicy {
     val supportedImageMimeTypes = setOf("image/png", "image/jpeg", "image/webp")
 
-    fun claims(manifest: ContentManifest): List<GroupReadiness> = if (manifest.formatVersion == 1 && !manifest.sample && manifest.completeForB)
+    fun claims(manifest: ContentManifest): List<GroupReadiness> = if (manifest.groupReadiness.isNotEmpty()) manifest.groupReadiness
+    else if (manifest.formatVersion == 1 && !manifest.sample && manifest.completeForB)
         listOf(GroupReadiness("B", "B-stage2-v1", true, true, true, manifest.source))
-    else manifest.groupReadiness
+    else emptyList()
 
     fun availability(pack: QuestionPackage, config: ExamConfiguration): ExamAvailability {
         if (pack.manifest.sample) return ExamAvailability.SAMPLE_ONLY
