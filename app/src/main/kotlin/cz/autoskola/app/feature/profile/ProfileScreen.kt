@@ -11,7 +11,6 @@ import java.time.format.DateTimeFormatter
     LicenceGroup.A->R.string.category_a
     LicenceGroup.B->R.string.category_b
     LicenceGroup.BE->R.string.category_be
-    LicenceGroup.T->R.string.category_t
     LicenceGroup.C->R.string.category_c
     LicenceGroup.CE->R.string.category_ce
     LicenceGroup.D->R.string.category_d

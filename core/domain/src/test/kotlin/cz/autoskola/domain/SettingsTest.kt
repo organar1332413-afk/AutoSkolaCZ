@@ -2,6 +2,11 @@ package cz.autoskola.domain
 import org.junit.Assert.*
 import org.junit.Test
 class SettingsTest {
+    @Test fun supportedGroupsExcludeTAndLegacyValueFallsBackToB() {
+        assertEquals(listOf("A", "B", "BE", "C", "CE", "D", "DE"), LicenceGroup.entries.map { it.code })
+        assertEquals(LicenceGroup.B, restoredSettings(null, null, null, null, "cs", "T").licenceGroup)
+        assertEquals(LicenceGroup.B, restoredSettings(null, null, null, null, "cs", "unknown").licenceGroup)
+    }
     @Test fun onboardingPresetsAreCoherent() {
         assertEquals(UiLanguage.CS,MaterialMode.CS_ONLY.onboardingDefaults().uiLanguage)
         assertEquals(UiLanguage.RU,MaterialMode.CS_RU.onboardingDefaults().uiLanguage)

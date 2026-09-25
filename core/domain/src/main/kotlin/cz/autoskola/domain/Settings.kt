@@ -5,7 +5,7 @@ enum class UiLanguage(val tag: String, val nativeName: String) { CS("cs", "Češ
 }
 enum class MaterialMode(val translationTag: String?, val label: String) { CS_ONLY(null, "Čeština"), CS_RU("ru", "Čeština + Русский"), CS_UK("uk", "Čeština + Українська") }
 enum class LearningLevel { BEGINNER, INTERMEDIATE, EXAM }
-enum class LicenceGroup(val code: String) { A("A"), B("B"), BE("BE"), T("T"), C("C"), CE("CE"), D("D"), DE("DE") }
+enum class LicenceGroup(val code: String) { A("A"), B("B"), BE("BE"), C("C"), CE("CE"), D("D"), DE("DE") }
 data class UserSettings(
     val uiLanguage: UiLanguage = UiLanguage.CS,
     val materialMode: MaterialMode = MaterialMode.CS_ONLY,
