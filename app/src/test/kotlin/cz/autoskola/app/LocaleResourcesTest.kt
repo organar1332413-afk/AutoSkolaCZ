@@ -17,4 +17,14 @@ class LocaleResourcesTest {
     @Test fun ukrainianNavigationUsesUkrainianResources() { val c=context("uk");assertEquals("Головна",c.getString(R.string.home));assertEquals("Профіль",c.getString(R.string.profile));assertEquals("Іспит",c.getString(R.string.exam)) }
     @Test fun switchingContextDoesNotModifyOtherLocaleResources() { val ru=context("ru");val cs=context("cs");val uk=context("uk");assertEquals("Главная",ru.getString(R.string.home));assertEquals("Domů",cs.getString(R.string.home));assertEquals("Головна",uk.getString(R.string.home)) }
     @Test fun translatedFormatArgumentsRenderWithoutCrashing() { listOf("cs","ru","uk").forEach { tag->val c=context(tag);assertTrue(c.getString(R.string.mastery,2).contains("2"));assertTrue(c.getString(R.string.stats_sample,3,1).contains("3"));assertTrue(c.getString(R.string.stats_reason_count,"TEST",4).contains("4"));assertTrue(c.getString(R.string.lesson_step,1,10).contains("10")) } }
+    @Test fun groupAwareExamAndStoredScoresFormatInEveryLocale() { listOf("cs","ru","uk").forEach { tag ->
+        val c=context(tag)
+        assertTrue(c.getString(R.string.exam_ready,"CE").contains("CE"))
+        assertTrue(c.getString(R.string.exam_unavailable,"A").contains("A"))
+        assertTrue(c.getString(R.string.exam_content_incomplete,"D").contains("D"))
+        assertTrue(c.getString(R.string.exam_media_incomplete,"BE").contains("BE"))
+        assertTrue(c.getString(R.string.exam_result_score,42,60).contains("60"))
+        assertTrue(c.getString(R.string.stats_history_score,42,60).contains("60"))
+        assertTrue(c.getString(R.string.home_last_exam_score,42,60).contains("60"))
+    } }
 }

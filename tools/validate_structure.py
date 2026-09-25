@@ -54,3 +54,16 @@ for source in ("main","debug"):
 assert not (root/"app/src/main/assets/content/sample-v1.json").exists()
 assert not any("dev_" in p.read_text() for p in (root/"app/src/release").rglob("*.kt"))
 print("PASS: exported Room v1 identity unchanged; 29 tables; main/debug locale and format parity; source-set separation.")
+
+v2=json.loads((root/"core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json").read_text())["database"]
+assert v2["version"]==2 and len(v2["entities"])==30
+assert {e["tableName"] for e in v2["entities"]}=={e["tableName"] for e in room["entities"]}|{"ContentGroupReadiness"}
+assert "category_t" not in keys[0]
+assert "LicenceGroup.T" not in (root/"app/src/main/kotlin/cz/autoskola/app/feature/profile/ProfileScreen.kt").read_text()
+check=sqlite3.connect(":memory:");check.execute("PRAGMA foreign_keys=ON")
+for entity in v2["entities"]:
+    check.execute(entity["createSql"].replace("${TABLE_NAME}",entity["tableName"]))
+    for index in entity.get("indices",[]):check.execute(index["createSql"].replace("${TABLE_NAME}",entity["tableName"]))
+assert not check.execute("PRAGMA foreign_key_check").fetchall()
+assert {r[1] for r in check.execute("PRAGMA table_info(ExamAttempt)")} >= {"licenceGroup","questionCount","maxPoints","passPoints"}
+print("PASS: Room v2 table layout; group snapshots; eligibility provenance; seven supported groups.")
