@@ -2,6 +2,7 @@ package cz.autoskola.data
 import androidx.room.withTransaction
 import cz.autoskola.data.db.AutoSkolaDatabase
 import cz.autoskola.data.db.entity.*
+import cz.autoskola.data.importer.InstalledMedia
 import cz.autoskola.domain.*
 import kotlinx.coroutines.flow.first
 import java.util.UUID
@@ -128,7 +129,9 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File
                     },
                     source=q.source,
                     eligibility=groups.filter { it.revisionId==q.id }.map { QuestionEligibility(it.licenceGroup,it.source.ifBlank { q.source }) },
-                    media=media.filter { it.revisionId==q.id }.map { MediaReference(it.path.substringAfter('/'),it.sha256,it.mimeType,it.answerCode) }
+                    media=media.filter { it.revisionId==q.id }.map {
+                        MediaReference(InstalledMedia.wirePath(version.packageSha256,it.path),it.sha256,it.mimeType,it.answerCode)
+                    }
                 )
             }
         )
@@ -137,12 +140,12 @@ class ExamRepository(private val db:AutoSkolaDatabase,private val mediaRoot:File
     private suspend fun mediaAvailable(pack:QuestionPackage,group:LicenceGroup):Boolean {
         val media=pack.questions.filter { group.code in it.licenceGroups }.flatMap { it.media }
         if(media.isEmpty()) return true
-        val root=mediaRoot?.canonicalFile ?: return false
+        val root=mediaRoot ?: return false
         val hashDir=db.content().version(pack.manifest.databaseVersion)?.packageSha256 ?: return false
         return media.all { ref ->
             if(ref.mimeType !in GroupReadinessPolicy.supportedImageMimeTypes) return@all false
-            val file=File(root,"$hashDir/${ref.path}").canonicalFile
-            file.path.startsWith(root.path+File.separator) && file.isFile
+            try { InstalledMedia.matches(InstalledMedia.file(root,hashDir,ref.path),ref.sha256) }
+            catch(_:IllegalArgumentException) { false }
         }
     }
 

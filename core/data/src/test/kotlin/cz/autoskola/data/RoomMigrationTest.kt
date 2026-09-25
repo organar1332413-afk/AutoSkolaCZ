@@ -42,9 +42,9 @@ class RoomMigrationTest {
                     val id = "${section.category}-$n"
                     val revision = "legacy:$id"
                     legacy.execSQL("INSERT INTO Question VALUES(?,?)", arrayOf(id, id))
-                    legacy.execSQL("INSERT INTO QuestionRevision VALUES(?,?,?,?,?,?,?)", arrayOf(revision, id, "legacy", section.category, "Test", section.pointsPerQuestion, "https://etesty.md.gov.cz/"))
-                    legacy.execSQL("INSERT INTO Answer VALUES(?,?,?,?,?)", arrayOf(revision, "A", "Yes", 1, 0))
-                    legacy.execSQL("INSERT INTO Answer VALUES(?,?,?,?,?)", arrayOf(revision, "B", "No", 0, 1))
+                    legacy.execSQL("INSERT INTO QuestionRevision VALUES(?,?,?,?,?,?,?)", arrayOf<Any>(revision, id, "legacy", section.category, "Test", section.pointsPerQuestion, "https://etesty.md.gov.cz/"))
+                    legacy.execSQL("INSERT INTO Answer VALUES(?,?,?,?,?)", arrayOf<Any>(revision, "A", "Yes", 1, 0))
+                    legacy.execSQL("INSERT INTO Answer VALUES(?,?,?,?,?)", arrayOf<Any>(revision, "B", "No", 0, 1))
                     legacy.execSQL("INSERT INTO QuestionLicenceGroup VALUES(?,?)", arrayOf(revision, "B"))
                 }
             }
@@ -53,8 +53,8 @@ class RoomMigrationTest {
             val revisions = mutableListOf<String>()
             legacy.rawQuery("SELECT id FROM QuestionRevision ORDER BY categoryId, questionId", null).use { cursor -> while (cursor.moveToNext()) revisions += cursor.getString(0) }
             revisions.forEachIndexed { n, revision ->
-                legacy.execSQL("INSERT INTO ExamAnswer VALUES(?,?,?,NULL,NULL)", arrayOf("unfinished", n, revision))
-                legacy.execSQL("INSERT INTO ExamAnswer VALUES(?,?,?,?,?)", arrayOf("completed", n, revision, "A", 0))
+                legacy.execSQL("INSERT INTO ExamAnswer VALUES(?,?,?,NULL,NULL)", arrayOf<Any>("unfinished", n, revision))
+                legacy.execSQL("INSERT INTO ExamAnswer VALUES(?,?,?,?,?)", arrayOf<Any>("completed", n, revision, "A", 0))
             }
             legacy.version = 1
         } finally { legacy.close() }
