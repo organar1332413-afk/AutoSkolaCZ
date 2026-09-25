@@ -46,6 +46,7 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
     val learned=active.count { q->relevantAttempts.any { it.revisionId==q.revisionId } }
     val summary=examStats.history
     val weakTopics=examStats.weakTopics
+    val correctPercent=examStats.correctPercent
 
     Page {
         item { Heading(text(R.string.statistics)) }
@@ -115,8 +116,8 @@ fun StatisticsScreen(snapshot:LearningSnapshot,questions:List<QuestionCard>,stat
         item { Text(text(R.string.stats_question_progress),style=MaterialTheme.typography.titleMedium) }
         item { Note(text(R.string.stats_questions,learned)) }
         item { Note(text(R.string.stats_remaining,(active.size-learned).coerceAtLeast(0))) }
-        if(examStats.correctPercent==null) item { Note(text(R.string.stats_empty_official)) }
-        else item { Note(text(R.string.stats_correct,examStats.correctPercent)) }
+        if(correctPercent==null) item { Note(text(R.string.stats_empty_official)) }
+        else item { Note(text(R.string.stats_correct,correctPercent)) }
 
         item { Note(text(R.string.stats_words,words.count { it.saved },words.count { it.saved && it.repetitions>0 })) }
 
