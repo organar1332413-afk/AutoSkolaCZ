@@ -1,7 +1,6 @@
 """Polite, persistent cache for official public pages and media."""
 
 import hashlib
-import json
 import random
 import threading
 import time

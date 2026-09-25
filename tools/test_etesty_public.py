@@ -8,6 +8,7 @@ from tools.etesty_public.diff_snapshots import compare
 from tools.etesty_public.fetch import Fetcher
 from tools.etesty_public.parser import AREAS, ParseError, parse_bulletin, parse_list, parse_sample_test
 from tools.etesty_public.pipeline import atomic_json, build, encode, media_signature_matches, sha, validate
+from tools.etesty_public.artifacts import create_artifacts
 
 
 FIXTURES = Path(__file__).parent / "etesty_public" / "fixtures"
@@ -33,6 +34,18 @@ class PublicAdapterTests(unittest.TestCase):
         with self.assertRaises(ParseError):
             parse_sample_test((FIXTURES / "sample-b.html").read_bytes(), "C")
 
+    def test_recorded_question_payload_agrees_with_bulletin_exact_text(self):
+        bulletin, _ = parse_list((FIXTURES / "list-1.html").read_bytes(), 99,
+                                 "https://etesty.md.gov.cz/ro/Bulletin/List?id=99")
+        item = bulletin[0]
+        payload = json.loads((FIXTURES / "question-180.json").read_text())
+        self.assertEqual((item["officialId"], item["internalSourceId"], item["textCs"]),
+                         (payload["questionCode"], payload["id"], payload["questionText"]))
+        self.assertEqual([a["textCs"] for a in item["answers"]],
+                         [a["multilingualAnswerTexts"]["cs"] for a in payload["questionAnswers"]])
+        self.assertEqual([i for i, a in enumerate(payload["questionAnswers"]) if a["answerId"] == payload["correctAnswerId"]],
+                         [i for i, a in enumerate(item["answers"]) if a["correct"]])
+
     def test_exact_entities_two_answers_answer_media_and_video(self):
         html = b'''<input id="pageSize" value="1000"><input id="pageNumber" value="1"><span>z 1</span>
         <div class="QuestionPanel"><div class="QuestionCode">[RP123]</div><div class="QuestionImagePanel"><div>A &amp; B  </div><video src="/binary_content_storage/V.mp4"></video></div>
@@ -50,11 +63,17 @@ class PublicAdapterTests(unittest.TestCase):
         <div class="QuestionPanel"><span class="QuestionCode">[RP1601008]</span>
         <div class="QuestionImagePanel"><div>Which sign?</div></div><div class="AnswersPanel"><div id="answer-container-1408">
         <div><span class="answer-checkbox">A</span><div class="answer-image" data-isCorrect="False"><img src="/binary_content_storage/A_W_1.jpg"></div><dialog><img src="/binary_content_storage/A_W_1.jpg"></dialog></div>
-        <div><span class="answer-checkbox">B</span><div class="answer-image" data-isCorrect="True"><img src="/binary_content_storage/A_W_2.jpg"></div></div></div></div></div>'''
+        <div><span class="answer-checkbox">B</span><div class="answer-image" data-isCorrect="False"><img src="/binary_content_storage/A_W_2.jpg"></div></div>
+        <div><span class="answer-checkbox">C</span><div class="answer-image" data-isCorrect="True"><img src="/binary_content_storage/A_W_3.jpg"></div></div></div></div></div>'''
         q, _ = parse_list(html, 54, "https://etesty.md.gov.cz/ro/Bulletin/List?id=54")
-        self.assertEqual([a["textCs"] for a in q[0]["answers"]], ["", ""])
-        self.assertEqual([a["correct"] for a in q[0]["answers"]], [False, True])
-        self.assertEqual(len(q[0]["media"]), 2)
+        self.assertEqual([a["textCs"] for a in q[0]["answers"]], ["", "", ""])
+        self.assertEqual([a["correct"] for a in q[0]["answers"]], [False, False, True])
+        self.assertEqual(len(q[0]["media"]), 3)
+        underlying = json.loads((FIXTURES / "question-1408.json").read_text())
+        self.assertEqual(underlying["questionCode"], "RP1601008")
+        self.assertEqual([a["multilingualAnswerTexts"]["cs"] for a in underlying["questionAnswers"]], [".", ".", "."])
+        self.assertEqual([i for i, a in enumerate(underlying["questionAnswers"])
+                          if a["answerId"] == underlying["correctAnswerId"]], [2])
 
     def test_cache_resume_hash_and_origin_restriction(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -88,7 +107,7 @@ class PublicAdapterTests(unittest.TestCase):
     def test_media_signature_rejects_html_error_body(self):
         self.assertFalse(media_signature_matches(b"<html>Error</html>", "video/mp4"))
         self.assertTrue(media_signature_matches(b"GIF89a\x01\x00", "image/gif"))
-        self.assertTrue(media_signature_matches(b"\x00\x00\x00\x18ftypisom", "video/mp4"))
+        self.assertTrue(media_signature_matches(b"\x00\x00\x00\x18ftypisom\x00", "video/mp4"))
 
     def test_diff_tracks_correctness_separately(self):
         q = {"officialId": "RP1", "textCs": "Hi", "answers": [{"code": "A", "textCs": "A", "correct": True}, {"code": "B", "textCs": "B", "correct": False}], "points": 2,
@@ -98,6 +117,9 @@ class PublicAdapterTests(unittest.TestCase):
         changed["answers"][1]["correct"] = True
         self.assertEqual(compare({"questions": [q]}, {"questions": [changed]}),
                          [{"officialId": "RP1", "change": "CORRECT ANSWER CHANGED"}])
+        moved = {**q, "category": "signs", "points": 1, "textCs": "New text"}
+        labels = {change["change"] for change in compare({"questions": [q]}, {"questions": [moved, {**q, "officialId": "RP2"}]})}
+        self.assertEqual(labels, {"TEXT CHANGED", "POINTS CHANGED", "CATEGORY CHANGED", "ADDED QUESTION"})
 
     def test_build_deterministic_and_never_ready_from_observation(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -121,6 +143,7 @@ class PublicAdapterTests(unittest.TestCase):
             file.write_bytes(b"image bytes")
             ref = {"path": "media/shared.png", "sha256": sha(b"image bytes"), "mimeType": "image/png"}
             question = {"officialId": "RP1", "category": "signs", "textCs": "Značka", "points": 1,
+                        "pointsProvenance": "derivedFromOfficialBlueprint",
                         "answers": [{"code": "A", "textCs": "", "correct": True, "underlyingSourceTextCs": ".",
                                      "underlyingSourceTextRef": "https://etesty.md.gov.cz/api/v1/PublicWeb/Question/1"},
                                     {"code": "B", "textCs": "Ne", "correct": False}],
@@ -133,6 +156,11 @@ class PublicAdapterTests(unittest.TestCase):
             build(snap, directory)
             built = json.loads((Path(directory) / "package-v2.json").read_text())
             self.assertEqual(built["questions"][0]["answers"][0], {"code": "A", "textCs": "", "correct": True})
+            atomic_json(Path(directory) / "normalized.json", snap)
+            first_archive = create_artifacts(directory, chunk_bytes=4096)
+            second_archive = create_artifacts(directory, chunk_bytes=4096)
+            self.assertEqual(first_archive, second_archive)
+            self.assertGreater(len(first_archive["mediaParts"]), 1)
             file.unlink()
             self.assertEqual(len(validate(snap, directory)), 2)
             with self.assertRaises(ValueError):

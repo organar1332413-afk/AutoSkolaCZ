@@ -1,0 +1,932 @@
+{
+  "manifest": {
+    "databaseVersion": "public-etesty-2026-04-02",
+    "formatVersion": 2,
+    "groupReadiness": [
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "A",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      },
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "B",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      },
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "BE",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      },
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "C",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      },
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "CE",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      },
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "D",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      },
+      {
+        "blueprintVersion": "etesty-2026-09-v1",
+        "contentComplete": false,
+        "eligibilityComplete": false,
+        "licenceGroup": "DE",
+        "mediaComplete": true,
+        "source": "https://etesty.md.gov.cz/ro/Bulletin"
+      }
+    ],
+    "publicationDate": "2026-04-02",
+    "retrievedAt": "2026-09-25T21:36:08.202606+00:00",
+    "sample": false,
+    "source": "https://etesty.md.gov.cz/ro/Bulletin"
+  },
+  "questions": [
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Neprodleně zastavit vozidlo."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Neprodleně zastavit vozidlo, jen pokud došlo ke zranění nebo usmrcení osob."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Neprodleně zastavit vozidlo, jen pokud došlo při této nehodě ke škodě na majetku převyšující částku 50 000 Kč nebo ke zranění nebo usmrcení osob."
+        }
+      ],
+      "category": "rules",
+      "eligibility": [
+        {
+          "licenceGroup": "DE",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/DE"
+        }
+      ],
+      "media": [],
+      "officialId": "RP0604199",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52&pageSize=1000&pagex=1",
+      "textCs": "Řidič, který měl účast na dopravní nehodě, je povinen:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Musí být předem očištěno tak, aby neznečišťovalo pozemní komunikaci."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Musí být v případě, že tak lze učinit bez větších obtíží, předem očištěno."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Musí být očištěno na nejbližším vhodném místě po vjetí na pozemní komunikaci. "
+        }
+      ],
+      "category": "rules",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0604222",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52&pageSize=1000&pagex=1",
+      "textCs": "Vozidlo vjíždějící na pozemní komunikaci:\r\n ",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Levé zadní kolo se zajistí dvěma zakládacími klíny, jedním klínem před kolem a jedním za kolem."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Před levé přední kolo a před libovolné zadní kolo se dá po jednom zakládacím klínu."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Zakládací klín se dá před levé přední kolo."
+        }
+      ],
+      "category": "safe_driving",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0605408",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=53&pageSize=1000&pagex=1",
+      "textCs": "Jak při výměně pravého předního kola nejlépe zajistíte vozidlo před nežádoucím pohybem:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Huštění pneumatiky, hloubce jejího dezénu a druhu povrchu vozovky."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Huštění pneumatiky a hloubce jejího dezénu. Druh povrchu vozovky nemá výraznější vliv na přilnavost."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Druhu povrchu vozovky. Huštění a hloubka dezénu pneumatiky výrazně přilnavost neovlivňují. "
+        }
+      ],
+      "category": "safe_driving",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0605448",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=53&pageSize=1000&pagex=1",
+      "textCs": "Přilnavost mezi pneumatikou a povrchem vozovky je závislá na:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": ""
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": ""
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": ""
+        }
+      ],
+      "category": "signs",
+      "eligibility": [],
+      "media": [
+        {
+          "answerCode": "A",
+          "mimeType": "image/jpeg",
+          "path": "media/A_W_2084_25438.jpg",
+          "sha256": "d8200bb2aae1111a44b3e7b8e2c843b661b264a5183eaa9937c8c47d28f07ada"
+        },
+        {
+          "answerCode": "B",
+          "mimeType": "image/jpeg",
+          "path": "media/A_W_2084_25439.jpg",
+          "sha256": "c800627484ec07a8fbdc59c5b6909126012171917f3b7a56dbca32e66b5ad5f1"
+        },
+        {
+          "answerCode": "C",
+          "mimeType": "image/jpeg",
+          "path": "media/A_W_2084_25440.jpg",
+          "sha256": "0047b1ab0c500a71cbf14cbba9f44362dcf7ad79c2cd59b5cea1e9f0bf3eeb56"
+        }
+      ],
+      "officialId": "RP0606002",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=54&pageSize=1000&pagex=1",
+      "textCs": "Která z těchto dopravních značek zakazuje zastavení?",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Nesmí v řidičském průkazu provádět žádné zápisy, změny, opravy nebo úpravy."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Smí v řidičském průkazu provádět pouze opravy údajů, u nichž je zřejmé, že jsou vyplněny chybně."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Smí v řidičském průkazu provádět jen nezbytné změny a opravy, pokud jejich provedení následující pracovní den nahlásí příslušnému obecnímu úřadu obce s rozšířenou působností."
+        }
+      ],
+      "category": "related",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0606018",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=57&pageSize=1000&pagex=1",
+      "textCs": "Držitel řidičského průkazu:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Příslušnému obecnímu úřadu obce s rozšířenou působností."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Příslušnému útvaru dopravní policie."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Příslušnému útvaru obecní policie."
+        }
+      ],
+      "category": "related",
+      "eligibility": [
+        {
+          "licenceGroup": "A",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/A"
+        },
+        {
+          "licenceGroup": "CE",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/CE"
+        }
+      ],
+      "media": [],
+      "officialId": "RP0606024",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=57&pageSize=1000&pagex=1",
+      "textCs": "Změnu příjmení musí držitel řidičského průkazu nejpozději do pěti pracovních dnů ode dne, kdy ke změně došlo, oznámit:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Vozidlo lze provozovat na pozemních komunikacích na základě jednorázového povolení policie."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "S vozidlem lze přiměřenou rychlostí dojet jen do nejbližšího místa, kde lze závadu odstranit."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "Vozidlo nesmí být užito k provozu na pozemních komunikacích, smí však být vlečeno na tyči."
+        }
+      ],
+      "category": "vehicle",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0606075",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=56&pageSize=1000&pagex=1",
+      "textCs": "Zjistíme-li závady na brzdovém systému, které zjevně znemožňují účinně zastavit vozidlo a tím ohrožují bezpečnost provozu na pozemních komunikacích:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Je úprava silničního provozu podřazená obecné úpravě silničního provozu."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Neplatí za snížené viditelnosti."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "Je nadřazená obecné úpravě provozu na pozemních komunikacích."
+        }
+      ],
+      "category": "rules",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0606185",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52&pageSize=1000&pagex=1",
+      "textCs": "Místní úprava provozu na pozemních komunikacích:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Je prázdné."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Je plně naložené."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Převáží sypký náklad."
+        }
+      ],
+      "category": "safe_driving",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0606218",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=53&pageSize=1000&pagex=1",
+      "textCs": "Vozidlo s vysokou plachtovou nástavbou je zvlášť citlivé na boční vítr pokud: ",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Smí řidič stát jen na místech označených jako parkoviště; zastavit však smí i mimo parkoviště."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Není zastavení, stání ani parkování právní úpravou omezeno."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Smí řidič zastavit a stát jen na místech označených jako parkoviště."
+        }
+      ],
+      "category": "signs",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "video/mp4",
+          "path": "media/Q_W_1921.mp4",
+          "sha256": "34c142d9a5f98f1de941c0020c15dc441b0cc5565cae33ee162d392ac81243e3"
+        }
+      ],
+      "officialId": "RP0606260",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=54&pageSize=1000&pagex=1",
+      "textCs": "V úseku za touto dopravní značkou:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Na zadní tabulku registrační značky."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Na přední tabulku registrační značky."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Podle požadavku zákazníka.\r\n\r\n"
+        }
+      ],
+      "category": "vehicle",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0606379",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=56&pageSize=1000&pagex=1",
+      "textCs": "Kontrolní nálepka osvědčující technickou způsobilost vozidla se umísťuje:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Mají registrační značku shodnou s tažným vozidlem."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Nemusí mít žádnou registrační značku."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "Mají po zaregistrování svou přidělenou registrační značku."
+        }
+      ],
+      "category": "vehicle",
+      "eligibility": [
+        {
+          "licenceGroup": "DE",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/DE"
+        }
+      ],
+      "media": [],
+      "officialId": "RP0606398",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=56&pageSize=1000&pagex=1",
+      "textCs": "Nově registrovaná přípojná vozidla:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Změna nebo úprava podstatných částí mechanismu nebo konstrukce provozovaného silničního vozidla."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Každá oprava vozidla, při které bylo použito náhradních dílů."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Nahrazení nebo doplnění vozidla součástí nebo výbavou, která splňuje podmínky stanovené zákonem."
+        }
+      ],
+      "category": "vehicle",
+      "eligibility": [
+        {
+          "licenceGroup": "A",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/A"
+        }
+      ],
+      "media": [],
+      "officialId": "RP0812005",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=56&pageSize=1000&pagex=1",
+      "textCs": "Přestavbou silničního vozidla je:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Přibližně 60 stlačení za minutu."
+        },
+        {
+          "code": "B",
+          "correct": true,
+          "textCs": "Přibližně 100 stlačení za minutu."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Přibližně 160 stlačení za minutu."
+        }
+      ],
+      "category": "first_aid",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP0904008",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=58&pageSize=1000&pagex=1",
+      "textCs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Přibližně 160 stlačení za minutu."
+        },
+        {
+          "code": "B",
+          "correct": true,
+          "textCs": "Přibližně 100 stlačení za minutu."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Přibližně 200 stlačení za minutu."
+        }
+      ],
+      "category": "first_aid",
+      "eligibility": [
+        {
+          "licenceGroup": "A",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/A"
+        }
+      ],
+      "media": [],
+      "officialId": "RP1007061",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=58&pageSize=1000&pagex=1",
+      "textCs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "5 min."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "10 min."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "20 min."
+        }
+      ],
+      "category": "first_aid",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP1102011",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=58&pageSize=1000&pagex=1",
+      "textCs": "U poraněného v hlubokém bezvědomí a bezdeší nastávají nezvratné změny mozkové tkáně do:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "mírně zakloním hlavu a předsunu dolní čelist, uvolním mu tak dýchací cesty a budu ho sledovat do příjezdu ZS, pokud dýchat přestane, ihned zahájím oživování\r\n"
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "přivolám pouze ZS, pokud poraněný dýchá, nemusím ho dále sledovat"
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "neprodleně zahájím srdeční masáž"
+        }
+      ],
+      "category": "first_aid",
+      "eligibility": [
+        {
+          "licenceGroup": "DE",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/DE"
+        }
+      ],
+      "media": [],
+      "officialId": "RP1102028",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=58&pageSize=1000&pagex=1",
+      "textCs": "Poraněný je v bezvědomí a dýchá. Jakou pomoc mu poskytnete?",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Nedojde-li k ohrožení bezpečnosti a plynulosti silničního provozu."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Zůstane-li při stání volný alespoň jeden pruh široký nejméně 2 m."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Zůstane-li při zastavení volný alespoň jeden jízdní pruh široký 2,5 m."
+        }
+      ],
+      "category": "rules",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP1104002",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=52&pageSize=1000&pagex=1",
+      "textCs": "V obci smí řidič vozidla o celkové hmotnosti nepřevyšující 3.500 kg zastavit a stát kolmo, popřípadě šikmo k okraji pozemní komunikace jen:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "je důvodné podezření, že vozidlo bylo odcizeno."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "na vozidle není umístěna státní poznávací značka."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "řidič při kontrole nepředloží osvědčení o registraci vozidla a doklad o pojištění odpovědnosti z provozu vozidla."
+        }
+      ],
+      "category": "related",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP1108002",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=57&pageSize=1000&pagex=1",
+      "textCs": "Policista může zabránit v jízdě motorovému vozidlu použitím technického prostředku (tzv. botičky) nebo odtažením vozidla, jestliže:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "   Zakazuje jízdu (nikoli jen vjezd) pro určená vozidla v území, pro které byla vyhlášena smogová situace podle zvláštního právního předpisu.            "
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Upozorňuje řidiče na oblast, zejména část obce, kde je omezen provoz vozidel, která nesplňují zvláštní emisní podmínky."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Zakazuje jízdu vozidlům, která nemají přidělenou emisní plaketu na základě jejich emisní kategorie odrážející zátěž životního prostředí. "
+        }
+      ],
+      "category": "signs",
+      "eligibility": [
+        {
+          "licenceGroup": "BE",
+          "source": "https://etesty.md.gov.cz/co/DLTest/SampleTest/BE"
+        }
+      ],
+      "media": [
+        {
+          "mimeType": "image/jpeg",
+          "path": "media/Q_W_2061.jpg",
+          "sha256": "b63ecb20d33f0b3bd332e77f6914d69d351dbfd7323967f234a48f3c9e23e272"
+        }
+      ],
+      "officialId": "RP1401066",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=54&pageSize=1000&pagex=1",
+      "textCs": "Tato dopravní značka: \r\n",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Nemůže řidič vozidla předvídat při pohybu vozidla přizpůsobeném stavebnímu stavu a dopravně technickému stavu silnice a povětrnostním situacím a jejich důsledkům."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Vyvolal uježděný sníh ležící na vozovce."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Mohl řidič při náležité obezřetnosti předvídat."
+        }
+      ],
+      "category": "related",
+      "eligibility": [],
+      "media": [],
+      "officialId": "RP1401135",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=57&pageSize=1000&pagex=1",
+      "textCs": "Závadou ve sjízdnosti silnice se rozumí taková změna v její sjízdnosti, kterou:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Musí dát přednost všem vozidlům přijíždějícím zprava i zleva."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Má přednost v jízdě před všemi vozidly, přesto ale musí přibrzdit před hranicí křižovatky a přesvědčit se, zda může křižovatkou bezpečně projet."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "Musí dát přednost všem vozidlům přijíždějícím zprava."
+        }
+      ],
+      "category": "situations",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "video/mp4",
+          "path": "media/Q_W_3155.mp4",
+          "sha256": "c58816d5d17ed5e7c378003974999b1cc2d88152ac8f27232389ee7df47bc1e0"
+        }
+      ],
+      "officialId": "RP1401140",
+      "points": 4,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=55&pageSize=1000&pagex=1",
+      "textCs": "Řidič vozidla z výhledu na vyobrazené křižovatce:",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "vždy zastavit vozidlo před přechodem pro chodce."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "dát přednost pouze vozidlům přijíždějícím do křižovatky po hlavní pozemní komunikaci."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "dát přednost vozidlům přijíždějícím do křižovatky po hlavní pozemní komunikaci a vozidlům přijíždějícím \"zprava\"."
+        }
+      ],
+      "category": "situations",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "image/png",
+          "path": "media/Q_W_5456.png",
+          "sha256": "7b21c12b2d74cc46f0b542f8827534264d04c695e685e7a3ccd60f96dec4f66a"
+        }
+      ],
+      "officialId": "RP2205016",
+      "points": 4,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=55&pageSize=1000&pagex=1",
+      "textCs": "Řidič vozidla z výhledu musí ve vyobrazené dopravní situaci:\r\n",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Ne. Řidič má povinnost mít ve vozidle zapnutý mobilní telefon."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Ne. Pouhé zapojení nabíječky k mobilnímu telefonu nemůže mít vliv na reakční dobu řidiče a ovlivnit tak vyřešení mimořádné události v provozu na pozemních komunikacích."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "Ano. Řidič se musí plně věnovat řízení vozidla a sledovat situaci v provozu na pozemních komunikacích."
+        }
+      ],
+      "category": "safe_driving",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "image/png",
+          "path": "media/Q_W_5502.png",
+          "sha256": "7f0d223324700544332d234b59b808cefa8ce9c2a93e3b160b206eaf6a2d0dfe"
+        }
+      ],
+      "officialId": "RP2210021",
+      "points": 2,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=53&pageSize=1000&pagex=1",
+      "textCs": "Ovlivní připojování nabíječky k mobilnímu telefonu za jízdy reakční dobu řidiče nutnou k vyřešení mimořádné události v provozu na pozemních komunikacích?",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Ne, měl omezený přímý výhled způsobený protijedoucím vozidlem odbočujícím vlevo a zároveň nezohlednil délku svého vozidla."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Ne, měl omezený přímý výhled způsobený protijedoucím vozidlem odbočujícím vlevo. Délku vozidla zohlednit nemusel."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Ano, řidič nákladního vozidla měl dostatečný rozhled a při odbočení neomezil ani neohrozil protijedoucího řidiče vozidla z výhledu."
+        }
+      ],
+      "category": "situations",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "video/mp4",
+          "path": "media/Q_W_5525.mp4",
+          "sha256": "b02d1607efa58504b3dad1bf2013114d2eae56291c174f71661a56bb23076ce2"
+        }
+      ],
+      "officialId": "RP2303003",
+      "points": 4,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=55&pageSize=1000&pagex=1",
+      "textCs": "Provedl řidič nákladního vozidla ve vyobrazené dopravní situaci odbočení vlevo bezpečně a v souladu s pravidly silničního provozu? ",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": false,
+          "textCs": "Ne, oba řidiči odbočili v souladu s pravidly silničního provozu."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Ano, řidič motocyklu nesměl při odbočování vpravo najíždět do levého jízdního pruhu."
+        },
+        {
+          "code": "C",
+          "correct": true,
+          "textCs": "Ano, řidič protijedoucího osobního vozidla při odbočování vlevo byl povinen dát přednost v jízdě řidiči motocyklu."
+        }
+      ],
+      "category": "situations",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "video/mp4",
+          "path": "media/Q_W_5665.mp4",
+          "sha256": "b9919369b81d6a81a7d3e53b7dbb351c4baf4a477e862a3ca04be39bc8c872e3"
+        }
+      ],
+      "officialId": "RP2407010",
+      "points": 4,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=55&pageSize=1000&pagex=1",
+      "textCs": "Došlo ve vyobrazené dopravní situaci k porušení pravidel silničního provozu? ",
+      "translations": []
+    },
+    {
+      "answers": [
+        {
+          "code": "A",
+          "correct": true,
+          "textCs": "Může odbočit vpravo, přitom nesmí ohrozit ani omezit cyklistu jedoucího ve vyhrazeném jízdním pruhu."
+        },
+        {
+          "code": "B",
+          "correct": false,
+          "textCs": "Může odbočit vpravo, přičemž mu cyklista jedoucí ve vyhrazeném jízdním pruhu musí dát přednost v jízdě."
+        },
+        {
+          "code": "C",
+          "correct": false,
+          "textCs": "Nesmí odbočit vpravo."
+        }
+      ],
+      "category": "signs",
+      "eligibility": [],
+      "media": [
+        {
+          "mimeType": "image/png",
+          "path": "media/Q_W_5671.png",
+          "sha256": "797264a6d29ce1ca76b515ad5e6ccab0e0c31a51fc0640b44c774d1a1489ffc2"
+        }
+      ],
+      "officialId": "RP2407016",
+      "points": 1,
+      "source": "https://etesty.md.gov.cz/ro/Bulletin/List?id=54&pageSize=1000&pagex=1",
+      "textCs": "Řidič motocyklu na nejbližší křižovatce:",
+      "translations": []
+    }
+  ]
+}

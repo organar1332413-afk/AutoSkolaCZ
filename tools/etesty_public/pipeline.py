@@ -6,16 +6,15 @@ output is intentionally separate from the Android application runtime.
 
 import hashlib
 import json
-import mimetypes
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import quote, urlparse
+from urllib.parse import urlparse
 
 from .fetch import Fetcher
-from .parser import AREAS, GROUPS, ORIGIN, ParseError, parse_bulletin, parse_list, parse_sample_test
+from .parser import AREAS, GROUPS, ORIGIN, parse_bulletin, parse_list, parse_sample_test
 from tools.official_import.build_package import BLUEPRINT, SECTIONS
 
 
