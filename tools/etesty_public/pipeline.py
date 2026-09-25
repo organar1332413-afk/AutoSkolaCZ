@@ -1,0 +1,237 @@
+"""Reproducible offline acquisition of the current official-public Bulletin.
+
+This adapter models the observed website, not a Ministry export contract. Its
+output is intentionally separate from the Android application runtime.
+"""
+
+import hashlib
+import json
+import mimetypes
+import re
+from collections import Counter, defaultdict
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import quote, urlparse
+
+from .fetch import Fetcher
+from .parser import AREAS, GROUPS, ORIGIN, ParseError, parse_bulletin, parse_list, parse_sample_test
+
+
+BLUEPRINT = "etesty-2026-09-v1"
+MIME = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
+        ".webp": "image/webp", ".mp4": "video/mp4", ".webm": "video/webm"}
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def encode(obj):
+    return (json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
+
+
+def atomic_json(path, obj):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_bytes(encode(obj))
+    temporary.replace(path)
+
+
+def collect(root, *, max_questions=None, no_media=False, sample_runs=1, refresh=False, delay=0.6):
+    """Resume from cached responses. A bounded slice is a validation aid only."""
+    root = Path(root)
+    cache = Fetcher(root / "raw-cache", delay=delay, refresh=refresh)
+    now = datetime.now(timezone.utc).isoformat()
+    bulletin_url = ORIGIN + "/ro/Bulletin"
+    bulletin_record, bulletin_body = cache.record(bulletin_url)
+    bulletin = parse_bulletin(bulletin_body)
+    questions, conflicts, raw_pages = {}, [], [bulletin_record]
+    all_ids = {}
+    for area in (99, *AREAS):
+        page = 1
+        while True:
+            url = ORIGIN + f"/ro/Bulletin/List?id={area}&pageSize=1000&pagex={page}"
+            record, body = cache.record(url)
+            raw_pages.append(record)
+            items, pagination = parse_list(body, area, url)
+            for item in items:
+                code = item["officialId"]
+                if area == 99:
+                    if code in all_ids:
+                        conflicts.append(f"Duplicate official ID in all-list: {code}")
+                    all_ids[code] = item["internalSourceId"]
+                    continue
+                if code in questions:
+                    conflicts.append(f"Thematic/official ID conflict: {code}, {questions[code]['category']} vs {item['category']}")
+                else:
+                    questions[code] = item
+            print(f"area={area} page={page}/{pagination['pages']} discovered={len(all_ids)} classified={len(questions)} cached={cache.cached} downloaded={cache.downloaded}", flush=True)
+            if page >= pagination["pages"]:
+                break
+            page += 1
+    for code, internal in all_ids.items():
+        if code not in questions or questions[code]["internalSourceId"] != internal:
+            conflicts.append(f"All-list/classified mismatch: {code}/{internal}")
+    for code in questions.keys() - all_ids.keys():
+        conflicts.append(f"Classified question absent from all-list: {code}")
+    if conflicts:
+        atomic_json(root / "quarantine.json", {"conflicts": conflicts})
+        raise ValueError(f"Discovery conflicts ({len(conflicts)}); see quarantine.json")
+
+    selected = dict(sorted(questions.items()))
+    if max_questions is not None:
+        # Preserve varied areas for a representative proof slice.
+        per_area = max(1, max_questions // len(AREAS))
+        selected = {q["officialId"]: q for area in AREAS for q in
+                    [x for x in questions.values() if x["category"] == AREAS[area][0]][:per_area]}
+        selected = dict(sorted(selected.items()))
+    evidence = defaultdict(dict)
+    observations = []
+    for group in GROUPS:
+        for run in range(sample_runs):
+            url = ORIGIN + "/co/DLTest/SampleTest/" + group
+            # Refresh makes each generated run distinct; cached runs are reused on resume.
+            if run and not refresh:
+                continue
+            record, body = cache.record(url)
+            raw_pages.append(record)
+            observed = parse_sample_test(body, group)
+            for item in observed:
+                code = item["questionCode"]
+                observation = {"licenceGroup": group, "officialId": code, "evidenceType": "OFFICIAL_GENERATOR_OBSERVED",
+                               "source": url, "rawSha256": record["sha256"], "retrievedAt": now}
+                observations.append(observation)
+                if code in selected:
+                    evidence[code][group] = observation
+            print(f"sample={group} run={run + 1} observed={len(observed)}", flush=True)
+
+    media_inventory = {}
+    media_missing = []
+    for code, q in selected.items():
+        normalized_media = []
+        for ref in q["media"]:
+            source_url = ref["sourceUrl"]
+            filename = Path(urlparse(source_url).path).name
+            if not re.fullmatch(r"[A-Za-z0-9_-]+\.[A-Za-z0-9]+", filename) or filename.lower().endswith(".svg"):
+                media_missing.append({"officialId": code, "sourceUrl": source_url, "error": "Unsafe or unsupported filename"})
+                continue
+            path = "media/" + filename
+            mime = MIME.get(Path(filename).suffix.lower())
+            if mime is None:
+                media_missing.append({"officialId": code, "sourceUrl": source_url, "error": "Unknown MIME"})
+                continue
+            if not no_media:
+                try:
+                    body = cache.get(source_url)
+                    destination = root / path
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    if not destination.is_file() or sha(destination.read_bytes()) != sha(body):
+                        destination.write_bytes(body)
+                    prior = media_inventory.get(path)
+                    meta = {"path": path, "sha256": sha(body), "mimeType": mime, "size": len(body), "sourceUrl": source_url}
+                    if prior and prior != meta:
+                        raise ValueError(f"Conflicting shared media: {path}")
+                    media_inventory[path] = meta
+                    normalized_media.append({"path": path, "sha256": sha(body), "mimeType": mime,
+                                             **({"answerCode": ref["answerCode"]} if ref["answerCode"] else {})})
+                except (IOError, ValueError) as exc:
+                    media_missing.append({"officialId": code, "sourceUrl": source_url, "error": str(exc)})
+            else:
+                media_missing.append({"officialId": code, "sourceUrl": source_url, "error": "Media disabled for slice"})
+        q["media"] = normalized_media
+        q["eligibilityEvidence"] = [evidence[code][group] for group in GROUPS if group in evidence[code]]
+    print(f"discovered={len(all_ids)} selected={len(selected)} media={len(media_inventory)} missing={len(media_missing)} cached={cache.cached} downloaded={cache.downloaded}", flush=True)
+
+    normalized = {"snapshot": {"source": bulletin_url, "publicationDate": bulletin["publicationDate"],
+                               "databaseVersion": "public-etesty-" + bulletin["publicationDate"],
+                               "retrievedAt": now, "adapterVersion": "etesty-public-0.1",
+                               "totalDiscovered": len(all_ids), "totalDownloaded": len(selected),
+                               "allOfficialIdsSha256": sha(encode(sorted(all_ids))),
+                               "rawPages": raw_pages},
+                  "questions": list(selected.values()), "observations": observations,
+                  "mediaInventory": [media_inventory[k] for k in sorted(media_inventory)],
+                  "quarantine": media_missing}
+    atomic_json(root / "normalized.json", normalized)
+    return normalized
+
+
+def validate(snapshot, root):
+    questions = snapshot["questions"]
+    ids = [q["officialId"] for q in questions]
+    problems = list(snapshot.get("quarantine", []))
+    if len(set(ids)) != len(ids):
+        problems.append("Duplicate official ID")
+    for q in questions:
+        if q["category"] not in [v[0] for v in AREAS.values()] or not q["textCs"].strip():
+            problems.append(f"Invalid category or Czech text: {q['officialId']}")
+        a = q["answers"]
+        if len(a) not in (2, 3) or [v["code"] for v in a] != list("ABC")[:len(a)] or sum(v["correct"] for v in a) != 1:
+            problems.append(f"Invalid answers: {q['officialId']}")
+        for m in q["media"]:
+            file = Path(root) / m["path"]
+            if not file.is_file() or sha(file.read_bytes()) != m["sha256"]:
+                problems.append(f"Media missing/hash mismatch: {q['officialId']}/{m['path']}")
+    return problems
+
+
+def build(snapshot, root):
+    problems = validate(snapshot, root)
+    if problems:
+        raise ValueError(f"Snapshot has {len(problems)} unresolved items; package withheld")
+    questions = []
+    observed_by_group = Counter()
+    for q in sorted(snapshot["questions"], key=lambda item: item["officialId"]):
+        eligibility = []
+        for evidence in q["eligibilityEvidence"]:
+            eligibility.append({"licenceGroup": evidence["licenceGroup"], "source": evidence["source"]})
+            observed_by_group[evidence["licenceGroup"]] += 1
+        questions.append({"officialId": q["officialId"], "category": q["category"],
+                          "textCs": q["textCs"], "points": q["points"],
+                          "answers": q["answers"], "media": q["media"],
+                          "eligibility": eligibility, "translations": [], "source": q["sourceRefs"][0]})
+        for a in questions[-1]["answers"]:
+            a.pop("media", None)
+    source = snapshot["snapshot"]
+    readiness = [{"licenceGroup": group, "blueprintVersion": BLUEPRINT,
+                  "eligibilityComplete": False, "contentComplete": False,
+                  "mediaComplete": not bool(snapshot["quarantine"]) and all(
+                      m["mimeType"] in ("image/png", "image/jpeg", "image/webp") for q in questions
+                      for m in q["media"] if any(e["licenceGroup"] == group for e in q["eligibility"])),
+                  "source": source["source"]} for group in GROUPS]
+    package = {"manifest": {"formatVersion": 2, "databaseVersion": source["databaseVersion"],
+                            "publicationDate": source["publicationDate"], "source": source["source"],
+                            "retrievedAt": source["retrievedAt"], "sample": False,
+                            "groupReadiness": readiness}, "questions": questions}
+    data = encode(package)
+    if len(data) > 20 * 1024 * 1024:
+        raise ValueError("Package exceeds Android importer limit")
+    output = Path(root) / "package-v2.json"
+    output.write_bytes(data)
+    audit = make_audit(snapshot, root)
+    audit["packageSha256"] = sha(data)
+    atomic_json(Path(root) / "bank-audit.json", audit)
+    return audit
+
+
+def make_audit(snapshot, root):
+    questions = snapshot["questions"]
+    media = snapshot["mediaInventory"]
+    observed = {g: len({o["officialId"] for o in snapshot["observations"] if o["licenceGroup"] == g}) for g in GROUPS}
+    return {"publicationDate": snapshot["snapshot"]["publicationDate"],
+            "retrievedAt": snapshot["snapshot"]["retrievedAt"],
+            "discovered": snapshot["snapshot"]["totalDiscovered"], "downloaded": len(questions),
+            "valid": len(questions) - len(validate(snapshot, root)), "quarantined": len(snapshot["quarantine"]),
+            "uniqueOfficialIds": len({q["officialId"] for q in questions}),
+            "categoryCounts": dict(sorted(Counter(q["category"] for q in questions).items())),
+            "answerCounts": dict(sorted(Counter(len(q["answers"]) for q in questions).items())),
+            "pointsCounts": dict(sorted(Counter(q["points"] for q in questions).items())),
+            "questionsWithMedia": sum(bool(q["media"]) for q in questions),
+            "images": sum(m["mimeType"].startswith("image/") for m in media),
+            "videos": sum(m["mimeType"].startswith("video/") for m in media),
+            "mediaBytes": sum(m["size"] for m in media), "missingMedia": snapshot["quarantine"],
+            "explicitMappings": 0, "observedMappings": sum(len(q["eligibilityEvidence"]) for q in questions),
+            "unknownMappings": len(questions) * len(GROUPS) - sum(len(q["eligibilityEvidence"]) for q in questions),
+            "observedUniqueByGroup": observed, "rawPages": len(snapshot["snapshot"]["rawPages"]),
+            "rawPagesSha256": sha(encode(snapshot["snapshot"]["rawPages"])),
+            "unresolved": validate(snapshot, root)}
