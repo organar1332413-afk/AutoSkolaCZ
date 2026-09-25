@@ -45,6 +45,17 @@ class PublicAdapterTests(unittest.TestCase):
         self.assertEqual({m["kind"] for m in q[0]["media"]}, {"video", "image"})
         self.assertEqual(q[0]["media"][1]["answerCode"], "A")
 
+    def test_image_only_answers_have_empty_official_text_and_single_media(self):
+        html = b'''<input id="pageSize" value="1"><input id="pageNumber" value="1"><span>z 1</span>
+        <div class="QuestionPanel"><span class="QuestionCode">[RP1601008]</span>
+        <div class="QuestionImagePanel"><div>Which sign?</div></div><div class="AnswersPanel"><div id="answer-container-1408">
+        <div><span class="answer-checkbox">A</span><div class="answer-image" data-isCorrect="False"><img src="/binary_content_storage/A_W_1.jpg"></div><dialog><img src="/binary_content_storage/A_W_1.jpg"></dialog></div>
+        <div><span class="answer-checkbox">B</span><div class="answer-image" data-isCorrect="True"><img src="/binary_content_storage/A_W_2.jpg"></div></div></div></div></div>'''
+        q, _ = parse_list(html, 54, "https://etesty.md.gov.cz/ro/Bulletin/List?id=54")
+        self.assertEqual([a["textCs"] for a in q[0]["answers"]], ["", ""])
+        self.assertEqual([a["correct"] for a in q[0]["answers"]], [False, True])
+        self.assertEqual(len(q[0]["media"]), 2)
+
     def test_cache_resume_hash_and_origin_restriction(self):
         with tempfile.TemporaryDirectory() as directory:
             fetcher = Fetcher(directory)
@@ -81,6 +92,26 @@ class PublicAdapterTests(unittest.TestCase):
             manifest = json.loads(first)["manifest"]
             self.assertTrue(all(not g["eligibilityComplete"] for g in manifest["groupReadiness"]))
             self.assertEqual(json.loads(first)["questions"][0]["textCs"], "Text ")
+
+    def test_missing_media_rejected_and_shared_media_accepted(self):
+        with tempfile.TemporaryDirectory() as directory:
+            file = Path(directory) / "media/shared.png"
+            file.parent.mkdir()
+            file.write_bytes(b"image bytes")
+            ref = {"path": "media/shared.png", "sha256": sha(b"image bytes"), "mimeType": "image/png"}
+            question = {"officialId": "RP1", "category": "signs", "textCs": "Značka", "points": 1,
+                        "answers": [{"code": "A", "textCs": "", "correct": True}, {"code": "B", "textCs": "Ne", "correct": False}],
+                        "media": [{**ref, "answerCode": "A"}], "sourceRefs": ["https://etesty.md.gov.cz/ro/Bulletin/List?id=54"],
+                        "eligibilityEvidence": []}
+            snap = {"snapshot": {"source": "https://etesty.md.gov.cz/ro/Bulletin", "publicationDate": "2026-04-02", "databaseVersion": "public-etesty-2026-04-02", "retrievedAt": "2026-09-25T00:00:00Z", "totalDiscovered": 2, "rawPages": []},
+                    "questions": [question, {**question, "officialId": "RP2"}], "observations": [],
+                    "mediaInventory": [{**ref, "size": len(b"image bytes"), "sourceUrl": "https://etesty.md.gov.cz/binary_content_storage/shared.png"}], "quarantine": []}
+            self.assertEqual(validate(snap, directory), [])
+            build(snap, directory)
+            file.unlink()
+            self.assertEqual(len(validate(snap, directory)), 2)
+            with self.assertRaises(ValueError):
+                build(snap, directory)
 
 
 if __name__ == "__main__":

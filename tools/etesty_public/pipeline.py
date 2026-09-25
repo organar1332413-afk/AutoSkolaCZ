@@ -8,6 +8,7 @@ import hashlib
 import json
 import mimetypes
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,11 +16,11 @@ from urllib.parse import quote, urlparse
 
 from .fetch import Fetcher
 from .parser import AREAS, GROUPS, ORIGIN, ParseError, parse_bulletin, parse_list, parse_sample_test
+from tools.official_import.build_package import BLUEPRINT, SECTIONS
 
 
-BLUEPRINT = "etesty-2026-09-v1"
 MIME = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
-        ".webp": "image/webp", ".mp4": "video/mp4", ".webm": "video/webm"}
+        ".webp": "image/webp", ".gif": "image/gif", ".mp4": "video/mp4", ".webm": "video/webm"}
 
 
 def sha(data):
@@ -38,11 +39,15 @@ def atomic_json(path, obj):
     temporary.replace(path)
 
 
-def collect(root, *, max_questions=None, no_media=False, sample_runs=1, refresh=False, delay=0.6):
+def collect(root, *, max_questions=None, question_id=None, category=None, no_media=False, sample_runs=1, refresh=False, delay=0.6):
     """Resume from cached responses. A bounded slice is a validation aid only."""
     root = Path(root)
     cache = Fetcher(root / "raw-cache", delay=delay, refresh=refresh)
-    now = datetime.now(timezone.utc).isoformat()
+    state_file = root / "state.json"
+    state = json.loads(state_file.read_text(encoding="utf-8")) if state_file.exists() and not refresh else {}
+    now = state.get("retrievedAt") or datetime.now(timezone.utc).isoformat()
+    if not state:
+        atomic_json(state_file, {"retrievedAt": now, "status": "DISCOVERED"})
     bulletin_url = ORIGIN + "/ro/Bulletin"
     bulletin_record, bulletin_body = cache.record(bulletin_url)
     bulletin = parse_bulletin(bulletin_body)
@@ -56,6 +61,7 @@ def collect(root, *, max_questions=None, no_media=False, sample_runs=1, refresh=
             raw_pages.append(record)
             items, pagination = parse_list(body, area, url)
             for item in items:
+                item["rawResponseSha256"] = record["sha256"]
                 code = item["officialId"]
                 if area == 99:
                     if code in all_ids:
@@ -78,8 +84,17 @@ def collect(root, *, max_questions=None, no_media=False, sample_runs=1, refresh=
     if conflicts:
         atomic_json(root / "quarantine.json", {"conflicts": conflicts})
         raise ValueError(f"Discovery conflicts ({len(conflicts)}); see quarantine.json")
+    atomic_json(state_file, {"retrievedAt": now, "status": "PARSED", "discovered": len(all_ids), "classified": len(questions)})
 
     selected = dict(sorted(questions.items()))
+    if question_id is not None:
+        if question_id not in selected:
+            raise ValueError(f"Unknown official ID in current Bulletin: {question_id}")
+        selected = {question_id: selected[question_id]}
+    if category is not None:
+        if category not in [entry[0] for entry in AREAS.values()]:
+            raise ValueError(f"Unknown thematic category: {category}")
+        selected = {code: q for code, q in selected.items() if q["category"] == category}
     if max_questions is not None:
         # Preserve varied areas for a representative proof slice.
         per_area = max(1, max_questions // len(AREAS))
@@ -88,12 +103,11 @@ def collect(root, *, max_questions=None, no_media=False, sample_runs=1, refresh=
         selected = dict(sorted(selected.items()))
     evidence = defaultdict(dict)
     observations = []
+    saturation = {group: [] for group in GROUPS}
     for group in GROUPS:
         for run in range(sample_runs):
-            url = ORIGIN + "/co/DLTest/SampleTest/" + group
-            # Refresh makes each generated run distinct; cached runs are reused on resume.
-            if run and not refresh:
-                continue
+            url = ORIGIN + "/co/DLTest/SampleTest/" + group + (f"?snapshotRun={run + 1}" if run else "")
+            before = {o["officialId"] for o in observations if o["licenceGroup"] == group}
             record, body = cache.record(url)
             raw_pages.append(record)
             observed = parse_sample_test(body, group)
@@ -102,57 +116,104 @@ def collect(root, *, max_questions=None, no_media=False, sample_runs=1, refresh=
                 observation = {"licenceGroup": group, "officialId": code, "evidenceType": "OFFICIAL_GENERATOR_OBSERVED",
                                "source": url, "rawSha256": record["sha256"], "retrievedAt": now}
                 observations.append(observation)
+                if code not in questions:
+                    conflicts.append(f"Generator question absent from current Bulletin: {group}/{code}")
+                else:
+                    bulletin_item = questions[code]
+                    official_correct = [i for i, answer in enumerate(item["questionAnswers"])
+                                        if answer["answerId"] == item["correctAnswerId"]]
+                    bulletin_correct = [i for i, answer in enumerate(bulletin_item["answers"]) if answer["correct"]]
+                    if (item["id"] != bulletin_item["internalSourceId"]
+                            or item["pointsCount"] != bulletin_item["points"]
+                            or official_correct != bulletin_correct):
+                        conflicts.append(f"Generator/Bulletin ID, points or correct-answer conflict: {group}/{code}")
                 if code in selected:
-                    evidence[code][group] = observation
+                    previous = evidence[code].get(group)
+                    evidence[code][group] = {**observation, "observedCount": 1 + (previous["observedCount"] if previous else 0)}
+            after = {o["officialId"] for o in observations if o["licenceGroup"] == group}
+            saturation[group].append({"run": run + 1, "unique": len(after), "new": len(after - before)})
             print(f"sample={group} run={run + 1} observed={len(observed)}", flush=True)
+    if conflicts:
+        atomic_json(root / "quarantine.json", {"conflicts": conflicts})
+        raise ValueError(f"Generator conflicts ({len(conflicts)}); see quarantine.json")
 
     media_inventory = {}
     media_missing = []
+    refs_by_url = {ref["sourceUrl"]: ref for q in selected.values() for ref in q["media"]}
+
+    def fetch_media(source_url):
+        filename = Path(urlparse(source_url).path).name
+        if not re.fullmatch(r"[A-Za-z0-9_-]+\.[A-Za-z0-9]+", filename):
+            raise ValueError(f"Unsafe media filename: {source_url}")
+        path = "media/" + filename
+        mime = MIME.get(Path(filename).suffix.lower())
+        if mime is None:
+            raise ValueError(f"Unknown MIME for {source_url}")
+        body = cache.get(source_url)
+        destination = root / path
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        if not destination.is_file() or sha(destination.read_bytes()) != sha(body):
+            temporary = destination.with_suffix(destination.suffix + ".tmp")
+            temporary.write_bytes(body)
+            temporary.replace(destination)
+        return {"path": path, "sha256": sha(body), "mimeType": mime, "size": len(body), "sourceUrl": source_url}
+
+    fetched = {}
+    if not no_media:
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            futures = {pool.submit(fetch_media, url): url for url in sorted(refs_by_url)}
+            for future in as_completed(futures):
+                url = futures[future]
+                try:
+                    fetched[url] = future.result()
+                except (IOError, ValueError) as exc:
+                    fetched[url] = {"error": str(exc)}
+                if len(fetched) % 25 == 0 or len(fetched) == len(futures):
+                    print(f"media={len(fetched)}/{len(futures)} cached={cache.cached} downloaded={cache.downloaded} failed={sum('error' in x for x in fetched.values())}", flush=True)
     for code, q in selected.items():
         normalized_media = []
         for ref in q["media"]:
             source_url = ref["sourceUrl"]
-            filename = Path(urlparse(source_url).path).name
-            if not re.fullmatch(r"[A-Za-z0-9_-]+\.[A-Za-z0-9]+", filename) or filename.lower().endswith(".svg"):
-                media_missing.append({"officialId": code, "sourceUrl": source_url, "error": "Unsafe or unsupported filename"})
-                continue
-            path = "media/" + filename
-            mime = MIME.get(Path(filename).suffix.lower())
-            if mime is None:
-                media_missing.append({"officialId": code, "sourceUrl": source_url, "error": "Unknown MIME"})
-                continue
             if not no_media:
-                try:
-                    body = cache.get(source_url)
-                    destination = root / path
-                    destination.parent.mkdir(parents=True, exist_ok=True)
-                    if not destination.is_file() or sha(destination.read_bytes()) != sha(body):
-                        destination.write_bytes(body)
-                    prior = media_inventory.get(path)
-                    meta = {"path": path, "sha256": sha(body), "mimeType": mime, "size": len(body), "sourceUrl": source_url}
-                    if prior and prior != meta:
-                        raise ValueError(f"Conflicting shared media: {path}")
-                    media_inventory[path] = meta
-                    normalized_media.append({"path": path, "sha256": sha(body), "mimeType": mime,
-                                             **({"answerCode": ref["answerCode"]} if ref["answerCode"] else {})})
-                except (IOError, ValueError) as exc:
-                    media_missing.append({"officialId": code, "sourceUrl": source_url, "error": str(exc)})
+                meta = fetched[source_url]
+                if "error" in meta:
+                    media_missing.append({"officialId": code, "sourceUrl": source_url, "error": meta["error"]})
+                    continue
+                path = meta["path"]
+                prior = media_inventory.get(path)
+                if prior and prior != meta:
+                    media_missing.append({"officialId": code, "sourceUrl": source_url, "error": f"Conflicting media path: {path}"})
+                    continue
+                media_inventory[path] = meta
+                normalized_media.append({"path": path, "sha256": meta["sha256"], "mimeType": meta["mimeType"],
+                                         **({"answerCode": ref["answerCode"]} if ref["answerCode"] else {})})
             else:
                 media_missing.append({"officialId": code, "sourceUrl": source_url, "error": "Media disabled for slice"})
         q["media"] = normalized_media
         q["eligibilityEvidence"] = [evidence[code][group] for group in GROUPS if group in evidence[code]]
     print(f"discovered={len(all_ids)} selected={len(selected)} media={len(media_inventory)} missing={len(media_missing)} cached={cache.cached} downloaded={cache.downloaded}", flush=True)
 
+    for path, meta in media_inventory.items():
+        meta["uses"] = sorted(({"officialId": code, "answerCode": ref.get("answerCode")}
+                               for code, item in selected.items() for ref in item["media"] if ref["path"] == path),
+                              key=lambda use: (use["officialId"], use["answerCode"] or ""))
+
     normalized = {"snapshot": {"source": bulletin_url, "publicationDate": bulletin["publicationDate"],
                                "databaseVersion": "public-etesty-" + bulletin["publicationDate"],
                                "retrievedAt": now, "adapterVersion": "etesty-public-0.1",
+                               "bulletinAreas": {str(k): {"officialNameCs": v, "category": AREAS[k][0] if k in AREAS else None}
+                                                 for k, v in sorted(bulletin["areas"].items())},
                                "totalDiscovered": len(all_ids), "totalDownloaded": len(selected),
                                "allOfficialIdsSha256": sha(encode(sorted(all_ids))),
                                "rawPages": raw_pages},
                   "questions": list(selected.values()), "observations": observations,
+                  "saturation": saturation,
                   "mediaInventory": [media_inventory[k] for k in sorted(media_inventory)],
                   "quarantine": media_missing}
     atomic_json(root / "normalized.json", normalized)
+    atomic_json(state_file, {"retrievedAt": now, "status": "MEDIA_COMPLETE" if not media_missing else "FAILED",
+                             "discovered": len(all_ids), "classified": len(questions), "mediaDownloaded": len(media_inventory),
+                             "failures": len(media_missing)})
     return normalized
 
 
@@ -168,6 +229,11 @@ def validate(snapshot, root):
         a = q["answers"]
         if len(a) not in (2, 3) or [v["code"] for v in a] != list("ABC")[:len(a)] or sum(v["correct"] for v in a) != 1:
             problems.append(f"Invalid answers: {q['officialId']}")
+        if any(not v["textCs"].strip() and not any(m.get("answerCode") == v["code"] and
+               m["mimeType"].startswith("image/") for m in q["media"]) for v in a):
+            problems.append(f"Answer without text or image: {q['officialId']}")
+        if q["category"] in SECTIONS and q["points"] != SECTIONS[q["category"]][1]:
+            problems.append(f"Points/section mismatch: {q['officialId']}")
         for m in q["media"]:
             file = Path(root) / m["path"]
             if not file.is_file() or sha(file.read_bytes()) != m["sha256"]:
@@ -194,7 +260,10 @@ def build(snapshot, root):
             a.pop("media", None)
     source = snapshot["snapshot"]
     readiness = [{"licenceGroup": group, "blueprintVersion": BLUEPRINT,
-                  "eligibilityComplete": False, "contentComplete": False,
+                  "eligibilityComplete": False, "contentComplete": all(
+                      sum(q["category"] == category and q["points"] == points
+                          and any(e["licenceGroup"] == group for e in q["eligibility"])
+                          for q in questions) >= count for category, (count, points) in SECTIONS.items()),
                   "mediaComplete": not bool(snapshot["quarantine"]) and all(
                       m["mimeType"] in ("image/png", "image/jpeg", "image/webp") for q in questions
                       for m in q["media"] if any(e["licenceGroup"] == group for e in q["eligibility"])),
@@ -233,5 +302,6 @@ def make_audit(snapshot, root):
             "explicitMappings": 0, "observedMappings": sum(len(q["eligibilityEvidence"]) for q in questions),
             "unknownMappings": len(questions) * len(GROUPS) - sum(len(q["eligibilityEvidence"]) for q in questions),
             "observedUniqueByGroup": observed, "rawPages": len(snapshot["snapshot"]["rawPages"]),
+            "saturation": snapshot.get("saturation", {}),
             "rawPagesSha256": sha(encode(snapshot["snapshot"]["rawPages"])),
             "unresolved": validate(snapshot, root)}

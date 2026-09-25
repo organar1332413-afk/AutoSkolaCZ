@@ -29,4 +29,14 @@ class PackageValidatorTest {
         val p = sample(); val q = p.questions.first()
         assertThrows(IllegalArgumentException::class.java) { PackageValidator.validate(p.copy(questions = listOf(q.copy(translations = listOf(q.translations.first().copy(locale = "cs")))))) }
     }
+    @Test fun imageOnlyOfficialAnswerRequiresItsImage() {
+        val p = sample(); val q = p.questions.first()
+        val imageAnswer = q.answers.first().copy(textCs = "")
+        val withImage = q.copy(answers = listOf(imageAnswer) + q.answers.drop(1),
+            media = listOf(MediaReference("media/A_W_1408_27623.jpg", "a".repeat(64), "image/jpeg", imageAnswer.code)))
+        PackageValidator.validate(p.copy(questions = listOf(withImage)))
+        assertThrows(IllegalArgumentException::class.java) {
+            PackageValidator.validate(p.copy(questions = listOf(withImage.copy(media = emptyList()))))
+        }
+    }
 }

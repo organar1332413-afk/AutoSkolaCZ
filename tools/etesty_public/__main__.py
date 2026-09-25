@@ -16,6 +16,8 @@ def main():
     crawl.add_argument("--resume", action="store_true", help="Reuse on-disk response cache (default)")
     crawl.add_argument("--refresh", action="store_true", help="Explicitly refetch cached pages")
     crawl.add_argument("--slice", type=int, default=None, help="Representative questions per area (proof run only)")
+    crawl.add_argument("--question-id", help="Acquire one official ID for diagnosis")
+    crawl.add_argument("--category", help="Acquire one thematic section for diagnosis")
     crawl.add_argument("--no-media", action="store_true")
     crawl.add_argument("--sample-runs", type=int, default=1)
     crawl.add_argument("--delay", type=float, default=0.6)
@@ -26,7 +28,8 @@ def main():
     diff.add_argument("new", type=Path)
     args = parser.parse_args()
     if args.command == "crawl":
-        result = collect(args.output, max_questions=args.slice, no_media=args.no_media,
+        result = collect(args.output, max_questions=args.slice, question_id=args.question_id,
+                         category=args.category, no_media=args.no_media,
                          sample_runs=args.sample_runs, refresh=args.refresh, delay=args.delay)
         print(f"normalized={len(result['questions'])} bulletin={result['snapshot']['publicationDate']}")
     elif args.command == "diff":

@@ -76,3 +76,7 @@ python -m unittest discover -s tools -p 'test_*.py' -v
 ```
 
 В июне 2026 Министерство сообщило, что публичного API разработчиков нет, а индивидуальный экспорт базы возможен по запросу за плату: [ответ MD ČR](https://md.gov.cz/Ministerstvo/Zadost-o-poskytnuti-informace-(1)/Poskytnute-informace/Testove-otazky-(1)). Конкретный формат, состав медиа и способ доказательства полного mapping нужно уточнить по полученному экспорту. Если он не содержит явного разделения по группам, запросить эту информацию отдельно; не выводить её из темы, текста или случайных тестов.
+
+## Stage 3B public-source adapter
+
+`tools/etesty_public/` acquires the public dated Bulletin through a cached offline CLI and emits the same app-owned package v2. Its normalized snapshot retains Bulletin area membership, raw page hashes, stable official codes, distinct internal web IDs, media hashes and provisional generator observations. It is not an official structured export. Consult [the acquisition contract](ETESTY_PUBLIC_BANK.md) and [the current bank audit](ETESTY_PUBLIC_BANK_AUDIT.md). Group eligibility remains incomplete unless a trusted full mapping is established independently; observed generator questions are positive evidence only.
