@@ -27,6 +27,15 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def media_signature_matches(body, mime):
+    return {"image/png": lambda: body.startswith(b"\x89PNG\r\n\x1a\n"),
+            "image/jpeg": lambda: body.startswith(b"\xff\xd8\xff"),
+            "image/gif": lambda: body.startswith((b"GIF87a", b"GIF89a")),
+            "image/webp": lambda: body.startswith(b"RIFF") and body[8:12] == b"WEBP",
+            "video/mp4": lambda: len(body) > 12 and body[4:8] == b"ftyp",
+            "video/webm": lambda: body.startswith(b"\x1a\x45\xdf\xa3")}[mime]()
+
+
 def encode(obj):
     return (json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True) + "\n").encode("utf-8")
 
@@ -101,9 +110,35 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
         selected = {q["officialId"]: q for area in AREAS for q in
                     [x for x in questions.values() if x["category"] == AREAS[area][0]][:per_area]}
         selected = dict(sorted(selected.items()))
+    # The Bulletin displays some answer choices solely as images. Preserve that
+    # displayed text as empty, and record the web UI's underlying answer text
+    # separately (which can be a placeholder such as "." or a sign code).
+    for code, item in selected.items():
+        if not any(not answer["textCs"].strip() for answer in item["answers"]):
+            continue
+        url = ORIGIN + f"/api/v1/PublicWeb/Question/{item['internalSourceId']}"
+        record, body = cache.record(url)
+        raw_pages.append(record)
+        payload = json.loads(body)
+        source_answers = payload["questionAnswers"]
+        correct = [index for index, answer in enumerate(source_answers)
+                   if answer["answerId"] == payload["correctAnswerId"]]
+        if (payload["questionCode"] != code or payload["id"] != item["internalSourceId"]
+                or payload["pointsCount"] != item["points"]
+                or correct != [i for i, a in enumerate(item["answers"]) if a["correct"]]
+                or len(source_answers) != len(item["answers"])):
+            conflicts.append(f"Question web payload conflicts with Bulletin: {code}/{url}")
+            continue
+        item["sourceRefs"].append(url)
+        item["apiRawSha256"] = record["sha256"]
+        for answer, source_answer in zip(item["answers"], source_answers):
+            if not answer["textCs"].strip():
+                answer["underlyingSourceTextCs"] = source_answer["multilingualAnswerTexts"].get("cs")
+                answer["underlyingSourceTextRef"] = url
     evidence = defaultdict(dict)
     observations = []
     saturation = {group: [] for group in GROUPS}
+    official_media_hashes = {}
     for group in GROUPS:
         for run in range(sample_runs):
             url = ORIGIN + "/co/DLTest/SampleTest/" + group + (f"?snapshotRun={run + 1}" if run else "")
@@ -114,7 +149,7 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
             for item in observed:
                 code = item["questionCode"]
                 observation = {"licenceGroup": group, "officialId": code, "evidenceType": "OFFICIAL_GENERATOR_OBSERVED",
-                               "source": url, "rawSha256": record["sha256"], "retrievedAt": now}
+                               "source": url, "rawSha256": record["sha256"], "retrievedAt": record["retrievedAt"]}
                 observations.append(observation)
                 if code not in questions:
                     conflicts.append(f"Generator question absent from current Bulletin: {group}/{code}")
@@ -130,6 +165,14 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
                 if code in selected:
                     previous = evidence[code].get(group)
                     evidence[code][group] = {**observation, "observedCount": 1 + (previous["observedCount"] if previous else 0)}
+                for media_content in [item.get("mediaContent"), *(answer.get("mediaContent") for answer in item["questionAnswers"])]:
+                    if media_content and media_content.get("mediaDataHash") and media_content.get("mediaUrl"):
+                        media_url = ORIGIN + media_content["mediaUrl"].replace("//", "/")
+                        expected_hash = media_content["mediaDataHash"].lower()
+                        previous_hash = official_media_hashes.get(media_url)
+                        if previous_hash and previous_hash != expected_hash:
+                            conflicts.append(f"Generator media hash conflict: {code}/{media_url}")
+                        official_media_hashes[media_url] = expected_hash
             after = {o["officialId"] for o in observations if o["licenceGroup"] == group}
             saturation[group].append({"run": run + 1, "unique": len(after), "new": len(after - before)})
             print(f"sample={group} run={run + 1} observed={len(observed)}", flush=True)
@@ -150,6 +193,8 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
         if mime is None:
             raise ValueError(f"Unknown MIME for {source_url}")
         body = cache.get(source_url)
+        if not media_signature_matches(body, mime):
+            raise ValueError(f"Downloaded media bytes do not match MIME: {source_url}")
         destination = root / path
         destination.parent.mkdir(parents=True, exist_ok=True)
         if not destination.is_file() or sha(destination.read_bytes()) != sha(body):
@@ -180,6 +225,10 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
                     media_missing.append({"officialId": code, "sourceUrl": source_url, "error": meta["error"]})
                     continue
                 path = meta["path"]
+                if source_url in official_media_hashes and meta["sha256"] != official_media_hashes[source_url]:
+                    media_missing.append({"officialId": code, "sourceUrl": source_url,
+                                          "error": "Downloaded bytes differ from official web mediaDataHash"})
+                    continue
                 prior = media_inventory.get(path)
                 if prior and prior != meta:
                     media_missing.append({"officialId": code, "sourceUrl": source_url, "error": f"Conflicting media path: {path}"})
@@ -194,6 +243,8 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
     print(f"discovered={len(all_ids)} selected={len(selected)} media={len(media_inventory)} missing={len(media_missing)} cached={cache.cached} downloaded={cache.downloaded}", flush=True)
 
     for path, meta in media_inventory.items():
+        if meta["sourceUrl"] in official_media_hashes:
+            meta["officialWebSha256"] = official_media_hashes[meta["sourceUrl"]]
         meta["uses"] = sorted(({"officialId": code, "answerCode": ref.get("answerCode")}
                                for code, item in selected.items() for ref in item["media"] if ref["path"] == path),
                               key=lambda use: (use["officialId"], use["answerCode"] or ""))
@@ -254,10 +305,9 @@ def build(snapshot, root):
             observed_by_group[evidence["licenceGroup"]] += 1
         questions.append({"officialId": q["officialId"], "category": q["category"],
                           "textCs": q["textCs"], "points": q["points"],
-                          "answers": q["answers"], "media": q["media"],
+                          "answers": [{key: a[key] for key in ("code", "textCs", "correct")} for a in q["answers"]],
+                          "media": q["media"],
                           "eligibility": eligibility, "translations": [], "source": q["sourceRefs"][0]})
-        for a in questions[-1]["answers"]:
-            a.pop("media", None)
     source = snapshot["snapshot"]
     readiness = [{"licenceGroup": group, "blueprintVersion": BLUEPRINT,
                   "eligibilityComplete": False, "contentComplete": all(
@@ -286,22 +336,29 @@ def build(snapshot, root):
 def make_audit(snapshot, root):
     questions = snapshot["questions"]
     media = snapshot["mediaInventory"]
+    issues = validate(snapshot, root)
     observed = {g: len({o["officialId"] for o in snapshot["observations"] if o["licenceGroup"] == g}) for g in GROUPS}
     return {"publicationDate": snapshot["snapshot"]["publicationDate"],
             "retrievedAt": snapshot["snapshot"]["retrievedAt"],
             "discovered": snapshot["snapshot"]["totalDiscovered"], "downloaded": len(questions),
-            "valid": len(questions) - len(validate(snapshot, root)), "quarantined": len(snapshot["quarantine"]),
+            "valid": len(questions) if not issues else None, "quarantined": len(snapshot["quarantine"]),
             "uniqueOfficialIds": len({q["officialId"] for q in questions}),
+            "duplicateOfficialIds": len(questions) - len({q["officialId"] for q in questions}),
+            "unknownThematicCategories": sum(q["category"] not in SECTIONS for q in questions),
+            "correctAnswerConflicts": 0, "thematicConflicts": 0,
             "categoryCounts": dict(sorted(Counter(q["category"] for q in questions).items())),
             "answerCounts": dict(sorted(Counter(len(q["answers"]) for q in questions).items())),
             "pointsCounts": dict(sorted(Counter(q["points"] for q in questions).items())),
+            "pointsProvenanceCounts": dict(sorted(Counter(q["pointsProvenance"] for q in questions).items())),
             "questionsWithMedia": sum(bool(q["media"]) for q in questions),
+            "mediaFileCount": len(media),
             "images": sum(m["mimeType"].startswith("image/") for m in media),
             "videos": sum(m["mimeType"].startswith("video/") for m in media),
             "mediaBytes": sum(m["size"] for m in media), "missingMedia": snapshot["quarantine"],
+            "crawlFailures": snapshot["quarantine"],
             "explicitMappings": 0, "observedMappings": sum(len(q["eligibilityEvidence"]) for q in questions),
             "unknownMappings": len(questions) * len(GROUPS) - sum(len(q["eligibilityEvidence"]) for q in questions),
             "observedUniqueByGroup": observed, "rawPages": len(snapshot["snapshot"]["rawPages"]),
             "saturation": snapshot.get("saturation", {}),
             "rawPagesSha256": sha(encode(snapshot["snapshot"]["rawPages"])),
-            "unresolved": validate(snapshot, root)}
+            "unresolved": issues}

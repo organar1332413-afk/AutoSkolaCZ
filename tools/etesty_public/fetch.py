@@ -5,6 +5,7 @@ import json
 import random
 import threading
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
@@ -56,4 +57,8 @@ class Fetcher:
 
     def record(self, url):
         body = self.get(url)
-        return {"sourceUrl": url, "sha256": hashlib.sha256(body).hexdigest(), "size": len(body)}, body
+        key = hashlib.sha256(url.encode()).hexdigest()
+        file = self.root / key[:2] / key
+        timestamp = datetime.fromtimestamp(file.stat().st_mtime, timezone.utc).isoformat()
+        return {"sourceUrl": url, "sha256": hashlib.sha256(body).hexdigest(), "size": len(body),
+                "retrievedAt": timestamp}, body

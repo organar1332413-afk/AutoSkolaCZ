@@ -7,7 +7,7 @@ from unittest.mock import patch
 from tools.etesty_public.diff_snapshots import compare
 from tools.etesty_public.fetch import Fetcher
 from tools.etesty_public.parser import AREAS, ParseError, parse_bulletin, parse_list, parse_sample_test
-from tools.etesty_public.pipeline import atomic_json, build, encode, sha, validate
+from tools.etesty_public.pipeline import atomic_json, build, encode, media_signature_matches, sha, validate
 
 
 FIXTURES = Path(__file__).parent / "etesty_public" / "fixtures"
@@ -69,6 +69,27 @@ class PublicAdapterTests(unittest.TestCase):
             self.assertEqual(fetcher.get(url), b"recorded")
             self.assertEqual(fetcher.cached, 1)
 
+    def test_retry_then_persist_exact_response_hash(self):
+        class Response:
+            status = 200
+            def __enter__(self): return self
+            def __exit__(self, *args): return False
+            def read(self): return b"exact source bytes"
+        with tempfile.TemporaryDirectory() as directory, \
+             patch("tools.etesty_public.fetch.urlopen", side_effect=[OSError("transient"), Response()]) as request, \
+             patch("tools.etesty_public.fetch.time.sleep"):
+            fetcher = Fetcher(directory, delay=0, retries=2)
+            record, body = fetcher.record("https://etesty.md.gov.cz/ro/Bulletin")
+            self.assertEqual(request.call_count, 2)
+            self.assertEqual(record["sha256"], sha(body))
+            self.assertEqual(fetcher.get(record["sourceUrl"]), b"exact source bytes")
+            self.assertEqual(fetcher.cached, 1)
+
+    def test_media_signature_rejects_html_error_body(self):
+        self.assertFalse(media_signature_matches(b"<html>Error</html>", "video/mp4"))
+        self.assertTrue(media_signature_matches(b"GIF89a\x01\x00", "image/gif"))
+        self.assertTrue(media_signature_matches(b"\x00\x00\x00\x18ftypisom", "video/mp4"))
+
     def test_diff_tracks_correctness_separately(self):
         q = {"officialId": "RP1", "textCs": "Hi", "answers": [{"code": "A", "textCs": "A", "correct": True}, {"code": "B", "textCs": "B", "correct": False}], "points": 2,
              "category": "rules", "media": [], "eligibilityEvidence": []}
@@ -100,7 +121,9 @@ class PublicAdapterTests(unittest.TestCase):
             file.write_bytes(b"image bytes")
             ref = {"path": "media/shared.png", "sha256": sha(b"image bytes"), "mimeType": "image/png"}
             question = {"officialId": "RP1", "category": "signs", "textCs": "Značka", "points": 1,
-                        "answers": [{"code": "A", "textCs": "", "correct": True}, {"code": "B", "textCs": "Ne", "correct": False}],
+                        "answers": [{"code": "A", "textCs": "", "correct": True, "underlyingSourceTextCs": ".",
+                                     "underlyingSourceTextRef": "https://etesty.md.gov.cz/api/v1/PublicWeb/Question/1"},
+                                    {"code": "B", "textCs": "Ne", "correct": False}],
                         "media": [{**ref, "answerCode": "A"}], "sourceRefs": ["https://etesty.md.gov.cz/ro/Bulletin/List?id=54"],
                         "eligibilityEvidence": []}
             snap = {"snapshot": {"source": "https://etesty.md.gov.cz/ro/Bulletin", "publicationDate": "2026-04-02", "databaseVersion": "public-etesty-2026-04-02", "retrievedAt": "2026-09-25T00:00:00Z", "totalDiscovered": 2, "rawPages": []},
@@ -108,6 +131,8 @@ class PublicAdapterTests(unittest.TestCase):
                     "mediaInventory": [{**ref, "size": len(b"image bytes"), "sourceUrl": "https://etesty.md.gov.cz/binary_content_storage/shared.png"}], "quarantine": []}
             self.assertEqual(validate(snap, directory), [])
             build(snap, directory)
+            built = json.loads((Path(directory) / "package-v2.json").read_text())
+            self.assertEqual(built["questions"][0]["answers"][0], {"code": "A", "textCs": "", "correct": True})
             file.unlink()
             self.assertEqual(len(validate(snap, directory)), 2)
             with self.assertRaises(ValueError):
