@@ -18,5 +18,9 @@ data class ExamAttemptEntity(
     val deadlineAt: Long,
     val completedAt: Long?,
     val score: Int?,
-    val mode: String
+    val mode: String,
+    @ColumnInfo(defaultValue = "'B'") val licenceGroup: String = "B",
+    @ColumnInfo(defaultValue = "25") val questionCount: Int = 25,
+    @ColumnInfo(defaultValue = "50") val maxPoints: Int = 50,
+    @ColumnInfo(defaultValue = "43") val passPoints: Int = 43
 )

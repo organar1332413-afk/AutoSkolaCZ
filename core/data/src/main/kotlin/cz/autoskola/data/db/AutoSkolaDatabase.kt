@@ -10,6 +10,7 @@ import cz.autoskola.data.db.entity.*
     QuestionEntity::class,
     QuestionRevisionEntity::class,
     QuestionLicenceGroupEntity::class,
+    ContentGroupReadinessEntity::class,
     AnswerEntity::class,
     QuestionTranslationEntity::class,
     AnswerTranslationEntity::class,
@@ -32,7 +33,7 @@ import cz.autoskola.data.db.entity.*
     LearningProgressEntity::class,
     QuestionReviewEntity::class,
     WordReviewEntity::class
-], version = 1, exportSchema = true)
+], version = 2, exportSchema = true)
 abstract class AutoSkolaDatabase : RoomDatabase() {
     abstract fun content(): ContentDao
     abstract fun words(): WordsDao

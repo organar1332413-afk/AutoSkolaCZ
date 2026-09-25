@@ -24,6 +24,11 @@ interface ContentDao {
     suspend fun mediaForRevision(revisionId: String): List<QuestionMediaEntity>
     @Query("SELECT * FROM QuestionLicenceGroup WHERE revisionId IN (SELECT id FROM QuestionRevision WHERE versionId = (SELECT versionId FROM ActiveContent WHERE slot = 1))")
     fun licenceGroups(): Flow<List<QuestionLicenceGroupEntity>>
+    @Query("SELECT * FROM ContentGroupReadiness WHERE versionId = (SELECT versionId FROM ActiveContent WHERE slot = 1)")
+    fun activeReadiness(): Flow<List<ContentGroupReadinessEntity>>
+    @Query("SELECT * FROM ContentGroupReadiness WHERE versionId = :versionId AND licenceGroup = :group")
+    suspend fun readiness(versionId: String, group: String): ContentGroupReadinessEntity?
+    @Insert suspend fun insertReadiness(items: List<ContentGroupReadinessEntity>)
     @Insert suspend fun insertVersion(item: DatabaseVersionEntity)
     @Insert(onConflict = OnConflictStrategy.IGNORE) suspend fun insertCategories(items: List<QuestionCategoryEntity>)
     @Insert(onConflict = OnConflictStrategy.IGNORE) suspend fun insertQuestions(items: List<QuestionEntity>)
