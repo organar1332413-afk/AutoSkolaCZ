@@ -41,6 +41,22 @@ class OfficialIntakeTest(unittest.TestCase):
         for name, value in (("source", self.meta), ("questions", self.questions),
                             ("eligibility", self.mappings), ("coverage", self.coverage)):
             (self.root / f"{name}.json").write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
+        inventory = {}
+        for question in self.questions:
+            for media in question["media"]:
+                path = media["path"]
+                file = self.root / path
+                if file.is_file():
+                    inventory[path] = {"path": path, "sha256": digest(file.read_bytes()),
+                                       "mimeType": media["mimeType"]}
+        reviewed = {"sourceSha256": digest((self.root / "source.json").read_bytes()),
+                    "exportSha256": self.meta["exportSha256"],
+                    "questionsSha256": digest((self.root / "questions.json").read_bytes()),
+                    "eligibilitySha256": digest((self.root / "eligibility.json").read_bytes()),
+                    "coverageSha256": digest((self.root / "coverage.json").read_bytes()),
+                    "media": [inventory[path] for path in sorted(inventory)],
+                    "reviewedAt": "2026-09-25T00:00:00Z", "reviewedBy": "fixture reviewer"}
+        (self.root / "review.json").write_text(json.dumps(reviewed, ensure_ascii=False), encoding="utf-8")
 
     def attest(self, code="B", complete=True):
         self.save()
@@ -129,6 +145,44 @@ class OfficialIntakeTest(unittest.TestCase):
         pack, audit = compile_package(self.root)
         self.assertEqual(["media/sign.png"], audit["mediaPaths"])
         self.assertEqual(pack["questions"][0]["media"], pack["questions"][1]["media"])
+
+    def test_review_rejects_any_modified_input_or_media(self):
+        (self.root / "media").mkdir()
+        (self.root / "media" / "sign.png").write_bytes(b"reviewed image")
+        self.question(media=[{"path": "media/sign.png", "mimeType": "image/png"}])
+        self.mapping("1", "B")
+        self.attest(complete=False)
+        originals = {path: (self.root / path).read_bytes() for path in
+                     ("source.json", "export.bin", "questions.json", "eligibility.json",
+                      "coverage.json", "media/sign.png")}
+        for path, original in originals.items():
+            (self.root / path).write_bytes(original + b" ")
+            with self.subTest(path=path), self.assertRaises((IntakeError, ValueError)):
+                compile_package(self.root)
+            (self.root / path).write_bytes(original)
+        self.assertEqual(1, compile_package(self.root)[1]["questionCount"])
+
+    def test_review_rejects_unreviewed_referenced_media_and_inventory_conflict(self):
+        (self.root / "media").mkdir()
+        (self.root / "media" / "first.png").write_bytes(b"one")
+        (self.root / "media" / "extra.png").write_bytes(b"two")
+        self.question(media=[{"path": "media/first.png", "mimeType": "image/png"}])
+        self.save()
+        review = json.loads((self.root / "review.json").read_text())
+        self.questions[0]["media"].append({"path": "media/extra.png", "mimeType": "image/png"})
+        self.save()
+        revised = json.loads((self.root / "review.json").read_text())
+        review["questionsSha256"] = revised["questionsSha256"]
+        (self.root / "review.json").write_text(json.dumps(review))
+        with self.assertRaises(IntakeError):
+            compile_package(self.root)
+        self.questions[0]["media"].pop()
+        self.save()
+        review = json.loads((self.root / "review.json").read_text())
+        review["media"].append({"path": "media/extra.png", "sha256": digest(b"two"), "mimeType": "image/png"})
+        (self.root / "review.json").write_text(json.dumps(review))
+        with self.assertRaises(IntakeError):
+            compile_package(self.root)
 
     def test_unsupported_group_and_duplicate_mapping_rejected(self):
         self.question()

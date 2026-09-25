@@ -56,6 +56,31 @@ def group(value):
     return value
 
 
+def verify_review(source_dir):
+    review = read_json(source_dir / "review.json")
+    require(set(review) == {"sourceSha256", "exportSha256", "questionsSha256",
+                            "eligibilitySha256", "coverageSha256", "media", "reviewedAt", "reviewedBy"},
+            "Unexpected review manifest fields")
+    require(isinstance(review["reviewedAt"], str) and review["reviewedAt"].strip()
+            and isinstance(review["reviewedBy"], str) and review["reviewedBy"].strip(),
+            "Review attribution is required")
+    for name, key in (("source.json", "sourceSha256"), ("questions.json", "questionsSha256"),
+                      ("eligibility.json", "eligibilitySha256"), ("coverage.json", "coverageSha256")):
+        require(re.fullmatch(r"[a-f0-9]{64}", review[key]) is not None
+                and sha256((source_dir / name).read_bytes()) == review[key],
+                f"Reviewed input changed: {name}")
+    require(isinstance(review["media"], list), "Invalid reviewed media inventory")
+    paths = []
+    for item in review["media"]:
+        require(set(item) == {"path", "sha256", "mimeType"}
+                and isinstance(item["path"], str) and MEDIA_PATH.fullmatch(item["path"])
+                and isinstance(item["sha256"], str) and re.fullmatch(r"[a-f0-9]{64}", item["sha256"])
+                and isinstance(item["mimeType"], str), "Invalid reviewed media")
+        paths.append(item["path"])
+    require(paths == sorted(set(paths)), "Reviewed media inventory must have unique sorted paths")
+    return review
+
+
 def safe_media(source_dir, item, answer_codes):
     require(set(item) == {"path", "mimeType"} or set(item) == {"path", "mimeType", "answerCode"},
             "Unexpected media fields")
@@ -74,6 +99,7 @@ def safe_media(source_dir, item, answer_codes):
 
 def compile_package(source_dir):
     source_dir = Path(source_dir)
+    review = verify_review(source_dir)
     meta = read_json(source_dir / "source.json")
     questions = read_json(source_dir / "questions.json")
     mapping_path = source_dir / "eligibility.json"
@@ -98,7 +124,8 @@ def compile_package(source_dir):
     export_file = source_dir / export_name
     require(export_file.is_file() and not export_file.is_symlink()
             and re.fullmatch(r"[a-f0-9]{64}", meta["exportSha256"])
-            and sha256(export_file.read_bytes()) == meta["exportSha256"], "Export hash mismatch")
+            and sha256(export_file.read_bytes()) == meta["exportSha256"] == review["exportSha256"],
+            "Reviewed export hash mismatch")
     require(isinstance(questions, list) and questions, "Questions must be a nonempty array")
     require(isinstance(mappings, list) and isinstance(coverage, list), "Invalid evidence arrays")
 
@@ -178,12 +205,17 @@ def compile_package(source_dir):
 
     for q in indexed.values():
         q["eligibility"].sort(key=lambda e: GROUPS.index(e["licenceGroup"]))
+    actual_media = [{"path": path, "sha256": media_paths[path][0], "mimeType": media_paths[path][1]}
+                    for path in sorted(media_paths)]
+    require(review["media"] == actual_media, "Referenced media differs from reviewed inventory")
     package = {"manifest": {"formatVersion": 2, "databaseVersion": meta["databaseVersion"],
                             "publicationDate": meta["publicationDate"], "source": meta["source"],
                             "retrievedAt": meta["retrievedAt"], "sample": False,
                             "groupReadiness": result},
                "questions": [indexed[k] for k in sorted(indexed)]}
     report = {"exportSha256": meta["exportSha256"], "mappingSha256": sha256(mapping_bytes),
+              "reviewSha256": sha256((source_dir / "review.json").read_bytes()),
+              "reviewedAt": review["reviewedAt"], "reviewedBy": review["reviewedBy"],
               "questionsSha256": sha256((source_dir / "questions.json").read_bytes()),
               "coverageSha256": sha256((source_dir / "coverage.json").read_bytes()),
               "questionCount": len(indexed), "eligibilityCount": len(mapping_pairs),
