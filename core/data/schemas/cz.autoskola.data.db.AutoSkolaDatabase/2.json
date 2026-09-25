@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "PENDING_ROOM_EXPORT",
+    "identityHash": "c64fc2b3ccd50fe7920ebde8ec795737",
     "entities": [
       {
         "tableName": "DatabaseVersion",
@@ -68,85 +68,6 @@
             "id"
           ]
         }
-      },
-      {
-        "tableName": "ContentGroupReadiness",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`versionId` TEXT NOT NULL, `licenceGroup` TEXT NOT NULL, `blueprintVersion` TEXT NOT NULL, `eligibilityComplete` INTEGER NOT NULL, `contentComplete` INTEGER NOT NULL, `mediaComplete` INTEGER NOT NULL, `source` TEXT NOT NULL, PRIMARY KEY(`versionId`, `licenceGroup`), FOREIGN KEY(`versionId`) REFERENCES `DatabaseVersion`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
-        "fields": [
-          {
-            "fieldPath": "versionId",
-            "columnName": "versionId",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "licenceGroup",
-            "columnName": "licenceGroup",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "blueprintVersion",
-            "columnName": "blueprintVersion",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "eligibilityComplete",
-            "columnName": "eligibilityComplete",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "contentComplete",
-            "columnName": "contentComplete",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "mediaComplete",
-            "columnName": "mediaComplete",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "source",
-            "columnName": "source",
-            "affinity": "TEXT",
-            "notNull": true
-          }
-        ],
-        "primaryKey": {
-          "autoGenerate": false,
-          "columnNames": [
-            "versionId",
-            "licenceGroup"
-          ]
-        },
-        "indices": [
-          {
-            "name": "index_ContentGroupReadiness_versionId",
-            "unique": false,
-            "columnNames": [
-              "versionId"
-            ],
-            "orders": [],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_ContentGroupReadiness_versionId` ON `${TABLE_NAME}` (`versionId`)"
-          }
-        ],
-        "foreignKeys": [
-          {
-            "table": "DatabaseVersion",
-            "onDelete": "NO ACTION",
-            "onUpdate": "NO ACTION",
-            "columns": [
-              "versionId"
-            ],
-            "referencedColumns": [
-              "id"
-            ]
-          }
-        ]
       },
       {
         "tableName": "ActiveContent",
@@ -486,6 +407,85 @@
             "onUpdate": "NO ACTION",
             "columns": [
               "revisionId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "ContentGroupReadiness",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`versionId` TEXT NOT NULL, `licenceGroup` TEXT NOT NULL, `blueprintVersion` TEXT NOT NULL, `eligibilityComplete` INTEGER NOT NULL, `contentComplete` INTEGER NOT NULL, `mediaComplete` INTEGER NOT NULL, `source` TEXT NOT NULL, PRIMARY KEY(`versionId`, `licenceGroup`), FOREIGN KEY(`versionId`) REFERENCES `DatabaseVersion`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "versionId",
+            "columnName": "versionId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "licenceGroup",
+            "columnName": "licenceGroup",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blueprintVersion",
+            "columnName": "blueprintVersion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eligibilityComplete",
+            "columnName": "eligibilityComplete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentComplete",
+            "columnName": "contentComplete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mediaComplete",
+            "columnName": "mediaComplete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "versionId",
+            "licenceGroup"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_ContentGroupReadiness_versionId",
+            "unique": false,
+            "columnNames": [
+              "versionId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_ContentGroupReadiness_versionId` ON `${TABLE_NAME}` (`versionId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "DatabaseVersion",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "versionId"
             ],
             "referencedColumns": [
               "id"
@@ -2029,7 +2029,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'PENDING_ROOM_EXPORT')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c64fc2b3ccd50fe7920ebde8ec795737')"
     ]
   }
 }
