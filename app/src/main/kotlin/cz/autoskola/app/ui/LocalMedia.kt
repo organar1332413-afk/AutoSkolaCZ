@@ -2,6 +2,7 @@ package cz.autoskola.app.ui
 
 import android.net.Uri
 import android.view.ViewGroup
+import androidx.annotation.OptIn
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -78,7 +79,7 @@ fun LocalMedia(media: MediaReference) {
     }
 }
 
-@UnstableApi
+@OptIn(UnstableApi::class)
 @Composable
 private fun LocalVideo(file: File) {
     val context = LocalContext.current
