@@ -1,0 +1,879 @@
+
+
+
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+<head>
+    <!-- 45 -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link href="/_content/Cendis.eTesty.Common.Design.Custom/images/favicons/favicon-32.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="/_content/Cendis.eTesty.Common.Design.SystemGov/gov/styles/tokens.css" />
+    <link rel="stylesheet" href="/_content/Cendis.eTesty.Common.Design.SystemGov/gov/styles/components/gov-tag.css" />
+    <title>Zku&#x161;ebn&#xED; test - eTesty</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="/css/bundle.css?v=VHjbwsEtcAGpWrPXj1S-03irM2vNUI5y-BmrYgVp0HU" rel="stylesheet" />
+    <link href="/lib/jquery-ui-custom/jquery-ui.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-ui-custom/jquery-ui.min.js"></script>
+    <script src="/lib/jquery-ui-custom/datepicker-cs.js"></script>
+    <script src="/js/bundle.js?v=Zxhm55KaTbBqxDObJ6NT3lySTrJUxKKHXuu7ML341a8"></script>
+    <script src="/js/infobar.js?v=27LxhJFEr2mZSO6KUsYpplev3gkw0kd7OSoNM-b3xB4"></script>
+    <script type="text/javascript">
+        var baseAppURL = '/';
+    </script>
+
+    
+    
+    <script>
+
+        var sampleTest;
+
+
+        $(document).ready(function () {
+            //testData = JSON.parse('{"candidateTestCode":null,"modelTestName":null,"testTime":30,"testType":"B","basketScopes":[{"basketScopeId":9,"basketScopeName":"Znalost pravidel provozu na pozemních komunikacích","study":null,"questions":[{"id":1297,"questionCode":"RP0606254","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Chodec smí vstoupit na přechod pro chodce:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":30352,"multilingualAnswerTexts":{"cs":"Jen pokud se neblíží vozidlo, před které by bezprostředně vstoupil."},"mediaContent":null,"sortOrder":1},{"answerId":30353,"multilingualAnswerTexts":{"cs":"Jen pokud dá znamení rukou, že bude přecházet; pak může řidiče donutit i k náhlé změně rychlosti a směru jízdy."},"mediaContent":null,"sortOrder":2},{"answerId":30354,"multilingualAnswerTexts":{"cs":"Vždy, protože má absolutní přednost před vozidly."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":30352,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_1297.mp4","mediaDataHash":"24251b2f2667deff07bd9ee324f5362aef30fd12e6404e8b2cdc9d3d1dfc4e04","mediaFormatCode":"video_mp4","isFullScreen":false,"printMediaName":"Q_P_1297.jpg"}},{"id":2218,"questionCode":"RP0605442","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Na silnici pro motorová vozidla:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23745,"multilingualAnswerTexts":{"cs":"Je zakázáno zastavit a stát mimo místa označená jako parkoviště."},"mediaContent":null,"sortOrder":1},{"answerId":23746,"multilingualAnswerTexts":{"cs":"Je zakázáno zastavit a stát, s výjimkou míst na krajnici, kde je parkování povoleno."},"mediaContent":null,"sortOrder":2},{"answerId":23747,"multilingualAnswerTexts":{"cs":"Je zakázáno stát mimo místa označená jako parkoviště; na krajnici je zde možné zastavit i mimo vyznačené parkoviště."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23745,"mediaContent":null},{"id":2534,"questionCode":"RP0605530","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Chodci v obytné zóně:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":24877,"multilingualAnswerTexts":{"cs":"Musí umožnit jízdu všem vozidlům."},"mediaContent":null,"sortOrder":1},{"answerId":24878,"multilingualAnswerTexts":{"cs":"Musí umožnit jízdu pouze vozidlům s právem přednostní jízdy."},"mediaContent":null,"sortOrder":2},{"answerId":24879,"multilingualAnswerTexts":{"cs":"Nemusí při užívání obytné zóny brát ohled na pohyb vozidel."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":24877,"mediaContent":null},{"id":2653,"questionCode":"RP0606082","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Během jízdy může kouřit:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":26308,"multilingualAnswerTexts":{"cs":"Řidič osobního motorového vozidla."},"mediaContent":null,"sortOrder":1},{"answerId":26309,"multilingualAnswerTexts":{"cs":"Řidič motocyklu a mopedu."},"mediaContent":null,"sortOrder":2},{"answerId":26310,"multilingualAnswerTexts":{"cs":"Řidič vozidla hromadné dopravy osob."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":26308,"mediaContent":null},{"id":2835,"questionCode":"RP0606120","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Při přejíždění železničního přejezdu nesmí řidič:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":27894,"multilingualAnswerTexts":{"cs":"Náhle snížit rychlost jízdy."},"mediaContent":null,"sortOrder":1},{"answerId":27895,"multilingualAnswerTexts":{"cs":"Zbytečně prodlužovat dobu jeho přejíždění."},"mediaContent":null,"sortOrder":2},{"answerId":27896,"multilingualAnswerTexts":{"cs":"Dávat zvuková výstražná znamení."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":27895,"mediaContent":null},{"id":2901,"questionCode":"RP0606166","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Před železničním přejezdem:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":28380,"multilingualAnswerTexts":{"cs":"Řidič nesmí řadit rychlostní stupně."},"mediaContent":null,"sortOrder":1},{"answerId":28381,"multilingualAnswerTexts":{"cs":"Musí řidič vždy zastavit, aby se přesvědčil, zda může železniční přejezd bezpečně přejet."},"mediaContent":null,"sortOrder":2},{"answerId":28382,"multilingualAnswerTexts":{"cs":"Si musí řidič počínat zvlášť opatrně, zejména se přesvědčit, zda může železniční přejezd bezpečně přejet."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":28382,"mediaContent":null},{"id":4342,"questionCode":"RP1008043","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"\u0022Krajnice\u0022:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3424652,"multilingualAnswerTexts":{"cs":"je část vozovky, na kterou je ve všech případech zakázáno vjíždět."},"mediaContent":null,"sortOrder":1},{"answerId":3424653,"multilingualAnswerTexts":{"cs":"je část povrchu pozemní komunikace ležící mezi okrajem přilehlého jízdního pruhu a hranou koruny pozemní komunikace, skládá se zpravidla ze zpevněné a nezpevněné části."},"mediaContent":null,"sortOrder":2},{"answerId":3424654,"multilingualAnswerTexts":{"cs":"je část povrchu pozemní komunikace, která je vždy označena dopravní značkou \u0022Nebezpečná krajnice\u0022."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3424653,"mediaContent":null},{"id":4506,"questionCode":"RP1104002","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"V obci smí řidič vozidla o celkové hmotnosti nepřevyšující 3.500 kg zastavit a stát kolmo, popřípadě šikmo k okraji pozemní komunikace jen:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3425789,"multilingualAnswerTexts":{"cs":"Nedojde-li k ohrožení bezpečnosti a plynulosti silničního provozu."},"mediaContent":null,"sortOrder":1},{"answerId":3425790,"multilingualAnswerTexts":{"cs":"Zůstane-li při stání volný alespoň jeden pruh široký nejméně 2 m."},"mediaContent":null,"sortOrder":2},{"answerId":3425791,"multilingualAnswerTexts":{"cs":"Zůstane-li při zastavení volný alespoň jeden jízdní pruh široký 2,5 m."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3425789,"mediaContent":null},{"id":5535,"questionCode":"RP2303011","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Smí řidič při zastavení vozidla před železničním přejezdem za snížené viditelnosti užít potkávací světla?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429785,"multilingualAnswerTexts":{"cs":"Ne, pokud by jimi mohl oslnit řidiče v protisměru."},"mediaContent":null,"sortOrder":1},{"answerId":3429786,"multilingualAnswerTexts":{"cs":"Ano, za všech okolností."},"mediaContent":null,"sortOrder":2},{"answerId":3429787,"multilingualAnswerTexts":{"cs":"Ne, je povinen vždy užít dálková světla."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429785,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_5535.png","mediaDataHash":"d1291976e22a3dcd4c1d3402e8e802ae55d67acd9930063d74f78912fabe2a98","mediaFormatCode":"image_png","isFullScreen":false,"printMediaName":"Q_P_5535.png"}},{"id":105483,"questionCode":"RP2509002","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"XNA","questionTextDisplayTypeCode":"XNA","questionText":"Dojde-li při dopravní nehodě ke hmotné škodě na některém ze zúčastněných vozidel včetně přepravovaných věcí nižší než 200 000 Kč, jsou účastníci dopravní nehody povinni ohlásit tuto nehodu policistovi:","explanationNote":"XNA","maxNoOfDisplays":0,"maxPostDisplayTime":0,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":8446755,"multilingualAnswerTexts":{"cs":"Jestliže nemohou sami bez vynaložení nepřiměřeného úsilí zabezpečit obnovení plynulosti provozu na pozemních komunikacích. "},"mediaContent":null,"sortOrder":1},{"answerId":8446756,"multilingualAnswerTexts":{"cs":"Jestliže nehoda vznikla v důsledku nedání přednosti v jízdě."},"mediaContent":null,"sortOrder":2},{"answerId":8446757,"multilingualAnswerTexts":{"cs":"Jestliže je nutno některé ze zúčastněných vozidel odstranit pomocí odtahové služby."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":8446755,"mediaContent":null}]},{"basketScopeId":10,"basketScopeName":"Znalost zásad bezpečné jízdy a ovládání vozidla","study":null,"questions":[{"id":2265,"questionCode":"RP0605444","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Přetáčivý smyk u vozidla s pohonem zadních kol a manuální převodovkou budete řešit:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23703,"multilingualAnswerTexts":{"cs":"Sešlápnutím spojkového pedálu a natočením volantu směrem, kterým se pohybuje zadní část vozidla."},"mediaContent":null,"sortOrder":1},{"answerId":23704,"multilingualAnswerTexts":{"cs":"Sešlápnutím brzdového pedálu a natočením volantu směrem, kterým se pohybuje zadní část vozidla."},"mediaContent":null,"sortOrder":2},{"answerId":23705,"multilingualAnswerTexts":{"cs":"Sešlápnutím pedálu akcelerátoru a natočením volantu směrem, kterým se pohybuje zadní část vozidla."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23703,"mediaContent":null},{"id":2376,"questionCode":"RP0605402","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Může být schopnost k řízení vozidla ovlivněna i po požití malého množství alkoholu, např. půl litru desetistupňového piva?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23257,"multilingualAnswerTexts":{"cs":"Ano, i malé množství požitého alkoholu snižuje schopnost k řízení motorového vozidla."},"mediaContent":null,"sortOrder":1},{"answerId":23258,"multilingualAnswerTexts":{"cs":"Ne, pokud se alkohol pije zároveň s černou kávou."},"mediaContent":null,"sortOrder":2},{"answerId":23259,"multilingualAnswerTexts":{"cs":"Ne, malé množství požitého alkoholu neovlivňuje schopnost k řízení motorového vozidla. "},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23257,"mediaContent":null},{"id":3048,"questionCode":"RP0606237","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Častou příčinou vzniku dopravních nehod při jízdě na dálnici je:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":29676,"multilingualAnswerTexts":{"cs":"Jízda s nedostatečnou vzdáleností mezi vozidly jedoucími za sebou."},"mediaContent":null,"sortOrder":1},{"answerId":29677,"multilingualAnswerTexts":{"cs":"Pomalá jízda nákladních vozidel."},"mediaContent":null,"sortOrder":2},{"answerId":29678,"multilingualAnswerTexts":{"cs":"Jízda v pravém jízdním pruhu."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":29676,"mediaContent":null},{"id":5518,"questionCode":"RP2210037","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Systém ESC (ESP):","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429735,"multilingualAnswerTexts":{"cs":"Udržuje vozidlo v jízdních pruzích."},"mediaContent":null,"sortOrder":1},{"answerId":3429736,"multilingualAnswerTexts":{"cs":"Zajišťuje vyšší brzdný účinek automobilu."},"mediaContent":null,"sortOrder":2},{"answerId":3429737,"multilingualAnswerTexts":{"cs":"Systém který pomáhá stabilizovat vozidlo při začínajícím smyku."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429737,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_5518.png","mediaDataHash":"de3c24c121694a34db2e09bb85d8f564ecc8083defb1f327be616c1c6eacb7e4","mediaFormatCode":"image_png","isFullScreen":false,"printMediaName":"Q_P_5518.png"}}]},{"basketScopeId":11,"basketScopeName":"Znalost dopravních značek, světelných a akustických signálů","study":null,"questions":[{"id":1868,"questionCode":"RP1401120","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Tato dopravní značka:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":11,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":26136,"multilingualAnswerTexts":{"cs":"Se umisťuje ve vzdálenosti 160 m před železničním přejezdem, na nějž upozorňuje."},"mediaContent":null,"sortOrder":1},{"answerId":26137,"multilingualAnswerTexts":{"cs":"Se umisťuje ve vzdálenosti 140 m před železničním přejezdem, na nějž upozorňuje."},"mediaContent":null,"sortOrder":2},{"answerId":26138,"multilingualAnswerTexts":{"cs":"Se umisťuje ve vzdálenosti 240 m před železničním přejezdem, na nějž upozorňuje."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":26136,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_1868.jpg","mediaDataHash":"68a630c7cc235c94da172551fccede816a091a7cf23998de602fb654de691e47","mediaFormatCode":"image_jpg","isFullScreen":false,"printMediaName":"Q_W_1868.jpg"}},{"id":1991,"questionCode":"RP1601017","questionTemplateId":3,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Vyberte dopravní značku \u0022Nejnižší dovolená rychlost\u0022, která řidiči přikazuje, pokud to ostatní okolnosti provozu na pozemních komunikacích dovolují, jet nejméně rychlostí vyjádřenou na značce číslem v kilometrech za hodinu.  ","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":11,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":26399,"multilingualAnswerTexts":{"cs":". "},"mediaContent":{"mediaUrl":"/binary_content_storage/A_W_1991_26399.gif","mediaDataHash":"c8f4b58cd520a73d7aee4753c1ba253cab595b7bea1f6252826279dbf76ba5a2","mediaFormatCode":"image_gif","isFullScreen":false,"printMediaName":"A_W_1991_26399.gif"},"sortOrder":1},{"answerId":26400,"multilingualAnswerTexts":{"cs":"."},"mediaContent":{"mediaUrl":"/binary_content_storage/A_W_1991_26400.gif","mediaDataHash":"df3d0833f19d703af54d49d27e9fbb79259ef53ccec47c82b1ac6e5e71157af6","mediaFormatCode":"image_gif","isFullScreen":false,"printMediaName":"A_W_1991_26400.gif"},"sortOrder":2},{"answerId":26401,"multilingualAnswerTexts":{"cs":"."},"mediaContent":{"mediaUrl":"/binary_content_storage/A_W_1991_26401.gif","mediaDataHash":"d9da6b6c7d9fbac1b719886f0edaec89059722c09de7a202511336fbc7182735","mediaFormatCode":"image_gif","isFullScreen":false,"printMediaName":"A_W_1991_26401.gif"},"sortOrder":3}],"correctAnswerId":26399,"mediaContent":null},{"id":2034,"questionCode":"RP1401079","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Tato dopravní značka: ","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":11,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":20386,"multilingualAnswerTexts":{"cs":"Zakazuje vjezd všem vozidlům s výjimkou cyklistů. "},"mediaContent":null,"sortOrder":1},{"answerId":20387,"multilingualAnswerTexts":{"cs":"Zakazuje vjezd cyklistům a jízdu na jízdním kole. Vedení jízdního kola cyklistou je povoleno."},"mediaContent":null,"sortOrder":2},{"answerId":20388,"multilingualAnswerTexts":{"cs":"Přikazuje cyklistům užít v daném směru takto označené stezky."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":20387,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_2034.jpg","mediaDataHash":"60eba28fa9fb453544455f2982d8ece833cb397717cb1b21dbc217c1a27d17d0","mediaFormatCode":"image_jpg","isFullScreen":false,"printMediaName":"Q_W_2034.jpg"}}]},{"basketScopeId":12,"basketScopeName":"Schopnost řešení dopravních situací","study":null,"questions":[{"id":1332,"questionCode":"RP0605422","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Blížíte se k místu, kde si děti hrají na chodníku. Jak se musíte zachovat?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":12,"basketScopeOrder":0,"pointsCount":4,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23628,"multilingualAnswerTexts":{"cs":"Podle okolností zpomalit jízdu a být připraven brzdit."},"mediaContent":null,"sortOrder":1},{"answerId":23629,"multilingualAnswerTexts":{"cs":"Pokračovat v jízdě stejnou rychlostí, abych neomezil vozidla za sebou."},"mediaContent":null,"sortOrder":2},{"answerId":23630,"multilingualAnswerTexts":{"cs":"Dát výstražné zvukové znamení a pokračovat v jízdě."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23628,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_1332.mp4","mediaDataHash":"166da6144a5167532d23ffc6d03c59d6a5077f4271d57926908fd413b1ad139d","mediaFormatCode":"video_mp4","isFullScreen":false,"printMediaName":"Q_P_1332.jpg"}},{"id":3055,"questionCode":"RP0606243","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Jakou rychlostí můžete přejet přes železniční přejezd, pokud nesvítí přerušované bílé světlo přejezdového zabezpečovacího zařízení?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":12,"basketScopeOrder":0,"pointsCount":4,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":29718,"multilingualAnswerTexts":{"cs":"Nejvýše 30 km/h."},"mediaContent":null,"sortOrder":1},{"answerId":29719,"multilingualAnswerTexts":{"cs":"Nejvýše 40 km/h."},"mediaContent":null,"sortOrder":2},{"answerId":29720,"multilingualAnswerTexts":{"cs":"Nejvýše 50 km/h."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":29718,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_3055.mp4","mediaDataHash":"8e5beb58367f847ff45a38f862c281ce1ca3657387453aab54e4c70cca96491c","mediaFormatCode":"video_mp4","isFullScreen":false,"printMediaName":"Q_P_3055.jpg"}},{"id":5570,"questionCode":"RP2306009","questionTemplateId":4,"noteDisplayTypeCode":"ALWAYS","questionFrameDisplayTypeCode":"QTEXT","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"ALWAYS","questionText":"Porušili řidič vozidla z výhledu a řidič bílého osobního vozidla ve vyobrazené dopravní situaci při předjíždění cyklisty pravidla silničního provozu?","explanationNote":"Spusťte animaci tlačítkem „Přehrát“ (kliknutím na video). Pozorně sledujte situaci. Následně odpovězte na otázku.","maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":12,"basketScopeOrder":0,"pointsCount":4,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429890,"multilingualAnswerTexts":{"cs":"Ano porušili, předjížděli cyklistu v místě, kde byla na vozovce vyznačena podélná čára souvislá."},"mediaContent":null,"sortOrder":1},{"answerId":3429891,"multilingualAnswerTexts":{"cs":"Ano porušili, mohli sice cyklistu předjíždět, ale nesměli přitom přejet podélnou čáru souvislou."},"mediaContent":null,"sortOrder":2},{"answerId":3429892,"multilingualAnswerTexts":{"cs":"Ne neporušili, při předjíždění cyklisty mohli přejet podélnou čáru souvislou, aby dodrželi minimální boční odstup 1,5 m."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429892,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_5570.mp4","mediaDataHash":"1530c90f2be61793b195903b89992e6cfec93c5acd55ca0614df60f9e59d45d3","mediaFormatCode":"video_mp4","isFullScreen":true,"printMediaName":"Q_P_5570.png"}}]},{"basketScopeId":13,"basketScopeName":"Znalost předpisů o podmínkách provozu vozidel","study":null,"questions":[{"id":3168,"questionCode":"RP0606394","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Používání pneumatik s protiskluzovými hroty:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":13,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":31011,"multilingualAnswerTexts":{"cs":"Je zakázáno pro všechna vozidla, s výjimkou vozidel záchranné služby."},"mediaContent":null,"sortOrder":1},{"answerId":31012,"multilingualAnswerTexts":{"cs":"Je povoleno pouze v zimním období."},"mediaContent":null,"sortOrder":2},{"answerId":31013,"multilingualAnswerTexts":{"cs":"Je povoleno pouze v zimním období a jen v horských oblastech."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":31011,"mediaContent":null},{"id":3196,"questionCode":"RP0606411","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Pokud je vozidlo vybaveno indikací defektu a soupravou pro bezdemontážní opravu pneumatiky:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":13,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":31194,"multilingualAnswerTexts":{"cs":"Musí být automobil povinně vybaven náhradním kolem."},"mediaContent":null,"sortOrder":1},{"answerId":31195,"multilingualAnswerTexts":{"cs":"Nemusí být automobil povinně vybaven náhradním kolem."},"mediaContent":null,"sortOrder":2},{"answerId":31196,"multilingualAnswerTexts":{"cs":"Musí být automobil povinně vybaven náhradním kolem pouze při provozu na dálnici."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":31195,"mediaContent":null}]},{"basketScopeId":14,"basketScopeName":"Znalost předpisů souvisejících s provozem","study":null,"questions":[{"id":1629,"questionCode":"RP0605031","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Podmínky pro udělení příslušného řidičského oprávnění musí osoba splňovat:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":14,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":16030,"multilingualAnswerTexts":{"cs":"Po celou dobu držení tohoto řidičského oprávnění."},"mediaContent":null,"sortOrder":1},{"answerId":16031,"multilingualAnswerTexts":{"cs":"Pouze v okamžiku udělení tohoto řidičského oprávnění."},"mediaContent":null,"sortOrder":2},{"answerId":16032,"multilingualAnswerTexts":{"cs":"Pouze v okamžiku udělení tohoto řidičského oprávnění nebo při přezkoušení z odborné způsobilosti."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":16030,"mediaContent":null},{"id":5288,"questionCode":"RP1512001","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Dálnice, silnice a místní komunikace jsou sjízdné, jestliže umožňují bezpečný pohyb silničních a jiných vozidel přizpůsobený:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":14,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429061,"multilingualAnswerTexts":{"cs":"Stavebnímu stavu a dopravně technickému stavu těchto pozemních komunikací a povětrnostním situacím a jejich důsledkům."},"mediaContent":null,"sortOrder":1},{"answerId":3429062,"multilingualAnswerTexts":{"cs":"Stavebnímu stavu a dopravně technickému stavu těchto pozemních komunikací. Na  povětrnostní situaci a její důsledky nemusí brát zřetel.  "},"mediaContent":null,"sortOrder":2},{"answerId":3429063,"multilingualAnswerTexts":{"cs":"Vlastnostem vozidla a nákladu bez ohledu na dopravně technický stav těchto pozemních komunikací a povětrnostní situaci a její důsledky."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429061,"mediaContent":null}]},{"basketScopeId":15,"basketScopeName":"Znalost zdravotnické přípravy","study":null,"questions":[{"id":104490,"questionCode":"RP1102024","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Jste svědek dopravní nehody, na místě jsou dva zranění, z nichž jeden je v bezvědomí, druhý při vědomí, ale výrazně krvácí. Jaký bude Váš postup?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":15,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":8438524,"multilingualAnswerTexts":{"cs":"nejdříve zjistím, zda poraněný v bezvědomí dýchá"},"mediaContent":null,"sortOrder":1},{"answerId":8438526,"multilingualAnswerTexts":{"cs":"neprodleně zastavím masivní krvácení, zjistím stav poraněného v bezvědomí, zavolám ZS a zajistím místo nehody "},"mediaContent":null,"sortOrder":2},{"answerId":8438528,"multilingualAnswerTexts":{"cs":"zajistím parkovací místo vozidlu ZS a vyčkám jeho příjezdu"},"mediaContent":null,"sortOrder":3}],"correctAnswerId":8438526,"mediaContent":null}]}],"clientTestEndTime":null,"clientTestStartTime":null,"study":null}');
+            var sampleTest;
+            setTimeout(() => {
+                    sampleTest = new SampleTest(
+                    {"candidateTestCode":null,"modelTestName":null,"testTime":30,"testType":"B","basketScopes":[{"basketScopeId":9,"basketScopeName":"Znalost pravidel provozu na pozemních komunikacích","study":null,"questions":[{"id":1297,"questionCode":"RP0606254","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Chodec smí vstoupit na přechod pro chodce:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":30352,"multilingualAnswerTexts":{"cs":"Jen pokud se neblíží vozidlo, před které by bezprostředně vstoupil."},"mediaContent":null,"sortOrder":1},{"answerId":30353,"multilingualAnswerTexts":{"cs":"Jen pokud dá znamení rukou, že bude přecházet; pak může řidiče donutit i k náhlé změně rychlosti a směru jízdy."},"mediaContent":null,"sortOrder":2},{"answerId":30354,"multilingualAnswerTexts":{"cs":"Vždy, protože má absolutní přednost před vozidly."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":30352,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_1297.mp4","mediaDataHash":"24251b2f2667deff07bd9ee324f5362aef30fd12e6404e8b2cdc9d3d1dfc4e04","mediaFormatCode":"video_mp4","isFullScreen":false,"printMediaName":"Q_P_1297.jpg"}},{"id":2218,"questionCode":"RP0605442","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Na silnici pro motorová vozidla:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23745,"multilingualAnswerTexts":{"cs":"Je zakázáno zastavit a stát mimo místa označená jako parkoviště."},"mediaContent":null,"sortOrder":1},{"answerId":23746,"multilingualAnswerTexts":{"cs":"Je zakázáno zastavit a stát, s výjimkou míst na krajnici, kde je parkování povoleno."},"mediaContent":null,"sortOrder":2},{"answerId":23747,"multilingualAnswerTexts":{"cs":"Je zakázáno stát mimo místa označená jako parkoviště; na krajnici je zde možné zastavit i mimo vyznačené parkoviště."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23745,"mediaContent":null},{"id":2534,"questionCode":"RP0605530","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Chodci v obytné zóně:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":24877,"multilingualAnswerTexts":{"cs":"Musí umožnit jízdu všem vozidlům."},"mediaContent":null,"sortOrder":1},{"answerId":24878,"multilingualAnswerTexts":{"cs":"Musí umožnit jízdu pouze vozidlům s právem přednostní jízdy."},"mediaContent":null,"sortOrder":2},{"answerId":24879,"multilingualAnswerTexts":{"cs":"Nemusí při užívání obytné zóny brát ohled na pohyb vozidel."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":24877,"mediaContent":null},{"id":2653,"questionCode":"RP0606082","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Během jízdy může kouřit:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":26308,"multilingualAnswerTexts":{"cs":"Řidič osobního motorového vozidla."},"mediaContent":null,"sortOrder":1},{"answerId":26309,"multilingualAnswerTexts":{"cs":"Řidič motocyklu a mopedu."},"mediaContent":null,"sortOrder":2},{"answerId":26310,"multilingualAnswerTexts":{"cs":"Řidič vozidla hromadné dopravy osob."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":26308,"mediaContent":null},{"id":2835,"questionCode":"RP0606120","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Při přejíždění železničního přejezdu nesmí řidič:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":27894,"multilingualAnswerTexts":{"cs":"Náhle snížit rychlost jízdy."},"mediaContent":null,"sortOrder":1},{"answerId":27895,"multilingualAnswerTexts":{"cs":"Zbytečně prodlužovat dobu jeho přejíždění."},"mediaContent":null,"sortOrder":2},{"answerId":27896,"multilingualAnswerTexts":{"cs":"Dávat zvuková výstražná znamení."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":27895,"mediaContent":null},{"id":2901,"questionCode":"RP0606166","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Před železničním přejezdem:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":28380,"multilingualAnswerTexts":{"cs":"Řidič nesmí řadit rychlostní stupně."},"mediaContent":null,"sortOrder":1},{"answerId":28381,"multilingualAnswerTexts":{"cs":"Musí řidič vždy zastavit, aby se přesvědčil, zda může železniční přejezd bezpečně přejet."},"mediaContent":null,"sortOrder":2},{"answerId":28382,"multilingualAnswerTexts":{"cs":"Si musí řidič počínat zvlášť opatrně, zejména se přesvědčit, zda může železniční přejezd bezpečně přejet."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":28382,"mediaContent":null},{"id":4342,"questionCode":"RP1008043","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"\u0022Krajnice\u0022:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3424652,"multilingualAnswerTexts":{"cs":"je část vozovky, na kterou je ve všech případech zakázáno vjíždět."},"mediaContent":null,"sortOrder":1},{"answerId":3424653,"multilingualAnswerTexts":{"cs":"je část povrchu pozemní komunikace ležící mezi okrajem přilehlého jízdního pruhu a hranou koruny pozemní komunikace, skládá se zpravidla ze zpevněné a nezpevněné části."},"mediaContent":null,"sortOrder":2},{"answerId":3424654,"multilingualAnswerTexts":{"cs":"je část povrchu pozemní komunikace, která je vždy označena dopravní značkou \u0022Nebezpečná krajnice\u0022."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3424653,"mediaContent":null},{"id":4506,"questionCode":"RP1104002","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"V obci smí řidič vozidla o celkové hmotnosti nepřevyšující 3.500 kg zastavit a stát kolmo, popřípadě šikmo k okraji pozemní komunikace jen:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3425789,"multilingualAnswerTexts":{"cs":"Nedojde-li k ohrožení bezpečnosti a plynulosti silničního provozu."},"mediaContent":null,"sortOrder":1},{"answerId":3425790,"multilingualAnswerTexts":{"cs":"Zůstane-li při stání volný alespoň jeden pruh široký nejméně 2 m."},"mediaContent":null,"sortOrder":2},{"answerId":3425791,"multilingualAnswerTexts":{"cs":"Zůstane-li při zastavení volný alespoň jeden jízdní pruh široký 2,5 m."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3425789,"mediaContent":null},{"id":5535,"questionCode":"RP2303011","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Smí řidič při zastavení vozidla před železničním přejezdem za snížené viditelnosti užít potkávací světla?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429785,"multilingualAnswerTexts":{"cs":"Ne, pokud by jimi mohl oslnit řidiče v protisměru."},"mediaContent":null,"sortOrder":1},{"answerId":3429786,"multilingualAnswerTexts":{"cs":"Ano, za všech okolností."},"mediaContent":null,"sortOrder":2},{"answerId":3429787,"multilingualAnswerTexts":{"cs":"Ne, je povinen vždy užít dálková světla."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429785,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_5535.png","mediaDataHash":"d1291976e22a3dcd4c1d3402e8e802ae55d67acd9930063d74f78912fabe2a98","mediaFormatCode":"image_png","isFullScreen":false,"printMediaName":"Q_P_5535.png"}},{"id":105483,"questionCode":"RP2509002","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"XNA","questionTextDisplayTypeCode":"XNA","questionText":"Dojde-li při dopravní nehodě ke hmotné škodě na některém ze zúčastněných vozidel včetně přepravovaných věcí nižší než 200 000 Kč, jsou účastníci dopravní nehody povinni ohlásit tuto nehodu policistovi:","explanationNote":"XNA","maxNoOfDisplays":0,"maxPostDisplayTime":0,"basketScopeId":9,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":8446755,"multilingualAnswerTexts":{"cs":"Jestliže nemohou sami bez vynaložení nepřiměřeného úsilí zabezpečit obnovení plynulosti provozu na pozemních komunikacích. "},"mediaContent":null,"sortOrder":1},{"answerId":8446756,"multilingualAnswerTexts":{"cs":"Jestliže nehoda vznikla v důsledku nedání přednosti v jízdě."},"mediaContent":null,"sortOrder":2},{"answerId":8446757,"multilingualAnswerTexts":{"cs":"Jestliže je nutno některé ze zúčastněných vozidel odstranit pomocí odtahové služby."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":8446755,"mediaContent":null}]},{"basketScopeId":10,"basketScopeName":"Znalost zásad bezpečné jízdy a ovládání vozidla","study":null,"questions":[{"id":2265,"questionCode":"RP0605444","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Přetáčivý smyk u vozidla s pohonem zadních kol a manuální převodovkou budete řešit:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23703,"multilingualAnswerTexts":{"cs":"Sešlápnutím spojkového pedálu a natočením volantu směrem, kterým se pohybuje zadní část vozidla."},"mediaContent":null,"sortOrder":1},{"answerId":23704,"multilingualAnswerTexts":{"cs":"Sešlápnutím brzdového pedálu a natočením volantu směrem, kterým se pohybuje zadní část vozidla."},"mediaContent":null,"sortOrder":2},{"answerId":23705,"multilingualAnswerTexts":{"cs":"Sešlápnutím pedálu akcelerátoru a natočením volantu směrem, kterým se pohybuje zadní část vozidla."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23703,"mediaContent":null},{"id":2376,"questionCode":"RP0605402","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Může být schopnost k řízení vozidla ovlivněna i po požití malého množství alkoholu, např. půl litru desetistupňového piva?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23257,"multilingualAnswerTexts":{"cs":"Ano, i malé množství požitého alkoholu snižuje schopnost k řízení motorového vozidla."},"mediaContent":null,"sortOrder":1},{"answerId":23258,"multilingualAnswerTexts":{"cs":"Ne, pokud se alkohol pije zároveň s černou kávou."},"mediaContent":null,"sortOrder":2},{"answerId":23259,"multilingualAnswerTexts":{"cs":"Ne, malé množství požitého alkoholu neovlivňuje schopnost k řízení motorového vozidla. "},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23257,"mediaContent":null},{"id":3048,"questionCode":"RP0606237","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Častou příčinou vzniku dopravních nehod při jízdě na dálnici je:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":29676,"multilingualAnswerTexts":{"cs":"Jízda s nedostatečnou vzdáleností mezi vozidly jedoucími za sebou."},"mediaContent":null,"sortOrder":1},{"answerId":29677,"multilingualAnswerTexts":{"cs":"Pomalá jízda nákladních vozidel."},"mediaContent":null,"sortOrder":2},{"answerId":29678,"multilingualAnswerTexts":{"cs":"Jízda v pravém jízdním pruhu."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":29676,"mediaContent":null},{"id":5518,"questionCode":"RP2210037","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Systém ESC (ESP):","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":10,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429735,"multilingualAnswerTexts":{"cs":"Udržuje vozidlo v jízdních pruzích."},"mediaContent":null,"sortOrder":1},{"answerId":3429736,"multilingualAnswerTexts":{"cs":"Zajišťuje vyšší brzdný účinek automobilu."},"mediaContent":null,"sortOrder":2},{"answerId":3429737,"multilingualAnswerTexts":{"cs":"Systém který pomáhá stabilizovat vozidlo při začínajícím smyku."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429737,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_5518.png","mediaDataHash":"de3c24c121694a34db2e09bb85d8f564ecc8083defb1f327be616c1c6eacb7e4","mediaFormatCode":"image_png","isFullScreen":false,"printMediaName":"Q_P_5518.png"}}]},{"basketScopeId":11,"basketScopeName":"Znalost dopravních značek, světelných a akustických signálů","study":null,"questions":[{"id":1868,"questionCode":"RP1401120","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Tato dopravní značka:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":11,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":26136,"multilingualAnswerTexts":{"cs":"Se umisťuje ve vzdálenosti 160 m před železničním přejezdem, na nějž upozorňuje."},"mediaContent":null,"sortOrder":1},{"answerId":26137,"multilingualAnswerTexts":{"cs":"Se umisťuje ve vzdálenosti 140 m před železničním přejezdem, na nějž upozorňuje."},"mediaContent":null,"sortOrder":2},{"answerId":26138,"multilingualAnswerTexts":{"cs":"Se umisťuje ve vzdálenosti 240 m před železničním přejezdem, na nějž upozorňuje."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":26136,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_1868.jpg","mediaDataHash":"68a630c7cc235c94da172551fccede816a091a7cf23998de602fb654de691e47","mediaFormatCode":"image_jpg","isFullScreen":false,"printMediaName":"Q_W_1868.jpg"}},{"id":1991,"questionCode":"RP1601017","questionTemplateId":3,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Vyberte dopravní značku \u0022Nejnižší dovolená rychlost\u0022, která řidiči přikazuje, pokud to ostatní okolnosti provozu na pozemních komunikacích dovolují, jet nejméně rychlostí vyjádřenou na značce číslem v kilometrech za hodinu.  ","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":11,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":26399,"multilingualAnswerTexts":{"cs":". "},"mediaContent":{"mediaUrl":"/binary_content_storage/A_W_1991_26399.gif","mediaDataHash":"c8f4b58cd520a73d7aee4753c1ba253cab595b7bea1f6252826279dbf76ba5a2","mediaFormatCode":"image_gif","isFullScreen":false,"printMediaName":"A_W_1991_26399.gif"},"sortOrder":1},{"answerId":26400,"multilingualAnswerTexts":{"cs":"."},"mediaContent":{"mediaUrl":"/binary_content_storage/A_W_1991_26400.gif","mediaDataHash":"df3d0833f19d703af54d49d27e9fbb79259ef53ccec47c82b1ac6e5e71157af6","mediaFormatCode":"image_gif","isFullScreen":false,"printMediaName":"A_W_1991_26400.gif"},"sortOrder":2},{"answerId":26401,"multilingualAnswerTexts":{"cs":"."},"mediaContent":{"mediaUrl":"/binary_content_storage/A_W_1991_26401.gif","mediaDataHash":"d9da6b6c7d9fbac1b719886f0edaec89059722c09de7a202511336fbc7182735","mediaFormatCode":"image_gif","isFullScreen":false,"printMediaName":"A_W_1991_26401.gif"},"sortOrder":3}],"correctAnswerId":26399,"mediaContent":null},{"id":2034,"questionCode":"RP1401079","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Tato dopravní značka: ","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":11,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":20386,"multilingualAnswerTexts":{"cs":"Zakazuje vjezd všem vozidlům s výjimkou cyklistů. "},"mediaContent":null,"sortOrder":1},{"answerId":20387,"multilingualAnswerTexts":{"cs":"Zakazuje vjezd cyklistům a jízdu na jízdním kole. Vedení jízdního kola cyklistou je povoleno."},"mediaContent":null,"sortOrder":2},{"answerId":20388,"multilingualAnswerTexts":{"cs":"Přikazuje cyklistům užít v daném směru takto označené stezky."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":20387,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_2034.jpg","mediaDataHash":"60eba28fa9fb453544455f2982d8ece833cb397717cb1b21dbc217c1a27d17d0","mediaFormatCode":"image_jpg","isFullScreen":false,"printMediaName":"Q_W_2034.jpg"}}]},{"basketScopeId":12,"basketScopeName":"Schopnost řešení dopravních situací","study":null,"questions":[{"id":1332,"questionCode":"RP0605422","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Blížíte se k místu, kde si děti hrají na chodníku. Jak se musíte zachovat?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":12,"basketScopeOrder":0,"pointsCount":4,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":23628,"multilingualAnswerTexts":{"cs":"Podle okolností zpomalit jízdu a být připraven brzdit."},"mediaContent":null,"sortOrder":1},{"answerId":23629,"multilingualAnswerTexts":{"cs":"Pokračovat v jízdě stejnou rychlostí, abych neomezil vozidla za sebou."},"mediaContent":null,"sortOrder":2},{"answerId":23630,"multilingualAnswerTexts":{"cs":"Dát výstražné zvukové znamení a pokračovat v jízdě."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":23628,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_1332.mp4","mediaDataHash":"166da6144a5167532d23ffc6d03c59d6a5077f4271d57926908fd413b1ad139d","mediaFormatCode":"video_mp4","isFullScreen":false,"printMediaName":"Q_P_1332.jpg"}},{"id":3055,"questionCode":"RP0606243","questionTemplateId":2,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Jakou rychlostí můžete přejet přes železniční přejezd, pokud nesvítí přerušované bílé světlo přejezdového zabezpečovacího zařízení?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":12,"basketScopeOrder":0,"pointsCount":4,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":29718,"multilingualAnswerTexts":{"cs":"Nejvýše 30 km/h."},"mediaContent":null,"sortOrder":1},{"answerId":29719,"multilingualAnswerTexts":{"cs":"Nejvýše 40 km/h."},"mediaContent":null,"sortOrder":2},{"answerId":29720,"multilingualAnswerTexts":{"cs":"Nejvýše 50 km/h."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":29718,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_3055.mp4","mediaDataHash":"8e5beb58367f847ff45a38f862c281ce1ca3657387453aab54e4c70cca96491c","mediaFormatCode":"video_mp4","isFullScreen":false,"printMediaName":"Q_P_3055.jpg"}},{"id":5570,"questionCode":"RP2306009","questionTemplateId":4,"noteDisplayTypeCode":"ALWAYS","questionFrameDisplayTypeCode":"QTEXT","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"ALWAYS","questionText":"Porušili řidič vozidla z výhledu a řidič bílého osobního vozidla ve vyobrazené dopravní situaci při předjíždění cyklisty pravidla silničního provozu?","explanationNote":"Spusťte animaci tlačítkem „Přehrát“ (kliknutím na video). Pozorně sledujte situaci. Následně odpovězte na otázku.","maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":12,"basketScopeOrder":0,"pointsCount":4,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429890,"multilingualAnswerTexts":{"cs":"Ano porušili, předjížděli cyklistu v místě, kde byla na vozovce vyznačena podélná čára souvislá."},"mediaContent":null,"sortOrder":1},{"answerId":3429891,"multilingualAnswerTexts":{"cs":"Ano porušili, mohli sice cyklistu předjíždět, ale nesměli přitom přejet podélnou čáru souvislou."},"mediaContent":null,"sortOrder":2},{"answerId":3429892,"multilingualAnswerTexts":{"cs":"Ne neporušili, při předjíždění cyklisty mohli přejet podélnou čáru souvislou, aby dodrželi minimální boční odstup 1,5 m."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429892,"mediaContent":{"mediaUrl":"/binary_content_storage//Q_W_5570.mp4","mediaDataHash":"1530c90f2be61793b195903b89992e6cfec93c5acd55ca0614df60f9e59d45d3","mediaFormatCode":"video_mp4","isFullScreen":true,"printMediaName":"Q_P_5570.png"}}]},{"basketScopeId":13,"basketScopeName":"Znalost předpisů o podmínkách provozu vozidel","study":null,"questions":[{"id":3168,"questionCode":"RP0606394","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Používání pneumatik s protiskluzovými hroty:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":13,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":31011,"multilingualAnswerTexts":{"cs":"Je zakázáno pro všechna vozidla, s výjimkou vozidel záchranné služby."},"mediaContent":null,"sortOrder":1},{"answerId":31012,"multilingualAnswerTexts":{"cs":"Je povoleno pouze v zimním období."},"mediaContent":null,"sortOrder":2},{"answerId":31013,"multilingualAnswerTexts":{"cs":"Je povoleno pouze v zimním období a jen v horských oblastech."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":31011,"mediaContent":null},{"id":3196,"questionCode":"RP0606411","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Pokud je vozidlo vybaveno indikací defektu a soupravou pro bezdemontážní opravu pneumatiky:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":13,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":31194,"multilingualAnswerTexts":{"cs":"Musí být automobil povinně vybaven náhradním kolem."},"mediaContent":null,"sortOrder":1},{"answerId":31195,"multilingualAnswerTexts":{"cs":"Nemusí být automobil povinně vybaven náhradním kolem."},"mediaContent":null,"sortOrder":2},{"answerId":31196,"multilingualAnswerTexts":{"cs":"Musí být automobil povinně vybaven náhradním kolem pouze při provozu na dálnici."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":31195,"mediaContent":null}]},{"basketScopeId":14,"basketScopeName":"Znalost předpisů souvisejících s provozem","study":null,"questions":[{"id":1629,"questionCode":"RP0605031","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Podmínky pro udělení příslušného řidičského oprávnění musí osoba splňovat:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":14,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":16030,"multilingualAnswerTexts":{"cs":"Po celou dobu držení tohoto řidičského oprávnění."},"mediaContent":null,"sortOrder":1},{"answerId":16031,"multilingualAnswerTexts":{"cs":"Pouze v okamžiku udělení tohoto řidičského oprávnění."},"mediaContent":null,"sortOrder":2},{"answerId":16032,"multilingualAnswerTexts":{"cs":"Pouze v okamžiku udělení tohoto řidičského oprávnění nebo při přezkoušení z odborné způsobilosti."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":16030,"mediaContent":null},{"id":5288,"questionCode":"RP1512001","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Dálnice, silnice a místní komunikace jsou sjízdné, jestliže umožňují bezpečný pohyb silničních a jiných vozidel přizpůsobený:","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":14,"basketScopeOrder":0,"pointsCount":2,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":3429061,"multilingualAnswerTexts":{"cs":"Stavebnímu stavu a dopravně technickému stavu těchto pozemních komunikací a povětrnostním situacím a jejich důsledkům."},"mediaContent":null,"sortOrder":1},{"answerId":3429062,"multilingualAnswerTexts":{"cs":"Stavebnímu stavu a dopravně technickému stavu těchto pozemních komunikací. Na  povětrnostní situaci a její důsledky nemusí brát zřetel.  "},"mediaContent":null,"sortOrder":2},{"answerId":3429063,"multilingualAnswerTexts":{"cs":"Vlastnostem vozidla a nákladu bez ohledu na dopravně technický stav těchto pozemních komunikací a povětrnostní situaci a její důsledky."},"mediaContent":null,"sortOrder":3}],"correctAnswerId":3429061,"mediaContent":null}]},{"basketScopeId":15,"basketScopeName":"Znalost zdravotnické přípravy","study":null,"questions":[{"id":104490,"questionCode":"RP1102024","questionTemplateId":1,"noteDisplayTypeCode":"XNA","questionFrameDisplayTypeCode":"XNA","answerTextDisplayTypeCode":"ALWAYS","questionTextDisplayTypeCode":"XNA","questionText":"Jste svědek dopravní nehody, na místě jsou dva zranění, z nichž jeden je v bezvědomí, druhý při vědomí, ale výrazně krvácí. Jaký bude Váš postup?","explanationNote":null,"maxNoOfDisplays":-1,"maxPostDisplayTime":-1,"basketScopeId":15,"basketScopeOrder":0,"pointsCount":1,"validFrom":null,"validTo":null,"answersOrder":"1,2,3","questionAnswers":[{"answerId":8438524,"multilingualAnswerTexts":{"cs":"nejdříve zjistím, zda poraněný v bezvědomí dýchá"},"mediaContent":null,"sortOrder":1},{"answerId":8438526,"multilingualAnswerTexts":{"cs":"neprodleně zastavím masivní krvácení, zjistím stav poraněného v bezvědomí, zavolám ZS a zajistím místo nehody "},"mediaContent":null,"sortOrder":2},{"answerId":8438528,"multilingualAnswerTexts":{"cs":"zajistím parkovací místo vozidlu ZS a vyčkám jeho příjezdu"},"mediaContent":null,"sortOrder":3}],"correctAnswerId":8438526,"mediaContent":null}]}],"clientTestEndTime":null,"clientTestStartTime":null,"study":null},
+                    'TestEvaluationModalId',
+                    'TestTimeExpiredModalId',
+                    'aaa'
+                );
+            }, 500  //init width question buttons
+            )
+        });
+
+
+        function HelpModal() {
+            const selectors = {
+                helpModal: "#help-modal",
+                closeButton: "#close-button",
+                helpModalButton: "#help-modal-button"
+            }
+
+            const registerHandlers = () => {
+                // KLIKNUTÍ NA SCHOVÁNÍ OKNA
+                $(selectors.closeButton).on("click", () => {
+                    $(selectors.helpModal).hide();
+                });
+
+                // KLIKNUTÍ NA OTEVŘENÍ
+                $(selectors.helpModalButton).on("click", () => {
+                    $(selectors.helpModal).show();
+                });
+            }
+
+            const init = () => {
+                registerHandlers();
+            }
+
+            init();
+        }
+
+        function Answers(isMultipleChoice, handleOnAnswerClick) {
+            const selectors = {
+                answers: ".answer",
+                clickableAnswers: ".answer-clickable",
+                questionMarks: ".question-mark",
+                isCorrectData: "is-correct",
+                answerIdData: "answer-id",
+                optionData: "option-name"
+            }
+
+            const getAnswerSelectorByOptionName = (optionName) => {
+                return `${selectors.answers}[data-${selectors.optionData}=${optionName}]`;
+            }
+
+            const registerHandlers = () => {
+                // KLIKNUTÍ NA ODPOVĚĎ
+                $("body").on("click", selectors.clickableAnswers, (e) => {
+                    const questionMark = $(e.currentTarget).find(selectors.questionMarks);
+                    const isAnswerSelected = questionMark.is(":visible");
+
+                    if (isAnswerSelected) {
+                        questionMark.hide();
+                    } else {
+                        if (!isMultipleChoice) {
+                            $(selectors.questionMarks).hide();
+                        }
+                        questionMark.show();
+                        //jirak -- objekt otázky
+                        //alert(actualQuestion().Answers.length());
+                        //actualQuestion().Answers.find()
+                    }
+
+                    // Volání handleru po kliknutí
+                    if (handleOnAnswerClick !== undefined) {
+                        let answer = undefined;
+                        if (!isAnswerSelected) {
+                            answer = {
+                                isCorrect: $(e.currentTarget).data(selectors.isCorrectData),
+                                answerId: $(e.currentTarget).data(selectors.answerIdData)
+                            }
+                        }
+                        handleOnAnswerClick(answer);
+                    }
+                });
+
+                // OVLÁDÁNÍ TLAČÍTKY
+                $(document).keydown((e) => {
+                    let selectedElement;
+                    switch (e.code) {
+                        case "KeyA":
+                            selectedElement = $(getAnswerSelectorByOptionName("A"));
+                            break;
+                        case "KeyB":
+                            selectedElement = $(getAnswerSelectorByOptionName("B"));
+                            break;
+                        case "KeyC":
+                            selectedElement = $(getAnswerSelectorByOptionName("C"));
+                            break;
+                        case "KeyD":
+                            selectedElement = $(getAnswerSelectorByOptionName("D"));
+                            break;
+                        default:
+                            return;
+                    }
+                    //console.log(selectedElement)
+                    $(selectedElement).trigger("click");
+                });
+            }
+
+            const showCorrectAnswer = (answer) => {
+                const isCorrect = $(answer).data(selectors.isCorrectData);
+                if (isCorrect) {
+                    $(answer).addClass("answer-correct");
+                }
+                else {
+                    $(answer).addClass("answer-incorrect");
+                }
+            }
+
+            this.disableAnswersClick = () => {
+                $(selectors.answers).removeClass("answer-clickable");
+            }
+
+            this.showAllCorrectChildrenAnswers = (parentElement) => {
+                parentElement
+                    .find(selectors.answers)
+                    .each((_, element) => {
+                        showCorrectAnswer(element);
+                    });
+            }
+
+            this.selectAnswer = (answerId) => {
+                const answerToSelect = $(`${selectors.answers}[data-${selectors.answerIdData}=${answerId}]`);
+                const questionMark = answerToSelect.find(selectors.questionMarks);
+                questionMark.show();
+            }
+
+            const init = () => {
+                registerHandlers();
+            }
+
+            init();
+        }
+
+        function showOrangePipe(e) {
+
+
+        }
+        // jirak - question picker 3
+        function QuestionPicker(handleOnQuestionSelect) {
+            const selectors = {
+                scrollButtons: ".button-scroll",
+                questionSlideContent: "#question-slider-content",
+                questionSliderView: "#question-slider-view",
+                scrollRightButton: "#scroll-right-button",
+                scrollLeftButton: "#scroll-left-button",
+                basketScopeButtons: ".button-question",
+                activeQuestionButton: ".button-question.button-orange",
+                basketScope: ".question-slider-basketscope",
+                scrollDirectionData: "scroll-direction",
+                questionIndexData: "question-index",
+                basketScopeIndexData: "basketscope-index",
+                markIcons: ".mark-icon"
+            }
+            const viewElement = $(selectors.questionSliderView);
+            const viewWidth = viewElement.width();
+            const contentElement = $(selectors.questionSlideContent);
+            const contentWidth = contentElement.width();
+            // console.log(contentElement);
+            // console.log('width:'+contentElement.width())
+
+            const getContentCurrentLeftPosition = () => {
+                return contentElement.position().left;
+            }
+
+            const moveContent = (newContentLeftPosition) => {
+                // Povolení ovládacích tlačítek
+                shared.enableElement($(selectors.scrollButtons));
+
+                // Krajní pozice
+                // console.log('leftPositon:'  + newContentLeftPosition)
+                if (newContentLeftPosition <= Math.round(-(contentWidth - viewWidth))) {
+                    newContentLeftPosition = viewWidth - contentWidth;
+                    // console.log('content 369:'+contentWidth)
+                    // console.log('view:' + viewWidth)
+                    shared.disableElement($(selectors.scrollRightButton));
+                } else if (newContentLeftPosition >= 0) {
+                    newContentLeftPosition = 0;
+                    shared.disableElement($(selectors.scrollLeftButton));
+                }
+
+                // Posunutí obsahu
+                if (newContentLeftPosition !== getContentCurrentLeftPosition()) {
+                    // console.log("posouvam")
+                    if (viewWidth < contentWidth) {
+                        contentElement.animate({ left: newContentLeftPosition }, 120);
+                    }
+                }
+            }
+
+            this.scrollButtonClick = function (e, dir) {
+                let scrollDirection = 0;
+                console.log(e)
+                if (e.target) {
+                    scrollDirection = Number($(e.target).data(selectors.scrollDirectionData));
+                } else {
+                    scrollDirection = dir;
+                }
+
+                const moveSizePx = 4 * 45;
+                const contentActualLeftPosition = getContentCurrentLeftPosition();
+                const movePx = scrollDirection * moveSizePx;
+                let contentNewLeftPosition = Math.round(contentActualLeftPosition + movePx);
+                //Pracovne podmineno tlacitkem pro posun. pro pripad klavesnice nefunkcni protože nepoznám zda se má lišta posunout nebo ne
+                console.log(e.target)
+                if (e.target)
+                    moveContent(contentNewLeftPosition);
+
+            }
+
+
+            const registerHandlers = () => {
+                // KLIKNUTÍ NA SCROLL TLAČÍTKO
+                $(selectors.scrollButtons).on("click", this.scrollButtonClick)
+
+                // KLIKNUTÍ NA TLAČÍTKO OTÁZKY
+                $(selectors.basketScopeButtons).on("click", (e) => {
+                    const clickedButton = $(e.target);
+                    this.selectQuestion(clickedButton.data(selectors.basketScopeIndexData), clickedButton.data(selectors.questionIndexData));
+                });
+            }
+
+            this.setUnsetQuestionAsAnswered = (isQuestionAnswered) => {
+                const activeQuestionButton = $(selectors.activeQuestionButton);
+                if (isQuestionAnswered) {
+                    activeQuestionButton.addClass("button-answered");
+                } else {
+                    activeQuestionButton.removeClass("button-answered");
+                }
+            }
+
+            this.markUnmarkActualQuestion = (isCheckboxChecked) => {
+                const activeQuestionButton = $(selectors.activeQuestionButton);
+                const markIcon = activeQuestionButton.children(selectors.markIcons);
+
+                if (isCheckboxChecked) {
+                    markIcon.show();
+                } else {
+                    markIcon.hide();
+                }
+
+            }
+
+            this.selectQuestion = (basketScopeIndex, questionIndex) => {
+                const targetQuestionButton = $(`${selectors.basketScopeButtons}[data-${selectors.basketScopeIndexData}=${basketScopeIndex}][data-${selectors.questionIndexData}=${questionIndex}]`);
+                const activeQuestionButton = $(selectors.activeQuestionButton);
+
+                // Označení jíž označené otázky
+                if (basketScopeIndex === activeQuestionButton.data(selectors.basketScopeIndexData) && questionIndex === activeQuestionButton.data(selectors.questionIndexData)) {
+                    return
+                }
+
+                // Odebrání barevného označení otázky
+                activeQuestionButton.addClass("button-grey");
+                activeQuestionButton.removeClass("button-orange");
+                activeQuestionButton.closest(selectors.basketScope).removeClass("basketscope-active");
+
+                // Přidání barevného označení otázky
+                targetQuestionButton.removeClass("button-grey");
+                targetQuestionButton.addClass("button-orange");
+                targetQuestionButton.closest(selectors.basketScope).addClass("basketscope-active");
+
+                const questionSerialNumber = targetQuestionButton.text();
+                handleOnQuestionSelect(questionIndex, basketScopeIndex, questionSerialNumber);
+
+                // Posunutí obsahu
+                const targetQuestionButtonLeft = targetQuestionButton.position().left;
+                const targetQuestionButtonWidth = targetQuestionButton.outerWidth();
+
+                const contentActualLeftPosition = getContentCurrentLeftPosition();
+                let contentNewLeftPosition = getContentCurrentLeftPosition();
+
+                if (targetQuestionButtonLeft + contentActualLeftPosition < 0) {
+                    //console.log("option 1")
+                    contentNewLeftPosition = -targetQuestionButtonLeft;
+                } else if (targetQuestionButtonLeft + targetQuestionButtonWidth > viewWidth) {
+
+                    //console.log("option 2")
+                    //comment by not understanding reason
+                    // contentNewLeftPosition = -targetQuestionButtonLeft - targetQuestionButtonWidth + viewWidth;
+                }
+
+                //console.log('call from select question')
+                moveContent(contentNewLeftPosition);
+            }
+
+            const init = () => {
+                registerHandlers();
+                this.selectQuestion(0, 0);
+            }
+
+            init();
+        }
+
+        function SampleTest(sampleTestObj, confirmTestEvaluationModalId, testTimeExpiredModalId, confirmTestExitModalId) {
+            const selectors = {
+                actualQuestionNumber: "#actual-question-number",
+                actualQuestionCode:"#actual-question-code",
+                questionAnswerContainer: "#question-answer-container",
+                markQuestionCheckbox: "#mark-question-checkbox",
+                questionPoints: "#question-points",
+                questionPickerContainer: "#question-picker-container",
+                //jb comm//  antiFogeryToken: "input:hidden[name=\"__RequestVerificationToken\"]",
+                basketScopes: ".question-basketscope",
+                basketScopeIndexData: "basketscope-index",
+                answeredQuestionsCount: "#answered-Questions-count",
+                basketScopeContainer: "#question-basketscope-container",
+                nextQuestionButton: "#next-question-button",
+                previousQuestionButton: "#previous-question-button",
+                finishAndEvaluateTestButton: "#finish-and-evaluate-test-button"
+            }
+            let timerCountDown;
+            let questionPicker;
+            let basketScopes;
+            let helpModal;
+            let minutesForTest;
+            let actualBasketScopeIndex = 0;
+            let actualQuestionIndex = 0;
+            let answers;
+            let confirmTestEvaluationModal;
+            let testTimeExpiredModal;
+            let confirmExitTestModal;
+            let sampleTest;
+            const actualQuestion = () => {
+                //alert(basketScopes[actualBasketScopeIndex].questions[actualQuestionIndex].)
+                return basketScopes[actualBasketScopeIndex].questions[actualQuestionIndex];
+            }
+
+            //jirak test bundle 2
+
+            const handleOnQuestionRender = () => {
+                // Nastavení již vybrané odpovědi
+                var sa = actualQuestion().questionAnswers.find(item => item.isSelected === 1);
+                if (sa !== undefined) {
+                    //aq.questionAnswers.forEach(item => item.isSelected = 0);
+                    answers.selectAnswer(sa.answerId);
+                }
+            }
+
+            const handleOnQuestionSelect = (questionIndex, basketScopeIndex, questionSerialNumber) => {
+                actualQuestionIndex = questionIndex;
+                actualBasketScopeIndex = basketScopeIndex;
+
+                // Nastavení aktuálního čísla otázky
+                $(selectors.actualQuestionNumber).text(questionSerialNumber);
+
+                // Nastavení kódu otázky
+                $(selectors.actualQuestionCode).text(actualQuestion().questionCode);
+                console.log("actualQuestionCode: " + actualQuestion().questionCode);
+
+                // Nastavení bodů otázky
+                $(selectors.questionPoints).text(actualQuestion().pointsCount);
+
+                // Nastavení checkboxu označení otázky
+                const isQuestionMarked = actualQuestion().marked == undefined ? false : actualQuestion().marked;
+                $(selectors.markQuestionCheckbox).prop("checked", isQuestionMarked);
+
+                // Vykreslení otázky
+                shared.renderQuestion($(selectors.questionAnswerContainer), actualQuestion(), handleOnQuestionRender);
+
+                // Nastavení okruhu otázky
+                $(selectors.basketScopes).removeClass("question-basketscope-active");
+                const actualBasketScope = $(selectors.basketScopes + "[data-basketscope-index=" + basketScopeIndex + "]");
+                actualBasketScope.addClass("question-basketscope-active");
+                //window.abc = actualBasketScope;
+                //let actualBasketTopPosition = actualBasketScope.position().top;
+                //console.log(actualBasketTopPosition)
+                // $(selectors.basketScopeContainer).animate({ scrollTop: actualBasketScope.position().top }, 100);
+                actualBasketScope[0].scrollIntoView()
+
+                // Nastavení ovládacích tlačítek
+                $(selectors.nextQuestionButton).removeClass("button-disabled");
+                $(selectors.previousQuestionButton).removeClass("button-disabled");
+                if (actualBasketScopeIndex === basketScopes.length - 1 && actualQuestionIndex === basketScopes[actualBasketScopeIndex].questions.length - 1) {
+                    $(selectors.nextQuestionButton).addClass("button-disabled");
+                }
+                else if (actualBasketScopeIndex === 0 && actualQuestionIndex === 0) {
+                    $(selectors.previousQuestionButton).addClass("button-disabled");
+                }
+            }
+
+            const prepareFormAndSendToEvaluation = () => {
+                const form = new FormHandler("results", "/co/DLTest/Results")
+                //jb comm //  form.addRequestVerificationToken($(selectors.antiFogeryToken).val());
+                //jirak -
+
+                //var testJson = JSON.stringify(sampleTest);
+                let qaOnly = [];
+                sampleTest.basketScopes.forEach(b => {
+                    b.questions.forEach(q => {
+                        let qa = { question: q.id, answers: q.questionAnswers.filter(qa => qa.isSelected).map(f => f.answerId) }
+                        qaOnly.push(qa);
+                    })
+                })
+                // form.addTextInput('rawJson', testJson);
+                let bs = sampleTest.basketScopes.map(({ basketScopeId, basketScopeName }) => ({ basketScopeId, basketScopeName }))
+                form.addTextInput('rawJson', JSON.stringify({ bs:bs , testType: sampleTest.testType, qaList: qaOnly }));
+
+
+
+
+
+                basketScopes.forEach((basketScope, basketScopeIndex) => {
+                    let Questions = basketScope.questions;
+                    //jirak tady vyhodnoceni
+                    let basketScopeInput = `Test.QuestionBaskets[${basketScopeIndex}]`;
+
+                    form.addTextInput(`${basketScopeInput}.Id`, basketScope.id);
+                    Questions.forEach((question, questionIndex) => {
+                        let questionInput = `${basketScopeInput}.Questions[${questionIndex}]`;
+
+                        form.addTextInput(`${questionInput}.Id`, question.id);
+                        form.addNumberInput(`${questionInput}.Points`, question.countPoints);
+
+                        if (question.answer !== undefined) {
+                            form.addTextInput(`${questionInput}.Answer.Id`, question.answer.answerId);
+                            form.addTextInput(`${questionInput}.Answer.IsCorrect`, question.answer.isCorrect);
+                        }
+                    });
+                });
+                form.submit();
+            }
+
+            const handleOnAnswerClick = (selectedAnswer) => {
+                // Nastavení počítadla odpovězených otázek
+                let answeredQuestionsCount = Number($(selectors.answeredQuestionsCount).text());
+                let q = actualQuestion();
+                let someSelected = false;
+                if (q) {
+                    someSelected = q.questionAnswers.some(a => a.isSelected);
+                }
+                if (selectedAnswer === undefined) {
+                    if (someSelected == true) {
+                        answeredQuestionsCount--;
+                        q.questionAnswers.forEach(a => a.isSelected = false);
+                    }
+
+                    questionPicker.setUnsetQuestionAsAnswered(false);
+                } else if (actualQuestion().answer === undefined) {
+
+                    if (someSelected == false)
+                        answeredQuestionsCount++
+                    questionPicker.setUnsetQuestionAsAnswered(true);
+                }
+
+                $(selectors.answeredQuestionsCount).text(answeredQuestionsCount);
+
+                //jirak
+                //alert(actualQuestion().id);
+                // Přiřazení vybrané odepovědi k aktuální otázce
+                var aq = actualQuestion();
+                //alert(aq.questionAnswers[0].isSelected);
+                //console.log(selectedAnswer);
+
+                if (selectedAnswer) {
+                    aq.questionAnswers.forEach(item => item.isSelected = 0);
+                    aq.questionAnswers.find(item => item.answerId === selectedAnswer.answerId).isSelected = 1;
+                }
+
+                //actualQuestion().answer = selectedAnswer;
+
+                // Označení otázky jako zodpovězené
+                // questionPicker.setUnsetQuestionAsAnswered(selectedAnswer !== undefined);
+            }
+
+            const registerHandlers = () => {
+                // ZMĚNA ZAŠKRNUTÍ CHECKBOXU - OZNAČENÍ OTÁZKY
+                $(selectors.markQuestionCheckbox).change((e) => {
+                    const isChecked = e.currentTarget.checked;
+                    $(e.currentTarget).prop("checked", isChecked);
+
+                    questionPicker.markUnmarkActualQuestion(isChecked);
+                    actualQuestion().marked = isChecked;
+                });
+
+                // KLIKNUTÍ NA KOŠ OTÁZEK
+                $(selectors.basketScopes).on("click", (e) => {
+                    const basketScopeIndex = $(e.currentTarget).data(selectors.basketScopeIndexData);
+                    questionPicker.selectQuestion(basketScopeIndex, 0);
+                });
+
+                // TLAČÍTKO "DALŠÍ"
+                $(selectors.nextQuestionButton).on("click", () => {
+                    if (actualQuestionIndex === basketScopes[actualBasketScopeIndex].questions.length - 1) {
+                        questionPicker.selectQuestion(actualBasketScopeIndex + 1, 0);
+                    } else {
+                        questionPicker.selectQuestion(actualBasketScopeIndex, actualQuestionIndex + 1);
+                    }
+                });
+
+                // TLAČÍTKO "PŘEDCHOZÍ"
+                $(selectors.previousQuestionButton).on("click", () => {
+                    if (actualQuestionIndex === 0) {
+                        const previsouBasketIndex = actualBasketScopeIndex - 1;
+                        questionPicker.selectQuestion(previsouBasketIndex, basketScopes[previsouBasketIndex].questions.length - 1);
+                    } else {
+                        questionPicker.selectQuestion(actualBasketScopeIndex, actualQuestionIndex - 1);
+                    }
+                });
+
+                // TLAČÍTKO "UKONČIT TEST A VYHODNOTIT"
+                $(selectors.finishAndEvaluateTestButton).on("click", () => {
+                    //jirak - vyhodnoceni
+                    //alert('vyhodnoceni');
+                    confirmTestEvaluationModal.showModal();
+                });
+
+                // OVLÁDÁNÍ TLAČÍTKY
+                $(document).keydown((e) => {
+                    let selectedElement;
+                    switch (e.code) {
+                        case "ArrowRight":
+                            selectedElement = $(selectors.nextQuestionButton);
+                            questionPicker.scrollButtonClick({ target: null }, -1)
+                            break;
+                        case "ArrowLeft":
+                            selectedElement = $(selectors.previousQuestionButton);
+                            questionPicker.scrollButtonClick({ target: null }, 1)
+                            break;
+                        case "KeyU":
+                            selectedElement = $(selectors.finishAndEvaluateTestButton);
+                            break;
+                        case "KeyO":
+                            selectedElement = $(selectors.markQuestionCheckbox);
+                            break;
+                        default:
+                            return;
+                    }
+                    if (!$(selectedElement).hasClass('button-disabled')) {
+                        $(selectedElement).trigger("click");
+
+                    }
+                });
+
+                this.getQuestionPicker = () => questionPicker;
+            }
+
+            const init = () => {
+                sampleTest = sampleTestObj;
+                basketScopes = sampleTest.basketScopes;
+                confirmTestEvaluationModal = new ConfirmationModal(confirmTestEvaluationModalId, undefined, prepareFormAndSendToEvaluation, undefined);
+                testTimeExpiredModal = new ConfirmationModal(testTimeExpiredModalId, undefined, undefined, prepareFormAndSendToEvaluation);
+                timerCountDown = new TimerCountDown(sampleTest.testTime, testTimeExpiredModal.showModal);
+                questionPicker = new QuestionPicker(handleOnQuestionSelect);
+                answers = new Answers(false, handleOnAnswerClick);
+                helpModal = new HelpModal();
+
+                registerHandlers();
+            }
+
+            init();
+        }
+
+    </script>
+
+
+</head>
+<body>
+    
+
+    <div class="page-wrapper">
+        
+
+<div b-8eglzs88jw class="content-test">
+    
+
+
+
+<div b-od5pcmojb7 class="test-header">
+    <div b-od5pcmojb7 class="test-header-background"></div>
+
+    <h2 b-od5pcmojb7 class="test-header-title">Zkušební test</h2>
+
+    <div b-od5pcmojb7 id="countdown-wrappper">
+        <span b-od5pcmojb7 id="countdown-title">Zbývající čas:</span>
+        <span b-od5pcmojb7 data-minutes-for-test="30" id="countdown-text">0:00:00</span>
+        <span b-od5pcmojb7 id="countdown-progressbar"></span>
+    </div>
+
+    <span b-od5pcmojb7>
+        <span b-od5pcmojb7>Zodpovězeno</span>
+        <span b-od5pcmojb7 id="test-header-counter">
+            <span b-od5pcmojb7 id="answered-Questions-count">0</span>
+            <span b-od5pcmojb7>z</span>
+            <span b-od5pcmojb7 id="total-question-count">
+                25
+            </span>
+        </span>
+    </span>
+</div>
+
+
+<div b-od5pcmojb7 id="question-picker">
+
+        <input b-od5pcmojb7 class="button button-grey button-scroll" data-scroll-direction="1" disabled id="scroll-left-button" type="button" value="<">
+    <div b-od5pcmojb7 id="question-slider-view">
+        <div b-od5pcmojb7 id="question-slider-content">
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="0">
+                                                            1
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="1">
+                                                            2
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="2">
+                                                            3
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="3">
+                                                            4
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="4">
+                                                            5
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="5">
+                                                            6
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="6">
+                                                            7
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="7">
+                                                            8
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="8">
+                                                            9
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="0" data-question-index="9">
+                                                            10
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="1" data-question-index="0">
+                                                            11
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="1" data-question-index="1">
+                                                            12
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="1" data-question-index="2">
+                                                            13
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="1" data-question-index="3">
+                                                            14
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="2" data-question-index="0">
+                                                            15
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="2" data-question-index="1">
+                                                            16
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="2" data-question-index="2">
+                                                            17
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="3" data-question-index="0">
+                                                            18
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="3" data-question-index="1">
+                                                            19
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="3" data-question-index="2">
+                                                            20
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="4" data-question-index="0">
+                                                            21
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="4" data-question-index="1">
+                                                            22
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="5" data-question-index="0">
+                                                            23
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="5" data-question-index="1">
+                                                            24
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+                                <div b-od5pcmojb7 class="question-slider-basketscope">
+                                                        <button b-od5pcmojb7 class="button button-question button-grey" data-basketscope-index="6" data-question-index="0">
+                                                            25
+                                                            <img b-od5pcmojb7 alt="question-mark" class="mark-icon" src="/img/Pages/Tests/SampleTest/QuestionMark.png" style="display: none" />
+                                                        </button>
+                                </div>
+        </div>
+    </div>
+
+
+        <input b-od5pcmojb7 class="button button-grey button-scroll" data-scroll-direction="-1" id="scroll-right-button" type="button" value=">">
+</div>
+
+
+<div b-od5pcmojb7 id="test-body">
+    <div b-od5pcmojb7 id="test-left-panel">
+        <div b-od5pcmojb7 id="actual-question-header">
+            <h2 b-od5pcmojb7>
+                Otázka č. <span b-od5pcmojb7 id="actual-question-number" />
+            </h2>
+            <span b-od5pcmojb7>(<span b-od5pcmojb7 id="question-points"></span> body)</span>
+        </div>        
+        <div b-od5pcmojb7 id="mark-question-container">
+            <label b-od5pcmojb7>Označit otázku</label>
+            <input b-od5pcmojb7 id="mark-question-checkbox" type="checkbox">
+        </div>
+
+        <h4 b-od5pcmojb7>Výběr oblasti otázek</h4>
+        <div b-od5pcmojb7 id="question-basketscope-container">
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="0">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Znalost pravidel provozu na pozemn&#xED;ch komunikac&#xED;ch (10)</span>
+                                </div>
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="1">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Znalost z&#xE1;sad bezpe&#x10D;n&#xE9; j&#xED;zdy a ovl&#xE1;d&#xE1;n&#xED; vozidla (4)</span>
+                                </div>
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="2">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Znalost dopravn&#xED;ch zna&#x10D;ek, sv&#x11B;teln&#xFD;ch a akustick&#xFD;ch sign&#xE1;l&#x16F; (3)</span>
+                                </div>
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="3">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Schopnost &#x159;e&#x161;en&#xED; dopravn&#xED;ch situac&#xED; (3)</span>
+                                </div>
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="4">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Znalost p&#x159;edpis&#x16F; o podm&#xED;nk&#xE1;ch provozu vozidel (2)</span>
+                                </div>
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="5">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Znalost p&#x159;edpis&#x16F; souvisej&#xED;c&#xED;ch s provozem (2)</span>
+                                </div>
+                                <div b-od5pcmojb7 class="question-basketscope button-img" data-basketscope-index="6">
+                                    <span b-od5pcmojb7><img b-od5pcmojb7 alt="Bullet" src="/img/Pages/Tests/SampleTest/Bullet.png" /></span>
+                                    <span b-od5pcmojb7>Znalost zdravotnick&#xE9; p&#x159;&#xED;pravy (1)</span>
+                                </div>
+        </div>
+    </div>
+    <div b-od5pcmojb7 id="test-right-panel">        
+        <div b-od5pcmojb7 id="question-answer-container">
+        </div>
+
+        <div b-od5pcmojb7 class="navigation-container">
+            <input b-od5pcmojb7 class="button button-grey button-navigation" id="previous-question-button" type="submit" value="Předchozí">
+            <input b-od5pcmojb7 class="button button-grey button-navigation" id="finish-and-evaluate-test-button" type="submit" value="Ukončit a vyhodnotit test">
+            <input b-od5pcmojb7 class="button button-navigation button-orange" id="next-question-button" type="submit" value="Další">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div b-od5pcmojb7 id="help-modal" style="display:none">
+    <div b-od5pcmojb7 class="margin-auto flex-column">
+        <img b-od5pcmojb7 src="/img/Pages/Tests/SampleTest/ControlsHelp.png" alt="Help modal image" />
+        <button b-od5pcmojb7 id="close-button" class="button button-grey">Close</button>
+    </div>
+</div>
+
+<div b-od5pcmojb7 class="confirm-modal" id="confirm-modal-TestEvaluationModalId" style="display: none">
+    <div b-od5pcmojb7 class="margin-auto">
+        <div b-od5pcmojb7 class="confirm-modal-header">
+            <div b-od5pcmojb7 class="confirm-modal-question">Opravdu chcete vyhodnotit test?</div>
+            <img alt="Close Icon" class="confirm-modal-close-button button-img" id="confirm-modal-close-button-TestEvaluationModalId" src="/img/Pages/CloseCross.png">
+        </div>
+
+        <div b-od5pcmojb7 class="confirm-modal-content">
+            <input b-od5pcmojb7 class="button button-confirm-modal button-grey" id="button-cancel-TestEvaluationModalId" type="submit" value="Pokračovat v testu">
+            <input b-od5pcmojb7 class="button button-confirm-modal button-orange" id="button-ok-TestEvaluationModalId" 
+             type="submit" value="Vyhodnotit test">
+        </div>
+    </div>
+</div>
+
+
+<div b-od5pcmojb7 class="confirm-modal" id="confirm-modal-TestTimeExpiredModalId" style="display: none">
+    <div b-od5pcmojb7 class="margin-auto">
+        <div b-od5pcmojb7 class="confirm-modal-header">
+            <div b-od5pcmojb7 class="confirm-modal-question">Čas vypršel</div>
+            <img alt="Close Icon" class="confirm-modal-close-button button-img" id="confirm-modal-close-button-TestTimeExpiredModalId" src="/img/Pages/CloseCross.png">
+        </div>
+
+        <div b-od5pcmojb7 class="confirm-modal-content">
+            <input b-od5pcmojb7 class="button button-confirm-modal button-grey" id="button-cancel-TestTimeExpiredModalId" type="submit" value="Cancel">
+            <input b-od5pcmojb7 class="button button-confirm-modal button-orange" id="button-ok-TestTimeExpiredModalId" type="submit" value="OK">
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+<div b-8eglzs88jw class="footer-background"></div>
+<footer b-8eglzs88jw class="footer test-footer">
+    <a b-8eglzs88jw class="test-footer-item" id="close-tab-button" href="//Home">Zpět na úvodní obrazovku</a>
+    <span b-8eglzs88jw class="footer-item-divider">|</span>
+    <a b-8eglzs88jw class="test-footer-item" id="help-modal-button" href="#">Nápověda</a>
+</footer>
+
+
+    </div>
+</body>
+</html>

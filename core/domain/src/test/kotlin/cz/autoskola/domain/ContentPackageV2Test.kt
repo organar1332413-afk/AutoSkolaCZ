@@ -11,6 +11,20 @@ class ContentPackageV2Test {
     private fun pack(question: OfficialQuestion = question(), readiness: List<GroupReadiness> = emptyList(), sample: Boolean = false) =
         QuestionPackage(ContentManifest(2, "TEST", "2026-09-01", source, "2026-09-01T00:00:00Z", sample, groupReadiness = readiness), listOf(question))
 
+    @Test fun recordedPublicBulletinSliceDecodesAndRemainsExamGated() {
+        val text = javaClass.getResourceAsStream("/public-slice-v2.json")!!.bufferedReader().use { it.readText() }
+        val decoded = ContentPackageCodec.decode(text)
+        PackageValidator.validate(decoded)
+        assertEquals(28, decoded.questions.size)
+        assertTrue(decoded.questions.any { q -> q.answers.any { it.textCs.isEmpty() } && q.media.any { it.answerCode != null } })
+        assertTrue(decoded.questions.any { q -> q.media.any { it.mimeType == "video/mp4" } })
+        assertTrue(decoded.manifest.groupReadiness.all { !it.eligibilityComplete })
+        LicenceGroup.entries.forEach { group ->
+            assertNotEquals(ExamAvailability.READY,
+                GroupReadinessPolicy.availability(decoded, ExamConfigurationProvider.forGroup(group)))
+        }
+    }
+
     @Test fun v1SampleStillParses() {
         val text = javaClass.getResourceAsStream("/sample-v1.json")!!.bufferedReader().use { it.readText() }
         val decoded = ContentPackageCodec.decode(text)

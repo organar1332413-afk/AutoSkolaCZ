@@ -29,7 +29,11 @@ object PackageValidator {
             require(q.category in ExamConfigurationProvider.categories)
             require(q.textCs.isNotBlank() && q.answers.size in 2..3)
             require(q.answers.map { it.code } == listOf("A", "B", "C").take(q.answers.size))
-            require(q.answers.all { it.textCs.isNotBlank() } && q.answers.count { it.correct } == 1)
+            // The official Bulletin also publishes image-only answer options.
+            // Their exact Czech answer text is empty; the answer image carries the content.
+            require(q.answers.all { it.textCs.isNotBlank() || q.media.any { media ->
+                media.answerCode == it.code && media.mimeType.startsWith("image/")
+            } } && q.answers.count { it.correct } == 1)
             require(q.points == null && m.sample || q.points in listOf(1, 2, 4))
             require(q.licenceGroups.all { code -> LicenceGroup.entries.any { it.code == code } })
             require(q.licenceGroups.distinct().size == q.licenceGroups.size)
