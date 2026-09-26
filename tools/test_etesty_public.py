@@ -162,9 +162,32 @@ class PublicAdapterTests(unittest.TestCase):
             self.assertEqual(first_archive, second_archive)
             self.assertGreater(len(first_archive["mediaParts"]), 1)
             file.unlink()
-            self.assertEqual(len(validate(snap, directory)), 2)
+            self.assertEqual(len(validate(snap, directory)), 3)
             with self.assertRaises(ValueError):
                 build(snap, directory)
+
+    def test_raw_source_hash_and_inventory_integrity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            url = "https://etesty.md.gov.cz/ro/Bulletin"
+            cache = root / "raw-cache" / sha(url.encode())[:2] / sha(url.encode())
+            cache.parent.mkdir(parents=True)
+            cache.write_bytes(b"original source")
+            image = root / "media" / "example.png"
+            image.parent.mkdir()
+            image.write_bytes(b"image bytes")
+            entry = {"path": "media/example.png", "sha256": sha(image.read_bytes()),
+                     "mimeType": "image/png", "size": image.stat().st_size}
+            snapshot = {"snapshot": {"rawPages": [{"sourceUrl": url, "sha256": sha(cache.read_bytes())}]},
+                        "questions": [], "quarantine": [], "mediaInventory": [entry]}
+            self.assertEqual(validate(snapshot, root), [])
+            cache.write_bytes(b"changed source")
+            self.assertTrue(any("Raw source missing/hash mismatch" in p for p in validate(snapshot, root)))
+            cache.write_bytes(b"original source")
+            snapshot["mediaInventory"] = [entry, entry]
+            self.assertTrue(any("Duplicate media inventory entry" in p for p in validate(snapshot, root)))
+            snapshot["mediaInventory"] = [{**entry, "path": "../escape.png"}]
+            self.assertTrue(any("Unsafe media path" in p for p in validate(snapshot, root)))
 
 
 if __name__ == "__main__":

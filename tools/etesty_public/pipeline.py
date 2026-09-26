@@ -123,9 +123,12 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
         correct = [index for index, answer in enumerate(source_answers)
                    if answer["answerId"] == payload["correctAnswerId"]]
         if (payload["questionCode"] != code or payload["id"] != item["internalSourceId"]
+                or payload["questionText"] != item["textCs"]
                 or payload["pointsCount"] != item["points"]
                 or correct != [i for i, a in enumerate(item["answers"]) if a["correct"]]
-                or len(source_answers) != len(item["answers"])):
+                or len(source_answers) != len(item["answers"])
+                or any(a["textCs"] != source_answer["multilingualAnswerTexts"].get("cs")
+                       for a, source_answer in zip(item["answers"], source_answers) if a["textCs"])):
             conflicts.append(f"Question web payload conflicts with Bulletin: {code}/{url}")
             continue
         item["sourceRefs"].append(url)
@@ -158,9 +161,13 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
                                         if answer["answerId"] == item["correctAnswerId"]]
                     bulletin_correct = [i for i, answer in enumerate(bulletin_item["answers"]) if answer["correct"]]
                     if (item["id"] != bulletin_item["internalSourceId"]
+                            or item["questionText"] != bulletin_item["textCs"]
                             or item["pointsCount"] != bulletin_item["points"]
-                            or official_correct != bulletin_correct):
-                        conflicts.append(f"Generator/Bulletin ID, points or correct-answer conflict: {group}/{code}")
+                            or official_correct != bulletin_correct
+                            or any(a["textCs"] != source_answer["multilingualAnswerTexts"].get("cs")
+                                   for a, source_answer in zip(bulletin_item["answers"], item["questionAnswers"])
+                                   if a["textCs"])):
+                        conflicts.append(f"Generator/Bulletin content conflict: {group}/{code}")
                 if code in selected:
                     previous = evidence[code].get(group)
                     evidence[code][group] = {**observation, "observedCount": 1 + (previous["observedCount"] if previous else 0)}
@@ -273,6 +280,29 @@ def validate(snapshot, root):
     problems = list(snapshot.get("quarantine", []))
     if len(set(ids)) != len(ids):
         problems.append("Duplicate official ID")
+    inventory = {}
+    for media in snapshot["mediaInventory"]:
+        path = media["path"]
+        if (not re.fullmatch(r"media/[A-Za-z0-9_-]+\.[A-Za-z0-9]+", path)
+                or media["mimeType"] != MIME.get(Path(path).suffix.lower())):
+            problems.append(f"Unsafe media path or MIME: {path}")
+            continue
+        if path in inventory:
+            problems.append(f"Duplicate media inventory entry: {path}")
+        inventory[path] = media
+        file = Path(root) / path
+        if not file.is_file() or sha(file.read_bytes()) != media["sha256"]:
+            problems.append(f"Media inventory missing/hash mismatch: {path}")
+    for record in snapshot["snapshot"].get("rawPages", []):
+        url = record["sourceUrl"]
+        parsed = urlparse(url)
+        if parsed.scheme != "https" or parsed.netloc != "etesty.md.gov.cz":
+            problems.append(f"Unsafe raw source: {url}")
+            continue
+        key = sha(url.encode())
+        file = Path(root) / "raw-cache" / key[:2] / key
+        if not file.is_file() or sha(file.read_bytes()) != record["sha256"]:
+            problems.append(f"Raw source missing/hash mismatch: {url}")
     for q in questions:
         if q["category"] not in [v[0] for v in AREAS.values()] or not q["textCs"].strip():
             problems.append(f"Invalid category or Czech text: {q['officialId']}")
@@ -285,6 +315,10 @@ def validate(snapshot, root):
         if q["category"] in SECTIONS and q["points"] != SECTIONS[q["category"]][1]:
             problems.append(f"Points/section mismatch: {q['officialId']}")
         for m in q["media"]:
+            if m["path"] not in inventory or any(m[k] != inventory[m["path"]][k]
+                                                    for k in ("sha256", "mimeType")):
+                problems.append(f"Unreviewed media reference: {q['officialId']}/{m['path']}")
+                continue
             file = Path(root) / m["path"]
             if not file.is_file() or sha(file.read_bytes()) != m["sha256"]:
                 problems.append(f"Media missing/hash mismatch: {q['officialId']}/{m['path']}")
@@ -337,6 +371,8 @@ def make_audit(snapshot, root):
     media = snapshot["mediaInventory"]
     issues = validate(snapshot, root)
     observed = {g: len({o["officialId"] for o in snapshot["observations"] if o["licenceGroup"] == g}) for g in GROUPS}
+    explicit = sum(e["evidenceType"] == "OFFICIAL_PUBLIC_EXPLICIT" for q in questions for e in q["eligibilityEvidence"])
+    observed_mappings = sum(e["evidenceType"] == "OFFICIAL_GENERATOR_OBSERVED" for q in questions for e in q["eligibilityEvidence"])
     return {"publicationDate": snapshot["snapshot"]["publicationDate"],
             "retrievedAt": snapshot["snapshot"]["retrievedAt"],
             "discovered": snapshot["snapshot"]["totalDiscovered"], "downloaded": len(questions),
@@ -355,8 +391,11 @@ def make_audit(snapshot, root):
             "videos": sum(m["mimeType"].startswith("video/") for m in media),
             "mediaBytes": sum(m["size"] for m in media), "missingMedia": snapshot["quarantine"],
             "crawlFailures": snapshot["quarantine"],
-            "explicitMappings": 0, "observedMappings": sum(len(q["eligibilityEvidence"]) for q in questions),
-            "unknownMappings": len(questions) * len(GROUPS) - sum(len(q["eligibilityEvidence"]) for q in questions),
+            "explicitMappings": explicit, "observedMappings": observed_mappings,
+            "unknownMappings": len(questions) * len(GROUPS) - explicit - observed_mappings,
+            "generatorObservations": len(snapshot["observations"]),
+            "imageOnlyWebPayloadChecks": sum(bool(q.get("apiRawSha256")) for q in questions),
+            "officialWebMediaHashChecks": sum(bool(m.get("officialWebSha256")) for m in media),
             "observedUniqueByGroup": observed, "rawPages": len(snapshot["snapshot"]["rawPages"]),
             "saturation": snapshot.get("saturation", {}),
             "rawPagesSha256": sha(encode(snapshot["snapshot"]["rawPages"])),
