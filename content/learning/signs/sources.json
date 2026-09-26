@@ -1,0 +1,70 @@
+{
+  "md-vl-6-1-2019": {
+    "title": "VL 6.1 Svislé dopravní značky, červenec 2019",
+    "url": "https://pjpk.rsd.cz/data/USR_001_2_10_VL/VL_6.1_2019_FINAL.pdf",
+    "type": "ministry-approved-graphic-specification",
+    "versionDate": "2019-07-19",
+    "applicableFrom": "2019-08-01",
+    "applicableTo": null,
+    "retrievedAt": "2026-09-26",
+    "checkedAt": "2026-09-26",
+    "sha256": "f0deebfe11495ce1fa17fb28773e38b2e4efef93ec768cd15e7e378f33aa251d",
+    "scope": "Graphic specifications and printed index only; not legal meaning or a complete consolidated decree"
+  },
+  "md-vl-6-1-2025-change-1": {
+    "title": "VL 6.1 Svislé dopravní značky, změna č. 1, březen 2025",
+    "url": "https://pjpk.rsd.cz/data/USR_001_2_10_VL/VL_6.1_Zmena_c._1_brezen_2025.pdf",
+    "type": "ministry-approved-graphic-specification",
+    "versionDate": "2025-03-15",
+    "applicableFrom": "2025-03-15",
+    "applicableTo": null,
+    "retrievedAt": "2026-09-26",
+    "checkedAt": "2026-09-26",
+    "sha256": "9f5a8d99b3362e82cce497b3a5046ffa9435684b3028b3aafec899082424029d",
+    "scope": "Replacement and additional graphic sheets; not a consolidated legal list"
+  },
+  "md-sign-changes-2025": {
+    "title": "Nové jednodušší značení — od 1. 7. platí novela vyhlášky upravující pravidla provozu",
+    "url": "https://md.gov.cz/Media/Media-a-tiskove-zpravy/TEST",
+    "type": "ministry-explanation",
+    "versionDate": "2025-06-27",
+    "applicableFrom": "2025-07-01",
+    "applicableTo": null,
+    "retrievedAt": "2026-09-26",
+    "checkedAt": "2026-09-26",
+    "scope": "Explanatory summary of selected amendments; verify exact legal conditions in the decree"
+  },
+  "decree-294-2015": {
+    "title": "Vyhláška č. 294/2015 Sb., aktuální znění",
+    "url": "https://e-sbirka.gov.cz/sb/2015/294",
+    "type": "decree",
+    "versionDate": null,
+    "applicableFrom": null,
+    "applicableTo": null,
+    "retrievedAt": "2026-09-26",
+    "checkedAt": "2026-09-26",
+    "scope": "Legal sign meanings; per-sign consolidation and current amendments still require review"
+  },
+  "act-361-2000": {
+    "title": "Zákon č. 361/2000 Sb., aktuální znění",
+    "url": "https://e-sbirka.gov.cz/sb/2000/361",
+    "type": "law",
+    "versionDate": null,
+    "applicableFrom": null,
+    "applicableTo": null,
+    "retrievedAt": "2026-09-26",
+    "checkedAt": "2026-09-26",
+    "scope": "General traffic duties; specific sections to be attached during lesson review"
+  },
+  "decree-205-2025": {
+    "title": "Vyhláška č. 205/2025 Sb., novela vyhlášky č. 294/2015 Sb.",
+    "url": "https://e-sbirka.gov.cz/sb/2025/205",
+    "type": "decree",
+    "versionDate": "2025-06-20",
+    "applicableFrom": "2025-07-01",
+    "applicableTo": null,
+    "retrievedAt": "2026-09-26",
+    "checkedAt": "2026-09-26",
+    "scope": "2025 legal changes must be reconciled with the graphic inventory"
+  }
+}

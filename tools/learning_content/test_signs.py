@@ -1,0 +1,77 @@
+import copy
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from tools.learning_content.signs import CONTENT, canonical_bytes, parse_index, validate, validate_cards
+
+
+class SignInventoryTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data = json.loads((CONTENT / "catalog.json").read_text(encoding="utf-8"))
+        cls.sources = json.loads((CONTENT / "sources.json").read_text(encoding="utf-8"))
+        cls.cards = json.loads((CONTENT / "curated.json").read_text(encoding="utf-8"))
+
+    def test_committed_inventory_and_audit(self):
+        audit = validate(self.data, self.sources)
+        self.assertEqual(canonical_bytes(audit), (CONTENT / "audit.json").read_bytes())
+        self.assertEqual(278, audit["total"])
+        self.assertEqual(278, audit["csTitles"])
+        self.assertEqual(0, audit["bundledImages"])
+
+    def test_duplicate_code_rejected(self):
+        data = copy.deepcopy(self.data)
+        data["signs"].append(copy.deepcopy(data["signs"][0]))
+        data["inventoryCount"] += 1
+        with self.assertRaisesRegex(ValueError, "Duplicate sign code"):
+            validate(data, self.sources)
+
+    def test_empty_czech_title_and_invalid_category_rejected(self):
+        for key, value, error in (("titleCs", "", "Empty Czech"), ("category", "unknown", "Invalid category")):
+            with self.subTest(key=key):
+                data = copy.deepcopy(self.data)
+                data["signs"][0][key] = value
+                with self.assertRaisesRegex(ValueError, error):
+                    validate(data, self.sources)
+
+    def test_unreviewed_translation_cannot_replace_official_czech(self):
+        data = copy.deepcopy(self.data)
+        data["signs"][0]["titleRu"] = "Предупреждение"
+        with self.assertRaisesRegex(ValueError, "Unreviewed explanation"):
+            validate(data, self.sources)
+
+    def test_source_and_image_integrity(self):
+        data = copy.deepcopy(self.data)
+        data["signs"][0]["sourceIds"] = ["absent"]
+        with self.assertRaisesRegex(ValueError, "Missing source"):
+            validate(data, self.sources)
+        data = copy.deepcopy(self.data)
+        data["signs"][0]["graphic"]["path"] = "../escape.png"
+        with self.assertRaisesRegex(ValueError, "Unsafe or missing image"):
+            validate(data, self.sources)
+
+    def test_index_wrap_and_variant_kept_without_fabrication(self):
+        text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8
+        signs = parse_index(text)
+        self.assertEqual(["B 3"], [s["code"] for s in signs])
+        self.assertEqual("Zákaz vozidel", signs[0]["titleCs"])
+
+    def test_deterministic_json(self):
+        self.assertEqual(canonical_bytes(self.data), (CONTENT / "catalog.json").read_bytes())
+        self.assertEqual(canonical_bytes(self.cards), (CONTENT / "curated.json").read_bytes())
+
+    def test_curated_cards_have_provenance_and_all_languages(self):
+        validate_cards(self.data, self.cards, self.sources)
+        self.assertEqual(6, len(self.cards["cards"]))
+
+    def test_question_links_require_existing_official_id(self):
+        cards = copy.deepcopy(self.cards)
+        cards["cards"][0]["questionOfficialIds"] = ["not-in-bank"]
+        with self.assertRaisesRegex(ValueError, "lacks bank evidence"):
+            validate_cards(self.data, cards, self.sources, {"RP000001"})
+
+
+if __name__ == "__main__":
+    unittest.main()

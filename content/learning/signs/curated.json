@@ -1,0 +1,83 @@
+{
+  "cards": [
+    {
+      "code": "P 1",
+      "meaningCs": "Upozorňuje mimo obec na křižovatku a označuje hlavní pozemní komunikaci.",
+      "memoryCs": "Tvar hlavní silnice se může lišit od přímého směru.",
+      "mistakeCs": "Nepředpokládejte, že hlavní silnice vždy pokračuje rovně.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Предупреждает вне населённого пункта о перекрёстке и обозначает главную дорогу. Табличка может уточнять её направление.",
+      "simpleCs": "Před křižovatkou sledujte, kudy vede hlavní silnice; její průběh může upřesnit dodatková tabulka.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Попереджає поза населеним пунктом про перехрестя й позначає головну дорогу. Табличка може уточнювати її напрямок."
+    },
+    {
+      "code": "B 4",
+      "meaningCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
+      "memoryCs": "B 4 se liší od B 6 (zákaz vjezdu traktorů).",
+      "mistakeCs": "Nezaměňujte B 4 a B 6.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Запрещает въезд грузовых автомобилей; уточнение касается и транспорта, конструктивно производного от грузовиков. Учитывайте дополнительную табличку.",
+      "simpleCs": "Před vjezdem ověřte, zda zákaz platí pro druh vašeho vozidla a případnou dodatkovou tabulku.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Забороняє в’їзд вантажних автомобілів; уточнення стосується й транспорту, конструктивно похідного від вантажівок. Враховуйте додаткову табличку."
+    },
+    {
+      "code": "IP 4a",
+      "meaningCs": "Označuje směr jízdy vozidel na jednosměrné pozemní komunikaci; nově lze vyznačit povolený protisměrný vjezd cyklistů přímo na značce.",
+      "memoryCs": "Jednosměrka nemusí vylučovat protisměrný pohyb cyklistů.",
+      "mistakeCs": "Nepřehlédněte vyznačenou výjimku pro cyklisty.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Обозначает направление движения по односторонней дороге. Если это указано на знаке, велосипедистам разрешено движение навстречу.",
+      "simpleCs": "V jednosměrné ulici věnujte pozornost symbolu cyklisty: cyklisté mohou mít povolený protisměr.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Позначає напрямок руху односторонньою дорогою. Якщо це вказано на знаку, велосипедистам дозволено зустрічний рух."
+    },
+    {
+      "code": "IP 10a",
+      "meaningCs": "Označuje komunikaci, která končí nebo po které nelze dále pokračovat; může vyznačit pokračování pro cyklisty.",
+      "memoryCs": "Slepá pro motorová vozidla nemusí být slepá pro cyklisty.",
+      "mistakeCs": "Neodvozujte průjezdnost pro své vozidlo jen z toho, že cyklista může pokračovat.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Обозначает тупиковую дорогу. Если знак это показывает, велосипедисты могут продолжить движение.",
+      "simpleCs": "Slepá ulice může být průjezdná pro jízdní kola, pokud to značka ukazuje.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Позначає тупикову дорогу. Якщо знак це показує, велосипедисти можуть продовжити рух."
+    },
+    {
+      "code": "IZ 7a",
+      "meaningCs": "Označuje oblast nízkoemisní zóny; vjezd motorových vozidel může podléhat nízkoemisnímu poplatku.",
+      "memoryCs": "Nová podoba již nepoužívá emisní plaketu na značce.",
+      "mistakeCs": "Nezaměňujte možnost poplatku za automatický zákaz každého vjezdu.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Обозначает зону с экологическими ограничениями. Въезд может облагаться сбором; проверьте условия для своего автомобиля.",
+      "simpleCs": "Před vjezdem do emisní zóny ověřte podmínky pro své vozidlo v uvedeném informačním systému.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Позначає зону з екологічними обмеженнями. В’їзд може обкладатися збором; перевірте умови для свого автомобіля."
+    },
+    {
+      "code": "IZ 7b",
+      "meaningCs": "Označuje konec nízkoemisní zóny.",
+      "memoryCs": "Sledujte rozdíl mezi začátkem IZ 7a a koncem IZ 7b.",
+      "mistakeCs": "Nezaměňujte značku konce zóny za její začátek.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Обозначает конец зоны с экологическими ограничениями.",
+      "simpleCs": "Za touto značkou končí oblast vyznačené emisní zóny.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Позначає кінець зони з екологічними обмеженнями."
+    }
+  ],
+  "schemaVersion": 1
+}

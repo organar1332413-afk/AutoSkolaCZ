@@ -1,0 +1,54 @@
+package cz.autoskola.app.feature.catalog
+
+import android.content.Context
+import org.json.JSONObject
+
+/** Official Czech index and separately authored source-backed teaching copy. */
+data class SignEntry(
+    val code: String,
+    val titleCs: String,
+    val category: String,
+    val sourceUrl: String,
+    val graphicStatus: String,
+    val meaningCs: String?,
+    val simpleCs: String?,
+    val ru: String?,
+    val uk: String?,
+)
+
+object SignCatalog {
+    fun load(context: Context): List<SignEntry> {
+        fun asset(path: String) = JSONObject(context.assets.open(path).bufferedReader().use { it.readText() })
+        val inventory = asset("signs/catalog.json")
+        val cards = asset("signs/curated.json").getJSONArray("cards")
+        val sources = asset("signs/sources.json")
+        val byCode = (0 until cards.length()).associate { index ->
+            cards.getJSONObject(index).let { it.getString("code") to it }
+        }
+        val entries = inventory.getJSONArray("signs")
+        return (0 until entries.length()).map { index ->
+            val sign = entries.getJSONObject(index)
+            val card = byCode[sign.getString("code")]
+            val sourceId = card?.getJSONArray("sourceIds")?.getString(0)
+                ?: sign.getJSONArray("sourceIds").getString(0)
+            SignEntry(
+                code = sign.getString("code"),
+                titleCs = sign.getString("titleCs"),
+                category = sign.getString("category"),
+                sourceUrl = sources.getJSONObject(sourceId).getString("url"),
+                graphicStatus = sign.getJSONObject("graphic").getString("status"),
+                meaningCs = card?.getString("meaningCs"),
+                simpleCs = card?.getString("simpleCs"),
+                ru = card?.getString("ru"),
+                uk = card?.getString("uk"),
+            )
+        }
+    }
+
+    fun search(entries: List<SignEntry>, query: String, category: String?): List<SignEntry> =
+        entries.filter { sign ->
+            (category == null || sign.category == category) &&
+                (query.isBlank() || sign.code.contains(query.trim(), ignoreCase = true) ||
+                    sign.titleCs.contains(query.trim(), ignoreCase = true))
+        }
+}

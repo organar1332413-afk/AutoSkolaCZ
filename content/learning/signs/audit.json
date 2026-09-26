@@ -1,0 +1,19 @@
+{
+  "bundledImages": 0,
+  "categories": {
+    "additional_panel": 29,
+    "information_direction": 39,
+    "information_other": 27,
+    "information_traffic": 38,
+    "information_zone": 22,
+    "mandatory": 33,
+    "priority": 8,
+    "prohibition": 40,
+    "warning": 42
+  },
+  "csTitles": 278,
+  "licenseReviewRequired": 278,
+  "ruTitles": 0,
+  "total": 278,
+  "ukTitles": 0
+}
