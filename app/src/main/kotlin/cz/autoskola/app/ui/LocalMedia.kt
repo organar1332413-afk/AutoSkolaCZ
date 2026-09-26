@@ -114,7 +114,6 @@ private fun LocalVideo(file: File) {
                 useController = true
                 controllerAutoShow = true
                 resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FIT
-                keepContentOnPlayerReset = true
                 this.player = player
             }
         },
