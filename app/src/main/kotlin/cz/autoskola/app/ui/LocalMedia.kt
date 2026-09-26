@@ -78,7 +78,7 @@ fun LocalMedia(media: MediaReference) {
     }
 }
 
-@OptIn(UnstableApi::class)
+@UnstableApi
 @Composable
 private fun LocalVideo(file: File) {
     val context = LocalContext.current
