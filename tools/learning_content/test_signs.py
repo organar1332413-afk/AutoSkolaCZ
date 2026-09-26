@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.learning_content.signs import CONTENT, canonical_bytes, parse_index, validate, validate_cards
+from tools.learning_content.signs import CONTENT, canonical_bytes, parse_index, validate, validate_cards, validate_guide
 
 
 class SignInventoryTest(unittest.TestCase):
@@ -13,6 +13,7 @@ class SignInventoryTest(unittest.TestCase):
         cls.data = json.loads((CONTENT / "catalog.json").read_text(encoding="utf-8"))
         cls.sources = json.loads((CONTENT / "sources.json").read_text(encoding="utf-8"))
         cls.cards = json.loads((CONTENT / "curated.json").read_text(encoding="utf-8"))
+        cls.guide = json.loads((CONTENT / "guide.json").read_text(encoding="utf-8"))
 
     def test_committed_inventory_and_audit(self):
         audit = validate(self.data, self.sources)
@@ -61,6 +62,7 @@ class SignInventoryTest(unittest.TestCase):
     def test_deterministic_json(self):
         self.assertEqual(canonical_bytes(self.data), (CONTENT / "catalog.json").read_bytes())
         self.assertEqual(canonical_bytes(self.cards), (CONTENT / "curated.json").read_bytes())
+        self.assertEqual(canonical_bytes(self.guide), (CONTENT / "guide.json").read_bytes())
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
@@ -71,6 +73,14 @@ class SignInventoryTest(unittest.TestCase):
         cards["cards"][0]["questionOfficialIds"] = ["not-in-bank"]
         with self.assertRaisesRegex(ValueError, "lacks bank evidence"):
             validate_cards(self.data, cards, self.sources, {"RP000001"})
+
+    def test_source_backed_guide_blocks(self):
+        validate_guide(self.guide, self.sources)
+        self.assertEqual(4, len(self.guide["blocks"]))
+        corrupted = copy.deepcopy(self.guide)
+        corrupted["blocks"][0]["provision"] = ""
+        with self.assertRaisesRegex(ValueError, "Incomplete guide block"):
+            validate_guide(corrupted, self.sources)
 
 
 if __name__ == "__main__":

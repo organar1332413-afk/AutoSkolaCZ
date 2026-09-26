@@ -13,6 +13,7 @@
   <string name="questions">Testové otázky</string>
   <string name="rules">Učení pravidel</string>
   <string name="signs">Dopravní značky</string>
+  <string name="signs_guide_title">Jak číst značky · pravidla</string>
   <string name="signs_inventory_notice">Ověřený rejstřík grafických vzorů; výklady a obrázky se doplňují po kontrole právních zdrojů a užití grafiky.</string>
   <string name="signs_search">Kód nebo český název</string>
   <string name="signs_count">Položek: %1$d</string>

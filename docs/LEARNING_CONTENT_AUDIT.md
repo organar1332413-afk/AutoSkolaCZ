@@ -3,8 +3,8 @@
 ## Existing app
 
 The 19 topic labels exist in `LearnScreen`; real production lessons do not.
-`SignsScreen` and `FirstAidScreen` currently show category labels and a pending
-message. The `Lesson`, `LessonBlock`, translation and `LessonQuestion` Room
+`SignsScreen` was a placeholder; `FirstAidScreen` still is. The `Lesson`,
+`LessonBlock`, translation and `LessonQuestion` Room
 tables can represent short topic lessons and links to immutable question
 revisions. Debug demo lessons do not count as reviewed production content.
 
@@ -12,8 +12,8 @@ The lesson model has one unstructured `source` string. It cannot track a source
 version, effective date, graphic license review, individual sign code or
 per-question tagging evidence. The separate `content/learning/signs` catalog
 keeps these fields without a risky Room migration. Its JSON is a versioned
-import candidate; the Android renderer will be enabled only for reviewed
-fields. Future production lesson import should use the existing Room records
+import candidate; the Android catalog renders the indexed Czech names and
+only six separately sourced teaching cards. Future production lesson import should use the existing Room records
 plus a source registry and evidence table, not put a huge JSON blob in UI code.
 
 ## Verified inventory, not finished teaching cards
@@ -52,8 +52,14 @@ review. Ministry commentary confirms substantive changes effective 1 July
 
 The PDF is linked and hashed, but its page graphics are not bundled into the
 APK: republication rights for each illustration have not been verified. Every
-entry therefore carries `LICENSE_REVIEW_REQUIRED`. Explanations, RU/UK
-translations and eTesty question links remain absent rather than guessed.
+entry therefore carries `LICENSE_REVIEW_REQUIRED`. Six signs have short
+CS/RU/UK explanations in `curated.json`, based on the Ministry's
+[explanation of the 2025 amendment](https://md.gov.cz/Media/Media-a-tiskove-zpravy/TEST).
+These are our teaching summaries, separate from official wording. The other
+272 signs have no explanations or translations yet. `guide.json` adds four
+short blocks from §§ 2–4 of the current decree; its one verbatim legal excerpt
+is kept in `officialTextCs`, separate from our summaries. eTesty question
+links remain absent rather than guessed.
 
 ## Rebuild and next review gate
 

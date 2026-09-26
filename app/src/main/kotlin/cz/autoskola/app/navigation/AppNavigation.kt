@@ -201,7 +201,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                                 open
                             )
                         }
-                        composable("signs") { SignsScreen() }
+                        composable("signs") { SignsScreen(settings.materialMode.translationTag) }
                         composable("first_aid") { FirstAidScreen(open) }
                         composable("aid_questions") {
                             QuestionsScreen(questions.filter { it.category=="first_aid" },status,learning) { open("question/$it") }

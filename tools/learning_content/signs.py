@@ -179,6 +179,22 @@ def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str
                 raise ValueError(f"Question link lacks bank evidence: {code} / {official_id}")
 
 
+def validate_guide(guide: dict, sources: dict) -> None:
+    if guide["reviewStatus"] != "LEGAL_TEXT_CHECKED" or guide["topic"] != "11":
+        raise ValueError("Unreviewed signs guide")
+    if not guide["sourceIds"] or any(source_id not in sources for source_id in guide["sourceIds"]):
+        raise ValueError("Guide source missing")
+    seen: set[str] = set()
+    for block in guide["blocks"]:
+        if block["id"] in seen:
+            raise ValueError("Duplicate guide block")
+        seen.add(block["id"])
+        if not all(block.get(key, "").strip() for key in ("provision", "ruleSummaryCs", "simpleCs", "ru", "uk")):
+            raise ValueError(f"Incomplete guide block: {block['id']}")
+        if block["officialTextCs"] is not None and not block["officialTextCs"].strip():
+            raise ValueError(f"Empty official legal excerpt: {block['id']}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vl2019", type=Path, help="Official VL 6.1 2019 PDF")
@@ -190,6 +206,7 @@ def main() -> None:
         data = json.loads((CONTENT / "catalog.json").read_text(encoding="utf-8"))
         audit = validate(data, sources)
         validate_cards(data, json.loads((CONTENT / "curated.json").read_text(encoding="utf-8")), sources)
+        validate_guide(json.loads((CONTENT / "guide.json").read_text(encoding="utf-8")), sources)
         if canonical_bytes(audit) != (CONTENT / "audit.json").read_bytes():
             raise ValueError("Audit drift")
         print(audit)

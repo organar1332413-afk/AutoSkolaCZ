@@ -13,6 +13,7 @@
   <string name="questions">Екзаменаційні питання</string>
   <string name="rules">Вивчати правила</string>
   <string name="signs">Дорожні знаки</string>
+  <string name="signs_guide_title">Як читати знаки · правила</string>
   <string name="signs_inventory_notice">Перевірений покажчик графічних зразків. Пояснення та зображення додаються після перевірки правових джерел і дозволу на використання графіки.</string>
   <string name="signs_search">Код або чеська назва</string>
   <string name="signs_count">Позиції: %1$d</string>

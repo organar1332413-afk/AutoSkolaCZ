@@ -16,6 +16,15 @@ data class SignEntry(
     val uk: String?,
 )
 
+data class SignGuideBlock(
+    val provision: String,
+    val officialTextCs: String?,
+    val summaryCs: String,
+    val simpleCs: String,
+    val ru: String,
+    val uk: String,
+)
+
 object SignCatalog {
     fun load(context: Context): List<SignEntry> {
         fun asset(path: String) = JSONObject(context.assets.open(path).bufferedReader().use { it.readText() })
@@ -51,4 +60,20 @@ object SignCatalog {
                 (query.isBlank() || sign.code.contains(query.trim(), ignoreCase = true) ||
                     sign.titleCs.contains(query.trim(), ignoreCase = true))
         }
+
+    fun loadGuide(context: Context): List<SignGuideBlock> {
+        val root = JSONObject(context.assets.open("signs/guide.json").bufferedReader().use { it.readText() })
+        val blocks = root.getJSONArray("blocks")
+        return (0 until blocks.length()).map { index ->
+            val block = blocks.getJSONObject(index)
+            SignGuideBlock(
+                provision = block.getString("provision"),
+                officialTextCs = block.optString("officialTextCs").takeIf { it.isNotBlank() && it != "null" },
+                summaryCs = block.getString("ruleSummaryCs"),
+                simpleCs = block.getString("simpleCs"),
+                ru = block.getString("ru"),
+                uk = block.getString("uk"),
+            )
+        }
+    }
 }

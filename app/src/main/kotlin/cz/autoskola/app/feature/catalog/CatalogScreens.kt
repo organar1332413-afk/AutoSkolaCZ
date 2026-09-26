@@ -9,13 +9,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import cz.autoskola.app.R
 import cz.autoskola.app.ui.*
-@Composable fun SignsScreen() {
+@Composable fun SignsScreen(translationTag: String?) {
     val context = LocalContext.current
     val entries = remember(context) { SignCatalog.load(context) }
+    val guide = remember(context) { SignCatalog.loadGuide(context) }
     var query by remember { mutableStateOf("") }
     var category by remember { mutableStateOf<String?>(null) }
     var selected by remember { mutableStateOf<SignEntry?>(null) }
-    val language = context.resources.configuration.locales[0].language
+    val language = translationTag
     val categories = listOf(
         "warning" to R.string.sign_warning, "priority" to R.string.sign_priority,
         "prohibition" to R.string.sign_prohibition, "mandatory" to R.string.sign_mandatory,
@@ -26,6 +27,21 @@ import cz.autoskola.app.ui.*
     val visible = remember(entries, query, category) { SignCatalog.search(entries, query, category) }
     Page {
         item { Heading(text(R.string.signs)) }
+        item { Text(text(R.string.signs_guide_title), style = MaterialTheme.typography.titleLarge) }
+        items(guide) { block ->
+            OutlinedCard {
+                Column(Modifier.padding(18.dp)) {
+                    Text(block.provision, style = MaterialTheme.typography.titleMedium)
+                    block.officialTextCs?.let { Text(it) }
+                    Text(block.summaryCs)
+                    Note(block.simpleCs)
+                    when (language) {
+                        "ru" -> Text(block.ru)
+                        "uk" -> Text(block.uk)
+                    }
+                }
+            }
+        }
         item { Note(text(R.string.signs_inventory_notice)) }
         item {
             OutlinedTextField(value = query, onValueChange = { query = it },
