@@ -1,0 +1,40 @@
+{
+  "databaseVersion": "public-etesty-2026-04-02",
+  "mediaParts": [
+    {
+      "file": "media.tar.part000",
+      "sha256": "03682f4830b230c1c2e46dc2f48ad54767d95b19f62ed844f7940bcb080e6c10",
+      "size": 268435456
+    },
+    {
+      "file": "media.tar.part001",
+      "sha256": "1cd0fc0e662aa16cd21a78ebb8f5d626defd7cc8147edfaf4b27c2838e4ff100",
+      "size": 268435456
+    },
+    {
+      "file": "media.tar.part002",
+      "sha256": "ec1a750a3f426809663001f9b8cca978ebab4a96cdd7b8149677008ed8049e5d",
+      "size": 268435456
+    },
+    {
+      "file": "media.tar.part003",
+      "sha256": "fa8f4f30dbd6d1dccaf2414eb725bfb1e4738cd4e80affa68aa72082535fda0e",
+      "size": 268435456
+    },
+    {
+      "file": "media.tar.part004",
+      "sha256": "df76e064378d9ef5e78213ed4e21fe60ce14c23a24c5f90563c2cfa83809d1a1",
+      "size": 268435456
+    },
+    {
+      "file": "media.tar.part005",
+      "sha256": "4c79ac9a4193afec8daee4ab993cf882b56abe2318d51d3bed27fc42867110ae",
+      "size": 95764480
+    }
+  ],
+  "mediaTarSha256": "656b357f462ae48258d1d34ffcb4e68f8fcfbcf88a13dcedcc8146d11bbec6eb",
+  "normalizedSha256": "a3ec70b9d95576a286f9b2412cb8498d3c0fc6b6e0075d9f5f7b8cc488c6b77e",
+  "packageSha256": "8cc7babce6787b14b4f753c295e5ffcf98b473a7eb2c53e740151215aacacbad",
+  "publicationDate": "2026-04-02",
+  "sourcePagesSha256": "ca4ac00d652d08ad96085f3ce1c3f45b32cc239ec4b0e538b26f8636e0b19d15"
+}

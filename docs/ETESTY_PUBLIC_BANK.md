@@ -2,6 +2,8 @@
 
 This is an **official-public-source snapshot**, acquired by our offline adapter from public Ministry website pages. It is neither a Ministry structured export nor a documented API. The Android app remains offline and never calls the website. A future official export adapter can emit the same normalized model and package v2; compare snapshots by `officialId` before releasing a new `databaseVersion`.
 
+The completed 2026-04-02 acquisition, counts, provenance limits and artifact hashes are recorded in the [full-bank audit](ETESTY_PUBLIC_BANK_AUDIT.md).
+
 ## Observed website contract (2 April 2026 Bulletin)
 
 - `/ro/Bulletin` names the dated current Bulletin and links area `99` (all questions) and thematic areas `52`–`58`.
