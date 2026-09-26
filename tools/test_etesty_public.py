@@ -1,11 +1,12 @@
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from tools.etesty_public.diff_snapshots import compare
-from tools.etesty_public.fetch import Fetcher
+from tools.etesty_public.fetch import Fetcher, MEDIA_REQUEST_DEADLINE_SECONDS
 from tools.etesty_public.parser import AREAS, ParseError, parse_bulletin, parse_list, parse_sample_test
 from tools.etesty_public.pipeline import atomic_json, build, encode, media_signature_matches, sha, validate
 from tools.etesty_public.artifacts import create_artifacts
@@ -103,6 +104,34 @@ class PublicAdapterTests(unittest.TestCase):
             self.assertEqual(record["sha256"], sha(body))
             self.assertEqual(fetcher.get(record["sourceUrl"]), b"exact source bytes")
             self.assertEqual(fetcher.cached, 1)
+
+    def test_media_attempt_has_hard_deadline_and_reuses_cache(self):
+        url = "https://etesty.md.gov.cz/binary_content_storage/example.gif"
+        result = subprocess.CompletedProcess(["curl"], 0, b"GIF89a\x01\x00", b"")
+        with tempfile.TemporaryDirectory() as directory, \
+             patch("tools.etesty_public.fetch.subprocess.run", side_effect=[
+                 subprocess.TimeoutExpired("curl", MEDIA_REQUEST_DEADLINE_SECONDS), result]) as request, \
+             patch("tools.etesty_public.fetch.time.sleep"):
+            fetcher = Fetcher(directory, delay=0, retries=2)
+            self.assertEqual(fetcher.get(url, media=True), result.stdout)
+            self.assertEqual(fetcher.get(url, media=True), result.stdout)
+            self.assertEqual(request.call_count, 2)
+            args, kwargs = request.call_args
+            self.assertEqual(kwargs["timeout"], MEDIA_REQUEST_DEADLINE_SECONDS + 5)
+            self.assertIn(str(MEDIA_REQUEST_DEADLINE_SECONDS), args[0])
+            self.assertEqual((fetcher.downloaded, fetcher.cached), (1, 1))
+
+    def test_failed_media_attempts_leave_no_cached_response(self):
+        url = "https://etesty.md.gov.cz/binary_content_storage/unavailable.mp4"
+        with tempfile.TemporaryDirectory() as directory, \
+             patch("tools.etesty_public.fetch.subprocess.run",
+                   side_effect=subprocess.TimeoutExpired("curl", MEDIA_REQUEST_DEADLINE_SECONDS)) as request, \
+             patch("tools.etesty_public.fetch.time.sleep"):
+            fetcher = Fetcher(directory, delay=0, retries=2)
+            with self.assertRaisesRegex(IOError, "after 2 attempts"):
+                fetcher.get(url, media=True)
+            self.assertEqual(request.call_count, 2)
+            self.assertEqual(list(Path(directory).rglob("*")), [])
 
     def test_media_signature_rejects_html_error_body(self):
         self.assertFalse(media_signature_matches(b"<html>Error</html>", "video/mp4"))

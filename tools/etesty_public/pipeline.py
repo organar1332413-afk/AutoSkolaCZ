@@ -7,7 +7,9 @@ output is intentionally separate from the Android application runtime.
 import hashlib
 import json
 import re
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
+import time
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -198,7 +200,15 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
         mime = MIME.get(Path(filename).suffix.lower())
         if mime is None:
             raise ValueError(f"Unknown MIME for {source_url}")
-        body = cache.get(source_url)
+        key = sha(source_url.encode())
+        cache_hit = not cache.refresh and (cache.root / key[:2] / key).is_file()
+        with active_lock:
+            active[source_url] = time.monotonic()
+        try:
+            body = cache.get(source_url, media=True)
+        finally:
+            with active_lock:
+                active.pop(source_url, None)
         if not media_signature_matches(body, mime):
             raise ValueError(f"Downloaded media bytes do not match MIME: {source_url}")
         destination = root / path
@@ -207,20 +217,48 @@ def collect(root, *, max_questions=None, question_id=None, category=None, no_med
             temporary = destination.with_suffix(destination.suffix + ".tmp")
             temporary.write_bytes(body)
             temporary.replace(destination)
-        return {"path": path, "sha256": sha(body), "mimeType": mime, "size": len(body), "sourceUrl": source_url}
+        return {"path": path, "sha256": sha(body), "mimeType": mime, "size": len(body), "sourceUrl": source_url}, cache_hit
 
     fetched = {}
+    active = {}
+    active_lock = threading.Lock()
     if not no_media:
+        completed_cached = completed_downloaded = 0
+
+        def progress(heartbeat=False):
+            failed = sum("error" in item for item in fetched.values())
+            message = (f"media completed={len(fetched)}/{len(refs_by_url)} "
+                       f"cached={completed_cached} downloaded={completed_downloaded} failed={failed}")
+            if heartbeat:
+                with active_lock:
+                    pending_urls = sorted(active.items(), key=lambda item: item[1])
+                message += " heartbeat active=" + (", ".join(
+                    f"{url} ({time.monotonic() - started:.0f}s)" for url, started in pending_urls[:2])
+                    if pending_urls else "none")
+            print(message, flush=True)
+
         with ThreadPoolExecutor(max_workers=2) as pool:
             futures = {pool.submit(fetch_media, url): url for url in sorted(refs_by_url)}
-            for future in as_completed(futures):
-                url = futures[future]
-                try:
-                    fetched[url] = future.result()
-                except (IOError, ValueError) as exc:
-                    fetched[url] = {"error": str(exc)}
-                if len(fetched) % 25 == 0 or len(fetched) == len(futures):
-                    print(f"media={len(fetched)}/{len(futures)} cached={cache.cached} downloaded={cache.downloaded} failed={sum('error' in x for x in fetched.values())}", flush=True)
+            pending = set(futures)
+            last_report = time.monotonic()
+            while pending:
+                done, pending = wait(pending, timeout=15, return_when=FIRST_COMPLETED)
+                for future in done:
+                    url = futures[future]
+                    try:
+                        fetched[url], was_cached = future.result()
+                        if was_cached:
+                            completed_cached += 1
+                        else:
+                            completed_downloaded += 1
+                    except (IOError, ValueError) as exc:
+                        fetched[url] = {"error": str(exc)}
+                    if len(fetched) % 25 == 0 or not pending:
+                        progress()
+                        last_report = time.monotonic()
+                if time.monotonic() - last_report >= 15:
+                    progress(heartbeat=True)
+                    last_report = time.monotonic()
     for code, q in selected.items():
         normalized_media = []
         for ref in q["media"]:

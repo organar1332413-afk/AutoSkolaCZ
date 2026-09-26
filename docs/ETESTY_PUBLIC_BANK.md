@@ -29,7 +29,7 @@ No public complete `question ↔ licenceGroup` matrix was established by this ad
 
 ## Reproduce
 
-From repository root, with Python 3.10+ and network access to the public Ministry site:
+From repository root, with Python 3.10+, `curl` and network access to the public Ministry site:
 
 ```sh
 python3 -m tools.etesty_public crawl output/etesty-2026-04-02 --resume --sample-runs 20
@@ -39,7 +39,7 @@ python3 -m tools.etesty_public archive output/etesty-2026-04-02
 python3 -m tools.etesty_public diff OLD/normalized.json NEW/normalized.json
 ```
 
-The current date is discovered automatically; the output directory name above is merely illustrative. `--slice 28` makes a seven-section proof run; omit it for a full crawl. `--refresh` explicitly refetches cached responses. The response cache uses URL SHA-256 keys and atomic writes; re-running after interruption reuses completed downloads. Rate delay and two media workers keep load modest. Failed resources remain in quarantine; build refuses missing media. Do not run live crawl in routine CI; recorded HTML fixtures cover default tests. Review `normalized.json`, `bank-audit.json`, `quarantine.json` if present, and `state.json` before accepting a snapshot.
+The current date is discovered automatically; the output directory name above is merely illustrative. `--slice 28` makes a seven-section proof run; omit it for a full crawl. `--refresh` explicitly refetches cached responses. The response cache uses URL SHA-256 keys and atomic writes; re-running after interruption reuses completed downloads. Rate delay and two media workers keep load modest. Each media network attempt has a 300-second wall-clock deadline and bounded retries; a heartbeat every 15 seconds reports the active URLs and elapsed time when progress is slow. Completed cached media are checked again without network access. Failed resources remain in quarantine; build refuses missing media. Do not run live crawl in routine CI; recorded HTML fixtures cover default tests. Review `normalized.json`, `bank-audit.json`, `quarantine.json` if present, and `state.json` before accepting a snapshot.
 
 The normalized model preserves `officialId`, internal ID, exact Czech text, answers, correctness, thematic category, derived-points provenance, raw page SHA, source URLs, original media hashes and positive group observations. `validate` checks cached source hashes, media inventory and references, and exact media bytes before `build`. `package-v2.json` is app-owned interchange, not Ministry JSON. Media paths are relative to its adjacent `media/` directory. `bank-audit.json` binds the package SHA and summarizes the crawl. Snapshot comparison distinguishes text, answer, correctness, points, category, media and eligibility-evidence changes.
 
