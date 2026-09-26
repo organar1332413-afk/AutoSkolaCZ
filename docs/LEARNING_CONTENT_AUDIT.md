@@ -18,14 +18,19 @@ plus a source registry and evidence table, not put a huge JSON blob in UI code.
 
 ## Verified inventory, not finished teaching cards
 
-`catalog.json` contains **278 unique code families** transcribed by an
+`catalog.json` contains **347 unique code families**. The 278 vertical sign
+families were transcribed by an
 offline, hash-checked compiler from the printed index (PDF pp. 11–17) of the
 Ministry-approved [VL 6.1 (2019)](https://pjpk.rsd.cz/data/USR_001_2_10_VL/VL_6.1_2019_FINAL.pdf),
 with four new code families and replacement sheet provenance from
 [change 1 (2025)](https://pjpk.rsd.cz/data/USR_001_2_10_VL/VL_6.1_Zmena_c._1_brezen_2025.pdf).
 Some rows in the official index cover multiple graphic variants. Their printed
 scope remains in `printedScopes`; **278 is not a count of all individual
-graphic variants or all legal sign codes**. The March 2025 document cancels
+graphic variants or all legal sign codes**. A separate manually reviewed
+index of 40 road marking codes (decree annex 8) and 29 light signal code
+families (annex 9) is kept in `legal_appendix_inventory.json`. Grouped signal
+families S 1–3, 9–11 have additional individual aspects; these 29 are not a
+count of all light aspects. The March 2025 document cancels
 the earlier *graphic sheets* IZ 5a, IZ 5b and IP 32 and supplies replacement
 sheets; those signs were not erased from the catalog.
 
@@ -40,6 +45,8 @@ sheets; those signs were not erased from the catalog.
 | Information, direction | 39 |
 | Information, other | 27 |
 | Additional panels | 29 |
+| Road markings | 40 |
+| Light signals | 29 |
 
 The approved VL is a *graphic specification*. Its own technical report states
 that sign meanings and conditions of use come from Act 361/2000 Sb., Decree
@@ -57,7 +64,7 @@ CS/RU/UK explanations in `curated.json`, based on the Ministry's
 [explanation of the 2025 amendment](https://md.gov.cz/Media/Media-a-tiskove-zpravy/TEST).
 Ten warning signs have source-backed summaries from annex 1 of the consolidated
 decree effective 1 July 2025. These are our teaching summaries, separate from
-official wording. The other 262 signs have no explanations or translations
+official wording. The other 331 indexed entries have no explanations or translations
 yet. `guide.json` adds four
 short blocks from §§ 2–4 of the current decree; its one verbatim legal excerpt
 is kept in `officialTextCs`, separate from our summaries. eTesty question

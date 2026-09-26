@@ -18,8 +18,10 @@ class SignInventoryTest(unittest.TestCase):
     def test_committed_inventory_and_audit(self):
         audit = full_audit(self.data, self.sources)
         self.assertEqual(canonical_bytes(audit), (CONTENT / "audit.json").read_bytes())
-        self.assertEqual(278, audit["total"])
-        self.assertEqual(278, audit["csTitles"])
+        self.assertEqual(347, audit["total"])
+        self.assertEqual(347, audit["csTitles"])
+        self.assertEqual(40, audit["categories"]["road_marking"])
+        self.assertEqual(29, audit["categories"]["light_signal"])
         self.assertEqual(0, audit["bundledImages"])
 
     def test_duplicate_code_rejected(self):
@@ -81,6 +83,12 @@ class SignInventoryTest(unittest.TestCase):
         corrupted["blocks"][0]["provision"] = ""
         with self.assertRaisesRegex(ValueError, "Incomplete guide block"):
             validate_guide(corrupted, self.sources)
+
+    def test_legal_appendix_inventory_has_provisions(self):
+        legal = [s for s in self.data["signs"] if s["reviewStatus"] == "LEGAL_INDEX_ONLY"]
+        self.assertEqual(69, len(legal))
+        self.assertEqual({"V", "S"}, {s["code"].split()[0] for s in legal})
+        self.assertTrue(all(s["sourceProvision"].startswith("Příloha č.") for s in legal))
 
 
 if __name__ == "__main__":

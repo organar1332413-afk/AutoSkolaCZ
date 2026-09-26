@@ -22,7 +22,8 @@ import cz.autoskola.app.ui.*
         "prohibition" to R.string.sign_prohibition, "mandatory" to R.string.sign_mandatory,
         "information_zone" to R.string.sign_info, "information_traffic" to R.string.sign_info,
         "information_direction" to R.string.sign_info, "information_other" to R.string.sign_info,
-        "additional_panel" to R.string.sign_extra,
+        "additional_panel" to R.string.sign_extra, "road_marking" to R.string.sign_markings,
+        "light_signal" to R.string.sign_lights,
     )
     val visible = remember(entries, query, category) { SignCatalog.search(entries, query, category) }
     Page {

@@ -22,6 +22,7 @@ PREFIXES = {
     "A": "warning", "P": "priority", "B": "prohibition",
     "C": "mandatory", "IZ": "information_zone", "IP": "information_traffic",
     "IS": "information_direction", "IJ": "information_other", "E": "additional_panel",
+    "V": "road_marking", "S": "light_signal",
 }
 INDEX_ROW = re.compile(
     r"^\s*6\.1\s+(A|P|B|C|IZ|IP|IS|IJ|E)\s*([0-9]+[a-z]?)"
@@ -126,6 +127,29 @@ def apply_2025_revision(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
 
 
+def add_legal_appendices(records: list[dict]) -> list[dict]:
+    appendix = json.loads((CONTENT / "legal_appendix_inventory.json").read_text(encoding="utf-8"))
+    if appendix["effectiveFrom"] != "2025-07-01" or appendix["sourceId"] != "decree-294-2015":
+        raise ValueError("Legal appendix provenance changed")
+    seen = {item["code"] for item in records}
+    for item in appendix["items"]:
+        code = item["code"]
+        if code in seen or code.split()[0] not in {"V", "S"}:
+            raise ValueError(f"Duplicate or unsupported appendix code: {code}")
+        seen.add(code)
+        records.append({
+            "code": code, "titleCs": item["titleCs"], "category": item["category"],
+            "sourceProvision": item["sourceProvision"], "printedScopes": [], "variantTitles": [],
+            "sourceIds": [appendix["sourceId"]], "sourceIndexPage": None,
+            "graphic": {"sourceId": appendix["sourceId"], "status": "LICENSE_REVIEW_REQUIRED"},
+            "reviewStatus": "LEGAL_INDEX_ONLY", "meaningCs": None, "explanationCs": None,
+            "titleRu": None, "titleUk": None, "explanationRu": None, "explanationUk": None,
+            "driverActions": [], "exceptions": [], "commonMistake": None,
+            "confusedWith": [], "questionOfficialIds": [],
+        })
+    return sorted(records, key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -147,8 +171,10 @@ def validate(data: dict, sources: dict) -> dict:
             path = Path(sign["graphic"]["path"])
             if path.is_absolute() or ".." in path.parts or not (CONTENT / path).is_file():
                 raise ValueError(f"Unsafe or missing image: {code}")
-        if sign["reviewStatus"] == "INDEX_ONLY" and any(sign.get(key) for key in ("meaningCs", "explanationCs", "titleRu", "titleUk")):
+        if sign["reviewStatus"] in {"INDEX_ONLY", "LEGAL_INDEX_ONLY"} and any(sign.get(key) for key in ("meaningCs", "explanationCs", "titleRu", "titleUk")):
             raise ValueError(f"Unreviewed explanation: {code}")
+        if sign["reviewStatus"] == "LEGAL_INDEX_ONLY" and not sign.get("sourceProvision"):
+            raise ValueError(f"Missing legal appendix: {code}")
         categories[sign["category"]] += 1
     if len(data["signs"]) != data["inventoryCount"]:
         raise ValueError("Inventory count mismatch")
@@ -228,7 +254,7 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = apply_2025_revision(parse_index(text))
+    records = add_legal_appendices(apply_2025_revision(parse_index(text)))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)

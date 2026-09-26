@@ -6,16 +6,18 @@
     "information_other": 27,
     "information_traffic": 38,
     "information_zone": 22,
+    "light_signal": 29,
     "mandatory": 33,
     "priority": 8,
     "prohibition": 40,
+    "road_marking": 40,
     "warning": 42
   },
-  "csTitles": 278,
-  "licenseReviewRequired": 278,
+  "csTitles": 347,
+  "licenseReviewRequired": 347,
   "ruTitles": 0,
   "teachingCardsCsRuUk": 16,
-  "total": 278,
+  "total": 347,
   "ukTitles": 0,
-  "unreviewedTeachingCards": 262
+  "unreviewedTeachingCards": 331
 }
