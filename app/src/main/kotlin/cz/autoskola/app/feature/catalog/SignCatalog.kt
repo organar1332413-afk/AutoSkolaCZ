@@ -54,12 +54,16 @@ object SignCatalog {
         }
     }
 
-    fun search(entries: List<SignEntry>, query: String, category: String?): List<SignEntry> =
-        entries.filter { sign ->
-            (category == null || sign.category == category) &&
-                (query.isBlank() || sign.code.contains(query.trim(), ignoreCase = true) ||
-                    sign.titleCs.contains(query.trim(), ignoreCase = true))
+    fun search(entries: List<SignEntry>, query: String, category: String?): List<SignEntry> {
+        val scoped = entries.filter { category == null || it.category == category }
+        val term = query.trim()
+        if (term.isBlank()) return scoped
+        val exact = scoped.filter { it.code.equals(term, ignoreCase = true) }
+        if (exact.isNotEmpty()) return exact
+        return scoped.filter { sign ->
+            sign.code.contains(term, ignoreCase = true) || sign.titleCs.contains(term, ignoreCase = true)
         }
+    }
 
     fun loadGuide(context: Context): List<SignGuideBlock> {
         val root = JSONObject(context.assets.open("signs/guide.json").bufferedReader().use { it.readText() })
