@@ -1,17 +1,144 @@
 {
   "cards": [
     {
-      "code": "P 1",
-      "meaningCs": "Upozorňuje mimo obec na křižovatku a označuje hlavní pozemní komunikaci.",
-      "memoryCs": "Tvar hlavní silnice se může lišit od přímého směru.",
-      "mistakeCs": "Nepředpokládejte, že hlavní silnice vždy pokračuje rovně.",
-      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
-      "ru": "Предупреждает вне населённого пункта о перекрёстке и обозначает главную дорогу. Табличка может уточнять её направление.",
-      "simpleCs": "Před křižovatkou sledujte, kudy vede hlavní silnice; její průběh může upřesnit dodatková tabulka.",
+      "code": "A 10",
+      "meaningCs": "Upozorňuje na světelné signály, které řidič nemusí očekávat nebo včas vidět.",
+      "memoryCs": "Připravte se na řízení provozu semaforem.",
+      "mistakeCs": "Nepředpokládejte volný průjezd jen proto, že semafor zatím nevidíte.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о светофоре, который может быть неожиданным или плохо видимым издалека.",
+      "simpleCs": "Připravte se na řízení provozu semaforem.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "decree-294-2015"
       ],
-      "uk": "Попереджає поза населеним пунктом про перехрестя й позначає головну дорогу. Табличка може уточнювати її напрямок."
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про світлофор, який може бути несподіваним або погано видимим здалеку."
+    },
+    {
+      "code": "A 11",
+      "meaningCs": "Upozorňuje na přechod pro chodce, který řidič nemusí očekávat nebo včas vidět.",
+      "memoryCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+      "mistakeCs": "Nezaměňujte výstrahu A 11 s informativní značkou IP 6.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о пешеходном переходе, который можно не заметить заранее.",
+      "simpleCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про пішохідний перехід, який можна не помітити завчасно."
+    },
+    {
+      "code": "A 12b",
+      "meaningCs": "Upozorňuje na místo, kde se často pohybují děti nebo mohou náhle vběhnout do vozovky.",
+      "memoryCs": "V blízkosti dětí počítejte s nečekaným pohybem.",
+      "mistakeCs": "Nehledejte pouze vyznačený přechod; dítě se může objevit i jinde.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о детях у дороги, которые могут неожиданно выбежать на проезжую часть.",
+      "simpleCs": "V blízkosti dětí počítejte s nečekaným pohybem.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про дітей біля дороги, які можуть раптово вибігти на проїзну частину."
+    },
+    {
+      "code": "A 19",
+      "meaningCs": "Upozorňuje na místo, kde cyklisté vjíždějí na vozovku, přejíždějí ji nebo se často vyskytují.",
+      "memoryCs": "Sledujte cyklisty i mimo vyznačený přejezd.",
+      "mistakeCs": "Nezaměňujte výstrahu před cyklisty za samotný přejezd pro cyklisty.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о велосипедистах, въезжающих на дорогу, пересекающих её или часто встречающихся на участке.",
+      "simpleCs": "Sledujte cyklisty i mimo vyznačený přejezd.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про велосипедистів, які виїжджають на дорогу, перетинають її або часто трапляються на ділянці."
+    },
+    {
+      "code": "A 1a",
+      "meaningCs": "Upozorňuje na zatáčku vpravo, kterou je nutné projet výrazně pomaleji.",
+      "memoryCs": "Před zatáčkou vpravo včas snižte rychlost.",
+      "mistakeCs": "Nečekejte s brzděním až do zatáčky.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает об опасном повороте направо. Снизьте скорость заранее.",
+      "simpleCs": "Před zatáčkou vpravo včas snižte rychlost.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про небезпечний поворот праворуч. Зменште швидкість завчасно."
+    },
+    {
+      "code": "A 1b",
+      "meaningCs": "Upozorňuje na zatáčku vlevo, kterou je nutné projet výrazně pomaleji.",
+      "memoryCs": "Před zatáčkou vlevo včas snižte rychlost.",
+      "mistakeCs": "Nečekejte s brzděním až do zatáčky.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает об опасном повороте налево. Снизьте скорость заранее.",
+      "simpleCs": "Před zatáčkou vlevo včas snižte rychlost.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про небезпечний поворот ліворуч. Зменште швидкість завчасно."
+    },
+    {
+      "code": "A 3",
+      "meaningCs": "Upozorňuje na křižovatku bez svislých značek upravujících přednost.",
+      "memoryCs": "V této křižovatce sledujte pravidla přednosti, zejména vozidla zprava.",
+      "mistakeCs": "Nedomnívejte se, že jedete po hlavní silnici jen proto, že tomu tak bylo dříve.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о перекрёстке без знаков приоритета. Учитывайте правило помехи справа.",
+      "simpleCs": "V této křižovatce sledujte pravidla přednosti, zejména vozidla zprava.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про перехрестя без знаків пріоритету. Враховуйте правило перешкоди справа."
+    },
+    {
+      "code": "A 4",
+      "meaningCs": "Upozorňuje na blížící se křižovatku s kruhovým objezdem.",
+      "memoryCs": "Připravte se na kruhový objezd a sledujte značky upravující přednost u vjezdu.",
+      "mistakeCs": "Výstraha před kruhovým objezdem sama o sobě neurčuje přednost.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о круговом перекрёстке. При въезде смотрите отдельные знаки приоритета.",
+      "simpleCs": "Připravte se na kruhový objezd a sledujte značky upravující přednost u vjezdu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про кільцеве перехрестя. На в’їзді дивіться окремі знаки пріоритету."
+    },
+    {
+      "code": "A 5a",
+      "meaningCs": "Upozorňuje na nebezpečné klesání; uvedený údaj vyjadřuje nejvyšší skutečný podélný sklon.",
+      "memoryCs": "Před klesáním upravte rychlost podle sklonu a podmínek.",
+      "mistakeCs": "Nečtěte procento sklonu jako omezení rychlosti.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает об опасном спуске. Значение на знаке показывает максимальный уклон.",
+      "simpleCs": "Před klesáním upravte rychlost podle sklonu a podmínek.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про небезпечний спуск. Значення на знаку показує максимальний ухил."
+    },
+    {
+      "code": "A 5b",
+      "meaningCs": "Upozorňuje na prudké stoupání; uvedený údaj vyjadřuje nejvyšší skutečný podélný sklon.",
+      "memoryCs": "Připravte se na stoupání a přizpůsobte jízdu vozidlu i podmínkám.",
+      "mistakeCs": "Nezaměňujte stoupání A 5b s klesáním A 5a.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает о крутом подъёме. Значение на знаке показывает максимальный уклон.",
+      "simpleCs": "Připravte se na stoupání a přizpůsobte jízdu vozidlu i podmínkám.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "uk": "Попереджає про крутий підйом. Значення на знаку показує максимальний ухил."
     },
     {
       "code": "B 4",
@@ -27,19 +154,6 @@
       "uk": "Забороняє в’їзд вантажних автомобілів; уточнення стосується й транспорту, конструктивно похідного від вантажівок. Враховуйте додаткову табличку."
     },
     {
-      "code": "IP 4a",
-      "meaningCs": "Označuje směr jízdy vozidel na jednosměrné pozemní komunikaci; nově lze vyznačit povolený protisměrný vjezd cyklistů přímo na značce.",
-      "memoryCs": "Jednosměrka nemusí vylučovat protisměrný pohyb cyklistů.",
-      "mistakeCs": "Nepřehlédněte vyznačenou výjimku pro cyklisty.",
-      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
-      "ru": "Обозначает направление движения по односторонней дороге. Если это указано на знаке, велосипедистам разрешено движение навстречу.",
-      "simpleCs": "V jednosměrné ulici věnujte pozornost symbolu cyklisty: cyklisté mohou mít povolený protisměr.",
-      "sourceIds": [
-        "md-sign-changes-2025"
-      ],
-      "uk": "Позначає напрямок руху односторонньою дорогою. Якщо це вказано на знаку, велосипедистам дозволено зустрічний рух."
-    },
-    {
       "code": "IP 10a",
       "meaningCs": "Označuje komunikaci, která končí nebo po které nelze dále pokračovat; může vyznačit pokračování pro cyklisty.",
       "memoryCs": "Slepá pro motorová vozidla nemusí být slepá pro cyklisty.",
@@ -51,6 +165,19 @@
         "md-sign-changes-2025"
       ],
       "uk": "Позначає тупикову дорогу. Якщо знак це показує, велосипедисти можуть продовжити рух."
+    },
+    {
+      "code": "IP 4a",
+      "meaningCs": "Označuje směr jízdy vozidel na jednosměrné pozemní komunikaci; nově lze vyznačit povolený protisměrný vjezd cyklistů přímo na značce.",
+      "memoryCs": "Jednosměrka nemusí vylučovat protisměrný pohyb cyklistů.",
+      "mistakeCs": "Nepřehlédněte vyznačenou výjimku pro cyklisty.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Обозначает направление движения по односторонней дороге. Если это указано на знаке, велосипедистам разрешено движение навстречу.",
+      "simpleCs": "V jednosměrné ulici věnujte pozornost symbolu cyklisty: cyklisté mohou mít povolený protisměr.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Позначає напрямок руху односторонньою дорогою. Якщо це вказано на знаку, велосипедистам дозволено зустрічний рух."
     },
     {
       "code": "IZ 7a",
@@ -77,6 +204,19 @@
         "md-sign-changes-2025"
       ],
       "uk": "Позначає кінець зони з екологічними обмеженнями."
+    },
+    {
+      "code": "P 1",
+      "meaningCs": "Upozorňuje mimo obec na křižovatku a označuje hlavní pozemní komunikaci.",
+      "memoryCs": "Tvar hlavní silnice se může lišit od přímého směru.",
+      "mistakeCs": "Nepředpokládejte, že hlavní silnice vždy pokračuje rovně.",
+      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "ru": "Предупреждает вне населённого пункта о перекрёстке и обозначает главную дорогу. Табличка может уточнять её направление.",
+      "simpleCs": "Před křižovatkou sledujte, kudy vede hlavní silnice; její průběh může upřesnit dodatková tabulka.",
+      "sourceIds": [
+        "md-sign-changes-2025"
+      ],
+      "uk": "Попереджає поза населеним пунктом про перехрестя й позначає головну дорогу. Табличка може уточнювати її напрямок."
     }
   ],
   "schemaVersion": 1

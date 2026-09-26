@@ -168,8 +168,10 @@ def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str
         if code not in inventory or code in seen:
             raise ValueError(f"Missing or duplicate catalog code in teaching cards: {code}")
         seen.add(code)
-        if card["reviewStatus"] != "MINISTRY_GUIDANCE_VERIFIED":
+        if card["reviewStatus"] not in {"MINISTRY_GUIDANCE_VERIFIED", "LEGAL_ANNEX_VERIFIED"}:
             raise ValueError(f"Unreviewed teaching card: {code}")
+        if card["reviewStatus"] == "LEGAL_ANNEX_VERIFIED" and not card.get("sourceProvision", "").strip():
+            raise ValueError(f"Missing legal provision: {code}")
         if not all(card.get(k, "").strip() for k in ("meaningCs", "simpleCs", "ru", "uk")):
             raise ValueError(f"Incomplete CS/RU/UK teaching card: {code}")
         if not card.get("sourceIds") or any(source_id not in sources for source_id in card["sourceIds"]):
@@ -195,6 +197,15 @@ def validate_guide(guide: dict, sources: dict) -> None:
             raise ValueError(f"Empty official legal excerpt: {block['id']}")
 
 
+def full_audit(data: dict, sources: dict) -> dict:
+    audit = validate(data, sources)
+    cards = json.loads((CONTENT / "curated.json").read_text(encoding="utf-8"))
+    validate_cards(data, cards, sources)
+    audit["teachingCardsCsRuUk"] = len(cards["cards"])
+    audit["unreviewedTeachingCards"] = audit["total"] - len(cards["cards"])
+    return audit
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vl2019", type=Path, help="Official VL 6.1 2019 PDF")
@@ -204,8 +215,7 @@ def main() -> None:
     sources = json.loads((CONTENT / "sources.json").read_text(encoding="utf-8"))
     if args.check:
         data = json.loads((CONTENT / "catalog.json").read_text(encoding="utf-8"))
-        audit = validate(data, sources)
-        validate_cards(data, json.loads((CONTENT / "curated.json").read_text(encoding="utf-8")), sources)
+        audit = full_audit(data, sources)
         validate_guide(json.loads((CONTENT / "guide.json").read_text(encoding="utf-8")), sources)
         if canonical_bytes(audit) != (CONTENT / "audit.json").read_bytes():
             raise ValueError("Audit drift")
@@ -221,7 +231,7 @@ def main() -> None:
     records = apply_2025_revision(parse_index(text))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
-    audit = validate(data, sources)
+    audit = full_audit(data, sources)
     CONTENT.mkdir(parents=True, exist_ok=True)
     (CONTENT / "catalog.json").write_bytes(canonical_bytes(data))
     (CONTENT / "audit.json").write_bytes(canonical_bytes(audit))

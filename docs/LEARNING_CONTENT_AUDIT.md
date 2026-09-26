@@ -13,7 +13,7 @@ version, effective date, graphic license review, individual sign code or
 per-question tagging evidence. The separate `content/learning/signs` catalog
 keeps these fields without a risky Room migration. Its JSON is a versioned
 import candidate; the Android catalog renders the indexed Czech names and
-only six separately sourced teaching cards. Future production lesson import should use the existing Room records
+only 16 separately sourced teaching cards. Future production lesson import should use the existing Room records
 plus a source registry and evidence table, not put a huge JSON blob in UI code.
 
 ## Verified inventory, not finished teaching cards
@@ -55,8 +55,10 @@ APK: republication rights for each illustration have not been verified. Every
 entry therefore carries `LICENSE_REVIEW_REQUIRED`. Six signs have short
 CS/RU/UK explanations in `curated.json`, based on the Ministry's
 [explanation of the 2025 amendment](https://md.gov.cz/Media/Media-a-tiskove-zpravy/TEST).
-These are our teaching summaries, separate from official wording. The other
-272 signs have no explanations or translations yet. `guide.json` adds four
+Ten warning signs have source-backed summaries from annex 1 of the consolidated
+decree effective 1 July 2025. These are our teaching summaries, separate from
+official wording. The other 262 signs have no explanations or translations
+yet. `guide.json` adds four
 short blocks from §§ 2–4 of the current decree; its one verbatim legal excerpt
 is kept in `officialTextCs`, separate from our summaries. eTesty question
 links remain absent rather than guessed.

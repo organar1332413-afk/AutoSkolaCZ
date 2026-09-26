@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.learning_content.signs import CONTENT, canonical_bytes, parse_index, validate, validate_cards, validate_guide
+from tools.learning_content.signs import CONTENT, canonical_bytes, parse_index, validate, validate_cards, validate_guide, full_audit
 
 
 class SignInventoryTest(unittest.TestCase):
@@ -16,7 +16,7 @@ class SignInventoryTest(unittest.TestCase):
         cls.guide = json.loads((CONTENT / "guide.json").read_text(encoding="utf-8"))
 
     def test_committed_inventory_and_audit(self):
-        audit = validate(self.data, self.sources)
+        audit = full_audit(self.data, self.sources)
         self.assertEqual(canonical_bytes(audit), (CONTENT / "audit.json").read_bytes())
         self.assertEqual(278, audit["total"])
         self.assertEqual(278, audit["csTitles"])
@@ -66,7 +66,7 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
-        self.assertEqual(6, len(self.cards["cards"]))
+        self.assertEqual(16, len(self.cards["cards"]))
 
     def test_question_links_require_existing_official_id(self):
         cards = copy.deepcopy(self.cards)
