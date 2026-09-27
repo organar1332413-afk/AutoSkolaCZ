@@ -7,11 +7,17 @@ import org.json.JSONObject
 data class SignEntry(
     val code: String,
     val titleCs: String,
+    val titleRu: String?,
+    val titleUk: String?,
     val category: String,
     val sourceUrl: String,
+    val sourceProvision: String?,
     val graphicStatus: String,
     val meaningCs: String?,
     val simpleCs: String?,
+    val mistakeCs: String?,
+    val memoryCs: String?,
+    val confusedWith: List<String>,
     val ru: String?,
     val uk: String?,
 )
@@ -43,11 +49,19 @@ object SignCatalog {
             SignEntry(
                 code = sign.getString("code"),
                 titleCs = sign.getString("titleCs"),
+                titleRu = card?.optString("titleRu")?.takeIf { it.isNotBlank() },
+                titleUk = card?.optString("titleUk")?.takeIf { it.isNotBlank() },
                 category = sign.getString("category"),
                 sourceUrl = sources.getJSONObject(sourceId).getString("url"),
+                sourceProvision = card?.optString("sourceProvision")?.takeIf { it.isNotBlank() },
                 graphicStatus = sign.getJSONObject("graphic").getString("status"),
                 meaningCs = card?.getString("meaningCs"),
                 simpleCs = card?.getString("simpleCs"),
+                mistakeCs = card?.optString("mistakeCs")?.takeIf { it.isNotBlank() },
+                memoryCs = card?.optString("memoryCs")?.takeIf { it.isNotBlank() },
+                confusedWith = card?.optJSONArray("confusedWith")?.let { related ->
+                    (0 until related.length()).map { related.getString(it) }
+                }.orEmpty(),
                 ru = card?.getString("ru"),
                 uk = card?.getString("uk"),
             )
@@ -61,7 +75,9 @@ object SignCatalog {
         val exact = scoped.filter { it.code.equals(term, ignoreCase = true) }
         if (exact.isNotEmpty()) return exact
         return scoped.filter { sign ->
-            sign.code.contains(term, ignoreCase = true) || sign.titleCs.contains(term, ignoreCase = true)
+            sign.code.contains(term, ignoreCase = true) || sign.titleCs.contains(term, ignoreCase = true) ||
+                sign.titleRu?.contains(term, ignoreCase = true) == true ||
+                sign.titleUk?.contains(term, ignoreCase = true) == true
         }
     }
 

@@ -17,13 +17,17 @@ class SignCatalogTest {
 
     @Test fun catalogAssetsLoadAndSearchByCodeOrCzechName() {
         val signs = SignCatalog.load(context)
-        assertEquals(347, signs.size)
-        assertEquals(347, signs.map { it.code }.toSet().size)
+        assertEquals(349, signs.size)
+        assertEquals(349, signs.map { it.code }.toSet().size)
         assertEquals("P 4", SignCatalog.search(signs, "p 4", null).single().code)
         assertEquals("P 4", SignCatalog.search(signs, "Dej přednost", "priority").first().code)
         assertTrue(SignCatalog.search(signs, "V 7a", "light_signal").isEmpty())
         assertNull(signs.single { it.code == "P 4" }.meaningCs)
         assertTrue(signs.single { it.code == "A 1a" }.ru!!.contains("повороте"))
+        assertEquals("A 31b", SignCatalog.search(signs, "a 31b", null).single().code)
+        assertEquals("A 31c", SignCatalog.search(signs, "80 м", "warning").single().code)
+        assertEquals("A 6b", SignCatalog.search(signs, "Сужение дороги с одной стороны", null).single().code)
+        assertEquals("Пішоходи", signs.single { it.code == "A 12a" }.titleUk)
     }
 
     @Test fun sourceBackedGuideLoadedSeparatelyFromOfficialExcerpt() {

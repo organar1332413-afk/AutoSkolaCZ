@@ -150,6 +150,41 @@ def add_legal_appendices(records: list[dict]) -> list[dict]:
     return sorted(records, key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
 
 
+def reconcile_warning_annex(records: list[dict]) -> list[dict]:
+    """Distinguish legal A 31a–c signs from VL sheets of one legal code.
+
+    The 2019 VL index prints A 31a až c on one line. Annex 1 of the
+    consolidated decree defines three separate codes. Conversely, the
+    numbered VL sheets of A 6b/13/14/32a/32b are graphic executions of
+    one legal code, not new legal sign codes.
+    """
+    by_code = {sign["code"]: sign for sign in records}
+    if "A 31a" not in by_code or "A 31b" in by_code:
+        raise ValueError("Unexpected A 31 legal/graphic inventory")
+    for code, distance in (("A 31a", 240), ("A 31b", 160), ("A 31c", 80)):
+        sign = dict(by_code["A 31a"]) if code != "A 31a" else by_code[code]
+        sign["code"] = code
+        sign["titleCs"] = f"Návěstní deska ({distance} m)"
+        sign["sourceIds"] = ["decree-294-2015", "md-vl-6-1-2019"]
+        sign["sourceProvision"] = f"Příloha č. 1 k vyhlášce č. 294/2015 Sb., {code}"
+        sign["familyCode"] = "A 31"
+        sign["graphicVariantCodes"] = [code]
+        sign["reviewStatus"] = "LEGAL_INDEX_ONLY"
+        by_code[code] = sign
+    for code in ("A 6b", "A 13", "A 14", "A 32a", "A 32b"):
+        sign = by_code[code]
+        sign["graphicVariantCodes"] = [f"{code}-1", f"{code}-2"]
+        sign["familyCode"] = code
+    by_code["A 32a"]["titleCs"] = "Výstražný kříž pro železniční přejezd jednokolejný"
+    by_code["A 32b"]["titleCs"] = "Výstražný kříž pro železniční přejezd vícekolejný"
+    for sign in by_code.values():
+        if sign["category"] == "warning":
+            sign.setdefault("familyCode", sign["code"] if not sign["code"].startswith("A 31") else "A 31")
+            sign.setdefault("graphicVariantCodes", [sign["code"]])
+            sign.setdefault("sourceProvision", f"Příloha č. 1 k vyhlášce č. 294/2015 Sb., {sign['code']}")
+    return sorted(by_code.values(), key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -187,7 +222,7 @@ def validate(data: dict, sources: dict) -> dict:
 
 
 def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str] | None = None) -> None:
-    inventory = {sign["code"] for sign in data["signs"]}
+    inventory = {sign["code"]: sign for sign in data["signs"]}
     seen: set[str] = set()
     for card in cards["cards"]:
         code = card["code"]
@@ -198,8 +233,20 @@ def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str
             raise ValueError(f"Unreviewed teaching card: {code}")
         if card["reviewStatus"] == "LEGAL_ANNEX_VERIFIED" and not card.get("sourceProvision", "").strip():
             raise ValueError(f"Missing legal provision: {code}")
-        if not all(card.get(k, "").strip() for k in ("meaningCs", "simpleCs", "ru", "uk")):
+        if card.get("titleCs") != inventory[code]["titleCs"]:
+            raise ValueError(f"Teaching card changes official Czech title: {code}")
+        if not all(card.get(k, "").strip() for k in
+            ("titleRu", "titleUk", "meaningCs", "simpleCs", "ru", "uk", "mistakeCs",
+             "memoryCs", "driverActionsCs", "sourceProvision", "checkedAt")):
             raise ValueError(f"Incomplete CS/RU/UK teaching card: {code}")
+        if not re.fullmatch(r"20\d\d-\d\d-\d\d", card["checkedAt"]):
+            raise ValueError(f"Invalid review date: {code}")
+        if card["sourceProvision"].split(",")[-1].strip() != code:
+            raise ValueError(f"Unmatched legal provision: {code}")
+        if "decree-294-2015" not in card.get("sourceIds", []):
+            raise ValueError(f"Legal source absent from card: {code}")
+        if any(other not in inventory for other in card.get("confusedWith", [])):
+            raise ValueError(f"Unknown compared sign: {code}")
         if not card.get("sourceIds") or any(source_id not in sources for source_id in card["sourceIds"]):
             raise ValueError(f"Missing card source: {code}")
         for official_id in card.get("questionOfficialIds", []):
@@ -229,6 +276,28 @@ def full_audit(data: dict, sources: dict) -> dict:
     validate_cards(data, cards, sources)
     audit["teachingCardsCsRuUk"] = len(cards["cards"])
     audit["unreviewedTeachingCards"] = audit["total"] - len(cards["cards"])
+    # These are partial index counts until *every* legal annex is reconciled.
+    audit["indexedFamilies"] = len({s.get("familyCode", s["code"]) for s in data["signs"]})
+    audit["indexedRows"] = len(data["signs"])
+    audit["warningLegalCodesVerified"] = sum(s["category"] == "warning" for s in data["signs"])
+    audit["warningGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "warning")
+    audit["canonicalFamilies"] = None
+    audit["canonicalVariants"] = None
+    audit["totalCards"] = len(cards["cards"])
+    audit["completeCardsCs"] = sum(all(card.get(k) for k in ("titleCs", "meaningCs", "simpleCs")) for card in cards["cards"])
+    audit["completeCardsRu"] = sum(all(card.get(k) for k in ("titleRu", "ru")) for card in cards["cards"])
+    audit["completeCardsUk"] = sum(all(card.get(k) for k in ("titleUk", "uk")) for card in cards["cards"])
+    audit["completeCardsAllLanguages"] = sum(all(card.get(k) for k in
+        ("titleRu", "titleUk", "meaningCs", "simpleCs", "ru", "uk", "sourceProvision", "checkedAt"))
+        for card in cards["cards"])
+    audit["graphicsRequired"] = audit["total"]
+    audit["graphicsPresent"] = audit["bundledImages"]
+    audit["graphicsMissing"] = audit["total"] - audit["bundledImages"]
+    audit["legalVerified"] = len(cards["cards"])
+    audit["unreviewed"] = audit["unreviewedTeachingCards"]
+    audit["linkedQuestionsVerified"] = 0
+    audit["linkedQuestionsReviewRequired"] = 0
     return audit
 
 
@@ -254,7 +323,7 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = add_legal_appendices(apply_2025_revision(parse_index(text)))
+    records = reconcile_warning_annex(add_legal_appendices(apply_2025_revision(parse_index(text))))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)

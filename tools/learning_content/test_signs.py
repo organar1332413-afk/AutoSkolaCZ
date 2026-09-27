@@ -18,8 +18,12 @@ class SignInventoryTest(unittest.TestCase):
     def test_committed_inventory_and_audit(self):
         audit = full_audit(self.data, self.sources)
         self.assertEqual(canonical_bytes(audit), (CONTENT / "audit.json").read_bytes())
-        self.assertEqual(347, audit["total"])
-        self.assertEqual(347, audit["csTitles"])
+        self.assertEqual(349, audit["total"])
+        self.assertEqual(349, audit["csTitles"])
+        self.assertEqual(347, audit["indexedFamilies"])
+        self.assertEqual(44, audit["warningLegalCodesVerified"])
+        self.assertEqual(49, audit["warningGraphicExecutionsIndexed"])
+        self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(29, audit["categories"]["light_signal"])
         self.assertEqual(0, audit["bundledImages"])
@@ -68,7 +72,29 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
-        self.assertEqual(16, len(self.cards["cards"]))
+        self.assertEqual(50, len(self.cards["cards"]))
+        warning = {s["code"] for s in self.data["signs"] if s["category"] == "warning"}
+        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in warning}
+        self.assertEqual(warning, reviewed)
+
+    def test_legal_codes_and_graphic_executions_are_distinct(self):
+        signs = {s["code"]: s for s in self.data["signs"]}
+        self.assertEqual({"A 31a", "A 31b", "A 31c"}, set(signs) & {"A 31a", "A 31b", "A 31c"})
+        self.assertEqual({240, 160, 80}, {
+            int(signs[c]["titleCs"].split("(")[1].split()[0]) for c in ("A 31a", "A 31b", "A 31c")
+        })
+        self.assertEqual(["A 6b-1", "A 6b-2"], signs["A 6b"]["graphicVariantCodes"])
+        self.assertNotIn("A 6b-1", signs)
+
+    def test_card_cannot_replace_original_title_or_omit_translation(self):
+        cards = copy.deepcopy(self.cards)
+        cards["cards"][0]["titleCs"] = "Altered"
+        with self.assertRaisesRegex(ValueError, "official Czech title"):
+            validate_cards(self.data, cards, self.sources)
+        cards = copy.deepcopy(self.cards)
+        cards["cards"][0]["titleUk"] = ""
+        with self.assertRaisesRegex(ValueError, "Incomplete CS/RU/UK"):
+            validate_cards(self.data, cards, self.sources)
 
     def test_question_links_require_existing_official_id(self):
         cards = copy.deepcopy(self.cards)
@@ -85,7 +111,7 @@ class SignInventoryTest(unittest.TestCase):
             validate_guide(corrupted, self.sources)
 
     def test_legal_appendix_inventory_has_provisions(self):
-        legal = [s for s in self.data["signs"] if s["reviewStatus"] == "LEGAL_INDEX_ONLY"]
+        legal = [s for s in self.data["signs"] if s["category"] in {"road_marking", "light_signal"}]
         self.assertEqual(69, len(legal))
         self.assertEqual({"V", "S"}, {s["code"].split()[0] for s in legal})
         self.assertTrue(all(s["sourceProvision"].startswith("Příloha č.") for s in legal))

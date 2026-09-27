@@ -1,5 +1,21 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 sign-catalog checkpoint
+
+The figures in the original 26 September audit below are historical. The
+catalog now has **349 indexed rows**, still derived from **347 indexed
+families**, after splitting the legally distinct A 31a/b/c advance boards.
+All **44 Annex 1 warning codes** have individual CS/RU/UK teaching cards and
+exact source-provision pointers; five numbered VL sheet pairs are tracked as
+graphic executions of one legal code each, making **49 indexed warning
+graphic executions**. Six cards from the earlier checkpoint remain, so the
+current teaching total is **50/349**. The other 299 rows remain unreviewed.
+Only the warning annex has been reconciled code by code; a complete legal
+family/variant count for the whole catalog is **not yet known**. Images and
+verified question relationships are still zero. See
+[graphics rights review](SIGN_GRAPHICS_LICENSE_REVIEW.md) and
+`content/learning/signs/audit.json` for the current counts.
+
 ## Existing app
 
 The 19 topic labels exist in `LearnScreen`; real production lessons do not.

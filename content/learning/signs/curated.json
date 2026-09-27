@@ -1,223 +1,1208 @@
 {
   "cards": [
     {
+      "checkedAt": "2026-09-27",
       "code": "A 10",
+      "confusedWith": [],
+      "driverActionsCs": "Připravte se na řízení provozu semaforem.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na světelné signály, které řidič nemusí očekávat nebo včas vidět.",
       "memoryCs": "Připravte se na řízení provozu semaforem.",
       "mistakeCs": "Nepředpokládejte volný průjezd jen proto, že semafor zatím nevidíte.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о светофоре, который может быть неожиданным или плохо видимым издалека.",
       "simpleCs": "Připravte se na řízení provozu semaforem.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 10",
+      "titleCs": "Světelné signály",
+      "titleRu": "Светофоры",
+      "titleUk": "Світлофори",
       "uk": "Попереджає про світлофор, який може бути несподіваним або погано видимим здалеку."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "A 11",
+      "confusedWith": [
+        "IP 6"
+      ],
+      "driverActionsCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na přechod pro chodce, který řidič nemusí očekávat nebo včas vidět.",
       "memoryCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
       "mistakeCs": "Nezaměňujte výstrahu A 11 s informativní značkou IP 6.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о пешеходном переходе, который можно не заметить заранее.",
       "simpleCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 11",
+      "titleCs": "Přechod pro chodce",
+      "titleRu": "Пешеходный переход",
+      "titleUk": "Пішохідний перехід",
       "uk": "Попереджає про пішохідний перехід, який можна не помітити завчасно."
     },
     {
+      "checkedAt": "2026-09-27",
+      "code": "A 12a",
+      "confusedWith": [
+        "A 11"
+      ],
+      "driverActionsCs": "Sledujte okraje vozovky a možné místo pro přecházení.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před častým pohybem nebo přecházením chodců i mimo přechod.",
+      "memoryCs": "Chodci nejsou vázáni na přechod.",
+      "mistakeCs": "Nečekejte nutně vyznačený přechod.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Пешеходы могут часто выходить на дорогу и там, где нет обозначенного перехода.",
+      "simpleCs": "Sledujte okraje vozovky a možné místo pro přecházení.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12a",
+      "titleCs": "Chodci",
+      "titleRu": "Пешеходы",
+      "titleUk": "Пішоходи",
+      "uk": "Пішоходи можуть часто виходити на дорогу й там, де немає позначеного переходу."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "A 12b",
+      "confusedWith": [],
+      "driverActionsCs": "V blízkosti dětí počítejte s nečekaným pohybem.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na místo, kde se často pohybují děti nebo mohou náhle vběhnout do vozovky.",
       "memoryCs": "V blízkosti dětí počítejte s nečekaným pohybem.",
       "mistakeCs": "Nehledejte pouze vyznačený přechod; dítě se může objevit i jinde.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о детях у дороги, которые могут неожиданно выбежать на проезжую часть.",
       "simpleCs": "V blízkosti dětí počítejte s nečekaným pohybem.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12b",
+      "titleCs": "Děti",
+      "titleRu": "Дети",
+      "titleUk": "Діти",
       "uk": "Попереджає про дітей біля дороги, які можуть раптово вибігти на проїзну частину."
     },
     {
+      "checkedAt": "2026-09-27",
+      "code": "A 12c",
+      "confusedWith": [
+        "A 19"
+      ],
+      "driverActionsCs": "Počítejte s jejich náhlým vjezdem do vozovky.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před častým pohybem osob na osobních přepravnících.",
+      "memoryCs": "Sledujte i osoby mimo auta a kola.",
+      "mistakeCs": "Nezaměňujte osobní přepravník za běžné jízdní kolo.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Здесь часто движутся люди на индивидуальных средствах передвижения; возможен внезапный выезд на дорогу.",
+      "simpleCs": "Počítejte s jejich náhlým vjezdem do vozovky.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12c",
+      "titleCs": "Osoby na osobních přepravnících",
+      "titleRu": "Люди на персональных транспортных средствах",
+      "titleUk": "Особи на персональних транспортних засобах",
+      "uk": "Тут часто рухаються люди на персональних засобах пересування; можливий раптовий виїзд на дорогу."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 13",
+      "confusedWith": [
+        "A 14"
+      ],
+      "driverActionsCs": "Zpomalte tak, abyste mohli bezpečně reagovat na zvíře.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před častým výskytem domácích zvířat na vozovce.",
+      "memoryCs": "Domácí zvíře, ne lesní zvěř.",
+      "mistakeCs": "Nejde o totéž jako varování před divokou zvěří.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "На дороге могут часто появляться домашние животные. Следите за обочиной.",
+      "simpleCs": "Zpomalte tak, abyste mohli bezpečně reagovat na zvíře.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 13",
+      "titleCs": "Zvířata",
+      "titleRu": "Домашние животные",
+      "titleUk": "Свійські тварини",
+      "uk": "На дорозі можуть часто з’являтися свійські тварини. Стежте за узбіччям."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 14",
+      "confusedWith": [
+        "A 13"
+      ],
+      "driverActionsCs": "Sledujte prostor kolem silnice, zvláště při horší viditelnosti.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před častým výskytem volně žijících zvířat na vozovce.",
+      "memoryCs": "Zvěř přichází z volné přírody.",
+      "mistakeCs": "Nezaměňujte ji se značkou pro domácí zvířata.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Возможен частый выход диких животных. Будьте готовы тормозить без резкого манёвра.",
+      "simpleCs": "Sledujte prostor kolem silnice, zvláště při horší viditelnosti.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 14",
+      "titleCs": "Zvěř",
+      "titleRu": "Дикие животные",
+      "titleUk": "Дикі тварини",
+      "uk": "Можлива часта поява диких тварин. Будьте готові гальмувати без різкого маневру."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 15",
+      "confusedWith": [
+        "A 27"
+      ],
+      "driverActionsCs": "Sledujte pracovníky, techniku a dočasné vedení provozu.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před pracemi na vozovce či těsně u ní.",
+      "memoryCs": "Práce mohou změnit vedení provozu.",
+      "mistakeCs": "Nepředpokládejte, že pruh zůstává průjezdný jako obvykle.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди работы на дороге или рядом с ней. Берегите работников и следуйте временным указаниям.",
+      "simpleCs": "Sledujte pracovníky, techniku a dočasné vedení provozu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 15",
+      "titleCs": "Práce na silnici",
+      "titleRu": "Дорожные работы",
+      "titleUk": "Дорожні роботи",
+      "uk": "Попереду роботи на дорозі або поруч із нею. Бережіть працівників і дотримуйтеся тимчасових вказівок."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 16",
+      "confusedWith": [
+        "A 22"
+      ],
+      "driverActionsCs": "Držte bezpečný směr, zvláště při výjezdu z krytého úseku.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před náhlými poryvy bočního větru.",
+      "memoryCs": "Vítr působí z boku.",
+      "mistakeCs": "Větrný rukáv, je-li přítomen, ukazuje aktuální směr a sílu větru.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Сильный порыв сбоку может сместить автомобиль. Особенно осторожно выезжайте из укрытого участка.",
+      "simpleCs": "Držte bezpečný směr, zvláště při výjezdu z krytého úseku.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 16",
+      "titleCs": "Boční vítr",
+      "titleRu": "Боковой ветер",
+      "titleUk": "Боковий вітер",
+      "uk": "Сильний порив збоку може змістити автомобіль. Особливо обережно виїжджайте із захищеної ділянки."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 17",
+      "confusedWith": [
+        "A 18"
+      ],
+      "driverActionsCs": "Zvětšete odstup a přizpůsobte rychlost povrchu.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na volný štěrk na vozovce, který může odlétávat od kol.",
+      "memoryCs": "Štěrk odlétá od kol.",
+      "mistakeCs": "Nejde o kamení padající ze svahu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "На покрытии свободный гравий; камни могут вылетать из-под колёс. Держите дистанцию.",
+      "simpleCs": "Zvětšete odstup a přizpůsobte rychlost povrchu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 17",
+      "titleCs": "Odlétávající štěrk",
+      "titleRu": "Летящий гравий",
+      "titleUk": "Гравій, що відлітає",
+      "uk": "На покритті вільний гравій; камінці можуть вилітати з-під коліс. Тримайте дистанцію."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 18",
+      "confusedWith": [
+        "A 17"
+      ],
+      "driverActionsCs": "Sledujte vozovku i svah, neobjíždějte překážku bez výhledu.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před kameny či zeminou, které mohou spadnout nebo se sesunout na vozovku.",
+      "memoryCs": "Kamení může přijít ze svahu.",
+      "mistakeCs": "Nezaměňujte padající kamení za štěrk odlétávající od kol.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Возможны камни или грунт на проезжей части после осыпания. Следите за дорогой и склоном.",
+      "simpleCs": "Sledujte vozovku i svah, neobjíždějte překážku bez výhledu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 18",
+      "titleCs": "Kamení na vozovce",
+      "titleRu": "Камни на дороге",
+      "titleUk": "Каміння на дорозі",
+      "uk": "Можливе каміння чи ґрунт на проїзній частині після осипання. Стежте за дорогою та схилом."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "A 19",
+      "confusedWith": [],
+      "driverActionsCs": "Sledujte cyklisty i mimo vyznačený přejezd.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na místo, kde cyklisté vjíždějí na vozovku, přejíždějí ji nebo se často vyskytují.",
       "memoryCs": "Sledujte cyklisty i mimo vyznačený přejezd.",
       "mistakeCs": "Nezaměňujte výstrahu před cyklisty za samotný přejezd pro cyklisty.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о велосипедистах, въезжающих на дорогу, пересекающих её или часто встречающихся на участке.",
       "simpleCs": "Sledujte cyklisty i mimo vyznačený přejezd.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 19",
+      "titleCs": "Cyklisté",
+      "titleRu": "Велосипедисты",
+      "titleUk": "Велосипедисти",
       "uk": "Попереджає про велосипедистів, які виїжджають на дорогу, перетинають її або часто трапляються на ділянці."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "A 1a",
+      "confusedWith": [],
+      "driverActionsCs": "Před zatáčkou vpravo včas snižte rychlost.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na zatáčku vpravo, kterou je nutné projet výrazně pomaleji.",
       "memoryCs": "Před zatáčkou vpravo včas snižte rychlost.",
       "mistakeCs": "Nečekejte s brzděním až do zatáčky.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает об опасном повороте направо. Снизьте скорость заранее.",
       "simpleCs": "Před zatáčkou vpravo včas snižte rychlost.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 1a",
+      "titleCs": "Zatáčka vpravo",
+      "titleRu": "Опасный поворот направо",
+      "titleUk": "Небезпечний поворот праворуч",
       "uk": "Попереджає про небезпечний поворот праворуч. Зменште швидкість завчасно."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "A 1b",
+      "confusedWith": [],
+      "driverActionsCs": "Před zatáčkou vlevo včas snižte rychlost.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na zatáčku vlevo, kterou je nutné projet výrazně pomaleji.",
       "memoryCs": "Před zatáčkou vlevo včas snižte rychlost.",
       "mistakeCs": "Nečekejte s brzděním až do zatáčky.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает об опасном повороте налево. Снизьте скорость заранее.",
       "simpleCs": "Před zatáčkou vlevo včas snižte rychlost.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 1b",
+      "titleCs": "Zatáčka vlevo",
+      "titleRu": "Опасный поворот налево",
+      "titleUk": "Небезпечний поворот ліворуч",
       "uk": "Попереджає про небезпечний поворот ліворуч. Зменште швидкість завчасно."
     },
     {
+      "checkedAt": "2026-09-27",
+      "code": "A 20",
+      "confusedWith": [
+        "A 22"
+      ],
+      "driverActionsCs": "Nenechte se náhlým přeletem vyvést z pozornosti při řízení.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před letadly přelétávajícími nízko nad silnicí.",
+      "memoryCs": "Pozor na náhlý přelet.",
+      "mistakeCs": "Značka sama neoznačuje letiště ani zákaz vjezdu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Над дорогой могут низко пролетать самолёты; сохраняйте внимание за рулём.",
+      "simpleCs": "Nenechte se náhlým přeletem vyvést z pozornosti při řízení.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 20",
+      "titleCs": "Letadla",
+      "titleRu": "Низко летящие самолёты",
+      "titleUk": "Літаки, що низько пролітають",
+      "uk": "Над дорогою можуть низько пролітати літаки; зберігайте увагу за кермом."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 21",
+      "confusedWith": [
+        "IP 5"
+      ],
+      "driverActionsCs": "Připravte se na vjezd do tunelu a sledujte jeho provozní pokyny.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na tunel, v němž platí zvláštní pravidla provozu.",
+      "memoryCs": "V tunelu sledujte také místní signalizaci.",
+      "mistakeCs": "Nejde jen o varování před tmou.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди тоннель; подготовьтесь к его особым правилам и сигналам.",
+      "simpleCs": "Připravte se na vjezd do tunelu a sledujte jeho provozní pokyny.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 21",
+      "titleCs": "Tunel",
+      "titleRu": "Тоннель",
+      "titleUk": "Тунель",
+      "uk": "Попереду тунель; підготуйтеся до його особливих правил і сигналів."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 22",
+      "confusedWith": [
+        "E 13"
+      ],
+      "driverActionsCs": "Zjistěte druh nebezpečí z dodatkové tabulky, je-li připojena.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před nebezpečím, pro které není zvláštní výstražná značka.",
+      "memoryCs": "Podívejte se na dodatkovou tabulku.",
+      "mistakeCs": "Samotný symbol neříká, jaký konkrétní problém vás čeká.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Предупреждает об иной опасности; уточнение обычно указано на табличке под знаком.",
+      "simpleCs": "Zjistěte druh nebezpečí z dodatkové tabulky, je-li připojena.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 22",
+      "titleCs": "Jiné nebezpečí",
+      "titleRu": "Прочая опасность",
+      "titleUk": "Інша небезпека",
+      "uk": "Попереджає про іншу небезпеку; уточнення зазвичай вказане на табличці під знаком."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 23",
+      "confusedWith": [
+        "A 27"
+      ],
+      "driverActionsCs": "Včas zpomalte a hlídejte konec kolony.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před stojícími nebo pomalu jedoucími kolonami.",
+      "memoryCs": "Největší riziko bývá konec kolony.",
+      "mistakeCs": "Nepředpokládejte, že provoz dál plyne stejnou rychlostí.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди возможен затор; заранее следите за хвостом очереди автомобилей.",
+      "simpleCs": "Včas zpomalte a hlídejte konec kolony.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 23",
+      "titleCs": "Kolona",
+      "titleRu": "Пробка",
+      "titleUk": "Затор",
+      "uk": "Попереду можливий затор; завчасно стежте за кінцем колони автомобілів."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 24",
+      "confusedWith": [
+        "A 8"
+      ],
+      "driverActionsCs": "Přizpůsobte rychlost možnosti zledovatělého povrchu.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před zvýšeným nebezpečím náledí na vozovce.",
+      "memoryCs": "Led může být nenápadný.",
+      "mistakeCs": "Na rozdíl od A 8 upozorňuje konkrétně na náledí.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Возможна гололедица; заранее уменьшите скорость и избегайте резких действий.",
+      "simpleCs": "Přizpůsobte rychlost možnosti zledovatělého povrchu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 24",
+      "titleCs": "Náledí",
+      "titleRu": "Гололедица",
+      "titleUk": "Ожеледиця",
+      "uk": "Можлива ожеледиця; завчасно зменште швидкість і уникайте різких дій."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 25",
+      "confusedWith": [
+        "P 5"
+      ],
+      "driverActionsCs": "Sledujte koleje i přijíždějící tramvaj.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před místem, kde tramvaj kříží směr jízdy vozidel.",
+      "memoryCs": "Koleje mohou křížit vaši dráhu.",
+      "mistakeCs": "Výstraha sama neurčuje přednost; posuďte další značky a pravidla.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Трамвай пересекает направление движения автомобилей. Проверяйте движение по рельсам.",
+      "simpleCs": "Sledujte koleje i přijíždějící tramvaj.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 25",
+      "titleCs": "Tramvaj",
+      "titleRu": "Трамвай",
+      "titleUk": "Трамвай",
+      "uk": "Трамвай перетинає напрямок руху автомобілів. Перевіряйте рух по коліях."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 26",
+      "confusedWith": [
+        "A 22"
+      ],
+      "driverActionsCs": "Přizpůsobte rychlost skutečnému rozhledu.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před možným výskytem mlhy nebo kouře.",
+      "memoryCs": "I kouř omezuje rozhled.",
+      "mistakeCs": "Nečekejte nutně jen meteorologickou mlhu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Возможны туман или дым, ограничивающие видимость; выбирайте скорость по видимой дистанции.",
+      "simpleCs": "Přizpůsobte rychlost skutečnému rozhledu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 26",
+      "titleCs": "Mlha",
+      "titleRu": "Туман",
+      "titleUk": "Туман",
+      "uk": "Можливі туман або дим, що обмежують видимість; обирайте швидкість за видимою відстанню."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 27",
+      "confusedWith": [
+        "A 15"
+      ],
+      "driverActionsCs": "Zpomalte a sledujte případné pokyny u nehody.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na místo dopravní nehody.",
+      "memoryCs": "U nehody může být provoz zastaven.",
+      "mistakeCs": "Neberte místo nehody jako běžné zúžení.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди место ДТП. Следите за людьми, службами и временным регулированием.",
+      "simpleCs": "Zpomalte a sledujte případné pokyny u nehody.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 27",
+      "titleCs": "Nehoda",
+      "titleRu": "Дорожное происшествие",
+      "titleUk": "Дорожня пригода",
+      "uk": "Попереду місце ДТП. Стежте за людьми, службами й тимчасовим регулюванням."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 28",
+      "confusedWith": [
+        "B 28"
+      ],
+      "driverActionsCs": "Nevjíždějte na krajnici bez důvodu a držte bezpečnou stopu.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje, že vjetí na krajnici je v následujícím úseku nebezpečné.",
+      "memoryCs": "Krajnice nemusí být únosná.",
+      "mistakeCs": "Nezaměňujte značku za obecný zákaz zastavení.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Выезд на обочину здесь опасен. Держите автомобиль на проезжей части.",
+      "simpleCs": "Nevjíždějte na krajnici bez důvodu a držte bezpečnou stopu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 28",
+      "titleCs": "Nebezpečná krajnice",
+      "titleRu": "Опасная обочина",
+      "titleUk": "Небезпечне узбіччя",
+      "uk": "Виїзд на узбіччя тут небезпечний. Тримайте авто на проїзній частині."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 29",
+      "confusedWith": [
+        "A 30",
+        "A 31a"
+      ],
+      "driverActionsCs": "Sledujte světla, závory a provoz před přejezdem.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na železniční přejezd vybavený závorami.",
+      "memoryCs": "Závory jsou jedním z prvků zabezpečení.",
+      "mistakeCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди железнодорожный переезд со шлагбаумом. Выполняйте сигналы и проверьте безопасность.",
+      "simpleCs": "Sledujte světla, závory a provoz před přejezdem.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 29",
+      "titleCs": "Železniční přejezd se závorami",
+      "titleRu": "Переезд со шлагбаумом",
+      "titleUk": "Переїзд зі шлагбаумом",
+      "uk": "Попереду залізничний переїзд зі шлагбаумом. Виконуйте сигнали й перевірте безпеку."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 2a",
+      "confusedWith": [
+        "A 1a",
+        "A 2b"
+      ],
+      "driverActionsCs": "Zpomalte před první zatáčkou a počítejte s další.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na nejméně dvě nebezpečné zatáčky; první je vpravo.",
+      "memoryCs": "První oblouk určuje šipku na značce.",
+      "mistakeCs": "Nečekejte, že po první zatáčce bude rovná silnice.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди несколько крутых поворотов; первый направо. Снизьте скорость ещё до первого.",
+      "simpleCs": "Zpomalte před první zatáčkou a počítejte s další.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 2a",
+      "titleCs": "Dvojitá zatáčka, první vpravo",
+      "titleRu": "Двойной поворот, первый направо",
+      "titleUk": "Подвійний поворот, перший праворуч",
+      "uk": "Попереду кілька крутих поворотів; перший праворуч. Зменште швидкість ще до першого."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 2b",
+      "confusedWith": [
+        "A 1b",
+        "A 2a"
+      ],
+      "driverActionsCs": "Zpomalte před první zatáčkou a počítejte s další.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na nejméně dvě nebezpečné zatáčky; první je vlevo.",
+      "memoryCs": "První oblouk určuje šipku na značce.",
+      "mistakeCs": "Nepředpokládejte, že výstraha končí první zatáčkou.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди несколько крутых поворотов; первый налево. Снизьте скорость заранее.",
+      "simpleCs": "Zpomalte před první zatáčkou a počítejte s další.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 2b",
+      "titleCs": "Dvojitá zatáčka, první vlevo",
+      "titleRu": "Двойной поворот, первый налево",
+      "titleUk": "Подвійний поворот, перший ліворуч",
+      "uk": "Попереду кілька крутих поворотів; перший ліворуч. Зменште швидкість заздалегідь."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "A 3",
+      "confusedWith": [
+        "P 1",
+        "P 2"
+      ],
+      "driverActionsCs": "V této křižovatce sledujte pravidla přednosti, zejména vozidla zprava.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na křižovatku bez svislých značek upravujících přednost.",
       "memoryCs": "V této křižovatce sledujte pravidla přednosti, zejména vozidla zprava.",
       "mistakeCs": "Nedomnívejte se, že jedete po hlavní silnici jen proto, že tomu tak bylo dříve.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о перекрёстке без знаков приоритета. Учитывайте правило помехи справа.",
       "simpleCs": "V této křižovatce sledujte pravidla přednosti, zejména vozidla zprava.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 3",
+      "titleCs": "Křižovatka",
+      "titleRu": "Перекрёсток без знаков приоритета",
+      "titleUk": "Перехрестя без знаків пріоритету",
       "uk": "Попереджає про перехрестя без знаків пріоритету. Враховуйте правило перешкоди справа."
     },
     {
+      "checkedAt": "2026-09-27",
+      "code": "A 30",
+      "confusedWith": [
+        "A 29",
+        "A 31a"
+      ],
+      "driverActionsCs": "Sledujte výstražné signály a ověřte, zda se neblíží vlak.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na železniční přejezd bez závor.",
+      "memoryCs": "Absence závory vyžaduje pozornost.",
+      "mistakeCs": "Bez závory neznamená bez výstražného zařízení.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди переезд без шлагбаума. Следите за сигналами и приближением поезда.",
+      "simpleCs": "Sledujte výstražné signály a ověřte, zda se neblíží vlak.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 30",
+      "titleCs": "Železniční přejezd bez závor",
+      "titleRu": "Переезд без шлагбаума",
+      "titleUk": "Переїзд без шлагбаума",
+      "uk": "Попереду переїзд без шлагбаума. Стежте за сигналами та наближенням поїзда."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 31a",
+      "confusedWith": [
+        "A 31b",
+        "A 31c"
+      ],
+      "driverActionsCs": "Všímejte si další desky a přizpůsobte jízdu před přejezdem.",
+      "exceptionsCs": [],
+      "meaningCs": "Tři šikmé pruhy označují přiblížení k přejezdu ze vzdálenosti 240 m.",
+      "memoryCs": "Tři pruhy jsou nejdále od přejezdu.",
+      "mistakeCs": "Nezaměňujte počet pruhů za počet kolejí.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Три полосы: до переезда ориентировочно 240 м. Подготовьтесь к безопасному проезду.",
+      "simpleCs": "Všímejte si další desky a přizpůsobte jízdu před přejezdem.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31a",
+      "titleCs": "Návěstní deska (240 m)",
+      "titleRu": "Указатель перед переездом, 240 м",
+      "titleUk": "Вказівник перед переїздом, 240 м",
+      "uk": "Три смуги: до переїзду орієнтовно 240 м. Підготуйтеся до безпечного проїзду."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 31b",
+      "confusedWith": [
+        "A 31a",
+        "A 31c"
+      ],
+      "driverActionsCs": "Pokračujte s pozorností k přejezdu a jeho signálům.",
+      "exceptionsCs": [],
+      "meaningCs": "Dva šikmé pruhy označují přiblížení k přejezdu ze vzdálenosti 160 m.",
+      "memoryCs": "Dva pruhy jsou uprostřed řady.",
+      "mistakeCs": "Počet pruhů neudává počet kolejí.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Две полосы: до переезда ориентировочно 160 м. Следите за сигналами.",
+      "simpleCs": "Pokračujte s pozorností k přejezdu a jeho signálům.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31b",
+      "titleCs": "Návěstní deska (160 m)",
+      "titleRu": "Указатель перед переездом, 160 м",
+      "titleUk": "Вказівник перед переїздом, 160 м",
+      "uk": "Дві смуги: до переїзду орієнтовно 160 м. Стежте за сигналами."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 31c",
+      "confusedWith": [
+        "A 31a",
+        "A 31b"
+      ],
+      "driverActionsCs": "Buďte připraveni reagovat na zabezpečení přejezdu.",
+      "exceptionsCs": [],
+      "meaningCs": "Jeden šikmý pruh označuje přiblížení k přejezdu ze vzdálenosti 80 m.",
+      "memoryCs": "Jeden pruh je nejblíže přejezdu.",
+      "mistakeCs": "Počet pruhů neudává počet kolejí.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Одна полоса: до переезда ориентировочно 80 м. Будьте готовы к остановке при соответствующем сигнале.",
+      "simpleCs": "Buďte připraveni reagovat na zabezpečení přejezdu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31c",
+      "titleCs": "Návěstní deska (80 m)",
+      "titleRu": "Указатель перед переездом, 80 м",
+      "titleUk": "Вказівник перед переїздом, 80 м",
+      "uk": "Одна смуга: до переїзду орієнтовно 80 м. Будьте готові зупинитися за відповідного сигналу."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 32a",
+      "confusedWith": [
+        "A 32b",
+        "A 31c"
+      ],
+      "driverActionsCs": "Před křížem zastavte, vyžaduje-li to pravidlo nebo signál.",
+      "exceptionsCs": [],
+      "meaningCs": "Výstražný kříž označuje jednokolejný železniční přejezd.",
+      "memoryCs": "Jeden pár ramen – jedna kolej.",
+      "mistakeCs": "Nejde o návěstní desku udávající vzdálenost.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Крест обозначает переезд с одним путём. Если остановка обязательна, остановитесь перед ним.",
+      "simpleCs": "Před křížem zastavte, vyžaduje-li to pravidlo nebo signál.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 32a",
+      "titleCs": "Výstražný kříž pro železniční přejezd jednokolejný",
+      "titleRu": "Однопутный железнодорожный переезд",
+      "titleUk": "Одноколійний залізничний переїзд",
+      "uk": "Хрест позначає переїзд з однією колією. Якщо зупинка обов’язкова, зупиніться перед ним."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 32b",
+      "confusedWith": [
+        "A 32a"
+      ],
+      "driverActionsCs": "Před křížem zastavte, je-li zastavení přikázáno; sledujte všechny koleje.",
+      "exceptionsCs": [],
+      "meaningCs": "Výstražný kříž označuje vícekolejný přejezd; vlaky mohou jet z obou směrů.",
+      "memoryCs": "Více kolejí znamená více možných vlaků.",
+      "mistakeCs": "Nepředpokládejte, že po jednom vlaku je přejezd už volný.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Крест обозначает переезд с несколькими путями. Проверяйте все пути; при обязательной остановке остановитесь перед знаком.",
+      "simpleCs": "Před křížem zastavte, je-li zastavení přikázáno; sledujte všechny koleje.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 32b",
+      "titleCs": "Výstražný kříž pro železniční přejezd vícekolejný",
+      "titleRu": "Многопутный железнодорожный переезд",
+      "titleUk": "Багатоколійний залізничний переїзд",
+      "uk": "Хрест позначає переїзд із кількома коліями. Перевіряйте всі колії; за обов’язкової зупинки зупиніться перед знаком."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 33",
+      "confusedWith": [
+        "A 34"
+      ],
+      "driverActionsCs": "Sledujte provozní signály a nevjíždějte na uzavřený most.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na zvedací nebo jinak pohyblivý most.",
+      "memoryCs": "Most se může pohybovat.",
+      "mistakeCs": "Nezaměňujte ji se značkou Nábřeží.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди разводной или подвижный мост. Следуйте его сигналам и ограждениям.",
+      "simpleCs": "Sledujte provozní signály a nevjíždějte na uzavřený most.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 33",
+      "titleCs": "Pohyblivý most",
+      "titleRu": "Разводной мост",
+      "titleUk": "Розвідний міст",
+      "uk": "Попереду розвідний або рухомий міст. Дотримуйтеся його сигналів та огорож."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 34",
+      "confusedWith": [
+        "A 33"
+      ],
+      "driverActionsCs": "Včas upravte jízdu; za koncem cesty může být voda.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje, že komunikace směřuje k nechráněnému břehu vodní plochy.",
+      "memoryCs": "Za okrajem může být voda.",
+      "mistakeCs": "Nejde o výstrahu před pohyblivým mostem.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Дорога ведёт к незащищённому берегу. Впереди может быть вода без ограждения.",
+      "simpleCs": "Včas upravte jízdu; za koncem cesty může být voda.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 34",
+      "titleCs": "Nábřeží",
+      "titleRu": "Набережная без ограждения",
+      "titleUk": "Набережна без огорожі",
+      "uk": "Дорога веде до незахищеного берега. Попереду може бути вода без огорожі."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "A 4",
+      "confusedWith": [
+        "C 1"
+      ],
+      "driverActionsCs": "Připravte se na kruhový objezd a sledujte značky upravující přednost u vjezdu.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na blížící se křižovatku s kruhovým objezdem.",
       "memoryCs": "Připravte se na kruhový objezd a sledujte značky upravující přednost u vjezdu.",
       "mistakeCs": "Výstraha před kruhovým objezdem sama o sobě neurčuje přednost.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о круговом перекрёстке. При въезде смотрите отдельные знаки приоритета.",
       "simpleCs": "Připravte se na kruhový objezd a sledujte značky upravující přednost u vjezdu.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 4",
+      "titleCs": "Křižovatka s kruhovým objezdem",
+      "titleRu": "Перекрёсток с круговым движением",
+      "titleUk": "Перехрестя з круговим рухом",
       "uk": "Попереджає про кільцеве перехрестя. На в’їзді дивіться окремі знаки пріоритету."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "A 5a",
+      "confusedWith": [
+        "A 5b"
+      ],
+      "driverActionsCs": "Před klesáním upravte rychlost podle sklonu a podmínek.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na nebezpečné klesání; uvedený údaj vyjadřuje nejvyšší skutečný podélný sklon.",
       "memoryCs": "Před klesáním upravte rychlost podle sklonu a podmínek.",
       "mistakeCs": "Nečtěte procento sklonu jako omezení rychlosti.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает об опасном спуске. Значение на знаке показывает максимальный уклон.",
       "simpleCs": "Před klesáním upravte rychlost podle sklonu a podmínek.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 5a",
+      "titleCs": "Nebezpečné klesání",
+      "titleRu": "Опасный спуск",
+      "titleUk": "Небезпечний спуск",
       "uk": "Попереджає про небезпечний спуск. Значення на знаку показує максимальний ухил."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "A 5b",
+      "confusedWith": [
+        "A 5a"
+      ],
+      "driverActionsCs": "Připravte se na stoupání a přizpůsobte jízdu vozidlu i podmínkám.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje na prudké stoupání; uvedený údaj vyjadřuje nejvyšší skutečný podélný sklon.",
       "memoryCs": "Připravte se na stoupání a přizpůsobte jízdu vozidlu i podmínkám.",
       "mistakeCs": "Nezaměňujte stoupání A 5b s klesáním A 5a.",
+      "questionLinks": [],
       "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Предупреждает о крутом подъёме. Значение на знаке показывает максимальный уклон.",
       "simpleCs": "Připravte se na stoupání a přizpůsobte jízdu vozidlu i podmínkám.",
       "sourceIds": [
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 5b",
+      "titleCs": "Nebezpečné stoupání",
+      "titleRu": "Опасный подъём",
+      "titleUk": "Небезпечний підйом",
       "uk": "Попереджає про крутий підйом. Значення на знаку показує максимальний ухил."
     },
     {
+      "checkedAt": "2026-09-27",
+      "code": "A 6a",
+      "confusedWith": [
+        "A 6b"
+      ],
+      "driverActionsCs": "Včas zkontrolujte prostor a přizpůsobte rychlost zúženému místu.",
+      "exceptionsCs": [],
+      "meaningCs": "Předchozí šířka vozovky se výrazně zmenší z obou stran.",
+      "memoryCs": "Obě čáry míří ke středu.",
+      "mistakeCs": "Zúžení samo o sobě neurčuje přednost v jízdě.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Проезжая часть заметно сужается с двух сторон. Заранее оцените пространство для разъезда.",
+      "simpleCs": "Včas zkontrolujte prostor a přizpůsobte rychlost zúženému místu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 6a",
+      "titleCs": "Zúžená vozovka z obou stran",
+      "titleRu": "Сужение дороги с обеих сторон",
+      "titleUk": "Звуження дороги з обох боків",
+      "uk": "Проїзна частина помітно звужується з обох боків. Заздалегідь оцініть простір для роз’їзду."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 6b",
+      "confusedWith": [
+        "A 6a"
+      ],
+      "driverActionsCs": "Sledujte, která strana se zužuje, a včas upravte jízdu.",
+      "exceptionsCs": [],
+      "meaningCs": "Vozovka se výrazně zužuje vlevo nebo vpravo podle obrázku.",
+      "memoryCs": "Ohýbá se jen jedna čára.",
+      "mistakeCs": "Nepovažujte obě zrcadlové grafiky za dvě odlišná právní pravidla.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Дорога сужается со стороны, показанной на знаке. Следите за фактической разметкой и встречными автомобилями.",
+      "simpleCs": "Sledujte, která strana se zužuje, a včas upravte jízdu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 6b",
+      "titleCs": "Zúžená vozovka z jedné strany",
+      "titleRu": "Сужение дороги с одной стороны",
+      "titleUk": "Звуження дороги з одного боку",
+      "uk": "Дорога звужується з боку, показаного на знаку. Стежте за реальною розміткою й зустрічними автомобілями."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 7a",
+      "confusedWith": [
+        "A 7b"
+      ],
+      "driverActionsCs": "Zpomalte podle stavu povrchu a držte vozidlo bezpečně pod kontrolou.",
+      "exceptionsCs": [],
+      "meaningCs": "Varuje před hrboly, výtluky či jinou nerovností vozovky.",
+      "memoryCs": "Nerovnosti mohou být na celém úseku.",
+      "mistakeCs": "Nezaměňujte výmoly za umělý zpomalovací práh.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Возможны выбоины и бугры; скорость выбирайте по состоянию покрытия.",
+      "simpleCs": "Zpomalte podle stavu povrchu a držte vozidlo bezpečně pod kontrolou.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 7a",
+      "titleCs": "Nerovnost vozovky",
+      "titleRu": "Неровная дорога",
+      "titleUk": "Нерівна дорога",
+      "uk": "Можливі вибоїни й горби; швидкість обирайте за станом покриття."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 7b",
+      "confusedWith": [
+        "A 7a"
+      ],
+      "driverActionsCs": "Před prahem včas snižte rychlost.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na uměle vytvořený zpomalovací práh.",
+      "memoryCs": "Práh je vytvořen úmyslně.",
+      "mistakeCs": "Nejde o obecné varování před výtluky.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди искусственная неровность для снижения скорости; тормозите заранее.",
+      "simpleCs": "Před prahem včas snižte rychlost.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 7b",
+      "titleCs": "Zpomalovací práh",
+      "titleRu": "Искусственная неровность",
+      "titleUk": "Штучна нерівність",
+      "uk": "Попереду штучна нерівність для зниження швидкості; гальмуйте завчасно."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 8",
+      "confusedWith": [
+        "A 24"
+      ],
+      "driverActionsCs": "Jeďte plynule a přizpůsobte rychlost přilnavosti vozovky.",
+      "exceptionsCs": [],
+      "meaningCs": "Upozorňuje na úsek se zvýšeným rizikem smyku i za běžného počasí.",
+      "memoryCs": "Kluzký povrch není jen led.",
+      "mistakeCs": "Nepředpokládejte, že značka platí jen v zimě; podmínky může vymezit tabulka.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "На этом участке автомобиль может уйти в занос даже в обычную погоду. Избегайте резких манёвров.",
+      "simpleCs": "Jeďte plynule a přizpůsobte rychlost přilnavosti vozovky.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 8",
+      "titleCs": "Nebezpečí smyku",
+      "titleRu": "Опасность заноса",
+      "titleUk": "Небезпека заносу",
+      "uk": "На цій ділянці авто може занести навіть за звичайної погоди. Уникайте різких маневрів."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "A 9",
+      "confusedWith": [
+        "IP 4a"
+      ],
+      "driverActionsCs": "Počítejte s protijedoucími vozidly a držte se správné strany.",
+      "exceptionsCs": [],
+      "meaningCs": "Po předchozím jednosměrném nebo odděleném vedení může pokračovat provoz v obou směrech.",
+      "memoryCs": "Dvě šipky proti sobě znamenají protisměr.",
+      "mistakeCs": "Nejde o jednosměrnou ulici.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Впереди встречное движение, в том числе после разделённого участка. Не занимайте встречную сторону.",
+      "simpleCs": "Počítejte s protijedoucími vozidly a držte se správné strany.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 9",
+      "titleCs": "Provoz v obou směrech",
+      "titleRu": "Двустороннее движение",
+      "titleUk": "Двосторонній рух",
+      "uk": "Попереду зустрічний рух, зокрема після розділеної ділянки. Не виїжджайте на зустрічний бік."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "B 4",
+      "confusedWith": [
+        "B 6"
+      ],
+      "driverActionsCs": "Před vjezdem ověřte, zda zákaz platí pro druh vašeho vozidla a případnou dodatkovou tabulku.",
+      "exceptionsCs": [],
       "meaningCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
       "memoryCs": "B 4 se liší od B 6 (zákaz vjezdu traktorů).",
       "mistakeCs": "Nezaměňujte B 4 a B 6.",
+      "questionLinks": [],
       "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
       "ru": "Запрещает въезд грузовых автомобилей; уточнение касается и транспорта, конструктивно производного от грузовиков. Учитывайте дополнительную табличку.",
       "simpleCs": "Před vjezdem ověřte, zda zákaz platí pro druh vašeho vozidla a případnou dodatkovou tabulku.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "md-sign-changes-2025",
+        "decree-294-2015"
       ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 4",
+      "titleCs": "Zákaz vjezdu nákladních automobilů",
+      "titleRu": "Въезд грузовых автомобилей запрещён",
+      "titleUk": "В’їзд вантажних автомобілів заборонено",
       "uk": "Забороняє в’їзд вантажних автомобілів; уточнення стосується й транспорту, конструктивно похідного від вантажівок. Враховуйте додаткову табличку."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "IP 10a",
+      "confusedWith": [],
+      "driverActionsCs": "Slepá ulice může být průjezdná pro jízdní kola, pokud to značka ukazuje.",
+      "exceptionsCs": [],
       "meaningCs": "Označuje komunikaci, která končí nebo po které nelze dále pokračovat; může vyznačit pokračování pro cyklisty.",
       "memoryCs": "Slepá pro motorová vozidla nemusí být slepá pro cyklisty.",
       "mistakeCs": "Neodvozujte průjezdnost pro své vozidlo jen z toho, že cyklista může pokračovat.",
+      "questionLinks": [],
       "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
       "ru": "Обозначает тупиковую дорогу. Если знак это показывает, велосипедисты могут продолжить движение.",
       "simpleCs": "Slepá ulice může být průjezdná pro jízdní kola, pokud to značka ukazuje.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "md-sign-changes-2025",
+        "decree-294-2015"
       ],
+      "sourceProvision": "Příloha č. 5 k vyhlášce č. 294/2015 Sb., IP 10a",
+      "titleCs": "Slepá pozemní komunikace",
+      "titleRu": "Тупиковая дорога",
+      "titleUk": "Тупикова дорога",
       "uk": "Позначає тупикову дорогу. Якщо знак це показує, велосипедисти можуть продовжити рух."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "IP 4a",
+      "confusedWith": [
+        "A 9"
+      ],
+      "driverActionsCs": "V jednosměrné ulici věnujte pozornost symbolu cyklisty: cyklisté mohou mít povolený protisměr.",
+      "exceptionsCs": [],
       "meaningCs": "Označuje směr jízdy vozidel na jednosměrné pozemní komunikaci; nově lze vyznačit povolený protisměrný vjezd cyklistů přímo na značce.",
       "memoryCs": "Jednosměrka nemusí vylučovat protisměrný pohyb cyklistů.",
       "mistakeCs": "Nepřehlédněte vyznačenou výjimku pro cyklisty.",
+      "questionLinks": [],
       "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
       "ru": "Обозначает направление движения по односторонней дороге. Если это указано на знаке, велосипедистам разрешено движение навстречу.",
       "simpleCs": "V jednosměrné ulici věnujte pozornost symbolu cyklisty: cyklisté mohou mít povolený protisměr.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "md-sign-changes-2025",
+        "decree-294-2015"
       ],
+      "sourceProvision": "Příloha č. 5 k vyhlášce č. 294/2015 Sb., IP 4a",
+      "titleCs": "Jednosměrný provoz",
+      "titleRu": "Одностороннее движение",
+      "titleUk": "Односторонній рух",
       "uk": "Позначає напрямок руху односторонньою дорогою. Якщо це вказано на знаку, велосипедистам дозволено зустрічний рух."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "IZ 7a",
+      "confusedWith": [
+        "IZ 7b"
+      ],
+      "driverActionsCs": "Před vjezdem do emisní zóny ověřte podmínky pro své vozidlo v uvedeném informačním systému.",
+      "exceptionsCs": [],
       "meaningCs": "Označuje oblast nízkoemisní zóny; vjezd motorových vozidel může podléhat nízkoemisnímu poplatku.",
       "memoryCs": "Nová podoba již nepoužívá emisní plaketu na značce.",
       "mistakeCs": "Nezaměňujte možnost poplatku za automatický zákaz každého vjezdu.",
+      "questionLinks": [],
       "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
       "ru": "Обозначает зону с экологическими ограничениями. Въезд может облагаться сбором; проверьте условия для своего автомобиля.",
       "simpleCs": "Před vjezdem do emisní zóny ověřte podmínky pro své vozidlo v uvedeném informačním systému.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "md-sign-changes-2025",
+        "decree-294-2015"
       ],
+      "sourceProvision": "Příloha č. 5 k vyhlášce č. 294/2015 Sb., IZ 7a",
+      "titleCs": "Emisní zóna",
+      "titleRu": "Начало зоны с ограничением выбросов",
+      "titleUk": "Початок зони з обмеженням викидів",
       "uk": "Позначає зону з екологічними обмеженнями. В’їзд може обкладатися збором; перевірте умови для свого автомобіля."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "IZ 7b",
+      "confusedWith": [
+        "IZ 7a"
+      ],
+      "driverActionsCs": "Za touto značkou končí oblast vyznačené emisní zóny.",
+      "exceptionsCs": [],
       "meaningCs": "Označuje konec nízkoemisní zóny.",
       "memoryCs": "Sledujte rozdíl mezi začátkem IZ 7a a koncem IZ 7b.",
       "mistakeCs": "Nezaměňujte značku konce zóny za její začátek.",
+      "questionLinks": [],
       "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
       "ru": "Обозначает конец зоны с экологическими ограничениями.",
       "simpleCs": "Za touto značkou končí oblast vyznačené emisní zóny.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "md-sign-changes-2025",
+        "decree-294-2015"
       ],
+      "sourceProvision": "Příloha č. 5 k vyhlášce č. 294/2015 Sb., IZ 7b",
+      "titleCs": "Konec emisní zóny",
+      "titleRu": "Конец зоны с ограничением выбросов",
+      "titleUk": "Кінець зони з обмеженням викидів",
       "uk": "Позначає кінець зони з екологічними обмеженнями."
     },
     {
+      "checkedAt": "2026-09-27",
       "code": "P 1",
+      "confusedWith": [
+        "A 3",
+        "P 2"
+      ],
+      "driverActionsCs": "Před křižovatkou sledujte, kudy vede hlavní silnice; její průběh může upřesnit dodatková tabulka.",
+      "exceptionsCs": [],
       "meaningCs": "Upozorňuje mimo obec na křižovatku a označuje hlavní pozemní komunikaci.",
       "memoryCs": "Tvar hlavní silnice se může lišit od přímého směru.",
       "mistakeCs": "Nepředpokládejte, že hlavní silnice vždy pokračuje rovně.",
+      "questionLinks": [],
       "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
       "ru": "Предупреждает вне населённого пункта о перекрёстке и обозначает главную дорогу. Табличка может уточнять её направление.",
       "simpleCs": "Před křižovatkou sledujte, kudy vede hlavní silnice; její průběh může upřesnit dodatková tabulka.",
       "sourceIds": [
-        "md-sign-changes-2025"
+        "md-sign-changes-2025",
+        "decree-294-2015"
       ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 1",
+      "titleCs": "Křižovatka s vedlejší pozemní komunikací",
+      "titleRu": "Перекрёсток с второстепенной дорогой",
+      "titleUk": "Перехрестя з другорядною дорогою",
       "uk": "Попереджає поза населеним пунктом про перехрестя й позначає головну дорогу. Табличка може уточнювати її напрямок."
     }
-  ],
-  "schemaVersion": 1
+  ]
 }

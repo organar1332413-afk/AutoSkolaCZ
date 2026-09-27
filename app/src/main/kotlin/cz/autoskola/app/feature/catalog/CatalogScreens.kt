@@ -58,6 +58,10 @@ import cz.autoskola.app.ui.*
                 OutlinedCard(onClick = { selected = null }) {
                     Column(Modifier.padding(18.dp)) {
                         Text("${sign.code} · ${sign.titleCs}", style = MaterialTheme.typography.titleLarge)
+                        when (language) {
+                            "ru" -> sign.titleRu?.let { Text(it, style = MaterialTheme.typography.titleMedium) }
+                            "uk" -> sign.titleUk?.let { Text(it, style = MaterialTheme.typography.titleMedium) }
+                        }
                         sign.meaningCs?.let { Text(it) }
                         sign.simpleCs?.let { Text(it) }
                         when (language) {
@@ -65,6 +69,10 @@ import cz.autoskola.app.ui.*
                             "uk" -> sign.uk?.let { Text(it) }
                         }
                         if (sign.meaningCs == null) Note(text(R.string.signs_unreviewed))
+                        sign.memoryCs?.let { Note(it) }
+                        sign.mistakeCs?.let { Text(it) }
+                        if (sign.confusedWith.isNotEmpty()) Text(sign.confusedWith.joinToString(" · "))
+                        sign.sourceProvision?.let { Text(it) }
                         Note(text(R.string.signs_source, sign.sourceUrl))
                         if (sign.graphicStatus == "LICENSE_REVIEW_REQUIRED") Note(text(R.string.signs_graphic_pending))
                     }

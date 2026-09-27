@@ -1,5 +1,5 @@
 {
-  "inventoryCount": 347,
+  "inventoryCount": 349,
   "schemaVersion": 1,
   "scope": "ministry-graphic-index-inventory",
   "signs": [
@@ -13,10 +13,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 10",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 10"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Světelné signály"
@@ -27,6 +31,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 10",
       "titleCs": "Světelné signály",
       "titleRu": null,
       "titleUk": null,
@@ -42,10 +47,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 11",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 11"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přechod pro chodce"
@@ -56,6 +65,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 11",
       "titleCs": "Přechod pro chodce",
       "titleRu": null,
       "titleUk": null,
@@ -71,10 +81,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 12a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 12a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Chodci"
@@ -85,6 +99,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12a",
       "titleCs": "Chodci",
       "titleRu": null,
       "titleUk": null,
@@ -100,10 +115,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 12b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 12b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Děti"
@@ -114,6 +133,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12b",
       "titleCs": "Děti",
       "titleRu": null,
       "titleUk": null,
@@ -129,10 +149,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 12c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 12c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Osoby na osobních přepravnících"
@@ -143,6 +167,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12c",
       "titleCs": "Osoby na osobních přepravnících",
       "titleRu": null,
       "titleUk": null,
@@ -158,10 +183,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 13",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 13-1",
+        "A 13-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2    Zvířata"
@@ -172,6 +202,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 13",
       "titleCs": "Zvířata",
       "titleRu": null,
       "titleUk": null,
@@ -187,10 +218,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 14",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 14-1",
+        "A 14-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2    Zvěř"
@@ -201,6 +237,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 14",
       "titleCs": "Zvěř",
       "titleRu": null,
       "titleUk": null,
@@ -216,10 +253,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 15",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 15"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Práce na silnici"
@@ -230,6 +271,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 15",
       "titleCs": "Práce na silnici",
       "titleRu": null,
       "titleUk": null,
@@ -245,10 +287,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 16",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 16"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Boční vítr"
@@ -259,6 +305,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 16",
       "titleCs": "Boční vítr",
       "titleRu": null,
       "titleUk": null,
@@ -274,10 +321,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 17",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 17"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Odlétávající štěrk"
@@ -288,6 +339,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 17",
       "titleCs": "Odlétávající štěrk",
       "titleRu": null,
       "titleUk": null,
@@ -303,10 +355,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 18",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 18"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Kamení na vozovce"
@@ -317,6 +373,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 18",
       "titleCs": "Kamení na vozovce",
       "titleRu": null,
       "titleUk": null,
@@ -332,10 +389,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 19",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 19"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Cyklisté"
@@ -346,6 +407,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 19",
       "titleCs": "Cyklisté",
       "titleRu": null,
       "titleUk": null,
@@ -361,10 +423,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 1a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 1a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zatáčka vpravo"
@@ -375,6 +441,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 1a",
       "titleCs": "Zatáčka vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -390,10 +457,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 1b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 1b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zatáčka vlevo"
@@ -404,6 +475,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 1b",
       "titleCs": "Zatáčka vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -419,10 +491,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 20",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 20"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Letadla"
@@ -433,6 +509,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 20",
       "titleCs": "Letadla",
       "titleRu": null,
       "titleUk": null,
@@ -448,10 +525,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 21",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 21"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Tunel"
@@ -462,6 +543,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 21",
       "titleCs": "Tunel",
       "titleRu": null,
       "titleUk": null,
@@ -477,10 +559,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 22",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 22"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Jiné nebezpečí"
@@ -491,6 +577,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 22",
       "titleCs": "Jiné nebezpečí",
       "titleRu": null,
       "titleUk": null,
@@ -506,10 +593,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 23",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 23"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Kolona"
@@ -520,6 +611,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 23",
       "titleCs": "Kolona",
       "titleRu": null,
       "titleUk": null,
@@ -535,10 +627,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 24",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 24"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Náledí"
@@ -549,6 +645,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 24",
       "titleCs": "Náledí",
       "titleRu": null,
       "titleUk": null,
@@ -564,10 +661,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 25",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 25"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Tramvaj"
@@ -578,6 +679,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 25",
       "titleCs": "Tramvaj",
       "titleRu": null,
       "titleUk": null,
@@ -593,10 +695,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 26",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 26"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Mlha"
@@ -607,6 +713,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 26",
       "titleCs": "Mlha",
       "titleRu": null,
       "titleUk": null,
@@ -622,10 +729,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 27",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 27"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nehoda"
@@ -636,6 +747,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 27",
       "titleCs": "Nehoda",
       "titleRu": null,
       "titleUk": null,
@@ -651,10 +763,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 28",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 28"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nebezpečná krajnice"
@@ -665,6 +781,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 28",
       "titleCs": "Nebezpečná krajnice",
       "titleRu": null,
       "titleUk": null,
@@ -680,10 +797,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 29",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 29"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Železniční přejezd se závorami"
@@ -694,6 +815,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 29",
       "titleCs": "Železniční přejezd se závorami",
       "titleRu": null,
       "titleUk": null,
@@ -709,10 +831,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 2a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 2a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Dvojitá zatáčka, první vpravo"
@@ -723,6 +849,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 2a",
       "titleCs": "Dvojitá zatáčka, první vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -738,10 +865,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 2b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 2b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Dvojitá zatáčka, první vlevo"
@@ -752,6 +883,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 2b",
       "titleCs": "Dvojitá zatáčka, první vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -767,10 +899,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 3",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 3"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Křižovatka"
@@ -781,6 +917,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 3",
       "titleCs": "Křižovatka",
       "titleRu": null,
       "titleUk": null,
@@ -796,10 +933,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 30",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 30"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Železniční přejezd bez závor"
@@ -810,6 +951,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 30",
       "titleCs": "Železniční přejezd bez závor",
       "titleRu": null,
       "titleUk": null,
@@ -825,21 +967,97 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 31",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 31a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až c         Návěstní deska"
       ],
       "questionOfficialIds": [],
-      "reviewStatus": "INDEX_ONLY",
+      "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
-      "titleCs": "Návěstní deska",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31a",
+      "titleCs": "Návěstní deska (240 m)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "warning",
+      "code": "A 31b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "A 31",
+      "graphic": {
+        "sourceId": "md-vl-6-1-2019",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "A 31b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [
+        "až c         Návěstní deska"
+      ],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015",
+        "md-vl-6-1-2019"
+      ],
+      "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31b",
+      "titleCs": "Návěstní deska (160 m)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "warning",
+      "code": "A 31c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "A 31",
+      "graphic": {
+        "sourceId": "md-vl-6-1-2019",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "A 31c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [
+        "až c         Návěstní deska"
+      ],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015",
+        "md-vl-6-1-2019"
+      ],
+      "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31c",
+      "titleCs": "Návěstní deska (80 m)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -854,10 +1072,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 32a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 32a-1",
+        "A 32a-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2      Výstražný kříž-jednokolejný"
@@ -868,7 +1091,8 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
-      "titleCs": "Výstražný kříž-jednokolejný",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 32a",
+      "titleCs": "Výstražný kříž pro železniční přejezd jednokolejný",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -883,10 +1107,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 32b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 32b-1",
+        "A 32b-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2      Výstražný kříž-vícekolejný"
@@ -897,7 +1126,8 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
-      "titleCs": "Výstražný kříž-vícekolejný",
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 32b",
+      "titleCs": "Výstražný kříž pro železniční přejezd vícekolejný",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -912,10 +1142,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 33",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 33"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Pohyblivý most"
@@ -926,6 +1160,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 33",
       "titleCs": "Pohyblivý most",
       "titleRu": null,
       "titleUk": null,
@@ -941,10 +1176,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 34",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 34"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nábřeží"
@@ -955,6 +1194,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 12,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 34",
       "titleCs": "Nábřeží",
       "titleRu": null,
       "titleUk": null,
@@ -970,10 +1210,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 4",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 4"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Křižovatka s kruhovým objezdem"
@@ -984,6 +1228,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 4",
       "titleCs": "Křižovatka s kruhovým objezdem",
       "titleRu": null,
       "titleUk": null,
@@ -999,10 +1244,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 5a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 5a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nebezpečné klesání"
@@ -1013,6 +1262,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 5a",
       "titleCs": "Nebezpečné klesání",
       "titleRu": null,
       "titleUk": null,
@@ -1028,10 +1278,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 5b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 5b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nebezpečné stoupání"
@@ -1042,6 +1296,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 5b",
       "titleCs": "Nebezpečné stoupání",
       "titleRu": null,
       "titleUk": null,
@@ -1057,10 +1312,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 6a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 6a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zúžená vozovka z obou stran"
@@ -1071,6 +1330,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 6a",
       "titleCs": "Zúžená vozovka z obou stran",
       "titleRu": null,
       "titleUk": null,
@@ -1086,10 +1346,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 6b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 6b-1",
+        "A 6b-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2    Zúžená vozovka z jedné strany"
@@ -1100,6 +1365,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 6b",
       "titleCs": "Zúžená vozovka z jedné strany",
       "titleRu": null,
       "titleUk": null,
@@ -1115,10 +1381,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 7a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 7a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nerovnost vozovky"
@@ -1129,6 +1399,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 7a",
       "titleCs": "Nerovnost vozovky",
       "titleRu": null,
       "titleUk": null,
@@ -1144,10 +1415,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 7b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 7b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zpomalovací práh"
@@ -1158,6 +1433,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 7b",
       "titleCs": "Zpomalovací práh",
       "titleRu": null,
       "titleUk": null,
@@ -1173,10 +1449,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 8",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 8"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nebezpečí smyku"
@@ -1187,6 +1467,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 8",
       "titleCs": "Nebezpečí smyku",
       "titleRu": null,
       "titleUk": null,
@@ -1202,10 +1483,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "A 9",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "A 9"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Provoz v obou směrech"
@@ -1216,6 +1501,7 @@
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 11,
+      "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 9",
       "titleCs": "Provoz v obou směrech",
       "titleRu": null,
       "titleUk": null,
