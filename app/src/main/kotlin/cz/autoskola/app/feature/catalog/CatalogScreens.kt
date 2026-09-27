@@ -1,10 +1,16 @@
 package cz.autoskola.app.feature.catalog
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import cz.autoskola.app.R
@@ -62,6 +68,19 @@ import cz.autoskola.app.ui.*
                 OutlinedCard(onClick = { selected = null }) {
                     Column(Modifier.padding(18.dp)) {
                         Text("${sign.code} · ${sign.titleCs}", style = MaterialTheme.typography.titleLarge)
+                        sign.graphicPaths.forEach { path ->
+                            val bitmap = remember(context, path) {
+                                context.assets.open("signs/$path").use { BitmapFactory.decodeStream(it) }
+                            }
+                            bitmap?.let {
+                                Image(
+                                    bitmap = it.asImageBitmap(),
+                                    contentDescription = "${sign.code} · ${sign.titleCs}",
+                                    modifier = Modifier.fillMaxWidth().heightIn(max = 240.dp),
+                                    contentScale = ContentScale.Fit,
+                                )
+                            }
+                        }
                         when (language) {
                             "ru" -> sign.titleRu?.let { Text(it, style = MaterialTheme.typography.titleMedium) }
                             "uk" -> sign.titleUk?.let { Text(it, style = MaterialTheme.typography.titleMedium) }

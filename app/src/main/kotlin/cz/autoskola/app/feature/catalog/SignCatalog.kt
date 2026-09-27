@@ -13,6 +13,7 @@ data class SignEntry(
     val sourceUrl: String,
     val sourceProvision: String?,
     val graphicStatus: String,
+    val graphicPaths: List<String>,
     val meaningCs: String?,
     val simpleCs: String?,
     val mistakeCs: String?,
@@ -47,6 +48,12 @@ object SignCatalog {
             val card = byCode[sign.getString("code")]
             val sourceId = card?.getJSONArray("sourceIds")?.getString(0)
                 ?: sign.getJSONArray("sourceIds").getString(0)
+            val graphic = sign.getJSONObject("graphic")
+            val graphicPaths = graphic.optString("path").takeIf { it.isNotBlank() }?.let { primary ->
+                listOf(primary) + graphic.optJSONArray("additionalImages")?.let { images ->
+                    (0 until images.length()).map { images.getJSONObject(it).getString("path") }
+                }.orEmpty()
+            }.orEmpty()
             SignEntry(
                 code = sign.getString("code"),
                 titleCs = sign.getString("titleCs"),
@@ -55,7 +62,8 @@ object SignCatalog {
                 category = sign.getString("category"),
                 sourceUrl = sources.getJSONObject(sourceId).getString("url"),
                 sourceProvision = card?.optString("sourceProvision")?.takeIf { it.isNotBlank() },
-                graphicStatus = sign.getJSONObject("graphic").getString("status"),
+                graphicStatus = graphic.getString("status"),
+                graphicPaths = graphicPaths,
                 meaningCs = card?.getString("meaningCs"),
                 simpleCs = card?.getString("simpleCs"),
                 mistakeCs = card?.optString("mistakeCs")?.takeIf { it.isNotBlank() },

@@ -1,5 +1,16 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 official-archive graphics batch 1
+
+The first **40 WebP files** are matched by decoded pixel hash to individual
+TIFF files in the official e-Sbírka consolidated 294/2015 ZIP for 1 July
+2025. Annex table rows and source file IDs are recorded in the catalog;
+the ZIP SHA-256 is recorded in the source registry. These files cover **41
+legal-code cards**, including a shared composite for `IS 1a/b/c`; `E 13`
+and `IS 12d` retain extra illustrations. The audit has **367 cards missing
+graphics**. Android sign detail renders bundled images. Variant completeness
+and sign-to-eTesty links remain under review, so `productionReady=false`.
+
 ## 27 September 2026 signal and teaching-card update
 
 Annex 9's **29 indexed signal rows** contain **39 atomic coded

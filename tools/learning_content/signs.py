@@ -604,8 +604,11 @@ def validate(data: dict, sources: dict) -> dict:
         if sign["graphic"]["status"] not in {"LICENSE_REVIEW_REQUIRED", "VERSION_REVIEW_REQUIRED", "VERIFIED"}:
             raise ValueError(f"Invalid image status: {code}")
         graphic = sign["graphic"]
-        if graphic.get("path"):
-            path = Path(graphic["path"])
+        images = [graphic] + graphic.get("additionalImages", []) if graphic.get("path") else []
+        if graphic.get("additionalImages") and not graphic.get("path"):
+            raise ValueError(f"Additional images without primary image: {code}")
+        for image in images:
+            path = Path(image["path"])
             if (path.is_absolute() or len(path.parts) < 2 or path.parts[0] != "graphics" or
                 any(not re.fullmatch(r"[a-zA-Z0-9._-]+", part) or part in {".", ".."}
                     for part in path.parts)):
@@ -615,17 +618,17 @@ def validate(data: dict, sources: dict) -> dict:
                 raise ValueError(f"Unsafe or missing image: {code}")
             if graphic["status"] != "VERIFIED":
                 raise ValueError(f"Unverified image cannot be bundled: {code}")
-            expected = graphic.get("sha256", "")
+            expected = image.get("sha256", "")
             if not re.fullmatch(r"[a-f0-9]{64}", expected) or sha256(candidate) != expected:
                 raise ValueError(f"Image hash mismatch: {code}")
-            if graphic.get("mime") != image_mime(candidate):
+            if image.get("mime") != image_mime(candidate):
                 raise ValueError(f"Image MIME mismatch: {code}")
             other = graphic_hashes.get(expected)
-            if other and (other[1] != path or not other[2] or not graphic.get("shared", False)):
+            if other and (other[1] != path or not other[2] or not image.get("shared", False)):
                 raise ValueError(f"Unexplained duplicate image hash: {other[0]} / {code}")
-            graphic_hashes[expected] = (code, path, bool(graphic.get("shared", False)))
+            graphic_hashes[expected] = (code, path, bool(image.get("shared", False)))
             used_graphics.add(candidate.resolve())
-        elif graphic["status"] == "VERIFIED":
+        if not images and graphic["status"] == "VERIFIED":
             raise ValueError(f"Verified image missing local file: {code}")
         if sign["reviewStatus"] in {"INDEX_ONLY", "LEGAL_INDEX_ONLY"} and any(sign.get(key) for key in ("meaningCs", "explanationCs", "titleRu", "titleUk")):
             raise ValueError(f"Unreviewed explanation: {code}")
@@ -644,7 +647,7 @@ def validate(data: dict, sources: dict) -> dict:
             "csTitles": sum(bool(s["titleCs"]) for s in data["signs"]),
             "ruTitles": sum(bool(s["titleRu"]) for s in data["signs"]),
             "ukTitles": sum(bool(s["titleUk"]) for s in data["signs"]),
-            "bundledImages": sum(bool(s["graphic"].get("path")) for s in data["signs"]),
+            "bundledImages": len(used_graphics),
             "licenseReviewRequired": sum(s["graphic"]["status"] != "VERIFIED" for s in data["signs"])}
 
 
@@ -780,8 +783,8 @@ def full_audit(data: dict, sources: dict) -> dict:
         ("titleRu", "titleUk", "meaningCs", "simpleCs", "ru", "uk", "sourceProvision", "checkedAt"))
         for card in cards["cards"])
     audit["graphicsRequired"] = audit["total"]
-    audit["graphicsPresent"] = audit["bundledImages"]
-    audit["graphicsMissing"] = audit["total"] - audit["bundledImages"]
+    audit["graphicsPresent"] = sum(bool(s["graphic"].get("path")) for s in data["signs"])
+    audit["graphicsMissing"] = audit["total"] - audit["graphicsPresent"]
     audit["graphicsMissingCodes"] = sorted(s["code"] for s in data["signs"]
                                             if not s["graphic"].get("path"))
     audit["graphicLicenseReviewRequiredCodes"] = sorted(s["code"] for s in data["signs"]
