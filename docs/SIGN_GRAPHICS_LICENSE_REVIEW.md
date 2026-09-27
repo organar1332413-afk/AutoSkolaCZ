@@ -22,6 +22,10 @@ status of VL material if VL artwork is used. After that, put each verified
 graphic in a safe local path, record SHA-256, exact source/annex/variant,
 effective date and any attribution/share-alike obligation in the catalog.
 
+The 2025 low-emission-zone illustrations for `IZ 7a` and `IZ 7b` need a
+separate version check. Their old 2019 VL sheets cannot be presented as the
+current legal designs just because the legal codes survived.
+
 The source registry cites the legal rules governing a sign. It does **not**
 grant a blanket license to a publisher's rendition or prove that the indexed
 347 VL families are the complete set of current legal and graphic variants.

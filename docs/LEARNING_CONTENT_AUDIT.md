@@ -1,5 +1,16 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 zonal-sign update
+
+All **22** Annex 5(1) zone codes now have CS/RU/UK cards. The official
+low-emission-zone titles replace the older VL names; the 2019 VL artwork for
+`IZ 7a/b` is explicitly marked `VERSION_REVIEW_REQUIRED` after the 2025
+legal changes. The two new shared-zone codes each have two indexed VL
+graphic sheets. Current total: **150/350** teaching cards, 200 unreviewed
+indexed rows, zero bundled graphics, one explicit-code verified eTesty link.
+Current global canonical family/variant counts remain unknown until the
+remaining Annex 5–9 categories are reconciled.
+
 ## 27 September 2026 mandatory-sign update
 
 Annex 4 has **34 distinct legal codes**, including `C 5b`, which was hidden

@@ -258,6 +258,40 @@ def reconcile_mandatory_annex(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
 
 
+def reconcile_zone_annex(records: list[dict]) -> list[dict]:
+    """Apply Annex 5(1) titles and expose graphic sheet variants."""
+    zones = {s["code"]: s for s in records if s["category"] == "information_zone"}
+    if len(zones) != 22:
+        raise ValueError("Annex 5(1) zone code count mismatch")
+    corrected = {
+        "IZ 2a": "Silnice pro motorová vozidla",
+        "IZ 2b": "Konec silnice pro motorová vozidla",
+        "IZ 7a": "Nízkoemisní zóna",
+        "IZ 7b": "Konec nízkoemisní zóny",
+    }
+    for code, title in corrected.items():
+        zones[code]["titleCs"] = title
+    sheet_counts = {
+        "IZ 4a": 2, "IZ 4b": 2, "IZ 6a": 4, "IZ 6b": 4,
+        "IZ 7a": 2, "IZ 7b": 2, "IZ 8a": 8, "IZ 8b": 4,
+        "IZ 9a": 4, "IZ 9b": 4, "IZ 10a": 2, "IZ 10b": 2,
+    }
+    for sign in zones.values():
+        code = sign["code"]
+        sign["familyCode"] = code
+        sign["graphicVariantCodes"] = (
+            [f"{code}-{n}" for n in range(1, sheet_counts[code] + 1)]
+            if code in sheet_counts else [code])
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., {code}"
+        if code in {"IZ 7a", "IZ 7b"}:
+            # 2025 decree changed the sign's representation; the old VL
+            # sheet must not be presented as the current legal illustration.
+            sign["graphic"]["sourceId"] = "decree-294-2015"
+            sign["graphic"]["status"] = "VERSION_REVIEW_REQUIRED"
+    return records
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -273,7 +307,7 @@ def validate(data: dict, sources: dict) -> dict:
         for source_id in sign["sourceIds"] + [sign["graphic"]["sourceId"]]:
             if source_id not in sources:
                 raise ValueError(f"Missing source {source_id} for {code}")
-        if sign["graphic"]["status"] not in {"LICENSE_REVIEW_REQUIRED", "VERIFIED"}:
+        if sign["graphic"]["status"] not in {"LICENSE_REVIEW_REQUIRED", "VERSION_REVIEW_REQUIRED", "VERIFIED"}:
             raise ValueError(f"Invalid image status: {code}")
         if sign["graphic"].get("path"):
             path = Path(sign["graphic"]["path"])
@@ -291,7 +325,7 @@ def validate(data: dict, sources: dict) -> dict:
             "ruTitles": sum(bool(s["titleRu"]) for s in data["signs"]),
             "ukTitles": sum(bool(s["titleUk"]) for s in data["signs"]),
             "bundledImages": sum(bool(s["graphic"].get("path")) for s in data["signs"]),
-            "licenseReviewRequired": sum(s["graphic"]["status"] == "LICENSE_REVIEW_REQUIRED" for s in data["signs"])}
+            "licenseReviewRequired": sum(s["graphic"]["status"] != "VERIFIED" for s in data["signs"])}
 
 
 def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str] | None = None) -> None:
@@ -319,6 +353,9 @@ def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str
             ("titleRu", "titleUk", "meaningCs", "simpleCs", "ru", "uk", "mistakeCs",
              "memoryCs", "driverActionsCs", "sourceProvision", "checkedAt")):
             raise ValueError(f"Incomplete CS/RU/UK teaching card: {code}")
+        if any(re.search(r"[\u0400-\u04ff]", card[key]) for key in
+               ("titleCs", "meaningCs", "simpleCs", "mistakeCs", "memoryCs", "driverActionsCs")):
+            raise ValueError(f"Non-Czech script in Czech teaching field: {code}")
         if not re.fullmatch(r"20\d\d-\d\d-\d\d", card["checkedAt"]):
             raise ValueError(f"Invalid review date: {code}")
         if card["sourceProvision"].split(",")[-1].strip() != code:
@@ -389,6 +426,11 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["mandatoryLegalCodesVerified"] = sum(s["category"] == "mandatory" for s in data["signs"])
     audit["mandatoryGraphicExecutionsIndexed"] = sum(
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "mandatory")
+    audit["zoneLegalCodesVerified"] = sum(s["category"] == "information_zone" for s in data["signs"])
+    audit["zoneGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_zone")
+    audit["graphicVersionReviewRequired"] = sum(
+        s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
     audit["canonicalVariants"] = None
     audit["totalCards"] = len(cards["cards"])
@@ -434,8 +476,9 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = reconcile_mandatory_annex(reconcile_prohibition_annex(reconcile_priority_annex(
-        reconcile_warning_annex(add_legal_appendices(apply_2025_revision(parse_index(text)))))))
+    records = reconcile_zone_annex(reconcile_mandatory_annex(reconcile_prohibition_annex(
+        reconcile_priority_annex(reconcile_warning_annex(
+            add_legal_appendices(apply_2025_revision(parse_index(text))))))))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)

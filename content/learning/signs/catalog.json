@@ -4452,18 +4452,25 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 10a",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 10a-1",
+        "IZ 10a-2"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 5,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 10a",
       "titleCs": "Sdílená zóna",
       "titleRu": null,
       "titleUk": null,
@@ -4479,18 +4486,25 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 10b",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 10b-1",
+        "IZ 10b-2"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 5,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 10b",
       "titleCs": "Konec sdílené zóny",
       "titleRu": null,
       "titleUk": null,
@@ -4506,10 +4520,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 1a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 1a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Dálnice"
@@ -4517,9 +4535,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 1a",
       "titleCs": "Dálnice",
       "titleRu": null,
       "titleUk": null,
@@ -4535,10 +4555,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 1b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 1b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec dálnice"
@@ -4546,9 +4570,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 1b",
       "titleCs": "Konec dálnice",
       "titleRu": null,
       "titleUk": null,
@@ -4564,10 +4590,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 2a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 2a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "SMV"
@@ -4575,10 +4605,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "SMV",
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 2a",
+      "titleCs": "Silnice pro motorová vozidla",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -4593,10 +4625,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 2b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 2b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec SMV"
@@ -4604,10 +4640,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "Konec SMV",
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 2b",
+      "titleCs": "Konec silnice pro motorová vozidla",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -4622,10 +4660,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 3a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 3a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Tunel"
@@ -4633,9 +4675,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 3a",
       "titleCs": "Tunel",
       "titleRu": null,
       "titleUk": null,
@@ -4651,10 +4695,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 3b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 3b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec tunelu"
@@ -4662,9 +4710,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 3b",
       "titleCs": "Konec tunelu",
       "titleRu": null,
       "titleUk": null,
@@ -4680,10 +4730,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 4a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 4a-1",
+        "IZ 4a-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2   Obec"
@@ -4691,9 +4746,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4a",
       "titleCs": "Obec",
       "titleRu": null,
       "titleUk": null,
@@ -4709,10 +4766,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 4b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 4b-1",
+        "IZ 4b-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2   Konec obce"
@@ -4720,9 +4782,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4b",
       "titleCs": "Konec obce",
       "titleRu": null,
       "titleUk": null,
@@ -4738,10 +4802,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 4c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 4c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Obec v jazyce národnostní menšiny"
@@ -4749,9 +4817,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4c",
       "titleCs": "Obec v jazyce národnostní menšiny",
       "titleRu": null,
       "titleUk": null,
@@ -4767,10 +4837,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 4d",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 4d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec obce v jazyce národnostní menšiny"
@@ -4778,9 +4852,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4d",
       "titleCs": "Konec obce v jazyce národnostní menšiny",
       "titleRu": null,
       "titleUk": null,
@@ -4796,10 +4872,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 5a",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 5a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Obytná zóna"
@@ -4807,10 +4887,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 5a",
       "titleCs": "Obytná zóna",
       "titleRu": null,
       "titleUk": null,
@@ -4826,10 +4908,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 5b",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 5b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec obytné zóny"
@@ -4837,10 +4923,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 5b",
       "titleCs": "Konec obytné zóny",
       "titleRu": null,
       "titleUk": null,
@@ -4856,10 +4944,17 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 6a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 6a-1",
+        "IZ 6a-2",
+        "IZ 6a-3",
+        "IZ 6a-4"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 4   Pěší zóna"
@@ -4867,9 +4962,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 6a",
       "titleCs": "Pěší zóna",
       "titleRu": null,
       "titleUk": null,
@@ -4885,10 +4982,17 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 6b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 6b-1",
+        "IZ 6b-2",
+        "IZ 6b-3",
+        "IZ 6b-4"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 4   Konec pěší zóny"
@@ -4896,9 +5000,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 6b",
       "titleCs": "Konec pěší zóny",
       "titleRu": null,
       "titleUk": null,
@@ -4914,10 +5020,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 7a",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "sourceId": "decree-294-2015",
+        "status": "VERSION_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 7a-1",
+        "IZ 7a-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2   Emisní zóna"
@@ -4925,10 +5036,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "Emisní zóna",
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 7a",
+      "titleCs": "Nízkoemisní zóna",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -4943,10 +5056,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 7b",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "sourceId": "decree-294-2015",
+        "status": "VERSION_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 7b-1",
+        "IZ 7b-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2   Konec emisní zóny"
@@ -4954,10 +5072,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "Konec emisní zóny",
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 7b",
+      "titleCs": "Konec nízkoemisní zóny",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -4972,10 +5092,21 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 8a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 8a-1",
+        "IZ 8a-2",
+        "IZ 8a-3",
+        "IZ 8a-4",
+        "IZ 8a-5",
+        "IZ 8a-6",
+        "IZ 8a-7",
+        "IZ 8a-8"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 8   Zóna s dopravním omezením"
@@ -4983,9 +5114,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 8a",
       "titleCs": "Zóna s dopravním omezením",
       "titleRu": null,
       "titleUk": null,
@@ -5001,10 +5134,17 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 8b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 8b-1",
+        "IZ 8b-2",
+        "IZ 8b-3",
+        "IZ 8b-4"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 4   Konec zóny s dopravním omezením"
@@ -5012,9 +5152,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 8b",
       "titleCs": "Konec zóny s dopravním omezením",
       "titleRu": null,
       "titleUk": null,
@@ -5030,10 +5172,17 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 9a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 9a-1",
+        "IZ 9a-2",
+        "IZ 9a-3",
+        "IZ 9a-4"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 4   Zóna pro cyklisty"
@@ -5041,9 +5190,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9a",
       "titleCs": "Zóna pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -5059,10 +5210,17 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IZ 9b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IZ 9b-1",
+        "IZ 9b-2",
+        "IZ 9b-3",
+        "IZ 9b-4"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 4   Konec zóny pro cyklisty"
@@ -5070,9 +5228,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9b",
       "titleCs": "Konec zóny pro cyklisty",
       "titleRu": null,
       "titleUk": null,

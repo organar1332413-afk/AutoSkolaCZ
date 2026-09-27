@@ -2969,28 +2969,434 @@
     },
     {
       "checkedAt": "2026-09-27",
+      "code": "IZ 10a",
+      "confusedWith": [
+        "IZ 5a",
+        "IZ 10b"
+      ],
+      "driverActionsCs": "Při vjezdu respektujte sdílený prostor a jeho pravidla.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje sdílenou zónu se zvláštními pravidly provozu.",
+      "memoryCs": "Sdílení prostoru má vlastní zónovou značku.",
+      "mistakeCs": "Nezaměňujte sdílenou zónu s obytnou zónou.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Начинается зона совместного движения с особыми правилами; это отдельный тип зоны.",
+      "simpleCs": "Při vjezdu respektujte sdílený prostor a jeho pravidla.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 10a",
+      "titleCs": "Sdílená zóna",
+      "titleRu": "Общая зона движения",
+      "titleUk": "Зона спільного руху",
+      "uk": "Починається зона спільного руху з особливими правилами; це окремий тип зони."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 10b",
+      "confusedWith": [
+        "IZ 10a"
+      ],
+      "driverActionsCs": "Za značkou posuďte nový dopravní režim.",
+      "exceptionsCs": [
+        "Může stát vlevo z opačné strany značky začátku."
+      ],
+      "meaningCs": "Označuje konec sdílené zóny.",
+      "memoryCs": "Přeškrtnutá sdílená zóna končí.",
+      "mistakeCs": "Konec zóny sám neudává přednost.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Режим общей зоны закончился; дальше следуйте новым указаниям.",
+      "simpleCs": "Za značkou posuďte nový dopravní režim.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 10b",
+      "titleCs": "Konec sdílené zóny",
+      "titleRu": "Конец общей зоны движения",
+      "titleUk": "Кінець зони спільного руху",
+      "uk": "Режим зони спільного руху завершився; далі дотримуйтеся нових вказівок."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 1a",
+      "confusedWith": [
+        "IZ 2a",
+        "IZ 1b"
+      ],
+      "driverActionsCs": "Před vjezdem ověřte oprávnění vozidla a případný poplatek nebo tabulku.",
+      "exceptionsCs": [
+        "Tabulka může změnit informaci o zpoplatnění."
+      ],
+      "meaningCs": "Označuje začátek dálnice se zvláštními pravidly provozu.",
+      "memoryCs": "Zelená dálniční značka otevírá zvláštní režim.",
+      "mistakeCs": "Nezaměňujte dálnici se silnicí pro motorová vozidla.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Въезд на автомагистраль: действуют особые правила; проверьте платный режим и табличку.",
+      "simpleCs": "Před vjezdem ověřte oprávnění vozidla a případný poplatek nebo tabulku.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 1a",
+      "titleCs": "Dálnice",
+      "titleRu": "Автомагистраль",
+      "titleUk": "Автомагістраль",
+      "uk": "В’їзд на автомагістраль: діють особливі правила; перевірте платний режим і табличку."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 1b",
+      "confusedWith": [
+        "IZ 1a"
+      ],
+      "driverActionsCs": "Připravte se na změnu režimu a rychlosti podle navazujícího značení.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje konec úseku se zvláštními pravidly dálnice.",
+      "memoryCs": "Přeškrtnutá dálnice končí.",
+      "mistakeCs": "Konec dálnice neznamená neomezenou rychlost.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Особый режим автомагистрали заканчивается; проверьте дальнейшие ограничения.",
+      "simpleCs": "Připravte se na změnu režimu a rychlosti podle navazujícího značení.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 1b",
+      "titleCs": "Konec dálnice",
+      "titleRu": "Конец автомагистрали",
+      "titleUk": "Кінець автомагістралі",
+      "uk": "Особливий режим автомагістралі завершується; перевірте наступні обмеження."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 2a",
+      "confusedWith": [
+        "IZ 1a",
+        "IZ 2b"
+      ],
+      "driverActionsCs": "Sledujte pravidla této silnice a případné tabulky o zpoplatnění.",
+      "exceptionsCs": [
+        "Tabulka může stanovit zpoplatnění."
+      ],
+      "meaningCs": "Označuje silnici pro motorová vozidla se zvláštními pravidly.",
+      "memoryCs": "Modrá automobilová značka je jiná než dálnice.",
+      "mistakeCs": "Není to automaticky dálnice.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Начинается дорога для моторного транспорта с особым режимом; платность уточняет табличка.",
+      "simpleCs": "Sledujte pravidla této silnice a případné tabulky o zpoplatnění.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 2a",
+      "titleCs": "Silnice pro motorová vozidla",
+      "titleRu": "Дорога для автомобилей",
+      "titleUk": "Дорога для автомобілів",
+      "uk": "Починається дорога для моторного транспорту з особливим режимом; платність уточнює табличка."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 2b",
+      "confusedWith": [
+        "IZ 2a"
+      ],
+      "driverActionsCs": "Dále se řiďte pravidly navazující komunikace.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje zvláštní režim silnice pro motorová vozidla.",
+      "memoryCs": "Přeškrtnutý automobil ukončuje tento typ silnice.",
+      "mistakeCs": "Konec zvláštního režimu není konec všech pravidel.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Заканчиваются особые правила дороги для автомобилей; далее смотрите новые знаки.",
+      "simpleCs": "Dále se řiďte pravidly navazující komunikace.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 2b",
+      "titleCs": "Konec silnice pro motorová vozidla",
+      "titleRu": "Конец дороги для автомобилей",
+      "titleUk": "Кінець дороги для автомобілів",
+      "uk": "Завершуються особливі правила дороги для автомобілів; далі дивіться нові знаки."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 3a",
+      "confusedWith": [
+        "A 21",
+        "IZ 3b"
+      ],
+      "driverActionsCs": "Sledujte značení a světelné signály tunelu; u delších tunelů i údaj o délce.",
+      "exceptionsCs": [
+        "U tunelů delších než 500 m se uvádí délka."
+      ],
+      "meaningCs": "Označuje vjezd do tunelu se zvláštními pravidly.",
+      "memoryCs": "Začátek tunelu je režim, výstraha je před ním.",
+      "mistakeCs": "Nezaměňujte varování A 21 za samotný začátek tunelu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Начало тоннеля с особыми правилами; на длинном тоннеле указана длина.",
+      "simpleCs": "Sledujte značení a světelné signály tunelu; u delších tunelů i údaj o délce.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 3a",
+      "titleCs": "Tunel",
+      "titleRu": "Тоннель",
+      "titleUk": "Тунель",
+      "uk": "Початок тунелю з особливими правилами; для довгого тунелю зазначено довжину."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 3b",
+      "confusedWith": [
+        "IZ 3a"
+      ],
+      "driverActionsCs": "Po výjezdu posuďte navazující značení a rozhled.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje konec zvláštních pravidel provozu v tunelu.",
+      "memoryCs": "Za tunelem přestává tunelový režim.",
+      "mistakeCs": "Přeškrtnutí neznamená konec obecné povinnosti bezpečné jízdy.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Особые правила тоннеля закончились; далее действуют обычные и местные указания.",
+      "simpleCs": "Po výjezdu posuďte navazující značení a rozhled.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 3b",
+      "titleCs": "Konec tunelu",
+      "titleRu": "Конец тоннеля",
+      "titleUk": "Кінець тунелю",
+      "uk": "Особливі правила тунелю завершилися; далі діють звичайні й місцеві вказівки."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 4a",
+      "confusedWith": [
+        "IZ 4b"
+      ],
+      "driverActionsCs": "Od této značky zohledněte pravidla a rychlost platné v obci.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje začátek území s pravidly provozu v obci a uvádí její název.",
+      "memoryCs": "Bílá tabule s názvem zahajuje obec.",
+      "mistakeCs": "Název obce je součástí dopravního režimu, ne jen orientační údaj.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Начинается населённый пункт; применяются правила движения в населённом пункте.",
+      "simpleCs": "Od této značky zohledněte pravidla a rychlost platné v obci.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4a",
+      "titleCs": "Obec",
+      "titleRu": "Начало населённого пункта",
+      "titleUk": "Початок населеного пункту",
+      "uk": "Починається населений пункт; застосовуються правила руху в населеному пункті."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 4b",
+      "confusedWith": [
+        "IZ 4a"
+      ],
+      "driverActionsCs": "Za značkou se řiďte pravidly mimo obec a místní úpravou.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje konec území, kde platí pravidla pro obec.",
+      "memoryCs": "Přeškrtnutý název ukončuje obec.",
+      "mistakeCs": "Neznamená konec každého omezení na silnici.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Населённый пункт заканчивается; проверьте правила вне его и местные ограничения.",
+      "simpleCs": "Za značkou se řiďte pravidly mimo obec a místní úpravou.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4b",
+      "titleCs": "Konec obce",
+      "titleRu": "Конец населённого пункта",
+      "titleUk": "Кінець населеного пункту",
+      "uk": "Населений пункт закінчується; перевірте правила поза ним і місцеві обмеження."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 4c",
+      "confusedWith": [
+        "IZ 4a",
+        "IZ 4d"
+      ],
+      "driverActionsCs": "Nepovažujte ji za samostatný druh dopravní zóny.",
+      "exceptionsCs": [
+        "Umisťuje se společně se značkou IZ 4a."
+      ],
+      "meaningCs": "Má stejný význam jako značka IZ 4a a společně s ní uvádí název v jazyce menšiny.",
+      "memoryCs": "Druhý jazyk, stejný začátek obce.",
+      "mistakeCs": "Nedochází k dvojímu začátku obce.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Название населённого пункта на языке национального меньшинства ставится вместе с основным знаком.",
+      "simpleCs": "Nepovažujte ji za samostatný druh dopravní zóny.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4c",
+      "titleCs": "Obec v jazyce národnostní menšiny",
+      "titleRu": "Название населённого пункта на языке меньшинства",
+      "titleUk": "Назва населеного пункту мовою меншини",
+      "uk": "Назва населеного пункту мовою національної меншини встановлюється разом з основним знаком."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 4d",
+      "confusedWith": [
+        "IZ 4b",
+        "IZ 4c"
+      ],
+      "driverActionsCs": "Změnu dopravního režimu posuďte stejně jako u konce obce.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje konec obce i v jazyce národnostní menšiny.",
+      "memoryCs": "Druhý jazyk, stejný konec obce.",
+      "mistakeCs": "Nejde o jiný druh obce s jinými pravidly.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Дублирует обозначение конца населённого пункта на языке меньшинства.",
+      "simpleCs": "Změnu dopravního režimu posuďte stejně jako u konce obce.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4d",
+      "titleCs": "Konec obce v jazyce národnostní menšiny",
+      "titleRu": "Конец названия населённого пункта на языке меньшинства",
+      "titleUk": "Кінець назви населеного пункту мовою меншини",
+      "uk": "Дублює позначення кінця населеного пункту мовою меншини."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 5a",
+      "confusedWith": [
+        "IZ 5b",
+        "IZ 6a"
+      ],
+      "driverActionsCs": "Při vjezdu změňte způsob jízdy podle režimu obytné zóny.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje oblast se zvláštními pravidly provozu v obytné zóně.",
+      "memoryCs": "Zóna znamená zvláštní pravidla až do jejího konce.",
+      "mistakeCs": "Nevykládejte ji jako pouhé upozornění na obytné domy.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Начинается жилая зона с особыми правилами; это не обычная городская улица.",
+      "simpleCs": "Při vjezdu změňte způsob jízdy podle režimu obytné zóny.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 5a",
+      "titleCs": "Obytná zóna",
+      "titleRu": "Жилая зона",
+      "titleUk": "Житлова зона",
+      "uk": "Починається житлова зона з особливими правилами; це не звичайна міська вулиця."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 5b",
+      "confusedWith": [
+        "IZ 5a"
+      ],
+      "driverActionsCs": "Při výjezdu sledujte přednost a navazující značky.",
+      "exceptionsCs": [
+        "Může být umístěna vlevo z opačné strany značky začátku."
+      ],
+      "meaningCs": "Označuje konec obytné zóny.",
+      "memoryCs": "Přeškrtnutá zóna končí.",
+      "mistakeCs": "Nezaměňujte konec zóny za přednost v jízdě.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Режим жилой зоны заканчивается; при выезде внимательно проверьте приоритет.",
+      "simpleCs": "Při výjezdu sledujte přednost a navazující značky.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 5b",
+      "titleCs": "Konec obytné zóny",
+      "titleRu": "Конец жилой зоны",
+      "titleUk": "Кінець житлової зони",
+      "uk": "Режим житлової зони завершується; при виїзді уважно перевірте пріоритет."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 6a",
+      "confusedWith": [
+        "IZ 6b",
+        "IZ 5a"
+      ],
+      "driverActionsCs": "Před vjezdem přečtěte dolní pole s výjimkami pro vozidla.",
+      "exceptionsCs": [
+        "Vjezd určených vozidel může být povolen uvedeným symbolem a dobou."
+      ],
+      "meaningCs": "Označuje pěší zónu; povolená vozidla a případný čas se uvádějí na značce.",
+      "memoryCs": "Spodní pole určuje výjimky.",
+      "mistakeCs": "Nepředpokládejte, že do zóny může vjet každé vozidlo.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Пешеходная зона; допуск отдельных машин и время разрешения написаны внизу знака.",
+      "simpleCs": "Před vjezdem přečtěte dolní pole s výjimkami pro vozidla.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 6a",
+      "titleCs": "Pěší zóna",
+      "titleRu": "Пешеходная зона",
+      "titleUk": "Пішохідна зона",
+      "uk": "Пішохідна зона; допуск окремих авто та дозволений час зазначені внизу знака."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 6b",
+      "confusedWith": [
+        "IZ 6a"
+      ],
+      "driverActionsCs": "Po výjezdu sledujte pravidla navazující komunikace.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje zvláštní režim pěší zóny.",
+      "memoryCs": "Přeškrtnutá pěší zóna končí.",
+      "mistakeCs": "Není to začátek obytné zóny.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Заканчивается пешеходная зона; далее следуйте новым знакам.",
+      "simpleCs": "Po výjezdu sledujte pravidla navazující komunikace.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 6b",
+      "titleCs": "Konec pěší zóny",
+      "titleRu": "Конец пешеходной зоны",
+      "titleUk": "Кінець пішохідної зони",
+      "uk": "Завершується пішохідна зона; далі дотримуйтеся нових знаків."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "IZ 7a",
       "confusedWith": [
         "IZ 7b"
       ],
       "driverActionsCs": "Před vjezdem do emisní zóny ověřte podmínky pro své vozidlo v uvedeném informačním systému.",
       "exceptionsCs": [],
-      "meaningCs": "Označuje oblast nízkoemisní zóny; vjezd motorových vozidel může podléhat nízkoemisnímu poplatku.",
+      "meaningCs": "Označuje oblast s omezením provozu silničních motorových vozidel kvůli emisím.",
       "memoryCs": "Nová podoba již nepoužívá emisní plaketu na značce.",
       "mistakeCs": "Nezaměňujte možnost poplatku za automatický zákaz každého vjezdu.",
       "questionLinks": [],
-      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
-      "ru": "Обозначает зону с экологическими ограничениями. Въезд может облагаться сбором; проверьте условия для своего автомобиля.",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Зона с ограничением движения моторного транспорта ради снижения загрязнения воздуха; проверьте требования для машины в указанной системе.",
       "simpleCs": "Před vjezdem do emisní zóny ověřte podmínky pro své vozidlo v uvedeném informačním systému.",
       "sourceIds": [
         "md-sign-changes-2025",
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 5 k vyhlášce č. 294/2015 Sb., IZ 7a",
-      "titleCs": "Emisní zóna",
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 7a",
+      "titleCs": "Nízkoemisní zóna",
       "titleRu": "Начало зоны с ограничением выбросов",
       "titleUk": "Початок зони з обмеженням викидів",
-      "uk": "Позначає зону з екологічними обмеженнями. В’їзд може обкладатися збором; перевірте умови для свого автомобіля."
+      "uk": "Зона з обмеженням руху моторного транспорту задля зменшення забруднення повітря; перевірте вимоги для авто в зазначеній системі."
     },
     {
       "checkedAt": "2026-09-27",
@@ -3004,18 +3410,123 @@
       "memoryCs": "Sledujte rozdíl mezi začátkem IZ 7a a koncem IZ 7b.",
       "mistakeCs": "Nezaměňujte značku konce zóny za její začátek.",
       "questionLinks": [],
-      "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
       "ru": "Обозначает конец зоны с экологическими ограничениями.",
       "simpleCs": "Za touto značkou končí oblast vyznačené emisní zóny.",
       "sourceIds": [
         "md-sign-changes-2025",
         "decree-294-2015"
       ],
-      "sourceProvision": "Příloha č. 5 k vyhlášce č. 294/2015 Sb., IZ 7b",
-      "titleCs": "Konec emisní zóny",
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 7b",
+      "titleCs": "Konec nízkoemisní zóny",
       "titleRu": "Конец зоны с ограничением выбросов",
       "titleUk": "Кінець зони з обмеженням викидів",
       "uk": "Позначає кінець зони з екологічними обмеженнями."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 8a",
+      "confusedWith": [
+        "IZ 8b",
+        "B 20a"
+      ],
+      "driverActionsCs": "Přečtěte vložené symboly, případné druhy vozidel a dobu platnosti.",
+      "exceptionsCs": [
+        "Místní úprava uvnitř oblasti může stanovit jinak."
+      ],
+      "meaningCs": "Označuje oblast, v níž platí omezení zobrazené uvnitř zónové značky.",
+      "memoryCs": "Uvnitř zóny je rozhodující vložená značka.",
+      "mistakeCs": "Nehádejte obsah zóny jen podle rámečku bez vloženého symbolu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "На всей зоне действуют показанные внутри предупреждения, запреты или предписания; уточнения указаны внизу.",
+      "simpleCs": "Přečtěte vložené symboly, případné druhy vozidel a dobu platnosti.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 8a",
+      "titleCs": "Zóna s dopravním omezením",
+      "titleRu": "Зона с дорожным ограничением",
+      "titleUk": "Зона з дорожнім обмеженням",
+      "uk": "У всій зоні діють показані всередині попередження, заборони чи приписи; уточнення зазначені внизу."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 8b",
+      "confusedWith": [
+        "IZ 8a"
+      ],
+      "driverActionsCs": "Za značkou posuďte obecná a nová místní pravidla.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje omezení vyplývající z předchozí zónové značky.",
+      "memoryCs": "Přeškrtnutá zóna ukončuje její vložená pravidla.",
+      "mistakeCs": "Nerušit jiné nezávisle platné zákazy.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Обозначенные для зоны ограничения заканчиваются.",
+      "simpleCs": "Za značkou posuďte obecná a nová místní pravidla.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 8b",
+      "titleCs": "Konec zóny s dopravním omezením",
+      "titleRu": "Конец зоны с дорожным ограничением",
+      "titleUk": "Кінець зони з дорожнім обмеженням",
+      "uk": "Позначені для зони обмеження завершуються."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 9a",
+      "confusedWith": [
+        "IZ 9b",
+        "C 8a"
+      ],
+      "driverActionsCs": "Druhý druh vozidla smí vjet jen tehdy, je-li na značce uveden.",
+      "exceptionsCs": [
+        "Jiná vozidla mohou být povolena nápisem nebo symbolem."
+      ],
+      "meaningCs": "Označuje oblast se zvláštními pravidly pro cyklistickou zónu.",
+      "memoryCs": "Spodní symbol ukáže další povolená vozidla.",
+      "mistakeCs": "Nepředpokládejte automaticky vjezd všech druhů vozidel.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Велосипедная зона с особыми правилами; другие виды транспорта допускаются, если указаны внизу.",
+      "simpleCs": "Druhý druh vozidla smí vjet jen tehdy, je-li na značce uveden.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9a",
+      "titleCs": "Zóna pro cyklisty",
+      "titleRu": "Велосипедная зона",
+      "titleUk": "Велосипедна зона",
+      "uk": "Велосипедна зона з особливими правилами; інші види транспорту допускаються, якщо зазначені внизу."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "IZ 9b",
+      "confusedWith": [
+        "IZ 9a",
+        "C 8b"
+      ],
+      "driverActionsCs": "Po opuštění oblasti sledujte další režim komunikace.",
+      "exceptionsCs": [
+        "Může stát vlevo z opačné strany počáteční značky."
+      ],
+      "meaningCs": "Označuje konec cyklistické zóny.",
+      "memoryCs": "Končí oblast, nikoli všechny cyklotrasy.",
+      "mistakeCs": "Nejde o konec každé cyklostezky za zónou.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Велосипедная зона заканчивается; дальше проверьте действующие знаки.",
+      "simpleCs": "Po opuštění oblasti sledujte další režim komunikace.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9b",
+      "titleCs": "Konec zóny pro cyklisty",
+      "titleRu": "Конец велосипедной зоны",
+      "titleUk": "Кінець велосипедної зони",
+      "uk": "Велосипедна зона закінчується; далі перевірте чинні знаки."
     },
     {
       "checkedAt": "2026-09-27",

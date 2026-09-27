@@ -27,6 +27,9 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(13, audit["priorityGraphicExecutionsIndexed"])
         self.assertEqual(34, audit["mandatoryLegalCodesVerified"])
         self.assertEqual(51, audit["mandatoryGraphicExecutionsIndexed"])
+        self.assertEqual(22, audit["zoneLegalCodesVerified"])
+        self.assertEqual(50, audit["zoneGraphicExecutionsIndexed"])
+        self.assertEqual(2, audit["graphicVersionReviewRequired"])
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(29, audit["categories"]["light_signal"])
@@ -76,11 +79,11 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
-        self.assertEqual(130, len(self.cards["cards"]))
-        first_four = {s["code"] for s in self.data["signs"]
-                      if s["category"] in {"warning", "priority", "prohibition", "mandatory"}}
-        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in first_four}
-        self.assertEqual(first_four, reviewed)
+        self.assertEqual(150, len(self.cards["cards"]))
+        first_five = {s["code"] for s in self.data["signs"]
+                      if s["category"] in {"warning", "priority", "prohibition", "mandatory", "information_zone"}}
+        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in first_five}
+        self.assertEqual(first_five, reviewed)
 
     def test_legal_codes_and_graphic_executions_are_distinct(self):
         signs = {s["code"]: s for s in self.data["signs"]}
@@ -94,6 +97,8 @@ class SignInventoryTest(unittest.TestCase):
         self.assertNotIn("P 4-1", signs)
         self.assertEqual(["C 5a", "C 5b"], [code for code in ("C 5a", "C 5b") if code in signs])
         self.assertEqual("C 5", signs["C 5a"]["familyCode"])
+        self.assertEqual(["IZ 10a-1", "IZ 10a-2"], signs["IZ 10a"]["graphicVariantCodes"])
+        self.assertEqual("VERSION_REVIEW_REQUIRED", signs["IZ 7a"]["graphic"]["status"])
         self.assertEqual(13, len(signs["B 20a"]["graphicVariantCodes"]))
         self.assertEqual("Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
                          signs["B 15"]["titleCs"])

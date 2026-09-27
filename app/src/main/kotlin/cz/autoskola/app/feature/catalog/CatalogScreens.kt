@@ -85,7 +85,7 @@ import cz.autoskola.app.ui.*
                                 Entry(id) { openQuestion(id) }
                             }
                         }
-                        if (sign.graphicStatus == "LICENSE_REVIEW_REQUIRED") Note(text(R.string.signs_graphic_pending))
+                        if (sign.graphicStatus != "VERIFIED") Note(text(R.string.signs_graphic_pending))
                     }
                 }
             }
