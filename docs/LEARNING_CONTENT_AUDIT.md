@@ -1,5 +1,18 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 additional-panel update
+
+Annex 6 identifies **33 separate E codes**, including four legal codes
+that were grouped under neighboring VL printed rows (`E 2b/c`, `E 3b`,
+`E 8e`). All 33 now have short CS/RU/UK cards that explain the panel
+in relation to the sign above it. The catalog has **329/398** cards,
+69 unreviewed indexed entries, no verified/bundled sign graphics and one
+explicitly verified eTesty question relationship. Numeric sign-family
+aggregation remains provisional; the remaining 69 entries are road
+markings and light signals. Annex 7 symbols used inside some signs have
+not been expanded into independent catalog images. Historical checkpoint
+figures follow below.
+
 ## 27 September 2026 other information sign update
 
 All **28 Annex 5(4) IJ codes** now have short provision-tagged CS/RU/UK

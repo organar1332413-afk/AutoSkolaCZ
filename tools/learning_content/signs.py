@@ -455,6 +455,57 @@ def reconcile_other_info_annex(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
 
 
+def reconcile_panel_annex(records: list[dict]) -> list[dict]:
+    """Split legal E codes that VL prints under a common graphical heading."""
+    titles = {
+        "1": "Počet", "2a": "Tvar křižovatky", "2b": "Tvar křižovatky",
+        "2c": "Tvar křižovatky", "2d": "Tvar dvou křižovatek",
+        "3a": "Vzdálenost", "3b": "Vzdálenost", "4": "Délka úseku",
+        "5": "Největší povolená hmotnost", "6": "Za mokra (za deště)",
+        "7a": "Směrová šipka pro směr přímo",
+        "7b": "Směrová šipka pro odbočení",
+        "8a": "Začátek úseku", "8b": "Průběh úseku",
+        "8c": "Konec úseku", "8d": "Úsek platnosti",
+        "8e": "Úsek platnosti", "9": "Druh vozidla",
+        "10": "Tvar křížení pozemní komunikace s dráhou",
+        "11a": "Bez časového poplatku", "11b": "S časovým poplatkem",
+        "11c": "Bez mýtného", "11d": "S mýtným",
+        "11e": "Bez časového poplatku a mýtného",
+        "11f": "S časovým poplatkem a mýtným",
+        "12a": "Jízda cyklistů v protisměru",
+        "12b": "Vjezd cyklistů v protisměru povolen",
+        "12c": "Povolený směr jízdy cyklistů",
+        "13": "Text nebo symbol", "14": "Tranzit", "15": "Kategorie tunelu",
+        "16": "Vzdálenost k příští čerpací stanici",
+        "17": "Nedostatečný průjezdní profil vozovky",
+    }
+    by_code = {sign["code"]: sign for sign in records}
+    grouped = {"E 2b": "E 2a", "E 2c": "E 2a",
+               "E 3b": "E 3a", "E 8e": "E 8d"}
+    if len(titles) != 33 or set(grouped) & by_code.keys():
+        raise ValueError("Annex 6 printed grouping changed")
+    for code, existing in grouped.items():
+        sign = dict(by_code[existing])
+        sign.update(code=code, printedScopes=[], variantTitles=[],
+                    sourceIndexPage=None, reviewStatus="LEGAL_INDEX_ONLY",
+                    sourceIds=["decree-294-2015"],
+                    graphic={"sourceId": "decree-294-2015", "status": "LICENSE_REVIEW_REQUIRED"})
+        by_code[code] = sign
+    actual = {code for code, sign in by_code.items() if sign["category"] == "additional_panel"}
+    expected = {f"E {suffix}" for suffix in titles}
+    if actual != expected:
+        raise ValueError(f"Annex 6 mismatch: {actual ^ expected}")
+    for suffix, title in titles.items():
+        code = f"E {suffix}"
+        sign = by_code[code]
+        sign["titleCs"] = title
+        sign["familyCode"] = "E " + re.match(r"\d+", suffix).group()
+        sign["graphicVariantCodes"] = [code]
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 6 k vyhlášce č. 294/2015 Sb., {code}"
+    return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -602,6 +653,8 @@ def full_audit(data: dict, sources: dict) -> dict:
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_direction")
     audit["otherInfoLegalCodesVerified"] = sum(
         s["category"] == "information_other" for s in data["signs"])
+    audit["panelLegalCodesVerified"] = sum(
+        s["category"] == "additional_panel" for s in data["signs"])
     audit["graphicVersionReviewRequired"] = sum(
         s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
@@ -654,7 +707,7 @@ def main() -> None:
                       reconcile_priority_annex, reconcile_prohibition_annex,
                       reconcile_mandatory_annex, reconcile_zone_annex,
                       reconcile_traffic_annex, reconcile_direction_annex,
-                      reconcile_other_info_annex):
+                      reconcile_other_info_annex, reconcile_panel_annex):
         records = reconcile(records)
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-27", "inventoryCount": len(records), "signs": records}
