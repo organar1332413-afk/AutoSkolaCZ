@@ -18,13 +18,15 @@ class SignInventoryTest(unittest.TestCase):
     def test_committed_inventory_and_audit(self):
         audit = full_audit(self.data, self.sources)
         self.assertEqual(canonical_bytes(audit), (CONTENT / "audit.json").read_bytes())
-        self.assertEqual(349, audit["total"])
-        self.assertEqual(349, audit["csTitles"])
+        self.assertEqual(350, audit["total"])
+        self.assertEqual(350, audit["csTitles"])
         self.assertEqual(347, audit["indexedFamilies"])
         self.assertEqual(44, audit["warningLegalCodesVerified"])
         self.assertEqual(49, audit["warningGraphicExecutionsIndexed"])
         self.assertEqual(8, audit["priorityLegalCodesVerified"])
         self.assertEqual(13, audit["priorityGraphicExecutionsIndexed"])
+        self.assertEqual(34, audit["mandatoryLegalCodesVerified"])
+        self.assertEqual(51, audit["mandatoryGraphicExecutionsIndexed"])
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(29, audit["categories"]["light_signal"])
@@ -74,11 +76,11 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
-        self.assertEqual(96, len(self.cards["cards"]))
-        first_three = {s["code"] for s in self.data["signs"]
-                       if s["category"] in {"warning", "priority", "prohibition"}}
-        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in first_three}
-        self.assertEqual(first_three, reviewed)
+        self.assertEqual(130, len(self.cards["cards"]))
+        first_four = {s["code"] for s in self.data["signs"]
+                      if s["category"] in {"warning", "priority", "prohibition", "mandatory"}}
+        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in first_four}
+        self.assertEqual(first_four, reviewed)
 
     def test_legal_codes_and_graphic_executions_are_distinct(self):
         signs = {s["code"]: s for s in self.data["signs"]}
@@ -90,6 +92,8 @@ class SignInventoryTest(unittest.TestCase):
         self.assertNotIn("A 6b-1", signs)
         self.assertEqual(["P 4-1", "P 4-2", "P 4-3"], signs["P 4"]["graphicVariantCodes"])
         self.assertNotIn("P 4-1", signs)
+        self.assertEqual(["C 5a", "C 5b"], [code for code in ("C 5a", "C 5b") if code in signs])
+        self.assertEqual("C 5", signs["C 5a"]["familyCode"])
         self.assertEqual(13, len(signs["B 20a"]["graphicVariantCodes"]))
         self.assertEqual("Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
                          signs["B 15"]["titleCs"])

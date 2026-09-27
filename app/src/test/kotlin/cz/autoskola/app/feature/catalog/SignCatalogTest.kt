@@ -17,8 +17,9 @@ class SignCatalogTest {
 
     @Test fun catalogAssetsLoadAndSearchByCodeOrCzechName() {
         val signs = SignCatalog.load(context)
-        assertEquals(349, signs.size)
-        assertEquals(349, signs.map { it.code }.toSet().size)
+        assertEquals(350, signs.size)
+        assertEquals(350, signs.map { it.code }.toSet().size)
+        assertEquals("C 5b", SignCatalog.search(signs, "c 5b", "mandatory").single().code)
         assertEquals("P 4", SignCatalog.search(signs, "p 4", null).single().code)
         assertEquals("P 4", SignCatalog.search(signs, "Dej přednost", "priority").first().code)
         assertTrue(SignCatalog.search(signs, "V 7a", "light_signal").isEmpty())

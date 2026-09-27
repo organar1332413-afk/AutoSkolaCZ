@@ -1,5 +1,5 @@
 {
-  "inventoryCount": 349,
+  "inventoryCount": 350,
   "schemaVersion": 1,
   "scope": "ministry-graphic-index-inventory",
   "signs": [
@@ -3245,10 +3245,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 1",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 1"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Kruhový objezd"
@@ -3256,9 +3260,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 1",
       "titleCs": "Kruhový objezd",
       "titleRu": null,
       "titleUk": null,
@@ -3274,10 +3280,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 10a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 10a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Stezka pro chodce a cyklisty dělená"
@@ -3285,9 +3295,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 10a",
       "titleCs": "Stezka pro chodce a cyklisty dělená",
       "titleRu": null,
       "titleUk": null,
@@ -3303,10 +3315,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 10b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 10b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec stezky pro chodce a cyklisty dělené"
@@ -3314,9 +3330,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 10b",
       "titleCs": "Konec stezky pro chodce a cyklisty dělené",
       "titleRu": null,
       "titleUk": null,
@@ -3332,10 +3350,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 11a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 11a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Stezka pro jezdce na zvířeti"
@@ -3343,9 +3365,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 11a",
       "titleCs": "Stezka pro jezdce na zvířeti",
       "titleRu": null,
       "titleUk": null,
@@ -3361,10 +3385,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 11b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 11b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec stezky pro jezdce na zvířeti"
@@ -3372,9 +3400,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 11b",
       "titleCs": "Konec stezky pro jezdce na zvířeti",
       "titleRu": null,
       "titleUk": null,
@@ -3390,10 +3420,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 12a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 12a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný jízdní pruh"
@@ -3401,9 +3435,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 12a",
       "titleCs": "Přikázaný jízdní pruh",
       "titleRu": null,
       "titleUk": null,
@@ -3419,10 +3455,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 12b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 12b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec přikázaného jízdního pruhu"
@@ -3430,9 +3470,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 12b",
       "titleCs": "Konec přikázaného jízdního pruhu",
       "titleRu": null,
       "titleUk": null,
@@ -3448,10 +3490,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 13a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 13a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Rozsviť světla"
@@ -3459,9 +3505,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 13a",
       "titleCs": "Rozsviť světla",
       "titleRu": null,
       "titleUk": null,
@@ -3477,10 +3525,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 13b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 13b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Rozsviť světla-konec"
@@ -3488,10 +3540,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "Rozsviť světla-konec",
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 13b",
+      "titleCs": "Rozsviť světla - konec",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -3506,10 +3560,15 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 14a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 14a-1",
+        "C 14a-2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2     Jiný příkaz"
@@ -3517,9 +3576,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 14a",
       "titleCs": "Jiný příkaz",
       "titleRu": null,
       "titleUk": null,
@@ -3535,10 +3596,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 14b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 14b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec jiného příkazu"
@@ -3546,9 +3611,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 14b",
       "titleCs": "Konec jiného příkazu",
       "titleRu": null,
       "titleUk": null,
@@ -3564,10 +3631,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 15a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 15a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zimní výbava"
@@ -3575,9 +3646,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 15a",
       "titleCs": "Zimní výbava",
       "titleRu": null,
       "titleUk": null,
@@ -3593,10 +3666,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 15b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 15b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zimní výbava-konec"
@@ -3604,10 +3681,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "Zimní výbava-konec",
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 15b",
+      "titleCs": "Zimní výbava - konec",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -3622,10 +3701,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 2a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 2a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy přímo"
@@ -3633,9 +3716,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2a",
       "titleCs": "Přikázaný směr jízdy přímo",
       "titleRu": null,
       "titleUk": null,
@@ -3651,10 +3736,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 2b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 2b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy vpravo"
@@ -3662,9 +3751,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2b",
       "titleCs": "Přikázaný směr jízdy vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -3680,10 +3771,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 2c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 2c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy vlevo"
@@ -3691,9 +3786,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2c",
       "titleCs": "Přikázaný směr jízdy vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -3709,10 +3806,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 2d",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 2d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy přímo a vpravo"
@@ -3720,9 +3821,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2d",
       "titleCs": "Přikázaný směr jízdy přímo a vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -3738,10 +3841,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 2e",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 2e"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy přímo a vlevo"
@@ -3749,9 +3856,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2e",
       "titleCs": "Přikázaný směr jízdy přímo a vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -3767,10 +3876,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 2f",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 2f"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy vpravo a vlevo"
@@ -3778,9 +3891,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2f",
       "titleCs": "Přikázaný směr jízdy vpravo a vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -3796,10 +3911,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 3a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 3a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy zde vpravo"
@@ -3807,9 +3926,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 3a",
       "titleCs": "Přikázaný směr jízdy zde vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -3825,10 +3946,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 3b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 3b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr jízdy zde vlevo"
@@ -3836,9 +3961,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 3b",
       "titleCs": "Přikázaný směr jízdy zde vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -3854,10 +3981,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 4a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 4a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr objíždění vpravo"
@@ -3865,9 +3996,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 4a",
       "titleCs": "Přikázaný směr objíždění vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -3883,10 +4016,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 4b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 4b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr objíždění vlevo"
@@ -3894,9 +4031,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 4b",
       "titleCs": "Přikázaný směr objíždění vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -3912,10 +4051,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 4c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 4c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přikázaný směr objíždění vpravo a vlevo"
@@ -3923,9 +4066,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 4c",
       "titleCs": "Přikázaný směr objíždění vpravo a vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -3941,10 +4086,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 5",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 5a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "a 5b       Sněhové řetězy"
@@ -3952,10 +4101,47 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 5a",
       "titleCs": "Sněhové řetězy",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "mandatory",
+      "code": "C 5b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "C 5",
+      "graphic": {
+        "sourceId": "md-vl-6-1-2019",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "C 5b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [
+        "a 5b       Sněhové řetězy"
+      ],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015",
+        "md-vl-6-1-2019"
+      ],
+      "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 5b",
+      "titleCs": "Sněhové řetězy - konec",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -3970,10 +4156,22 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 6a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 6a-1",
+        "C 6a-2",
+        "C 6a-3",
+        "C 6a-4",
+        "C 6a-5",
+        "C 6a-6",
+        "C 6a-7",
+        "C 6a-8",
+        "C 6a-9"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 9   Nejnižší dovolená rychlost"
@@ -3981,9 +4179,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 6a",
       "titleCs": "Nejnižší dovolená rychlost",
       "titleRu": null,
       "titleUk": null,
@@ -3999,10 +4199,22 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 6b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 6b-1",
+        "C 6b-2",
+        "C 6b-3",
+        "C 6b-4",
+        "C 6b-5",
+        "C 6b-6",
+        "C 6b-7",
+        "C 6b-8",
+        "C 6b-9"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 9   Konec dovolené rychlosti"
@@ -4010,10 +4222,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
-      "titleCs": "Konec dovolené rychlosti",
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 6b",
+      "titleCs": "Konec nejnižší dovolené rychlosti",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -4028,10 +4242,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 7a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 7a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Stezka pro chodce"
@@ -4039,9 +4257,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 7a",
       "titleCs": "Stezka pro chodce",
       "titleRu": null,
       "titleUk": null,
@@ -4057,10 +4277,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 7b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 7b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec stezky pro chodce"
@@ -4068,9 +4292,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 7b",
       "titleCs": "Konec stezky pro chodce",
       "titleRu": null,
       "titleUk": null,
@@ -4086,10 +4312,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 8a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 8a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Stezka pro cyklisty"
@@ -4097,9 +4327,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 8a",
       "titleCs": "Stezka pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -4115,10 +4347,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 8b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 8b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec stezky pro cyklisty"
@@ -4126,9 +4362,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 8b",
       "titleCs": "Konec stezky pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -4144,10 +4382,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 9a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 9a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Stezka pro chodce a cyklisty společná"
@@ -4155,9 +4397,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 9a",
       "titleCs": "Stezka pro chodce a cyklisty společná",
       "titleRu": null,
       "titleUk": null,
@@ -4173,10 +4417,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "C 9b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "C 9b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec stezky pro chodce a cyklisty společné"
@@ -4184,9 +4432,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 13,
+      "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 9b",
       "titleCs": "Konec stezky pro chodce a cyklisty společné",
       "titleRu": null,
       "titleUk": null,

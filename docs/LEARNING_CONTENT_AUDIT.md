@@ -1,5 +1,17 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 mandatory-sign update
+
+Annex 4 has **34 distinct legal codes**, including `C 5b`, which was hidden
+inside the combined `C 5a a 5b` VL index row. The mandatory group has
+**51 indexed graphic executions**. The current catalog has **350 indexed
+rows from 347 VL families**, with **130/350** CS/RU/UK teaching cards and
+220 rows without reviewed teaching text. The warning, priority, prohibition
+and mandatory annexes are code-by-code reconciled; the remaining categories
+and graphic executions are not. There is one VERIFIED sign/question
+relationship, no bundled sign graphics, and the full legal sign/variant
+count is still undetermined. The earlier counts below are historical.
+
 ## 27 September 2026 sign-catalog checkpoint
 
 The next content pass also reconciled all eight Annex 2 priority codes and

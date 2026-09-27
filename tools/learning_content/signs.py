@@ -229,6 +229,35 @@ def reconcile_prohibition_annex(records: list[dict]) -> list[dict]:
     return records
 
 
+def reconcile_mandatory_annex(records: list[dict]) -> list[dict]:
+    """Split the two legal snow-chain codes grouped on one 2019 VL index row."""
+    by_code = {s["code"]: s for s in records}
+    if "C 5a" not in by_code or "C 5b" in by_code:
+        raise ValueError("Unexpected C 5a/5b grouping")
+    original = by_code["C 5a"]
+    by_code["C 5b"] = {
+        **original, "code": "C 5b", "titleCs": "Sněhové řetězy - konec",
+        "printedScopes": ["a 5b       Sněhové řetězy"],
+        "sourceIds": ["decree-294-2015", "md-vl-6-1-2019"],
+        "reviewStatus": "LEGAL_INDEX_ONLY",
+    }
+    by_code["C 6b"]["titleCs"] = "Konec nejnižší dovolené rychlosti"
+    by_code["C 13b"]["titleCs"] = "Rozsviť světla - konec"
+    by_code["C 15b"]["titleCs"] = "Zimní výbava - konec"
+    mandatory = {code: sign for code, sign in by_code.items() if sign["category"] == "mandatory"}
+    if len(mandatory) != 34:
+        raise ValueError("Annex 4 legal code count mismatch")
+    sheet_counts = {"C 6a": 9, "C 6b": 9, "C 14a": 2}
+    for sign in mandatory.values():
+        code = sign["code"]
+        sign["familyCode"] = "C 5" if code in {"C 5a", "C 5b"} else code
+        sign["graphicVariantCodes"] = ([f"{code}-{n}" for n in range(1, sheet_counts[code] + 1)]
+                                       if code in sheet_counts else [code])
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 4 k vyhlášce č. 294/2015 Sb., {code}"
+    return sorted(by_code.values(), key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -357,6 +386,9 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["prohibitionLegalCodesVerified"] = sum(s["category"] == "prohibition" for s in data["signs"])
     audit["prohibitionGraphicExecutionsIndexed"] = sum(
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "prohibition")
+    audit["mandatoryLegalCodesVerified"] = sum(s["category"] == "mandatory" for s in data["signs"])
+    audit["mandatoryGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "mandatory")
     audit["canonicalFamilies"] = None
     audit["canonicalVariants"] = None
     audit["totalCards"] = len(cards["cards"])
@@ -402,8 +434,8 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = reconcile_prohibition_annex(reconcile_priority_annex(reconcile_warning_annex(
-        add_legal_appendices(apply_2025_revision(parse_index(text))))))
+    records = reconcile_mandatory_annex(reconcile_prohibition_annex(reconcile_priority_annex(
+        reconcile_warning_annex(add_legal_appendices(apply_2025_revision(parse_index(text)))))))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)
