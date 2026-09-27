@@ -1,5 +1,13 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 official-archive graphics batch 3
+
+Added **31 image files** for the remaining 19 `A` warning codes and all
+eight `P` priority codes. `P 1` carries five distinct official annex
+illustrations. The catalog now references **91 files across 88 legal-code
+cards**; 320 cards still have no illustration. The source-file IDs and
+pixel checks are preserved for every added image; the module remains WIP.
+
 ## 27 September 2026 official-archive graphics batch 2
 
 Added **20 warning sign illustrations** (`A 11` through `A 28` in catalog
