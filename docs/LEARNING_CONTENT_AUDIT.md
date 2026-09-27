@@ -1,5 +1,12 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 official-archive graphics batch 4
+
+Five prohibition codes (`B 1`, `B 10`–`B 13`) received individually matched
+annex images. The checkpoint contains **96 image files for 93 legal-code
+cards**, with **315 cards still lacking images**. The full graphic-variant
+count and eTesty relationships remain unproven.
+
 ## 27 September 2026 official-archive graphics batch 3
 
 Added **31 image files** for the remaining 19 `A` warning codes and all

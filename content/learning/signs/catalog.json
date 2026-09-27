@@ -2261,8 +2261,15 @@
       "explanationUk": null,
       "familyCode": "B 1",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/a20f6a2d22c9ee14d039b84f.webp",
+        "sha256": "a20f6a2d22c9ee14d039b84f2b47fd24f1d88ce94fd69d4f3f5c8149aecdd362",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_001_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840277",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o001.tif",
+        "sourceTiffSha256": "93f848d54a0920e27a3231abf1970d1290c00a4cdecb52d2a77fb2fe92e0ca9b",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 1-1",
@@ -2277,7 +2284,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 1",
@@ -2298,8 +2306,15 @@
       "explanationUk": null,
       "familyCode": "B 10",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/f0b46b8edfd8e67d60a18fa5.webp",
+        "sha256": "f0b46b8edfd8e67d60a18fa58c645f0eb171c1c527ead8b53578b110862ec9c4",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_011_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840297",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o011.tif",
+        "sourceTiffSha256": "e715f8cb7addf778c2a4779734336aa0504294fb7b82ccd5bf84c0c157057ab4",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 10"
@@ -2312,7 +2327,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 10",
@@ -2333,8 +2349,15 @@
       "explanationUk": null,
       "familyCode": "B 11",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/172b3bcefa5fc5cc1365f4b2.webp",
+        "sha256": "172b3bcefa5fc5cc1365f4b2d563da1ab1e6c91a3fcb75158310e943443b164d",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_012_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840299",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o012.tif",
+        "sourceTiffSha256": "2107ccc5df72363c28d62e1ca852392d9fcc71d8374428beab9fb3a2436fa7d4",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 11"
@@ -2347,7 +2370,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 11",
@@ -2368,8 +2392,15 @@
       "explanationUk": null,
       "familyCode": "B 12",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/ae1a8eb51441c25f2420d585.webp",
+        "sha256": "ae1a8eb51441c25f2420d58596a30f4a3f6ce7a02cd58020433070de5c74f7b2",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_013_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840301",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o013.tif",
+        "sourceTiffSha256": "00f572ab822f361c8bea298048c4611bc046838291db7ec3596f6cbc31f4558b",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 12"
@@ -2382,7 +2413,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 12",
@@ -2403,8 +2435,15 @@
       "explanationUk": null,
       "familyCode": "B 13",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/62e6352ade8d4557c4381497.webp",
+        "sha256": "62e6352ade8d4557c4381497f4ccde110e94034999169518826858f46220349d",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_014_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840303",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o014.tif",
+        "sourceTiffSha256": "3f2e72e1b1a49d99d73d2d4a0bd33f3c9413f1ca4965fa389980239b4d8dc6c7",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 13-1",
@@ -2421,7 +2460,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 13",
