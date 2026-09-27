@@ -89,7 +89,10 @@ def link(archive_path, *, apply=False):
                 graphic["shared"] = True
             for code in codes:
                 sign = signs[code]
-                if sign["graphic"].get("path") == graphic["path"]:
+                existing_paths = [sign["graphic"].get("path")] + [
+                    item["path"] for item in sign["graphic"].get("additionalImages", [])
+                ]
+                if graphic["path"] in existing_paths:
                     continue
                 if sign["graphic"].get("path"):
                     sign["graphic"].setdefault("additionalImages", []).append(graphic)

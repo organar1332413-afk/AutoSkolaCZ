@@ -1,5 +1,13 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 official-archive graphics batch 2
+
+Added **20 warning sign illustrations** (`A 11` through `A 28` in catalog
+sort order). The catalog now has **60 physical image files** covering **61
+code cards**; 347 cards still lack graphics. Each new WebP has an exact
+decoded-pixel match to one current e-Sbírka TIFF and an individual annex row
+and file ID. `productionReady=false`.
+
 ## 27 September 2026 official-archive graphics batch 1
 
 The first **40 WebP files** are matched by decoded pixel hash to individual
