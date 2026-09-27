@@ -340,6 +340,78 @@ def reconcile_traffic_annex(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
 
 
+def reconcile_direction_annex(records: list[dict]) -> list[dict]:
+    """Expand legal IS codes combined into one printed VL index row."""
+    groups = {
+        "1abc": "Směrová tabule pro příjezd k dálnici (přímo, vlevo nebo vpravo)",
+        "1def": "Směrová tabule před nájezdem na dálnici (přímo, vlevo nebo vpravo)",
+        "2abc": "Směrová tabule pro příjezd k silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
+        "2def": "Směrová tabule před nájezdem na silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
+        "3abc": "Směrová tabule s cílem (přímo, vlevo nebo vpravo)",
+        "4abc": "Směrová tabule s místním cílem (přímo, vlevo nebo vpravo)",
+        "5": "Směrová tabule s jiným cílem", "6a": "Označení křižovatky",
+        "6bd": "Návěst před křižovatkou", "6e": "Směrová návěst pro směr přímo",
+        "6fg": "Směrová návěst před odbočením",
+        "7a": "Směrová návěst pro odbočení", "7b": "Směrová tabule pro výjezd",
+        "8a": "Dálková návěst s šipkou", "8b": "Dálková návěst se vzdálenostmi",
+        "9a": "Návěst před úrovňovou křižovatkou",
+        "9b": "Návěst před okružní křižovatkou",
+        "9cde": "Návěst před křižovatkou s omezením",
+        "10ab": "Návěst změny směru jízdy",
+        "10c": "Návěst změny směru jízdy před překážkou",
+        "10d": "Návěst změny směru jízdy s omezením",
+        "11a": "Návěst před objížďkou",
+        "11bcd": "Směrová tabule pro vyznačení objížďky",
+        "12abc": "Směrová tabule pro náhradní trasu dálnice (přímo, vlevo nebo vpravo)",
+        "12d": "Náhradní trasa", "13": "Blízká návěst",
+        "14": "Hranice územního celku", "15ab": "Jiný název",
+        "16a": "Číslo dálnice", "16b": "Číslo silnice",
+        "17": "Číslo silnice pro mezinárodní provoz",
+        "18ab": "Kilometrovník",
+        "19abc": "Směrová tabule pro cyklisty (přímo, vlevo nebo vpravo)",
+        "20": "Návěst pro cyklisty",
+        "21abc": "Směrová tabulka pro cyklisty (přímo, vlevo nebo vpravo)",
+        "21d": "Konec cyklistické trasy",
+        "22abcdef": "Označení názvu ulice nebo jiného veřejného prostranství",
+        "23": "Návěst pro kulturní nebo turistický cíl",
+        "24a": "Kulturní nebo turistický cíl",
+        "24b": "Směrová tabule pro kulturní nebo turistický cíl",
+        "24c": "Komunální cíl",
+    }
+    legal_titles: dict[str, str] = {}
+    for group, title in groups.items():
+        match = re.fullmatch(r"(\d+)([a-z]+)?", group)
+        assert match is not None
+        number, suffixes = match.groups()
+        for suffix in suffixes if suffixes else ("",):
+            code = f"IS {number}{suffix}"
+            if code in legal_titles:
+                raise ValueError(f"Duplicate Annex 5(3) code: {code}")
+            legal_titles[code] = title
+    if len(legal_titles) != 73:
+        raise ValueError("Annex 5(3) code count changed")
+    by_code = {sign["code"]: sign for sign in records}
+    indexed = {code for code, sign in by_code.items() if sign["category"] == "information_direction"}
+    if indexed - legal_titles.keys():
+        raise ValueError(f"VL direction code absent in legal annex: {indexed - legal_titles.keys()}")
+    template = by_code["IS 1a"]
+    for code, title in legal_titles.items():
+        if code not in by_code:
+            sign = dict(template)
+            sign.update(code=code, printedScopes=[], variantTitles=[],
+                        sourceIndexPage=None, reviewStatus="LEGAL_INDEX_ONLY",
+                        sourceIds=["decree-294-2015"],
+                        graphic={"sourceId": "decree-294-2015", "status": "LICENSE_REVIEW_REQUIRED"})
+            by_code[code] = sign
+        sign = by_code[code]
+        sign["titleCs"] = title
+        sign["familyCode"] = "IS " + re.match(r"\d+", code.split()[1]).group()
+        sign["graphicVariantCodes"] = [code]
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., {code}"
+    return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -481,6 +553,10 @@ def full_audit(data: dict, sources: dict) -> dict:
         s["category"] == "information_traffic" for s in data["signs"])
     audit["trafficGraphicExecutionsIndexed"] = sum(
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_traffic")
+    audit["directionLegalCodesVerified"] = sum(
+        s["category"] == "information_direction" for s in data["signs"])
+    audit["directionGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_direction")
     audit["graphicVersionReviewRequired"] = sum(
         s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
@@ -528,9 +604,12 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = reconcile_traffic_annex(reconcile_zone_annex(reconcile_mandatory_annex(reconcile_prohibition_annex(
-        reconcile_priority_annex(reconcile_warning_annex(
-            add_legal_appendices(apply_2025_revision(parse_index(text)))))))))
+    records = apply_2025_revision(parse_index(text))
+    for reconcile in (add_legal_appendices, reconcile_warning_annex,
+                      reconcile_priority_annex, reconcile_prohibition_annex,
+                      reconcile_mandatory_annex, reconcile_zone_annex,
+                      reconcile_traffic_annex, reconcile_direction_annex):
+        records = reconcile(records)
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-27", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)

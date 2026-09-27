@@ -1,5 +1,18 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 direction sign update
+
+Annex 5(3) contains **73 legal IS codes**. The printed VL index had 39
+grouped rows; `IS 6c` is not a current listed code. All 73 have separate
+code/provision references and short CS/RU/UK cards. Sets with several
+graphic directions share a legal description; each card tells the reader
+to follow the actual arrow and place name. No graphic is inferred from a
+suffix. Current audit: **268/393** cards, **125** unreviewed rows, zero
+bundled graphics and one verified question link. The provisional
+`indexedFamilies=341` folds these direction codes by numeric family; it
+is not a final count of graphic variants. Earlier figures below remain
+as historical checkpoints.
+
 ## 27 September 2026 traffic-information sign update
 
 Annex 5(2) now reconciles **47 separate IP legal codes**. The 2019 VL

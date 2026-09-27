@@ -1,5 +1,5 @@
 {
-  "inventoryCount": 359,
+  "inventoryCount": 393,
   "schemaVersion": 1,
   "scope": "ministry-graphic-index-inventory",
   "signs": [
@@ -6871,10 +6871,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 10",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 10a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 10b        Návěst změny směru jízdy"
@@ -6882,9 +6886,43 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 10a",
+      "titleCs": "Návěst změny směru jízdy",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 10b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 10",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 10b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 10b",
       "titleCs": "Návěst změny směru jízdy",
       "titleRu": null,
       "titleUk": null,
@@ -6900,10 +6938,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 10",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 10c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Návěst změny směru jízdy před překážkou"
@@ -6911,9 +6953,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 10c",
       "titleCs": "Návěst změny směru jízdy před překážkou",
       "titleRu": null,
       "titleUk": null,
@@ -6929,10 +6973,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 10",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 10d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 11     Návěst změny směru jízdy s omezením"
@@ -6940,9 +6988,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 10d",
       "titleCs": "Návěst změny směru jízdy s omezením",
       "titleRu": null,
       "titleUk": null,
@@ -6958,10 +7008,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 11",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 11a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Návěst před objížďkou"
@@ -6969,9 +7023,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 11a",
       "titleCs": "Návěst před objížďkou",
       "titleRu": null,
       "titleUk": null,
@@ -6987,10 +7043,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 11",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 11b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 11d        Směrová tabule pro vyznačení objížďky"
@@ -6998,10 +7058,204 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 11b",
       "titleCs": "Směrová tabule pro vyznačení objížďky",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 11c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 11",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 11c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 11c",
+      "titleCs": "Směrová tabule pro vyznačení objížďky",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 11d",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 11",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 11d"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 11d",
+      "titleCs": "Směrová tabule pro vyznačení objížďky",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 12a",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 12",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 12a"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 12a",
+      "titleCs": "Směrová tabule pro náhradní trasu dálnice (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 12b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 12",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 12b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 12b",
+      "titleCs": "Směrová tabule pro náhradní trasu dálnice (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 12c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 12",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 12c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 12c",
+      "titleCs": "Směrová tabule pro náhradní trasu dálnice (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 12d",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 12",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 12d"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 12d",
+      "titleCs": "Náhradní trasa",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7016,10 +7270,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 13",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 13"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Blízká návěst"
@@ -7027,9 +7285,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 13",
       "titleCs": "Blízká návěst",
       "titleRu": null,
       "titleUk": null,
@@ -7045,10 +7305,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 14",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 14"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Hranice územního celku"
@@ -7056,9 +7320,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 14",
       "titleCs": "Hranice územního celku",
       "titleRu": null,
       "titleUk": null,
@@ -7074,10 +7340,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 15",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 15a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         ", 15b – 1 a 2   Jiný název"
@@ -7085,9 +7355,43 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 15a",
+      "titleCs": "Jiný název",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 15b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 15",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 15b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 15b",
       "titleCs": "Jiný název",
       "titleRu": null,
       "titleUk": null,
@@ -7103,10 +7407,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 16",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 16a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Číslo dálnice"
@@ -7114,9 +7422,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 16a",
       "titleCs": "Číslo dálnice",
       "titleRu": null,
       "titleUk": null,
@@ -7132,10 +7442,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 16",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 16b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Číslo silnice"
@@ -7143,9 +7457,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 16b",
       "titleCs": "Číslo silnice",
       "titleRu": null,
       "titleUk": null,
@@ -7161,10 +7477,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 17",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 17"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Číslo silnice pro mezinárodní provoz"
@@ -7172,9 +7492,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 17",
       "titleCs": "Číslo silnice pro mezinárodní provoz",
       "titleRu": null,
       "titleUk": null,
@@ -7190,10 +7512,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 18",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 18a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2, 18b   Kilometrovník"
@@ -7201,9 +7527,43 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 18a",
+      "titleCs": "Kilometrovník",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 18b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 18",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 18b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 18b",
       "titleCs": "Kilometrovník",
       "titleRu": null,
       "titleUk": null,
@@ -7219,10 +7579,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 19",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 19a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 19c         Směrová tabule pro cyklisty"
@@ -7230,10 +7594,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Směrová tabule pro cyklisty",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19a",
+      "titleCs": "Směrová tabule pro cyklisty (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 19b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 19",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 19b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19b",
+      "titleCs": "Směrová tabule pro cyklisty (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 19c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 19",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 19c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19c",
+      "titleCs": "Směrová tabule pro cyklisty (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7248,10 +7678,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 1",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 1a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 1c          Směrová tabule pro příjezd k dálnici"
@@ -7259,10 +7693,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Směrová tabule pro příjezd k dálnici",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1a",
+      "titleCs": "Směrová tabule pro příjezd k dálnici (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 1b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 1",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 1b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1b",
+      "titleCs": "Směrová tabule pro příjezd k dálnici (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 1c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 1",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 1c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1c",
+      "titleCs": "Směrová tabule pro příjezd k dálnici (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7277,10 +7777,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 1",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 1d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až f           Směrová tabule před nájezdem na dálnici"
@@ -7288,10 +7792,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Směrová tabule před nájezdem na dálnici",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1d",
+      "titleCs": "Směrová tabule před nájezdem na dálnici (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 1e",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 1",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 1e"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1e",
+      "titleCs": "Směrová tabule před nájezdem na dálnici (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 1f",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 1",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 1f"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1f",
+      "titleCs": "Směrová tabule před nájezdem na dálnici (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7306,10 +7876,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 20",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 20"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 5        Návěst před křižovatkou pro cyklisty"
@@ -7317,10 +7891,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Návěst před křižovatkou pro cyklisty",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 20",
+      "titleCs": "Návěst pro cyklisty",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7335,10 +7911,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 21",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 21a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 21c         Směrová tabulka pro cyklisty"
@@ -7346,10 +7926,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Směrová tabulka pro cyklisty",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21a",
+      "titleCs": "Směrová tabulka pro cyklisty (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 21b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 21",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 21b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21b",
+      "titleCs": "Směrová tabulka pro cyklisty (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 21c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 21",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 21c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21c",
+      "titleCs": "Směrová tabulka pro cyklisty (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7364,10 +8010,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 21",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 21d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Konec cyklistické trasy"
@@ -7375,9 +8025,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21d",
       "titleCs": "Konec cyklistické trasy",
       "titleRu": null,
       "titleUk": null,
@@ -7393,10 +8045,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 22",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 22a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 22f         Označení ulice nebo veřejného prostranství"
@@ -7404,10 +8060,172 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Označení ulice nebo veřejného prostranství",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22a",
+      "titleCs": "Označení názvu ulice nebo jiného veřejného prostranství",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 22b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 22",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 22b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22b",
+      "titleCs": "Označení názvu ulice nebo jiného veřejného prostranství",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 22c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 22",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 22c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22c",
+      "titleCs": "Označení názvu ulice nebo jiného veřejného prostranství",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 22d",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 22",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 22d"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22d",
+      "titleCs": "Označení názvu ulice nebo jiného veřejného prostranství",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 22e",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 22",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 22e"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22e",
+      "titleCs": "Označení názvu ulice nebo jiného veřejného prostranství",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 22f",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 22",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 22f"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22f",
+      "titleCs": "Označení názvu ulice nebo jiného veřejného prostranství",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7422,10 +8240,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 23",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 23"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Návěst pro kulturní nebo turistický cíl"
@@ -7433,9 +8255,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 23",
       "titleCs": "Návěst pro kulturní nebo turistický cíl",
       "titleRu": null,
       "titleUk": null,
@@ -7451,10 +8275,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 24",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 24a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Kulturní nebo turistický cíl"
@@ -7462,9 +8290,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 24a",
       "titleCs": "Kulturní nebo turistický cíl",
       "titleRu": null,
       "titleUk": null,
@@ -7480,10 +8310,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 24",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 24b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Směrová tabule pro kulturní nebo turistický cíl"
@@ -7491,9 +8325,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 24b",
       "titleCs": "Směrová tabule pro kulturní nebo turistický cíl",
       "titleRu": null,
       "titleUk": null,
@@ -7509,10 +8345,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 24",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 24c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Komunální cíl"
@@ -7520,9 +8360,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 24c",
       "titleCs": "Komunální cíl",
       "titleRu": null,
       "titleUk": null,
@@ -7538,10 +8380,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 2",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 2a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 2c          Směrová tabule pro příjezd k SMV"
@@ -7549,10 +8395,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Směrová tabule pro příjezd k SMV",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2a",
+      "titleCs": "Směrová tabule pro příjezd k silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 2b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 2b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2b",
+      "titleCs": "Směrová tabule pro příjezd k silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 2c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 2c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2c",
+      "titleCs": "Směrová tabule pro příjezd k silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7567,10 +8479,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 2",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 2d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 2f – 1 a 2  Směrová tabule před nájezdem na SMV"
@@ -7578,10 +8494,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Směrová tabule před nájezdem na SMV",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2d",
+      "titleCs": "Směrová tabule před nájezdem na silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 2e",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 2e"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2e",
+      "titleCs": "Směrová tabule před nájezdem na silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 2f",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 2f"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2f",
+      "titleCs": "Směrová tabule před nájezdem na silnici pro motorová vozidla (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7596,10 +8578,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 3",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 3a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 3c – 1 až 3 Směrová tabule s cílem"
@@ -7607,10 +8593,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Směrová tabule s cílem",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 3a",
+      "titleCs": "Směrová tabule s cílem (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 3b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 3",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 3b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 3b",
+      "titleCs": "Směrová tabule s cílem (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 3c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 3",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 3c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 3c",
+      "titleCs": "Směrová tabule s cílem (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7625,10 +8677,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 4",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 4a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 4c          Směrová tabule s místním cílem"
@@ -7636,10 +8692,76 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Směrová tabule s místním cílem",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 4a",
+      "titleCs": "Směrová tabule s místním cílem (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 4b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 4",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 4b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 4b",
+      "titleCs": "Směrová tabule s místním cílem (přímo, vlevo nebo vpravo)",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 4c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 4",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 4c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 4c",
+      "titleCs": "Směrová tabule s místním cílem (přímo, vlevo nebo vpravo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7654,10 +8776,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 5",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 5"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 4        Směrová tabule s jiným cílem"
@@ -7665,9 +8791,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 5",
       "titleCs": "Směrová tabule s jiným cílem",
       "titleRu": null,
       "titleUk": null,
@@ -7683,10 +8811,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 6",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 6a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2        Označení křižovatky"
@@ -7694,9 +8826,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6a",
       "titleCs": "Označení křižovatky",
       "titleRu": null,
       "titleUk": null,
@@ -7712,10 +8846,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 6",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 6b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 6d          Návěst před křižovatkou"
@@ -7723,9 +8861,43 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6b",
+      "titleCs": "Návěst před křižovatkou",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 6d",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 6",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 6d"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6d",
       "titleCs": "Návěst před křižovatkou",
       "titleRu": null,
       "titleUk": null,
@@ -7741,10 +8913,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 6",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 6e"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2        Směrová návěst pro směr přímo"
@@ -7752,9 +8928,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6e",
       "titleCs": "Směrová návěst pro směr přímo",
       "titleRu": null,
       "titleUk": null,
@@ -7770,10 +8948,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 6",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 6f"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 6g          Směrová návěst před odbočením"
@@ -7781,9 +8963,43 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6f",
+      "titleCs": "Směrová návěst před odbočením",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 6g",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 6",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 6g"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6g",
       "titleCs": "Směrová návěst před odbočením",
       "titleRu": null,
       "titleUk": null,
@@ -7799,10 +9015,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 7",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 7a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2        Směrová návěst pro odbočení"
@@ -7810,9 +9030,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 7a",
       "titleCs": "Směrová návěst pro odbočení",
       "titleRu": null,
       "titleUk": null,
@@ -7828,10 +9050,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 7",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 7b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Směrová tabule pro výjezd"
@@ -7839,9 +9065,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 7b",
       "titleCs": "Směrová tabule pro výjezd",
       "titleRu": null,
       "titleUk": null,
@@ -7857,10 +9085,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 8",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 8a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Dálková návěst s šipkou"
@@ -7868,9 +9100,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 8a",
       "titleCs": "Dálková návěst s šipkou",
       "titleRu": null,
       "titleUk": null,
@@ -7886,10 +9120,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 8",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 8b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2        Dálková návěst se vzdáleností"
@@ -7897,10 +9135,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Dálková návěst se vzdáleností",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 8b",
+      "titleCs": "Dálková návěst se vzdálenostmi",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7915,10 +9155,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 9",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 9a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 3        Návěst před úrovňovou křižovatkou"
@@ -7926,9 +9170,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 9a",
       "titleCs": "Návěst před úrovňovou křižovatkou",
       "titleRu": null,
       "titleUk": null,
@@ -7944,10 +9190,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 9",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 9b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 5       Návěst před OK"
@@ -7955,10 +9205,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Návěst před OK",
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 9b",
+      "titleCs": "Návěst před okružní křižovatkou",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -7973,10 +9225,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IS 9",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IS 9c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až 9e          Návěst před křižovatkou s omezením"
@@ -7984,9 +9240,75 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 9c",
+      "titleCs": "Návěst před křižovatkou s omezením",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 9d",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 9",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 9d"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 9d",
+      "titleCs": "Návěst před křižovatkou s omezením",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_direction",
+      "code": "IS 9e",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IS 9",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IS 9e"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 9e",
       "titleCs": "Návěst před křižovatkou s omezením",
       "titleRu": null,
       "titleUk": null,
