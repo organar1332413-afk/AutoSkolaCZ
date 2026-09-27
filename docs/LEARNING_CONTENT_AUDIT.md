@@ -1,5 +1,17 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 road-marking update
+
+All **40 Annex 8 V codes** were checked against the current seven
+marking sections, including the distinct meanings of `V 1a/b`, `V 2a/b/c`,
+`V 7a/b` and the yellow stopping/standing restrictions `V 12a–d`.
+The old generic Annex 8 provenance was refined to an individual code
+reference, and the legal Czech title of `V 10f` was corrected. All 40
+have short CS/RU/UK teaching cards. The catalog has **369/398** cards;
+the last 29 indexed entries are light-signal families. Graphics are still
+not bundled, so no release-ready illustration claim follows from card
+completion. Historical counts remain below.
+
 ## 27 September 2026 additional-panel update
 
 Annex 6 identifies **33 separate E codes**, including four legal codes

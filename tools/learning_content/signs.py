@@ -506,6 +506,25 @@ def reconcile_panel_annex(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
 
 
+def reconcile_marking_annex(records: list[dict]) -> list[dict]:
+    """The Annex 8 inventory has forty legal V codes in seven sections."""
+    markings = {s["code"]: s for s in records if s["category"] == "road_marking"}
+    expected = {f"V {n}{letter}" for n, letters in {
+        1:"ab", 2:"abc", 6:"ab", 7:"ab", 8:"abc", 9:"abc",
+        10:"abcdefg", 11:"ab", 12:"abcde"}.items() for letter in letters}
+    expected |= {f"V {n}" for n in (3, 4, 5, 13, 14, 15, 16, 17, 18, 19, 20)}
+    if set(markings) != expected or len(markings) != 40:
+        raise ValueError(f"Annex 8 mismatch: {set(markings) ^ expected}")
+    markings["V 10f"]["titleCs"] = (
+        "Vyhrazené parkoviště pro vozidlo přepravující osobu těžce "
+        "postiženou nebo osobu těžce pohybově postiženou")
+    for code, sign in markings.items():
+        sign["familyCode"] = "V " + re.match(r"\d+", code.split()[1]).group()
+        sign["graphicVariantCodes"] = [code]
+        sign["sourceProvision"] = f"Příloha č. 8 k vyhlášce č. 294/2015 Sb., {code}"
+    return records
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -655,6 +674,8 @@ def full_audit(data: dict, sources: dict) -> dict:
         s["category"] == "information_other" for s in data["signs"])
     audit["panelLegalCodesVerified"] = sum(
         s["category"] == "additional_panel" for s in data["signs"])
+    audit["markingLegalCodesVerified"] = sum(
+        s["category"] == "road_marking" for s in data["signs"])
     audit["graphicVersionReviewRequired"] = sum(
         s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
@@ -707,7 +728,8 @@ def main() -> None:
                       reconcile_priority_annex, reconcile_prohibition_annex,
                       reconcile_mandatory_annex, reconcile_zone_annex,
                       reconcile_traffic_annex, reconcile_direction_annex,
-                      reconcile_other_info_annex, reconcile_panel_annex):
+                      reconcile_other_info_annex, reconcile_panel_annex,
+                      reconcile_marking_annex):
         records = reconcile(records)
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-27", "inventoryCount": len(records), "signs": records}

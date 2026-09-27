@@ -11444,10 +11444,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11456,7 +11460,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10a",
       "titleCs": "Stání podélné",
       "titleRu": null,
       "titleUk": null,
@@ -11472,10 +11476,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11484,7 +11492,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10b",
       "titleCs": "Stání kolmé",
       "titleRu": null,
       "titleUk": null,
@@ -11500,10 +11508,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11512,7 +11524,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10c",
       "titleCs": "Stání šikmé",
       "titleRu": null,
       "titleUk": null,
@@ -11528,10 +11540,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10d"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11540,7 +11556,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10d",
       "titleCs": "Parkovací pruh",
       "titleRu": null,
       "titleUk": null,
@@ -11556,10 +11572,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10e"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11568,7 +11588,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10e",
       "titleCs": "Vyhrazené parkoviště",
       "titleRu": null,
       "titleUk": null,
@@ -11584,10 +11604,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10f"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11596,8 +11620,8 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Vyhrazené parkoviště pro vozidlo přepravující osobu těžce zdravotně postiženou",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10f",
+      "titleCs": "Vyhrazené parkoviště pro vozidlo přepravující osobu těžce postiženou nebo osobu těžce pohybově postiženou",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -11612,10 +11636,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 10g"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11624,7 +11652,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10g",
       "titleCs": "Omezené stání",
       "titleRu": null,
       "titleUk": null,
@@ -11640,10 +11668,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 11",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 11a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11652,7 +11684,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 11a",
       "titleCs": "Zastávka autobusu nebo trolejbusu",
       "titleRu": null,
       "titleUk": null,
@@ -11668,10 +11700,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 11",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 11b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11680,7 +11716,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 11b",
       "titleCs": "Zastávka tramvaje",
       "titleRu": null,
       "titleUk": null,
@@ -11696,10 +11732,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 12a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11708,7 +11748,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 12a",
       "titleCs": "Žlutá klikatá čára",
       "titleRu": null,
       "titleUk": null,
@@ -11724,10 +11764,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 12b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11736,7 +11780,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 12b",
       "titleCs": "Žluté zkřížené čáry",
       "titleRu": null,
       "titleUk": null,
@@ -11752,10 +11796,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 12c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11764,7 +11812,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 12c",
       "titleCs": "Zákaz zastavení",
       "titleRu": null,
       "titleUk": null,
@@ -11780,10 +11828,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 12d"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11792,7 +11844,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 12d",
       "titleCs": "Zákaz stání",
       "titleRu": null,
       "titleUk": null,
@@ -11808,10 +11860,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 12e"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11820,7 +11876,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 12e",
       "titleCs": "Bílá klikatá čára",
       "titleRu": null,
       "titleUk": null,
@@ -11836,10 +11892,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 13",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 13"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11848,7 +11908,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 13",
       "titleCs": "Šikmé rovnoběžné čáry",
       "titleRu": null,
       "titleUk": null,
@@ -11864,10 +11924,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 14",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 14"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11876,7 +11940,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 14",
       "titleCs": "Jízdní pruh pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -11892,10 +11956,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 15"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11904,7 +11972,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 15",
       "titleCs": "Nápis na vozovce",
       "titleRu": null,
       "titleUk": null,
@@ -11920,10 +11988,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 16",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 16"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11932,7 +12004,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 16",
       "titleCs": "Bezpečný odstup",
       "titleRu": null,
       "titleUk": null,
@@ -11948,10 +12020,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 17",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 17"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11960,7 +12036,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 17",
       "titleCs": "Trojúhelníky",
       "titleRu": null,
       "titleUk": null,
@@ -11976,10 +12052,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 18",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 18"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -11988,7 +12068,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 18",
       "titleCs": "Optická psychologická brzda",
       "titleRu": null,
       "titleUk": null,
@@ -12004,10 +12084,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 19",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 19"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12016,7 +12100,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 19",
       "titleCs": "Prostor pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -12032,10 +12116,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 1",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 1a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12044,7 +12132,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 1a",
       "titleCs": "Podélná čára souvislá",
       "titleRu": null,
       "titleUk": null,
@@ -12060,10 +12148,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 1",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 1b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12072,7 +12164,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 1b",
       "titleCs": "Dvojitá podélná čára souvislá",
       "titleRu": null,
       "titleUk": null,
@@ -12088,10 +12180,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 20",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 20"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12100,7 +12196,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 20",
       "titleCs": "Piktogramový koridor pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -12116,10 +12212,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 2",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 2a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12128,7 +12228,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 2a",
       "titleCs": "Podélná čára přerušovaná",
       "titleRu": null,
       "titleUk": null,
@@ -12144,10 +12244,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 2",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 2b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12156,7 +12260,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 2b",
       "titleCs": "Podélná čára přerušovaná",
       "titleRu": null,
       "titleUk": null,
@@ -12172,10 +12276,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 2",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 2c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12184,7 +12292,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 2c",
       "titleCs": "Dvojitá podélná čára přerušovaná",
       "titleRu": null,
       "titleUk": null,
@@ -12200,10 +12308,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 3",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 3"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12212,7 +12324,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 3",
       "titleCs": "Podélná čára souvislá doplněná čárou přerušovanou",
       "titleRu": null,
       "titleUk": null,
@@ -12228,10 +12340,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 4",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 4"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12240,7 +12356,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 4",
       "titleCs": "Vodicí čára",
       "titleRu": null,
       "titleUk": null,
@@ -12256,10 +12372,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 5",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 5"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12268,7 +12388,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 5",
       "titleCs": "Příčná čára souvislá",
       "titleRu": null,
       "titleUk": null,
@@ -12284,10 +12404,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 6",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 6a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12296,7 +12420,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 6a",
       "titleCs": "Příčná čára souvislá se symbolem „Dej přednost v jízdě!“",
       "titleRu": null,
       "titleUk": null,
@@ -12312,10 +12436,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 6",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 6b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12324,7 +12452,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 6b",
       "titleCs": "Příčná čára souvislá s nápisem STOP",
       "titleRu": null,
       "titleUk": null,
@@ -12340,10 +12468,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 7",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 7a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12352,7 +12484,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 7a",
       "titleCs": "Přechod pro chodce",
       "titleRu": null,
       "titleUk": null,
@@ -12368,10 +12500,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 7",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 7b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12380,7 +12516,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 7b",
       "titleCs": "Místo pro přecházení",
       "titleRu": null,
       "titleUk": null,
@@ -12396,10 +12532,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 8a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12408,7 +12548,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8a",
       "titleCs": "Přejezd pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -12424,10 +12564,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 8b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12436,7 +12580,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8b",
       "titleCs": "Přejezd pro cyklisty přimknutý k přechodu pro chodce",
       "titleRu": null,
       "titleUk": null,
@@ -12452,10 +12596,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 8c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12464,7 +12612,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8c",
       "titleCs": "Sdružený přechod pro chodce a přejezd pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -12480,10 +12628,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 9",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 9a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12492,7 +12644,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 9a",
       "titleCs": "Směrové šipky",
       "titleRu": null,
       "titleUk": null,
@@ -12508,10 +12660,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 9",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 9b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12520,7 +12676,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 9b",
       "titleCs": "Předběžné šipky",
       "titleRu": null,
       "titleUk": null,
@@ -12536,10 +12692,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "V 9",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "V 9c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12548,7 +12708,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 9c",
       "titleCs": "Předběžné šipky",
       "titleRu": null,
       "titleUk": null,
