@@ -525,6 +525,50 @@ def reconcile_marking_annex(records: list[dict]) -> list[dict]:
     return records
 
 
+def reconcile_signal_annex(records: list[dict]) -> list[dict]:
+    """Annex 9 names the individual light aspects inside six S families."""
+    aspect_titles = {
+        "S 1": ["Signál s červeným světlem „Stůj!“",
+                "Signál se žlutým světlem „Pozor!“",
+                "Signál se zeleným světlem „Volno“"],
+        "S 2": ["Signál se směrovou šipkou s červeným světlem „Stůj!“",
+                "Signál se směrovou šipkou se žlutým světlem „Pozor!“",
+                "Signál se směrovou šipkou se zeleným světlem „Volno“"],
+        "S 3": ["Signál s kombinovanou směrovou šipkou s červeným světlem „Stůj!“",
+                "Signál s kombinovanou směrovou šipkou se žlutým světlem „Pozor!“",
+                "Signál s kombinovanou směrovou šipkou se zeleným světlem „Volno“"],
+        "S 9": ["Signál pro chodce se znamením „Stůj!“",
+                "Signál pro chodce se znamením „Volno“"],
+        "S 10": ["Signál pro cyklisty se znamením „Stůj!“",
+                 "Signál pro cyklisty se znamením „Pozor!“",
+                 "Signál pro cyklisty se znamením „Volno“"],
+        "S 11": ["Signál pro chodce a cyklisty se znamením „Stůj!“",
+                 "Signál pro chodce a cyklisty se znamením „Volno“"],
+    }
+    original = {s["code"]: s for s in records if s["category"] == "light_signal"}
+    if len(original) != 29 or not set(aspect_titles) <= original.keys():
+        raise ValueError("Unexpected Annex 9 grouped signal inventory")
+    by_code = {s["code"]: s for s in records if s["category"] != "light_signal"}
+    for code, sign in original.items():
+        if code in aspect_titles:
+            for index, title in enumerate(aspect_titles[code]):
+                aspect_code = code + chr(ord("a") + index)
+                aspect = dict(sign)
+                aspect.update(code=aspect_code, titleCs=title,
+                              printedScopes=[], variantTitles=[],
+                              familyCode=code, graphicVariantCodes=[aspect_code],
+                              sourceProvision=f"Příloha č. 9 k vyhlášce č. 294/2015 Sb., {aspect_code}")
+                by_code[aspect_code] = aspect
+        else:
+            sign["familyCode"] = "S " + re.match(r"\d+", code.split()[1]).group()
+            sign["graphicVariantCodes"] = [code]
+            sign["sourceProvision"] = f"Příloha č. 9 k vyhlášce č. 294/2015 Sb., {code}"
+            by_code[code] = sign
+    if len([s for s in by_code.values() if s["category"] == "light_signal"]) != 39:
+        raise ValueError("Annex 9 atomic aspect count changed")
+    return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -676,10 +720,13 @@ def full_audit(data: dict, sources: dict) -> dict:
         s["category"] == "additional_panel" for s in data["signs"])
     audit["markingLegalCodesVerified"] = sum(
         s["category"] == "road_marking" for s in data["signs"])
+    audit["signalAtomicAspectsIndexed"] = sum(
+        s["category"] == "light_signal" for s in data["signs"])
     audit["graphicVersionReviewRequired"] = sum(
         s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
     audit["canonicalVariants"] = None
+    audit["atomicLegalEntries"] = audit["total"]
     audit["totalCards"] = len(cards["cards"])
     audit["completeCardsCs"] = sum(all(card.get(k) for k in ("titleCs", "meaningCs", "simpleCs")) for card in cards["cards"])
     audit["completeCardsRu"] = sum(all(card.get(k) for k in ("titleRu", "ru")) for card in cards["cards"])
@@ -729,7 +776,7 @@ def main() -> None:
                       reconcile_mandatory_annex, reconcile_zone_annex,
                       reconcile_traffic_annex, reconcile_direction_annex,
                       reconcile_other_info_annex, reconcile_panel_annex,
-                      reconcile_marking_annex):
+                      reconcile_marking_annex, reconcile_signal_annex):
         records = reconcile(records)
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-27", "inventoryCount": len(records), "signs": records}

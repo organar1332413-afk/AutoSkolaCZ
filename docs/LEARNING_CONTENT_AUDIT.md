@@ -1,5 +1,25 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 signal and teaching-card update
+
+Annex 9's **29 indexed signal rows** contain **39 atomic coded
+aspects**: `S 1/2/3`, `S 9/10/11` were split into the a/b/c signals
+actually named in the annex. All have per-aspect Czech titles,
+CS/RU/UK teaching cards, and individual code references to Annex 9;
+the behavior summaries additionally cite Act 361/2000 Sb.
+
+Across the reconciled Annexes 1–6 and 8–9 there are **408 coded
+entries**, each with a provision-tagged CS/RU/UK card. This is
+**408/408 teaching text coverage** for the indexed scope, not a complete
+graphic release: **0/408** local illustrations are verified, the total
+number of distinct official graphical executions remains unknown, and
+only one sign-to-eTesty relationship is VERIFIED. The current audit
+leaves `canonicalFamilies` and `canonicalVariants` null rather than
+equating legal codes with drawing variants. Some cards share a legal
+meaning across directional or pictogram variants and cannot be fully
+taught without matching graphics. Source and copyright review are in
+[SIGN_GRAPHICS_LICENSE_REVIEW.md](SIGN_GRAPHICS_LICENSE_REVIEW.md).
+
 ## 27 September 2026 road-marking update
 
 All **40 Annex 8 V codes** were checked against the current seven

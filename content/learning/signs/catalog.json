@@ -1,5 +1,5 @@
 {
-  "inventoryCount": 398,
+  "inventoryCount": 408,
   "schemaVersion": 1,
   "scope": "ministry-graphic-index-inventory",
   "signs": [
@@ -12716,7 +12716,7 @@
     },
     {
       "category": "light_signal",
-      "code": "S 1",
+      "code": "S 10a",
       "commonMistake": null,
       "confusedWith": [],
       "driverActions": [],
@@ -12724,10 +12724,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 10a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12736,15 +12740,15 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Tříbarevná soustava s plnými signály",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10a",
+      "titleCs": "Signál pro cyklisty se znamením „Stůj!“",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
     },
     {
       "category": "light_signal",
-      "code": "S 10",
+      "code": "S 10b",
       "commonMistake": null,
       "confusedWith": [],
       "driverActions": [],
@@ -12752,10 +12756,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 10b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12764,15 +12772,15 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Tříbarevná soustava se signály pro cyklisty",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10b",
+      "titleCs": "Signál pro cyklisty se znamením „Pozor!“",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
     },
     {
       "category": "light_signal",
-      "code": "S 11",
+      "code": "S 10c",
       "commonMistake": null,
       "confusedWith": [],
       "driverActions": [],
@@ -12780,10 +12788,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 10",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 10c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12792,8 +12804,72 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Dvoubarevná soustava se signály pro chodce a cyklisty",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10c",
+      "titleCs": "Signál pro cyklisty se znamením „Volno“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 11a",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 11",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 11a"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 11a",
+      "titleCs": "Signál pro chodce a cyklisty se znamením „Stůj!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 11b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 11",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 11b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 11b",
+      "titleCs": "Signál pro chodce a cyklisty se znamením „Volno“",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -12808,10 +12884,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 12a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12820,7 +12900,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 12a",
       "titleCs": "Rychlostní signál s proměnným signálním znakem",
       "titleRu": null,
       "titleUk": null,
@@ -12836,10 +12916,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 12",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 12b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12848,7 +12932,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 12b",
       "titleCs": "Rychlostní signál s více signálními znaky",
       "titleRu": null,
       "titleUk": null,
@@ -12864,10 +12948,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 13",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 13"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12876,7 +12964,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 13",
       "titleCs": "Signál dvou vedle sebe umístěných střídavě přerušovaných červených světel",
       "titleRu": null,
       "titleUk": null,
@@ -12892,10 +12980,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 14",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 14a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12904,7 +12996,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 14a",
       "titleCs": "Dvě červená střídavě přerušovaná světla signálu přejezdového zabezpečovacího zařízení",
       "titleRu": null,
       "titleUk": null,
@@ -12920,10 +13012,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 14",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 14b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12932,7 +13028,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 14b",
       "titleCs": "Přerušované bílé světlo signálu přejezdového zabezpečovacího zařízení",
       "titleRu": null,
       "titleUk": null,
@@ -12948,10 +13044,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12960,7 +13060,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15a",
       "titleCs": "Stůj",
       "titleRu": null,
       "titleUk": null,
@@ -12976,10 +13076,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -12988,7 +13092,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15b",
       "titleCs": "Jízda přímo",
       "titleRu": null,
       "titleUk": null,
@@ -13004,10 +13108,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13016,7 +13124,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15c",
       "titleCs": "Jízda vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -13032,10 +13140,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15d"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13044,7 +13156,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15d",
       "titleCs": "Jízda vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -13060,10 +13172,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15e"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13072,7 +13188,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15e",
       "titleCs": "Jízda přímo a vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -13088,10 +13204,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15f"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13100,7 +13220,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15f",
       "titleCs": "Jízda přímo a vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -13116,10 +13236,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 15",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 15g"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13128,7 +13252,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15g",
       "titleCs": "Jízda vpravo a vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -13136,7 +13260,7 @@
     },
     {
       "category": "light_signal",
-      "code": "S 2",
+      "code": "S 1a",
       "commonMistake": null,
       "confusedWith": [],
       "driverActions": [],
@@ -13144,10 +13268,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 1",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 1a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13156,15 +13284,15 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Tříbarevná soustava se směrovými signály",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1a",
+      "titleCs": "Signál s červeným světlem „Stůj!“",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
     },
     {
       "category": "light_signal",
-      "code": "S 3",
+      "code": "S 1b",
       "commonMistake": null,
       "confusedWith": [],
       "driverActions": [],
@@ -13172,10 +13300,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 1",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 1b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13184,8 +13316,232 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Tříbarevná soustava s kombinovanými směrovými signály",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1b",
+      "titleCs": "Signál se žlutým světlem „Pozor!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 1c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 1",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 1c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1c",
+      "titleCs": "Signál se zeleným světlem „Volno“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 2a",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 2a"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2a",
+      "titleCs": "Signál se směrovou šipkou s červeným světlem „Stůj!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 2b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 2b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2b",
+      "titleCs": "Signál se směrovou šipkou se žlutým světlem „Pozor!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 2c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 2",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 2c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2c",
+      "titleCs": "Signál se směrovou šipkou se zeleným světlem „Volno“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 3a",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 3",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 3a"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3a",
+      "titleCs": "Signál s kombinovanou směrovou šipkou s červeným světlem „Stůj!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 3b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 3",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 3b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3b",
+      "titleCs": "Signál s kombinovanou směrovou šipkou se žlutým světlem „Pozor!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 3c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 3",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 3c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3c",
+      "titleCs": "Signál s kombinovanou směrovou šipkou se zeleným světlem „Volno“",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -13200,10 +13556,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 4",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 4a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13212,7 +13572,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 4a",
       "titleCs": "Signál žlutého světla ve tvaru chodce",
       "titleRu": null,
       "titleUk": null,
@@ -13228,10 +13588,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 4",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 4b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13240,7 +13604,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 4b",
       "titleCs": "Signál žlutého světla ve tvaru cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -13256,10 +13620,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 4",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 4c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13268,7 +13636,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 4c",
       "titleCs": "Signál žlutého světla ve tvaru chodce a cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -13284,10 +13652,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 5",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 5"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13296,7 +13668,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 5",
       "titleCs": "Doplňková zelená šipka",
       "titleRu": null,
       "titleUk": null,
@@ -13312,10 +13684,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 6",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 6"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13324,7 +13700,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 6",
       "titleCs": "Signál pro opuštění křižovatky",
       "titleRu": null,
       "titleUk": null,
@@ -13340,10 +13716,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 7",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 7"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13352,7 +13732,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 7",
       "titleCs": "Přerušované žluté světlo",
       "titleRu": null,
       "titleUk": null,
@@ -13368,10 +13748,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 8a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13380,7 +13764,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8a",
       "titleCs": "Zakázaný vjezd vozidel do jízdního pruhu",
       "titleRu": null,
       "titleUk": null,
@@ -13396,10 +13780,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 8b"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13408,7 +13796,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8b",
       "titleCs": "Volný vjezd vozidel do jízdního pruhu",
       "titleRu": null,
       "titleUk": null,
@@ -13424,10 +13812,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 8c"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13436,7 +13828,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8c",
       "titleCs": "Světelná šipka vlevo",
       "titleRu": null,
       "titleUk": null,
@@ -13452,10 +13844,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 8d"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13464,7 +13860,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8d",
       "titleCs": "Světelná šipka vpravo",
       "titleRu": null,
       "titleUk": null,
@@ -13480,10 +13876,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 8",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 8e"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13492,7 +13892,7 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8e",
       "titleCs": "Světelný kříž",
       "titleRu": null,
       "titleUk": null,
@@ -13500,7 +13900,7 @@
     },
     {
       "category": "light_signal",
-      "code": "S 9",
+      "code": "S 9a",
       "commonMistake": null,
       "confusedWith": [],
       "driverActions": [],
@@ -13508,10 +13908,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "S 9",
       "graphic": {
         "sourceId": "decree-294-2015",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "S 9a"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
@@ -13520,8 +13924,40 @@
         "decree-294-2015"
       ],
       "sourceIndexPage": null,
-      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
-      "titleCs": "Dvoubarevná soustava se signály pro chodce",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 9a",
+      "titleCs": "Signál pro chodce se znamením „Stůj!“",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "light_signal",
+      "code": "S 9b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "S 9",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "S 9b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 9b",
+      "titleCs": "Signál pro chodce se znamením „Volno“",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
