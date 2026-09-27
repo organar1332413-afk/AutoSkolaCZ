@@ -1,5 +1,23 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 traffic-information sign update
+
+Annex 5(2) now reconciles **47 separate IP legal codes**. The 2019 VL
+index grouped `IP 4a/b`, `IP 11b–g` and `IP 23a/b`, while `IP 4c` was added
+by the 2025 amendment and `IP 1` was absent from the indexed VL rows.
+Distinct legal codes and their official Czech titles are now represented;
+all 47 have short, provision-tagged CS/RU/UK teaching cards. The `IP 4a`
+card was corrected to avoid treating the separately codified `IP 4c`
+contra-flow cycle permission as an intrinsic meaning of `IP 4a`.
+
+Current checkpoint: **195/359** cards in all three languages, **164**
+unreviewed indexed rows, **0/359** verified local graphics, and one
+explicit-code verified question relationship. `indexedFamilies=356` is
+not the final legal or graphic variant count; Annex 5(3–4), Annexes 6,
+8 and 9 still require a code-by-code reconciliation. The category counts
+in `content/learning/signs/audit.json` are current. Earlier sections of
+this document retain historical checkpoint figures.
+
 ## 27 September 2026 zonal-sign update
 
 All **22** Annex 5(1) zone codes now have CS/RU/UK cards. The official

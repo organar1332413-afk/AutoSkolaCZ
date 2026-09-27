@@ -1,5 +1,5 @@
 {
-  "inventoryCount": 350,
+  "inventoryCount": 359,
   "schemaVersion": 1,
   "scope": "ministry-graphic-index-inventory",
   "signs": [
@@ -5240,6 +5240,38 @@
     },
     {
       "category": "information_traffic",
+      "code": "IP 1",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 1",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 1"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 1",
+      "titleCs": "Okruh",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
       "code": "IP 10a",
       "commonMistake": null,
       "confusedWith": [],
@@ -5248,10 +5280,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 10a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 10a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Slepá pozemní komunikace"
@@ -5259,9 +5295,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 10a",
       "titleCs": "Slepá pozemní komunikace",
       "titleRu": null,
       "titleUk": null,
@@ -5277,10 +5315,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 10b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 10b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Návěst před slepou pozemní komunikací"
@@ -5288,9 +5330,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 10b",
       "titleCs": "Návěst před slepou pozemní komunikací",
       "titleRu": null,
       "titleUk": null,
@@ -5306,10 +5350,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 11a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 11a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 7 Parkoviště"
@@ -5317,9 +5365,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11a",
       "titleCs": "Parkoviště",
       "titleRu": null,
       "titleUk": null,
@@ -5335,10 +5385,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 11b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 11b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "až g     Parkoviště-varianty"
@@ -5346,10 +5400,172 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
-      "titleCs": "Parkoviště-varianty",
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11b",
+      "titleCs": "Parkoviště kolmé nebo šikmé stání",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 11c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 11c",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 11c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11c",
+      "titleCs": "Parkoviště podélné stání",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 11d",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 11d",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 11d"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11d",
+      "titleCs": "Parkoviště stání na chodníku kolmé nebo šikmé",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 11e",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 11e",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 11e"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11e",
+      "titleCs": "Parkoviště stání na chodníku podélné",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 11f",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 11f",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 11f"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11f",
+      "titleCs": "Parkoviště částečné stání na chodníku kolmé nebo šikmé",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 11g",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 11g",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 11g"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11g",
+      "titleCs": "Parkoviště částečné stání na chodníku podélné",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -5364,10 +5580,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 12",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 12"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 4   Vyhrazené parkoviště"
@@ -5375,9 +5595,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 12",
       "titleCs": "Vyhrazené parkoviště",
       "titleRu": null,
       "titleUk": null,
@@ -5393,10 +5615,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 13a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 13a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Kryté parkoviště"
@@ -5404,9 +5630,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13a",
       "titleCs": "Kryté parkoviště",
       "titleRu": null,
       "titleUk": null,
@@ -5422,10 +5650,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 13b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 13b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Parkoviště s parkovacím kotoučem"
@@ -5433,9 +5665,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13b",
       "titleCs": "Parkoviště s parkovacím kotoučem",
       "titleRu": null,
       "titleUk": null,
@@ -5451,10 +5685,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 13c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 13c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Parkoviště s parkovacím automatem"
@@ -5462,9 +5700,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13c",
       "titleCs": "Parkoviště s parkovacím automatem",
       "titleRu": null,
       "titleUk": null,
@@ -5480,10 +5720,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 13d",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 13d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Parkoviště P+R"
@@ -5491,9 +5735,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13d",
       "titleCs": "Parkoviště P+R",
       "titleRu": null,
       "titleUk": null,
@@ -5509,10 +5755,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 13e",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 13e"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Parkoviště K+R"
@@ -5520,9 +5770,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13e",
       "titleCs": "Parkoviště K+R",
       "titleRu": null,
       "titleUk": null,
@@ -5538,18 +5790,24 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 13f",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 13f"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 5,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13f",
       "titleCs": "Parkoviště P+D",
       "titleRu": null,
       "titleUk": null,
@@ -5565,10 +5823,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 16",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 16"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 10      Uspořádání jízdních pruhů"
@@ -5576,9 +5838,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 16",
       "titleCs": "Uspořádání jízdních pruhů",
       "titleRu": null,
       "titleUk": null,
@@ -5594,10 +5858,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 17",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 17"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 18      Uspořádání jízdních pruhů"
@@ -5605,9 +5873,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 17",
       "titleCs": "Uspořádání jízdních pruhů",
       "titleRu": null,
       "titleUk": null,
@@ -5623,10 +5893,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 18a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 18a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 6      Zvýšení počtu jízdních pruhů"
@@ -5634,9 +5908,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 18a",
       "titleCs": "Zvýšení počtu jízdních pruhů",
       "titleRu": null,
       "titleUk": null,
@@ -5652,10 +5928,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 18b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 18b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 12     Snížení počtu jízdních pruhů"
@@ -5663,9 +5943,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 18b",
       "titleCs": "Snížení počtu jízdních pruhů",
       "titleRu": null,
       "titleUk": null,
@@ -5681,10 +5963,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 18c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 18c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 4      Jízdní pruh pro pomalá vozidla"
@@ -5692,9 +5978,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 18c",
       "titleCs": "Jízdní pruh pro pomalá vozidla",
       "titleRu": null,
       "titleUk": null,
@@ -5710,10 +5998,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 19",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 19"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 5       Řadící pruhy"
@@ -5721,9 +6013,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 19",
       "titleCs": "Řadící pruhy",
       "titleRu": null,
       "titleUk": null,
@@ -5739,10 +6033,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 2",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zpomalovací práh"
@@ -5750,9 +6048,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 2",
       "titleCs": "Zpomalovací práh",
       "titleRu": null,
       "titleUk": null,
@@ -5768,10 +6068,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 20a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 20a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Vyhrazený jízdní pruh"
@@ -5779,9 +6083,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 20a",
       "titleCs": "Vyhrazený jízdní pruh",
       "titleRu": null,
       "titleUk": null,
@@ -5797,10 +6103,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 20b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 20b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Konec vyhrazeného jízdního pruhu"
@@ -5808,9 +6118,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 20b",
       "titleCs": "Konec vyhrazeného jízdního pruhu",
       "titleRu": null,
       "titleUk": null,
@@ -5826,10 +6138,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 21",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 21"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 6       Omezení v jízdním pruhu"
@@ -5837,9 +6153,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 21",
       "titleCs": "Omezení v jízdním pruhu",
       "titleRu": null,
       "titleUk": null,
@@ -5855,10 +6173,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 22",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 22"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 6       Změna organizace doprav",
@@ -5867,10 +6189,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Změna organizace doprav",
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 22",
+      "titleCs": "Změna organizace dopravy",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": [
@@ -5887,10 +6211,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 23a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 23a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "a 23b         Objíždění tramvaje"
@@ -5898,10 +6226,44 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 23a",
       "titleCs": "Objíždění tramvaje",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 23b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 23b",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 23b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 23b",
+      "titleCs": "Objíždění tramvaje (jízda podél tramvaje vlevo)",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -5916,10 +6278,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 23c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 23c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Sjíždění vozidel hromadné dopravy osob z tramvajového pásu"
@@ -5927,10 +6293,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Sjíždění vozidel hromadné dopravy osob z tramvajového pásu",
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 23c",
+      "titleCs": "Sjíždění vozidel veřejné hromadné dopravy osob z tramvajového pásu",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -5945,10 +6313,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 24",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 24"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2        Únikový pruh"
@@ -5956,9 +6328,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 24",
       "titleCs": "Únikový pruh",
       "titleRu": null,
       "titleUk": null,
@@ -5974,10 +6348,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 28a",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 28a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Zpoplatnění provozu-silniční list"
@@ -5985,11 +6363,13 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Zpoplatnění provozu-silniční list",
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 28a",
+      "titleCs": "Zpoplatnění provozu",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -6004,10 +6384,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 28b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 28b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Nejvyšší dovolené rychlosti - silniční list a dálniční list"
@@ -6015,10 +6399,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
-      "titleCs": "Nejvyšší dovolené rychlosti - silniční list a dálniční list",
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 28b",
+      "titleCs": "Nejvyšší dovolené rychlosti",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -6033,10 +6419,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 29",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 29"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Střídavé řazení"
@@ -6044,9 +6434,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 29",
       "titleCs": "Střídavé řazení",
       "titleRu": null,
       "titleUk": null,
@@ -6062,10 +6454,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 3",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 3"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2    Podchod nebo nadchod"
@@ -6073,9 +6469,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 3",
       "titleCs": "Podchod nebo nadchod",
       "titleRu": null,
       "titleUk": null,
@@ -6091,10 +6489,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 30",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 30"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Státní hranice"
@@ -6102,9 +6504,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 30",
       "titleCs": "Státní hranice",
       "titleRu": null,
       "titleUk": null,
@@ -6120,10 +6524,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 31a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 31a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Měření rychlosti"
@@ -6131,9 +6539,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 31a",
       "titleCs": "Měření rychlosti",
       "titleRu": null,
       "titleUk": null,
@@ -6149,10 +6559,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 31b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 31b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2       Konec měření rychlosti"
@@ -6160,9 +6574,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 31b",
       "titleCs": "Konec měření rychlosti",
       "titleRu": null,
       "titleUk": null,
@@ -6178,10 +6594,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 32",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 32"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Bezpečný odstup"
@@ -6189,10 +6609,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 15,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 32",
       "titleCs": "Bezpečný odstup",
       "titleRu": null,
       "titleUk": null,
@@ -6208,10 +6630,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 4a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 4a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "a 4b      Jednosměrný provoz"
@@ -6219,10 +6645,77 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 4a",
       "titleCs": "Jednosměrný provoz",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 4b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 4b",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 4b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 4b",
+      "titleCs": "Jednosměrný provoz",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_traffic",
+      "code": "IP 4c",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IP 4c",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IP 4c"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015",
+        "decree-205-2025"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 4c",
+      "titleCs": "Jednosměrný provoz s povoleným provozem cyklistů v protisměru",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -6237,10 +6730,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 5",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 5"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 11   Doporučená rychlost"
@@ -6248,9 +6745,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 5",
       "titleCs": "Doporučená rychlost",
       "titleRu": null,
       "titleUk": null,
@@ -6266,10 +6765,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 6",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 6"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přechod pro chodce"
@@ -6277,9 +6780,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 6",
       "titleCs": "Přechod pro chodce",
       "titleRu": null,
       "titleUk": null,
@@ -6295,10 +6800,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 7",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 7"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Přejezd pro cyklisty"
@@ -6306,9 +6815,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 7",
       "titleCs": "Přejezd pro cyklisty",
       "titleRu": null,
       "titleUk": null,
@@ -6324,10 +6835,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IP 9",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IP 9"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 a 2    Nouzové stání"
@@ -6335,10 +6850,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 14,
+      "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 9",
       "titleCs": "Nouzové stání",
       "titleRu": null,
       "titleUk": null,
@@ -11032,5 +11549,5 @@
       "variantTitles": []
     }
   ],
-  "verifiedAt": "2026-09-26"
+  "verifiedAt": "2026-09-27"
 }

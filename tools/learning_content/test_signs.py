@@ -18,9 +18,9 @@ class SignInventoryTest(unittest.TestCase):
     def test_committed_inventory_and_audit(self):
         audit = full_audit(self.data, self.sources)
         self.assertEqual(canonical_bytes(audit), (CONTENT / "audit.json").read_bytes())
-        self.assertEqual(350, audit["total"])
-        self.assertEqual(350, audit["csTitles"])
-        self.assertEqual(347, audit["indexedFamilies"])
+        self.assertEqual(359, audit["total"])
+        self.assertEqual(359, audit["csTitles"])
+        self.assertEqual(356, audit["indexedFamilies"])
         self.assertEqual(44, audit["warningLegalCodesVerified"])
         self.assertEqual(49, audit["warningGraphicExecutionsIndexed"])
         self.assertEqual(8, audit["priorityLegalCodesVerified"])
@@ -29,6 +29,8 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(51, audit["mandatoryGraphicExecutionsIndexed"])
         self.assertEqual(22, audit["zoneLegalCodesVerified"])
         self.assertEqual(50, audit["zoneGraphicExecutionsIndexed"])
+        self.assertEqual(47, audit["trafficLegalCodesVerified"])
+        self.assertEqual(47, audit["trafficGraphicExecutionsIndexed"])
         self.assertEqual(2, audit["graphicVersionReviewRequired"])
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
@@ -79,9 +81,9 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
-        self.assertEqual(150, len(self.cards["cards"]))
+        self.assertEqual(195, len(self.cards["cards"]))
         first_five = {s["code"] for s in self.data["signs"]
-                      if s["category"] in {"warning", "priority", "prohibition", "mandatory", "information_zone"}}
+                      if s["category"] in {"warning", "priority", "prohibition", "mandatory", "information_zone", "information_traffic"}}
         reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in first_five}
         self.assertEqual(first_five, reviewed)
 
@@ -102,6 +104,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(13, len(signs["B 20a"]["graphicVariantCodes"]))
         self.assertEqual("Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
                          signs["B 15"]["titleCs"])
+        self.assertEqual("Jednosměrný provoz s povoleným provozem cyklistů v protisměru",
+                         signs["IP 4c"]["titleCs"])
+        self.assertEqual({f"IP 11{suffix}" for suffix in "abcdefg"},
+                         set(signs) & {f"IP 11{suffix}" for suffix in "abcdefg"})
+        self.assertTrue(all(signs[code]["sourceProvision"].endswith(code)
+                            for code in signs if code.startswith("IP ")))
 
     def test_card_cannot_replace_original_title_or_omit_translation(self):
         cards = copy.deepcopy(self.cards)

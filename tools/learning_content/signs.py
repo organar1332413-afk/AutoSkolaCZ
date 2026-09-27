@@ -292,6 +292,54 @@ def reconcile_zone_annex(records: list[dict]) -> list[dict]:
     return records
 
 
+def reconcile_traffic_annex(records: list[dict]) -> list[dict]:
+    """Annex 5(2) defines separate legal codes hidden by the old VL index."""
+    by_code = {sign["code"]: sign for sign in records}
+    additions = {
+        "IP 1": "Okruh",
+        "IP 4b": "Jednosměrný provoz",
+        "IP 4c": "Jednosměrný provoz s povoleným provozem cyklistů v protisměru",
+        "IP 11c": "Parkoviště podélné stání",
+        "IP 11d": "Parkoviště stání na chodníku kolmé nebo šikmé",
+        "IP 11e": "Parkoviště stání na chodníku podélné",
+        "IP 11f": "Parkoviště částečné stání na chodníku kolmé nebo šikmé",
+        "IP 11g": "Parkoviště částečné stání na chodníku podélné",
+        "IP 23b": "Objíždění tramvaje (jízda podél tramvaje vlevo)",
+    }
+    for code, title in additions.items():
+        if code in by_code:
+            raise ValueError(f"Unexpected existing legal sign: {code}")
+        template = by_code["IP 11b"] if code.startswith("IP 11") else by_code.get("IP 4a")
+        sign = dict(template)
+        sign.update(code=code, titleCs=title, printedScopes=[], variantTitles=[],
+                    sourceIndexPage=None, reviewStatus="LEGAL_INDEX_ONLY",
+                    sourceIds=["decree-294-2015"], familyCode=code,
+                    graphicVariantCodes=[code],
+                    graphic={"sourceId": "decree-294-2015", "status": "LICENSE_REVIEW_REQUIRED"})
+        by_code[code] = sign
+    corrected = {
+        "IP 11b": "Parkoviště kolmé nebo šikmé stání",
+        "IP 22": "Změna organizace dopravy",
+        "IP 23c": "Sjíždění vozidel veřejné hromadné dopravy osob z tramvajového pásu",
+        "IP 28a": "Zpoplatnění provozu",
+        "IP 28b": "Nejvyšší dovolené rychlosti",
+    }
+    for code, title in corrected.items():
+        by_code[code]["titleCs"] = title
+    expected = set(additions) | {sign["code"] for sign in records if sign["category"] == "information_traffic"}
+    traffic = {code: sign for code, sign in by_code.items() if sign["category"] == "information_traffic"}
+    if set(traffic) != expected or len(traffic) != 47:
+        raise ValueError("Annex 5(2) legal-code reconciliation failed")
+    for code, sign in traffic.items():
+        sign["familyCode"] = code
+        sign["graphicVariantCodes"] = [code]
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., {code}"
+        if code == "IP 4c":
+            sign["sourceIds"].append("decree-205-2025")
+    return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -429,6 +477,10 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["zoneLegalCodesVerified"] = sum(s["category"] == "information_zone" for s in data["signs"])
     audit["zoneGraphicExecutionsIndexed"] = sum(
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_zone")
+    audit["trafficLegalCodesVerified"] = sum(
+        s["category"] == "information_traffic" for s in data["signs"])
+    audit["trafficGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_traffic")
     audit["graphicVersionReviewRequired"] = sum(
         s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
@@ -476,11 +528,11 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = reconcile_zone_annex(reconcile_mandatory_annex(reconcile_prohibition_annex(
+    records = reconcile_traffic_annex(reconcile_zone_annex(reconcile_mandatory_annex(reconcile_prohibition_annex(
         reconcile_priority_annex(reconcile_warning_annex(
-            add_legal_appendices(apply_2025_revision(parse_index(text))))))))
+            add_legal_appendices(apply_2025_revision(parse_index(text)))))))))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
-            "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
+            "verifiedAt": "2026-09-27", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)
     CONTENT.mkdir(parents=True, exist_ok=True)
     (CONTENT / "catalog.json").write_bytes(canonical_bytes(data))
