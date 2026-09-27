@@ -1,5 +1,16 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 27 September 2026 other information sign update
+
+All **28 Annex 5(4) IJ codes** now have short provision-tagged CS/RU/UK
+cards. `IJ 4b` was a separate legal stop-marker code inside the printed
+VL grouping, and two rest-area names were corrected against the current
+annex. The catalog has **296/394** teaching cards, 98 indexed entries
+without a reviewed card, zero bundled graphics, and one verified eTesty
+relationship. The `indexedFamilies=338` figure remains provisional while
+Annexes 6, 8 and 9 and their graphic executions are reconciled. Historical
+snapshots below retain their original counts.
+
 ## 27 September 2026 direction sign update
 
 Annex 5(3) contains **73 legal IS codes**. The printed VL index had 39

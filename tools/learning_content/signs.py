@@ -412,6 +412,49 @@ def reconcile_direction_annex(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
 
 
+def reconcile_other_info_annex(records: list[dict]) -> list[dict]:
+    """Check every Annex 5(4) IJ code and its current legal title."""
+    titles = {
+        "1": "Policie", "2": "Nemocnice", "3": "První pomoc",
+        "4a": "Označník zastávky", "4b": "Označník zastávky",
+        "4c": "Zastávka autobusu", "4d": "Zastávka tramvaje",
+        "4e": "Zastávka trolejbusu", "5": "Informace", "6": "Telefon",
+        "7": "Čerpací stanice", "8": "Opravna", "9": "Stanice technické kontroly",
+        "10": "Hotel nebo motel", "11a": "Restaurace", "11b": "Občerstvení",
+        "12": "WC", "13": "Místo pro odpočinek",
+        "14a": "Tábořiště pro stany", "14b": "Tábořiště pro obytné přívěsy",
+        "14c": "Tábořiště pro stany a pro obytné přívěsy",
+        "15": "Servisní místo pro sanitaci hygienických zařízení obytných vozidel",
+        "16": "Silniční kaple", "17a": "Truckpark",
+        "17b": "Návěst před truckparkem",
+        "18a": "Návěst před odpočívkou",
+        "18b": "Návěst před odbočením na odpočívku",
+        "18c": "Návěst pro odbočení na odpočívku",
+    }
+    by_code = {sign["code"]: sign for sign in records}
+    if "IJ 4b" in by_code or len(titles) != 28:
+        raise ValueError("Annex 5(4) grouped-stop inventory changed")
+    sign = dict(by_code["IJ 4a"])
+    sign.update(code="IJ 4b", titleCs=titles["4b"], printedScopes=[],
+                variantTitles=[], sourceIndexPage=None, reviewStatus="LEGAL_INDEX_ONLY",
+                sourceIds=["decree-294-2015"],
+                graphic={"sourceId": "decree-294-2015", "status": "LICENSE_REVIEW_REQUIRED"})
+    by_code["IJ 4b"] = sign
+    actual = {code for code, sign in by_code.items() if sign["category"] == "information_other"}
+    expected = {f"IJ {suffix}" for suffix in titles}
+    if actual != expected:
+        raise ValueError(f"Annex 5(4) mismatch: {actual ^ expected}")
+    for suffix, title in titles.items():
+        code = f"IJ {suffix}"
+        sign = by_code[code]
+        sign["titleCs"] = title
+        sign["familyCode"] = "IJ 4" if suffix.startswith("4") else code
+        sign["graphicVariantCodes"] = [code]
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., {code}"
+    return sorted(by_code.values(), key=lambda sign: (PREFIXES_INDEX(sign["code"]), sign["code"]))
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -557,6 +600,8 @@ def full_audit(data: dict, sources: dict) -> dict:
         s["category"] == "information_direction" for s in data["signs"])
     audit["directionGraphicExecutionsIndexed"] = sum(
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "information_direction")
+    audit["otherInfoLegalCodesVerified"] = sum(
+        s["category"] == "information_other" for s in data["signs"])
     audit["graphicVersionReviewRequired"] = sum(
         s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED" for s in data["signs"])
     audit["canonicalFamilies"] = None
@@ -608,7 +653,8 @@ def main() -> None:
     for reconcile in (add_legal_appendices, reconcile_warning_annex,
                       reconcile_priority_annex, reconcile_prohibition_annex,
                       reconcile_mandatory_annex, reconcile_zone_annex,
-                      reconcile_traffic_annex, reconcile_direction_annex):
+                      reconcile_traffic_annex, reconcile_direction_annex,
+                      reconcile_other_info_annex):
         records = reconcile(records)
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-27", "inventoryCount": len(records), "signs": records}

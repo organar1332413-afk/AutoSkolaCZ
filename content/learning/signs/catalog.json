@@ -1,5 +1,5 @@
 {
-  "inventoryCount": 393,
+  "inventoryCount": 394,
   "schemaVersion": 1,
   "scope": "ministry-graphic-index-inventory",
   "signs": [
@@ -9324,10 +9324,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 1",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 1"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Policie"
@@ -9335,9 +9339,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 1",
       "titleCs": "Policie",
       "titleRu": null,
       "titleUk": null,
@@ -9353,10 +9359,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 10",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 10"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Hotel nebo motel"
@@ -9364,9 +9374,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 10",
       "titleCs": "Hotel nebo motel",
       "titleRu": null,
       "titleUk": null,
@@ -9382,10 +9394,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 11a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 11a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Restaurace"
@@ -9393,9 +9409,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 11a",
       "titleCs": "Restaurace",
       "titleRu": null,
       "titleUk": null,
@@ -9411,10 +9429,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 11b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 11b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Občerstvení"
@@ -9422,9 +9444,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 11b",
       "titleCs": "Občerstvení",
       "titleRu": null,
       "titleUk": null,
@@ -9440,10 +9464,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 12",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 12"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "WC"
@@ -9451,9 +9479,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 12",
       "titleCs": "WC",
       "titleRu": null,
       "titleUk": null,
@@ -9469,10 +9499,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 13",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 13"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Místo pro odpočinek"
@@ -9480,9 +9514,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 13",
       "titleCs": "Místo pro odpočinek",
       "titleRu": null,
       "titleUk": null,
@@ -9498,10 +9534,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 14a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 14a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Tábořiště pro stany"
@@ -9509,9 +9549,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 14a",
       "titleCs": "Tábořiště pro stany",
       "titleRu": null,
       "titleUk": null,
@@ -9527,10 +9569,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 14b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 14b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Tábořiště pro obytné přívěsy"
@@ -9538,9 +9584,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 14b",
       "titleCs": "Tábořiště pro obytné přívěsy",
       "titleRu": null,
       "titleUk": null,
@@ -9556,10 +9604,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 14c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 14c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Tábořiště pro stany a obytné přívěsy"
@@ -9567,10 +9619,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Tábořiště pro stany a obytné přívěsy",
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 14c",
+      "titleCs": "Tábořiště pro stany a pro obytné přívěsy",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -9585,18 +9639,24 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 15",
       "graphic": {
         "sourceId": "md-vl-6-1-2025-change-1",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 15"
+      ],
       "meaningCs": null,
       "printedScopes": [],
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2025-change-1"
       ],
       "sourceIndexPage": 5,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 15",
       "titleCs": "Servisní místo pro sanitaci hygienických zařízení obytných vozidel",
       "titleRu": null,
       "titleUk": null,
@@ -9612,10 +9672,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 16",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 16"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Silniční kaple"
@@ -9623,9 +9687,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 16",
       "titleCs": "Silniční kaple",
       "titleRu": null,
       "titleUk": null,
@@ -9641,10 +9707,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 17a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 17a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Truckpark"
@@ -9652,9 +9722,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 17a",
       "titleCs": "Truckpark",
       "titleRu": null,
       "titleUk": null,
@@ -9670,10 +9742,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 17b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 17b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Návěst před truckparkem"
@@ -9681,9 +9757,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 17b",
       "titleCs": "Návěst před truckparkem",
       "titleRu": null,
       "titleUk": null,
@@ -9699,10 +9777,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 18a",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 18a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 4 Návěst před odpočívkou"
@@ -9710,9 +9792,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 18a",
       "titleCs": "Návěst před odpočívkou",
       "titleRu": null,
       "titleUk": null,
@@ -9728,10 +9812,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 18b",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 18b"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 4 Návěst před odbočkou na odpočívku"
@@ -9739,10 +9827,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Návěst před odbočkou na odpočívku",
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 18b",
+      "titleCs": "Návěst před odbočením na odpočívku",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -9757,10 +9847,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 18c",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 18c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "– 1 až 4 Návěst pro odbočku na odpočívku"
@@ -9768,10 +9862,12 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
-      "titleCs": "Návěst pro odbočku na odpočívku",
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 18c",
+      "titleCs": "Návěst pro odbočení na odpočívku",
       "titleRu": null,
       "titleUk": null,
       "variantTitles": []
@@ -9786,10 +9882,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 2",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 2"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Nemocnice"
@@ -9797,9 +9897,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 2",
       "titleCs": "Nemocnice",
       "titleRu": null,
       "titleUk": null,
@@ -9815,10 +9917,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 3",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 3"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "První pomoc"
@@ -9826,9 +9932,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 3",
       "titleCs": "První pomoc",
       "titleRu": null,
       "titleUk": null,
@@ -9844,10 +9952,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 4",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 4a"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "a 4b      Označník zastávky"
@@ -9855,9 +9967,43 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4a",
+      "titleCs": "Označník zastávky",
+      "titleRu": null,
+      "titleUk": null,
+      "variantTitles": []
+    },
+    {
+      "category": "information_other",
+      "code": "IJ 4b",
+      "commonMistake": null,
+      "confusedWith": [],
+      "driverActions": [],
+      "exceptions": [],
+      "explanationCs": null,
+      "explanationRu": null,
+      "explanationUk": null,
+      "familyCode": "IJ 4",
+      "graphic": {
+        "sourceId": "decree-294-2015",
+        "status": "LICENSE_REVIEW_REQUIRED"
+      },
+      "graphicVariantCodes": [
+        "IJ 4b"
+      ],
+      "meaningCs": null,
+      "printedScopes": [],
+      "questionOfficialIds": [],
+      "reviewStatus": "LEGAL_INDEX_ONLY",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceIndexPage": null,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4b",
       "titleCs": "Označník zastávky",
       "titleRu": null,
       "titleUk": null,
@@ -9873,10 +10019,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 4",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 4c"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zastávka autobusu"
@@ -9884,9 +10034,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4c",
       "titleCs": "Zastávka autobusu",
       "titleRu": null,
       "titleUk": null,
@@ -9902,10 +10054,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 4",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 4d"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zastávka tramvaje"
@@ -9913,9 +10069,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4d",
       "titleCs": "Zastávka tramvaje",
       "titleRu": null,
       "titleUk": null,
@@ -9931,10 +10089,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 4",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 4e"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Zastávka trolejbusu"
@@ -9942,9 +10104,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4e",
       "titleCs": "Zastávka trolejbusu",
       "titleRu": null,
       "titleUk": null,
@@ -9960,10 +10124,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 5",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 5"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Informace"
@@ -9971,9 +10139,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 5",
       "titleCs": "Informace",
       "titleRu": null,
       "titleUk": null,
@@ -9989,10 +10159,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 6",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 6"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Telefon"
@@ -10000,9 +10174,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 6",
       "titleCs": "Telefon",
       "titleRu": null,
       "titleUk": null,
@@ -10018,10 +10194,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 7",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 7"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Čerpací stanice"
@@ -10029,9 +10209,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 7",
       "titleCs": "Čerpací stanice",
       "titleRu": null,
       "titleUk": null,
@@ -10047,10 +10229,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 8",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 8"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Opravna"
@@ -10058,9 +10244,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 8",
       "titleCs": "Opravna",
       "titleRu": null,
       "titleUk": null,
@@ -10076,10 +10264,14 @@
       "explanationCs": null,
       "explanationRu": null,
       "explanationUk": null,
+      "familyCode": "IJ 9",
       "graphic": {
         "sourceId": "md-vl-6-1-2019",
         "status": "LICENSE_REVIEW_REQUIRED"
       },
+      "graphicVariantCodes": [
+        "IJ 9"
+      ],
       "meaningCs": null,
       "printedScopes": [
         "Stanice technické kontroly"
@@ -10087,9 +10279,11 @@
       "questionOfficialIds": [],
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
+        "decree-294-2015",
         "md-vl-6-1-2019"
       ],
       "sourceIndexPage": 16,
+      "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 9",
       "titleCs": "Stanice technické kontroly",
       "titleRu": null,
       "titleUk": null,
