@@ -3,7 +3,11 @@
 This is a source-by-source release decision for the **graphics**, not a conclusion
 that a publicly downloadable PDF grants permission to republish every image
 inside it. The Czech legal codes and official titles are separate from the
-binary artwork. The app currently bundles **no sign graphics**.
+binary artwork. The app currently bundles **no sign graphics**. The
+reconciled teaching inventory now has 408 atomic legal entries; the audit
+lists every missing graphic code, including two low-emission-zone codes
+whose 2019 drawing is additionally version-stale. A completed text card
+does not change its graphic release status.
 
 | Source | Publisher / owner | Evidence and legal status | Reuse decision |
 | --- | --- | --- | --- |

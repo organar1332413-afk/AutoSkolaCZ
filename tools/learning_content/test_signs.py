@@ -1,8 +1,10 @@
 import copy
+import hashlib
 import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from tools.learning_content.signs import CONTENT, canonical_bytes, parse_index, validate, validate_cards, validate_guide, full_audit
 
@@ -43,6 +45,13 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
         self.assertEqual(0, audit["bundledImages"])
+        self.assertEqual(408, audit["ruTitles"])
+        self.assertEqual(408, audit["ukTitles"])
+        self.assertEqual(408, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(406, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
+        self.assertFalse(audit["productionReady"])
+        self.assertEqual([], audit["unreviewedCodes"])
 
     def test_duplicate_code_rejected(self):
         data = copy.deepcopy(self.data)
@@ -74,6 +83,44 @@ class SignInventoryTest(unittest.TestCase):
         data["signs"][0]["graphic"]["path"] = "../escape.png"
         with self.assertRaisesRegex(ValueError, "Unsafe or missing image"):
             validate(data, self.sources)
+
+    def test_local_graphic_hash_mime_orphan_and_explicit_sharing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            graphics = root / "graphics"
+            graphics.mkdir()
+            image = graphics / "A-10.png"
+            image.write_bytes(b"\x89PNG\r\n\x1a\nexample bytes")
+            sign = copy.deepcopy(self.data["signs"][0])
+            sign["graphic"] = {
+                "sourceId": "decree-294-2015", "status": "VERIFIED",
+                "path": "graphics/A-10.png", "mime": "image/png",
+                "sha256": hashlib.sha256(image.read_bytes()).hexdigest(),
+            }
+            data = {"signs": [sign], "inventoryCount": 1}
+            with patch("tools.learning_content.signs.CONTENT", root):
+                self.assertEqual(1, validate(data, self.sources)["bundledImages"])
+                corrupted = copy.deepcopy(data)
+                corrupted["signs"][0]["graphic"]["sha256"] = "0" * 64
+                with self.assertRaisesRegex(ValueError, "Image hash mismatch"):
+                    validate(corrupted, self.sources)
+                corrupted = copy.deepcopy(data)
+                corrupted["signs"][0]["graphic"]["mime"] = "image/webp"
+                with self.assertRaisesRegex(ValueError, "Image MIME mismatch"):
+                    validate(corrupted, self.sources)
+                extra = graphics / "unreviewed.png"
+                extra.write_bytes(image.read_bytes())
+                with self.assertRaisesRegex(ValueError, "Orphan sign graphics"):
+                    validate(data, self.sources)
+                extra.unlink()
+                shared = copy.deepcopy(sign)
+                shared["code"] = "A 11"
+                shared["sourceProvision"] = sign["sourceProvision"].replace("A 10", "A 11")
+                with self.assertRaisesRegex(ValueError, "Unexplained duplicate image hash"):
+                    validate({"signs": [sign, shared], "inventoryCount": 2}, self.sources)
+                sign["graphic"]["shared"] = True
+                shared["graphic"]["shared"] = True
+                self.assertEqual(2, validate({"signs": [sign, shared], "inventoryCount": 2}, self.sources)["total"])
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8

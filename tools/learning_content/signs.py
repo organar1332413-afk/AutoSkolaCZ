@@ -38,6 +38,20 @@ def canonical_bytes(value: object) -> bytes:
     return (json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode("utf-8")
 
 
+def image_mime(path: Path) -> str | None:
+    with path.open("rb") as image:
+        start = image.read(4096)
+    if start.startswith(b"\x89PNG\r\n\x1a\n"):
+        return "image/png"
+    if start.startswith(b"\xff\xd8\xff"):
+        return "image/jpeg"
+    if start[:4] == b"RIFF" and start[8:12] == b"WEBP":
+        return "image/webp"
+    if re.search(rb"<svg(?:\s|>)", start):
+        return "image/svg+xml"
+    return None
+
+
 def parse_index(text: str) -> list[dict]:
     """Parse the printed index (PDF pages 11–17), preserving official names.
 
@@ -572,6 +586,9 @@ def reconcile_signal_annex(records: list[dict]) -> list[dict]:
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
+    used_graphics: set[Path] = set()
+    graphic_hashes: dict[str, tuple[str, Path, bool]] = {}
+    graphics_root = (CONTENT / "graphics").resolve()
     for sign in data["signs"]:
         code = sign["code"]
         if code in codes:
@@ -586,15 +603,41 @@ def validate(data: dict, sources: dict) -> dict:
                 raise ValueError(f"Missing source {source_id} for {code}")
         if sign["graphic"]["status"] not in {"LICENSE_REVIEW_REQUIRED", "VERSION_REVIEW_REQUIRED", "VERIFIED"}:
             raise ValueError(f"Invalid image status: {code}")
-        if sign["graphic"].get("path"):
-            path = Path(sign["graphic"]["path"])
-            if path.is_absolute() or ".." in path.parts or not (CONTENT / path).is_file():
+        graphic = sign["graphic"]
+        if graphic.get("path"):
+            path = Path(graphic["path"])
+            if (path.is_absolute() or len(path.parts) < 2 or path.parts[0] != "graphics" or
+                any(not re.fullmatch(r"[a-zA-Z0-9._-]+", part) or part in {".", ".."}
+                    for part in path.parts)):
                 raise ValueError(f"Unsafe or missing image: {code}")
+            candidate = CONTENT / path
+            if not candidate.is_file() or graphics_root not in candidate.resolve().parents:
+                raise ValueError(f"Unsafe or missing image: {code}")
+            if graphic["status"] != "VERIFIED":
+                raise ValueError(f"Unverified image cannot be bundled: {code}")
+            expected = graphic.get("sha256", "")
+            if not re.fullmatch(r"[a-f0-9]{64}", expected) or sha256(candidate) != expected:
+                raise ValueError(f"Image hash mismatch: {code}")
+            if graphic.get("mime") != image_mime(candidate):
+                raise ValueError(f"Image MIME mismatch: {code}")
+            other = graphic_hashes.get(expected)
+            if other and (other[1] != path or not other[2] or not graphic.get("shared", False)):
+                raise ValueError(f"Unexplained duplicate image hash: {other[0]} / {code}")
+            graphic_hashes[expected] = (code, path, bool(graphic.get("shared", False)))
+            used_graphics.add(candidate.resolve())
+        elif graphic["status"] == "VERIFIED":
+            raise ValueError(f"Verified image missing local file: {code}")
         if sign["reviewStatus"] in {"INDEX_ONLY", "LEGAL_INDEX_ONLY"} and any(sign.get(key) for key in ("meaningCs", "explanationCs", "titleRu", "titleUk")):
             raise ValueError(f"Unreviewed explanation: {code}")
         if sign["reviewStatus"] == "LEGAL_INDEX_ONLY" and not sign.get("sourceProvision"):
             raise ValueError(f"Missing legal appendix: {code}")
+        if sign.get("sourceProvision", "").split(",")[-1].strip() != code:
+            raise ValueError(f"Sign legal provision is not code-specific: {code}")
         categories[sign["category"]] += 1
+    if graphics_root.exists():
+        orphans = {path.resolve() for path in graphics_root.rglob("*") if path.is_file()} - used_graphics
+        if orphans:
+            raise ValueError(f"Orphan sign graphics: {len(orphans)}")
     if len(data["signs"]) != data["inventoryCount"]:
         raise ValueError("Inventory count mismatch")
     return {"total": len(codes), "categories": dict(sorted(categories.items())),
@@ -728,6 +771,8 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["canonicalVariants"] = None
     audit["atomicLegalEntries"] = audit["total"]
     audit["totalCards"] = len(cards["cards"])
+    audit["ruTitles"] = sum(bool(card["titleRu"]) for card in cards["cards"])
+    audit["ukTitles"] = sum(bool(card["titleUk"]) for card in cards["cards"])
     audit["completeCardsCs"] = sum(all(card.get(k) for k in ("titleCs", "meaningCs", "simpleCs")) for card in cards["cards"])
     audit["completeCardsRu"] = sum(all(card.get(k) for k in ("titleRu", "ru")) for card in cards["cards"])
     audit["completeCardsUk"] = sum(all(card.get(k) for k in ("titleUk", "uk")) for card in cards["cards"])
@@ -737,6 +782,17 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["graphicsRequired"] = audit["total"]
     audit["graphicsPresent"] = audit["bundledImages"]
     audit["graphicsMissing"] = audit["total"] - audit["bundledImages"]
+    audit["graphicsMissingCodes"] = sorted(s["code"] for s in data["signs"]
+                                            if not s["graphic"].get("path"))
+    audit["graphicLicenseReviewRequiredCodes"] = sorted(s["code"] for s in data["signs"]
+        if s["graphic"]["status"] == "LICENSE_REVIEW_REQUIRED")
+    audit["graphicVersionReviewRequiredCodes"] = sorted(s["code"] for s in data["signs"]
+        if s["graphic"]["status"] == "VERSION_REVIEW_REQUIRED")
+    audit["graphicLicenseVerified"] = sum(s["graphic"]["status"] == "VERIFIED"
+                                         for s in data["signs"])
+    audit["graphicLicenseReviewRequired"] = len(audit["graphicLicenseReviewRequiredCodes"])
+    audit["unreviewedCodes"] = sorted({s["code"] for s in data["signs"]} -
+                                      {card["code"] for card in cards["cards"]})
     audit["legalVerified"] = len(cards["cards"])
     audit["unreviewed"] = audit["unreviewedTeachingCards"]
     audit["linkedQuestionsVerified"] = len({link["officialId"] for c in cards["cards"]
@@ -745,6 +801,11 @@ def full_audit(data: dict, sources: dict) -> dict:
         for link in c.get("questionLinks", []))
     audit["linkedQuestionsReviewRequired"] = sum(link["reviewStatus"] == "REVIEW_REQUIRED" for c in cards["cards"]
         for link in c.get("questionLinks", []))
+    audit["productionReady"] = (not audit["unreviewedCodes"] and
+                                not audit["graphicsMissingCodes"] and
+                                not audit["graphicLicenseReviewRequiredCodes"] and
+                                not audit["graphicVersionReviewRequiredCodes"] and
+                                audit["canonicalVariants"] is not None)
     return audit
 
 
