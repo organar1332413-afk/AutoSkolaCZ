@@ -20,6 +20,7 @@
   <string name="signs_all">Všechny</string>
   <string name="signs_unreviewed">Výklad zatím nebyl ověřen.</string>
   <string name="signs_source">Zdroj: %1$s</string>
+  <string name="signs_related_official_questions">Procvičit oficiální otázky</string>
   <string name="signs_graphic_pending">Grafika zatím není součástí aplikace (probíhá kontrola oprávnění).</string>
   <string name="first_aid">První pomoc</string>
   <string name="czech">Čeština ke zkoušce</string>

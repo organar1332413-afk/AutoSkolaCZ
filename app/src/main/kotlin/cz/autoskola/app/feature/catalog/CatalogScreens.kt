@@ -9,7 +9,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import cz.autoskola.app.R
 import cz.autoskola.app.ui.*
-@Composable fun SignsScreen(translationTag: String?) {
+@Composable fun SignsScreen(
+    translationTag: String?,
+    availableQuestionIds: Set<String>,
+    openQuestion: (String) -> Unit,
+) {
     val context = LocalContext.current
     val entries = remember(context) { SignCatalog.load(context) }
     val guide = remember(context) { SignCatalog.loadGuide(context) }
@@ -74,6 +78,13 @@ import cz.autoskola.app.ui.*
                         if (sign.confusedWith.isNotEmpty()) Text(sign.confusedWith.joinToString(" · "))
                         sign.sourceProvision?.let { Text(it) }
                         Note(text(R.string.signs_source, sign.sourceUrl))
+                        val linked = sign.relatedOfficialIds.filter { it in availableQuestionIds }
+                        if (linked.isNotEmpty()) {
+                            Text(text(R.string.signs_related_official_questions))
+                            linked.forEach { id ->
+                                Entry(id) { openQuestion(id) }
+                            }
+                        }
                         if (sign.graphicStatus == "LICENSE_REVIEW_REQUIRED") Note(text(R.string.signs_graphic_pending))
                     }
                 }

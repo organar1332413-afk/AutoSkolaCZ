@@ -23,6 +23,8 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(347, audit["indexedFamilies"])
         self.assertEqual(44, audit["warningLegalCodesVerified"])
         self.assertEqual(49, audit["warningGraphicExecutionsIndexed"])
+        self.assertEqual(8, audit["priorityLegalCodesVerified"])
+        self.assertEqual(13, audit["priorityGraphicExecutionsIndexed"])
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(29, audit["categories"]["light_signal"])
@@ -72,10 +74,11 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_curated_cards_have_provenance_and_all_languages(self):
         validate_cards(self.data, self.cards, self.sources)
-        self.assertEqual(50, len(self.cards["cards"]))
-        warning = {s["code"] for s in self.data["signs"] if s["category"] == "warning"}
-        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in warning}
-        self.assertEqual(warning, reviewed)
+        self.assertEqual(96, len(self.cards["cards"]))
+        first_three = {s["code"] for s in self.data["signs"]
+                       if s["category"] in {"warning", "priority", "prohibition"}}
+        reviewed = {c["code"] for c in self.cards["cards"] if c["code"] in first_three}
+        self.assertEqual(first_three, reviewed)
 
     def test_legal_codes_and_graphic_executions_are_distinct(self):
         signs = {s["code"]: s for s in self.data["signs"]}
@@ -85,6 +88,11 @@ class SignInventoryTest(unittest.TestCase):
         })
         self.assertEqual(["A 6b-1", "A 6b-2"], signs["A 6b"]["graphicVariantCodes"])
         self.assertNotIn("A 6b-1", signs)
+        self.assertEqual(["P 4-1", "P 4-2", "P 4-3"], signs["P 4"]["graphicVariantCodes"])
+        self.assertNotIn("P 4-1", signs)
+        self.assertEqual(13, len(signs["B 20a"]["graphicVariantCodes"]))
+        self.assertEqual("Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
+                         signs["B 15"]["titleCs"])
 
     def test_card_cannot_replace_original_title_or_omit_translation(self):
         cards = copy.deepcopy(self.cards)
@@ -98,9 +106,26 @@ class SignInventoryTest(unittest.TestCase):
 
     def test_question_links_require_existing_official_id(self):
         cards = copy.deepcopy(self.cards)
-        cards["cards"][0]["questionOfficialIds"] = ["not-in-bank"]
+        linked = next(c for c in cards["cards"] if c["code"] == "B 20a")
+        linked["questionLinks"][0]["officialId"] = "not-in-bank"
         with self.assertRaisesRegex(ValueError, "lacks bank evidence"):
             validate_cards(self.data, cards, self.sources, {"RP000001"})
+        cards = copy.deepcopy(self.cards)
+        linked = next(c for c in cards["cards"] if c["code"] == "B 20a")
+        linked["questionLinks"][0]["evidence"]["questionTextCs"] = "Jen nejvyšší rychlost."
+        with self.assertRaisesRegex(ValueError, "not explicitly verified"):
+            validate_cards(self.data, cards, self.sources)
+        cards = copy.deepcopy(self.cards)
+        linked = next(c for c in cards["cards"] if c["code"] == "B 20a")
+        linked["questionLinks"] *= 2
+        with self.assertRaisesRegex(ValueError, "lacks bank evidence"):
+            validate_cards(self.data, cards, self.sources)
+
+    def test_question_reference_inventory_is_hash_bound(self):
+        refs = json.loads((CONTENT / "official_question_refs.json").read_text(encoding="utf-8"))
+        self.assertEqual(1136, refs["officialIdsCount"])
+        self.assertEqual(1, full_audit(self.data, self.sources)["linkedQuestionsVerified"])
+        self.assertEqual(1, full_audit(self.data, self.sources)["linkedRelationshipsVerified"])
 
     def test_source_backed_guide_blocks(self):
         validate_guide(self.guide, self.sources)

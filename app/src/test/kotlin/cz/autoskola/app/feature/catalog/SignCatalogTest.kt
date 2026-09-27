@@ -28,6 +28,7 @@ class SignCatalogTest {
         assertEquals("A 31c", SignCatalog.search(signs, "80 м", "warning").single().code)
         assertEquals("A 6b", SignCatalog.search(signs, "Сужение дороги с одной стороны", null).single().code)
         assertEquals("Пішоходи", signs.single { it.code == "A 12a" }.titleUk)
+        assertEquals(listOf("RP2202014"), signs.single { it.code == "B 20a" }.relatedOfficialIds)
     }
 
     @Test fun sourceBackedGuideLoadedSeparatelyFromOfficialExcerpt() {

@@ -123,7 +123,9 @@
         "A 14"
       ],
       "driverActionsCs": "Zpomalte tak, abyste mohli bezpečně reagovat na zvíře.",
-      "exceptionsCs": [],
+      "exceptionsCs": [
+        "Na značce může být i jiný určený symbol domácího zvířete."
+      ],
       "meaningCs": "Varuje před častým výskytem domácích zvířat na vozovce.",
       "memoryCs": "Domácí zvíře, ne lesní zvěř.",
       "mistakeCs": "Nejde o totéž jako varování před divokou zvěří.",
@@ -147,7 +149,9 @@
         "A 13"
       ],
       "driverActionsCs": "Sledujte prostor kolem silnice, zvláště při horší viditelnosti.",
-      "exceptionsCs": [],
+      "exceptionsCs": [
+        "Na značce může být i jiný určený symbol volně žijícího živočicha."
+      ],
       "meaningCs": "Varuje před častým výskytem volně žijících zvířat na vozovce.",
       "memoryCs": "Zvěř přichází z volné přírody.",
       "mistakeCs": "Nezaměňujte ji se značkou pro domácí zvířata.",
@@ -1014,7 +1018,9 @@
         "A 24"
       ],
       "driverActionsCs": "Jeďte plynule a přizpůsobte rychlost přilnavosti vozovky.",
-      "exceptionsCs": [],
+      "exceptionsCs": [
+        "Při hrozbě jen za určitých podmínek může platnost omezit dodatková tabulka."
+      ],
       "meaningCs": "Upozorňuje na úsek se zvýšeným rizikem smyku i za běžného počasí.",
       "memoryCs": "Kluzký povrch není jen led.",
       "mistakeCs": "Nepředpokládejte, že značka platí jen v zimě; podmínky může vymezit tabulka.",
@@ -1057,12 +1063,877 @@
     },
     {
       "checkedAt": "2026-09-27",
+      "code": "B 1",
+      "confusedWith": [
+        "B 2"
+      ],
+      "driverActionsCs": "Nevjíždějte za značku ani z jedné strany.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd všem vozidlům z obou směrů.",
+      "memoryCs": "Bílý kruh s červeným okrajem uzavírá oba směry.",
+      "mistakeCs": "Nepovažujte ji za zákaz pouze z jedné strany jednosměrné ulice.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "За знаком движение любых транспортных средств запрещено в обоих направлениях.",
+      "simpleCs": "Nevjíždějte za značku ani z jedné strany.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 1",
+      "titleCs": "Zákaz vjezdu všech vozidel v obou směrech",
+      "titleRu": "Движение всех транспортных средств запрещено",
+      "titleUk": "Рух усіх транспортних засобів заборонено",
+      "uk": "За знаком рух будь-яких транспортних засобів заборонено в обох напрямках."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 10",
+      "confusedWith": [
+        "B 9"
+      ],
+      "driverActionsCs": "Před vjezdem posuďte skutečnou šířku ručního vozíku.",
+      "exceptionsCs": [
+        "Značka míří na ruční vozíky o okamžité šířce větší než 600 mm."
+      ],
+      "meaningCs": "Zakazuje vjezd ručních vozíků širších než 600 mm.",
+      "memoryCs": "Rozhoduje šířka 600 mm.",
+      "mistakeCs": "Nevztahujte zákaz bez rozlišení na každý malý ruční vozík.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Запрещены ручные тележки фактической шириной более 600 мм.",
+      "simpleCs": "Před vjezdem posuďte skutečnou šířku ručního vozíku.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 10",
+      "titleCs": "Zákaz vjezdu ručních vozíků",
+      "titleRu": "Въезд ручных тележек запрещён",
+      "titleUk": "В’їзд ручних візків заборонено",
+      "uk": "Заборонені ручні візки фактичної ширини понад 600 мм."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 11",
+      "confusedWith": [
+        "B 3",
+        "B 1"
+      ],
+      "driverActionsCs": "S motorovým vozidlem do úseku nevjíždějte.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd všem motorovým vozidlům.",
+      "memoryCs": "Zákaz míří na celý motorový provoz.",
+      "mistakeCs": "Nepřenášejte sem výjimku pro samotný motocykl z B 3.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Любому моторному транспортному средству въезд запрещён; велосипед не является моторным транспортом.",
+      "simpleCs": "S motorovým vozidlem do úseku nevjíždějte.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 11",
+      "titleCs": "Zákaz vjezdu všech motorových vozidel",
+      "titleRu": "Въезд всего моторного транспорта запрещён",
+      "titleUk": "В’їзд усього моторного транспорту заборонено",
+      "uk": "Будь-якому моторному транспортному засобу в’їзд заборонено; велосипед не є моторним транспортом."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 12",
+      "confusedWith": [
+        "B 11"
+      ],
+      "driverActionsCs": "Přečtěte všechny symboly, ne jen první z nich.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd druhům vozidel vyobrazeným na značce.",
+      "memoryCs": "Rozhodují piktogramy uvnitř kruhu.",
+      "mistakeCs": "Nejde o zákaz pro nevyobrazené druhy vozidel.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Запрет относится к видам транспорта, изображённым на конкретном знаке; проверьте все пиктограммы.",
+      "simpleCs": "Přečtěte všechny symboly, ne jen první z nich.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 12",
+      "titleCs": "Zákaz vjezdu vyznačených vozidel",
+      "titleRu": "Въезд обозначенных видов транспорта запрещён",
+      "titleUk": "В’їзд позначених видів транспорту заборонено",
+      "uk": "Заборона стосується видів транспорту, зображених на конкретному знаку; перевірте всі піктограми."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 13",
+      "confusedWith": [
+        "B 14",
+        "B 4"
+      ],
+      "driverActionsCs": "Srovnejte skutečnou hmotnost s údajem; u soupravy posuďte pravidlo pro jednotlivá vozidla a tabulku.",
+      "exceptionsCs": [
+        "Tabulka „Jediné vozidlo ... t“ může stanovit zvláštní mez pro jednotlivé vozidlo."
+      ],
+      "meaningCs": "Zakazuje vjezd vozidlu, jehož okamžitá hmotnost překračuje uvedenou mez.",
+      "memoryCs": "Tady se váží skutečný stav.",
+      "mistakeCs": "Nezaměňujte okamžitou hmotnost za největší povolenou hmotnost.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Сравните текущую фактическую массу с числом на знаке. Для автопоезда и таблички «одно транспортное средство» действуют особые условия.",
+      "simpleCs": "Srovnejte skutečnou hmotnost s údajem; u soupravy posuďte pravidlo pro jednotlivá vozidla a tabulku.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 13",
+      "titleCs": "Zákaz vjezdu vozidel, jejichž okamžitá hmotnost přesahuje vyznačenou mez",
+      "titleRu": "Ограничение фактической массы",
+      "titleUk": "Обмеження фактичної маси",
+      "uk": "Порівняйте поточну фактичну масу з числом на знаку. Для автопоїзда й таблички «один транспортний засіб» діють особливі умови."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 14",
+      "confusedWith": [
+        "B 13"
+      ],
+      "driverActionsCs": "Ověřte zatížení náprav, ne pouze celkovou hmotnost.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd, pokud okamžitá hmotnost na nápravu překročí vyznačenou mez.",
+      "memoryCs": "Náprava není celé vozidlo.",
+      "mistakeCs": "Vozidlo může splnit celkovou mez a přesto překročit mez na nápravu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Число ограничивает фактическую нагрузку на ось, а не общую массу машины.",
+      "simpleCs": "Ověřte zatížení náprav, ne pouze celkovou hmotnost.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 14",
+      "titleCs": "Zákaz vjezdu vozidel, jejichž okamžitá hmotnost připadající na nápravu přesahuje vyznačenou mez",
+      "titleRu": "Ограничение нагрузки на ось",
+      "titleUk": "Обмеження навантаження на вісь",
+      "uk": "Число обмежує фактичне навантаження на вісь, а не загальну масу машини."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 15",
+      "confusedWith": [
+        "B 16",
+        "B 17"
+      ],
+      "driverActionsCs": "Přeměřte skutečnou šířku i se zrcátky a nákladem.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd širším vozidlům než uvedená mez, včetně nákladu a zrcátek.",
+      "memoryCs": "Zrcátka se počítají.",
+      "mistakeCs": "Samotná šířka karoserie nemusí stačit.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Учитывайте реальную ширину машины вместе с грузом и зеркалами; превышение запрещает въезд.",
+      "simpleCs": "Přeměřte skutečnou šířku i se zrcátky a nákladem.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 15",
+      "titleCs": "Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
+      "titleRu": "Ограничение ширины",
+      "titleUk": "Обмеження ширини",
+      "uk": "Враховуйте реальну ширину авто разом із вантажем і дзеркалами; перевищення забороняє в’їзд."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 16",
+      "confusedWith": [
+        "B 15",
+        "B 17"
+      ],
+      "driverActionsCs": "Zkontrolujte skutečnou výšku naloženého vozidla.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd vyšším vozidlům než uvedená mez, včetně nákladu.",
+      "memoryCs": "Měřte až po nejvyšší bod.",
+      "mistakeCs": "Nezapomeňte na náklad nebo zařízení na střeše.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Реальная высота вместе с грузом не должна превышать значение на знаке.",
+      "simpleCs": "Zkontrolujte skutečnou výšku naloženého vozidla.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 16",
+      "titleCs": "Zákaz vjezdu vozidel, jejichž výška přesahuje vyznačenou mez",
+      "titleRu": "Ограничение высоты",
+      "titleUk": "Обмеження висоти",
+      "uk": "Реальна висота разом із вантажем не повинна перевищувати значення на знаку."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 17",
+      "confusedWith": [
+        "B 15",
+        "B 16"
+      ],
+      "driverActionsCs": "Srovnejte skutečnou délku celé soupravy s uvedeným číslem.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd delším vozidlům nebo soupravám než vyznačená mez, včetně nákladu.",
+      "memoryCs": "Celá souprava se počítá.",
+      "mistakeCs": "Neposuzujte jen samotný tahač bez přípojného vozidla.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Учитывайте фактическую длину всей сцепки вместе с грузом.",
+      "simpleCs": "Srovnejte skutečnou délku celé soupravy s uvedeným číslem.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 17",
+      "titleCs": "Zákaz vjezdu vozidel nebo souprav, jejichž délka přesahuje vyznačenou mez",
+      "titleRu": "Ограничение длины",
+      "titleUk": "Обмеження довжини",
+      "uk": "Враховуйте фактичну довжину всього автопоїзда разом із вантажем."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 18",
+      "confusedWith": [
+        "B 19"
+      ],
+      "driverActionsCs": "Před přepravou takového nákladu zvolte jinou trasu.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd vozidlům s vymezeným nebezpečným nákladem označeným podle příslušného předpisu.",
+      "memoryCs": "Nebezpečný náklad má předepsané označení.",
+      "mistakeCs": "Nepovažujte každý běžný náklad za náklad pod touto značkou.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Запрет касается обозначенных согласно норме перевозок опасных грузов, в том числе взрывчатых и легко воспламеняющихся.",
+      "simpleCs": "Před přepravou takového nákladu zvolte jinou trasu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 18",
+      "titleCs": "Zákaz vjezdu vozidel přepravujících nebezpečný náklad",
+      "titleRu": "Въезд с опасным грузом запрещён",
+      "titleUk": "В’їзд із небезпечним вантажем заборонено",
+      "uk": "Заборона стосується позначених за нормою перевезень небезпечних вантажів, зокрема вибухових і легкозаймистих."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 19",
+      "confusedWith": [
+        "B 18"
+      ],
+      "driverActionsCs": "Sledujte případnou tabulku určující množství nebo druh nákladu.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd s látkami, které mohou ohrozit životní prostředí, zejména vodu.",
+      "memoryCs": "Piktogram upozorňuje na riziko úniku.",
+      "mistakeCs": "Nezaměňujte tento zákaz s každým nebezpečným nákladem podle B 18.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Запрещён въезд с грузом, который может загрязнить окружающую среду, особенно воду; табличка может уточнять количество.",
+      "simpleCs": "Sledujte případnou tabulku určující množství nebo druh nákladu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 19",
+      "titleCs": "Zákaz vjezdu vozidel přepravujících náklad, který může způsobit ohrožení životního prostředí",
+      "titleRu": "Въезд с экологически опасным грузом запрещён",
+      "titleUk": "В’їзд з екологічно небезпечним вантажем заборонено",
+      "uk": "Заборонено в’їзд із вантажем, що може забруднити довкілля, особливо воду; табличка може уточнювати кількість."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 2",
+      "confusedWith": [
+        "B 1",
+        "IP 4a"
+      ],
+      "driverActionsCs": "Nevjíždějte proti stanovenému směru jednosměrné komunikace.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd do jednosměrné komunikace z opačné strany.",
+      "memoryCs": "Červený kruh s bílým pruhem je protisměrný vjezd.",
+      "mistakeCs": "Nejde o zákaz provozu v obou směrech.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "С этой стороны въезд на одностороннюю дорогу запрещён; движение ведётся навстречу.",
+      "simpleCs": "Nevjíždějte proti stanovenému směru jednosměrné komunikace.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 2",
+      "titleCs": "Zákaz vjezdu všech vozidel",
+      "titleRu": "Въезд запрещён",
+      "titleUk": "В’їзд заборонено",
+      "uk": "Із цього боку в’їзд на односторонню дорогу заборонено; рух ведеться назустріч."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 20a",
+      "confusedWith": [
+        "B 20b",
+        "C 6a"
+      ],
+      "driverActionsCs": "Jeďte nejvýše uvedenou rychlostí; sledujte ukončení platnosti.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje překročit rychlost uvedenou na značce v km/h.",
+      "memoryCs": "Číslo v červeném kruhu je strop.",
+      "mistakeCs": "Nejde o rychlost, kterou musíte udržovat za každých podmínek.",
+      "questionLinks": [
+        {
+          "checkedAt": "2026-09-27",
+          "evidence": {
+            "questionTextCs": "Jak může být ukončena platnost svislé dopravní značky B 20a \"Nejvyšší dovolená rychlost\"?",
+            "rawResponseSha256": "5e5159eab2fe2d4a963b2f05164a702e1595f10e4921a48ee27bc2ee7558fe98",
+            "sourceUrl": "https://etesty.md.gov.cz/ro/Bulletin/List?id=54&pageSize=1000&pagex=1"
+          },
+          "evidenceType": "EXPLICIT_CODE_IN_OFFICIAL_QUESTION_TEXT",
+          "officialId": "RP2202014",
+          "reviewStatus": "VERIFIED",
+          "signId": "B 20a"
+        }
+      ],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Число на знаке — верхний предел скорости в км/ч, а не рекомендованная скорость.",
+      "simpleCs": "Jeďte nejvýše uvedenou rychlostí; sledujte ukončení platnosti.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 20a",
+      "titleCs": "Nejvyšší dovolená rychlost",
+      "titleRu": "Максимально разрешённая скорость",
+      "titleUk": "Найвища дозволена швидкість",
+      "uk": "Число на знаку — верхня межа швидкості в км/год, а не рекомендована швидкість."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 20b",
+      "confusedWith": [
+        "B 20a",
+        "B 26"
+      ],
+      "driverActionsCs": "Dále platí obecný nebo příslušný zónový limit, nikoli neomezená rychlost.",
+      "exceptionsCs": [
+        "Po zrušení místního limitu zůstává obecný nebo zónový limit."
+      ],
+      "meaningCs": "Ukončuje předchozí místní nejvyšší dovolenou rychlost.",
+      "memoryCs": "Přeškrtnuté číslo ruší konkrétní limit.",
+      "mistakeCs": "Nezaměňujte konec jednoho omezení za zrušení všech rychlostních pravidel.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Прежнее ограничение закончилось; дальше действует общий либо зональный предел, не «скорость без лимита».",
+      "simpleCs": "Dále platí obecný nebo příslušný zónový limit, nikoli neomezená rychlost.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 20b",
+      "titleCs": "Konec nejvyšší dovolené rychlosti",
+      "titleRu": "Конец ограничения скорости",
+      "titleUk": "Кінець обмеження швидкості",
+      "uk": "Попереднє обмеження закінчилося; далі діє загальна або зональна межа, а не «швидкість без ліміту»."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 21a",
+      "confusedWith": [
+        "B 21b",
+        "B 22a"
+      ],
+      "driverActionsCs": "Předjíždění motorových vozidel vlevo odložte do konce zákazu.",
+      "exceptionsCs": [
+        "Výjimkou je předjíždění motocyklu bez postranního vozíku."
+      ],
+      "meaningCs": "Zakazuje předjíždět motorové vozidlo vlevo s výjimkou motocyklu bez postranního vozíku.",
+      "memoryCs": "Sledujte, co smíte předjíždět.",
+      "mistakeCs": "Nevykládejte zákaz jako zákaz každého míjení či objíždění překážky.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Обгон моторного транспорта слева запрещён; одиночный мотоцикл составляет указанное исключение.",
+      "simpleCs": "Předjíždění motorových vozidel vlevo odložte do konce zákazu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 21a",
+      "titleCs": "Zákaz předjíždění",
+      "titleRu": "Обгон запрещён",
+      "titleUk": "Обгін заборонено",
+      "uk": "Обгін моторного транспорту ліворуч заборонено; одиночний мотоцикл становить зазначений виняток."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 21b",
+      "confusedWith": [
+        "B 21a",
+        "B 22b"
+      ],
+      "driverActionsCs": "Předjíždějte až tehdy, dovolují-li to ostatní pravidla a rozhled.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje platnost předchozí značky B 21a.",
+      "memoryCs": "Konec jedné konkrétní značky.",
+      "mistakeCs": "Neznamená automatické povolení předjíždět na každém místě.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Этот знак отменяет предыдущий запрет обгона; остальные условия безопасности сохраняются.",
+      "simpleCs": "Předjíždějte až tehdy, dovolují-li to ostatní pravidla a rozhled.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 21b",
+      "titleCs": "Konec zákazu předjíždění",
+      "titleRu": "Конец запрета обгона",
+      "titleUk": "Кінець заборони обгону",
+      "uk": "Цей знак скасовує попередню заборону обгону; інші умови безпеки залишаються."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 22a",
+      "confusedWith": [
+        "B 21a",
+        "B 22b"
+      ],
+      "driverActionsCs": "Jste-li v dotčeném vozidle, držte se pravého pruhu s výjimkou nutného objíždění.",
+      "exceptionsCs": [
+        "Jiný než pravý pruh lze použít, je-li to nutné k objíždění."
+      ],
+      "meaningCs": "Pro stanovené těžké nákladní automobily a traktory omezuje předjíždění i užití jiného než pravého pruhu.",
+      "memoryCs": "U těžkých vozidel sledujte i jízdní pruh.",
+      "mistakeCs": "Neomezujte význam značky jen na samotný manévr předjíždění.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Для указанных грузовиков и тракторов свыше 3,5 т обгон слева запрещён; на многополосной дороге обычно нужен правый ряд.",
+      "simpleCs": "Jste-li v dotčeném vozidle, držte se pravého pruhu s výjimkou nutného objíždění.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 22a",
+      "titleCs": "Zákaz předjíždění pro nákladní automobily",
+      "titleRu": "Обгон грузовым автомобилям запрещён",
+      "titleUk": "Обгін вантажним автомобілям заборонено",
+      "uk": "Для зазначених вантажівок і тракторів понад 3,5 т обгін ліворуч заборонено; на багатосмуговій дорозі зазвичай потрібна права смуга."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 22b",
+      "confusedWith": [
+        "B 22a",
+        "B 21b"
+      ],
+      "driverActionsCs": "Před dalším předjížděním posuďte obecná pravidla a rozhled.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje platnost značky B 22a.",
+      "memoryCs": "Končí omezení zobrazeného nákladního vozidla.",
+      "mistakeCs": "Nejde o konec všech zákazů předjíždění.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Отменяет специальный запрет обгона для грузовиков; прочие правила продолжают действовать.",
+      "simpleCs": "Před dalším předjížděním posuďte obecná pravidla a rozhled.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 22b",
+      "titleCs": "Konec zákazu předjíždění pro nákladní automobily",
+      "titleRu": "Конец запрета обгона грузовым автомобилям",
+      "titleUk": "Кінець заборони обгону вантажним автомобілям",
+      "uk": "Скасовує спеціальну заборону обгону для вантажівок; інші правила продовжують діяти."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 23a",
+      "confusedWith": [
+        "B 23b"
+      ],
+      "driverActionsCs": "Nepoužívejte klakson v označeném úseku.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje užívání zvukových výstražných znamení.",
+      "memoryCs": "Přeškrtnutá trubka znamená ticho.",
+      "mistakeCs": "Nepovažujte klakson za běžný prostředek upozornění zde.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "В обозначенной зоне не используйте звуковой сигнал.",
+      "simpleCs": "Nepoužívejte klakson v označeném úseku.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 23a",
+      "titleCs": "Zákaz zvukových výstražných znamení",
+      "titleRu": "Звуковой сигнал запрещён",
+      "titleUk": "Звуковий сигнал заборонено",
+      "uk": "На позначеній ділянці не використовуйте звуковий сигнал."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 23b",
+      "confusedWith": [
+        "B 23a"
+      ],
+      "driverActionsCs": "Další použití znamení se řídí obecnými pravidly.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje platnost předchozí značky B 23a.",
+      "memoryCs": "Přeškrtnutý zákaz ukončuje místní omezení.",
+      "mistakeCs": "Nejde o povinnost zvukové znamení použít.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Специальный запрет сигнала закончился; общие правила его применения сохраняются.",
+      "simpleCs": "Další použití znamení se řídí obecnými pravidly.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 23b",
+      "titleCs": "Konec zákazu zvukových výstražných znamení",
+      "titleRu": "Конец запрета звукового сигнала",
+      "titleUk": "Кінець заборони звукового сигналу",
+      "uk": "Спеціальна заборона сигналу скінчилася; загальні правила його використання залишаються."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 24a",
+      "confusedWith": [
+        "B 24b",
+        "C 2b"
+      ],
+      "driverActionsCs": "Na nejbližším místě neodbočujte vpravo.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje nejbližší odbočení vpravo, včetně odbočení do účelové komunikace nebo mimo silnici.",
+      "memoryCs": "Šipka vpravo je přeškrtnutá.",
+      "mistakeCs": "Zákaz se může týkat i vjezdu do připojené účelové komunikace.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Правый поворот на ближайшем перекрёстке или съезде запрещён.",
+      "simpleCs": "Na nejbližším místě neodbočujte vpravo.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 24a",
+      "titleCs": "Zákaz odbočování vpravo",
+      "titleRu": "Поворот направо запрещён",
+      "titleUk": "Поворот праворуч заборонено",
+      "uk": "Поворот праворуч на найближчому перехресті або з’їзді заборонено."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 24b",
+      "confusedWith": [
+        "B 24a",
+        "B 25"
+      ],
+      "driverActionsCs": "Na nejbližším místě neodbočujte vlevo.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje nejbližší odbočení vlevo, včetně připojené účelové komunikace.",
+      "memoryCs": "Šipka vlevo je přeškrtnutá.",
+      "mistakeCs": "Nezaměňujte zákaz odbočení vlevo se zákazem otočení.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Левый поворот на ближайшем перекрёстке или съезде запрещён.",
+      "simpleCs": "Na nejbližším místě neodbočujte vlevo.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 24b",
+      "titleCs": "Zákaz odbočování vlevo",
+      "titleRu": "Поворот налево запрещён",
+      "titleUk": "Поворот ліворуч заборонено",
+      "uk": "Поворот ліворуч на найближчому перехресті або з’їзді заборонено."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 25",
+      "confusedWith": [
+        "B 24b"
+      ],
+      "driverActionsCs": "Neprovádějte v tomto místě obrat do protisměru.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje otočení vozidla do opačného směru.",
+      "memoryCs": "Otočka je samostatný manévr.",
+      "mistakeCs": "Neslučujte otočení s odbočením vlevo.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Разворот запрещён; знак сам по себе не запрещает любой левый поворот.",
+      "simpleCs": "Neprovádějte v tomto místě obrat do protisměru.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 25",
+      "titleCs": "Zákaz otáčení",
+      "titleRu": "Разворот запрещён",
+      "titleUk": "Розворот заборонено",
+      "uk": "Розворот заборонено; знак сам по собі не забороняє будь-який лівий поворот."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 26",
+      "confusedWith": [
+        "B 20b"
+      ],
+      "driverActionsCs": "Po značce dál respektujte obecná pravidla i nová omezení.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukončuje zákazy stanovené pro jedoucí vozidla.",
+      "memoryCs": "Konec místních zákazů není konec pravidel.",
+      "mistakeCs": "Nevykládejte ji jako zrušení jakéhokoli pravidla provozu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Отменяет действующие запреты для движущихся транспортных средств; общие правила остаются.",
+      "simpleCs": "Po značce dál respektujte obecná pravidla i nová omezení.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 26",
+      "titleCs": "Konec všech zákazů",
+      "titleRu": "Конец всех запретов для движущихся машин",
+      "titleUk": "Кінець усіх заборон для рухомих авто",
+      "uk": "Скасовує чинні заборони для транспортних засобів у русі; загальні правила залишаються."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 27",
+      "confusedWith": [
+        "P 6"
+      ],
+      "driverActionsCs": "Zastavte v prostoru značky a sledujte účel kontroly nebo další pokyn.",
+      "exceptionsCs": [],
+      "meaningCs": "Přikazuje zastavit vozidlo v prostoru u značky; důvod může upřesnit nápis.",
+      "memoryCs": "Povinnost zastavení se může týkat kontroly.",
+      "mistakeCs": "Nezaměňujte toto zastavení kvůli kontrole se značkou STOP před křižovatkou.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "У знака нужно остановиться; надпись может указывать причину, например контроль.",
+      "simpleCs": "Zastavte v prostoru značky a sledujte účel kontroly nebo další pokyn.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 27",
+      "titleCs": "Povinnost zastavit vozidlo",
+      "titleRu": "Обязательная остановка транспорта",
+      "titleUk": "Обов’язкова зупинка транспорту",
+      "uk": "Біля знака треба зупинитися; напис може вказувати причину, наприклад контроль."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 28",
+      "confusedWith": [
+        "B 29"
+      ],
+      "driverActionsCs": "Nezastavujte ani krátce kvůli nastoupení; sledujte případný časový údaj.",
+      "exceptionsCs": [
+        "Nucené zastavení provozem (např. v koloně) není zakázaným zastavením."
+      ],
+      "meaningCs": "Zakazuje dobrovolné zastavení i stání; nevztahuje se na nucené zastavení provozem.",
+      "memoryCs": "Dvě čáry: ani zastavení.",
+      "mistakeCs": "Nezaměňujte ji s B 29, která dovoluje nezbytné nastoupení nebo vyložení.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Нельзя останавливаться даже на высадку; остановка из-за пробки не является нарушением этого знака.",
+      "simpleCs": "Nezastavujte ani krátce kvůli nastoupení; sledujte případný časový údaj.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 28",
+      "titleCs": "Zákaz zastavení",
+      "titleRu": "Остановка запрещена",
+      "titleUk": "Зупинку заборонено",
+      "uk": "Не можна зупинятися навіть для висадки; зупинка через затор не є порушенням цього знака."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 29",
+      "confusedWith": [
+        "B 28"
+      ],
+      "driverActionsCs": "Krátce zastavte jen na nezbytný úkon; sledujte případný časový údaj.",
+      "exceptionsCs": [
+        "Nezbytné krátké zastavení pro okamžité nastoupení, vystoupení, naložení nebo vyložení není stáním."
+      ],
+      "meaningCs": "Zakazuje stání delší než nutný čas pro okamžité nastoupení, vystoupení, naložení či vyložení.",
+      "memoryCs": "Jedna čára: jen nezbytný úkon.",
+      "mistakeCs": "Nezaměňujte zákaz stání se zákazem každého krátkého zastavení.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Нельзя стоять; короткая остановка для немедленной посадки, высадки или погрузки допускается.",
+      "simpleCs": "Krátce zastavte jen na nezbytný úkon; sledujte případný časový údaj.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 29",
+      "titleCs": "Zákaz stání",
+      "titleRu": "Стоянка запрещена",
+      "titleUk": "Стоянку заборонено",
+      "uk": "Не можна стояти; коротка зупинка для негайної посадки, висадки чи завантаження допускається."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 3",
+      "confusedWith": [
+        "B 11"
+      ],
+      "driverActionsCs": "Zkontrolujte druh vozidla; tramvaje a nemotorová vozidla zákaz nezasahuje.",
+      "exceptionsCs": [
+        "Zákaz se nevztahuje na tramvaje, nemotorová vozidla a motocykly bez postranního vozíku."
+      ],
+      "meaningCs": "Vjezd motorových vozidel je zakázán kromě motocyklů bez postranního vozíku.",
+      "memoryCs": "Symboly upřesňují, která vozidla zákaz zahrnuje.",
+      "mistakeCs": "Nepřehlédněte zákonnou výjimku pro motocykl bez postranního vozíku.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Моторным транспортным средствам въезд запрещён, кроме мотоцикла без коляски; трамвай и немоторные средства не подпадают.",
+      "simpleCs": "Zkontrolujte druh vozidla; tramvaje a nemotorová vozidla zákaz nezasahuje.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 3",
+      "titleCs": "Zákaz vjezdu všech motorových vozidel s výjimkou motocyklů bez postranního vozíku",
+      "titleRu": "Въезд моторного транспорта запрещён, кроме одиночных мотоциклов",
+      "titleUk": "В’їзд моторного транспорту заборонено, крім одиночних мотоциклів",
+      "uk": "Моторним транспортним засобам в’їзд заборонено, крім мотоцикла без коляски; трамвай та немоторні засоби не підпадають."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 30",
+      "confusedWith": [
+        "B 1"
+      ],
+      "driverActionsCs": "Jako chodec za značku nevstupujte.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje chodcům vstup na komunikaci za značkou.",
+      "memoryCs": "Postava chodce je přeškrtnutá.",
+      "mistakeCs": "Nepovažujte zákaz pro chodce za zákaz všech vozidel.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Пешеходам вход на участок за знаком запрещён; это не запрет въезда автомобилей.",
+      "simpleCs": "Jako chodec za značku nevstupujte.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 30",
+      "titleCs": "Zákaz vstupu chodců",
+      "titleRu": "Пешеходам вход запрещён",
+      "titleUk": "Пішоходам вхід заборонено",
+      "uk": "Пішоходам вхід на ділянку за знаком заборонено; це не заборона в’їзду авто."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 30a",
+      "confusedWith": [
+        "B 8"
+      ],
+      "driverActionsCs": "Sesedněte a veďte osobní přepravník, je-li třeba pokračovat pěšky.",
+      "exceptionsCs": [
+        "Vedení osobního přepravníku chodcem je dovoleno."
+      ],
+      "meaningCs": "Zakazuje jízdu na osobním přepravníku; jeho vedení jako chodec je dovoleno.",
+      "memoryCs": "Sesednutí mění způsob pohybu.",
+      "mistakeCs": "Vedení přepravníku není totéž jako jízda na něm.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Движение на персональном средстве запрещено; вести его пешком можно.",
+      "simpleCs": "Sesedněte a veďte osobní přepravník, je-li třeba pokračovat pěšky.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 30a",
+      "titleCs": "Zákaz vjezdu osobních přepravníků",
+      "titleRu": "Въезд персональных средств передвижения запрещён",
+      "titleUk": "В’їзд персональних засобів пересування заборонено",
+      "uk": "Рух на персональному засобі заборонено; вести його пішки можна."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 31",
+      "confusedWith": [
+        "B 9"
+      ],
+      "driverActionsCs": "Neveďte ani nežeňte zvíře do označeného úseku.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje jízdu, vedení i hnaní zvířete za značkou.",
+      "memoryCs": "Platí i při vedení zvířete.",
+      "mistakeCs": "Zákaz nekončí tím, že jezdec ze zvířete sesedne.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Нельзя въезжать верхом, вести или перегонять животное за знак.",
+      "simpleCs": "Neveďte ani nežeňte zvíře do označeného úseku.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 31",
+      "titleCs": "Zákaz vjezdu pro jezdce na zvířeti",
+      "titleRu": "Въезд верхом на животном запрещён",
+      "titleUk": "В’їзд верхи на тварині заборонено",
+      "uk": "Не можна в’їжджати верхи, вести або переганяти тварину за знак."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 32",
+      "confusedWith": [
+        "B 1"
+      ],
+      "driverActionsCs": "Přečtěte přesný nápis; například zákaz průjezdu má specifický význam.",
+      "exceptionsCs": [
+        "U nápisu „PRŮJEZD ZAKÁZÁN“ lze vjet s opravdovým důvodem; zkrácení trasy důvod není."
+      ],
+      "meaningCs": "Vyjadřuje jiný zákaz nápisem nebo určeným symbolem uvnitř kruhu.",
+      "memoryCs": "Rozhoduje text nebo symbol uvnitř.",
+      "mistakeCs": "Nehádejte zákaz jen podle červeného kruhu bez přečtení textu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Содержание запрета задаёт надпись или символ. «Проезд запрещён» не допускает въезд лишь ради сокращения пути.",
+      "simpleCs": "Přečtěte přesný nápis; například zákaz průjezdu má specifický význam.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 32",
+      "titleCs": "Jiný zákaz",
+      "titleRu": "Иной запрет",
+      "titleUk": "Інша заборона",
+      "uk": "Зміст заборони задає напис або символ. «Проїзд заборонено» не допускає в’їзд лише для скорочення шляху."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 33",
+      "confusedWith": [
+        "B 4"
+      ],
+      "driverActionsCs": "S připojeným přívěsem či návěsem zvolte jinou cestu.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd motorovým vozidlům s přívěsem nebo návěsem.",
+      "memoryCs": "Přípojné vozidlo je rozhodující.",
+      "mistakeCs": "Nerozhoduje samotný typ tažného vozidla bez přívěsu.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Автомобилям с прицепом или полуприцепом въезд запрещён.",
+      "simpleCs": "S připojeným přívěsem či návěsem zvolte jinou cestu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 33",
+      "titleCs": "Zákaz vjezdu motorových vozidel s přípojným vozidlem",
+      "titleRu": "Въезд автомобилей с прицепом запрещён",
+      "titleUk": "В’їзд автомобілів із причепом заборонено",
+      "uk": "Автомобілям із причепом або напівпричепом в’їзд заборонено."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 34",
+      "confusedWith": [
+        "B 20a"
+      ],
+      "driverActionsCs": "Nechte alespoň vyznačenou vzdálenost od předcházejícího vozidla.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje udržovat od vozidla vpředu menší odstup než údaj na značce.",
+      "memoryCs": "Číslo zde znamená mezeru.",
+      "mistakeCs": "Číslo vyjadřuje vzdálenost, ne rychlost.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Между вашим автомобилем и впереди идущим должно быть не меньше указанного расстояния.",
+      "simpleCs": "Nechte alespoň vyznačenou vzdálenost od předcházejícího vozidla.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 34",
+      "titleCs": "Nejmenší vzdálenost mezi vozidly",
+      "titleRu": "Минимальная дистанция между машинами",
+      "titleUk": "Мінімальна дистанція між авто",
+      "uk": "Між вашим авто та тим, що їде попереду, має бути не менше зазначеної відстані."
+    },
+    {
+      "checkedAt": "2026-09-27",
       "code": "B 4",
       "confusedWith": [
         "B 6"
       ],
       "driverActionsCs": "Před vjezdem ověřte, zda zákaz platí pro druh vašeho vozidla a případnou dodatkovou tabulku.",
-      "exceptionsCs": [],
+      "exceptionsCs": [
+        "Nevztahuje se na obytné automobily; údaj o hmotnosti na značce či tabulce omezuje rozsah."
+      ],
       "meaningCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
       "memoryCs": "B 4 se liší od B 6 (zákaz vjezdu traktorů).",
       "mistakeCs": "Nezaměňujte B 4 a B 6.",
@@ -1079,6 +1950,129 @@
       "titleRu": "Въезд грузовых автомобилей запрещён",
       "titleUk": "В’їзд вантажних автомобілів заборонено",
       "uk": "Забороняє в’їзд вантажних автомобілів; уточнення стосується й транспорту, конструктивно похідного від вантажівок. Враховуйте додаткову табличку."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 5",
+      "confusedWith": [
+        "B 4"
+      ],
+      "driverActionsCs": "Řídíte-li autobus, zvolte jinou trasu.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd autobusům.",
+      "memoryCs": "Značka zobrazuje autobus.",
+      "mistakeCs": "Nezaměňujte autobus s nákladním automobilem.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Автобусам въезд запрещён; запрет не означает автоматически запрет для всех грузовых машин.",
+      "simpleCs": "Řídíte-li autobus, zvolte jinou trasu.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 5",
+      "titleCs": "Zákaz vjezdu autobusů",
+      "titleRu": "Въезд автобусов запрещён",
+      "titleUk": "В’їзд автобусів заборонено",
+      "uk": "Автобусам в’їзд заборонено; заборона не означає автоматично заборону для всіх вантажівок."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 6",
+      "confusedWith": [
+        "B 4"
+      ],
+      "driverActionsCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd traktorům včetně některých pracovních strojů a motorových ručních vozíků.",
+      "memoryCs": "Pracovní stroje patří do rozsahu této značky.",
+      "mistakeCs": "Nepovažujte zákaz za omezení pouze zemědělských traktorů.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Запрещён въезд тракторов, в том числе одноосных, а также указанных рабочих машин.",
+      "simpleCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 6",
+      "titleCs": "Zákaz vjezdu traktorů",
+      "titleRu": "Въезд тракторов запрещён",
+      "titleUk": "В’їзд тракторів заборонено",
+      "uk": "Заборонено в’їзд тракторів, зокрема одноосьових, а також зазначених робочих машин."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 7",
+      "confusedWith": [
+        "B 3",
+        "B 11"
+      ],
+      "driverActionsCs": "Na motocyklu do označeného úseku nevjíždějte.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd motocyklům.",
+      "memoryCs": "Zakázán je vyobrazený motocykl.",
+      "mistakeCs": "Symbol motocyklu neznamená zákaz všech vozidel.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Мотоциклам въезд запрещён; не смешивайте знак с общим запретом моторного транспорта.",
+      "simpleCs": "Na motocyklu do označeného úseku nevjíždějte.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 7",
+      "titleCs": "Zákaz vjezdu motocyklů",
+      "titleRu": "Въезд мотоциклов запрещён",
+      "titleUk": "В’їзд мотоциклів заборонено",
+      "uk": "Мотоциклам в’їзд заборонено; не плутайте знак із загальною забороною моторного транспорту."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 8",
+      "confusedWith": [
+        "C 8a"
+      ],
+      "driverActionsCs": "Z kola sesedněte a veďte je, potřebujete-li pokračovat jako chodec.",
+      "exceptionsCs": [
+        "Vedení jízdního kola jako chodec je dovoleno."
+      ],
+      "meaningCs": "Zakazuje vjezd a jízdu na jízdním kole; vedení kola je dovoleno.",
+      "memoryCs": "Sesednout a vést kolo je jiný způsob pohybu.",
+      "mistakeCs": "Zákaz jízdy není zákaz vedení kola.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Ехать на велосипеде нельзя, но вести велосипед пешком разрешено.",
+      "simpleCs": "Z kola sesedněte a veďte je, potřebujete-li pokračovat jako chodec.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 8",
+      "titleCs": "Zákaz vjezdu jízdních kol",
+      "titleRu": "Въезд велосипедов запрещён",
+      "titleUk": "В’їзд велосипедів заборонено",
+      "uk": "Їхати велосипедом не можна, але вести велосипед пішки дозволено."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "B 9",
+      "confusedWith": [
+        "B 31"
+      ],
+      "driverActionsCs": "S potahovým vozidlem za značku nevjíždějte.",
+      "exceptionsCs": [],
+      "meaningCs": "Zakazuje vjezd potahovým vozidlům.",
+      "memoryCs": "Povoz není jezdec na zvířeti.",
+      "mistakeCs": "Nezaměňujte potahové vozidlo s jezdcem na zvířeti.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Движение повозок с тягловыми животными запрещено.",
+      "simpleCs": "S potahovým vozidlem za značku nevjíždějte.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 9",
+      "titleCs": "Zákaz vjezdu potahových vozidel",
+      "titleRu": "Въезд гужевых повозок запрещён",
+      "titleUk": "В’їзд гужових возів заборонено",
+      "uk": "Рух возів із тягловими тваринами заборонено."
     },
     {
       "checkedAt": "2026-09-27",
@@ -1203,6 +2197,180 @@
       "titleRu": "Перекрёсток с второстепенной дорогой",
       "titleUk": "Перехрестя з другорядною дорогою",
       "uk": "Попереджає поза населеним пунктом про перехрестя й позначає головну дорогу. Табличка може уточнювати її напрямок."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 2",
+      "confusedWith": [
+        "P 1",
+        "P 3"
+      ],
+      "driverActionsCs": "Sledujte, kudy hlavní silnice v křižovatce skutečně vede.",
+      "exceptionsCs": [],
+      "meaningCs": "Označuje hlavní komunikaci pro nejbližší křižovatku nebo uvnitř složité křižovatky.",
+      "memoryCs": "Přednost se posuzuje pro konkrétní křižovatku.",
+      "mistakeCs": "Nevykládejte značku jako trvalou přednost na všech dalších křižovatkách.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Вы на главной дороге в ближайшем перекрёстке; её направление может уточнять табличка.",
+      "simpleCs": "Sledujte, kudy hlavní silnice v křižovatce skutečně vede.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 2",
+      "titleCs": "Hlavní pozemní komunikace",
+      "titleRu": "Главная дорога",
+      "titleUk": "Головна дорога",
+      "uk": "Ви на головній дорозі на найближчому перехресті; її напрямок може уточнювати табличка."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 3",
+      "confusedWith": [
+        "P 2"
+      ],
+      "driverActionsCs": "Na následující křižovatce znovu určete přednost podle značek a pravidel.",
+      "exceptionsCs": [],
+      "meaningCs": "Informuje, že tato komunikace již na nejbližší křižovatce není hlavní.",
+      "memoryCs": "Přeškrtnutý kosočtverec ruší hlavní směr.",
+      "mistakeCs": "Nevyvozujte přednost z předchozí značky P 2.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "На ближайшем перекрёстке ваша дорога перестаёт быть главной. Проверьте приоритет заново.",
+      "simpleCs": "Na následující křižovatce znovu určete přednost podle značek a pravidel.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 3",
+      "titleCs": "Konec hlavní pozemní komunikace",
+      "titleRu": "Конец главной дороги",
+      "titleUk": "Кінець головної дороги",
+      "uk": "На найближчому перехресті ваша дорога перестає бути головною. Перевірте пріоритет знову."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 4",
+      "confusedWith": [
+        "P 6"
+      ],
+      "driverActionsCs": "Zpomalte a dejte přednost; zastavte, je-li to pro bezpečný průjezd nutné.",
+      "exceptionsCs": [
+        "Zastavení není automaticky povinné; rozhoduje možnost bezpečně dát přednost."
+      ],
+      "meaningCs": "Označuje vedlejší komunikaci nebo místo, kde je nutné dát přednost.",
+      "memoryCs": "Trojúhelník: přednost ano, povinné zastavení ne.",
+      "mistakeCs": "Nezaměňujte povinnost dát přednost s povinností vždy zastavit.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Уступите дорогу имеющим преимущество. Остановка нужна, если без неё нельзя безопасно уступить.",
+      "simpleCs": "Zpomalte a dejte přednost; zastavte, je-li to pro bezpečný průjezd nutné.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 4",
+      "titleCs": "Dej přednost v jízdě!",
+      "titleRu": "Уступите дорогу",
+      "titleUk": "Дайте дорогу",
+      "uk": "Дайте дорогу тим, хто має перевагу. Зупиніться, якщо без цього не можна безпечно поступитися."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 5",
+      "confusedWith": [
+        "A 25",
+        "P 4"
+      ],
+      "driverActionsCs": "Sledujte tramvajovou trať a nechte tramvaj bezpečně projet.",
+      "exceptionsCs": [],
+      "meaningCs": "Ukládá dát přednost tramvaji, zejména v místě mimo křižovatku.",
+      "memoryCs": "Tramvaj má přednost podle této značky.",
+      "mistakeCs": "Nezaměňujte výstrahu před tramvají A 25 s tímto příkazem dát přednost.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Уступите дорогу трамваю там, где установлен знак, в том числе вне перекрёстка.",
+      "simpleCs": "Sledujte tramvajovou trať a nechte tramvaj bezpečně projet.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 5",
+      "titleCs": "Dej přednost v jízdě tramvaji!",
+      "titleRu": "Уступите дорогу трамваю",
+      "titleUk": "Дайте дорогу трамваю",
+      "uk": "Дайте дорогу трамваю там, де встановлено знак, зокрема поза перехрестям."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 6",
+      "confusedWith": [
+        "P 4"
+      ],
+      "driverActionsCs": "Zastavte na místě s rozhledem; teprve potom pokračujte, když můžete dát přednost.",
+      "exceptionsCs": [
+        "Před přejezdem lze použít v kombinaci s výstražným křížem."
+      ],
+      "meaningCs": "Přikazuje zastavit s náležitým rozhledem a následně dát přednost.",
+      "memoryCs": "STOP znamená zastavit, pak dát přednost.",
+      "mistakeCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "Полностью остановитесь там, откуда хорошо видно перекрёсток, затем уступите дорогу.",
+      "simpleCs": "Zastavte na místě s rozhledem; teprve potom pokračujte, když můžete dát přednost.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 6",
+      "titleCs": "Stůj, dej přednost v jízdě!",
+      "titleRu": "Стоп, уступите дорогу",
+      "titleUk": "Стоп, дайте дорогу",
+      "uk": "Повністю зупиніться там, звідки добре видно перехрестя, потім дайте дорогу."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 7",
+      "confusedWith": [
+        "P 8"
+      ],
+      "driverActionsCs": "Nevjíždějte do úzkého úseku, jestliže byste blokovali protijedoucí vozidlo.",
+      "exceptionsCs": [],
+      "meaningCs": "Přikazuje dát přednost protijedoucím, pokud se vozidla nemohou bezpečně vyhnout.",
+      "memoryCs": "Červená šipka je na vaší straně.",
+      "mistakeCs": "Nezaměňujte pořadí jízdy se značkou P 8 v opačném směru.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "На узком участке уступите встречному автомобилю, если безопасный разъезд невозможен.",
+      "simpleCs": "Nevjíždějte do úzkého úseku, jestliže byste blokovali protijedoucí vozidlo.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 7",
+      "titleCs": "Přednost protijedoucích vozidel",
+      "titleRu": "Уступите встречному транспорту",
+      "titleUk": "Дайте дорогу зустрічному транспорту",
+      "uk": "На вузькій ділянці дайте дорогу зустрічному авто, якщо безпечний роз’їзд неможливий."
+    },
+    {
+      "checkedAt": "2026-09-27",
+      "code": "P 8",
+      "confusedWith": [
+        "P 7"
+      ],
+      "driverActionsCs": "Přesto sledujte, zda lze úsek skutečně projet bezpečně.",
+      "exceptionsCs": [],
+      "meaningCs": "Informuje, že protijedoucí může do úzkého úseku vjet jen při bezpečném vyhnutí.",
+      "memoryCs": "Modrá šipka je na vaší straně.",
+      "mistakeCs": "Přednost neopravňuje k nebezpečnému vjezdu do obsazeného úseku.",
+      "questionLinks": [],
+      "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+      "ru": "У вас преимущество на узком участке, но проезжайте только тогда, когда это безопасно.",
+      "simpleCs": "Přesto sledujte, zda lze úsek skutečně projet bezpečně.",
+      "sourceIds": [
+        "decree-294-2015"
+      ],
+      "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 8",
+      "titleCs": "Přednost před protijedoucími vozidly",
+      "titleRu": "Преимущество перед встречным транспортом",
+      "titleUk": "Перевага перед зустрічним транспортом",
+      "uk": "У вас перевага на вузькій ділянці, але проїжджайте лише тоді, коли це безпечно."
     }
   ]
 }

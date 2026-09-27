@@ -20,6 +20,7 @@
   <string name="signs_all">Все</string>
   <string name="signs_unreviewed">Пояснение ещё не проверено.</string>
   <string name="signs_source">Источник: %1$s</string>
+  <string name="signs_related_official_questions">Практика по официальным вопросам</string>
   <string name="signs_graphic_pending">Графика пока не включена (проверяются права на использование).</string>
   <string name="first_aid">Первая помощь</string>
   <string name="czech">Чешский для экзамена</string>

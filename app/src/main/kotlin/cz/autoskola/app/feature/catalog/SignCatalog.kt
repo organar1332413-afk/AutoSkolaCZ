@@ -18,6 +18,7 @@ data class SignEntry(
     val mistakeCs: String?,
     val memoryCs: String?,
     val confusedWith: List<String>,
+    val relatedOfficialIds: List<String>,
     val ru: String?,
     val uk: String?,
 )
@@ -61,6 +62,11 @@ object SignCatalog {
                 memoryCs = card?.optString("memoryCs")?.takeIf { it.isNotBlank() },
                 confusedWith = card?.optJSONArray("confusedWith")?.let { related ->
                     (0 until related.length()).map { related.getString(it) }
+                }.orEmpty(),
+                relatedOfficialIds = card?.optJSONArray("questionLinks")?.let { links ->
+                    (0 until links.length()).map { links.getJSONObject(it) }
+                        .filter { it.getString("reviewStatus") == "VERIFIED" }
+                        .map { it.getString("officialId") }
                 }.orEmpty(),
                 ru = card?.getString("ru"),
                 uk = card?.getString("uk"),

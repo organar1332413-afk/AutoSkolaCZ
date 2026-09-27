@@ -185,6 +185,50 @@ def reconcile_warning_annex(records: list[dict]) -> list[dict]:
     return sorted(by_code.values(), key=lambda r: (PREFIXES_INDEX(r["code"]), r["code"]))
 
 
+def reconcile_priority_annex(records: list[dict]) -> list[dict]:
+    """Annex 2 has eight legal codes; VL numbered sheets are graphic variants."""
+    priority = {s["code"]: s for s in records if s["category"] == "priority"}
+    if set(priority) != {f"P {n}" for n in range(1, 9)}:
+        raise ValueError("Unexpected Annex 2 priority inventory")
+    for code, count in (("P 4", 3), ("P 5", 2), ("P 6", 3)):
+        priority[code]["graphicVariantCodes"] = [f"{code}-{n}" for n in range(1, count + 1)]
+    for sign in priority.values():
+        sign["familyCode"] = sign["code"]
+        sign.setdefault("graphicVariantCodes", [sign["code"]])
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 2 k vyhlášce č. 294/2015 Sb., {sign['code']}"
+    return records
+
+
+def reconcile_prohibition_annex(records: list[dict]) -> list[dict]:
+    """Reconcile Annex 3 legal codes, titles and printed VL sheet variants."""
+    prohibited = {s["code"]: s for s in records if s["category"] == "prohibition"}
+    expected = ({f"B {n}" for n in range(1, 20)} |
+                {f"B {n}{suffix}" for n in (20, 21, 22, 23, 24) for suffix in "ab"} |
+                {f"B {n}" for n in range(25, 35)} | {"B 30a"})
+    if set(prohibited) != expected:
+        raise ValueError(f"Annex 3 disagreement: {sorted(set(prohibited) ^ expected)}")
+    corrected_titles = {
+        "B 15": "Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
+        "B 16": "Zákaz vjezdu vozidel, jejichž výška přesahuje vyznačenou mez",
+        "B 18": "Zákaz vjezdu vozidel přepravujících nebezpečný náklad",
+        "B 19": "Zákaz vjezdu vozidel přepravujících náklad, který může způsobit ohrožení životního prostředí",
+    }
+    for code, title in corrected_titles.items():
+        prohibited[code]["titleCs"] = title
+    sheet_counts = {"B 1": 3, "B 2": 3, "B 4": 6, "B 13": 5,
+                    "B 20a": 13, "B 20b": 13, "B 27": 2, "B 32": 2, "B 34": 2}
+    for sign in prohibited.values():
+        code = sign["code"]
+        sign["familyCode"] = code
+        sign["graphicVariantCodes"] = (
+            [f"{code}-{n}" for n in range(1, sheet_counts[code] + 1)]
+            if code in sheet_counts else [code])
+        sign["sourceIds"] = list(dict.fromkeys(["decree-294-2015"] + sign["sourceIds"]))
+        sign["sourceProvision"] = f"Příloha č. 3 k vyhlášce č. 294/2015 Sb., {code}"
+    return records
+
+
 def validate(data: dict, sources: dict) -> dict:
     codes: set[str] = set()
     categories = Counter()
@@ -222,6 +266,13 @@ def validate(data: dict, sources: dict) -> dict:
 
 
 def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str] | None = None) -> None:
+    if official_ids is None:
+        refs = json.loads((CONTENT / "official_question_refs.json").read_text(encoding="utf-8"))
+        ordered = refs["officialIds"]
+        if (ordered != sorted(set(ordered)) or len(ordered) != refs["officialIdsCount"] or
+            sha256_bytes(canonical_bytes(ordered)) != refs["officialIdsSha256"]):
+            raise ValueError("Official question reference inventory drift")
+        official_ids = set(ordered)
     inventory = {sign["code"]: sign for sign in data["signs"]}
     seen: set[str] = set()
     for card in cards["cards"]:
@@ -249,9 +300,27 @@ def validate_cards(data: dict, cards: dict, sources: dict, official_ids: set[str
             raise ValueError(f"Unknown compared sign: {code}")
         if not card.get("sourceIds") or any(source_id not in sources for source_id in card["sourceIds"]):
             raise ValueError(f"Missing card source: {code}")
-        for official_id in card.get("questionOfficialIds", []):
-            if official_ids is None or official_id not in official_ids:
+        if card.get("questionOfficialIds"):
+            raise ValueError(f"Legacy question links lack review evidence: {code}")
+        linked: set[str] = set()
+        for link in card.get("questionLinks", []):
+            official_id = link["officialId"]
+            if official_id in linked or official_id not in official_ids:
                 raise ValueError(f"Question link lacks bank evidence: {code} / {official_id}")
+            linked.add(official_id)
+            if link["signId"] != code or link["reviewStatus"] not in {"VERIFIED", "REVIEW_REQUIRED", "REJECTED"}:
+                raise ValueError(f"Invalid question relationship: {code} / {official_id}")
+            evidence = link.get("evidence", {})
+            if link["reviewStatus"] == "VERIFIED":
+                if (link["evidenceType"] != "EXPLICIT_CODE_IN_OFFICIAL_QUESTION_TEXT" or
+                    re.search(rf"(?<!\w){re.escape(code)}(?!\w)", evidence.get("questionTextCs", "")) is None or
+                    not re.fullmatch(r"[a-f0-9]{64}", evidence.get("rawResponseSha256", "")) or
+                    not evidence.get("sourceUrl", "").startswith("https://etesty.md.gov.cz/")):
+                    raise ValueError(f"Question link not explicitly verified: {code} / {official_id}")
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
 
 
 def validate_guide(guide: dict, sources: dict) -> None:
@@ -282,6 +351,12 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["warningLegalCodesVerified"] = sum(s["category"] == "warning" for s in data["signs"])
     audit["warningGraphicExecutionsIndexed"] = sum(
         len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "warning")
+    audit["priorityLegalCodesVerified"] = sum(s["category"] == "priority" for s in data["signs"])
+    audit["priorityGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "priority")
+    audit["prohibitionLegalCodesVerified"] = sum(s["category"] == "prohibition" for s in data["signs"])
+    audit["prohibitionGraphicExecutionsIndexed"] = sum(
+        len(s["graphicVariantCodes"]) for s in data["signs"] if s["category"] == "prohibition")
     audit["canonicalFamilies"] = None
     audit["canonicalVariants"] = None
     audit["totalCards"] = len(cards["cards"])
@@ -296,8 +371,12 @@ def full_audit(data: dict, sources: dict) -> dict:
     audit["graphicsMissing"] = audit["total"] - audit["bundledImages"]
     audit["legalVerified"] = len(cards["cards"])
     audit["unreviewed"] = audit["unreviewedTeachingCards"]
-    audit["linkedQuestionsVerified"] = 0
-    audit["linkedQuestionsReviewRequired"] = 0
+    audit["linkedQuestionsVerified"] = len({link["officialId"] for c in cards["cards"]
+        for link in c.get("questionLinks", []) if link["reviewStatus"] == "VERIFIED"})
+    audit["linkedRelationshipsVerified"] = sum(link["reviewStatus"] == "VERIFIED" for c in cards["cards"]
+        for link in c.get("questionLinks", []))
+    audit["linkedQuestionsReviewRequired"] = sum(link["reviewStatus"] == "REVIEW_REQUIRED" for c in cards["cards"]
+        for link in c.get("questionLinks", []))
     return audit
 
 
@@ -323,7 +402,8 @@ def main() -> None:
             raise ValueError(f"Unexpected official PDF SHA-256: {path}")
     import subprocess
     text = subprocess.check_output(["pdftotext", "-layout", str(args.vl2019), "-"], text=True)
-    records = reconcile_warning_annex(add_legal_appendices(apply_2025_revision(parse_index(text))))
+    records = reconcile_prohibition_annex(reconcile_priority_annex(reconcile_warning_annex(
+        add_legal_appendices(apply_2025_revision(parse_index(text))))))
     data = {"schemaVersion": 1, "scope": "ministry-graphic-index-inventory",
             "verifiedAt": "2026-09-26", "inventoryCount": len(records), "signs": records}
     audit = full_audit(data, sources)

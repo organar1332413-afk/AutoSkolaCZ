@@ -2,17 +2,26 @@
 
 ## 27 September 2026 sign-catalog checkpoint
 
+The next content pass also reconciled all eight Annex 2 priority codes and
+all 40 Annex 3 prohibition codes, with **13** and **80** indexed graphic
+executions respectively. There are now **96/349** source-provision-tagged
+CS/RU/UK cards; 253 indexed rows still require card review. The hash-bound
+official question ID reference list covers the Stage 3B snapshot's 1136
+questions. One relationship is VERIFIED from a question that explicitly names
+`B 20a` (`RP2202014`); no image similarity or keyword-only relationship
+has been promoted. The other sign-to-question relationships remain unknown.
+The app only opens such a link when that official question is present in
+its current local question set.
+
 The figures in the original 26 September audit below are historical. The
 catalog now has **349 indexed rows**, still derived from **347 indexed
 families**, after splitting the legally distinct A 31a/b/c advance boards.
 All **44 Annex 1 warning codes** have individual CS/RU/UK teaching cards and
 exact source-provision pointers; five numbered VL sheet pairs are tracked as
 graphic executions of one legal code each, making **49 indexed warning
-graphic executions**. Six cards from the earlier checkpoint remain, so the
-current teaching total is **50/349**. The other 299 rows remain unreviewed.
-Only the warning annex has been reconciled code by code; a complete legal
-family/variant count for the whole catalog is **not yet known**. Images and
-verified question relationships are still zero. See
+graphic executions**. At the warning-only checkpoint the total was
+**50/349**, with 299 rows unreviewed. The full legal family/variant count for
+the whole catalog is **not yet known**. Images are still absent. See
 [graphics rights review](SIGN_GRAPHICS_LICENSE_REVIEW.md) and
 `content/learning/signs/audit.json` for the current counts.
 
