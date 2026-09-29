@@ -44,6 +44,17 @@
     "url": "https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.zip",
     "versionDate": "2025-07-01"
   },
+  "esbirka-294-2015-current-binary": {
+    "applicableFrom": "2025-07-01",
+    "applicableTo": null,
+    "checkedAt": "2026-09-29",
+    "retrievedAt": "2026-09-29",
+    "scope": "Binary TIFFs fetched directly from e-Sbírka sbr-externi by public file id. The reference page is used only to recover the public file id/filename mapping.",
+    "title": "e-Sbírka 294/2015 Sb. — current consolidated official binary illustrations",
+    "type": "official-consolidated-annex-binary",
+    "url": "https://e-sbirka.gov.cz/sb/2015/294/2025-07-01",
+    "versionDate": "2025-07-01"
+  },
   "md-sign-changes-2025": {
     "applicableFrom": "2025-07-01",
     "applicableTo": null,

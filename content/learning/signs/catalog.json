@@ -6207,8 +6207,25 @@
       "explanationUk": null,
       "familyCode": "IZ 7a",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "VERSION_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/871863/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/6b3f0f382f16f3d2f57ad6b6.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          245,
+          373
+        ],
+        "sha256": "6b3f0f382f16f3d2f57ad6b6e064ebc31838f57bcadba954f3502334fe3542e4",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871863/ORIGINAL/STAHNI/sbcr2015c122z0294p005o015.tif",
+        "sourceFileId": "871863",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o015.tif",
+        "sourceTiffSha256": "8df39fc750eea355f17f5c027fb7bf652bf19457031cbdb03f28301de219e806",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IZ 7a-1",
@@ -6222,7 +6239,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 14,
       "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 7a",
@@ -6243,8 +6261,25 @@
       "explanationUk": null,
       "familyCode": "IZ 7b",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "VERSION_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/871865/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/5aec06d1fb7b01ea6f1f0bcc.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          249,
+          360
+        ],
+        "sha256": "5aec06d1fb7b01ea6f1f0bcc01394dbbf33c838394d8b494f31debed75888111",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871865/ORIGINAL/STAHNI/sbcr2015c122z0294p005o016.tif",
+        "sourceFileId": "871865",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o016.tif",
+        "sourceTiffSha256": "b3ad8bd5fa7d5137271f7d4c5e6d7b2788663d87c9150f72648eb6a0f1c62f5f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IZ 7b-1",
@@ -6258,7 +6293,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 14,
       "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 7b",
@@ -6279,8 +6315,48 @@
       "explanationUk": null,
       "familyCode": "IZ 8a",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/871869/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/e31c21cde00738c2fab3bb1a.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              149,
+              153
+            ],
+            "sha256": "e31c21cde00738c2fab3bb1a104cf749c6f9856217513d1954a15a736e3c0e3a",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871869/ORIGINAL/STAHNI/sbcr2015c122z0294p005o018.tif",
+            "sourceFileId": "871869",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294p005o018.tif",
+            "sourceTiffSha256": "bee414901c480923f69660ee4edc184c0a67d4ef7253f65fc8b3b5f48d6f7b58",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/871867/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/efd70caea9bc08921402e38d.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          241,
+          389
+        ],
+        "sha256": "efd70caea9bc08921402e38d6d10b378739dd1a67b51c606ad1883ec7bf5f7f4",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871867/ORIGINAL/STAHNI/sbcr2015c122z0294p005o017.tif",
+        "sourceFileId": "871867",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o017.tif",
+        "sourceTiffSha256": "0dc48665b1ac8d0863ac2fec06869efff70807ea39dd3e78e0bccfd636f43665",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IZ 8a-1",
@@ -6300,7 +6376,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 14,
       "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 8a",
@@ -6367,8 +6444,48 @@
       "explanationUk": null,
       "familyCode": "IZ 9a",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/871875/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/92775f67251eb13466f907e2.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              261,
+              395
+            ],
+            "sha256": "92775f67251eb13466f907e2f51bd4b2cc0c8b48f569398a38066744bb24d72b",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871875/ORIGINAL/STAHNI/sbcr2015c122z0294_2016c033z0084p005o002.tif",
+            "sourceFileId": "871875",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294_2016c033z0084p005o002.tif",
+            "sourceTiffSha256": "5ba370ec4e89c5d0c874b25a65e334ade4f832a75b9cb62db589eb455b91a09b",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/871873/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/9e3a6807aaac7187f5143048.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          288,
+          293
+        ],
+        "sha256": "9e3a6807aaac7187f514304831df27f1b97815b5e21e96cfd1c8e3568abf38a2",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871873/ORIGINAL/STAHNI/sbcr2015c122z0294_2016c033z0084p005o001.tif",
+        "sourceFileId": "871873",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2016c033z0084p005o001.tif",
+        "sourceTiffSha256": "75f053a52be443c6d07b0f3b522d8272c9f6602a572ab4504f920a2ebc972bb9",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IZ 9a-1",
@@ -6384,7 +6501,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 14,
       "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9a",
@@ -6451,8 +6569,69 @@
       "explanationUk": null,
       "familyCode": "IP 1",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/871885/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/64b69ac0b930d8fb8f75d8ce.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              189,
+              121
+            ],
+            "sha256": "64b69ac0b930d8fb8f75d8cea79ea217e03e4cf2fe9374cdacf0c54ef3e92f2f",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871885/ORIGINAL/STAHNI/sbcr2015c122z0294p005o021.tif",
+            "sourceFileId": "871885",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294p005o021.tif",
+            "sourceTiffSha256": "6dc38482546a273340141eed0ed1ebe2bc9160c3cd6390c1db6eb28db0a32f6a",
+            "status": "VERIFIED"
+          },
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/871887/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/43bbcbfeaa7429db5972502c.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              345,
+              93
+            ],
+            "sha256": "43bbcbfeaa7429db5972502cc755fe7475b81cf65f4b9c653245d39ba3c4d620",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871887/ORIGINAL/STAHNI/sbcr2015c122z0294p005o022.tif",
+            "sourceFileId": "871887",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294p005o022.tif",
+            "sourceTiffSha256": "d080a53964d4c62f14e0ccfcc8ad972b69806ad2160fb27565cc9ea380766143",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/871883/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/f1faa2d8c85ddaf9a88c23de.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          193
+        ],
+        "sha256": "f1faa2d8c85ddaf9a88c23de8d5b88538ac0eb26b653c20092d0bf3591b1d196",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/871883/ORIGINAL/STAHNI/sbcr2015c122z0294p005o020.tif",
+        "sourceFileId": "871883",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o020.tif",
+        "sourceTiffSha256": "c0e05eba01fb3ba85d3a4764f227a3379c3039869f383d6d5924fff436c7c453",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IP 1"
@@ -6462,7 +6641,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 1",
@@ -6526,8 +6706,48 @@
       "explanationUk": null,
       "familyCode": "IP 10b",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/1535981/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/842a5654a658d70ba423946f.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              179,
+              173
+            ],
+            "sha256": "842a5654a658d70ba423946f40036088185ec0c2643c3a026b59fc52737829a9",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535981/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o021.tif",
+            "sourceFileId": "1535981",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294_2025c205z0205o021.tif",
+            "sourceTiffSha256": "78a0e6ef4e6e476e13f4fa0eda8628a682a2d041fd232914bb27a55d00f3af59",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872237/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/22e62318a9ff9829e019fd12.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          193,
+          196
+        ],
+        "sha256": "22e62318a9ff9829e019fd12a66e0276dc44df019b3a05723181365071311141",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872237/ORIGINAL/STAHNI/sbcr2015c122z0294p005o032.tif",
+        "sourceFileId": "872237",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o032.tif",
+        "sourceTiffSha256": "207324515a60b9b70890cd525c812d852fd08a11f0640164e0c09c606be52e8e",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IP 10b"
@@ -6540,7 +6760,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 14,
       "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 10b",
@@ -6847,8 +7068,48 @@
       "explanationUk": null,
       "familyCode": "IP 12",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/1535979/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/20542e52293d3697cf87dd11.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              173,
+              248
+            ],
+            "sha256": "20542e52293d3697cf87dd11b8d397d2d4f0d9b00ab6243b60fabb0fbbca4013",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535979/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o023.tif",
+            "sourceFileId": "1535979",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294_2025c205z0205o023.tif",
+            "sourceTiffSha256": "cea49a2a49f22c6dd6701a227f86ff22d627fc27bfd31658324620b313276416",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872253/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/de3153d35b685db9db82e57d.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          189,
+          273
+        ],
+        "sha256": "de3153d35b685db9db82e57da955567b7462ffba9baa53f896cc009049455fb7",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872253/ORIGINAL/STAHNI/sbcr2015c122z0294p005o040.tif",
+        "sourceFileId": "872253",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o040.tif",
+        "sourceTiffSha256": "5caba95cff56d2876f3c662b8c6fe0ca78bd769843351c3e91172ee6423dd022",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IP 12"
@@ -6861,7 +7122,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 14,
       "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 12",
@@ -7439,8 +7701,25 @@
       "explanationUk": null,
       "familyCode": "IP 20a",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872279/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/d697bdbebcb71a86e95e7ac2.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          249,
+          360
+        ],
+        "sha256": "d697bdbebcb71a86e95e7ac2811ac1fce9dadf6733c79305f2756f553b9b8f4c",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872279/ORIGINAL/STAHNI/sbcr2015c122z0294p005o052.tif",
+        "sourceFileId": "872279",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o052.tif",
+        "sourceTiffSha256": "79e4908031f6325e0c315ec61ff048e34185e71132b92f09dadeab2eac81702a",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IP 20a"
@@ -7453,7 +7732,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 20a",
@@ -9522,8 +9802,26 @@
       "explanationUk": null,
       "familyCode": "IS 1",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872683/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/501a6b352b8ef7a0bb63c337.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          341,
+          341
+        ],
+        "sha256": "501a6b352b8ef7a0bb63c3376667e9bdb25530dd4f6281fe5d2f648d56de7ee6",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872683/ORIGINAL/STAHNI/sbcr2015c122z0294p005o069.tif",
+        "sourceFileId": "872683",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o069.tif",
+        "sourceTiffSha256": "3d3cf1c7d47ee525917e582ba2c2bc60a4ae1a0ca72af0acc0d128f82b638c90",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 1d"
@@ -9536,7 +9834,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1d",
@@ -9557,8 +9856,26 @@
       "explanationUk": null,
       "familyCode": "IS 1",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872683/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/501a6b352b8ef7a0bb63c337.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          341,
+          341
+        ],
+        "sha256": "501a6b352b8ef7a0bb63c3376667e9bdb25530dd4f6281fe5d2f648d56de7ee6",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872683/ORIGINAL/STAHNI/sbcr2015c122z0294p005o069.tif",
+        "sourceFileId": "872683",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o069.tif",
+        "sourceTiffSha256": "3d3cf1c7d47ee525917e582ba2c2bc60a4ae1a0ca72af0acc0d128f82b638c90",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 1e"
@@ -9568,7 +9885,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1e",
@@ -9589,8 +9907,26 @@
       "explanationUk": null,
       "familyCode": "IS 1",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872683/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/501a6b352b8ef7a0bb63c337.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          341,
+          341
+        ],
+        "sha256": "501a6b352b8ef7a0bb63c3376667e9bdb25530dd4f6281fe5d2f648d56de7ee6",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872683/ORIGINAL/STAHNI/sbcr2015c122z0294p005o069.tif",
+        "sourceFileId": "872683",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o069.tif",
+        "sourceTiffSha256": "3d3cf1c7d47ee525917e582ba2c2bc60a4ae1a0ca72af0acc0d128f82b638c90",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 1f"
@@ -9600,7 +9936,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 1f",
@@ -10165,8 +10502,26 @@
       "explanationUk": null,
       "familyCode": "IS 2",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872685/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/b2c9209258b8877c885d42b2.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          333,
+          345
+        ],
+        "sha256": "b2c9209258b8877c885d42b2068df6beb2aed1373b0896ef5a9ef50ecce67a26",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872685/ORIGINAL/STAHNI/sbcr2015c122z0294p005o070.tif",
+        "sourceFileId": "872685",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o070.tif",
+        "sourceTiffSha256": "ec8f3c1dc1574676e734ac7ca8681d3e32b3c893cb76be4bdd65cbde17c1388f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 2a"
@@ -10179,7 +10534,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2a",
@@ -10200,8 +10556,26 @@
       "explanationUk": null,
       "familyCode": "IS 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872685/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/b2c9209258b8877c885d42b2.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          333,
+          345
+        ],
+        "sha256": "b2c9209258b8877c885d42b2068df6beb2aed1373b0896ef5a9ef50ecce67a26",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872685/ORIGINAL/STAHNI/sbcr2015c122z0294p005o070.tif",
+        "sourceFileId": "872685",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o070.tif",
+        "sourceTiffSha256": "ec8f3c1dc1574676e734ac7ca8681d3e32b3c893cb76be4bdd65cbde17c1388f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 2b"
@@ -10211,7 +10585,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2b",
@@ -10232,8 +10607,26 @@
       "explanationUk": null,
       "familyCode": "IS 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872685/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/b2c9209258b8877c885d42b2.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          333,
+          345
+        ],
+        "sha256": "b2c9209258b8877c885d42b2068df6beb2aed1373b0896ef5a9ef50ecce67a26",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872685/ORIGINAL/STAHNI/sbcr2015c122z0294p005o070.tif",
+        "sourceFileId": "872685",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o070.tif",
+        "sourceTiffSha256": "ec8f3c1dc1574676e734ac7ca8681d3e32b3c893cb76be4bdd65cbde17c1388f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 2c"
@@ -10243,7 +10636,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2c",
@@ -10264,8 +10658,26 @@
       "explanationUk": null,
       "familyCode": "IS 2",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872687/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/97458a6a21dfab736186650d.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          353,
+          424
+        ],
+        "sha256": "97458a6a21dfab736186650d2a51b8582308299f785099363dd260ad1edfa8d2",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872687/ORIGINAL/STAHNI/sbcr2015c122z0294p005o071.tif",
+        "sourceFileId": "872687",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o071.tif",
+        "sourceTiffSha256": "3f14049954655c87bd8753873531d6fcc518d3686f3244dec9527d9fe751421b",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 2d"
@@ -10278,7 +10690,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2d",
@@ -10299,8 +10712,26 @@
       "explanationUk": null,
       "familyCode": "IS 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872687/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/97458a6a21dfab736186650d.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          353,
+          424
+        ],
+        "sha256": "97458a6a21dfab736186650d2a51b8582308299f785099363dd260ad1edfa8d2",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872687/ORIGINAL/STAHNI/sbcr2015c122z0294p005o071.tif",
+        "sourceFileId": "872687",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o071.tif",
+        "sourceTiffSha256": "3f14049954655c87bd8753873531d6fcc518d3686f3244dec9527d9fe751421b",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 2e"
@@ -10310,7 +10741,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2e",
@@ -10331,8 +10763,26 @@
       "explanationUk": null,
       "familyCode": "IS 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872687/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/97458a6a21dfab736186650d.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          353,
+          424
+        ],
+        "sha256": "97458a6a21dfab736186650d2a51b8582308299f785099363dd260ad1edfa8d2",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872687/ORIGINAL/STAHNI/sbcr2015c122z0294p005o071.tif",
+        "sourceFileId": "872687",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o071.tif",
+        "sourceTiffSha256": "3f14049954655c87bd8753873531d6fcc518d3686f3244dec9527d9fe751421b",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 2f"
@@ -10342,7 +10792,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 2f",
@@ -10363,8 +10814,26 @@
       "explanationUk": null,
       "familyCode": "IS 3",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872689/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/24a564af825d1ae50f3cc4c3.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          321,
+          345
+        ],
+        "sha256": "24a564af825d1ae50f3cc4c3152b70086f88f3138830ddea22a97b7c55830335",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872689/ORIGINAL/STAHNI/sbcr2015c122z0294p005o072.tif",
+        "sourceFileId": "872689",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o072.tif",
+        "sourceTiffSha256": "298f61d7f5247f9405bb1d70a71bda527a0f4a82b4e2a9c5952658729e0e2f7f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 3a"
@@ -10377,7 +10846,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 3a",
@@ -10398,8 +10868,26 @@
       "explanationUk": null,
       "familyCode": "IS 3",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872689/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/24a564af825d1ae50f3cc4c3.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          321,
+          345
+        ],
+        "sha256": "24a564af825d1ae50f3cc4c3152b70086f88f3138830ddea22a97b7c55830335",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872689/ORIGINAL/STAHNI/sbcr2015c122z0294p005o072.tif",
+        "sourceFileId": "872689",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o072.tif",
+        "sourceTiffSha256": "298f61d7f5247f9405bb1d70a71bda527a0f4a82b4e2a9c5952658729e0e2f7f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 3b"
@@ -10409,7 +10897,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 3b",
@@ -10430,8 +10919,26 @@
       "explanationUk": null,
       "familyCode": "IS 3",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872689/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/24a564af825d1ae50f3cc4c3.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          321,
+          345
+        ],
+        "sha256": "24a564af825d1ae50f3cc4c3152b70086f88f3138830ddea22a97b7c55830335",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872689/ORIGINAL/STAHNI/sbcr2015c122z0294p005o072.tif",
+        "sourceFileId": "872689",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o072.tif",
+        "sourceTiffSha256": "298f61d7f5247f9405bb1d70a71bda527a0f4a82b4e2a9c5952658729e0e2f7f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 3c"
@@ -10441,7 +10948,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 3c",
@@ -10462,8 +10970,26 @@
       "explanationUk": null,
       "familyCode": "IS 4",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872691/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/543b88cb7ff54f5708d4fb96.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          333,
+          329
+        ],
+        "sha256": "543b88cb7ff54f5708d4fb967dfe0f553c6847afc020d9b54b23c42d3a8ee03f",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872691/ORIGINAL/STAHNI/sbcr2015c122z0294p005o073.tif",
+        "sourceFileId": "872691",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o073.tif",
+        "sourceTiffSha256": "ef41041a259eb50abbb767aa7f177bfffbd81eb869b9428ae557ba571600add3",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 4a"
@@ -10476,7 +11002,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 4a",
@@ -10497,8 +11024,26 @@
       "explanationUk": null,
       "familyCode": "IS 4",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872691/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/543b88cb7ff54f5708d4fb96.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          333,
+          329
+        ],
+        "sha256": "543b88cb7ff54f5708d4fb967dfe0f553c6847afc020d9b54b23c42d3a8ee03f",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872691/ORIGINAL/STAHNI/sbcr2015c122z0294p005o073.tif",
+        "sourceFileId": "872691",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o073.tif",
+        "sourceTiffSha256": "ef41041a259eb50abbb767aa7f177bfffbd81eb869b9428ae557ba571600add3",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 4b"
@@ -10508,7 +11053,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 4b",
@@ -10529,8 +11075,26 @@
       "explanationUk": null,
       "familyCode": "IS 4",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872691/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/543b88cb7ff54f5708d4fb96.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          333,
+          329
+        ],
+        "sha256": "543b88cb7ff54f5708d4fb967dfe0f553c6847afc020d9b54b23c42d3a8ee03f",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872691/ORIGINAL/STAHNI/sbcr2015c122z0294p005o073.tif",
+        "sourceFileId": "872691",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o073.tif",
+        "sourceTiffSha256": "ef41041a259eb50abbb767aa7f177bfffbd81eb869b9428ae557ba571600add3",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 4c"
@@ -10540,7 +11104,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 4c",
@@ -10604,8 +11169,48 @@
       "explanationUk": null,
       "familyCode": "IS 6",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/872697/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/eef87522ea41bca12f8e9d7b.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              185,
+              129
+            ],
+            "sha256": "eef87522ea41bca12f8e9d7b65325474cc3679a5b7ff8065e75addfe17aa9b84",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872697/ORIGINAL/STAHNI/sbcr2015c122z0294p005o076.tif",
+            "sourceFileId": "872697",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294p005o076.tif",
+            "sourceTiffSha256": "1536cee50168fb0594f04522a5fc8bb5a9930fe358d5033158950c213beb9178",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/872695/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/d4af249d4b48e71135aefc1d.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          385,
+          257
+        ],
+        "sha256": "d4af249d4b48e71135aefc1d0a45e064a9b8842fae5ddb015c451a622b80e309",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872695/ORIGINAL/STAHNI/sbcr2015c122z0294p005o075.tif",
+        "sourceFileId": "872695",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p005o075.tif",
+        "sourceTiffSha256": "2690eca2e877a3815c8076900cebc29d67b47cb77bbd42a3a4cce82a4d771b2d",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 6a"
@@ -10618,7 +11223,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": 15,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6a",
@@ -15229,8 +15835,48 @@
       "explanationUk": null,
       "familyCode": "V 8",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mappingEvidence": {
+              "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+              "referenceHref": "/souborove-dokumenty/884697/NAHLED",
+              "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+            },
+            "mime": "image/webp",
+            "path": "graphics/6c8f04274bd1725f6760acb1.webp",
+            "pixelMode": "RGB",
+            "pixelSize": [
+              296,
+              435
+            ],
+            "sha256": "6c8f04274bd1725f6760acb1823dd6c45ad73df81590af0a3fabf0f810b8ccff",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/884697/ORIGINAL/STAHNI/sbcr2015c122z0294_2016c033z0084p008o002.tif",
+            "sourceFileId": "884697",
+            "sourceId": "esbirka-294-2015-current-binary",
+            "sourceImageName": "sbcr2015c122z0294_2016c033z0084p008o002.tif",
+            "sourceTiffSha256": "3278879b953f6cc1f874c32a40d966360d4bf0b0014e61ea1c6821825eaed3ba",
+            "status": "VERIFIED"
+          }
+        ],
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/884695/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/36caf2f78b30431725750154.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          272,
+          410
+        ],
+        "sha256": "36caf2f78b30431725750154f5255ac862afac5da9b8be2fbcd9a9c985ff397b",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/884695/ORIGINAL/STAHNI/sbcr2015c122z0294_2016c033z0084p008o001.tif",
+        "sourceFileId": "884695",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2016c033z0084p008o001.tif",
+        "sourceTiffSha256": "477a3ca0b1ebae300bfa686d3ead8f965965805fe372fdd0492fd3024913283b",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "V 8b"
@@ -15240,7 +15886,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8b",
@@ -15421,8 +16068,26 @@
       "explanationUk": null,
       "familyCode": "S 10",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535911/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/dcbfeb3be4536823eba7cae6.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          179,
+          487
+        ],
+        "sha256": "dcbfeb3be4536823eba7cae60b806c9c96cfd1c4adf1b12b2c02db05f3efd9c7",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535911/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o059.tif",
+        "sourceFileId": "1535911",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o059.tif",
+        "sourceTiffSha256": "652cafc361a8ad5e3a6e7c7fdc150f1aea07d78e259153a859fc449bc070dd69",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 10a"
@@ -15432,7 +16097,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10a",
@@ -15453,8 +16119,26 @@
       "explanationUk": null,
       "familyCode": "S 10",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535911/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/dcbfeb3be4536823eba7cae6.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          179,
+          487
+        ],
+        "sha256": "dcbfeb3be4536823eba7cae60b806c9c96cfd1c4adf1b12b2c02db05f3efd9c7",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535911/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o059.tif",
+        "sourceFileId": "1535911",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o059.tif",
+        "sourceTiffSha256": "652cafc361a8ad5e3a6e7c7fdc150f1aea07d78e259153a859fc449bc070dd69",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 10b"
@@ -15464,7 +16148,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10b",
@@ -15485,8 +16170,26 @@
       "explanationUk": null,
       "familyCode": "S 10",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535911/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/dcbfeb3be4536823eba7cae6.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          179,
+          487
+        ],
+        "sha256": "dcbfeb3be4536823eba7cae60b806c9c96cfd1c4adf1b12b2c02db05f3efd9c7",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535911/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o059.tif",
+        "sourceFileId": "1535911",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o059.tif",
+        "sourceTiffSha256": "652cafc361a8ad5e3a6e7c7fdc150f1aea07d78e259153a859fc449bc070dd69",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 10c"
@@ -15496,7 +16199,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10c",
@@ -15517,8 +16221,26 @@
       "explanationUk": null,
       "familyCode": "S 11",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535909/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/fe46f640d3a44f31dadb044f.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          339
+        ],
+        "sha256": "fe46f640d3a44f31dadb044f9e0e647cca4c7424034d2c200c4d73517ef58c48",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535909/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o060.tif",
+        "sourceFileId": "1535909",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o060.tif",
+        "sourceTiffSha256": "7dba2f1e559fa0469c1c4c0bdfdd73f02384ff37720eec057462d41d4f8be119",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 11a"
@@ -15528,7 +16250,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 11a",
@@ -15549,8 +16272,26 @@
       "explanationUk": null,
       "familyCode": "S 11",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535909/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/fe46f640d3a44f31dadb044f.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          339
+        ],
+        "sha256": "fe46f640d3a44f31dadb044f9e0e647cca4c7424034d2c200c4d73517ef58c48",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535909/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o060.tif",
+        "sourceFileId": "1535909",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o060.tif",
+        "sourceTiffSha256": "7dba2f1e559fa0469c1c4c0bdfdd73f02384ff37720eec057462d41d4f8be119",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 11b"
@@ -15560,7 +16301,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 11b",
@@ -15621,8 +16363,25 @@
       "explanationUk": null,
       "familyCode": "S 12",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535905/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/a5babeb8341928a7c3ed2244.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          705
+        ],
+        "sha256": "a5babeb8341928a7c3ed2244ffeca38dc2bbfc007f1b66e915a47401c6f0fa66",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535905/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o062.tif",
+        "sourceFileId": "1535905",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o062.tif",
+        "sourceTiffSha256": "4e99f847e7ce6e3e543980e6f34fd178249d42361f130137d01dbe0178d6b4ca",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 12b"
@@ -15632,7 +16391,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 12b",
@@ -15653,8 +16413,25 @@
       "explanationUk": null,
       "familyCode": "S 13",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535903/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/3371a91ebd890c19a5715476.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          309,
+          160
+        ],
+        "sha256": "3371a91ebd890c19a57154768818058e402d8a7f4a4b5c5ce4a2419741be6c70",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535903/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o063.tif",
+        "sourceFileId": "1535903",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o063.tif",
+        "sourceTiffSha256": "208f7165eac2dfeab8623204ef00b352915aed0ce03c3294d1e6fd0daca11c74",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 13"
@@ -15664,7 +16441,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 13",
@@ -15685,8 +16463,25 @@
       "explanationUk": null,
       "familyCode": "S 14",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535901/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/5014177796fd83f8ef6c03df.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          309,
+          179
+        ],
+        "sha256": "5014177796fd83f8ef6c03dfd8f18c8a60f686be9f52d9173ba924c8f1f3bea0",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535901/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o064.tif",
+        "sourceFileId": "1535901",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o064.tif",
+        "sourceTiffSha256": "676cae6d2699f4352b09b3147fc824ad117c99db792b36d31c13c01cea343ce0",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 14a"
@@ -15696,7 +16491,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 14a",
@@ -15717,8 +16513,25 @@
       "explanationUk": null,
       "familyCode": "S 14",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535899/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/59fb00d3ee5d6e5eeba64339.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          309,
+          179
+        ],
+        "sha256": "59fb00d3ee5d6e5eeba64339dd3ca26010ed1db3d1bcb333915052f71eaef886",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535899/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o065.tif",
+        "sourceFileId": "1535899",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o065.tif",
+        "sourceTiffSha256": "905bc7cf73f41a3f4e53a193560061c613fcd54ee74f201dd1f704f7902855bf",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 14b"
@@ -15728,7 +16541,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 14b",
@@ -15749,8 +16563,25 @@
       "explanationUk": null,
       "familyCode": "S 15",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/887731/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/9de3aebaed88e2de6671a5a3.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          265,
+          193
+        ],
+        "sha256": "9de3aebaed88e2de6671a5a3113a285c9cae011b4cc8129763176a7ea71ebb96",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/887731/ORIGINAL/STAHNI/sbcr2015c122z0294p009o022.tif",
+        "sourceFileId": "887731",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p009o022.tif",
+        "sourceTiffSha256": "b8a7b3307f6d94ae02efb5d93d4768aa48576336bed0cb2fd4ec6c104960d70f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 15a"
@@ -15760,7 +16591,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15a",
@@ -15781,8 +16613,25 @@
       "explanationUk": null,
       "familyCode": "S 15",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/887733/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/25fa970ac154658319623f69.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          261,
+          192
+        ],
+        "sha256": "25fa970ac154658319623f690726126d83dfc2129429256359654139ef34397f",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/887733/ORIGINAL/STAHNI/sbcr2015c122z0294p009o023.tif",
+        "sourceFileId": "887733",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p009o023.tif",
+        "sourceTiffSha256": "70a84044253969a49090a7bd3500dcae32fc9b274a769b799faf89ea91c807a4",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 15b"
@@ -15792,7 +16641,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15b",
@@ -15853,8 +16703,25 @@
       "explanationUk": null,
       "familyCode": "S 15",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/887737/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/d96715e61ca5420c2bece3d3.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          261,
+          181
+        ],
+        "sha256": "d96715e61ca5420c2bece3d39d416ea2888abc0ac8a5042ce84b78c276dc5f61",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/887737/ORIGINAL/STAHNI/sbcr2015c122z0294p009o025.tif",
+        "sourceFileId": "887737",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p009o025.tif",
+        "sourceTiffSha256": "1be57453878866cae596c15a8dae2017dc00fc5d4a52ad9a1279931f01997736",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 15d"
@@ -15864,7 +16731,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15d",
@@ -15885,8 +16753,25 @@
       "explanationUk": null,
       "familyCode": "S 15",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/887739/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/83118fcc078f735afb4d9659.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          249,
+          189
+        ],
+        "sha256": "83118fcc078f735afb4d965985e170978eb3cac33e69d66665e26d6ee4016aaa",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/887739/ORIGINAL/STAHNI/sbcr2015c122z0294p009o026.tif",
+        "sourceFileId": "887739",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p009o026.tif",
+        "sourceTiffSha256": "017eb160bca397c75f1b1c1894e868bef78b383ebd12503e8d7e57144d1a5e42",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 15e"
@@ -15896,7 +16781,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15e",
@@ -15917,8 +16803,25 @@
       "explanationUk": null,
       "familyCode": "S 15",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/887741/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/412fe118ea16c56fa40e508f.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          257,
+          184
+        ],
+        "sha256": "412fe118ea16c56fa40e508f29bf7766b2e51ac4e079eb16f41b69350761c05b",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/887741/ORIGINAL/STAHNI/sbcr2015c122z0294p009o027.tif",
+        "sourceFileId": "887741",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p009o027.tif",
+        "sourceTiffSha256": "9f05a777ffbdc4727396b0008593afafaa1733801d8056905280fbfa9d6b4f08",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 15f"
@@ -15928,7 +16831,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15f",
@@ -15949,8 +16853,25 @@
       "explanationUk": null,
       "familyCode": "S 15",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/887743/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/698aa875b1776a749ff2bf21.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          257,
+          185
+        ],
+        "sha256": "698aa875b1776a749ff2bf2104428f2c4cdf9a81af78fecb97b022ff3f243ca0",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/887743/ORIGINAL/STAHNI/sbcr2015c122z0294p009o028.tif",
+        "sourceFileId": "887743",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294p009o028.tif",
+        "sourceTiffSha256": "ce24879958e9ad1fd1fa6fbc95b40768db547590fbce89a28aaf4ebcddb6c753",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 15g"
@@ -15960,7 +16881,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 15g",
@@ -15981,8 +16903,26 @@
       "explanationUk": null,
       "familyCode": "S 1",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535949/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/fb6852173d6a92874a8f1896.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          175,
+          468
+        ],
+        "sha256": "fb6852173d6a92874a8f1896fcda9b69084ea6dd3a67039a88fd250de518b38f",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535949/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o040.tif",
+        "sourceFileId": "1535949",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o040.tif",
+        "sourceTiffSha256": "f7d012edf90a0bcff420d503bcde35f29a25cfd9928949cdc7c1e760343dbdd7",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 1a"
@@ -15992,7 +16932,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1a",
@@ -16013,8 +16954,26 @@
       "explanationUk": null,
       "familyCode": "S 1",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535949/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/fb6852173d6a92874a8f1896.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          175,
+          468
+        ],
+        "sha256": "fb6852173d6a92874a8f1896fcda9b69084ea6dd3a67039a88fd250de518b38f",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535949/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o040.tif",
+        "sourceFileId": "1535949",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o040.tif",
+        "sourceTiffSha256": "f7d012edf90a0bcff420d503bcde35f29a25cfd9928949cdc7c1e760343dbdd7",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 1b"
@@ -16024,7 +16983,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1b",
@@ -16045,8 +17005,26 @@
       "explanationUk": null,
       "familyCode": "S 1",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535949/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/fb6852173d6a92874a8f1896.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          175,
+          468
+        ],
+        "sha256": "fb6852173d6a92874a8f1896fcda9b69084ea6dd3a67039a88fd250de518b38f",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535949/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o040.tif",
+        "sourceFileId": "1535949",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o040.tif",
+        "sourceTiffSha256": "f7d012edf90a0bcff420d503bcde35f29a25cfd9928949cdc7c1e760343dbdd7",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 1c"
@@ -16056,7 +17034,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1c",
@@ -16077,8 +17056,26 @@
       "explanationUk": null,
       "familyCode": "S 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535947/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/a9653cc1198fdbe23518b793.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          487
+        ],
+        "sha256": "a9653cc1198fdbe23518b793ddddd6defeaf87c026c76ef6e75b1eb10c37257a",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535947/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o041.tif",
+        "sourceFileId": "1535947",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o041.tif",
+        "sourceTiffSha256": "f1267c169fb541a8f85252c5d9138a6300f6f89280fbb7a32b768999b68e0efb",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 2a"
@@ -16088,7 +17085,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2a",
@@ -16109,8 +17107,26 @@
       "explanationUk": null,
       "familyCode": "S 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535947/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/a9653cc1198fdbe23518b793.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          487
+        ],
+        "sha256": "a9653cc1198fdbe23518b793ddddd6defeaf87c026c76ef6e75b1eb10c37257a",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535947/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o041.tif",
+        "sourceFileId": "1535947",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o041.tif",
+        "sourceTiffSha256": "f1267c169fb541a8f85252c5d9138a6300f6f89280fbb7a32b768999b68e0efb",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 2b"
@@ -16120,7 +17136,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2b",
@@ -16141,8 +17158,26 @@
       "explanationUk": null,
       "familyCode": "S 2",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535947/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/a9653cc1198fdbe23518b793.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          487
+        ],
+        "sha256": "a9653cc1198fdbe23518b793ddddd6defeaf87c026c76ef6e75b1eb10c37257a",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535947/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o041.tif",
+        "sourceFileId": "1535947",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o041.tif",
+        "sourceTiffSha256": "f1267c169fb541a8f85252c5d9138a6300f6f89280fbb7a32b768999b68e0efb",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 2c"
@@ -16152,7 +17187,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2c",
@@ -16173,8 +17209,26 @@
       "explanationUk": null,
       "familyCode": "S 3",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535945/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/741ed5bd37e65f18df273159.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          487
+        ],
+        "sha256": "741ed5bd37e65f18df273159a7ac6b76df58bd8ff0d34265a45426a114087aff",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535945/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o042.tif",
+        "sourceFileId": "1535945",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o042.tif",
+        "sourceTiffSha256": "a8565cf4b698e16ccb5e90d67fffd7f4ee472f554007fc0e88200e3c089eddb6",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 3a"
@@ -16184,7 +17238,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3a",
@@ -16205,8 +17260,26 @@
       "explanationUk": null,
       "familyCode": "S 3",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535945/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/741ed5bd37e65f18df273159.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          487
+        ],
+        "sha256": "741ed5bd37e65f18df273159a7ac6b76df58bd8ff0d34265a45426a114087aff",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535945/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o042.tif",
+        "sourceFileId": "1535945",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o042.tif",
+        "sourceTiffSha256": "a8565cf4b698e16ccb5e90d67fffd7f4ee472f554007fc0e88200e3c089eddb6",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 3b"
@@ -16216,7 +17289,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3b",
@@ -16237,8 +17311,26 @@
       "explanationUk": null,
       "familyCode": "S 3",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535945/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/741ed5bd37e65f18df273159.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          487
+        ],
+        "sha256": "741ed5bd37e65f18df273159a7ac6b76df58bd8ff0d34265a45426a114087aff",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535945/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o042.tif",
+        "sourceFileId": "1535945",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o042.tif",
+        "sourceTiffSha256": "a8565cf4b698e16ccb5e90d67fffd7f4ee472f554007fc0e88200e3c089eddb6",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 3c"
@@ -16248,7 +17340,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3c",
@@ -16269,8 +17362,25 @@
       "explanationUk": null,
       "familyCode": "S 4",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535943/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/7054f9a9e4040957adc00dbe.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          196,
+          196
+        ],
+        "sha256": "7054f9a9e4040957adc00dbe138e97414f850c0a669ccfcce42bda3bc0e09eec",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535943/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o043.tif",
+        "sourceFileId": "1535943",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o043.tif",
+        "sourceTiffSha256": "db41a45fe637eda061f8ae1aea805ac79f7bd35083d46ceb24ebe46aeab39412",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 4a"
@@ -16280,7 +17390,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 4a",
@@ -16301,8 +17412,25 @@
       "explanationUk": null,
       "familyCode": "S 4",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535941/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/5fb4f805e5b09662a91fc2d3.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          196,
+          190
+        ],
+        "sha256": "5fb4f805e5b09662a91fc2d33fa6cc19cef6ec6b4924afa35c9235b119a98b75",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535941/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o044.tif",
+        "sourceFileId": "1535941",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o044.tif",
+        "sourceTiffSha256": "5751af507aa7c839b0e4938ae95d36cd36d042461a65ae926855558d0d099a01",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 4b"
@@ -16312,7 +17440,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 4b",
@@ -16333,8 +17462,25 @@
       "explanationUk": null,
       "familyCode": "S 4",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535939/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/aca42e6db97a0e52b8523da1.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          190,
+          197
+        ],
+        "sha256": "aca42e6db97a0e52b8523da1e9697b866eae687f31e84e08d7ee973a5986e43b",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535939/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o045.tif",
+        "sourceFileId": "1535939",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o045.tif",
+        "sourceTiffSha256": "f72cfd299c81377ff991bd41cba8493dbd38fdceac4f14f24c919ba51b3f9c6f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 4c"
@@ -16344,7 +17490,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 4c",
@@ -16365,8 +17512,25 @@
       "explanationUk": null,
       "familyCode": "S 5",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535937/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/a8387928144cc0068bfd3b31.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          196,
+          196
+        ],
+        "sha256": "a8387928144cc0068bfd3b31ac87fc743017c2055c04a4a13798c1b9b4037b73",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535937/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o046.tif",
+        "sourceFileId": "1535937",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o046.tif",
+        "sourceTiffSha256": "1eb09c9f6f4e102d7e0a66eea31f64619a86f4e78dfa65f07256a613f795e80c",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 5"
@@ -16376,7 +17540,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 5",
@@ -16477,8 +17642,25 @@
       "explanationUk": null,
       "familyCode": "S 8",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535923/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/26880465580fbc70608bc45a.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          179,
+          173
+        ],
+        "sha256": "26880465580fbc70608bc45a8092af879bb8407afbf86b8924a4af01f4e566ab",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535923/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o053.tif",
+        "sourceFileId": "1535923",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o053.tif",
+        "sourceTiffSha256": "8726baeb17e5d62be6c8a7769d8a90b0c8ffac2db191237e1fa2327b230c8d05",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 8a"
@@ -16488,7 +17670,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8a",
@@ -16509,8 +17692,25 @@
       "explanationUk": null,
       "familyCode": "S 8",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535921/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/a7eb572cf3caca0ecbae05db.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          184
+        ],
+        "sha256": "a7eb572cf3caca0ecbae05db6b3432b2837301d9d93021da0f1ceb4491a5b09c",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535921/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o054.tif",
+        "sourceFileId": "1535921",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o054.tif",
+        "sourceTiffSha256": "90b3b914f021c4d42e4cd202962d953b79ffe69bd2c14c2244b65115cc947f1f",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 8b"
@@ -16520,7 +17720,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8b",
@@ -16541,8 +17742,25 @@
       "explanationUk": null,
       "familyCode": "S 8",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535919/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/2b775d1782262627e764c3dc.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          154
+        ],
+        "sha256": "2b775d1782262627e764c3dc8e9277265a8b346c4e73fd2e222dbadd79b08c22",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535919/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o055.tif",
+        "sourceFileId": "1535919",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o055.tif",
+        "sourceTiffSha256": "8f749940238281c05ea046f754a804e1f372e0a9141d5314cd2908aadde20e4c",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 8c"
@@ -16552,7 +17770,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8c",
@@ -16573,8 +17792,25 @@
       "explanationUk": null,
       "familyCode": "S 8",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535917/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/465a4beadc681e3eca77e344.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          154
+        ],
+        "sha256": "465a4beadc681e3eca77e3442da74c85836d7a63d47a3e5ce2fc688405b3eae7",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535917/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o056.tif",
+        "sourceFileId": "1535917",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o056.tif",
+        "sourceTiffSha256": "75692d6f83bee44fdcca31cd7389b5bdbfe37422b58017eaf6d1eb5068b9a206",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 8d"
@@ -16584,7 +17820,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8d",
@@ -16605,8 +17842,25 @@
       "explanationUk": null,
       "familyCode": "S 8",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535915/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/9cb235c0d814c1ed70579408.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          178,
+          168
+        ],
+        "sha256": "9cb235c0d814c1ed70579408c145ec7a1c16b87c22e1850346be219ec16b6b99",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535915/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o057.tif",
+        "sourceFileId": "1535915",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o057.tif",
+        "sourceTiffSha256": "3e7e74ef09744825ac6fd7ca80295805b6ac4cfbac11600e632c77ca0b88dc8c",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 8e"
@@ -16616,7 +17870,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8e",
@@ -16637,8 +17892,26 @@
       "explanationUk": null,
       "familyCode": "S 9",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535913/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/ac0c0b0c015c4017b881aefb.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          357
+        ],
+        "sha256": "ac0c0b0c015c4017b881aefbbc569639cbf7ac51ae499adacacc17b7c96aec74",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535913/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o058.tif",
+        "sourceFileId": "1535913",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o058.tif",
+        "sourceTiffSha256": "e64b425ee84463b654205c8d3134065551a5bcd0ad8c9a7b0cb5350e6702b253",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 9a"
@@ -16648,7 +17921,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 9a",
@@ -16669,8 +17943,26 @@
       "explanationUk": null,
       "familyCode": "S 9",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mappingEvidence": {
+          "method": "public-file-id lookup; binary fetched directly from e-Sbírka",
+          "referenceHref": "/souborove-dokumenty/1535913/NAHLED",
+          "referencePage": "https://nasezakony.cz/z/dopravni-znacky"
+        },
+        "mime": "image/webp",
+        "path": "graphics/ac0c0b0c015c4017b881aefb.webp",
+        "pixelMode": "RGB",
+        "pixelSize": [
+          185,
+          357
+        ],
+        "sha256": "ac0c0b0c015c4017b881aefbbc569639cbf7ac51ae499adacacc17b7c96aec74",
+        "shared": true,
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/1535913/ORIGINAL/STAHNI/sbcr2015c122z0294_2025c205z0205o058.tif",
+        "sourceFileId": "1535913",
+        "sourceId": "esbirka-294-2015-current-binary",
+        "sourceImageName": "sbcr2015c122z0294_2025c205z0205o058.tif",
+        "sourceTiffSha256": "e64b425ee84463b654205c8d3134065551a5bcd0ad8c9a7b0cb5350e6702b253",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "S 9b"
@@ -16680,7 +17972,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-current-binary"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 9b",
