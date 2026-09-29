@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(275, audit["bundledImages"])
-        self.assertEqual(271, audit["graphicsPresent"])
+        self.assertEqual(337, audit["bundledImages"])
+        self.assertEqual(333, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(137, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(135, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(75, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(73, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -254,6 +254,18 @@ class SignInventoryTest(unittest.TestCase):
             for sign in images:
                 self.assertIn(annex, sign["graphic"]["sourceArchivePath"])
                 self.assertTrue(sign["graphic"]["sourceFileId"])
+
+    def test_supplementary_and_marking_rows_leave_only_review_cases(self):
+        for category, annex, remaining in (
+            ("additional_panel", "_pril_6_", {"E 9"}),
+            ("road_marking", "_pril_8-bod_", {"V 8b"}),
+        ):
+            signs = [sign for sign in self.data["signs"] if sign["category"] == category]
+            self.assertEqual(remaining, {s["code"] for s in signs if not s["graphic"].get("path")})
+            for sign in signs:
+                if sign["code"] not in remaining:
+                    self.assertEqual("VERIFIED", sign["graphic"]["status"])
+                    self.assertIn(annex, sign["graphic"]["sourceArchivePath"])
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8

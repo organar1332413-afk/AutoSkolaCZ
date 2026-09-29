@@ -1,5 +1,15 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 supplementary panels and road markings
+
+Added **26 E** supplementary-panel and **36 V** road-marking graphics from
+exact single-code rows in Annexes 6 and 8. Each asset retains the TIFF
+file ID and hashes and passed independent decoded-pixel comparison. E now
+has **32/33** cards with images (`E 9` has no separately identified image
+in the archive row); V has **39/40** (`V 8b` has two official illustrations
+to review). Overall: **337 files for 333 cards**, **75 cards** without an
+image. The module remains WIP.
+
 ## 29 September 2026 remaining IJ and single-row IS graphics
 
 Added eight `IJ` other-information cards and 35 `IS` direction cards with
