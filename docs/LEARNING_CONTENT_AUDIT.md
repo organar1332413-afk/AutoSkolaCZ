@@ -1,5 +1,15 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 prohibition graphics B 3–B 7
+
+Added six individually traced Annex 3 illustrations for five codes: `B 3`,
+`B 4` (two official illustrations, including the 2025 amendment), `B 5`,
+`B 6`, and `B 7`. The lossless WebP decoded pixels match the identified
+TIFFs and the legal annex rows. The catalog now references **107 files across
+103 code cards**; **305 cards** still lack images. The two B 4 illustrations
+do not establish coverage of all six indexed VL variants. Module readiness
+and the canonical variant total remain unproven.
+
 ## 29 September 2026 prohibition graphics batch
 
 Added official Annex 3 TIFF-derived graphics for `B 14`, `B 15`, `B 16`,
