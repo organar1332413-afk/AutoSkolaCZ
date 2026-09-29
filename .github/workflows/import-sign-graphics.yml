@@ -27,10 +27,21 @@ jobs:
 
       - name: Download pinned official e-Sbírka archive
         run: |
-          curl --fail --location --retry 3 --connect-timeout 20 --max-time 180 \
-            'https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.zip' \
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 600 \
+            'https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.ZIP' \
             --output /tmp/294-2025-07-01.zip
           sha256sum /tmp/294-2025-07-01.zip
+          python - <<'PY'
+          import zipfile
+          p = '/tmp/294-2025-07-01.zip'
+          with zipfile.ZipFile(p) as z:
+              names = z.namelist()
+              tiffs = [n for n in names if n.endswith('.tiff')]
+              metadata = [n for n in names if n.endswith('_IZ.json')]
+              print(f'archive entries={len(names)} tiffs={len(tiffs)} metadata={len(metadata)}')
+              if len(tiffs) < 300 or not metadata:
+                  raise SystemExit('Downloaded archive is not the full consolidated annex ZIP')
+          PY
 
       - name: Import exact-row missing graphics
         run: |
