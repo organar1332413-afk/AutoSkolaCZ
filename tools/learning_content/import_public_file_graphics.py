@@ -150,6 +150,26 @@ def build_mapping(page_raw: bytes, signs: dict[str, dict]) -> tuple[dict[str, li
     return mapping, unresolved
 
 
+def candidate_allowed(code: str, filename: str) -> bool:
+    """Reject annex spillover caused by HTML rowspans while keeping real variants."""
+    lower = filename.lower()
+    if code.startswith("IS "):
+        # Direction signs are Annex 5. The long HTML table can expose the prior
+        # IP 20a image (o052) as part of a rowspan; it is never an IS graphic.
+        return ("p005o" in lower or "_2025c205z0205o" in lower) and not lower.endswith("p005o052.tif")
+    if code.startswith("S "):
+        # Signals are Annex 9. p009o029 is only the legend showing an illuminated
+        # lens, not an atomic S-code illustration.
+        if lower.endswith("p009o029.tif"):
+            return False
+        return "p009o" in lower or "_2025c205z0205o" in lower
+    if code == "V 8b":
+        return "p008o" in lower
+    if code.startswith(("IP ", "IZ ")):
+        return "p005o" in lower or "_2023c182z0386o" in lower or "_2025c205z0205o" in lower or "_2016c033z0084p005o" in lower
+    return True
+
+
 def all_images(sign: dict) -> list[dict]:
     graphic = sign.get("graphic", {})
     if not graphic.get("path"):
@@ -188,7 +208,10 @@ def run(*, apply: bool) -> dict:
     no_mapping: list[str] = []
 
     for code in missing_before:
-        candidates = mapping.get(code, [])
+        candidates = [
+            candidate for candidate in mapping.get(code, [])
+            if candidate_allowed(code, candidate["filename"])
+        ]
         if not candidates:
             no_mapping.append(code)
             continue
