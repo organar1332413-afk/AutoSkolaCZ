@@ -2,41 +2,17 @@
   "downloadedOfficialBinaries": 0,
   "imported": {},
   "importedCards": 0,
-  "missingBefore": 15,
+  "missingBefore": 3,
   "noMappingCodes": [
     "E 9",
     "IS 16b",
-    "IS 19a",
-    "IS 19b",
-    "IS 19c",
-    "IS 20",
-    "IS 21a",
-    "IS 21b",
-    "IS 21c",
-    "IS 22a",
-    "IS 22b",
-    "IS 22c",
-    "IS 22d",
-    "IS 22e",
-    "IS 22f"
+    "IS 20"
   ],
   "referencePage": "https://nasezakony.cz/z/dopravni-znacky",
   "remainingCodes": [
     "E 9",
     "IS 16b",
-    "IS 19a",
-    "IS 19b",
-    "IS 19c",
-    "IS 20",
-    "IS 21a",
-    "IS 21b",
-    "IS 21c",
-    "IS 22a",
-    "IS 22b",
-    "IS 22c",
-    "IS 22d",
-    "IS 22e",
-    "IS 22f"
+    "IS 20"
   ],
   "unresolvedReferenceAnchors": []
 }
