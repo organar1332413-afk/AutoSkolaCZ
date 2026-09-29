@@ -54,6 +54,9 @@ def image_name(anchor) -> str | None:
         anchor.text_content(),
         anchor.get("title") or "",
         anchor.get("aria-label") or "",
+        anchor.get("alt") or "",
+        anchor.get("src") or "",
+        anchor.get("href") or "",
     ]
     for img in anchor.xpath(".//img"):
         values.extend([img.get("alt") or "", img.get("title") or "", img.get("src") or ""])
@@ -129,9 +132,12 @@ def build_mapping(page_raw: bytes, signs: dict[str, dict]) -> tuple[dict[str, li
     doc = html.fromstring(page_raw)
     mapping: dict[str, list[dict]] = defaultdict(list)
     unresolved: list[dict] = []
-    anchors = doc.xpath('//a[contains(@href, "/souborove-dokumenty/")]')
+    anchors = doc.xpath(
+        '//a[contains(@href, "/souborove-dokumenty/")] | '
+        '//img[contains(@src, "/souborove-dokumenty/")]'
+    )
     for anchor in anchors:
-        href = anchor.get("href") or ""
+        href = anchor.get("href") or anchor.get("src") or ""
         id_match = ID_RE.search(href)
         filename = image_name(anchor)
         if not id_match or not filename:
@@ -150,6 +156,7 @@ def build_mapping(page_raw: bytes, signs: dict[str, dict]) -> tuple[dict[str, li
         for code in codes:
             if item not in mapping[code]:
                 mapping[code].append(item)
+    print(f"Reference mapping elements={len(anchors)} mappedCodes={len(mapping)} unresolved={len(unresolved)}")
     return mapping, unresolved
 
 
