@@ -172,6 +172,17 @@ def import_batch(archive_path: Path, categories: list[str], limit: int, excluded
             for code, path in attempted.items():
                 if code not in pending:
                     path.unlink(missing_ok=True)
+            referenced = {
+                CONTENT / image["path"]
+                for sign in catalog["signs"]
+                for image in ([sign["graphic"], *sign["graphic"].get("additionalImages", [])]
+                              if sign["graphic"].get("path") else [])
+            }
+            for path in (CONTENT / "graphics").glob("*"):
+                if path.is_file() and path not in referenced:
+                    if path not in attempted.values():
+                        raise ValueError(f"Unrelated orphan graphic: {path}")
+                    path.unlink()
             audit = full_audit(catalog, sources)
             (CONTENT / "catalog.json").write_bytes(canonical_bytes(catalog))
             (CONTENT / "audit.json").write_bytes(canonical_bytes(audit))

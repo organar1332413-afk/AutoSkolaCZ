@@ -1,5 +1,16 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 traffic and other information graphics
+
+Added **18 IP traffic** and **18 IJ other information** cards with unique
+official Annex 5 TIFFs, exact single-code rows, file IDs and independent
+lossless pixel checks. IP traffic now has graphics on **43/47** cards; the
+four remaining codes (`IP 1`, `IP 10b`, `IP 12`, `IP 20a`) have multiple
+official illustrations and await variant review. IJ has **20/28** cards
+with graphics. The catalog now has **232 image files across 228 cards**;
+**180 cards** still lack images. Across this run, **113 previously missing
+cards** gained graphics. `productionReady=false`.
+
 ## 29 September 2026 zone and traffic information graphics
 
 Added **18 IZ zone** and **18 IP traffic information** code illustrations.

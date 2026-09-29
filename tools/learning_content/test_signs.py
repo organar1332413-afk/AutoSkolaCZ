@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(196, audit["bundledImages"])
-        self.assertEqual(192, audit["graphicsPresent"])
+        self.assertEqual(232, audit["bundledImages"])
+        self.assertEqual(228, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(216, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(214, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(180, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(178, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -231,6 +231,17 @@ class SignInventoryTest(unittest.TestCase):
         for code in ("IZ 7a", "IZ 7b", "IZ 8a", "IZ 9a"):
             self.assertFalse(by_code[code]["graphic"].get("path"))
         self.assertEqual("872275", by_code["IP 18c"]["graphic"]["sourceFileId"])
+
+    def test_traffic_information_is_complete_except_multi_illustration_rows(self):
+        traffic = [sign for sign in self.data["signs"] if sign["category"] == "information_traffic"]
+        missing = {sign["code"] for sign in traffic if not sign["graphic"].get("path")}
+        self.assertEqual({"IP 1", "IP 10b", "IP 12", "IP 20a"}, missing)
+        for sign in traffic:
+            if sign["code"] not in missing:
+                self.assertEqual("VERIFIED", sign["graphic"]["status"])
+                self.assertIn("_pril_5-bod_2_", sign["graphic"]["sourceArchivePath"])
+        other = [sign for sign in self.data["signs"] if sign["category"] == "information_other"]
+        self.assertEqual(20, sum(bool(sign["graphic"].get("path")) for sign in other))
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8
