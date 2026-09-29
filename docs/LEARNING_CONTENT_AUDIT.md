@@ -1,5 +1,13 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 prohibition graphics B 21b–B 22b
+
+Added three distinct Annex 3 illustrations for `B 21b` (end of overtaking
+ban, file `841323`), `B 22a` (truck overtaking ban, file `841325`) and
+`B 22b` (end of truck overtaking ban, file `841327`). Each lossless WebP
+matches its source TIFF pixels. There are **115 files across 111 code
+cards**; **297 cards** still lack images.
+
 ## 29 September 2026 prohibition graphics B 20a–B 21a
 
 Added three Annex 3 illustrations: `B 20a` (80 km/h, file `841317`),
