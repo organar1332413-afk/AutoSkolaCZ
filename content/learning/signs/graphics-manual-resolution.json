@@ -31,6 +31,48 @@
       "panelCount": null,
       "scopeReview": "VL 6.1 prints E 9-1 through E 9-9, while the consolidated legal annex has one E9 row and one official TIFF. Only that illustrated legal code is included; no separate legal codes or unseen graphics are invented."
     },
+    "IS 16b": {
+      "annexFragmentId": 1075596043,
+      "codeImages": {
+        "IS 16b": [
+          "graphics/81a6a79f0e29556c08641791.webp",
+          "graphics/eeb3816b94aab431de726d61.webp"
+        ]
+      },
+      "legalCodesInOfficialRow": [
+        "IS 16b"
+      ],
+      "mapping": "one legal code, all TIFFs from its exact official row",
+      "officialIllustrationCount": 2,
+      "officialRowSha256": "557da47042f24191736c9c02ac94aac98a25613dae0d42a29187400009985160",
+      "officialTiffs": [
+        {
+          "imageOrdinalInFragment": 46,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875739/ORIGINAL/STAHNI/sbcr2015c122z0294p005o105.tif",
+          "officialFilename": "sbcr2015c122z0294p005o105.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_046_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875739",
+          "sourcePixelSize": [
+            173,
+            117
+          ],
+          "sourceTiffSha256": "a9294b1e5687a8964faef68c83c39afabf8fb6b763957ddaf28c3d4b4102ed20"
+        },
+        {
+          "imageOrdinalInFragment": 47,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875741/ORIGINAL/STAHNI/sbcr2015c122z0294p005o106.tif",
+          "officialFilename": "sbcr2015c122z0294p005o106.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_047_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875741",
+          "sourcePixelSize": [
+            161,
+            101
+          ],
+          "sourceTiffSha256": "b9cb494208a2b5699cae1ac5d8c5744b89d1ab5a904ee3224abc3cb759e49bd8"
+        }
+      ],
+      "panelCount": null
+    },
     "IS 19": {
       "annexFragmentId": 1075596043,
       "codeImages": {

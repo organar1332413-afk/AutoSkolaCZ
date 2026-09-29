@@ -9416,8 +9416,64 @@
       "explanationUk": null,
       "familyCode": "IS 16",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "additionalImages": [
+          {
+            "mime": "image/webp",
+            "path": "graphics/eeb3816b94aab431de726d61.webp",
+            "pixelSize": [
+              161,
+              101
+            ],
+            "provenance": {
+              "annexFragmentId": 1075596043,
+              "imageOrdinalInFragment": 47,
+              "method": "exact-single-code-row",
+              "panelCount": null,
+              "panelOrdinal": null,
+              "rowCodes": [
+                "IS 16b"
+              ],
+              "rowImageCount": 2,
+              "sourceCropBox": null
+            },
+            "sha256": "eeb3816b94aab431de726d6155050ce1cf71b14f76015a8484b7bd32ae286254",
+            "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_047_pril_5-bod_3_frag_1075596043_IZ.tiff",
+            "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875741/ORIGINAL/STAHNI/sbcr2015c122z0294p005o106.tif",
+            "sourceFileId": "875741",
+            "sourceId": "esbirka-294-2015-2025-07-01-zip",
+            "sourceImageName": "sbcr2015c122z0294p005o106.tif",
+            "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 16b",
+            "sourceTiffSha256": "b9cb494208a2b5699cae1ac5d8c5744b89d1ab5a904ee3224abc3cb759e49bd8",
+            "status": "VERIFIED"
+          }
+        ],
+        "mime": "image/webp",
+        "path": "graphics/81a6a79f0e29556c08641791.webp",
+        "pixelSize": [
+          173,
+          117
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 46,
+          "method": "exact-single-code-row",
+          "panelCount": null,
+          "panelOrdinal": null,
+          "rowCodes": [
+            "IS 16b"
+          ],
+          "rowImageCount": 2,
+          "sourceCropBox": null
+        },
+        "sha256": "81a6a79f0e29556c086417913c6caf4b8c1259216910ccffced02b637133da0c",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_046_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875739/ORIGINAL/STAHNI/sbcr2015c122z0294p005o105.tif",
+        "sourceFileId": "875739",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o105.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 16b",
+        "sourceTiffSha256": "a9294b1e5687a8964faef68c83c39afabf8fb6b763957ddaf28c3d4b4102ed20",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 16b"
@@ -9430,7 +9486,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 16,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 16b",

@@ -44,8 +44,10 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertGreaterEqual(audit["bundledImages"], 385)
-        self.assertGreaterEqual(audit["graphicsPresent"], 393)
+        self.assertGreaterEqual(audit["bundledImages"], 402)
+        self.assertEqual(408, audit["graphicsPresent"])
+        self.assertEqual(408, audit["graphicLicenseVerified"])
+        self.assertEqual(0, audit["graphicsMissing"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
         remaining_ceiling = {
@@ -54,7 +56,8 @@ class SignInventoryTest(unittest.TestCase):
             "IS 22d", "IS 22e", "IS 22f",
         }
         self.assertTrue(set(audit["graphicsMissingCodes"]).issubset(remaining_ceiling))
-        self.assertLessEqual(audit["graphicLicenseReviewRequired"], len(remaining_ceiling))
+        self.assertEqual([], audit["graphicsMissingCodes"])
+        self.assertEqual(0, audit["graphicLicenseReviewRequired"])
         self.assertEqual([], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -94,7 +97,7 @@ class SignInventoryTest(unittest.TestCase):
     def test_manual_single_code_rows_preserve_only_official_illustrations(self):
         evidence = json.loads((CONTENT / "graphics-manual-resolution.json").read_text())
         signs = {sign["code"]: sign for sign in self.data["signs"]}
-        for code, count in (("IS 20", 2), ("E 9", 1)):
+        for code, count in (("IS 16b", 2), ("IS 20", 2), ("E 9", 1)):
             row = evidence["families"][code]
             self.assertEqual([code], row["legalCodesInOfficialRow"])
             self.assertEqual(count, row["officialIllustrationCount"])
@@ -113,6 +116,9 @@ class SignInventoryTest(unittest.TestCase):
                 self.assertEqual([code], image["provenance"]["rowCodes"])
         self.assertEqual(["E 9"], signs["E 9"]["graphicVariantCodes"])
         self.assertEqual(["IS 20"], signs["IS 20"]["graphicVariantCodes"])
+        self.assertEqual(["IS 16b"], signs["IS 16b"]["graphicVariantCodes"])
+        self.assertEqual(15, sum(len(row["legalCodesInOfficialRow"])
+                                 for row in evidence["families"].values()))
 
     def test_duplicate_code_rejected(self):
         data = copy.deepcopy(self.data)
