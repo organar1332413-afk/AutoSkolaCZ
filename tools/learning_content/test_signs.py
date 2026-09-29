@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(160, audit["bundledImages"])
-        self.assertEqual(156, audit["graphicsPresent"])
+        self.assertEqual(196, audit["bundledImages"])
+        self.assertEqual(192, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(252, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(250, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(216, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(214, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -219,6 +219,18 @@ class SignInventoryTest(unittest.TestCase):
                     self.assertTrue(sign["graphic"]["sourceFileId"])
         self.assertEqual("841345", by_code["B 29"]["graphic"]["sourceFileId"])
         self.assertEqual("image/png", by_code["B 29"]["graphic"]["mime"])
+
+    def test_zone_graphics_leave_version_and_multi_illustration_cases_open(self):
+        by_code = {sign["code"]: sign for sign in self.data["signs"]}
+        zone = [sign for sign in self.data["signs"] if sign["category"] == "information_zone"]
+        verified = [sign for sign in zone if sign["graphic"].get("path")]
+        self.assertEqual(18, len(verified))
+        for sign in verified:
+            self.assertIn("_pril_5-bod_1_", sign["graphic"]["sourceArchivePath"])
+            self.assertTrue(sign["graphic"]["sourceFileId"])
+        for code in ("IZ 7a", "IZ 7b", "IZ 8a", "IZ 9a"):
+            self.assertFalse(by_code[code]["graphic"].get("path"))
+        self.assertEqual("872275", by_code["IP 18c"]["graphic"]["sourceFileId"])
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8

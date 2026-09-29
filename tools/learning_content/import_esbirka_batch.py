@@ -137,11 +137,34 @@ def import_batch(archive_path: Path, categories: list[str], limit: int, excluded
                     [sys.executable, "-c", check, str(path)], input=archive.read(name), capture_output=True
                 )
                 if verified.returncode:
-                    skipped[code] = "separate-process pixel check failed; manual review"
                     path.unlink(missing_ok=True)
                     created.remove(path)
-                    added = [entry for entry in added if entry[0] != code]
-                    del pending[code]
+                    png_path = path.with_suffix(".png")
+                    png_convert = (
+                        "import io,sys; from PIL import Image; "
+                        "Image.open(io.BytesIO(sys.stdin.buffer.read())).convert('RGB').save(sys.argv[1],'PNG')"
+                    )
+                    fallback = subprocess.run(
+                        [sys.executable, "-c", png_convert, str(png_path)],
+                        input=archive.read(name), capture_output=True,
+                    ) if not png_path.exists() else None
+                    png_check = subprocess.run(
+                        [sys.executable, "-c", check, str(png_path)],
+                        input=archive.read(name), capture_output=True,
+                    ) if fallback and fallback.returncode == 0 else None
+                    if png_check and png_check.returncode == 0:
+                        created.append(png_path)
+                        pending[code].update(
+                            mime="image/png", path=str(png_path.relative_to(CONTENT)),
+                            sha256=hashlib.sha256(png_path.read_bytes()).hexdigest(),
+                        )
+                        added = [(c, fid, n, str(png_path.relative_to(CONTENT)) if c == code else relpath)
+                                 for c, fid, n, relpath in added]
+                    else:
+                        png_path.unlink(missing_ok=True) if fallback else None
+                        skipped[code] = "WebP and PNG pixel checks failed; manual review"
+                        added = [entry for entry in added if entry[0] != code]
+                        del pending[code]
             for code, graphic in pending.items():
                 signs[code]["graphic"] = graphic
                 if SOURCE_ID not in signs[code]["sourceIds"]:

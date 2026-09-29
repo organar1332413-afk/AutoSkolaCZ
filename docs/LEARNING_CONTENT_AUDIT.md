@@ -1,5 +1,16 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 zone and traffic information graphics
+
+Added **18 IZ zone** and **18 IP traffic information** code illustrations.
+Every image has a unique TIFF pixel match, exact single-code annex row,
+source file ID, archive path and lossless local pixel check. `IZ 7a` and
+`IZ 7b` remain under effective-version review; `IZ 8a`, `IZ 9a`, `IP 1`,
+`IP 10b`, `IP 12` and `IP 20a` have multiple official illustrations and
+need deliberate variant handling. The catalog now has **196 files across
+192 code cards**; **216 cards** still lack images. This is a source-fidelity
+checkpoint, not a claim that all variants are complete.
+
 ## 29 September 2026 complete prohibition and mandatory graphics
 
 The remaining **11 B prohibition** and **30 C mandatory** code cards now
