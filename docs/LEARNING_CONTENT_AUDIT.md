@@ -1,5 +1,12 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 prohibition graphics B 8–B 9
+
+Added two Annex 3 images individually matched to `B 8` (bicycles, source
+file `840293`) and `B 9` (animal-drawn vehicles, source file `840295`). The
+catalog now contains **109 files across 105 code cards**, leaving **303 cards**
+without an image. Source TIFF and lossless WebP pixels match exactly.
+
 ## 29 September 2026 prohibition graphics B 3–B 7
 
 Added six individually traced Annex 3 illustrations for five codes: `B 3`,

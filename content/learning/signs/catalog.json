@@ -3778,8 +3778,15 @@
       "explanationUk": null,
       "familyCode": "B 8",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/453a9fd46c58ea297a62c54f.webp",
+        "sha256": "a6666465ee666d73402ed8af1099cdcdf22ebc02210839999db9d9777deb9098",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_009_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840293",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o009.tif",
+        "sourceTiffSha256": "78f372aa21206d8f0ab51d75c7e764695898f311c3aafa4cbb2458996d6b6543",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 8"
@@ -3792,7 +3799,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 8",
@@ -3813,8 +3821,15 @@
       "explanationUk": null,
       "familyCode": "B 9",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/2c85360cc4f79b34bb07ef45.webp",
+        "sha256": "dac2732431d2fb0c2b6ed9f42368b36ad0f423b732b545c028d0d6a771914875",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_010_pril_3_frag_1075596033_IZ.tiff",
+        "sourceFileId": "840295",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p003o010.tif",
+        "sourceTiffSha256": "05e9e13b88ef1395992dd60a28727c7e765e07af1e525a056721eb6ca058d972",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "B 9"
@@ -3827,7 +3842,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 12,
       "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 9",
