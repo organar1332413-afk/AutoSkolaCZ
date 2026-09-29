@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(96, audit["bundledImages"])
-        self.assertEqual(93, audit["graphicsPresent"])
+        self.assertEqual(101, audit["bundledImages"])
+        self.assertEqual(98, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(315, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(313, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(310, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(308, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -122,6 +122,21 @@ class SignInventoryTest(unittest.TestCase):
                 sign["graphic"]["shared"] = True
                 shared["graphic"]["shared"] = True
                 self.assertEqual(2, validate({"signs": [sign, shared], "inventoryCount": 2}, self.sources)["total"])
+
+    def test_prohibition_batch_has_distinct_annex_three_sources(self):
+        by_code = {sign["code"]: sign for sign in self.data["signs"]}
+        paths = set()
+        for number, file_id in zip(range(14, 19), range(840305, 840314, 2)):
+            code = f"B {number}"
+            graphic = by_code[code]["graphic"]
+            self.assertEqual("VERIFIED", graphic["status"])
+            self.assertEqual("esbirka-294-2015-2025-07-01-zip", graphic["sourceId"])
+            self.assertEqual(str(file_id), graphic["sourceFileId"])
+            self.assertIn("_pril_3_frag_1075596033_IZ.tiff", graphic["sourceArchivePath"])
+            self.assertEqual("image/webp", graphic["mime"])
+            self.assertNotIn(graphic["path"], paths)
+            paths.add(graphic["path"])
+        self.assertEqual(5, len(paths))
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8

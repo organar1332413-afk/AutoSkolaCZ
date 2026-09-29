@@ -1,6 +1,6 @@
 {
   "atomicLegalEntries": 408,
-  "bundledImages": 96,
+  "bundledImages": 101,
   "canonicalFamilies": null,
   "canonicalVariants": null,
   "categories": {
@@ -23,13 +23,8 @@
   "csTitles": 408,
   "directionGraphicExecutionsIndexed": 73,
   "directionLegalCodesVerified": 73,
-  "graphicLicenseReviewRequired": 313,
+  "graphicLicenseReviewRequired": 308,
   "graphicLicenseReviewRequiredCodes": [
-    "B 14",
-    "B 15",
-    "B 16",
-    "B 17",
-    "B 18",
     "B 20a",
     "B 20b",
     "B 21a",
@@ -339,19 +334,14 @@
     "V 9b",
     "V 9c"
   ],
-  "graphicLicenseVerified": 93,
+  "graphicLicenseVerified": 98,
   "graphicVersionReviewRequired": 2,
   "graphicVersionReviewRequiredCodes": [
     "IZ 7a",
     "IZ 7b"
   ],
-  "graphicsMissing": 315,
+  "graphicsMissing": 310,
   "graphicsMissingCodes": [
-    "B 14",
-    "B 15",
-    "B 16",
-    "B 17",
-    "B 18",
     "B 20a",
     "B 20b",
     "B 21a",
@@ -663,12 +653,12 @@
     "V 9b",
     "V 9c"
   ],
-  "graphicsPresent": 93,
+  "graphicsPresent": 98,
   "graphicsRequired": 408,
   "indexedFamilies": 292,
   "indexedRows": 408,
   "legalVerified": 408,
-  "licenseReviewRequired": 315,
+  "licenseReviewRequired": 310,
   "linkedQuestionsReviewRequired": 0,
   "linkedQuestionsVerified": 1,
   "linkedRelationshipsVerified": 1,

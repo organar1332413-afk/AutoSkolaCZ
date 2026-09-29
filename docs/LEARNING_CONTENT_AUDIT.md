@@ -1,5 +1,14 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 prohibition graphics batch
+
+Added official Annex 3 TIFF-derived graphics for `B 14`, `B 15`, `B 16`,
+`B 17`, and `B 18`, each verified against its individual annex row and
+source file ID (`840305`, `840307`, `840309`, `840311`, `840313`). Their
+lossless WebP decoded pixels match the archived TIFF pixels. The catalog
+now references **101 files across 98 code cards**; 310 cards still lack an
+image. Completeness of all legal graphic variants remains unproven.
+
 ## 27 September 2026 official-archive graphics batch 4
 
 Five prohibition codes (`B 1`, `B 10`–`B 13`) received individually matched
