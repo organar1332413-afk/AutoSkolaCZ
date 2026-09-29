@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sign-graphics-import-${{ github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
   import:
     runs-on: ubuntu-latest
