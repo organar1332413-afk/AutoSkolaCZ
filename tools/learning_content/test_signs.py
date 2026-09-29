@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(119, audit["bundledImages"])
-        self.assertEqual(115, audit["graphicsPresent"])
+        self.assertEqual(160, audit["bundledImages"])
+        self.assertEqual(156, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(293, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(291, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(252, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(250, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -206,6 +206,19 @@ class SignInventoryTest(unittest.TestCase):
             self.assertIn("_pril_3_frag_1075596033_IZ.tiff", graphic["sourceArchivePath"])
             self.assertNotIn(graphic["path"], paths)
             paths.add(graphic["path"])
+
+    def test_remaining_prohibition_and_mandatory_annexes_are_covered(self):
+        by_code = {sign["code"]: sign for sign in self.data["signs"]}
+        for category, annex in (("prohibition", "_pril_3_"), ("mandatory", "_pril_4_")):
+            signs = [sign for sign in self.data["signs"] if sign["category"] == category]
+            self.assertEqual(40 if category == "prohibition" else 34, len(signs))
+            for sign in signs:
+                with self.subTest(code=sign["code"]):
+                    self.assertEqual("VERIFIED", sign["graphic"]["status"])
+                    self.assertIn(annex, sign["graphic"]["sourceArchivePath"])
+                    self.assertTrue(sign["graphic"]["sourceFileId"])
+        self.assertEqual("841345", by_code["B 29"]["graphic"]["sourceFileId"])
+        self.assertEqual("image/png", by_code["B 29"]["graphic"]["mime"])
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8

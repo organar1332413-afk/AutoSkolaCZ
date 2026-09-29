@@ -1,5 +1,18 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 complete prohibition and mandatory graphics
+
+The remaining **11 B prohibition** and **30 C mandatory** code cards now
+have individually traced images from Annexes 3 and 4 of the official
+2025 consolidated archive. For every imported TIFF, the annex row had an
+exact code and source file ID, unique decoded pixels in the archive, and
+an independently decoded lossless output match. `B 29` failed a batch WebP
+conversion check; its official TIFF (`841345`) was separately converted
+and pixel-checked as PNG. All **40 B** and **34 C** cards now have at least
+one graphic. The catalog contains **160 image files for 156 code cards**;
+**252 cards** still lack an image. This does not establish full graphic
+variant coverage or production readiness.
+
 ## 29 September 2026 prohibition graphics B 23a–B 24b
 
 Added the four individually matched Annex 3 images for the horn ban and
