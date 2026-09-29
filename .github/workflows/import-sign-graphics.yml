@@ -1,0 +1,55 @@
+name: Import remaining sign graphics
+
+on:
+  push:
+    branches: [stage4-learning-content]
+    paths:
+      - '.github/workflows/import-sign-graphics.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: stage4-learning-content
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install importer dependencies
+        run: python -m pip install --disable-pip-version-check pillow lxml
+
+      - name: Download pinned official e-Sbírka archive
+        run: |
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 180 \
+            'https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.zip' \
+            --output /tmp/294-2025-07-01.zip
+          echo '0704bc4e56027f4b05bced710438ca9e97784957e7964227c3e8be0aaa45a0ac  /tmp/294-2025-07-01.zip' | sha256sum -c -
+
+      - name: Import exact-row missing graphics
+        run: |
+          python tools/learning_content/import_missing_sign_graphics.py \
+            /tmp/294-2025-07-01.zip --apply
+          python -m unittest tools.learning_content.test_signs -v
+
+      - name: Commit generated graphics checkpoint
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain --untracked-files=all)" ]; then
+            echo "No importable exact-row graphics remained."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/learning/signs/catalog.json \
+                  content/learning/signs/audit.json \
+                  content/learning/signs/sources.json \
+                  content/learning/signs/graphics-import-report.json \
+                  content/learning/signs/graphics
+          git commit -m "Batch import remaining verified sign graphics"
+          git push origin HEAD:stage4-learning-content
