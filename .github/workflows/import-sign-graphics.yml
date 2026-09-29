@@ -34,9 +34,9 @@ jobs:
 
       - name: Import exact-row missing graphics
         run: |
-          python tools/learning_content/import_missing_sign_graphics.py \
+          python -m tools.learning_content.import_missing_sign_graphics \
             /tmp/294-2025-07-01.zip --apply
-          python tools/learning_content/import_esbirka_grouped.py \
+          python -m tools.learning_content.import_esbirka_grouped \
             /tmp/294-2025-07-01.zip
           python -m unittest tools.learning_content.test_signs -v
 
