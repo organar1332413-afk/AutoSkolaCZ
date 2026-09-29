@@ -1,6 +1,36 @@
 {
   "annexVersion": "2025-07-01",
   "families": {
+    "E 9": {
+      "annexFragmentId": 8661385,
+      "codeImages": {
+        "E 9": [
+          "graphics/76ddee21f10390a20f80c97c.webp"
+        ]
+      },
+      "legalCodesInOfficialRow": [
+        "E 9"
+      ],
+      "mapping": "one legal code, all TIFFs from its exact official row",
+      "officialIllustrationCount": 1,
+      "officialRowSha256": "2676b93f720348320c9ee6bab5f0fee706aa1f6655122dd1379c5aca30f751b4",
+      "officialTiffs": [
+        {
+          "imageOrdinalInFragment": 18,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/878711/ORIGINAL/STAHNI/sbcr2015c122z0294p006o018.tif",
+          "officialFilename": "sbcr2015c122z0294p006o018.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_018_pril_6_frag_8661385_IZ.tiff",
+          "sourceFileId": "878711",
+          "sourcePixelSize": [
+            181,
+            173
+          ],
+          "sourceTiffSha256": "ead0b426051635095fd70255086499227cf60b0544b7042c20a0ca17317b366b"
+        }
+      ],
+      "panelCount": null,
+      "scopeReview": "VL 6.1 prints E 9-1 through E 9-9, while the consolidated legal annex has one E9 row and one official TIFF. Only that illustrated legal code is included; no separate legal codes or unseen graphics are invented."
+    },
     "IS 19": {
       "annexFragmentId": 1075596043,
       "codeImages": {
@@ -37,6 +67,49 @@
         }
       ],
       "panelCount": 3
+    },
+    "IS 20": {
+      "annexFragmentId": 1075596043,
+      "codeImages": {
+        "IS 20": [
+          "graphics/9b468f86527a2d47d8d1f9af.webp",
+          "graphics/b57e3bc2a0efcef14532fe54.webp"
+        ]
+      },
+      "legalCodesInOfficialRow": [
+        "IS 20"
+      ],
+      "mapping": "one legal code, all TIFFs from its exact official row",
+      "officialIllustrationCount": 2,
+      "officialRowSha256": "e9ba544f46f590bcdca4075d00c4cc1b656f1265a12646378c46c30fcc4b3d93",
+      "officialTiffs": [
+        {
+          "imageOrdinalInFragment": 52,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875751/ORIGINAL/STAHNI/sbcr2015c122z0294_2023c182z0386o005.tif",
+          "officialFilename": "sbcr2015c122z0294_2023c182z0386o005.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_052_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875751",
+          "sourcePixelSize": [
+            235,
+            324
+          ],
+          "sourceTiffSha256": "d8efa7b657072d69d0c1ea2f2a2d58eb3dc8edfd3de9ce4ad73b3ab214b3c789"
+        },
+        {
+          "imageOrdinalInFragment": 53,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875753/ORIGINAL/STAHNI/sbcr2015c122z0294_2023c182z0386o006.tif",
+          "officialFilename": "sbcr2015c122z0294_2023c182z0386o006.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_053_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875753",
+          "sourcePixelSize": [
+            134,
+            201
+          ],
+          "sourceTiffSha256": "13be0fb853d106a9b0152066926383435c2ef38f4294ffe0c422412b6e00828c"
+        }
+      ],
+      "panelCount": null,
+      "scopeReview": "VL 6.1 prints IS 20-1 through IS 20-5, while the consolidated legal annex has one IS 20 row and two official TIFFs. Both are stored on that one legal card, without inventing three graphics."
     },
     "IS 21": {
       "annexFragmentId": 1075596043,

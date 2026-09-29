@@ -91,6 +91,29 @@ class SignInventoryTest(unittest.TestCase):
             self.assertTrue(all(a[3] == b[1] for a, b in zip(bounds, bounds[1:])))
         self.assertEqual(12, len(paths))
 
+    def test_manual_single_code_rows_preserve_only_official_illustrations(self):
+        evidence = json.loads((CONTENT / "graphics-manual-resolution.json").read_text())
+        signs = {sign["code"]: sign for sign in self.data["signs"]}
+        for code, count in (("IS 20", 2), ("E 9", 1)):
+            row = evidence["families"][code]
+            self.assertEqual([code], row["legalCodesInOfficialRow"])
+            self.assertEqual(count, row["officialIllustrationCount"])
+            self.assertEqual(count, len(row["officialTiffs"]))
+            graphic = signs[code]["graphic"]
+            images = [graphic] + graphic.get("additionalImages", [])
+            self.assertEqual(count, len(images))
+            self.assertEqual(row["codeImages"][code], [image["path"] for image in images])
+            self.assertEqual(count, len({image["sourceFileId"] for image in images}))
+            for image, source in zip(images, row["officialTiffs"]):
+                self.assertEqual("VERIFIED", image["status"])
+                self.assertEqual(source["sourceFileId"], image["sourceFileId"])
+                self.assertEqual(source["sourceTiffSha256"], image["sourceTiffSha256"])
+                self.assertEqual(signs[code]["sourceProvision"], image["sourceProvision"])
+                self.assertEqual("exact-single-code-row", image["provenance"]["method"])
+                self.assertEqual([code], image["provenance"]["rowCodes"])
+        self.assertEqual(["E 9"], signs["E 9"]["graphicVariantCodes"])
+        self.assertEqual(["IS 20"], signs["IS 20"]["graphicVariantCodes"])
+
     def test_duplicate_code_rejected(self):
         data = copy.deepcopy(self.data)
         data["signs"].append(copy.deepcopy(data["signs"][0]))

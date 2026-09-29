@@ -1,12 +1,6 @@
 name: Import remaining sign graphics
 
-on:
-  push:
-    branches: [stage4-learning-content]
-    paths:
-      - '.github/workflows/import-sign-graphics.yml'
-      - 'tools/learning_content/import_public_file_graphics.py'
-      - 'tools/learning_content/test_signs.py'
+on: workflow_dispatch
 
 permissions:
   contents: write
