@@ -1,0 +1,421 @@
+{
+  "effectiveFrom": "2025-07-01",
+  "items": [
+    {
+      "category": "road_marking",
+      "code": "V 1a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Podélná čára souvislá"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 1b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Dvojitá podélná čára souvislá"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 2a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Podélná čára přerušovaná"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 2b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Podélná čára přerušovaná"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 2c",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Dvojitá podélná čára přerušovaná"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 3",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Podélná čára souvislá doplněná čárou přerušovanou"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 4",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Vodicí čára"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 5",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Příčná čára souvislá"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 6a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Příčná čára souvislá se symbolem „Dej přednost v jízdě!“"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 6b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Příčná čára souvislá s nápisem STOP"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 7a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Přechod pro chodce"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 7b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Místo pro přecházení"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 8a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Přejezd pro cyklisty"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 8b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Přejezd pro cyklisty přimknutý k přechodu pro chodce"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 8c",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Sdružený přechod pro chodce a přejezd pro cyklisty"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 9a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Směrové šipky"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 9b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Předběžné šipky"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 9c",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Předběžné šipky"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Stání podélné"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Stání kolmé"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10c",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Stání šikmé"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10d",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Parkovací pruh"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10e",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Vyhrazené parkoviště"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10f",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Vyhrazené parkoviště pro vozidlo přepravující osobu těžce zdravotně postiženou"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 10g",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Omezené stání"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 11a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Zastávka autobusu nebo trolejbusu"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 11b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Zastávka tramvaje"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 12a",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Žlutá klikatá čára"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 12b",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Žluté zkřížené čáry"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 12c",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Zákaz zastavení"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 12d",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Zákaz stání"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 12e",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Bílá klikatá čára"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 13",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Šikmé rovnoběžné čáry"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 14",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízdní pruh pro cyklisty"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 15",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Nápis na vozovce"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 16",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Bezpečný odstup"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 17",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Trojúhelníky"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 18",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Optická psychologická brzda"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 19",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Prostor pro cyklisty"
+    },
+    {
+      "category": "road_marking",
+      "code": "V 20",
+      "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Piktogramový koridor pro cyklisty"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 1",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Tříbarevná soustava s plnými signály"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 2",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Tříbarevná soustava se směrovými signály"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 3",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Tříbarevná soustava s kombinovanými směrovými signály"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 4a",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Signál žlutého světla ve tvaru chodce"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 4b",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Signál žlutého světla ve tvaru cyklisty"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 4c",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Signál žlutého světla ve tvaru chodce a cyklisty"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 5",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Doplňková zelená šipka"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 6",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Signál pro opuštění křižovatky"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 7",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Přerušované žluté světlo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 8a",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Zakázaný vjezd vozidel do jízdního pruhu"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 8b",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Volný vjezd vozidel do jízdního pruhu"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 8c",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Světelná šipka vlevo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 8d",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Světelná šipka vpravo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 8e",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Světelný kříž"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 9",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Dvoubarevná soustava se signály pro chodce"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 10",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Tříbarevná soustava se signály pro cyklisty"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 11",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Dvoubarevná soustava se signály pro chodce a cyklisty"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 12a",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Rychlostní signál s proměnným signálním znakem"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 12b",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Rychlostní signál s více signálními znaky"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 13",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Signál dvou vedle sebe umístěných střídavě přerušovaných červených světel"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 14a",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Dvě červená střídavě přerušovaná světla signálu přejezdového zabezpečovacího zařízení"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 14b",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Přerušované bílé světlo signálu přejezdového zabezpečovacího zařízení"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15a",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Stůj"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15b",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízda přímo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15c",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízda vlevo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15d",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízda vpravo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15e",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízda přímo a vpravo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15f",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízda přímo a vlevo"
+    },
+    {
+      "category": "light_signal",
+      "code": "S 15g",
+      "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb.",
+      "titleCs": "Jízda vpravo a vlevo"
+    }
+  ],
+  "schemaVersion": 1,
+  "sourceId": "decree-294-2015"
+}

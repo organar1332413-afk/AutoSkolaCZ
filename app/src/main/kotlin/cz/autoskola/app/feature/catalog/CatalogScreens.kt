@@ -1,14 +1,119 @@
 package cz.autoskola.app.feature.catalog
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import cz.autoskola.app.R
 import cz.autoskola.app.ui.*
-@Composable fun SignsScreen() {
+@Composable fun SignsScreen(
+    translationTag: String?,
+    availableQuestionIds: Set<String>,
+    openQuestion: (String) -> Unit,
+) {
+    val context = LocalContext.current
+    val entries = remember(context) { SignCatalog.load(context) }
+    val guide = remember(context) { SignCatalog.loadGuide(context) }
+    var query by remember { mutableStateOf("") }
+    var category by remember { mutableStateOf<String?>(null) }
+    var selected by remember { mutableStateOf<SignEntry?>(null) }
+    val language = translationTag
+    val categories = listOf(
+        "warning" to R.string.sign_warning, "priority" to R.string.sign_priority,
+        "prohibition" to R.string.sign_prohibition, "mandatory" to R.string.sign_mandatory,
+        "information_zone" to R.string.sign_info, "information_traffic" to R.string.sign_info,
+        "information_direction" to R.string.sign_info, "information_other" to R.string.sign_info,
+        "additional_panel" to R.string.sign_extra, "road_marking" to R.string.sign_markings,
+        "light_signal" to R.string.sign_lights,
+    )
+    val visible = remember(entries, query, category) { SignCatalog.search(entries, query, category) }
     Page {
         item { Heading(text(R.string.signs)) }
-        item { Note(text(R.string.content_pending)) }
-        items(listOf(R.string.sign_warning, R.string.sign_priority, R.string.sign_prohibition, R.string.sign_mandatory, R.string.sign_info, R.string.sign_extra, R.string.sign_markings, R.string.sign_lights)) { item -> Text(text(item)) }
+        item { Text(text(R.string.signs_guide_title), style = MaterialTheme.typography.titleLarge) }
+        items(guide) { block ->
+            OutlinedCard {
+                Column(Modifier.padding(18.dp)) {
+                    Text(block.provision, style = MaterialTheme.typography.titleMedium)
+                    block.officialTextCs?.let { Text(it) }
+                    Text(block.summaryCs)
+                    Note(block.simpleCs)
+                    when (language) {
+                        "ru" -> Text(block.ru)
+                        "uk" -> Text(block.uk)
+                    }
+                }
+            }
+        }
+        item { Note(text(R.string.signs_inventory_notice)) }
+        item {
+            OutlinedTextField(value = query, onValueChange = { query = it },
+                label = { Text(text(R.string.signs_search)) }, singleLine = true)
+        }
+        item { Text(text(R.string.signs_count, visible.size)) }
+        item { FilterChip(selected = category == null, onClick = { category = null }, label = { Text(text(R.string.signs_all)) }) }
+        items(categories) { (key, label) ->
+            FilterChip(selected = category == key, onClick = { category = key }, label = { Text("${text(label)} · ${entries.count { it.category == key }}") })
+        }
+        selected?.let { sign ->
+            item {
+                OutlinedCard(onClick = { selected = null }) {
+                    Column(Modifier.padding(18.dp)) {
+                        Text("${sign.code} · ${sign.titleCs}", style = MaterialTheme.typography.titleLarge)
+                        sign.graphicPaths.forEach { path ->
+                            val bitmap = remember(context, path) {
+                                context.assets.open("signs/$path").use { BitmapFactory.decodeStream(it) }
+                            }
+                            bitmap?.let {
+                                Image(
+                                    bitmap = it.asImageBitmap(),
+                                    contentDescription = "${sign.code} · ${sign.titleCs}",
+                                    modifier = Modifier.fillMaxWidth().heightIn(max = 240.dp),
+                                    contentScale = ContentScale.Fit,
+                                )
+                            }
+                        }
+                        when (language) {
+                            "ru" -> sign.titleRu?.let { Text(it, style = MaterialTheme.typography.titleMedium) }
+                            "uk" -> sign.titleUk?.let { Text(it, style = MaterialTheme.typography.titleMedium) }
+                        }
+                        sign.meaningCs?.let { Text(it) }
+                        sign.simpleCs?.let { Text(it) }
+                        when (language) {
+                            "ru" -> sign.ru?.let { Text(it) }
+                            "uk" -> sign.uk?.let { Text(it) }
+                        }
+                        if (sign.meaningCs == null) Note(text(R.string.signs_unreviewed))
+                        sign.memoryCs?.let { Note(it) }
+                        sign.mistakeCs?.let { Text(it) }
+                        if (sign.confusedWith.isNotEmpty()) Text(sign.confusedWith.joinToString(" · "))
+                        sign.sourceProvision?.let { Text(it) }
+                        Note(text(R.string.signs_source, sign.sourceUrl))
+                        val linked = sign.relatedOfficialIds.filter { it in availableQuestionIds }
+                        if (linked.isNotEmpty()) {
+                            Text(text(R.string.signs_related_official_questions))
+                            linked.forEach { id ->
+                                Entry(id) { openQuestion(id) }
+                            }
+                        }
+                        if (sign.graphicStatus != "VERIFIED") Note(text(R.string.signs_graphic_pending))
+                    }
+                }
+            }
+        }
+        items(visible, key = { it.code }) { sign ->
+            Entry("${sign.code} · ${sign.titleCs}", if (sign.meaningCs != null) sign.simpleCs else text(R.string.signs_unreviewed)) {
+                selected = if (selected?.code == sign.code) null else sign
+            }
+        }
     }
 }
 @Composable fun FirstAidScreen(open: (String) -> Unit) {

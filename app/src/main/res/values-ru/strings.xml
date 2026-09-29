@@ -13,6 +13,15 @@
   <string name="questions">Экзаменационные вопросы</string>
   <string name="rules">Учить правила</string>
   <string name="signs">Дорожные знаки</string>
+  <string name="signs_guide_title">Как читать знаки · правила</string>
+  <string name="signs_inventory_notice">Проверенный указатель графических образцов. Пояснения и изображения добавляются после проверки правовых источников и разрешения на использование графики.</string>
+  <string name="signs_search">Код или чешское название</string>
+  <string name="signs_count">Позиции: %1$d</string>
+  <string name="signs_all">Все</string>
+  <string name="signs_unreviewed">Пояснение ещё не проверено.</string>
+  <string name="signs_source">Источник: %1$s</string>
+  <string name="signs_related_official_questions">Практика по официальным вопросам</string>
+  <string name="signs_graphic_pending">Графика пока не включена (проверяются права на использование).</string>
   <string name="first_aid">Первая помощь</string>
   <string name="czech">Чешский для экзамена</string>
   <string name="mistakes">Мои ошибки</string>

@@ -1,0 +1,52 @@
+{
+  "blocks": [
+    {
+      "id": "placement",
+      "officialTextCs": null,
+      "provision": "§ 2 odst. 2 vyhlášky č. 294/2015 Sb.",
+      "ru": "Вертикальные знаки обычно стоят справа или над дорогой. Смотрите, к какой части дороги относится знак.",
+      "ruleSummaryCs": "Svislé značky se umísťují při pravém okraji komunikace nebo nad vozovkou. V některých případech mohou být i jinde.",
+      "simpleCs": "Sledujte pravý okraj i prostor nad silnicí; umístění ovlivňuje, pro koho značka platí.",
+      "uk": "Вертикальні знаки зазвичай стоять праворуч або над дорогою. Дивіться, якої частини дороги стосується знак.",
+      "warningCs": "Nevyvozujte, že značka nad jedním pruhem vždy platí jen pro tento pruh."
+    },
+    {
+      "id": "lane_scope",
+      "officialTextCs": null,
+      "provision": "§ 3 odst. 1 a 2 vyhlášky č. 294/2015 Sb.",
+      "ru": "Знак сбоку обычно действует для дороги в данном направлении. Запрещающий или предписывающий знак над полосой действует для этой полосы. Знаки остановки и стоянки относятся к своей стороне дороги.",
+      "ruleSummaryCs": "Značka vedle komunikace platí v daném směru pro celou komunikaci; zákazová nebo příkazová značka nad vyznačeným pruhem platí jen pro tento pruh. Značky pro zastavení a stání se vztahují ke straně, u níž stojí.",
+      "simpleCs": "Nejprve zjistěte, zda je značka vedle silnice, nebo nad konkrétním pruhem.",
+      "uk": "Знак збоку зазвичай діє для дороги в цьому напрямку. Заборонний або наказовий знак над смугою діє для цієї смуги. Знаки зупинки та стоянки стосуються свого боку дороги.",
+      "warningCs": "Nezaměňujte značku u okraje s příkazovou značkou nad pruhem."
+    },
+    {
+      "id": "end_of_scope",
+      "officialTextCs": "Zákaz, omezení nebo příkaz je ukončen nejbližší křižovatkou nebo příslušnou dopravní značkou.",
+      "provision": "§ 3 odst. 3, 5 a 6 vyhlášky č. 294/2015 Sb.",
+      "ru": "Обычный запрет или предписание прекращается на ближайшем перекрёстке либо соответствующим знаком. Указанные знаки приоритета относятся к ближайшему перекрёстку, а зона действует до знака её окончания, если не установлено иное.",
+      "ruleSummaryCs": "Zákaz, omezení nebo příkaz končí nejbližší křižovatkou nebo příslušnou značkou. Vyjmenované značky přednosti platí pro nejbližší křižovatku. Zónové značky platí do značky označující konec zóny, nestanoví-li předpis jinak.",
+      "simpleCs": "Rozlišujte běžný zákaz, přednost pro příští křižovatku a zónu s vlastním koncem.",
+      "uk": "Звичайна заборона чи припис припиняється на найближчому перехресті або відповідним знаком. Вказані знаки пріоритету стосуються найближчого перехрестя, а зона діє до знака її завершення, якщо не встановлено інше.",
+      "warningCs": "Neukončujte zónové omezení automaticky na každé křižovatce."
+    },
+    {
+      "id": "warning_distance",
+      "officialTextCs": null,
+      "provision": "§ 4 odst. 1 vyhlášky č. 294/2015 Sb.",
+      "ru": "Предупреждающий знак обычно ставят заранее: вне населённого пункта за 100–250 м, в населённом пункте за 50–100 м. Иное расстояние указывают на табличке.",
+      "ruleSummaryCs": "Výstražné značky se zpravidla umísťují před nebezpečným místem mimo obec 100 až 250 m a v obci 50 až 100 m. Odlišnou vzdálenost upřesňuje dodatková tabulka.",
+      "simpleCs": "Výstražná značka upozorňuje předem; nebezpečí nemusí začínat přímo u sloupku.",
+      "uk": "Попереджувальний знак зазвичай ставлять заздалегідь: поза населеним пунктом за 100–250 м, у населеному пункті за 50–100 м. Іншу відстань указують на табличці.",
+      "warningCs": "Nečekejte s reakcí až k místu nebezpečí."
+    }
+  ],
+  "checkedAt": "2026-09-26",
+  "reviewStatus": "LEGAL_TEXT_CHECKED",
+  "schemaVersion": 1,
+  "sourceIds": [
+    "decree-294-2015"
+  ],
+  "titleCs": "Jak číst dopravní značky",
+  "topic": "11"
+}

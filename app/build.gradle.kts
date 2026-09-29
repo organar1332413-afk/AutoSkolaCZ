@@ -12,6 +12,7 @@ android {
         release { isDebuggable = false; isMinifyEnabled = false }
     }
     bundle { language { enableSplit = false } }
+    sourceSets.getByName("main").assets.srcDir("../content/learning")
 }
 kotlin { jvmToolchain(17) }
 
