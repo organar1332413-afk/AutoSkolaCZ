@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/import-sign-graphics.yml'
       - 'tools/learning_content/import_public_file_graphics.py'
+      - 'tools/learning_content/test_signs.py'
 
 permissions:
   contents: write
