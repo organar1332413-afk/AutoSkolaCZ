@@ -118,56 +118,90 @@ def webp_lossless(raw: bytes) -> tuple[bytes, tuple[int, int], str]:
     return encoded, size, mode
 
 
+def _bare_code_chunk(text: str) -> bool:
+    cleaned = CODE_RE.sub("", text)
+    cleaned = re.sub(r"[\\s,;/–—()]+", "", cleaned)
+    return not cleaned
+
+
+def _family_root(code: str) -> str:
+    match = re.match(r"^([A-Z]{1,2})\\s+(\\d+)", code)
+    return f"{match.group(1)} {match.group(2)}" if match else code
+
+
 def build_mapping(page_raw: bytes, signs: dict[str, dict]) -> tuple[dict[str, list[dict]], list[dict]]:
+    """Map each source image from the closest code tokens in document order.
+
+    The reference page has rowspans that make ancestor-row text unsafe: one HTML
+    row can contain the previous legal code plus many later rows.  Instead, walk
+    the rendered source order and bind an image to the nearest code-bearing text
+    immediately before it. Consecutive bare code chunks of the same family are
+    grouped (e.g. IS 1a / IS 1b / IS 1c). Images without a new code inherit the
+    previous legal row, which preserves legitimate multi-illustration rows.
+    """
     doc = html.fromstring(page_raw)
     mapping: dict[str, list[dict]] = defaultdict(list)
     unresolved: list[dict] = []
-    anchors = doc.xpath(
-        '//a[contains(@href, "/souborove-dokumenty/")] | '
-        '//img[contains(@src, "/souborove-dokumenty/")]'
-    )
-    for anchor in anchors:
-        href = anchor.get("href") or anchor.get("src") or ""
-        id_match = ID_RE.search(href)
-        filename = image_name(anchor)
-        if not id_match or not filename:
-            continue
-        raw_codes = codes_for_anchor(anchor)
-        codes = expand_codes(raw_codes, signs)
-        if not codes:
-            unresolved.append({"href": href, "filename": filename, "codes": raw_codes})
-            continue
-        item = {
-            "fileId": id_match.group(1),
-            "filename": filename,
-            "referenceHref": href,
-            "rawCodes": raw_codes,
-        }
-        for code in codes:
-            if item not in mapping[code]:
-                mapping[code].append(item)
-    print(f"Reference mapping elements={len(anchors)} mappedCodes={len(mapping)} unresolved={len(unresolved)}")
+    recent_code_chunks: list[tuple[str, list[str]]] = []
+    last_targets: list[str] = []
+    image_count = 0
+
+    def consume_text(value: str | None) -> None:
+        if not value:
+            return
+        text_value = " ".join(value.split())
+        codes = list(dict.fromkeys(CODE_RE.findall(text_value)))
+        if codes:
+            recent_code_chunks.append((text_value, codes))
+            del recent_code_chunks[:-8]
+
+    def targets_from_recent() -> list[str]:
+        if not recent_code_chunks:
+            return []
+        text_value, codes = recent_code_chunks[-1]
+        selected = list(codes)
+        if _bare_code_chunk(text_value) and len(codes) == 1:
+            root = _family_root(codes[0])
+            for previous_text, previous_codes in reversed(recent_code_chunks[:-1]):
+                if not _bare_code_chunk(previous_text):
+                    break
+                if any(_family_root(code) != root for code in previous_codes):
+                    break
+                selected = previous_codes + selected
+        return expand_codes(list(dict.fromkeys(selected)), signs)
+
+    def walk(node) -> None:
+        nonlocal last_targets, image_count
+        consume_text(node.text)
+        for child in node:
+            if getattr(child, "tag", None) == "img":
+                src = child.get("src") or ""
+                id_match = ID_RE.search(src)
+                filename = image_name(child)
+                if id_match and filename:
+                    image_count += 1
+                    targets = targets_from_recent() or last_targets
+                    if targets:
+                        item = {
+                            "fileId": id_match.group(1),
+                            "filename": filename,
+                            "referenceHref": src,
+                            "rawCodes": list(targets),
+                        }
+                        for code in targets:
+                            if item not in mapping[code]:
+                                mapping[code].append(item)
+                        last_targets = list(targets)
+                    else:
+                        unresolved.append({"href": src, "filename": filename, "codes": []})
+                    recent_code_chunks.clear()
+            else:
+                walk(child)
+            consume_text(child.tail)
+
+    walk(doc)
+    print(f"Reference mapping elements={image_count} mappedCodes={len(mapping)} unresolved={len(unresolved)}")
     return mapping, unresolved
-
-
-def candidate_allowed(code: str, filename: str) -> bool:
-    """Reject annex spillover caused by HTML rowspans while keeping real variants."""
-    lower = filename.lower()
-    if code.startswith("IS "):
-        # Direction signs are Annex 5. The long HTML table can expose the prior
-        # IP 20a image (o052) as part of a rowspan; it is never an IS graphic.
-        return ("p005o" in lower or "_2025c205z0205o" in lower) and not lower.endswith("p005o052.tif")
-    if code.startswith("S "):
-        # Signals are Annex 9. p009o029 is only the legend showing an illuminated
-        # lens, not an atomic S-code illustration.
-        if lower.endswith("p009o029.tif"):
-            return False
-        return "p009o" in lower or "_2025c205z0205o" in lower
-    if code == "V 8b":
-        return "p008o" in lower
-    if code.startswith(("IP ", "IZ ")):
-        return "p005o" in lower or "_2023c182z0386o" in lower or "_2025c205z0205o" in lower or "_2016c033z0084p005o" in lower
-    return True
 
 
 def all_images(sign: dict) -> list[dict]:
