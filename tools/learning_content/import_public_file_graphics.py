@@ -80,19 +80,9 @@ def codes_for_anchor(anchor) -> list[str]:
             if current is None:
                 break
 
-    # Fallback for non-table renderings: inspect the closest content block and
-    # a bounded preceding-text window, never the whole document.
-    node = anchor
-    for _ in range(5):
-        parent = node.getparent()
-        if parent is None:
-            break
-        text = " ".join(parent.itertext())
-        if len(text) < 5000:
-            codes = CODE_RE.findall(text)
-            if codes:
-                return list(dict.fromkeys(codes))
-        node = parent
+    # Do not infer from a broad parent block. Annex pages contain many adjacent
+    # rows and a broad fallback can accidentally attach one illustration to
+    # unrelated later codes. Rows without an explicit local code stay unresolved.
     return []
 
 
