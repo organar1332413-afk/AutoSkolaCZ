@@ -5,6 +5,7 @@ on:
     branches: [stage4-learning-content]
     paths:
       - '.github/workflows/import-sign-graphics.yml'
+      - 'tools/learning_content/import_public_file_graphics.py'
 
 permissions:
   contents: write
@@ -29,23 +30,27 @@ jobs:
       - name: Install importer dependencies
         run: python -m pip install --disable-pip-version-check pillow lxml
 
-      - name: Test official sbr-externi image endpoint
+      - name: Import remaining official sign graphics
         run: |
-          curl --fail --location --retry 2 --connect-timeout 20 --max-time 120 \
-            'https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/872679/ORIGINAL/STAHNI/sbcr2015c122z0294p005o067.tif' \
-            --output /tmp/test-sign.tif
-          file /tmp/test-sign.tif
-          stat -c '%s bytes' /tmp/test-sign.tif
-          sha256sum /tmp/test-sign.tif
-          python -c "from PIL import Image; im=Image.open('/tmp/test-sign.tif'); print(im.format, im.size, im.mode); im.verify()"
-
-      - name: Endpoint diagnostic complete
-        run: echo "Official binary endpoint is readable."
+          set -o pipefail
+          python -m tools.learning_content.import_public_file_graphics --apply | tee /tmp/sign-import-report.txt
+          python -m tools.learning_content.signs --check
+          python -m unittest tools.learning_content.test_signs -v
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          audit = json.loads(Path("content/learning/signs/audit.json").read_text())
+          print("graphicsPresent=", audit["graphicsPresent"])
+          print("graphicsMissing=", audit["graphicsMissing"])
+          print("bundledImages=", audit["bundledImages"])
+          print("graphicLicenseVerified=", audit["graphicLicenseVerified"])
+          print("remaining=", audit["graphicsMissingCodes"])
+          PY
 
       - name: Commit generated graphics checkpoint
         run: |
           if git diff --quiet && [ -z "$(git status --porcelain --untracked-files=all)" ]; then
-            echo "No importable exact-row graphics remained."
+            echo "No importable official graphics remained."
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -53,7 +58,7 @@ jobs:
           git add content/learning/signs/catalog.json \
                   content/learning/signs/audit.json \
                   content/learning/signs/sources.json \
-                  content/learning/signs/graphics-import-report.json \
+                  content/learning/signs/graphics-public-file-import-report.json \
                   content/learning/signs/graphics
-          git commit -m "Batch import remaining verified sign graphics"
+          git commit -m "Import remaining official sign graphics"
           git push origin HEAD:stage4-learning-content
