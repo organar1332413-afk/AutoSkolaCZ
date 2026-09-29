@@ -1,5 +1,13 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 prohibition graphics B 23a–B 24b
+
+Added the four individually matched Annex 3 images for the horn ban and
+its end (`B 23a`, `B 23b`, files `841329`, `841331`) and the right/left
+turn bans (`B 24a`, `B 24b`, files `841333`, `841335`). The lossless WebP
+pixels match their distinct official TIFFs. The catalog has **119 files
+across 115 code cards**; **293 cards** still lack images.
+
 ## 29 September 2026 prohibition graphics B 21b–B 22b
 
 Added three distinct Annex 3 illustrations for `B 21b` (end of overtaking

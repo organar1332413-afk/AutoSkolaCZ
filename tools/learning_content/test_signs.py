@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(115, audit["bundledImages"])
-        self.assertEqual(111, audit["graphicsPresent"])
+        self.assertEqual(119, audit["bundledImages"])
+        self.assertEqual(115, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(297, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(295, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(293, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(291, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -184,6 +184,19 @@ class SignInventoryTest(unittest.TestCase):
     def test_overtaking_end_and_truck_overtaking_rows_are_distinct(self):
         by_code = {sign["code"]: sign for sign in self.data["signs"]}
         expected = {"B 21b": "841323", "B 22a": "841325", "B 22b": "841327"}
+        paths = set()
+        for code, file_id in expected.items():
+            graphic = by_code[code]["graphic"]
+            self.assertEqual("VERIFIED", graphic["status"])
+            self.assertEqual("esbirka-294-2015-2025-07-01-zip", graphic["sourceId"])
+            self.assertEqual(file_id, graphic["sourceFileId"])
+            self.assertIn("_pril_3_frag_1075596033_IZ.tiff", graphic["sourceArchivePath"])
+            self.assertNotIn(graphic["path"], paths)
+            paths.add(graphic["path"])
+
+    def test_horn_and_turn_bans_trace_to_separate_annex_rows(self):
+        by_code = {sign["code"]: sign for sign in self.data["signs"]}
+        expected = {"B 23a": "841329", "B 23b": "841331", "B 24a": "841333", "B 24b": "841335"}
         paths = set()
         for code, file_id in expected.items():
             graphic = by_code[code]["graphic"]
