@@ -40,11 +40,8 @@ jobs:
             echo '--- response headers ---'
             cat /tmp/esbirka-headers.txt
             echo '--- response body ---'
-            python - <<'PY'
-from pathlib import Path
-raw = Path('/tmp/294-2025-07-01.zip').read_bytes()
-print(raw[:5000].decode('utf-8', errors='replace'))
-PY
+            head -c 5000 /tmp/294-2025-07-01.zip || true
+            echo
             exit 1
           fi
           python - <<'PY'
