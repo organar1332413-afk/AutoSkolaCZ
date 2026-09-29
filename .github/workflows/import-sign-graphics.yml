@@ -32,9 +32,21 @@ jobs:
       - name: Download pinned official e-Sbírka archive
         run: |
           curl --fail --location --retry 3 --connect-timeout 20 --max-time 600 \
+            --dump-header /tmp/esbirka-headers.txt \
             'https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.ZIP' \
             --output /tmp/294-2025-07-01.zip
           sha256sum /tmp/294-2025-07-01.zip
+          if ! python -c "import zipfile; z=zipfile.ZipFile('/tmp/294-2025-07-01.zip'); z.testzip()"; then
+            echo '--- response headers ---'
+            cat /tmp/esbirka-headers.txt
+            echo '--- response body ---'
+            python - <<'PY'
+from pathlib import Path
+raw = Path('/tmp/294-2025-07-01.zip').read_bytes()
+print(raw[:5000].decode('utf-8', errors='replace'))
+PY
+            exit 1
+          fi
           python - <<'PY'
           import zipfile
           p = '/tmp/294-2025-07-01.zip'
