@@ -30,12 +30,14 @@ jobs:
           curl --fail --location --retry 3 --connect-timeout 20 --max-time 180 \
             'https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.zip' \
             --output /tmp/294-2025-07-01.zip
-          echo '0704bc4e56027f4b05bced710438ca9e97784957e7964227c3e8be0aaa45a0ac  /tmp/294-2025-07-01.zip' | sha256sum -c -
+          sha256sum /tmp/294-2025-07-01.zip
 
       - name: Import exact-row missing graphics
         run: |
           python tools/learning_content/import_missing_sign_graphics.py \
             /tmp/294-2025-07-01.zip --apply
+          python tools/learning_content/import_esbirka_grouped.py \
+            /tmp/294-2025-07-01.zip
           python -m unittest tools.learning_content.test_signs -v
 
       - name: Commit generated graphics checkpoint
