@@ -1,5 +1,15 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 remaining IJ and single-row IS graphics
+
+Added eight `IJ` other-information cards and 35 `IS` direction cards with
+one exact annex row each. Their local images were compared pixel for pixel
+with unique TIFFs from Annex 5, and source file IDs and hashes are retained.
+All **28 IJ** cards now have graphics; **43/73 IS** cards have graphics.
+The 30 remaining IS codes use grouped rows or multiple official illustrations
+and require separate variant mapping. Overall: **275 files for 271 cards**;
+**137 cards** without graphics. `productionReady=false`.
+
 ## 29 September 2026 traffic and other information graphics
 
 Added **18 IP traffic** and **18 IJ other information** cards with unique

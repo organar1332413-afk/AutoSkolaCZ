@@ -30,8 +30,8 @@ ANNEX = {
     "information_direction": "_pril_5-bod_3_",
     "information_other": "_pril_5-bod_4_",
     "additional_panel": "_pril_6_",
-    "road_marking": "_pril_8_",
-    "light_signal": "_pril_9_",
+    "road_marking": "_pril_8-bod_",
+    "light_signal": "_pril_9-bod_",
 }
 VERSION_REVIEW = {"IZ 7a", "IZ 7b"}
 

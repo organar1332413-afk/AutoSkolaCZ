@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(232, audit["bundledImages"])
-        self.assertEqual(228, audit["graphicsPresent"])
+        self.assertEqual(275, audit["bundledImages"])
+        self.assertEqual(271, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(180, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(178, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(137, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(135, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -241,7 +241,19 @@ class SignInventoryTest(unittest.TestCase):
                 self.assertEqual("VERIFIED", sign["graphic"]["status"])
                 self.assertIn("_pril_5-bod_2_", sign["graphic"]["sourceArchivePath"])
         other = [sign for sign in self.data["signs"] if sign["category"] == "information_other"]
-        self.assertEqual(20, sum(bool(sign["graphic"].get("path")) for sign in other))
+        self.assertEqual(28, sum(bool(sign["graphic"].get("path")) for sign in other))
+
+    def test_other_information_complete_and_single_row_direction_sources(self):
+        for category, annex, covered in (
+            ("information_other", "_pril_5-bod_4_", 28),
+            ("information_direction", "_pril_5-bod_3_", 43),
+        ):
+            signs = [sign for sign in self.data["signs"] if sign["category"] == category]
+            images = [sign for sign in signs if sign["graphic"].get("path")]
+            self.assertEqual(covered, len(images))
+            for sign in images:
+                self.assertIn(annex, sign["graphic"]["sourceArchivePath"])
+                self.assertTrue(sign["graphic"]["sourceFileId"])
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8
