@@ -9577,8 +9577,40 @@
       "explanationUk": null,
       "familyCode": "IS 19",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/b55424dae44daf6e03d16da8.webp",
+        "pixelSize": [
+          353,
+          151
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 51,
+          "method": "official-composite-panel-order",
+          "panelCount": 3,
+          "panelOrdinal": 1,
+          "rowCodes": [
+            "IS 19a",
+            "IS 19b",
+            "IS 19c"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            0,
+            353,
+            151
+          ]
+        },
+        "sha256": "b55424dae44daf6e03d16da8b16080cc2c348ed7cbe9e06b58ff6f27e8e20900",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_051_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875749/ORIGINAL/STAHNI/sbcr2015c122z0294p005o110.tif",
+        "sourceFileId": "875749",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o110.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19a",
+        "sourceTiffSha256": "8fd8a76745d3f9349dce1b6c333c34020dc1741c12e55c4b8c4ae0d062c7d4f8",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 19a"
@@ -9591,7 +9623,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 16,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19a",
@@ -9612,8 +9645,40 @@
       "explanationUk": null,
       "familyCode": "IS 19",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/0d38da936ef804159ea04fea.webp",
+        "pixelSize": [
+          353,
+          102
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 51,
+          "method": "official-composite-panel-order",
+          "panelCount": 3,
+          "panelOrdinal": 2,
+          "rowCodes": [
+            "IS 19a",
+            "IS 19b",
+            "IS 19c"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            151,
+            353,
+            253
+          ]
+        },
+        "sha256": "0d38da936ef804159ea04feaf2914ad34a16e2be01d44ab4fde365b2eac7b6ee",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_051_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875749/ORIGINAL/STAHNI/sbcr2015c122z0294p005o110.tif",
+        "sourceFileId": "875749",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o110.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19b",
+        "sourceTiffSha256": "8fd8a76745d3f9349dce1b6c333c34020dc1741c12e55c4b8c4ae0d062c7d4f8",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 19b"
@@ -9623,7 +9688,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19b",
@@ -9644,8 +9710,40 @@
       "explanationUk": null,
       "familyCode": "IS 19",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/c349609dfcc9bc6b5615d89a.webp",
+        "pixelSize": [
+          353,
+          96
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 51,
+          "method": "official-composite-panel-order",
+          "panelCount": 3,
+          "panelOrdinal": 3,
+          "rowCodes": [
+            "IS 19a",
+            "IS 19b",
+            "IS 19c"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            253,
+            353,
+            349
+          ]
+        },
+        "sha256": "c349609dfcc9bc6b5615d89a2648d1bd5db0f788f1ef091d3b3d9244aeff80de",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_051_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875749/ORIGINAL/STAHNI/sbcr2015c122z0294p005o110.tif",
+        "sourceFileId": "875749",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o110.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19c",
+        "sourceTiffSha256": "8fd8a76745d3f9349dce1b6c333c34020dc1741c12e55c4b8c4ae0d062c7d4f8",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 19c"
@@ -9655,7 +9753,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 19c",
@@ -9993,8 +10092,40 @@
       "explanationUk": null,
       "familyCode": "IS 21",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/fbeff28952dba88d892346d1.webp",
+        "pixelSize": [
+          169,
+          114
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 54,
+          "method": "official-composite-panel-order",
+          "panelCount": 3,
+          "panelOrdinal": 1,
+          "rowCodes": [
+            "IS 21a",
+            "IS 21b",
+            "IS 21c"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            0,
+            169,
+            114
+          ]
+        },
+        "sha256": "fbeff28952dba88d892346d120c38b4caaaaee67c0a75f6b1c407f54abc2b333",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_054_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875755/ORIGINAL/STAHNI/sbcr2015c122z0294p005o113.tif",
+        "sourceFileId": "875755",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o113.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21a",
+        "sourceTiffSha256": "290fb53524f4ed666c05b16e78832dc237aa61d77145c913fee392393fb50c90",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 21a"
@@ -10007,7 +10138,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 16,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21a",
@@ -10028,8 +10160,40 @@
       "explanationUk": null,
       "familyCode": "IS 21",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/91aa86abd47a12fc7fcf95c4.webp",
+        "pixelSize": [
+          169,
+          112
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 54,
+          "method": "official-composite-panel-order",
+          "panelCount": 3,
+          "panelOrdinal": 2,
+          "rowCodes": [
+            "IS 21a",
+            "IS 21b",
+            "IS 21c"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            114,
+            169,
+            226
+          ]
+        },
+        "sha256": "91aa86abd47a12fc7fcf95c4a445dc4b0aa621e3baa6f5d6d895c7d29eedc2c2",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_054_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875755/ORIGINAL/STAHNI/sbcr2015c122z0294p005o113.tif",
+        "sourceFileId": "875755",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o113.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21b",
+        "sourceTiffSha256": "290fb53524f4ed666c05b16e78832dc237aa61d77145c913fee392393fb50c90",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 21b"
@@ -10039,7 +10203,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21b",
@@ -10060,8 +10225,40 @@
       "explanationUk": null,
       "familyCode": "IS 21",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/4cb39bd9b0a0b6adb4990bff.webp",
+        "pixelSize": [
+          169,
+          103
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 54,
+          "method": "official-composite-panel-order",
+          "panelCount": 3,
+          "panelOrdinal": 3,
+          "rowCodes": [
+            "IS 21a",
+            "IS 21b",
+            "IS 21c"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            226,
+            169,
+            329
+          ]
+        },
+        "sha256": "4cb39bd9b0a0b6adb4990bfffc5053ded4995ae5dfc7f7e8a725c2ed174d4877",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_054_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875755/ORIGINAL/STAHNI/sbcr2015c122z0294p005o113.tif",
+        "sourceFileId": "875755",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o113.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21c",
+        "sourceTiffSha256": "290fb53524f4ed666c05b16e78832dc237aa61d77145c913fee392393fb50c90",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 21c"
@@ -10071,7 +10268,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 21c",
@@ -10135,8 +10333,43 @@
       "explanationUk": null,
       "familyCode": "IS 22",
       "graphic": {
-        "sourceId": "md-vl-6-1-2019",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/45222275ca4e96be6620b170.webp",
+        "pixelSize": [
+          321,
+          78
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 56,
+          "method": "official-composite-panel-order",
+          "panelCount": 6,
+          "panelOrdinal": 1,
+          "rowCodes": [
+            "IS 22a",
+            "IS 22b",
+            "IS 22c",
+            "IS 22d",
+            "IS 22e",
+            "IS 22f"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            0,
+            321,
+            78
+          ]
+        },
+        "sha256": "45222275ca4e96be6620b170bb0398001d4fca0f2e0b0742955d7ccd15b49446",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+        "sourceFileId": "875759",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o115.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22a",
+        "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 22a"
@@ -10149,7 +10382,8 @@
       "reviewStatus": "INDEX_ONLY",
       "sourceIds": [
         "decree-294-2015",
-        "md-vl-6-1-2019"
+        "md-vl-6-1-2019",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": 16,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22a",
@@ -10170,8 +10404,43 @@
       "explanationUk": null,
       "familyCode": "IS 22",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/307a75ef90ee3a4c0dbfd6bb.webp",
+        "pixelSize": [
+          321,
+          85
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 56,
+          "method": "official-composite-panel-order",
+          "panelCount": 6,
+          "panelOrdinal": 2,
+          "rowCodes": [
+            "IS 22a",
+            "IS 22b",
+            "IS 22c",
+            "IS 22d",
+            "IS 22e",
+            "IS 22f"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            78,
+            321,
+            163
+          ]
+        },
+        "sha256": "307a75ef90ee3a4c0dbfd6bbfc8f4d086f826457d4390c417ba86930aba6db12",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+        "sourceFileId": "875759",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o115.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22b",
+        "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 22b"
@@ -10181,7 +10450,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22b",
@@ -10202,8 +10472,43 @@
       "explanationUk": null,
       "familyCode": "IS 22",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/e244eeb093e948ae1b381afa.webp",
+        "pixelSize": [
+          321,
+          84
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 56,
+          "method": "official-composite-panel-order",
+          "panelCount": 6,
+          "panelOrdinal": 3,
+          "rowCodes": [
+            "IS 22a",
+            "IS 22b",
+            "IS 22c",
+            "IS 22d",
+            "IS 22e",
+            "IS 22f"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            163,
+            321,
+            247
+          ]
+        },
+        "sha256": "e244eeb093e948ae1b381afaa42de44c599ab29358f0d87a4b1bcbafb7382b35",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+        "sourceFileId": "875759",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o115.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22c",
+        "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 22c"
@@ -10213,7 +10518,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22c",
@@ -10234,8 +10540,43 @@
       "explanationUk": null,
       "familyCode": "IS 22",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/3f9272662ea15a5423170b77.webp",
+        "pixelSize": [
+          321,
+          84
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 56,
+          "method": "official-composite-panel-order",
+          "panelCount": 6,
+          "panelOrdinal": 4,
+          "rowCodes": [
+            "IS 22a",
+            "IS 22b",
+            "IS 22c",
+            "IS 22d",
+            "IS 22e",
+            "IS 22f"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            247,
+            321,
+            331
+          ]
+        },
+        "sha256": "3f9272662ea15a5423170b7774eafa9c1c9b70f45e4a6e8aaac55f2e688f3254",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+        "sourceFileId": "875759",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o115.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22d",
+        "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 22d"
@@ -10245,7 +10586,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22d",
@@ -10266,8 +10608,43 @@
       "explanationUk": null,
       "familyCode": "IS 22",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/8820cfeeb9a88eb252e205e5.webp",
+        "pixelSize": [
+          321,
+          83
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 56,
+          "method": "official-composite-panel-order",
+          "panelCount": 6,
+          "panelOrdinal": 5,
+          "rowCodes": [
+            "IS 22a",
+            "IS 22b",
+            "IS 22c",
+            "IS 22d",
+            "IS 22e",
+            "IS 22f"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            331,
+            321,
+            414
+          ]
+        },
+        "sha256": "8820cfeeb9a88eb252e205e52438078fcf262bc6cb186e1b804877596fbb5e3d",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+        "sourceFileId": "875759",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o115.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22e",
+        "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 22e"
@@ -10277,7 +10654,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22e",
@@ -10298,8 +10676,43 @@
       "explanationUk": null,
       "familyCode": "IS 22",
       "graphic": {
-        "sourceId": "decree-294-2015",
-        "status": "LICENSE_REVIEW_REQUIRED"
+        "mime": "image/webp",
+        "path": "graphics/113ccec7157d491802eef153.webp",
+        "pixelSize": [
+          321,
+          82
+        ],
+        "provenance": {
+          "annexFragmentId": 1075596043,
+          "imageOrdinalInFragment": 56,
+          "method": "official-composite-panel-order",
+          "panelCount": 6,
+          "panelOrdinal": 6,
+          "rowCodes": [
+            "IS 22a",
+            "IS 22b",
+            "IS 22c",
+            "IS 22d",
+            "IS 22e",
+            "IS 22f"
+          ],
+          "rowImageCount": 1,
+          "sourceCropBox": [
+            0,
+            414,
+            321,
+            496
+          ]
+        },
+        "sha256": "113ccec7157d491802eef153ab5959bdcbcfb00ec0c551588b027984b245def7",
+        "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+        "sourceBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+        "sourceFileId": "875759",
+        "sourceId": "esbirka-294-2015-2025-07-01-zip",
+        "sourceImageName": "sbcr2015c122z0294p005o115.tif",
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22f",
+        "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514",
+        "status": "VERIFIED"
       },
       "graphicVariantCodes": [
         "IS 22f"
@@ -10309,7 +10722,8 @@
       "questionOfficialIds": [],
       "reviewStatus": "LEGAL_INDEX_ONLY",
       "sourceIds": [
-        "decree-294-2015"
+        "decree-294-2015",
+        "esbirka-294-2015-2025-07-01-zip"
       ],
       "sourceIndexPage": null,
       "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 22f",

@@ -59,6 +59,38 @@ class SignInventoryTest(unittest.TestCase):
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
 
+    def test_manual_composite_panels_follow_official_row_order(self):
+        evidence = json.loads((CONTENT / "graphics-manual-resolution.json").read_text())
+        signs = {sign["code"]: sign for sign in self.data["signs"]}
+        expected = {"IS 19": "abc", "IS 21": "abc", "IS 22": "abcdef"}
+        paths = set()
+        for family, suffixes in expected.items():
+            row = evidence["families"][family]
+            codes = [f"{family}{suffix}" for suffix in suffixes]
+            self.assertEqual(codes, row["legalCodesInOfficialRow"])
+            self.assertEqual(1, row["officialIllustrationCount"])
+            self.assertEqual(len(codes), row["panelCount"])
+            self.assertEqual(1, len(row["officialTiffs"]))
+            original = row["officialTiffs"][0]
+            bounds = []
+            for n, code in enumerate(codes, 1):
+                self.assertEqual(1, len(row["codeImages"][code]))
+                graphic = signs[code]["graphic"]
+                self.assertEqual("VERIFIED", graphic["status"])
+                self.assertEqual(row["codeImages"][code][0], graphic["path"])
+                self.assertEqual(original["sourceFileId"], graphic["sourceFileId"])
+                self.assertEqual(original["sourceTiffSha256"], graphic["sourceTiffSha256"])
+                self.assertEqual(signs[code]["sourceProvision"], graphic["sourceProvision"])
+                self.assertEqual(n, graphic["provenance"]["panelOrdinal"])
+                self.assertEqual(codes, graphic["provenance"]["rowCodes"])
+                self.assertEqual("official-composite-panel-order", graphic["provenance"]["method"])
+                bounds.append(graphic["provenance"]["sourceCropBox"])
+                paths.add(graphic["path"])
+            self.assertEqual(0, bounds[0][1])
+            self.assertEqual(original["sourcePixelSize"][1], bounds[-1][3])
+            self.assertTrue(all(a[3] == b[1] for a, b in zip(bounds, bounds[1:])))
+        self.assertEqual(12, len(paths))
+
     def test_duplicate_code_rejected(self):
         data = copy.deepcopy(self.data)
         data["signs"].append(copy.deepcopy(data["signs"][0]))

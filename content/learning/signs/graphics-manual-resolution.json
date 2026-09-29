@@ -1,0 +1,129 @@
+{
+  "annexVersion": "2025-07-01",
+  "families": {
+    "IS 19": {
+      "annexFragmentId": 1075596043,
+      "codeImages": {
+        "IS 19a": [
+          "graphics/b55424dae44daf6e03d16da8.webp"
+        ],
+        "IS 19b": [
+          "graphics/0d38da936ef804159ea04fea.webp"
+        ],
+        "IS 19c": [
+          "graphics/c349609dfcc9bc6b5615d89a.webp"
+        ]
+      },
+      "legalCodesInOfficialRow": [
+        "IS 19a",
+        "IS 19b",
+        "IS 19c"
+      ],
+      "mapping": "top-to-bottom document order, one separate panel per code",
+      "officialIllustrationCount": 1,
+      "officialRowSha256": "27244b2ad0f8a456ee54f7542e63cf5e38c185065f37dde1e6f718ad82cf91ab",
+      "officialTiffs": [
+        {
+          "imageOrdinalInFragment": 51,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875749/ORIGINAL/STAHNI/sbcr2015c122z0294p005o110.tif",
+          "officialFilename": "sbcr2015c122z0294p005o110.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_051_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875749",
+          "sourcePixelSize": [
+            353,
+            349
+          ],
+          "sourceTiffSha256": "8fd8a76745d3f9349dce1b6c333c34020dc1741c12e55c4b8c4ae0d062c7d4f8"
+        }
+      ],
+      "panelCount": 3
+    },
+    "IS 21": {
+      "annexFragmentId": 1075596043,
+      "codeImages": {
+        "IS 21a": [
+          "graphics/fbeff28952dba88d892346d1.webp"
+        ],
+        "IS 21b": [
+          "graphics/91aa86abd47a12fc7fcf95c4.webp"
+        ],
+        "IS 21c": [
+          "graphics/4cb39bd9b0a0b6adb4990bff.webp"
+        ]
+      },
+      "legalCodesInOfficialRow": [
+        "IS 21a",
+        "IS 21b",
+        "IS 21c"
+      ],
+      "mapping": "top-to-bottom document order, one separate panel per code",
+      "officialIllustrationCount": 1,
+      "officialRowSha256": "63dde85f7dfc7b368c3470d672884053e368b847b0c535fd918bd528b8488ad4",
+      "officialTiffs": [
+        {
+          "imageOrdinalInFragment": 54,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875755/ORIGINAL/STAHNI/sbcr2015c122z0294p005o113.tif",
+          "officialFilename": "sbcr2015c122z0294p005o113.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_054_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875755",
+          "sourcePixelSize": [
+            169,
+            329
+          ],
+          "sourceTiffSha256": "290fb53524f4ed666c05b16e78832dc237aa61d77145c913fee392393fb50c90"
+        }
+      ],
+      "panelCount": 3
+    },
+    "IS 22": {
+      "annexFragmentId": 1075596043,
+      "codeImages": {
+        "IS 22a": [
+          "graphics/45222275ca4e96be6620b170.webp"
+        ],
+        "IS 22b": [
+          "graphics/307a75ef90ee3a4c0dbfd6bb.webp"
+        ],
+        "IS 22c": [
+          "graphics/e244eeb093e948ae1b381afa.webp"
+        ],
+        "IS 22d": [
+          "graphics/3f9272662ea15a5423170b77.webp"
+        ],
+        "IS 22e": [
+          "graphics/8820cfeeb9a88eb252e205e5.webp"
+        ],
+        "IS 22f": [
+          "graphics/113ccec7157d491802eef153.webp"
+        ]
+      },
+      "legalCodesInOfficialRow": [
+        "IS 22a",
+        "IS 22b",
+        "IS 22c",
+        "IS 22d",
+        "IS 22e",
+        "IS 22f"
+      ],
+      "mapping": "top-to-bottom document order, one separate panel per code",
+      "officialIllustrationCount": 1,
+      "officialRowSha256": "9a43755032d09a99450e3c53f6c28fb57a9e664938b8d16f1d6779176899207b",
+      "officialTiffs": [
+        {
+          "imageOrdinalInFragment": 56,
+          "officialBinaryUrl": "https://e-sbirka.gov.cz/sbr-externi/souborove-dokumenty/875759/ORIGINAL/STAHNI/sbcr2015c122z0294p005o115.tif",
+          "officialFilename": "sbcr2015c122z0294p005o115.tif",
+          "sourceArchivePath": "Sb_2015_294/Obrazky/Sb_2015_294_056_pril_5-bod_3_frag_1075596043_IZ.tiff",
+          "sourceFileId": "875759",
+          "sourcePixelSize": [
+            321,
+            496
+          ],
+          "sourceTiffSha256": "6511b749b05a54654d5c2cbc4b515de5792ee314e4b5430ad3f49df816c09514"
+        }
+      ],
+      "panelCount": 6
+    }
+  },
+  "sourceId": "esbirka-294-2015-2025-07-01-zip"
+}
