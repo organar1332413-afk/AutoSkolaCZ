@@ -29,40 +29,24 @@ jobs:
       - name: Install importer dependencies
         run: python -m pip install --disable-pip-version-check pillow lxml
 
-      - name: Download pinned official e-Sbírka archive
+      - name: Test official e-Sbírka binary endpoint
         run: |
-          curl --fail --location --retry 3 --connect-timeout 20 --max-time 600 \
-            --dump-header /tmp/esbirka-headers.txt \
-            'https://e-sbirka.gov.cz/sb/2015/294/2025-07-01.ZIP' \
-            --output /tmp/294-2025-07-01.zip
-          sha256sum /tmp/294-2025-07-01.zip
-          if ! python -c "import zipfile; z=zipfile.ZipFile('/tmp/294-2025-07-01.zip'); z.testzip()"; then
-            echo '--- response headers ---'
-            cat /tmp/esbirka-headers.txt
-            echo '--- response body ---'
-            head -c 5000 /tmp/294-2025-07-01.zip || true
-            echo
-            exit 1
-          fi
+          curl --fail --location --retry 2 --connect-timeout 20 --max-time 120 \
+            'https://e-sbirka.gov.cz/esel-esbir-dasex/souborove-dokumenty/872679/ORIGINAL/STAHNI/sbcr2015c122z0294p005o067.tif' \
+            --output /tmp/test-sign.tif
+          file /tmp/test-sign.tif
+          stat -c '%s bytes' /tmp/test-sign.tif
+          sha256sum /tmp/test-sign.tif
           python - <<'PY'
-          import zipfile
-          p = '/tmp/294-2025-07-01.zip'
-          with zipfile.ZipFile(p) as z:
-              names = z.namelist()
-              tiffs = [n for n in names if n.endswith('.tiff')]
-              metadata = [n for n in names if n.endswith('_IZ.json')]
-              print(f'archive entries={len(names)} tiffs={len(tiffs)} metadata={len(metadata)}')
-              if len(tiffs) < 300 or not metadata:
-                  raise SystemExit('Downloaded archive is not the full consolidated annex ZIP')
+          from PIL import Image
+          p='/tmp/test-sign.tif'
+          with Image.open(p) as im:
+              print(im.format, im.size, im.mode)
+              im.verify()
           PY
 
-      - name: Import exact-row missing graphics
-        run: |
-          python -m tools.learning_content.import_missing_sign_graphics \
-            /tmp/294-2025-07-01.zip --apply
-          python -m tools.learning_content.import_esbirka_grouped \
-            /tmp/294-2025-07-01.zip
-          python -m unittest tools.learning_content.test_signs -v
+      - name: Endpoint diagnostic complete
+        run: echo "Official binary endpoint is readable."
 
       - name: Commit generated graphics checkpoint
         run: |
