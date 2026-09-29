@@ -44,12 +44,12 @@ class SignInventoryTest(unittest.TestCase):
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(109, audit["bundledImages"])
-        self.assertEqual(105, audit["graphicsPresent"])
+        self.assertEqual(112, audit["bundledImages"])
+        self.assertEqual(108, audit["graphicsPresent"])
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(303, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(301, audit["graphicLicenseReviewRequired"])
+        self.assertEqual(300, len(audit["graphicsMissingCodes"]))
+        self.assertEqual(298, audit["graphicLicenseReviewRequired"])
         self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
@@ -167,6 +167,19 @@ class SignInventoryTest(unittest.TestCase):
             self.assertEqual(file_id, graphic["sourceFileId"])
             self.assertIn("_pril_3_frag_1075596033_IZ.tiff", graphic["sourceArchivePath"])
         self.assertNotEqual(by_code["B 8"]["graphic"]["path"], by_code["B 9"]["graphic"]["path"])
+
+    def test_speed_and_overtaking_graphics_trace_to_own_annex_rows(self):
+        by_code = {sign["code"]: sign for sign in self.data["signs"]}
+        expected = {"B 20a": "841317", "B 20b": "841319", "B 21a": "841321"}
+        paths = set()
+        for code, file_id in expected.items():
+            graphic = by_code[code]["graphic"]
+            self.assertEqual("VERIFIED", graphic["status"])
+            self.assertEqual("esbirka-294-2015-2025-07-01-zip", graphic["sourceId"])
+            self.assertEqual(file_id, graphic["sourceFileId"])
+            self.assertIn("_pril_3_frag_1075596033_IZ.tiff", graphic["sourceArchivePath"])
+            self.assertNotIn(graphic["path"], paths)
+            paths.add(graphic["path"])
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8

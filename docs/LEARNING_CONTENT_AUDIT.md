@@ -1,5 +1,14 @@
 # Stage 4 learning content audit (26 September 2026)
 
+## 29 September 2026 prohibition graphics B 20a–B 21a
+
+Added three Annex 3 illustrations: `B 20a` (80 km/h, file `841317`),
+`B 20b` (end of the 80 km/h limit, file `841319`), and `B 21a`
+(no overtaking, file `841321`). Each lossless WebP matches the identified
+official TIFF's decoded pixels. The catalog now references **112 files
+across 108 code cards**; **300 cards** lack an image. The 80 km/h example
+does not prove coverage of every possible speed value or VL execution.
+
 ## 29 September 2026 prohibition graphics B 8–B 9
 
 Added two Annex 3 images individually matched to `B 8` (bicycles, source
