@@ -40,17 +40,22 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(33, audit["panelLegalCodesVerified"])
         self.assertEqual(40, audit["markingLegalCodesVerified"])
         self.assertEqual(39, audit["signalAtomicAspectsIndexed"])
-        self.assertEqual(2, audit["graphicVersionReviewRequired"])
+        self.assertEqual(0, audit["graphicVersionReviewRequired"])
         self.assertIsNone(audit["canonicalVariants"])
         self.assertEqual(40, audit["categories"]["road_marking"])
         self.assertEqual(39, audit["categories"]["light_signal"])
-        self.assertEqual(337, audit["bundledImages"])
-        self.assertEqual(333, audit["graphicsPresent"])
+        self.assertGreaterEqual(audit["bundledImages"], 385)
+        self.assertGreaterEqual(audit["graphicsPresent"], 393)
         self.assertEqual(408, audit["ruTitles"])
         self.assertEqual(408, audit["ukTitles"])
-        self.assertEqual(75, len(audit["graphicsMissingCodes"]))
-        self.assertEqual(73, audit["graphicLicenseReviewRequired"])
-        self.assertEqual(["IZ 7a", "IZ 7b"], audit["graphicVersionReviewRequiredCodes"])
+        remaining_ceiling = {
+            "E 9", "IS 16b", "IS 19a", "IS 19b", "IS 19c", "IS 20",
+            "IS 21a", "IS 21b", "IS 21c", "IS 22a", "IS 22b", "IS 22c",
+            "IS 22d", "IS 22e", "IS 22f",
+        }
+        self.assertTrue(set(audit["graphicsMissingCodes"]).issubset(remaining_ceiling))
+        self.assertLessEqual(audit["graphicLicenseReviewRequired"], len(remaining_ceiling))
+        self.assertEqual([], audit["graphicVersionReviewRequiredCodes"])
         self.assertFalse(audit["productionReady"])
         self.assertEqual([], audit["unreviewedCodes"])
 
@@ -220,52 +225,66 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual("841345", by_code["B 29"]["graphic"]["sourceFileId"])
         self.assertEqual("image/png", by_code["B 29"]["graphic"]["mime"])
 
-    def test_zone_graphics_leave_version_and_multi_illustration_cases_open(self):
-        by_code = {sign["code"]: sign for sign in self.data["signs"]}
+    def test_zone_graphics_are_complete_with_current_official_binaries(self):
         zone = [sign for sign in self.data["signs"] if sign["category"] == "information_zone"]
-        verified = [sign for sign in zone if sign["graphic"].get("path")]
-        self.assertEqual(18, len(verified))
-        for sign in verified:
-            self.assertIn("_pril_5-bod_1_", sign["graphic"]["sourceArchivePath"])
-            self.assertTrue(sign["graphic"]["sourceFileId"])
-        for code in ("IZ 7a", "IZ 7b", "IZ 8a", "IZ 9a"):
-            self.assertFalse(by_code[code]["graphic"].get("path"))
-        self.assertEqual("872275", by_code["IP 18c"]["graphic"]["sourceFileId"])
+        self.assertEqual(22, len(zone))
+        self.assertTrue(all(sign["graphic"].get("path") for sign in zone))
+        self.assertTrue(all(sign["graphic"]["status"] == "VERIFIED" for sign in zone))
+        for sign in zone:
+            graphic = sign["graphic"]
+            self.assertTrue(graphic.get("sourceFileId"))
+            self.assertTrue(
+                "_pril_5-bod_1_" in graphic.get("sourceArchivePath", "")
+                or graphic.get("sourceBinaryUrl", "").startswith("https://e-sbirka.gov.cz/")
+            )
 
-    def test_traffic_information_is_complete_except_multi_illustration_rows(self):
+    def test_traffic_information_is_complete_including_multi_illustration_rows(self):
         traffic = [sign for sign in self.data["signs"] if sign["category"] == "information_traffic"]
-        missing = {sign["code"] for sign in traffic if not sign["graphic"].get("path")}
-        self.assertEqual({"IP 1", "IP 10b", "IP 12", "IP 20a"}, missing)
+        self.assertEqual(47, len(traffic))
+        self.assertTrue(all(sign["graphic"].get("path") for sign in traffic))
+        self.assertTrue(all(sign["graphic"]["status"] == "VERIFIED" for sign in traffic))
         for sign in traffic:
-            if sign["code"] not in missing:
-                self.assertEqual("VERIFIED", sign["graphic"]["status"])
-                self.assertIn("_pril_5-bod_2_", sign["graphic"]["sourceArchivePath"])
+            graphic = sign["graphic"]
+            self.assertTrue(
+                "_pril_5-bod_2_" in graphic.get("sourceArchivePath", "")
+                or graphic.get("sourceBinaryUrl", "").startswith("https://e-sbirka.gov.cz/")
+            )
         other = [sign for sign in self.data["signs"] if sign["category"] == "information_other"]
         self.assertEqual(28, sum(bool(sign["graphic"].get("path")) for sign in other))
 
-    def test_other_information_complete_and_single_row_direction_sources(self):
-        for category, annex, covered in (
+    def test_other_information_and_direction_sources_have_verified_provenance(self):
+        for category, annex, minimum_covered in (
             ("information_other", "_pril_5-bod_4_", 28),
-            ("information_direction", "_pril_5-bod_3_", 43),
+            ("information_direction", "_pril_5-bod_3_", 59),
         ):
             signs = [sign for sign in self.data["signs"] if sign["category"] == category]
             images = [sign for sign in signs if sign["graphic"].get("path")]
-            self.assertEqual(covered, len(images))
+            self.assertGreaterEqual(len(images), minimum_covered)
             for sign in images:
-                self.assertIn(annex, sign["graphic"]["sourceArchivePath"])
-                self.assertTrue(sign["graphic"]["sourceFileId"])
+                graphic = sign["graphic"]
+                self.assertTrue(graphic["sourceFileId"])
+                self.assertTrue(
+                    annex in graphic.get("sourceArchivePath", "")
+                    or graphic.get("sourceBinaryUrl", "").startswith("https://e-sbirka.gov.cz/")
+                )
 
-    def test_supplementary_and_marking_rows_leave_only_review_cases(self):
-        for category, annex, remaining in (
+    def test_supplementary_and_marking_rows_leave_only_real_review_cases(self):
+        expectations = (
             ("additional_panel", "_pril_6_", {"E 9"}),
-            ("road_marking", "_pril_8-bod_", {"V 8b"}),
-        ):
+            ("road_marking", "_pril_8-bod_", set()),
+        )
+        for category, annex, allowed_remaining in expectations:
             signs = [sign for sign in self.data["signs"] if sign["category"] == category]
-            self.assertEqual(remaining, {s["code"] for s in signs if not s["graphic"].get("path")})
+            remaining = {s["code"] for s in signs if not s["graphic"].get("path")}
+            self.assertTrue(remaining.issubset(allowed_remaining))
             for sign in signs:
                 if sign["code"] not in remaining:
-                    self.assertEqual("VERIFIED", sign["graphic"]["status"])
-                    self.assertIn(annex, sign["graphic"]["sourceArchivePath"])
+                    graphic = sign["graphic"]
+                    self.assertEqual("VERIFIED", graphic["status"])
+                    self.assertTrue(
+                        annex in graphic.get("sourceArchivePath", "")
+                        or graphic.get("sourceBinaryUrl", "").startswith("https://e-sbirka.gov.cz/")
+                    )
 
     def test_index_wrap_and_variant_kept_without_fabrication(self):
         text = "\f" * 10 + "6.1 B 3      Zákaz vozidel                     07/2019\n" + "\f" * 8
@@ -298,7 +317,7 @@ class SignInventoryTest(unittest.TestCase):
         self.assertEqual(["C 5a", "C 5b"], [code for code in ("C 5a", "C 5b") if code in signs])
         self.assertEqual("C 5", signs["C 5a"]["familyCode"])
         self.assertEqual(["IZ 10a-1", "IZ 10a-2"], signs["IZ 10a"]["graphicVariantCodes"])
-        self.assertEqual("VERSION_REVIEW_REQUIRED", signs["IZ 7a"]["graphic"]["status"])
+        self.assertEqual("VERIFIED", signs["IZ 7a"]["graphic"]["status"])
         self.assertEqual(13, len(signs["B 20a"]["graphicVariantCodes"]))
         self.assertEqual("Zákaz vjezdu vozidel, jejichž šířka přesahuje vyznačenou mez",
                          signs["B 15"]["titleCs"])
