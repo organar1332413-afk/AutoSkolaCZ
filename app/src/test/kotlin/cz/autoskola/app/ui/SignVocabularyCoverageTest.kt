@@ -77,6 +77,10 @@ class SignVocabularyCoverageTest {
             assertEquals("разворот", findLearningWord("obrat", ru, "ru")?.translation)
             assertTrue(findLearningWord("hroty", ru, "ru")!!.meaning!!.contains("шипы"))
             assertTrue(findLearningWord("přestavování", ru, "ru")!!.meaning!!.contains("парковочном диске"))
+            assertTrue(findLearningWord("měření", ru, "ru")!!.translation!!.contains("измерение"))
+            assertTrue(findLearningWord("bezpečí", ru, "ru")!!.translation!!.contains("безопасность"))
+            assertTrue(findLearningWord("měření", ua, "uk")!!.translation!!.contains("вимірювання"))
+            assertTrue(findLearningWord("bezpečí", ua, "uk")!!.translation!!.contains("безпека"))
             assertNull(findLearningWord("naprostoneznámé", ru, "ru"))
         } finally { container.db.close(); app.deleteDatabase("autoskola.db") }
     }

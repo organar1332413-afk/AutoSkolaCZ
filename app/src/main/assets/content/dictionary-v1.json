@@ -574,13 +574,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "безопасный, безопасно",
+        "translation": "безопасный, безопасно, безопасность",
         "meaning": "Действие или место без угрозы участникам движения.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "безпечний, безпечно",
+        "translation": "безпечний, безпечно, безпека",
         "meaning": "Дія чи місце без загрози учасникам руху.",
         "exampleTranslation": ""
       }
@@ -1898,13 +1898,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "дополнить, уточнить",
+        "translation": "дополнить, уточнить, дополнение",
         "meaning": "Добавить информацию к основному обозначению.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "доповнити, уточнити",
+        "translation": "доповнити, уточнити, доповнення",
         "meaning": "Додати інформацію до основного позначення.",
         "exampleTranslation": ""
       }
@@ -6810,13 +6810,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "загрузить, загруженный",
+        "translation": "загрузить, загруженный, погрузка",
         "meaning": "Размещение груза в транспортном средстве.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "завантажити, завантажений",
+        "translation": "завантажити, завантажений, завантаження",
         "meaning": "Розміщення вантажу в транспортному засобі.",
         "exampleTranslation": ""
       }
@@ -6953,13 +6953,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "надеть, установить",
+        "translation": "надеть, установить, установка",
         "meaning": "Здесь установка цепей или другого оборудования.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "надягти, установити",
+        "translation": "надягти, установити, установлення",
         "meaning": "Тут установлення ланцюгів чи іншого обладнання.",
         "exampleTranslation": ""
       }
@@ -9917,13 +9917,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "заменяющий, запасной",
+        "translation": "заменяющий, запасной, замена",
         "meaning": "Используется вместо основного варианта.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "замінний, запасний",
+        "translation": "замінний, запасний, заміна",
         "meaning": "Використовується замість основного варіанта.",
         "exampleTranslation": ""
       }
@@ -11933,13 +11933,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "покинуть, выехать",
+        "translation": "покинуть, выехать, покидание",
         "meaning": "Удалиться из указанной зоны или участка.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "залишити, виїхати",
+        "translation": "залишити, виїхати, залишення",
         "meaning": "Виїхати з указаної зони чи ділянки.",
         "exampleTranslation": ""
       }
@@ -16354,13 +16354,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "прочитать",
+        "translation": "прочитать, чтение",
         "meaning": "Ознакомиться с надписью или текстом обозначения.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "прочитати",
+        "translation": "прочитати, читання",
         "meaning": "Ознайомитися з написом чи текстом позначення.",
         "exampleTranslation": ""
       }
@@ -18126,13 +18126,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "использовать совместно",
+        "translation": "использовать совместно, совместное использование",
         "meaning": "Несколько групп пользуются одним пространством.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "користуватися спільно",
+        "translation": "користуватися спільно, спільне користування",
         "meaning": "Кілька груп користуються одним простором.",
         "exampleTranslation": ""
       }
@@ -20234,13 +20234,13 @@
     "translations": [
       {
         "locale": "ru",
-        "translation": "светить, включать свет",
+        "translation": "светить, включать свет, свечение",
         "meaning": "Работа световых приборов транспортного средства.",
         "exampleTranslation": ""
       },
       {
         "locale": "uk",
-        "translation": "світити, вмикати світло",
+        "translation": "світити, вмикати світло, світіння",
         "meaning": "Робота світлових приладів транспортного засобу.",
         "exampleTranslation": ""
       }
