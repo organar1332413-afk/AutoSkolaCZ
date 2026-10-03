@@ -69,8 +69,8 @@ class SignTranslationDeviceTest {
         tapWord("line-8", "Neznámé")
         compose.onNodeWithTag("word-translation-unavailable").assertIsDisplayed()
         screenshot("word-popup-unknown-ru.png")
-        assertTrue(instrumentation.uiAutomation.injectInputEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_BACK), true))
-        assertTrue(instrumentation.uiAutomation.injectInputEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_BACK), true))
+        // Instrumentation supplies current event times; zero-time synthetic keys are rejected by Android.
+        instrumentation.sendKeyDownUpSync(KeyEvent.KEYCODE_BACK)
         compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
         compose.onNodeWithTag("learning-screen").assertIsDisplayed()
         assertEquals(before, compose.runOnIdle { state.firstVisibleItemIndex to state.firstVisibleItemScrollOffset })
@@ -112,7 +112,10 @@ class SignTranslationDeviceTest {
     private fun screenshot(name: String) {
         compose.waitForIdle()
         val bitmap = instrumentation.uiAutomation.takeScreenshot() ?: error("Device screenshot unavailable")
-        val folder = File(instrumentation.targetContext.getExternalFilesDir(null), "sign-detail-verification").apply { mkdirs() }
+        // AGP supplies and collects this directory before uninstalling the tested APK.
+        val output = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir")
+        val parent = output?.let(::File) ?: instrumentation.targetContext.getExternalFilesDir(null)!!
+        val folder = File(parent, "sign-detail-verification").apply { mkdirs() }
         File(folder, name).outputStream().use { bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
         bitmap.recycle()
     }
