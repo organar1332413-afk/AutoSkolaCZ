@@ -69,8 +69,9 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         val load by vm.loadState.collectAsStateWithLifecycle()
         val signCatalog by vm.signCatalog.collectAsStateWithLifecycle()
         val signProgress by vm.signProgress.collectAsStateWithLifecycle()
+        val lookupTipSeen by vm.lookupTipSeen.collectAsStateWithLifecycle()
         val signDestinationState = rememberUpdatedState(SignDestinationState(
-            signCatalog,signProgress,settings,words,questions.mapTo(mutableSetOf()) { it.officialId }))
+            signCatalog,signProgress,settings,words,questions.mapTo(mutableSetOf()) { it.officialId }, lookupTipSeen))
 
         val tabs=listOf(
             Tab("home",R.string.home,Icons.Default.Home),
@@ -212,7 +213,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                             )
                         }
                         signDestinations(nav,signDestinationState,
-                            vm::viewSign,vm::favoriteSign,vm::saveWord,vm::reloadSigns) { open("question/$it") }
+                            vm::viewSign,vm::favoriteSign,vm::saveWord,vm::reloadSigns,vm::saveUnknownWord,vm::dismissLookupTip) { open("question/$it") }
                         composable("first_aid") { FirstAidScreen(open) }
                         composable("aid_questions") {
                             QuestionsScreen(questions.filter { it.category=="first_aid" },status,learning) { open("question/$it") }

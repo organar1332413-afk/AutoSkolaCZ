@@ -1,0 +1,90 @@
+package cz.autoskola.app.ui
+
+import android.app.Application
+import androidx.activity.ComponentActivity
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Text
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.text.TextLayoutResult
+import cz.autoskola.design.*
+import cz.autoskola.domain.Lexeme
+import org.junit.Assert.*
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
+
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [28], qualifiers = "w411dp-h891dp", application = Application::class)
+class LearningWordPopupTest {
+    @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
+    private val driver = Lexeme("ridic", "řidič", "водитель", "Человек, управляющий транспортным средством.", "", null, false, "ru", listOf("řidiče"))
+    private var saves = 0
+    private lateinit var policy: MutableState<WordTranslationPolicy>
+    private fun launch(strict: Boolean = false) {
+        policy = mutableStateOf(if(strict) WordTranslationPolicy.StrictExam else WordTranslationPolicy("ru", true))
+        compose.setContent { AutoSkolaTheme {
+            var selected by remember { mutableStateOf<LearningWordSelection?>(null) }
+            var words by remember { mutableStateOf(listOf(driver)) }
+            Column(Modifier.fillMaxSize().padding(PremiumSpace.lg)) {
+                Text("Detail remains open", Modifier.testTag("screen"))
+                CzechLearningText("Řidiče, vozidla. Neznámé!", policy.value, { selected = it }, modifier = Modifier.testTag("czech"))
+            }
+            LearningWordPopup(selected, policy.value, words, {
+                saves++; words = words.map { word -> word.copy(saved = true) }
+            }, { token ->
+                saves++; words = words + driver.copy(id = "unknown", lemma = token, translation = null, meaning = null, forms = emptyList(), saved = true)
+            }) { selected = null }
+        } }
+    }
+    private fun tap(token: String) {
+        val node = compose.onNodeWithTag("czech")
+        val layouts = mutableListOf<TextLayoutResult>()
+        node.performSemanticsAction(SemanticsActions.GetTextLayoutResult) { it(layouts) }
+        val result = layouts.single()
+        val index = result.layoutInput.text.text.indexOf(token)
+        val box = result.getBoundingBox(index)
+        node.performTouchInput { click(Offset(box.center.x, box.center.y)) }
+    }
+    @Test fun actualWordTapHandlesPunctuationAndSavingIsIdempotentInUi() {
+        launch(); tap("Řidiče")
+        compose.onNodeWithTag("translation-token").assertTextEquals("Řidiče")
+        compose.onNodeWithTag("word-translation").assertTextEquals("водитель")
+        compose.onNodeWithTag("translation-save").performClick().assertIsNotEnabled()
+        compose.runOnIdle { assertEquals(1, saves) }
+        compose.onNodeWithTag("translation-close").performClick()
+        tap("Řidiče")
+        compose.onNodeWithTag("translation-save").assertIsNotEnabled()
+        compose.runOnIdle { assertEquals(1, saves) }
+    }
+    @Test fun unknownWordShowsFallbackAndCanBeSavedWithoutInventingTranslation() {
+        launch(); tap("Neznámé")
+        compose.onNodeWithTag("word-translation-unavailable").assertTextEquals("Перевод пока недоступен")
+        compose.onNodeWithTag("translation-save").performClick().assertIsNotEnabled()
+        compose.onNodeWithTag("word-translation").assertDoesNotExist()
+    }
+    @Test fun outsideTouchAndBackClosePopupAndKeepScreenOpen() {
+        launch(); tap("Řidiče")
+        compose.onNodeWithTag("learning-word-popup").performTouchInput { click(Offset(-10f, -10f)) }
+        compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+        compose.onNodeWithTag("screen").assertIsDisplayed()
+        tap("Neznámé")
+        compose.runOnIdle { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+        compose.onNodeWithTag("screen").assertIsDisplayed()
+    }
+    @Test fun strictPolicyDisablesTapAndClosesExistingPopup() {
+        launch(); tap("Řidiče")
+        compose.runOnIdle { policy.value = WordTranslationPolicy.StrictExam }
+        compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+        tap("Řidiče")
+        compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+    }
+}

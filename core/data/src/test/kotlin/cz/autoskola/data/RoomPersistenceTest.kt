@@ -66,6 +66,35 @@ class RoomPersistenceTest {
         val word=study.words("cs").first().single();assertEquals(2,word.repetitions);assertEquals(1,word.correctCount)
         repo.removeWord("word");assertFalse(study.words("cs").first().single().saved)
     }
+    @Test fun savedWordsSurviveDatabaseReopenAndDuplicateSavesKeepReviewCounters() = runBlocking {
+        val context = RuntimeEnvironment.getApplication<android.app.Application>()
+        val name = "saved-words-${System.nanoTime()}.db"
+        var disk = Room.databaseBuilder(context, AutoSkolaDatabase::class.java, name).allowMainThreadQueries().build()
+        try {
+            disk.words().insertWords(listOf(DictionaryWordEntity("ridic", "řidič", "road_traffic", "", "draft")))
+            val study = RoomStudyRepository(disk)
+            study.saveWord("ridic")
+            LearningRepository(disk).wordReview("ridic", true)
+            study.saveWord("ridic")
+            study.saveUnknownWord("Chodci")
+            study.saveUnknownWord("chodci")
+            disk.close()
+            disk = Room.databaseBuilder(context, AutoSkolaDatabase::class.java, name).allowMainThreadQueries().build()
+            val reopened = RoomStudyRepository(disk).words("ru").first()
+            assertEquals(2, reopened.size)
+            assertTrue(reopened.all { it.saved })
+            assertEquals(1, reopened.single { it.id == "ridic" }.repetitions)
+            assertEquals(1, reopened.single { it.id == "ridic" }.correctCount)
+            assertNull(reopened.single { it.lemma == "chodci" }.translation)
+            assertEquals(2, disk.words().saved().first().size)
+        } finally { disk.close(); context.deleteDatabase(name) }
+    }
+    @Test fun lookupTipDismissalUsesExistingSettingsDataStore() = runBlocking {
+        val context = RuntimeEnvironment.getApplication<android.app.Application>()
+        val first = SettingsStore(context)
+        first.dismissLookupTip()
+        assertTrue(SettingsStore(context).lookupTipSeen.first())
+    }
     @Test fun unknownWordCanBeSavedWithoutInventedTranslation()=runBlocking {
         val study=RoomStudyRepository(db);study.saveUnknownWord("Chodce");study.saveUnknownWord("chodce")
         val word=study.words("ru").first().single();assertTrue(word.saved);assertEquals("chodce",word.lemma);assertNull(word.translation);assertEquals("",word.exampleCs)
@@ -219,3 +248,4 @@ class RoomPersistenceTest {
         assertEquals(version,db.content().activeVersion().first()!!.id)
     }
 }
+

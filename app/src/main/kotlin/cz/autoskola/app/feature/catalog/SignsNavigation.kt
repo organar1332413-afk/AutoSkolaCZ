@@ -26,7 +26,8 @@ data class SignDestinationState(
     val progress: SignProgress,
     val settings: UserSettings,
     val words: List<Lexeme>,
-    val availableQuestionIds: Set<String>
+    val availableQuestionIds: Set<String>,
+    val lookupTipSeen: Boolean = false
 )
 
 /**
@@ -36,7 +37,8 @@ data class SignDestinationState(
 fun NavGraphBuilder.signDestinations(
     nav: NavHostController, state: State<SignDestinationState>, markViewed: (String) -> Unit,
     favorite: (String, Boolean) -> Unit, saveWord: (String) -> Unit,
-    retry: () -> Unit = {}, openQuestion: (String) -> Unit
+    retry: () -> Unit = {}, saveUnknownWord: (String) -> Unit = {}, dismissLookupTip: () -> Unit = {},
+    openQuestion: (String) -> Unit
 ) {
     composable(SignRoutes.catalog) {
         val current = state.value
@@ -58,7 +60,7 @@ fun NavGraphBuilder.signDestinations(
                 LaunchedEffect(sign.code) { markViewed(sign.code) }
                 SignDetailScreen(sign, current.settings.policy().translationTag, current.words,
                     current.settings.policy().canLookup, sign.code in current.progress.favorites,
-                    { favorite(sign.code, it) }, saveWord, current.availableQuestionIds, openQuestion)
+                    { favorite(sign.code, it) }, saveWord, current.availableQuestionIds, openQuestion, saveUnknownWord, current.lookupTipSeen, dismissLookupTip)
             }
         }
     }

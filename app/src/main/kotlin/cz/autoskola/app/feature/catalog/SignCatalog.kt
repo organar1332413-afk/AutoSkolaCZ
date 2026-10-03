@@ -23,7 +23,16 @@ data class SignEntry(
     val relatedOfficialIds: List<String>,
     val ru: String?,
     val uk: String?,
-)
+    val detailTranslations: Map<String, SignTextTranslation> = emptyMap(),
+) {
+    fun helperFor(value: String, tag: String?): String? = when(tag) {
+        "ru" -> if(value == meaningCs) ru else detailTranslations[value]?.ru
+        "uk" -> if(value == meaningCs) uk else detailTranslations[value]?.uk
+        else -> null
+    }
+}
+
+data class SignTextTranslation(val ru: String, val uk: String)
 
 data class SignGuideBlock(
     val provision: String,
@@ -40,6 +49,12 @@ object SignCatalog {
         val inventory = asset("signs/catalog.json")
         val cards = asset("signs/curated.json").getJSONArray("cards")
         val sources = asset("signs/sources.json")
+        val translated = asset("signs/detail-translations.json").getJSONArray("texts")
+        val detailTranslations = (0 until translated.length()).associate { i ->
+            translated.getJSONObject(i).let { row ->
+                row.getString("cs") to SignTextTranslation(row.getString("ru"), row.getString("uk"))
+            }
+        }
         val byCode = (0 until cards.length()).associate { index ->
             cards.getJSONObject(index).let { it.getString("code") to it }
         }
@@ -80,6 +95,7 @@ object SignCatalog {
                 }.orEmpty(),
                 ru = card?.getString("ru"),
                 uk = card?.getString("uk"),
+                detailTranslations = detailTranslations,
             )
         }
     }

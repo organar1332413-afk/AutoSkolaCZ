@@ -63,6 +63,10 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
             operationError.value = true
             emit(SignProgress())
         }.stateIn(viewModelScope, SharingStarted.Eagerly, SignProgress())
+    val lookupTipSeen = container.settings.lookupTipSeen
+        .catch { e -> if(e is CancellationException) throw e; emit(false) }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+    fun dismissLookupTip() = update { container.settings.dismissLookupTip() }
     val exam = MutableStateFlow(ExamUiState())
     val sessionStartedAt = System.currentTimeMillis()
 

@@ -2,7 +2,7 @@ plugins { alias(libs.plugins.android.application); alias(libs.plugins.kotlin.and
 android {
     namespace = "cz.autoskola.app"
     compileSdk = 35
-    defaultConfig { applicationId = "cz.autoskola.study"; targetSdk = 35; versionCode = 3; versionName = "0.4.1-stage4b"; minSdk = 26; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+    defaultConfig { applicationId = "cz.autoskola.study"; targetSdk = 35; versionCode = 4; versionName = "0.4.2-stage4b"; minSdk = 26; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
     testOptions { unitTests.isIncludeAndroidResources=true }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     buildFeatures { compose = true; buildConfig = true }

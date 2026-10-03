@@ -18,20 +18,30 @@ import cz.autoskola.domain.Lexeme
 
 @Composable fun SignDetailScreen(sign: SignEntry, translationTag: String?, words: List<Lexeme>,
     lookupEnabled: Boolean, isFavorite: Boolean, favorite: (Boolean) -> Unit,
-    saveWord: (String) -> Unit, availableQuestionIds: Set<String>, openQuestion: (String) -> Unit) {
+    saveWord: (String) -> Unit, availableQuestionIds: Set<String>, openQuestion: (String) -> Unit,
+    saveUnknownWord: (String) -> Unit = {}, lookupTipSeen: Boolean = false, dismissLookupTip: () -> Unit = {}) {
     var sourceExpanded by rememberSaveable(sign.code) { mutableStateOf(false) }
     var moreExpanded by rememberSaveable(sign.code) { mutableStateOf(false) }
-    var selectedWordId by rememberSaveable(sign.code, translationTag, lookupEnabled) { mutableStateOf<String?>(null) }
+    var selection by remember(sign.code, translationTag, lookupEnabled) { mutableStateOf<LearningWordSelection?>(null) }
+    var tipDismissedLocally by rememberSaveable { mutableStateOf(false) }
+    val policy = WordTranslationPolicy(translationTag, lookupEnabled)
     var sourceError by remember { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
     val helperTitle = when(translationTag) { "ru" -> sign.titleRu; "uk" -> sign.titleUk; else -> null }
-    val meaningTranslation = when(translationTag) { "ru" -> sign.ru; "uk" -> sign.uk; else -> null }
-    val linked = sign.relatedOfficialIds.filter { it in availableQuestionIds }
     val memoryAdvice = listOfNotNull(sign.memoryCs, sign.mistakeCs)
         .firstOrNull { it != sign.driverActionsCs && it != sign.meaningCs }
     val more = listOfNotNull(sign.simpleCs, sign.memoryCs, sign.mistakeCs)
         .distinct().filter { it != sign.meaningCs && it != sign.driverActionsCs && it != memoryAdvice }
-    fun onWord(word: Lexeme) { selectedWordId = word.id }
+    fun hideTip() { tipDismissedLocally = true; dismissLookupTip() }
+    fun onWord(word: LearningWordSelection) { selection = word; hideTip() }
+    @Composable fun learningText(value: String, tag: String) {
+        Column(verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
+            CzechLearningText(value, policy, ::onWord, modifier = Modifier.testTag("$tag-cs"))
+            if(translationTag != null) Text(sign.helperFor(value, translationTag)
+                ?: text(R.string.sign_text_translation_unavailable), Modifier.testTag("$tag-helper"),
+                style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
 
     LazyColumn(Modifier.fillMaxSize().testTag("sign-detail-${sign.code}"),
         contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
@@ -54,24 +64,31 @@ import cz.autoskola.domain.Lexeme
         }
         item {
             Column(verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                CzechLearningText("${sign.code} · ${sign.titleCs}", translationTag, words, lookupEnabled, ::onWord, prominent = true)
+                CzechLearningText("${sign.code} · ${sign.titleCs}", policy, ::onWord, prominent = true, modifier = Modifier.testTag("sign-title-cs"))
                 helperTitle?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
             }
         }
-        if(lookupEnabled && words.any { it.locale == translationTag && !it.translation.isNullOrBlank() }) item {
-            Text(text(R.string.sign_word_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        if(policy.allowsLookup && !lookupTipSeen && !tipDismissedLocally) item("word-tip") {
+            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.testTag("word-tip")) {
+                Column(Modifier.weight(1f)) {
+                    Text("Tip: Klepněte na české slovo pro překlad.", style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(if(translationTag == "uk") "Торкніться чеського слова для перекладу." else "Нажмите на чешское слово для перевода.",
+                        style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+                IconButton(onClick = ::hideTip, modifier = Modifier.size(PremiumSize.touch)) { Icon(Icons.Default.Close, text(R.string.close)) }
+            }
         }
         sign.meaningCs?.let { meaning -> item {
             DetailSectionCard("Co znamená") {
-                CzechLearningText(meaning, translationTag, words, lookupEnabled, ::onWord)
-                meaningTranslation?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+                learningText(meaning, "meaning")
             }
         } }
         sign.driverActionsCs?.let { action -> item {
-            DetailSectionCard("Co má řidič udělat") { CzechLearningText(action, translationTag, words, lookupEnabled, ::onWord) }
+            DetailSectionCard("Co má řidič udělat") { learningText(action, "action") }
         } }
         memoryAdvice?.let { memory -> item {
-            DetailSectionCard("Zapamatuj si") { CzechLearningText(memory, translationTag, words, lookupEnabled, ::onWord) }
+            DetailSectionCard("Zapamatuj si") { learningText(memory, "memory") }
         } }
         if(more.isNotEmpty()) item {
             PremiumCard(Modifier.fillMaxWidth()) {
@@ -80,13 +97,8 @@ import cz.autoskola.domain.Lexeme
                     Text(if(moreExpanded) "−" else "+", style = MaterialTheme.typography.titleMedium)
                 }
                 if(moreExpanded) Column(Modifier.padding(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
-                    more.forEach { CzechLearningText(it, translationTag, words, lookupEnabled, ::onWord) }
+                    more.forEachIndexed { index, value -> learningText(value, "additional-$index") }
                 }
-            }
-        }
-        if(linked.isNotEmpty()) item {
-            DetailSectionCard(text(R.string.signs_related_official_questions)) {
-                linked.forEach { id -> TextButton(onClick = { openQuestion(id) }) { Text(id) } }
             }
         }
         item {
@@ -100,5 +112,5 @@ import cz.autoskola.domain.Lexeme
             }
         }
     }
-    LearningWordPopup(words.find { it.id == selectedWordId }?.takeIf { lookupEnabled && it.locale == translationTag }, saveWord) { selectedWordId = null }
+    LearningWordPopup(selection, policy, words, saveWord, saveUnknownWord) { selection = null }
 }

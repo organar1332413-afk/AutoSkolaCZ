@@ -49,6 +49,7 @@ object PremiumSize {
     val touch = 48.dp
     val signThumbnail = 112.dp
     val signHero = 220.dp
+    val wordPopupMaxWidth = 320.dp
     val stateIcon = 16.dp
     val gridCardMinHeight = 242.dp
     val border = 1.dp
