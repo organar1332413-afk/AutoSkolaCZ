@@ -14,6 +14,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.text.TextLayoutResult
 import cz.autoskola.design.*
 import cz.autoskola.domain.Lexeme
+import cz.autoskola.data.DictionaryLoadState
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
@@ -30,8 +31,10 @@ class LearningWordPopupTest {
     private val driver = Lexeme("ridic", "řidič", "водитель", "Человек, управляющий транспортным средством.", "", null, false, "ru", listOf("řidiče"))
     private var saves = 0
     private lateinit var policy: MutableState<WordTranslationPolicy>
+    private lateinit var dictionaryStatus: MutableState<DictionaryLoadState>
     private fun launch(strict: Boolean = false) {
         policy = mutableStateOf(if(strict) WordTranslationPolicy.StrictExam else WordTranslationPolicy("ru", true))
+        dictionaryStatus = mutableStateOf(DictionaryLoadState.READY)
         compose.setContent { AutoSkolaTheme {
             var selected by remember { mutableStateOf<LearningWordSelection?>(null) }
             var words by remember { mutableStateOf(listOf(driver)) }
@@ -43,7 +46,7 @@ class LearningWordPopupTest {
                 saves++; words = words.map { word -> word.copy(saved = true) }
             }, { token ->
                 saves++; words = words + driver.copy(id = "unknown", lemma = token, translation = null, meaning = null, forms = emptyList(), saved = true)
-            }) { selected = null }
+            }, dictionaryStatus.value) { selected = null }
         } }
     }
     private fun tap(token: String) {
@@ -101,5 +104,20 @@ class LearningWordPopupTest {
         compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
         tap("Řidiče")
         compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+    }
+    @Test fun loadingAndSystemFailureAreDistinctFromMissingWord() {
+        launch(); tap("Neznámé")
+        compose.runOnIdle { dictionaryStatus.value = DictionaryLoadState.LOADING }
+        compose.onNodeWithTag("word-dictionary-status").assertIsDisplayed()
+        compose.onNodeWithTag("word-translation-unavailable").assertDoesNotExist()
+        compose.onNodeWithTag("translation-save").assertIsNotEnabled()
+        compose.runOnIdle { dictionaryStatus.value = DictionaryLoadState.ERROR }
+        compose.onNodeWithTag("word-dictionary-status").assertIsDisplayed()
+        compose.onNodeWithTag("word-translation-unavailable").assertDoesNotExist()
+        compose.onNodeWithTag("translation-save").assertIsNotEnabled()
+        compose.runOnIdle { dictionaryStatus.value = DictionaryLoadState.READY }
+        compose.onNodeWithTag("word-dictionary-status").assertDoesNotExist()
+        compose.onNodeWithTag("word-translation-unavailable").assertIsDisplayed()
+        compose.onNodeWithTag("translation-save").assertIsEnabled()
     }
 }

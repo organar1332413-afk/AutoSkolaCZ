@@ -42,9 +42,10 @@ bottom and its dismissal/first lookup is saved in the existing user_settings Dat
 
 Lookup reuses `RoomStudyRepository.words`, `DictionaryWord`, translations/forms and
 `SavedWord`. No second dictionary database, network translator or paid API is added.
-The bundled debug seed still contains only four words: ohrozit, omezit, vozidlo, řidič
-(with the existing inflected forms and RU/UK entries). Release has no debug seed; its
-coverage depends on imported dictionary entries. Unknown words display a localized
+The bundled dictionary contains only four words: ohrozit, omezit, vozidlo, řidič
+(with the existing inflected forms and RU/UK entries). It is now packaged in the main
+source set and loaded independently of sample questions in debug and release.
+See `DICTIONARY_LOOKUP_FIX.md` for runtime checks and actual coverage. Unknown words display a localized
 unavailable state and can be saved as an unverified surface form through the existing
 repository. Existing untranslated dictionary entries reuse their own ID when saved.
 Saved state is reactive; repeated saves use Room IGNORE and preserve review counters.

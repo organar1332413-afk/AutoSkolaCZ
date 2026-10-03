@@ -37,6 +37,7 @@ jobs:
           rm core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json
           set -o pipefail
           gradle :core:domain:test :core:data:testDebugUnitTest :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease --stacktrace 2>&1 | tee build/verification/build.log
+          gradle :app:testReleaseUnitTest --tests cz.autoskola.app.ui.BundledDictionaryRuntimeTest --stacktrace 2>&1 | tee build/verification/release-dictionary-tests.log
           diff -u build/verification/room-v2-committed.json core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json
       - run: python tools/validate_structure.py
       - run: python -m unittest discover -s tools -p 'test_*.py' -v

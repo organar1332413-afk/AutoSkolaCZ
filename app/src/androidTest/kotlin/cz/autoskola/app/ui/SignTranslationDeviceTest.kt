@@ -23,6 +23,11 @@ import cz.autoskola.app.feature.catalog.SignCatalog
 import cz.autoskola.app.feature.catalog.SignDetailScreen
 import cz.autoskola.design.*
 import cz.autoskola.domain.Lexeme
+import cz.autoskola.domain.MaterialMode
+import cz.autoskola.app.AppContainer
+import cz.autoskola.app.MainViewModel
+import cz.autoskola.data.DictionaryLoadState
+import androidx.lifecycle.ViewModelProvider
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
@@ -35,6 +40,53 @@ class SignTranslationDeviceTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     private val instrumentation get() = InstrumentationRegistry.getInstrumentation()
     private val driver = Lexeme("ridic", "řidič", "водитель", "Человек, управляющий транспортным средством.", "", null, false, "ru", listOf("řidiče"))
+
+    @Test fun packagedDictionaryFeedsViewModelAndRealSignPopupInRuAndUa() {
+        val app = instrumentation.targetContext.applicationContext as android.app.Application
+        val container = AppContainer(app)
+        val sign = SignCatalog.load(app).single { it.code == "C 7a" }
+        val vm = compose.runOnIdle { ViewModelProvider(compose.activity,
+            MainViewModel.Factory(container))[MainViewModel::class.java] }
+        try {
+            compose.setContent { AutoSkolaTheme {
+                val settings by vm.settings.collectAsState()
+                val words by vm.words.collectAsState()
+                val dictionary by vm.dictionaryState.collectAsState()
+                SignDetailScreen(sign, settings.materialMode.translationTag, words, true,
+                    false, {}, vm::saveWord, emptySet(), {}, vm::saveUnknownWord,
+                    lookupTipSeen = true, dictionaryState = dictionary)
+            } }
+            vm.material(MaterialMode.CS_RU)
+            compose.waitUntil(30_000) { vm.dictionaryState.value == DictionaryLoadState.READY &&
+                findLearningWord("řidič", vm.words.value, "ru") != null }
+            compose.onNodeWithTag("sign-detail-C 7a").performScrollToNode(hasTestTag("action-cs"))
+            tapWord("action-cs", "řidič")
+            compose.onNodeWithTag("word-translation").assertTextEquals("водитель")
+            compose.onNodeWithTag("translation-save").performClick()
+            compose.waitUntil(10_000) { findLearningWord("řidič", vm.words.value, "ru")?.saved == true }
+            compose.onNodeWithTag("translation-save").assertIsNotEnabled()
+            screenshot("dictionary-runtime-sign-ru.png")
+            compose.onNodeWithTag("translation-close").performClick()
+            tapWord("action-cs", "vozidla")
+            compose.onNodeWithTag("word-translation").assertTextEquals("транспортное средство")
+            vm.material(MaterialMode.CS_UK)
+            compose.waitUntil(10_000) { findLearningWord("vozidla", vm.words.value, "uk") != null }
+            compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+            tapWord("action-cs", "vozidla")
+            compose.onNodeWithTag("word-translation").assertTextEquals("транспортний засіб")
+            screenshot("dictionary-runtime-sign-ua.png")
+            compose.onNodeWithTag("translation-close").performClick()
+            tapWord("action-cs", "řidič")
+            compose.onNodeWithTag("word-translation").assertTextEquals("водій")
+            compose.onNodeWithTag("translation-save").assertIsNotEnabled()
+            compose.onNodeWithTag("translation-close").performClick()
+            tapWord("action-cs", "respektujte")
+            compose.onNodeWithTag("word-translation-unavailable").assertTextEquals("Переклад поки недоступний")
+        } finally {
+            compose.runOnIdle { compose.activity.viewModelStore.clear() }
+            container.db.close()
+        }
+    }
 
     @Test fun nativeOutsideTapAndBackCloseAnchoredPopupWithoutChangingScroll() {
         lateinit var state: androidx.compose.foundation.lazy.LazyListState
