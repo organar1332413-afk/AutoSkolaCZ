@@ -13,6 +13,13 @@ class CzechLearningTextTest {
             czechWordRanges("Zpomalte a buďte připraveni zastavit.").map { it.value })
         assertEquals(word, findLearningWord("ŘIDIČE,", listOf(word), "ru"))
     }
+    @Test fun existingUntranslatedEntryIsReusedAndDoesNotCreateParallelWord() {
+        val untranslated = word.copy(translation = null)
+        assertNull(findLearningWord("řidiče", listOf(untranslated), "ru"))
+        assertEquals(untranslated, findLearningEntry("řidiče", listOf(untranslated), "ru"))
+        assertEquals(word, findLearningEntry("řidiče", listOf(untranslated, word), "ru"))
+        assertEquals(untranslated.copy(saved = true), findSavedLearningWord("ŘIDIČE,", listOf(untranslated.copy(saved = true)), "ru"))
+    }
     @Test fun strictExamPolicyIsExplicitAndDoesNotAllowLookup() {
         assertFalse(WordTranslationPolicy.StrictExam.allowsLookup)
         assertFalse(WordTranslationPolicy("ru", false).allowsLookup)

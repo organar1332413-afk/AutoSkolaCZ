@@ -104,6 +104,28 @@ class SignsNavigationTest {
         compose.onNodeWithTag("sign-$code").assert(SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, "Prohlédnuto"))
         compose.onNodeWithTag("favorite-$code").assertIsOn()
     }
+    @Test fun popupBackDismissesBeforeDetailAndThenRestoresDeepCatalogPosition() {
+        launch()
+        compose.onNodeWithTag("category-warning").performClick()
+        compose.onNodeWithTag("sign-grid").performScrollToIndex(18)
+        val before = compose.onNodeWithTag("sign-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
+        val sign = entries.filter { it.category == "warning" }[18]
+        compose.onNodeWithTag("sign-${sign.code}").performClick()
+        val title = compose.onNodeWithTag("sign-title-cs").performScrollTo()
+        val layouts = mutableListOf<androidx.compose.ui.text.TextLayoutResult>()
+        title.performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.GetTextLayoutResult) { it(layouts) }
+        val box = layouts.single().getBoundingBox("${sign.code} · ".length)
+        title.performTouchInput { click(androidx.compose.ui.geometry.Offset(box.center.x, box.center.y)) }
+        compose.onNodeWithTag("learning-word-popup").assertIsDisplayed()
+        compose.runOnIdle { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+        compose.onNodeWithTag("sign-detail-${sign.code}").assertIsDisplayed()
+        compose.runOnIdle { assertEquals(SignRoutes.detailPattern, nav.currentDestination?.route); compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("sign-catalog").assertIsDisplayed()
+        val after = compose.onNodeWithTag("sign-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
+        assertEquals(before, after, 0.001f)
+        compose.onNodeWithTag("sign-${sign.code}").assert(SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, "Prohlédnuto"))
+    }
     @Test fun renderCatalogAndSeparateDetailScreenshots() {
         launch()
         screenshot("signs-catalog.png")

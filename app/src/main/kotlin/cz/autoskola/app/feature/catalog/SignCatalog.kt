@@ -24,6 +24,7 @@ data class SignEntry(
     val ru: String?,
     val uk: String?,
     val detailTranslations: Map<String, SignTextTranslation> = emptyMap(),
+    val exceptionsCs: List<String> = emptyList(),
 ) {
     fun helperFor(value: String, tag: String?): String? = when(tag) {
         "ru" -> if(value == meaningCs) ru else detailTranslations[value]?.ru
@@ -96,6 +97,9 @@ object SignCatalog {
                 ru = card?.getString("ru"),
                 uk = card?.getString("uk"),
                 detailTranslations = detailTranslations,
+                exceptionsCs = card?.optJSONArray("exceptionsCs")?.let { values ->
+                    (0 until values.length()).map { values.getString(it) }
+                }.orEmpty(),
             )
         }
     }

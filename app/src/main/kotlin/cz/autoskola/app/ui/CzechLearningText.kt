@@ -35,14 +35,17 @@ fun normalizeLearningWord(token: String): String = Normalizer.normalize(
     czechWords.find(token)?.value.orEmpty(), Normalizer.Form.NFC).lowercase(Locale.forLanguageTag("cs"))
 
 /** Existing Room dictionary, including imported inflected forms; no runtime translation. */
-fun findLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? {
-    if(translationTag == null) return null
+private fun matchingLearningWords(token: String, words: List<Lexeme>, translationTag: String?): List<Lexeme> {
+    if(translationTag == null) return emptyList()
     val normalized = normalizeLearningWord(token)
-    if(normalized.isEmpty()) return null
-    return words.firstOrNull { word -> word.locale == translationTag &&
+    if(normalized.isEmpty()) return emptyList()
+    return words.filter { word -> word.locale == translationTag &&
         (normalizeLearningWord(word.lemma) == normalized || word.forms.any { normalizeLearningWord(it) == normalized }) }
-        ?.takeIf { !it.translation.isNullOrBlank() }
 }
+fun findLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
+    matchingLearningWords(token, words, translationTag).firstOrNull { !it.translation.isNullOrBlank() }
+fun findLearningEntry(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
+    findLearningWord(token, words, translationTag) ?: matchingLearningWords(token, words, translationTag).firstOrNull()
 fun findSavedLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
     words.firstOrNull { it.locale == translationTag && it.saved &&
         (normalizeLearningWord(it.lemma) == normalizeLearningWord(token) || it.forms.any { form -> normalizeLearningWord(form) == normalizeLearningWord(token) }) }
@@ -95,8 +98,9 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
 @Composable fun LearningWordPopup(selection: LearningWordSelection?, policy: WordTranslationPolicy,
     words: List<Lexeme>, save: (String) -> Unit, saveUnknown: (String) -> Unit, dismiss: () -> Unit) {
     if(selection == null || !policy.allowsLookup) return
-    val word = findLearningWord(selection.token, words, policy.translationTag)
-    val saved = word?.saved == true || findSavedLearningWord(selection.token, words, policy.translationTag) != null
+    val entry = findLearningEntry(selection.token, words, policy.translationTag)
+    val word = entry?.takeIf { !it.translation.isNullOrBlank() }
+    val saved = entry?.saved == true || findSavedLearningWord(selection.token, words, policy.translationTag) != null
     val density = androidx.compose.ui.platform.LocalDensity.current
     val gap = with(density) { PremiumSpace.xs.roundToPx() }
     val position = remember(selection.boundsInWindow, gap) { LearningWordPopupPosition(selection.boundsInWindow, gap) }
@@ -130,7 +134,7 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
                 Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                     if(speech != null) TextButton(onClick = { speech.speak(selection.token, false) }, enabled = speech.ready,
                         modifier = Modifier.heightIn(min = PremiumSize.touch)) { Text(text(R.string.speak)) }
-                    TextButton(onClick = { if(word != null) save(word.id) else saveUnknown(normalizeLearningWord(selection.token)) },
+                    TextButton(onClick = { if(entry != null) save(entry.id) else saveUnknown(normalizeLearningWord(selection.token)) },
                         enabled = !saved, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
                         Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
                     }

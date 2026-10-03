@@ -57,6 +57,17 @@ class SignDetailLanguageTest {
         }
         compose.onNodeWithText("Пішоходи").assertDoesNotExist()
     }
+    @Test fun everyRenderedTeachingTextHasBothHelperLanguagesForAll408Signs() {
+        val signs = SignCatalog.load(RuntimeEnvironment.getApplication())
+        assertEquals(408, signs.size)
+        signs.forEach { sign ->
+            (listOfNotNull(sign.meaningCs, sign.driverActionsCs, sign.memoryCs, sign.mistakeCs, sign.simpleCs) + sign.exceptionsCs)
+                .distinct().forEach { cs ->
+                    for(locale in listOf("ru", "uk")) assertFalse("${sign.code}: missing $locale for $cs", sign.helperFor(cs, locale).isNullOrBlank())
+                    assertNull(sign.helperFor(cs, null))
+                }
+        }
+    }
     private fun tapFirstWord(tag: String, token: String? = null) {
         val node = compose.onNodeWithTag(tag)
         val layouts = mutableListOf<TextLayoutResult>()

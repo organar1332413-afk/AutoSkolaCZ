@@ -24,6 +24,7 @@ class SignDetailTranslationsTest(unittest.TestCase):
     def test_every_existing_action_memory_and_extra_phrase_has_both_helpers(self):
         expected = {card[field] for card in self.cards
                     for field in ("driverActionsCs", "memoryCs", "mistakeCs", "simpleCs")}
+        expected.update(text for card in self.cards for text in card["exceptionsCs"])
         self.assertEqual(expected, {row["cs"] for row in self.rows})
         self.assertEqual(len(expected), len(self.rows), "Duplicate Czech lookup keys")
         for row in self.rows:

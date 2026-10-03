@@ -30,7 +30,7 @@ import cz.autoskola.domain.Lexeme
     val helperTitle = when(translationTag) { "ru" -> sign.titleRu; "uk" -> sign.titleUk; else -> null }
     val memoryAdvice = listOfNotNull(sign.memoryCs, sign.mistakeCs)
         .firstOrNull { it != sign.driverActionsCs && it != sign.meaningCs }
-    val more = listOfNotNull(sign.simpleCs, sign.memoryCs, sign.mistakeCs)
+    val more = (listOfNotNull(sign.simpleCs, sign.memoryCs, sign.mistakeCs) + sign.exceptionsCs)
         .distinct().filter { it != sign.meaningCs && it != sign.driverActionsCs && it != memoryAdvice }
     fun hideTip() { tipDismissedLocally = true; dismissLookupTip() }
     fun onWord(word: LearningWordSelection) { selection = word; hideTip() }
@@ -45,7 +45,7 @@ import cz.autoskola.domain.Lexeme
 
     LazyColumn(Modifier.fillMaxSize().testTag("sign-detail-${sign.code}"),
         contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
-        item {
+        item("hero") {
             PremiumCard(Modifier.fillMaxWidth()) {
                 Box(Modifier.fillMaxWidth()) {
                     Column(Modifier.fillMaxWidth().padding(PremiumSpace.xl), horizontalAlignment = Alignment.CenterHorizontally,
@@ -62,10 +62,42 @@ import cz.autoskola.domain.Lexeme
                 }
             }
         }
-        item {
+        item("title") {
             Column(verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
                 CzechLearningText("${sign.code} · ${sign.titleCs}", policy, ::onWord, prominent = true, modifier = Modifier.testTag("sign-title-cs"))
                 helperTitle?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            }
+        }
+        sign.meaningCs?.let { meaning -> item("meaning") {
+            DetailSectionCard("Co znamená") {
+                learningText(meaning, "meaning")
+            }
+        } }
+        sign.driverActionsCs?.let { action -> item("action") {
+            DetailSectionCard("Co má řidič udělat") { learningText(action, "action") }
+        } }
+        memoryAdvice?.let { memory -> item("memory") {
+            DetailSectionCard("Zapamatuj si") { learningText(memory, "memory") }
+        } }
+        if(more.isNotEmpty()) item("additional") {
+            PremiumCard(Modifier.fillMaxWidth()) {
+                TextButton(onClick = { moreExpanded = !moreExpanded }, modifier = Modifier.fillMaxWidth().heightIn(min = PremiumSize.touch)) {
+                    Text(text(R.string.sign_more_information), Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+                    Text(if(moreExpanded) "−" else "+", style = MaterialTheme.typography.titleMedium)
+                }
+                if(moreExpanded) Column(Modifier.padding(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
+                    more.forEachIndexed { index, value -> learningText(value, "additional-$index") }
+                }
+            }
+        }
+        item("source") {
+            TextButton(onClick = { sourceExpanded = !sourceExpanded }, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("sign-source")) {
+                Text("Oficiální zdroj", color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            if(sourceExpanded) Column(verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
+                sign.sourceProvision?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+                TextButton(onClick = { sourceError = runCatching { uriHandler.openUri(sign.sourceUrl) }.isFailure }) { Text(text(R.string.sign_source_open)) }
+                if(sourceError) Text(text(R.string.sign_source_unavailable), color = MaterialTheme.colorScheme.error)
             }
         }
         if(policy.allowsLookup && !lookupTipSeen && !tipDismissedLocally) item("word-tip") {
@@ -77,38 +109,6 @@ import cz.autoskola.domain.Lexeme
                         style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 IconButton(onClick = ::hideTip, modifier = Modifier.size(PremiumSize.touch)) { Icon(Icons.Default.Close, text(R.string.close)) }
-            }
-        }
-        sign.meaningCs?.let { meaning -> item {
-            DetailSectionCard("Co znamená") {
-                learningText(meaning, "meaning")
-            }
-        } }
-        sign.driverActionsCs?.let { action -> item {
-            DetailSectionCard("Co má řidič udělat") { learningText(action, "action") }
-        } }
-        memoryAdvice?.let { memory -> item {
-            DetailSectionCard("Zapamatuj si") { learningText(memory, "memory") }
-        } }
-        if(more.isNotEmpty()) item {
-            PremiumCard(Modifier.fillMaxWidth()) {
-                TextButton(onClick = { moreExpanded = !moreExpanded }, modifier = Modifier.fillMaxWidth().heightIn(min = PremiumSize.touch)) {
-                    Text(text(R.string.sign_more_information), Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
-                    Text(if(moreExpanded) "−" else "+", style = MaterialTheme.typography.titleMedium)
-                }
-                if(moreExpanded) Column(Modifier.padding(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
-                    more.forEachIndexed { index, value -> learningText(value, "additional-$index") }
-                }
-            }
-        }
-        item {
-            TextButton(onClick = { sourceExpanded = !sourceExpanded }, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("sign-source")) {
-                Text("Oficiální zdroj", color = MaterialTheme.colorScheme.onSurfaceVariant)
-            }
-            if(sourceExpanded) Column(verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                sign.sourceProvision?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
-                TextButton(onClick = { sourceError = runCatching { uriHandler.openUri(sign.sourceUrl) }.isFailure }) { Text(text(R.string.sign_source_open)) }
-                if(sourceError) Text(text(R.string.sign_source_unavailable), color = MaterialTheme.colorScheme.error)
             }
         }
     }

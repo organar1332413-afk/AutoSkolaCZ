@@ -17,6 +17,10 @@ android {
 kotlin { jvmToolchain(17) }
 
 dependencies {
+    androidTestImplementation(libs.androidx.test)
+    androidTestImplementation(libs.androidx.runner)
+    androidTestImplementation(platform(libs.compose.bom))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     testImplementation(libs.junit)
     testImplementation(platform(libs.compose.bom))
     testImplementation("androidx.compose.ui:ui-test-junit4")

@@ -81,7 +81,14 @@ jobs:
         with:
           api-level: 29
           arch: x86_64
-          script: bash .github/scripts/run-room-tests.sh
+          script: |
+            bash .github/scripts/run-room-tests.sh
+            gradle :app:connectedDebugAndroidTest --stacktrace
+      - name: Collect sign detail device screenshots
+        if: always()
+        run: |
+          mkdir -p app/build/outputs/sign-detail-device
+          adb pull /sdcard/Android/data/cz.autoskola.study.debug/files/sign-detail-verification app/build/outputs/sign-detail-device || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -89,3 +96,6 @@ jobs:
           path: |
             core/data/build/reports/androidTests
             core/data/build/outputs/androidTest-results
+            app/build/reports/androidTests
+            app/build/outputs/androidTest-results
+            app/build/outputs/sign-detail-device

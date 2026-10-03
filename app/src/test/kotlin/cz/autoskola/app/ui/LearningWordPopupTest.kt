@@ -75,7 +75,18 @@ class LearningWordPopupTest {
     }
     @Test fun outsideTouchAndBackClosePopupAndKeepScreenOpen() {
         launch(); tap("Řidiče")
-        compose.onNodeWithTag("learning-word-popup").performTouchInput { click(Offset(-10f, -10f)) }
+        compose.onNodeWithTag("learning-word-popup").assertIsDisplayed()
+        compose.runOnIdle {
+            // Compose touch injection targets its owner, bypassing WindowManager. Send the
+            // actual outside-window event through PopupLayout's Android dispatch instead.
+            val global = org.robolectric.util.ReflectionHelpers.callStaticMethod<Any>(
+                Class.forName("android.view.WindowManagerGlobal"), "getInstance")
+            val views = org.robolectric.util.ReflectionHelpers.getField<ArrayList<android.view.View>>(global, "mViews")
+            val popup = views.single { it.javaClass.name.contains("PopupLayout") }
+            val now = android.os.SystemClock.uptimeMillis()
+            val outside = android.view.MotionEvent.obtain(now, now, android.view.MotionEvent.ACTION_OUTSIDE, -1f, -1f, 0)
+            try { popup.dispatchTouchEvent(outside) } finally { outside.recycle() }
+        }
         compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
         compose.onNodeWithTag("screen").assertIsDisplayed()
         tap("Neznámé")
