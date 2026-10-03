@@ -9,6 +9,10 @@ import java.io.IOException
 private val Context.settingsStore by preferencesDataStore("user_settings")
 class SettingsStore(context: Context) : SettingsRepository {
     internal val store = context.applicationContext.settingsStore
+    val signs = SignProgressStore(store)
+    private val lookupTip = booleanPreferencesKey("czech_lookup_tip_seen")
+    val lookupTipSeen = store.data.map { it[lookupTip] ?: false }
+    suspend fun dismissLookupTip() { store.edit { it[lookupTip] = true } }
     private val deviceTag = context.resources.configuration.locales[0].language
     private val ui = stringPreferencesKey("ui_language")
     private val material = stringPreferencesKey("material_mode")

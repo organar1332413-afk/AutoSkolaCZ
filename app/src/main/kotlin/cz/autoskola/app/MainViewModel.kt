@@ -3,6 +3,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import cz.autoskola.domain.*
+import cz.autoskola.app.feature.catalog.SignCatalog
+import cz.autoskola.app.feature.catalog.SignCatalogLoadState
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -21,6 +24,7 @@ data class ExamUiState(
 class MainViewModel(internal val container: AppContainer) : ViewModel() {
     val loadState = MutableStateFlow(LoadState.LOADING)
     val operationError = MutableStateFlow(false)
+    val dictionaryState = container.dictionary.state
     val settingsReady = MutableStateFlow(false)
     val settings = container.settings.settings
         .onEach { settingsReady.value=true }
@@ -44,6 +48,26 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     val learning = combine(container.learning.snapshot, container.assessments.assessments) { snapshot, assessments ->
         snapshot.copy(assessments=assessments)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LearningSnapshot())
+    private val signsReload = MutableStateFlow(0)
+    val signCatalog = signsReload.flatMapLatest {
+        flow {
+            emit(SignCatalogLoadState())
+            emit(SignCatalogLoadState(entries = SignCatalog.load(container.application), loading = false))
+        }.catch { e ->
+            if(e is CancellationException) throw e
+            emit(SignCatalogLoadState(loading = false, failed = true))
+        }
+    }.flowOn(Dispatchers.IO).stateIn(viewModelScope, SharingStarted.Lazily, SignCatalogLoadState())
+    val signProgress = container.settings.signs.progress
+        .catch { e ->
+            if(e is CancellationException) throw e
+            operationError.value = true
+            emit(SignProgress())
+        }.stateIn(viewModelScope, SharingStarted.Eagerly, SignProgress())
+    val lookupTipSeen = container.settings.lookupTipSeen
+        .catch { e -> if(e is CancellationException) throw e; emit(false) }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+    fun dismissLookupTip() = update { container.settings.dismissLookupTip() }
     val exam = MutableStateFlow(ExamUiState())
     val sessionStartedAt = System.currentTimeMillis()
 
@@ -51,6 +75,10 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
 
     fun initialize() { viewModelScope.launch {
         loadState.value=LoadState.LOADING
+        // Learning words must load in every variant, independently of debug exam samples.
+        try { container.dictionary.initialize() }
+        catch(e:CancellationException) { throw e }
+        catch(e:Exception) { android.util.Log.e("BundledDictionary", "Cannot initialize offline dictionary", e) }
         try {
             container.bootstrap.initialize()
             initializeBuildContent(container)
@@ -89,6 +117,10 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
             finally { exam.value=exam.value.copy(busy=false) }
         }
     }
+
+    fun reloadSigns() { signsReload.value++ }
+    fun viewSign(code:String)=update { container.settings.signs.markViewed(code) }
+    fun favoriteSign(code:String,value:Boolean)=update { container.settings.signs.setFavorite(code,value) }
 
     fun ui(v:UiLanguage)=update { container.settings.setUiLanguage(v) }
     fun material(v:MaterialMode)=update { container.settings.setMaterialMode(v) }

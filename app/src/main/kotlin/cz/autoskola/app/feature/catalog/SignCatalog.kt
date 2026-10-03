@@ -15,6 +15,7 @@ data class SignEntry(
     val graphicStatus: String,
     val graphicPaths: List<String>,
     val meaningCs: String?,
+    val driverActionsCs: String? = null,
     val simpleCs: String?,
     val mistakeCs: String?,
     val memoryCs: String?,
@@ -22,7 +23,28 @@ data class SignEntry(
     val relatedOfficialIds: List<String>,
     val ru: String?,
     val uk: String?,
-)
+    val detailTranslations: Map<String, SignTextTranslation> = emptyMap(),
+    val exceptionsCs: List<String> = emptyList(),
+) {
+    val memoryAdvice: String? get() = listOfNotNull(memoryCs, mistakeCs)
+        .firstOrNull { it != driverActionsCs && it != meaningCs }
+    val additionalLearningTexts: List<String> get() =
+        (listOfNotNull(simpleCs, memoryCs, mistakeCs) + exceptionsCs).distinct()
+            .filter { it != meaningCs && it != driverActionsCs && it != memoryAdvice }
+    /** Same fields as SignDetail, including collapsed additional copy, excluding source metadata. */
+    fun tappableTexts(): List<Pair<String, String>> = listOfNotNull(
+        "titleCs" to titleCs, meaningCs?.let { "meaningCs" to it },
+        driverActionsCs?.let { "driverActionsCs" to it }, memoryAdvice?.let { "memoryAdvice" to it }
+    ) + additionalLearningTexts.mapIndexed { i, text -> "additional-$i" to text }
+
+    fun helperFor(value: String, tag: String?): String? = when(tag) {
+        "ru" -> if(value == meaningCs) ru else detailTranslations[value]?.ru
+        "uk" -> if(value == meaningCs) uk else detailTranslations[value]?.uk
+        else -> null
+    }
+}
+
+data class SignTextTranslation(val ru: String, val uk: String)
 
 data class SignGuideBlock(
     val provision: String,
@@ -39,6 +61,12 @@ object SignCatalog {
         val inventory = asset("signs/catalog.json")
         val cards = asset("signs/curated.json").getJSONArray("cards")
         val sources = asset("signs/sources.json")
+        val translated = asset("signs/detail-translations.json").getJSONArray("texts")
+        val detailTranslations = (0 until translated.length()).associate { i ->
+            translated.getJSONObject(i).let { row ->
+                row.getString("cs") to SignTextTranslation(row.getString("ru"), row.getString("uk"))
+            }
+        }
         val byCode = (0 until cards.length()).associate { index ->
             cards.getJSONObject(index).let { it.getString("code") to it }
         }
@@ -65,6 +93,7 @@ object SignCatalog {
                 graphicStatus = graphic.getString("status"),
                 graphicPaths = graphicPaths,
                 meaningCs = card?.getString("meaningCs"),
+                driverActionsCs = card?.optString("driverActionsCs")?.takeIf { it.isNotBlank() },
                 simpleCs = card?.getString("simpleCs"),
                 mistakeCs = card?.optString("mistakeCs")?.takeIf { it.isNotBlank() },
                 memoryCs = card?.optString("memoryCs")?.takeIf { it.isNotBlank() },
@@ -78,6 +107,10 @@ object SignCatalog {
                 }.orEmpty(),
                 ru = card?.getString("ru"),
                 uk = card?.getString("uk"),
+                detailTranslations = detailTranslations,
+                exceptionsCs = card?.optJSONArray("exceptionsCs")?.let { values ->
+                    (0 until values.length()).map { values.getString(it) }
+                }.orEmpty(),
             )
         }
     }

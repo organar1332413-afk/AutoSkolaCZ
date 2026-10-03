@@ -51,9 +51,14 @@
     "context": "road_traffic",
     "exampleCs": "Musí zastavit vozidlo.",
     "forms": [
-      "vozidlo",
+      "vozidel",
       "vozidla",
-      "vozidlem"
+      "vozidle",
+      "vozidlem",
+      "vozidlo",
+      "vozidlu",
+      "vozidly",
+      "vozidlům"
     ],
     "translations": [
       {
