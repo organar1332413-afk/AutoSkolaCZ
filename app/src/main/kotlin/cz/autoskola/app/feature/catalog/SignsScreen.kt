@@ -26,7 +26,8 @@ import cz.autoskola.domain.SignProgress
     translationTag: String?,
     progress: SignProgress,
     openSign: (String) -> Unit,
-    favorite: (String, Boolean) -> Unit
+    favorite: (String, Boolean) -> Unit,
+    retry: () -> Unit = {}
 ) {
     var query by rememberSaveable { mutableStateOf("") }
     var category by rememberSaveable { mutableStateOf<String?>(null) }
@@ -44,7 +45,7 @@ import cz.autoskola.domain.SignProgress
     Column(Modifier.fillMaxSize().testTag("sign-catalog")) {
         Row(Modifier.fillMaxWidth().padding(horizontal = PremiumSpace.lg), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
-                Text("${catalog.entries.size} znaků", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(if(catalog.loading) "…" else "${catalog.entries.size} znaků", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 if (translationTag != null) Text(text(R.string.signs), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             TextButton(onClick = { filtersOpen = true }, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("sign-filters")) {
@@ -66,7 +67,10 @@ import cz.autoskola.domain.SignProgress
         }
         when {
             catalog.loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
-            catalog.failed -> Box(Modifier.fillMaxSize().padding(PremiumSpace.lg), contentAlignment = Alignment.Center) { Text(text(R.string.sign_catalog_error)) }
+            catalog.failed -> Column(Modifier.fillMaxWidth().padding(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
+                Text(text(R.string.sign_catalog_error))
+                PrimaryButton(text(R.string.retry), retry)
+            }
             visible.isEmpty() -> Column(Modifier.fillMaxWidth().padding(PremiumSpace.xl), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
                 Text(text(R.string.sign_empty), style = MaterialTheme.typography.titleMedium)
                 Text(text(R.string.sign_empty_help), color = MaterialTheme.colorScheme.onSurfaceVariant)

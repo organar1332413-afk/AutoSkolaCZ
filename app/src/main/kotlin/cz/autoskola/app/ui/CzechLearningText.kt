@@ -23,14 +23,13 @@ fun findLearningWord(token: String, words: List<Lexeme>, translationTag: String?
 
 @Composable fun CzechLearningText(value: String, translationTag: String?, words: List<Lexeme>,
     lookupEnabled: Boolean, onWord: (Lexeme) -> Unit, prominent: Boolean = false) {
-    val enabled = lookupEnabled && words.any { findLearningWord(it.lemma, words, translationTag) != null }
+    val enabled = lookupEnabled && translationTag != null && words.any { it.locale == translationTag && !it.translation.isNullOrBlank() }
     CzechText(value, enabled, { token -> findLearningWord(token, words, translationTag)?.let(onWord) }, prominent)
 }
 
 /** A compact popup on the current learning screen; outside tap closes it. */
 @Composable fun LearningWordPopup(word: Lexeme?, save: (String) -> Unit, dismiss: () -> Unit) {
     if(word == null) return
-    var requestedSave by rememberSaveable(word.id) { mutableStateOf(false) }
     AlertDialog(onDismissRequest = dismiss,
         title = { Text(word.lemma) },
         text = {
@@ -41,8 +40,8 @@ fun findLearningWord(token: String, words: List<Lexeme>, translationTag: String?
             }
         },
         confirmButton = {
-            TextButton(onClick = { save(word.id); requestedSave = true }, enabled = !word.saved && !requestedSave) {
-                Text(text(if(word.saved || requestedSave) R.string.word_saved else R.string.save_word))
+            TextButton(onClick = { save(word.id) }, enabled = !word.saved) {
+                Text(text(if(word.saved) R.string.word_saved else R.string.save_word))
             }
         }, dismissButton = { TextButton(onClick = dismiss) { Text(text(R.string.close)) } })
 }

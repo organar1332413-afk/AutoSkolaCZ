@@ -5,10 +5,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.activity.ComponentActivity
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
 import cz.autoskola.design.AutoSkolaTheme
@@ -28,7 +28,7 @@ import java.io.File
 @Config(sdk = [28], qualifiers = "w411dp-h891dp", application = Application::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class SignsNavigationTest {
-    @get:Rule val compose = createComposeRule()
+    @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     private lateinit var nav: NavHostController
     private val entries get() = SignCatalog.load(RuntimeEnvironment.getApplication())
     private fun launch() {
@@ -37,6 +37,8 @@ class SignsNavigationTest {
             AutoSkolaTheme {
                 nav = rememberNavController()
                 var progress by remember { mutableStateOf(SignProgress()) }
+                val destinationState = rememberUpdatedState(SignDestinationState(
+                    catalog, progress, UserSettings(materialMode = MaterialMode.CS_RU), emptyList(), emptySet()))
                 val back by nav.currentBackStackEntryAsState()
                 Scaffold(topBar = {
                     AppTopBar(if(back?.destination?.route == SignRoutes.catalog) "Dopravní značky" else "Dopravní značka",
@@ -44,10 +46,10 @@ class SignsNavigationTest {
                 }) { padding ->
                     Box(Modifier.padding(padding)) {
                         NavHost(nav, SignRoutes.catalog) {
-                            signDestinations(nav, catalog, progress, UserSettings(materialMode = MaterialMode.CS_RU), emptyList(),
+                            signDestinations(nav, destinationState,
                                 { progress = progress.copy(viewed = progress.viewed + it) },
                                 { code, selected -> progress = progress.copy(favorites = if(selected) progress.favorites + code else progress.favorites - code) },
-                                {}, emptySet(), {})
+                                {}, openQuestion = {})
                         }
                     }
                 }
@@ -91,8 +93,13 @@ class SignsNavigationTest {
     }
     private fun screenshot(name: String) {
         compose.waitForIdle()
-        val bitmap = compose.onRoot().captureToImage().asAndroidBitmap()
-        val file = File("build/outputs/premium-ui/$name").apply { parentFile.mkdirs() }
-        file.outputStream().use { bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
+        compose.runOnIdle {
+            // PixelCopy needs a real surface; native Robolectric renders the same view into Canvas.
+            val view = compose.activity.window.decorView
+            val bitmap = android.graphics.Bitmap.createBitmap(view.width, view.height, android.graphics.Bitmap.Config.ARGB_8888)
+            view.draw(android.graphics.Canvas(bitmap))
+            val file = File("build/outputs/premium-ui/$name").apply { parentFile.mkdirs() }
+            file.outputStream().use { bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
+        }
     }
 }

@@ -47,11 +47,15 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     val learning = combine(container.learning.snapshot, container.assessments.assessments) { snapshot, assessments ->
         snapshot.copy(assessments=assessments)
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LearningSnapshot())
-    val signCatalog = flow {
-        emit(SignCatalogLoadState(entries = SignCatalog.load(container.application), loading = false))
-    }.catch { e ->
-        if(e is CancellationException) throw e
-        emit(SignCatalogLoadState(loading = false, failed = true))
+    private val signsReload = MutableStateFlow(0)
+    val signCatalog = signsReload.flatMapLatest {
+        flow {
+            emit(SignCatalogLoadState())
+            emit(SignCatalogLoadState(entries = SignCatalog.load(container.application), loading = false))
+        }.catch { e ->
+            if(e is CancellationException) throw e
+            emit(SignCatalogLoadState(loading = false, failed = true))
+        }
     }.flowOn(Dispatchers.IO).stateIn(viewModelScope, SharingStarted.Lazily, SignCatalogLoadState())
     val signProgress = container.settings.signs.progress
         .catch { e ->
@@ -105,6 +109,7 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
         }
     }
 
+    fun reloadSigns() { signsReload.value++ }
     fun viewSign(code:String)=update { container.settings.signs.markViewed(code) }
     fun favoriteSign(code:String,value:Boolean)=update { container.settings.signs.setFavorite(code,value) }
 
