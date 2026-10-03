@@ -9,6 +9,7 @@ import java.io.IOException
 private val Context.settingsStore by preferencesDataStore("user_settings")
 class SettingsStore(context: Context) : SettingsRepository {
     internal val store = context.applicationContext.settingsStore
+    val signs = SignProgressStore(store)
     private val deviceTag = context.resources.configuration.locales[0].language
     private val ui = stringPreferencesKey("ui_language")
     private val material = stringPreferencesKey("material_mode")
