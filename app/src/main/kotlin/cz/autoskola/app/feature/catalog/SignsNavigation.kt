@@ -14,6 +14,7 @@ import cz.autoskola.app.R
 import cz.autoskola.app.ui.text
 import cz.autoskola.design.PremiumSpace
 import cz.autoskola.domain.*
+import cz.autoskola.data.DictionaryLoadState
 
 object SignRoutes {
     const val catalog = "signs"
@@ -27,7 +28,8 @@ data class SignDestinationState(
     val settings: UserSettings,
     val words: List<Lexeme>,
     val availableQuestionIds: Set<String>,
-    val lookupTipSeen: Boolean = false
+    val lookupTipSeen: Boolean = false,
+    val dictionaryState: DictionaryLoadState = DictionaryLoadState.READY
 )
 
 /**
@@ -60,7 +62,7 @@ fun NavGraphBuilder.signDestinations(
                 LaunchedEffect(sign.code) { markViewed(sign.code) }
                 SignDetailScreen(sign, current.settings.policy().translationTag, current.words,
                     current.settings.policy().canLookup, sign.code in current.progress.favorites,
-                    { favorite(sign.code, it) }, saveWord, current.availableQuestionIds, openQuestion, saveUnknownWord, current.lookupTipSeen, dismissLookupTip)
+                    { favorite(sign.code, it) }, saveWord, current.availableQuestionIds, openQuestion, saveUnknownWord, current.lookupTipSeen, dismissLookupTip, current.dictionaryState)
             }
         }
     }

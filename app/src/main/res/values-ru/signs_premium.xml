@@ -16,4 +16,6 @@
     <string name="sign_word_hint">Нажмите на чешское слово, чтобы посмотреть доступный перевод.</string>
     <string name="sign_detail_missing">Знак не найден.</string>
     <string name="sign_text_translation_unavailable">Перевод этого текста пока недоступен.</string>
+    <string name="word_dictionary_loading">Словарь загружается…</string>
+    <string name="word_dictionary_error">Не удалось загрузить словарь. Попробуйте перезапустить приложение.</string>
 </resources>

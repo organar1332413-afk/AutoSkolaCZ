@@ -70,8 +70,9 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         val signCatalog by vm.signCatalog.collectAsStateWithLifecycle()
         val signProgress by vm.signProgress.collectAsStateWithLifecycle()
         val lookupTipSeen by vm.lookupTipSeen.collectAsStateWithLifecycle()
+        val dictionaryState by vm.dictionaryState.collectAsStateWithLifecycle()
         val signDestinationState = rememberUpdatedState(SignDestinationState(
-            signCatalog,signProgress,settings,words,questions.mapTo(mutableSetOf()) { it.officialId }, lookupTipSeen))
+            signCatalog,signProgress,settings,words,questions.mapTo(mutableSetOf()) { it.officialId }, lookupTipSeen, dictionaryState))
 
         val tabs=listOf(
             Tab("home",R.string.home,Icons.Default.Home),

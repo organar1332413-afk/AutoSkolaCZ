@@ -16,4 +16,6 @@
     <string name="sign_word_hint">Klepnutím na české slovo otevřete dostupný překlad.</string>
     <string name="sign_detail_missing">Značka nebyla nalezena.</string>
     <string name="sign_text_translation_unavailable">Překlad tohoto textu zatím není k dispozici.</string>
+    <string name="word_dictionary_loading">Slovník se načítá…</string>
+    <string name="word_dictionary_error">Slovník se nepodařilo načíst. Zkuste znovu spustit aplikaci.</string>
 </resources>

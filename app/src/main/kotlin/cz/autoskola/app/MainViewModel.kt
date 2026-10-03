@@ -24,6 +24,7 @@ data class ExamUiState(
 class MainViewModel(internal val container: AppContainer) : ViewModel() {
     val loadState = MutableStateFlow(LoadState.LOADING)
     val operationError = MutableStateFlow(false)
+    val dictionaryState = container.dictionary.state
     val settingsReady = MutableStateFlow(false)
     val settings = container.settings.settings
         .onEach { settingsReady.value=true }
@@ -74,6 +75,10 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
 
     fun initialize() { viewModelScope.launch {
         loadState.value=LoadState.LOADING
+        // Learning words must load in every variant, independently of debug exam samples.
+        try { container.dictionary.initialize() }
+        catch(e:CancellationException) { throw e }
+        catch(e:Exception) { android.util.Log.e("BundledDictionary", "Cannot initialize offline dictionary", e) }
         try {
             container.bootstrap.initialize()
             initializeBuildContent(container)

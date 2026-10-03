@@ -15,11 +15,13 @@ import cz.autoskola.app.R
 import cz.autoskola.app.ui.*
 import cz.autoskola.design.*
 import cz.autoskola.domain.Lexeme
+import cz.autoskola.data.DictionaryLoadState
 
 @Composable fun SignDetailScreen(sign: SignEntry, translationTag: String?, words: List<Lexeme>,
     lookupEnabled: Boolean, isFavorite: Boolean, favorite: (Boolean) -> Unit,
     saveWord: (String) -> Unit, availableQuestionIds: Set<String>, openQuestion: (String) -> Unit,
-    saveUnknownWord: (String) -> Unit = {}, lookupTipSeen: Boolean = false, dismissLookupTip: () -> Unit = {}) {
+    saveUnknownWord: (String) -> Unit = {}, lookupTipSeen: Boolean = false, dismissLookupTip: () -> Unit = {},
+    dictionaryState: DictionaryLoadState = DictionaryLoadState.READY) {
     var sourceExpanded by rememberSaveable(sign.code) { mutableStateOf(false) }
     var moreExpanded by rememberSaveable(sign.code) { mutableStateOf(false) }
     var selection by remember(sign.code, translationTag, lookupEnabled) { mutableStateOf<LearningWordSelection?>(null) }
@@ -112,5 +114,5 @@ import cz.autoskola.domain.Lexeme
             }
         }
     }
-    LearningWordPopup(selection, policy, words, saveWord, saveUnknownWord) { selection = null }
+    LearningWordPopup(selection, policy, words, saveWord, saveUnknownWord, dictionaryState) { selection = null }
 }

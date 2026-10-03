@@ -25,6 +25,7 @@ import androidx.compose.ui.window.PopupProperties
 import cz.autoskola.app.R
 import cz.autoskola.design.*
 import cz.autoskola.domain.Lexeme
+import cz.autoskola.data.DictionaryLoadState
 import java.text.Normalizer
 import java.util.Locale
 import kotlin.math.roundToInt
@@ -96,7 +97,8 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
 
 /** Focusable lightweight surface: outside tap and Back dismiss without navigating or scrolling. */
 @Composable fun LearningWordPopup(selection: LearningWordSelection?, policy: WordTranslationPolicy,
-    words: List<Lexeme>, save: (String) -> Unit, saveUnknown: (String) -> Unit, dismiss: () -> Unit) {
+    words: List<Lexeme>, save: (String) -> Unit, saveUnknown: (String) -> Unit,
+    dictionaryState: DictionaryLoadState = DictionaryLoadState.READY, dismiss: () -> Unit) {
     if(selection == null || !policy.allowsLookup) return
     val entry = findLearningEntry(selection.token, words, policy.translationTag)
     val word = entry?.takeIf { !it.translation.isNullOrBlank() }
@@ -126,6 +128,10 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
                     word.meaning?.takeIf { it.isNotBlank() && it != word.translation }?.let {
                         Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
+                } else if(dictionaryState != DictionaryLoadState.READY) {
+                    Text(text(if(dictionaryState == DictionaryLoadState.LOADING) R.string.word_dictionary_loading
+                        else R.string.word_dictionary_error), Modifier.testTag("word-dictionary-status"),
+                        style = MaterialTheme.typography.bodyMedium)
                 } else {
                     Text("Překlad zatím není k dispozici", style = MaterialTheme.typography.bodyMedium)
                     Text(unknown, Modifier.testTag("word-translation-unavailable"), style = MaterialTheme.typography.bodySmall,
@@ -135,7 +141,8 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
                     if(speech != null) TextButton(onClick = { speech.speak(selection.token, false) }, enabled = speech.ready,
                         modifier = Modifier.heightIn(min = PremiumSize.touch)) { Text(text(R.string.speak)) }
                     TextButton(onClick = { if(entry != null) save(entry.id) else saveUnknown(normalizeLearningWord(selection.token)) },
-                        enabled = !saved, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
+                        enabled = !saved && dictionaryState == DictionaryLoadState.READY,
+                        modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
                         Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
                     }
                 }
