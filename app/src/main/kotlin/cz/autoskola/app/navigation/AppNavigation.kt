@@ -3,6 +3,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.automirrored.filled.List
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import cz.autoskola.design.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -65,6 +67,8 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
             else l.copy(title=null,blocks=l.blocks.map { it.copy(translation=null) })
         }
         val load by vm.loadState.collectAsStateWithLifecycle()
+        val signCatalog by vm.signCatalog.collectAsStateWithLifecycle()
+        val signProgress by vm.signProgress.collectAsStateWithLifecycle()
 
         val tabs=listOf(
             Tab("home",R.string.home,Icons.Default.Home),
@@ -78,11 +82,11 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
 
         Scaffold(
             topBar={
-                TopAppBar(
-                    title={Text("Autoškola CZ",style=MaterialTheme.typography.titleLarge)},
+                AppTopBar(
+                    title=when(route) { SignRoutes.catalog -> "Dopravní značky"; SignRoutes.detailPattern -> "Dopravní značka"; else -> "Autoškola CZ" },
                     navigationIcon={
                         if(route !in topLevelRoutes) {
-                            TextButton(onClick={nav.popBackStack()}) { Text(text(R.string.back)) }
+                            IconButton(onClick={nav.popBackStack()}) { Icon(Icons.AutoMirrored.Filled.ArrowBack, text(R.string.back)) }
                         }
                     },
                     actions={
@@ -96,10 +100,14 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
             },
             bottomBar={
                 if(route in topLevelRoutes && !examRunning) {
-                    NavigationBar {
+                    NavigationBar(containerColor=MaterialTheme.colorScheme.surface, tonalElevation=PremiumElevation.navigation) {
                         tabs.forEach { tab->
                             NavigationBarItem(
                                 selected=route==tab.route,
+                                colors=NavigationBarItemDefaults.colors(
+                                    indicatorColor=MaterialTheme.colorScheme.primaryContainer,
+                                    selectedIconColor=MaterialTheme.colorScheme.primary,
+                                    selectedTextColor=MaterialTheme.colorScheme.primary),
                                 enabled=load==LoadState.READY,
                                 onClick={
                                     nav.navigate(tab.route) {
@@ -201,12 +209,9 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                                 open
                             )
                         }
-                        composable("signs") {
-                            SignsScreen(
-                                settings.materialMode.translationTag,
-                                questions.mapTo(mutableSetOf()) { it.officialId },
-                            ) { open("question/$it") }
-                        }
+                        signDestinations(nav,signCatalog,signProgress,settings,words,
+                            vm::viewSign,vm::favoriteSign,vm::saveWord,
+                            questions.mapTo(mutableSetOf()) { it.officialId }) { open("question/$it") }
                         composable("first_aid") { FirstAidScreen(open) }
                         composable("aid_questions") {
                             QuestionsScreen(questions.filter { it.category=="first_aid" },status,learning) { open("question/$it") }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_filters">Фильтры</string>
+    <string name="sign_clear_search">Очистить поиск</string>
+    <string name="sign_catalog_error">Не удалось загрузить каталог. Закройте экран и попробуйте снова.</string>
+    <string name="sign_empty">Знаки не найдены</string>
+    <string name="sign_empty_help">Измените название, код или фильтры.</string>
+    <string name="sign_reset_filters">Сбросить фильтры</string>
+    <string name="sign_favorites_only">Только избранные</string>
+    <string name="sign_state_all">Все знаки</string>
+    <string name="sign_viewed">Просмотрено</string>
+    <string name="sign_unviewed">Не просмотрено</string>
+    <string name="sign_source_open">Открыть официальный источник</string>
+    <string name="sign_source_unavailable">Не удалось открыть источник.</string>
+    <string name="sign_more_information">Дополнительная информация</string>
+    <string name="sign_word_hint">Нажмите на чешское слово, чтобы посмотреть доступный перевод.</string>
+    <string name="sign_detail_missing">Знак не найден.</string>
+</resources>
