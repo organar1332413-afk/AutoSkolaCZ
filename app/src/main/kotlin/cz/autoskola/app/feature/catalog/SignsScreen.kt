@@ -46,7 +46,6 @@ import cz.autoskola.domain.SignProgress
         Row(Modifier.fillMaxWidth().padding(horizontal = PremiumSpace.lg), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
                 Text(if(catalog.loading) "…" else "${catalog.entries.size} znaků", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                if (translationTag != null) Text(text(R.string.signs), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             TextButton(onClick = { filtersOpen = true }, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("sign-filters")) {
                 Icon(Icons.Default.MoreVert, contentDescription = null)

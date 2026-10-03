@@ -6,6 +6,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.activity.ComponentActivity
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -31,18 +34,22 @@ class SignsNavigationTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     private lateinit var nav: NavHostController
     private val entries get() = SignCatalog.load(RuntimeEnvironment.getApplication())
-    private fun launch() {
-        val catalog = SignCatalogLoadState(entries, loading = false)
+    private lateinit var catalogState: MutableState<SignCatalogLoadState>
+    private lateinit var settingsState: MutableState<UserSettings>
+    private fun launch(loading: Boolean = false) {
+        catalogState = mutableStateOf(if(loading) SignCatalogLoadState() else SignCatalogLoadState(entries, loading = false))
+        settingsState = mutableStateOf(UserSettings(materialMode = MaterialMode.CS_RU))
         compose.setContent {
             AutoSkolaTheme {
                 nav = rememberNavController()
                 var progress by remember { mutableStateOf(SignProgress()) }
                 val destinationState = rememberUpdatedState(SignDestinationState(
-                    catalog, progress, UserSettings(materialMode = MaterialMode.CS_RU), emptyList(), emptySet()))
+                    catalogState.value, progress, settingsState.value, emptyList(), emptySet()))
                 val back by nav.currentBackStackEntryAsState()
                 Scaffold(topBar = {
                     AppTopBar(if(back?.destination?.route == SignRoutes.catalog) "Dopravní značky" else "Dopravní značka",
-                        navigationIcon = { if(back?.destination?.route != SignRoutes.catalog) TextButton(onClick = { nav.popBackStack() }) { Text("Zpět") } })
+                        navigationIcon = { IconButton(onClick = { nav.popBackStack() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Zpět") } },
+                        actions = { IconButton(onClick = {}) { Icon(Icons.Default.Settings, "Profil") } })
                 }) { padding ->
                     Box(Modifier.padding(padding)) {
                         NavHost(nav, SignRoutes.catalog) {
@@ -55,6 +62,20 @@ class SignsNavigationTest {
                 }
             }
         }
+    }
+    @Test fun cachedGraphObservesLoadedCatalogAndLanguageChangesOnTheOpenDetail() {
+        launch(loading = true)
+        compose.onNodeWithTag("sign-grid").assertDoesNotExist()
+        compose.runOnIdle { catalogState.value = SignCatalogLoadState(entries, loading = false) }
+        compose.onNodeWithTag("sign-grid").assertIsDisplayed()
+        compose.onNodeWithTag("sign-search").performTextInput("A 10")
+        compose.onNodeWithTag("sign-A 10").performClick()
+        compose.onNodeWithText("Светофоры").assertIsDisplayed()
+        compose.runOnIdle { settingsState.value = UserSettings(materialMode = MaterialMode.CS_UK) }
+        compose.onNodeWithText("Світлофори").assertIsDisplayed()
+        compose.onNodeWithText("Светофоры").assertDoesNotExist()
+        compose.runOnIdle { settingsState.value = UserSettings(materialMode = MaterialMode.CS_UK, level = LearningLevel.EXAM) }
+        compose.onNodeWithText("Світлофори").assertDoesNotExist()
     }
     @Test fun catalogSearchAndCategorySurviveDetailAndBack() {
         launch()
@@ -90,6 +111,11 @@ class SignsNavigationTest {
         compose.onNodeWithTag("sign-A 10").performClick()
         compose.onNodeWithTag("sign-detail-A 10").assertIsDisplayed()
         screenshot("signs-detail.png")
+        compose.onNodeWithTag("detail-favorite").performClick()
+        compose.runOnIdle { nav.popBackStack() }
+        compose.onNodeWithTag("sign-search").performTextClearance()
+        compose.onNodeWithTag("favorite-A 10").assertIsOn()
+        screenshot("signs-viewed-favorite.png")
     }
     private fun screenshot(name: String) {
         compose.waitForIdle()

@@ -27,8 +27,10 @@ import cz.autoskola.domain.Lexeme
     val helperTitle = when(translationTag) { "ru" -> sign.titleRu; "uk" -> sign.titleUk; else -> null }
     val meaningTranslation = when(translationTag) { "ru" -> sign.ru; "uk" -> sign.uk; else -> null }
     val linked = sign.relatedOfficialIds.filter { it in availableQuestionIds }
+    val memoryAdvice = listOfNotNull(sign.memoryCs, sign.mistakeCs)
+        .firstOrNull { it != sign.driverActionsCs && it != sign.meaningCs }
     val more = listOfNotNull(sign.simpleCs, sign.memoryCs, sign.mistakeCs)
-        .distinct().filter { it != sign.meaningCs && it != sign.driverActionsCs && it != sign.memoryCs }
+        .distinct().filter { it != sign.meaningCs && it != sign.driverActionsCs && it != memoryAdvice }
     fun onWord(word: Lexeme) { selectedWordId = word.id }
 
     LazyColumn(Modifier.fillMaxSize().testTag("sign-detail-${sign.code}"),
@@ -68,13 +70,18 @@ import cz.autoskola.domain.Lexeme
         sign.driverActionsCs?.let { action -> item {
             DetailSectionCard("Co má řidič udělat") { CzechLearningText(action, translationTag, words, lookupEnabled, ::onWord) }
         } }
-        sign.memoryCs?.takeIf { it != sign.driverActionsCs && it != sign.meaningCs }?.let { memory -> item {
+        memoryAdvice?.let { memory -> item {
             DetailSectionCard("Zapamatuj si") { CzechLearningText(memory, translationTag, words, lookupEnabled, ::onWord) }
         } }
         if(more.isNotEmpty()) item {
-            DetailSectionCard(text(R.string.sign_more_information)) {
-                TextButton(onClick = { moreExpanded = !moreExpanded }) { Text(text(if(moreExpanded) R.string.close else R.string.sign_more_information)) }
-                if(moreExpanded) more.forEach { CzechLearningText(it, translationTag, words, lookupEnabled, ::onWord) }
+            PremiumCard(Modifier.fillMaxWidth()) {
+                TextButton(onClick = { moreExpanded = !moreExpanded }, modifier = Modifier.fillMaxWidth().heightIn(min = PremiumSize.touch)) {
+                    Text(text(R.string.sign_more_information), Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+                    Text(if(moreExpanded) "−" else "+", style = MaterialTheme.typography.titleMedium)
+                }
+                if(moreExpanded) Column(Modifier.padding(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
+                    more.forEach { CzechLearningText(it, translationTag, words, lookupEnabled, ::onWord) }
+                }
             }
         }
         if(linked.isNotEmpty()) item {
