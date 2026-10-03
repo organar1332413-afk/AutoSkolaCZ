@@ -30,10 +30,8 @@ import cz.autoskola.data.DictionaryLoadState
     var sourceError by remember { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
     val helperTitle = when(translationTag) { "ru" -> sign.titleRu; "uk" -> sign.titleUk; else -> null }
-    val memoryAdvice = listOfNotNull(sign.memoryCs, sign.mistakeCs)
-        .firstOrNull { it != sign.driverActionsCs && it != sign.meaningCs }
-    val more = (listOfNotNull(sign.simpleCs, sign.memoryCs, sign.mistakeCs) + sign.exceptionsCs)
-        .distinct().filter { it != sign.meaningCs && it != sign.driverActionsCs && it != memoryAdvice }
+    val memoryAdvice = sign.memoryAdvice
+    val more = sign.additionalLearningTexts
     fun hideTip() { tipDismissedLocally = true; dismissLookupTip() }
     fun onWord(word: LearningWordSelection) { selection = word; hideTip() }
     @Composable fun learningText(value: String, tag: String) {

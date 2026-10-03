@@ -13,6 +13,13 @@ class CzechLearningTextTest {
             czechWordRanges("Zpomalte a buďte připraveni zastavit.").map { it.value })
         assertEquals(word, findLearningWord("ŘIDIČE,", listOf(word), "ru"))
     }
+    @Test fun onlyEligibleWordsAreTappableAndOriginalOffsetsArePreserved() {
+        val text = "A 12a · Chodci, (Tvar). V 2b; https://example.cz/road 408 ID_abc km m BUS."
+        val words = czechWordRanges(text)
+        assertEquals(listOf("Chodci", "Tvar", "BUS"), words.map { it.value })
+        words.forEach { assertEquals(it.value, text.substring(it.range)) }
+        assertEquals(listOf("v", "s", "a", "řidič"), czechWordRanges("v 2 s 3 a řidič").map { it.value })
+    }
     @Test fun existingUntranslatedEntryIsReusedAndDoesNotCreateParallelWord() {
         val untranslated = word.copy(translation = null)
         assertNull(findLearningWord("řidiče", listOf(untranslated), "ru"))

@@ -35,9 +35,9 @@ class BundledDictionaryRuntimeTest {
         assertNull(container.db.content().activeVersion().first())
         val ru = container.study.words("ru").first()
         val uk = container.study.words("uk").first()
-        assertEquals(4, ru.size)
-        assertTrue(ru.all { !it.translation.isNullOrBlank() })
-        assertTrue(uk.all { !it.translation.isNullOrBlank() })
+        assertEquals(1178, ru.size)
+        assertTrue(ru.all { !it.translation.isNullOrBlank() && !it.meaning.isNullOrBlank() })
+        assertTrue(uk.all { !it.translation.isNullOrBlank() && !it.meaning.isNullOrBlank() })
         assertEquals("водитель", findLearningWord("řidič", ru, "ru")?.translation)
         assertEquals("водій", findLearningWord("řidič", uk, "uk")?.translation)
         assertEquals("транспортное средство", findLearningWord("vozidlo", ru, "ru")?.translation)
@@ -55,8 +55,7 @@ class BundledDictionaryRuntimeTest {
         assertEquals("транспортное средство", findLearningWord("VOZIDLEM:", ru, "ru")?.translation)
         for(token in listOf("Tvar", "tvar", "tvar.", "tvar,")) {
             assertEquals("tvar", normalizeLearningWord(token))
-            // This is genuinely absent content, not a loading/normalization failure.
-            assertNull(findLearningWord(token, ru, "ru"))
+            assertEquals("форма, очертание", findLearningWord(token, ru, "ru")?.translation)
         }
         assertNull(findLearningWord("naprostoneznámé", ru, "ru"))
     }
@@ -70,7 +69,7 @@ class BundledDictionaryRuntimeTest {
         assertTrue(word.saved)
         assertEquals(1, word.repetitions)
         assertEquals(1, word.correctCount)
-        assertEquals(4, container.study.words("ru").first().size)
+        assertEquals(1178, container.study.words("ru").first().size)
         assertEquals(1, container.db.words().saved().first().size)
         container.db.close()
         val reopened = AppContainer(container.application)
@@ -81,6 +80,20 @@ class BundledDictionaryRuntimeTest {
             assertTrue(ua.saved)
             assertEquals(1, ua.repetitions)
         } finally { reopened.db.close() }
+    }
+
+    @Test fun newCorpusWordSavesByLemmaAcrossFormsAndLanguagesWithoutDuplicates() = withContainer { container ->
+        container.dictionary.initialize()
+        val ru = container.study.words("ru").first()
+        val tvar = findLearningWord("Tvar,", ru, "ru")!!
+        assertEquals(tvar.id, findLearningWord("tvaru", ru, "ru")!!.id)
+        container.study.saveWord(tvar.id)
+        container.study.saveWord(tvar.id)
+        assertEquals(1, container.db.words().saved().first().size)
+        container.dictionary.initialize()
+        val ua = container.study.words("uk").first()
+        assertTrue(findLearningWord("TVARU:", ua, "uk")!!.saved)
+        assertEquals("форма, обрис", findLearningWord("Tvar", ua, "uk")!!.translation)
     }
 
     @Suppress("DEPRECATION")

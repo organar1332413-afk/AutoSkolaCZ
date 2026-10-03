@@ -31,7 +31,18 @@ import java.util.Locale
 import kotlin.math.roundToInt
 
 private val czechWords = Regex("[\\p{L}\\p{M}]+(?:[-’'][\\p{L}\\p{M}]+)*")
-fun czechWordRanges(value: String): List<MatchResult> = czechWords.findAll(value).toList()
+// Codes/URLs/SI labels have no lexical meaning; leave their display untouched.
+private val nonWords = Regex("(?i:https?)://\\S+|\\b(?:A|B|C|D|E|IP|IS|IZ|IJ|P|S|V|Z)\\s*\\d+[a-z]?\\b")
+private val technicalLabels = setOf("b", "d", "e", "h", "m", "mm", "km", "n", "p", "r", "t")
+fun czechWordRanges(value: String): List<MatchResult> {
+    val excluded = nonWords.findAll(value).map { it.range }.toList()
+    return czechWords.findAll(value).filter { word ->
+        excluded.none { word.range.first <= it.last && word.range.last >= it.first } &&
+            value.getOrNull(word.range.first - 1)?.let { !it.isDigit() && it != '_' } != false &&
+            value.getOrNull(word.range.last + 1)?.let { !it.isDigit() && it != '_' } != false &&
+            normalizeLearningWord(word.value) !in technicalLabels
+    }.toList()
+}
 fun normalizeLearningWord(token: String): String = Normalizer.normalize(
     czechWords.find(token)?.value.orEmpty(), Normalizer.Form.NFC).lowercase(Locale.forLanguageTag("cs"))
 
@@ -106,7 +117,6 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
     val density = androidx.compose.ui.platform.LocalDensity.current
     val gap = with(density) { PremiumSpace.xs.roundToPx() }
     val position = remember(selection.boundsInWindow, gap) { LearningWordPopupPosition(selection.boundsInWindow, gap) }
-    val speech = LocalCzechSpeech.current
     val unknown = if(policy.translationTag == "uk") "Переклад поки недоступний" else "Перевод пока недоступен"
     BackHandler { dismiss() }
     Popup(popupPositionProvider = position, onDismissRequest = dismiss,
@@ -126,7 +136,7 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
                 if(word != null) {
                     Text(requireNotNull(word.translation), Modifier.testTag("word-translation"), style = MaterialTheme.typography.bodyMedium)
                     word.meaning?.takeIf { it.isNotBlank() && it != word.translation }?.let {
-                        Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text(it, Modifier.testTag("word-explanation"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 } else if(dictionaryState != DictionaryLoadState.READY) {
                     Text(text(if(dictionaryState == DictionaryLoadState.LOADING) R.string.word_dictionary_loading
@@ -138,16 +148,12 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                    if(speech != null) TextButton(onClick = { speech.speak(selection.token, false) }, enabled = speech.ready,
-                        modifier = Modifier.heightIn(min = PremiumSize.touch)) { Text(text(R.string.speak)) }
                     TextButton(onClick = { if(entry != null) save(entry.id) else saveUnknown(normalizeLearningWord(selection.token)) },
                         enabled = !saved && dictionaryState == DictionaryLoadState.READY,
                         modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
                         Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
                     }
                 }
-                if(speech?.failed == true) Text(text(R.string.tts_unavailable), style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }

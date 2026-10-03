@@ -62,6 +62,7 @@ class SignTranslationDeviceTest {
             compose.onNodeWithTag("sign-detail-C 7a").performScrollToNode(hasTestTag("action-cs"))
             tapWord("action-cs", "řidič")
             compose.onNodeWithTag("word-translation").assertTextEquals("водитель")
+            compose.onNodeWithTag("word-explanation").assertTextEquals("Человек, управляющий транспортным средством.")
             compose.onNodeWithTag("translation-save").performClick()
             compose.waitUntil(10_000) { findLearningWord("řidič", vm.words.value, "ru")?.saved == true }
             compose.onNodeWithTag("translation-save").assertIsNotEnabled()
@@ -81,11 +82,56 @@ class SignTranslationDeviceTest {
             compose.onNodeWithTag("translation-save").assertIsNotEnabled()
             compose.onNodeWithTag("translation-close").performClick()
             tapWord("action-cs", "respektujte")
-            compose.onNodeWithTag("word-translation-unavailable").assertTextEquals("Переклад поки недоступний")
+            compose.onNodeWithTag("word-translation").assertTextEquals("дотримуватися, враховувати")
+            compose.onNodeWithTag("word-explanation").assertTextEquals("Дотримуватися вказаного правила чи враховувати іншого учасника.")
+            compose.onNodeWithText("Озвучить по-чешски").assertDoesNotExist()
+            compose.onNodeWithText("Přehrát česky").assertDoesNotExist()
         } finally {
             compose.runOnIdle { compose.activity.viewModelStore.clear() }
             container.db.close()
         }
+    }
+
+    @Test fun realTvarPopupShowsContextInBothLanguagesWithoutAudio() {
+        val app = instrumentation.targetContext.applicationContext as android.app.Application
+        val container = AppContainer(app)
+        val sign = SignCatalog.load(app).single { it.code == "P 1" }
+        val tag = mutableStateOf("ru")
+        var words by mutableStateOf<List<Lexeme>>(emptyList())
+        kotlinx.coroutines.runBlocking { container.dictionary.initialize() }
+        try {
+            compose.setContent { AutoSkolaTheme { SpeechProvider {
+                val entries by container.study.words(tag.value).collectAsState(initial = emptyList())
+                words = entries
+                SignDetailScreen(sign, tag.value, entries, true, false, {}, {}, emptySet(), {}, lookupTipSeen = true)
+            } } }
+            for(language in listOf("ru", "uk")) {
+                compose.runOnIdle { tag.value = language }
+                compose.waitUntil(30_000) { findLearningWord("Tvar", words, language) != null }
+                compose.onNodeWithTag("sign-detail-P 1").performScrollToNode(hasTestTag("memory-cs"))
+                tapWord("memory-cs", "Tvar")
+                compose.onNodeWithTag("translation-token").assertTextEquals("Tvar")
+                compose.onNodeWithTag("word-translation").assertTextEquals(
+                    if(language == "ru") "форма, очертание" else "форма, обрис")
+                compose.onNodeWithTag("word-explanation").assertTextEquals(
+                    if(language == "ru") "Очертание знака, дороги или её направления на схеме."
+                    else "Обрис знака, дороги чи її напрямку на схемі.")
+                compose.onNodeWithText("Озвучить по-чешски").assertDoesNotExist()
+                compose.onNodeWithText("Přehrát česky").assertDoesNotExist()
+                compose.onNodeWithText("Озвучити чеською").assertDoesNotExist()
+                compose.onNodeWithTag("translation-save").assertIsEnabled()
+                screenshot("tvar-context-$language.png")
+                instrumentation.sendKeyDownUpSync(KeyEvent.KEYCODE_BACK)
+                compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+                compose.onNodeWithTag("sign-detail-P 1").assertIsDisplayed()
+            }
+        } finally { container.db.close() }
+    }
+
+    @Test fun existingSpeechButtonsRemainAvailableOutsideTheWordPopup() {
+        compose.setContent { AutoSkolaTheme { SpeechProvider { SpeechButtons("řidič") } } }
+        compose.onNodeWithText("Přehrát česky").assertIsDisplayed()
+        compose.onNodeWithText("Přehrát pomalu").assertIsDisplayed()
     }
 
     @Test fun nativeOutsideTapAndBackCloseAnchoredPopupWithoutChangingScroll() {
