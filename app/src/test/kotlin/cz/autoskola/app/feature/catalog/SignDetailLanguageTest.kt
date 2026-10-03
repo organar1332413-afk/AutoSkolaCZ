@@ -15,10 +15,12 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
+import org.robolectric.annotation.GraphicsMode
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [28], qualifiers = "w411dp-h891dp", application = Application::class)
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
 class SignDetailLanguageTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     @Test fun allThreeBlocksAndAdditionalTextFollowGlobalLanguageAndEverySectionIsTappable() {
@@ -62,6 +64,7 @@ class SignDetailLanguageTest {
         val result = layouts.single()
         val index = token?.let { result.layoutInput.text.text.indexOf(it) } ?: 0
         val box = result.getBoundingBox(index)
+        assertTrue("Laid-out word has nonzero width: $box", box.width > 0)
         node.performTouchInput { click(Offset(box.center.x, box.center.y)) }
     }
 }

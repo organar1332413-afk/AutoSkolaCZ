@@ -19,10 +19,12 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.GraphicsMode
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [28], qualifiers = "w411dp-h891dp", application = Application::class)
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
 class LearningWordPopupTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     private val driver = Lexeme("ridic", "řidič", "водитель", "Человек, управляющий транспортным средством.", "", null, false, "ru", listOf("řidiče"))
@@ -51,6 +53,7 @@ class LearningWordPopupTest {
         val result = layouts.single()
         val index = result.layoutInput.text.text.indexOf(token)
         val box = result.getBoundingBox(index)
+        assertTrue("Laid-out word has nonzero width: $box", box.width > 0)
         node.performTouchInput { click(Offset(box.center.x, box.center.y)) }
     }
     @Test fun actualWordTapHandlesPunctuationAndSavingIsIdempotentInUi() {
@@ -82,6 +85,7 @@ class LearningWordPopupTest {
     }
     @Test fun strictPolicyDisablesTapAndClosesExistingPopup() {
         launch(); tap("Řidiče")
+        compose.onNodeWithTag("learning-word-popup").assertIsDisplayed()
         compose.runOnIdle { policy.value = WordTranslationPolicy.StrictExam }
         compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
         tap("Řidiče")
