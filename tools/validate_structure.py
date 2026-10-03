@@ -20,10 +20,13 @@ for q in questions:
     assert {t["locale"] for t in q["translations"]} == {"ru", "uk"}
     assert q["points"] is None and q["licenceGroups"] == []
     assert all(set(t["answers"]) == {a["code"] for a in q["answers"]} for t in q["translations"])
+def locale_string_elements(source, locale):
+    return [element for file in sorted((root / f"app/src/{source}/res/{locale}").glob("*.xml"))
+            for element in ET.parse(file).getroot() if element.tag == "string"]
+
 keys=[]
 for locale in ("values", "values-cs", "values-ru", "values-uk"):
-    tree=ET.parse(root / f"app/src/main/res/{locale}/strings.xml")
-    names=[e.attrib["name"] for e in tree.getroot()]
+    names=[e.attrib["name"] for e in locale_string_elements("main", locale)]
     assert len(names)==len(set(names))
     keys.append(set(names))
 assert keys[0] == keys[1] == keys[2] == keys[3]
@@ -48,7 +51,7 @@ assert not actual.execute("PRAGMA foreign_key_check").fetchall()
 for source in ("main","debug"):
     tables=[]
     for locale in ("values","values-cs","values-ru","values-uk"):
-        elements=ET.parse(root/f"app/src/{source}/res/{locale}/strings.xml").getroot()
+        elements=locale_string_elements(source,locale)
         tables.append({e.attrib["name"]:re.findall(r"%[1-9]\$[dsf]",e.text or "") for e in elements})
     assert all(t==tables[0] for t in tables), source
 assert not (root/"app/src/main/assets/content/sample-v1.json").exists()

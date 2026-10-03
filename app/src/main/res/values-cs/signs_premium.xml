@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_filters">Filtry</string>
+    <string name="sign_clear_search">Vymazat hledání</string>
+    <string name="sign_catalog_error">Katalog se nepodařilo načíst. Zavřete obrazovku a zkuste to znovu.</string>
+    <string name="sign_empty">Žádné značky</string>
+    <string name="sign_empty_help">Zkuste jiný název, kód nebo změňte filtry.</string>
+    <string name="sign_reset_filters">Zrušit filtry</string>
+    <string name="sign_favorites_only">Jen oblíbené</string>
+    <string name="sign_state_all">Všechny značky</string>
+    <string name="sign_viewed">Prohlédnuto</string>
+    <string name="sign_unviewed">Neprohlédnuto</string>
+    <string name="sign_source_open">Otevřít oficiální zdroj</string>
+    <string name="sign_source_unavailable">Zdroj nelze otevřít.</string>
+    <string name="sign_more_information">Další informace</string>
+    <string name="sign_word_hint">Klepnutím na české slovo otevřete dostupný překlad.</string>
+    <string name="sign_detail_missing">Značka nebyla nalezena.</string>
+</resources>
