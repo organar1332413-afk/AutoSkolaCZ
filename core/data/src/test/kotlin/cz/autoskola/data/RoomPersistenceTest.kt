@@ -67,7 +67,7 @@ class RoomPersistenceTest {
         repo.removeWord("word");assertFalse(study.words("cs").first().single().saved)
     }
     @Test fun savedWordsSurviveDatabaseReopenAndDuplicateSavesKeepReviewCounters() = runBlocking {
-        val context = RuntimeEnvironment.getApplication<android.app.Application>()
+        val context = RuntimeEnvironment.getApplication()
         val name = "saved-words-${System.nanoTime()}.db"
         var disk = Room.databaseBuilder(context, AutoSkolaDatabase::class.java, name).allowMainThreadQueries().build()
         try {
@@ -90,7 +90,7 @@ class RoomPersistenceTest {
         } finally { disk.close(); context.deleteDatabase(name) }
     }
     @Test fun lookupTipDismissalUsesExistingSettingsDataStore() = runBlocking {
-        val context = RuntimeEnvironment.getApplication<android.app.Application>()
+        val context = RuntimeEnvironment.getApplication()
         val first = SettingsStore(context)
         first.dismissLookupTip()
         assertTrue(SettingsStore(context).lookupTipSeen.first())

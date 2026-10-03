@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -129,8 +128,8 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                    if(speech != null) IconButton(onClick = { speech.speak(selection.token, false) }, enabled = speech.ready,
-                        modifier = Modifier.size(PremiumSize.touch)) { Icon(Icons.Default.VolumeUp, text(R.string.speak)) }
+                    if(speech != null) TextButton(onClick = { speech.speak(selection.token, false) }, enabled = speech.ready,
+                        modifier = Modifier.heightIn(min = PremiumSize.touch)) { Text(text(R.string.speak)) }
                     TextButton(onClick = { if(word != null) save(word.id) else saveUnknown(normalizeLearningWord(selection.token)) },
                         enabled = !saved, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
                         Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
