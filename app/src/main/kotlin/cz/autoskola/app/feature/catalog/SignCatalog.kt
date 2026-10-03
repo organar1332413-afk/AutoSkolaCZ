@@ -26,6 +26,17 @@ data class SignEntry(
     val detailTranslations: Map<String, SignTextTranslation> = emptyMap(),
     val exceptionsCs: List<String> = emptyList(),
 ) {
+    val memoryAdvice: String? get() = listOfNotNull(memoryCs, mistakeCs)
+        .firstOrNull { it != driverActionsCs && it != meaningCs }
+    val additionalLearningTexts: List<String> get() =
+        (listOfNotNull(simpleCs, memoryCs, mistakeCs) + exceptionsCs).distinct()
+            .filter { it != meaningCs && it != driverActionsCs && it != memoryAdvice }
+    /** Same fields as SignDetail, including collapsed additional copy, excluding source metadata. */
+    fun tappableTexts(): List<Pair<String, String>> = listOfNotNull(
+        "titleCs" to titleCs, meaningCs?.let { "meaningCs" to it },
+        driverActionsCs?.let { "driverActionsCs" to it }, memoryAdvice?.let { "memoryAdvice" to it }
+    ) + additionalLearningTexts.mapIndexed { i, text -> "additional-$i" to text }
+
     fun helperFor(value: String, tag: String?): String? = when(tag) {
         "ru" -> if(value == meaningCs) ru else detailTranslations[value]?.ru
         "uk" -> if(value == meaningCs) uk else detailTranslations[value]?.uk

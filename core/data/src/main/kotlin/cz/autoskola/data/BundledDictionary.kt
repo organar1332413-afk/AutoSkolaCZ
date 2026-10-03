@@ -35,11 +35,22 @@ class BundledDictionary(private val context: Context, private val db: AutoSkolaD
             }
             require(words.isNotEmpty()) { "Bundled dictionary is empty" }
             require(words.map { it.id }.distinct().size == words.size) { "Duplicate dictionary IDs" }
+            require(words.map { it.lemma }.distinct().size == words.size) { "Duplicate dictionary lemmas" }
+            val formOwners = mutableMapOf<String, String>()
             words.forEach { word ->
+                require(word.forms.isNotEmpty() && word.forms.distinct().size == word.forms.size) {
+                    "Empty/duplicate dictionary forms: ${word.id}"
+                }
+                (word.forms + word.lemma).distinct().forEach { form ->
+                    require(form.isNotBlank() && form == java.text.Normalizer.normalize(form, java.text.Normalizer.Form.NFC)
+                        .lowercase(java.util.Locale.forLanguageTag("cs"))) { "Non-normalized dictionary form: $form" }
+                    val previous = formOwners.put(form, word.id)
+                    require(previous == null || previous == word.id) { "Conflicting dictionary form: $form" }
+                }
                 require(word.id.isNotBlank() && word.lemma.isNotBlank()) { "Empty dictionary ID/lemma" }
                 require(word.translations.map { it.locale }.toSet() == setOf("ru", "uk") &&
-                    word.translations.size == 2 && word.translations.all { it.translation.isNotBlank() }) {
-                    "Missing RU/UA dictionary translation: ${word.id}"
+                    word.translations.size == 2 && word.translations.all { it.translation.isNotBlank() && it.meaning.isNotBlank() }) {
+                    "Missing RU/UA dictionary translation/explanation: ${word.id}"
                 }
             }
             db.withTransaction {

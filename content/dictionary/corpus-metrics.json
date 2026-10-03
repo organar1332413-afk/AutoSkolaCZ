@@ -1,0 +1,16 @@
+{
+  "sign_cards_scanned": 408,
+  "tappable_text_fields_scanned": 1802,
+  "token_occurrences": 11313,
+  "unique_normalized_forms": 2275,
+  "dictionary_lemmas": 1178,
+  "dictionary_surface_forms": 2728,
+  "duplicate_lemmas": 0,
+  "duplicate_forms": 0,
+  "conflicting_mappings": 0,
+  "missing_lookup": 0,
+  "missing_ru_translation": 0,
+  "missing_ru_explanation": 0,
+  "missing_ua_translation": 0,
+  "missing_ua_explanation": 0
+}
