@@ -14,6 +14,8 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.text.TextLayoutResult
 import cz.autoskola.design.*
 import cz.autoskola.domain.Lexeme
+import cz.autoskola.domain.UiLanguage
+import cz.autoskola.app.R
 import cz.autoskola.data.DictionaryLoadState
 import org.junit.Assert.*
 import org.junit.Rule
@@ -32,10 +34,12 @@ class LearningWordPopupTest {
     private var saves = 0
     private lateinit var policy: MutableState<WordTranslationPolicy>
     private lateinit var dictionaryStatus: MutableState<DictionaryLoadState>
+    private lateinit var ui: MutableState<UiLanguage>
     private fun launch(strict: Boolean = false) {
         policy = mutableStateOf(if(strict) WordTranslationPolicy.StrictExam else WordTranslationPolicy("ru", true))
         dictionaryStatus = mutableStateOf(DictionaryLoadState.READY)
-        compose.setContent { AutoSkolaTheme {
+        ui = mutableStateOf(UiLanguage.CS)
+        compose.setContent { InterfaceLanguage(ui.value) { AutoSkolaTheme {
             var selected by remember { mutableStateOf<LearningWordSelection?>(null) }
             var words by remember { mutableStateOf(listOf(driver)) }
             Column(Modifier.fillMaxSize().padding(PremiumSpace.lg)) {
@@ -47,7 +51,7 @@ class LearningWordPopupTest {
             }, { token ->
                 saves++; words = words + driver.copy(id = "unknown", lemma = token, translation = null, meaning = null, forms = emptyList(), saved = true)
             }, dictionaryStatus.value) { selected = null }
-        } }
+        } } }
     }
     private fun tap(token: String) {
         val node = compose.onNodeWithTag("czech")
@@ -70,9 +74,27 @@ class LearningWordPopupTest {
         compose.onNodeWithTag("translation-save").assertIsNotEnabled()
         compose.runOnIdle { assertEquals(1, saves) }
     }
+    @Test fun changingInterfaceLanguageKeepsOpenPopupMeaningAndSavedState() {
+        launch(); tap("Řidiče")
+        for(language in UiLanguage.entries) {
+            compose.runOnIdle { ui.value = language }
+            val app = org.robolectric.RuntimeEnvironment.getApplication()
+            val context = app.createConfigurationContext(android.content.res.Configuration(app.resources.configuration).apply {
+                setLocale(java.util.Locale.forLanguageTag(language.tag))
+            })
+            compose.onNodeWithTag("translation-token").assertTextEquals("Řidiče")
+            compose.onNodeWithTag("word-translation").assertTextEquals("водитель")
+            compose.onNodeWithTag("translation-save").assertTextContains(context.getString(
+                if(language == UiLanguage.CS) R.string.save_word else R.string.word_saved), substring = true)
+            if(language == UiLanguage.CS) compose.onNodeWithTag("translation-save").performClick()
+            compose.onNodeWithTag("translation-save").assertIsNotEnabled()
+            compose.onNodeWithContentDescription(context.getString(R.string.close)).assertIsDisplayed()
+        }
+        compose.runOnIdle { assertEquals(1, saves) }
+    }
     @Test fun unknownWordShowsFallbackAndCanBeSavedWithoutInventingTranslation() {
         launch(); tap("Neznámé")
-        compose.onNodeWithTag("word-translation-unavailable").assertTextEquals("Перевод пока недоступен")
+        compose.onNodeWithTag("word-translation-unavailable").assertTextEquals("Překlad zatím není k dispozici")
         compose.onNodeWithTag("translation-save").performClick().assertIsNotEnabled()
         compose.onNodeWithTag("word-translation").assertDoesNotExist()
     }

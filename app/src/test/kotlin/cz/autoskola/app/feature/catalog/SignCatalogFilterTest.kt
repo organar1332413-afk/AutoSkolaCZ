@@ -14,9 +14,9 @@ import org.robolectric.annotation.Config
 class SignCatalogFilterTest {
     private val signs get() = SignCatalog.load(RuntimeEnvironment.getApplication())
     @Test fun everyCategoryIsDistinctAndMatchesExistingKeys() {
-        assertEquals(signs.map { it.category }.toSet(), SignCategoryNames.keys)
-        assertEquals(SignCategoryNames.size, SignCategoryNames.values.toSet().size)
-        SignCategoryNames.keys.forEach { category ->
+        assertEquals(signs.map { it.category }.toSet(), SignCategoryLabels.keys)
+        assertEquals(SignCategoryLabels.size, SignCategoryLabels.values.toSet().size)
+        SignCategoryLabels.keys.forEach { category ->
             val expected = signs.filter { it.category == category }
             assertEquals(expected, filterSigns(signs, SignCatalogFilter(category = category), SignProgress()))
         }

@@ -1,5 +1,6 @@
 package cz.autoskola.app.ui
 import androidx.annotation.StringRes
+import androidx.annotation.PluralsRes
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
@@ -10,6 +11,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 @Composable fun text(@StringRes id: Int): String = LocalContext.current.getString(id)
 @Composable fun text(@StringRes id: Int, vararg args: Any): String = LocalContext.current.getString(id, *args)
+@Composable fun quantityText(@PluralsRes id: Int, quantity: Int): String =
+    LocalContext.current.resources.getQuantityString(id, quantity, quantity)
 @Composable fun Page(content: LazyListScope.() -> Unit) {
     LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp), content = content)
 }

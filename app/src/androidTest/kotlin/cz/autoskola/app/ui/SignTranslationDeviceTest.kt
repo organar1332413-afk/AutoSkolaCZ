@@ -24,6 +24,12 @@ import cz.autoskola.app.feature.catalog.SignDetailScreen
 import cz.autoskola.design.*
 import cz.autoskola.domain.Lexeme
 import cz.autoskola.domain.MaterialMode
+import cz.autoskola.domain.UiLanguage
+import cz.autoskola.domain.LearningLevel
+import cz.autoskola.app.R
+import cz.autoskola.app.feature.catalog.SignRoutes
+import cz.autoskola.app.feature.catalog.SignsScreen
+import cz.autoskola.domain.SignProgress
 import cz.autoskola.app.AppContainer
 import cz.autoskola.app.MainViewModel
 import cz.autoskola.data.DictionaryLoadState
@@ -132,6 +138,110 @@ class SignTranslationDeviceTest {
         compose.setContent { AutoSkolaTheme { SpeechProvider { SpeechButtons("řidič") } } }
         compose.onNodeWithText("Přehrát česky").assertIsDisplayed()
         compose.onNodeWithText("Přehrát pomalu").assertIsDisplayed()
+    }
+
+    @Test fun realViewModelKeepsInterfaceAndMaterialLanguagesIndependentAcrossAllNinePairs() {
+        val app = instrumentation.targetContext.applicationContext as android.app.Application
+        val container = AppContainer(app)
+        val sign = SignCatalog.load(app).single { it.code == "A 12a" }
+        val vm = compose.runOnIdle { ViewModelProvider(compose.activity,
+            MainViewModel.Factory(container))[MainViewModel::class.java] }
+        try {
+            compose.setContent {
+                val settings by vm.settings.collectAsState()
+                val words by vm.words.collectAsState()
+                val dictionary by vm.dictionaryState.collectAsState()
+                InterfaceLanguage(settings.uiLanguage) { AutoSkolaTheme {
+                    androidx.compose.material3.Scaffold(topBar = { AppTopBar(text(requireNotNull(SignRoutes.titleResource(SignRoutes.detailPattern)))) }) { padding ->
+                        Box(Modifier.padding(padding)) {
+                            SignDetailScreen(sign, settings.materialMode.translationTag, words,
+                                settings.materialMode != MaterialMode.CS_ONLY, false, {}, vm::saveWord,
+                                emptySet(), {}, lookupTipSeen = true, dictionaryState = dictionary)
+                        }
+                    }
+                } }
+            }
+            vm.level(LearningLevel.BEGINNER)
+            for(ui in UiLanguage.entries) for(material in MaterialMode.entries) {
+                vm.ui(ui); vm.material(material)
+                compose.waitUntil(30_000) {
+                    vm.settings.value.uiLanguage == ui && vm.settings.value.materialMode == material &&
+                        vm.dictionaryState.value == DictionaryLoadState.READY &&
+                        (material == MaterialMode.CS_ONLY || findLearningWord("Chodci", vm.words.value, material.translationTag) != null)
+                }
+                val localized = app.createConfigurationContext(android.content.res.Configuration(app.resources.configuration).apply {
+                    setLocale(java.util.Locale.forLanguageTag(ui.tag))
+                })
+                compose.onNodeWithText(localized.getString(R.string.sign_detail_title)).assertIsDisplayed()
+                compose.onNodeWithTag("sign-detail-A 12a").performScrollToNode(hasTestTag("meaning-cs"))
+                compose.onNodeWithText(localized.getString(R.string.sign_meaning_title)).assertExists()
+                if(material == MaterialMode.CS_ONLY) compose.onNodeWithTag("meaning-helper").assertDoesNotExist()
+                else compose.onNodeWithTag("meaning-helper").assertTextEquals(sign.helperFor(sign.meaningCs!!, material.translationTag)!!)
+                compose.onNodeWithTag("sign-title-cs").performScrollTo()
+                tapWord("sign-title-cs", "Chodci")
+                if(material == MaterialMode.CS_ONLY) compose.onNodeWithTag("learning-word-popup").assertDoesNotExist()
+                else {
+                    val entry = findLearningWord("Chodci", vm.words.value, material.translationTag)!!
+                    compose.onNodeWithTag("word-translation").assertTextEquals(entry.translation!!)
+                    compose.onNodeWithTag("word-explanation").assertTextEquals(entry.meaning!!)
+                    compose.onNodeWithTag("translation-save").assertTextContains(localized.getString(R.string.save_word), substring = true)
+                    if(ui == UiLanguage.RU && material == MaterialMode.CS_UK) screenshot("signs-ui-ru-material-ua.png")
+                    if(ui == UiLanguage.UK && material == MaterialMode.CS_RU) screenshot("signs-ui-ua-material-ru.png")
+                    compose.onNodeWithContentDescription(localized.getString(R.string.close)).performClick()
+                }
+            }
+        } finally {
+            compose.runOnIdle { compose.activity.viewModelStore.clear() }
+            container.db.close()
+        }
+    }
+
+    @Test fun realCatalogAndFilterWindowKeepAllNineInterfaceMaterialPairsIndependent() {
+        val app = instrumentation.targetContext.applicationContext as android.app.Application
+        val container = AppContainer(app)
+        val vm = compose.runOnIdle { ViewModelProvider(compose.activity,
+            MainViewModel.Factory(container))[MainViewModel::class.java] }
+        try {
+            compose.setContent {
+                val settings by vm.settings.collectAsState()
+                val catalog by vm.signCatalog.collectAsState()
+                InterfaceLanguage(settings.uiLanguage) { AutoSkolaTheme {
+                    androidx.compose.material3.Scaffold(topBar = { AppTopBar(text(requireNotNull(SignRoutes.titleResource(SignRoutes.catalog)))) }) { padding ->
+                        Box(Modifier.padding(padding)) {
+                            SignsScreen(catalog, settings.materialMode.translationTag,
+                                SignProgress(viewed = setOf("A 12a")), {}, { _, _ -> })
+                        }
+                    }
+                } }
+            }
+            compose.waitUntil(30_000) { !vm.signCatalog.value.loading && vm.signCatalog.value.entries.size == 408 }
+            compose.onNodeWithTag("sign-search").performTextInput("A 12a")
+            for(ui in UiLanguage.entries) for(material in MaterialMode.entries) {
+                vm.ui(ui); vm.material(material)
+                compose.waitUntil(30_000) { vm.settings.value.uiLanguage == ui && vm.settings.value.materialMode == material }
+                val localized = app.createConfigurationContext(android.content.res.Configuration(app.resources.configuration).apply {
+                    setLocale(java.util.Locale.forLanguageTag(ui.tag))
+                })
+                compose.onNodeWithText(localized.getString(R.string.signs)).assertIsDisplayed()
+                compose.onNodeWithTag("sign-count").assertTextEquals(localized.resources.getQuantityString(R.plurals.sign_count, 408, 408))
+                compose.onNodeWithTag("sign-search").assertTextContains("A 12a")
+                compose.onNodeWithTag("sign-A 12a-title-cs", useUnmergedTree = true).assertTextEquals("Chodci")
+                if(material == MaterialMode.CS_ONLY) compose.onNodeWithTag("sign-A 12a-helper", useUnmergedTree = true).assertDoesNotExist()
+                else compose.onNodeWithTag("sign-A 12a-helper", useUnmergedTree = true).assertTextEquals(
+                    if(material == MaterialMode.CS_RU) "Пешеходы" else "Пішоходи")
+                compose.onNodeWithTag("sign-filters").performClick()
+                compose.onNodeWithText(localized.getString(R.string.sign_favorites_only)).assertIsDisplayed()
+                compose.onNodeWithTag("sign-favorites-filter").assertContentDescriptionEquals(localized.getString(R.string.sign_favorites_only))
+                for((filter, id) in listOf("ALL" to R.string.sign_state_all, "VIEWED" to R.string.sign_viewed, "UNVIEWED" to R.string.sign_unviewed))
+                    compose.onNodeWithTag("filter-$filter").assertTextContains(localized.getString(id), substring = true)
+                if(ui == UiLanguage.RU && material == MaterialMode.CS_UK) screenshot("signs-filter-ui-ru-material-ua.png")
+                compose.onNodeWithText(localized.getString(R.string.close)).performClick()
+                compose.onNodeWithTag("sign-search").assertTextContains("A 12a")
+            }
+        } finally {
+            compose.runOnIdle { compose.activity.viewModelStore.clear() }
+            container.db.close()
+        }
     }
 
     @Test fun nativeOutsideTapAndBackCloseAnchoredPopupWithoutChangingScroll() {

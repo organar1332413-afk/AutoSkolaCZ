@@ -14,6 +14,9 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
+import cz.autoskola.app.ui.InterfaceLanguage
+import cz.autoskola.app.ui.text
+import cz.autoskola.app.R
 import cz.autoskola.design.AutoSkolaTheme
 import cz.autoskola.design.AppTopBar
 import cz.autoskola.domain.*
@@ -40,16 +43,16 @@ class SignsNavigationTest {
         catalogState = mutableStateOf(if(loading) SignCatalogLoadState() else SignCatalogLoadState(entries, loading = false))
         settingsState = mutableStateOf(UserSettings(materialMode = MaterialMode.CS_RU))
         compose.setContent {
-            AutoSkolaTheme {
+            InterfaceLanguage(settingsState.value.uiLanguage) { AutoSkolaTheme {
                 nav = rememberNavController()
                 var progress by remember { mutableStateOf(SignProgress()) }
                 val destinationState = rememberUpdatedState(SignDestinationState(
                     catalogState.value, progress, settingsState.value, emptyList(), emptySet()))
                 val back by nav.currentBackStackEntryAsState()
                 Scaffold(topBar = {
-                    AppTopBar(if(back?.destination?.route == SignRoutes.catalog) "Dopravní značky" else "Dopravní značka",
-                        navigationIcon = { IconButton(onClick = { nav.popBackStack() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Zpět") } },
-                        actions = { IconButton(onClick = {}) { Icon(Icons.Default.Settings, "Profil") } })
+                    AppTopBar(text(requireNotNull(SignRoutes.titleResource(back?.destination?.route ?: SignRoutes.catalog))),
+                        navigationIcon = { IconButton(onClick = { nav.popBackStack() }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, text(R.string.back)) } },
+                        actions = { IconButton(onClick = {}) { Icon(Icons.Default.Settings, text(R.string.profile)) } })
                 }) { padding ->
                     Box(Modifier.padding(padding)) {
                         NavHost(nav, SignRoutes.catalog) {
@@ -61,7 +64,7 @@ class SignsNavigationTest {
                     }
                 }
             }
-        }
+        } }
     }
     @Test fun cachedGraphObservesLoadedCatalogAndLanguageChangesOnTheOpenDetail() {
         launch(loading = true)
@@ -103,6 +106,31 @@ class SignsNavigationTest {
         assertEquals(before, after, 0.001f)
         compose.onNodeWithTag("sign-$code").assert(SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, "Prohlédnuto"))
         compose.onNodeWithTag("favorite-$code").assertIsOn()
+    }
+    @Test fun interfaceAndMaterialChangesReachCachedDestinationsWithoutResettingCatalog() {
+        launch()
+        compose.runOnIdle { settingsState.value = UserSettings(uiLanguage = UiLanguage.RU, materialMode = MaterialMode.CS_UK) }
+        compose.onNodeWithText("Дорожные знаки").assertIsDisplayed()
+        compose.onNodeWithTag("category-warning").performClick()
+        compose.onNodeWithTag("sign-grid").performScrollToIndex(18)
+        val before = compose.onNodeWithTag("sign-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
+        val sign = entries.filter { it.category == "warning" }[18]
+        compose.onNodeWithTag("sign-${sign.code}").performClick()
+        compose.onNodeWithText("Дорожный знак").assertIsDisplayed()
+        compose.onNodeWithTag("sign-title-helper").assertTextEquals(sign.titleUk!!)
+        compose.runOnIdle { settingsState.value = settingsState.value.copy(uiLanguage = UiLanguage.UK) }
+        compose.onNodeWithText("Дорожній знак").assertIsDisplayed()
+        compose.onNodeWithTag("sign-title-helper").assertTextEquals(sign.titleUk!!)
+        compose.runOnIdle { settingsState.value = settingsState.value.copy(materialMode = MaterialMode.CS_RU) }
+        compose.onNodeWithText("Дорожній знак").assertIsDisplayed()
+        compose.onNodeWithTag("sign-title-helper").assertTextEquals(sign.titleRu!!)
+        compose.runOnIdle { settingsState.value = settingsState.value.copy(uiLanguage = UiLanguage.RU, materialMode = MaterialMode.CS_UK); nav.popBackStack() }
+        compose.onNodeWithText("Дорожные знаки").assertIsDisplayed()
+        compose.onNodeWithTag("category-warning").assertIsSelected()
+        compose.onNodeWithTag("sign-${sign.code}").assertIsDisplayed()
+        val after = compose.onNodeWithTag("sign-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
+        assertEquals(before, after, 0.001f)
+        compose.onNodeWithTag("sign-${sign.code}").assert(SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, "Просмотрено"))
     }
     @Test fun popupBackDismissesBeforeDetailAndThenRestoresDeepCatalogPosition() {
         launch()

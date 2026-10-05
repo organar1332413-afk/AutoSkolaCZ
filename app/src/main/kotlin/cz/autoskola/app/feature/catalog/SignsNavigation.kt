@@ -20,6 +20,11 @@ object SignRoutes {
     const val catalog = "signs"
     const val detailPattern = "signs/{code}"
     fun detail(code: String) = "signs/${Uri.encode(code)}"
+    fun titleResource(route: String): Int? = when(route) {
+        catalog -> R.string.signs
+        detailPattern -> R.string.sign_detail_title
+        else -> null
+    }
 }
 
 data class SignDestinationState(

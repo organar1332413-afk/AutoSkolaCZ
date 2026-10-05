@@ -18,4 +18,24 @@
     <string name="sign_text_translation_unavailable">Перевод этого текста пока недоступен.</string>
     <string name="word_dictionary_loading">Словарь загружается…</string>
     <string name="word_dictionary_error">Не удалось загрузить словарь. Попробуйте перезапустить приложение.</string>
+    <string name="sign_detail_title">Дорожный знак</string>
+    <string name="sign_catalog_loading">Загрузка знаков…</string>
+    <string name="sign_meaning_title">Что означает</string>
+    <string name="sign_action_title">Что должен сделать водитель</string>
+    <string name="sign_memory_title">Запомни</string>
+    <string name="sign_source_title">Официальный источник</string>
+    <string name="sign_info_zone">Зональные</string>
+    <string name="sign_info_traffic">Информация о движении</string>
+    <string name="sign_info_direction">Указатели направлений</string>
+    <string name="sign_info_other">Прочие информационные</string>
+    <string name="sign_section_expanded">Развёрнуто</string>
+    <string name="sign_section_collapsed">Свёрнуто</string>
+    <string name="word_translation_action">Перевести: %1$s</string>
+    <string name="word_translation_unavailable">Перевод пока недоступен</string>
+    <plurals name="sign_count">
+        <item quantity="one">%1$d знак</item>
+        <item quantity="few">%1$d знака</item>
+        <item quantity="many">%1$d знаков</item>
+        <item quantity="other">%1$d знаков</item>
+    </plurals>
 </resources>

@@ -12,12 +12,15 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.style.TextOverflow
 import coil3.compose.AsyncImage
 import androidx.compose.ui.layout.ContentScale
 import cz.autoskola.app.R
 import cz.autoskola.app.ui.text
+import cz.autoskola.app.ui.quantityText
 import cz.autoskola.design.*
 import cz.autoskola.domain.SignProgress
 
@@ -41,27 +44,35 @@ import cz.autoskola.domain.SignProgress
     val visible = remember(catalog.entries, filter, progress) { filterSigns(catalog.entries, filter, progress) }
     val counts = remember(catalog.entries) { catalog.entries.groupingBy { it.category }.eachCount() }
     val activeFilters = (if(favoritesOnly) 1 else 0) + (if(viewFilter != SignViewFilter.ALL) 1 else 0)
+    val interfaceContext = LocalContext.current
+    val interfaceConfiguration = LocalConfiguration.current
+    // Dialog slots also run in a separate Android composition, just like the word popup.
+    @Composable fun filterChrome(content: @Composable () -> Unit) {
+        CompositionLocalProvider(LocalContext provides interfaceContext,
+            LocalConfiguration provides interfaceConfiguration, content = content)
+    }
 
     Column(Modifier.fillMaxSize().testTag("sign-catalog")) {
         Row(Modifier.fillMaxWidth().padding(horizontal = PremiumSpace.lg), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
-                Text(if(catalog.loading) "…" else "${catalog.entries.size} znaků", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(if(catalog.loading) text(R.string.sign_catalog_loading) else quantityText(R.plurals.sign_count, catalog.entries.size),
+                    Modifier.testTag("sign-count"), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             TextButton(onClick = { filtersOpen = true }, modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("sign-filters")) {
                 Icon(Icons.Default.MoreVert, contentDescription = null)
                 Text(text(R.string.sign_filters) + if(activeFilters > 0) " · $activeFilters" else "")
             }
         }
-        SearchField(query, { query = it }, "Hledat kód nebo název",
+        SearchField(query, { query = it }, text(R.string.signs_search),
             Modifier.padding(horizontal = PremiumSpace.lg).testTag("sign-search"), trailingIcon = {
                 if(query.isNotEmpty()) IconButton(onClick = { query = "" }) { Icon(Icons.Default.Close, text(R.string.sign_clear_search)) }
                 else Icon(Icons.Default.Search, contentDescription = null)
             })
         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = PremiumSpace.lg),
             horizontalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-            CategoryChip(category == null, { category = null }, "Vše", Modifier.testTag("category-all"))
-            SignCategoryNames.forEach { (key, label) ->
-                if (counts.containsKey(key)) CategoryChip(category == key, { category = key }, "$label · ${counts[key]}", Modifier.testTag("category-$key"))
+            CategoryChip(category == null, { category = null }, text(R.string.signs_all), Modifier.testTag("category-all"))
+            SignCategoryLabels.forEach { (key, label) ->
+                if (counts.containsKey(key)) CategoryChip(category == key, { category = key }, "${text(label)} · ${counts[key]}", Modifier.testTag("category-$key"))
             }
         }
         when {
@@ -86,12 +97,14 @@ import cz.autoskola.domain.SignProgress
             }
         }
     }
-    if(filtersOpen) AlertDialog(onDismissRequest = { filtersOpen = false }, title = { Text(text(R.string.sign_filters)) },
-        text = {
+    if(filtersOpen) AlertDialog(onDismissRequest = { filtersOpen = false }, title = { filterChrome { Text(text(R.string.sign_filters)) } },
+        text = { filterChrome {
             Column {
                 Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                     Text(text(R.string.sign_favorites_only), Modifier.weight(1f))
-                    Switch(favoritesOnly, { favoritesOnly = it }, Modifier.testTag("sign-favorites-filter"))
+                    val favoriteFilterLabel = text(R.string.sign_favorites_only)
+                    Switch(favoritesOnly, { favoritesOnly = it }, Modifier.testTag("sign-favorites-filter")
+                        .semantics { contentDescription = favoriteFilterLabel })
                 }
                 SignViewFilter.entries.forEach { value ->
                     val label = text(when(value) { SignViewFilter.ALL -> R.string.sign_state_all; SignViewFilter.VIEWED -> R.string.sign_viewed; SignViewFilter.UNVIEWED -> R.string.sign_unviewed })
@@ -101,7 +114,7 @@ import cz.autoskola.domain.SignProgress
                     }
                 }
             }
-        }, confirmButton = { TextButton(onClick = { filtersOpen = false }) { Text(text(R.string.close)) } })
+        } }, confirmButton = { filterChrome { TextButton(onClick = { filtersOpen = false }) { Text(text(R.string.close)) } } })
 }
 
 @Composable fun SignGraphic(path: String, label: String, modifier: Modifier = Modifier) {
@@ -124,8 +137,8 @@ import cz.autoskola.domain.SignProgress
             Spacer(Modifier.height(PremiumSpace.sm))
             Text(sign.code, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
             Spacer(Modifier.height(PremiumSpace.xxs))
-            Text(sign.titleCs, style = MaterialTheme.typography.titleSmall, maxLines = 3, overflow = TextOverflow.Ellipsis)
-            helper?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
+            Text(sign.titleCs, Modifier.testTag("sign-${sign.code}-title-cs"), style = MaterialTheme.typography.titleSmall, maxLines = 3, overflow = TextOverflow.Ellipsis)
+            helper?.let { Text(it, Modifier.testTag("sign-${sign.code}-helper"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 2, overflow = TextOverflow.Ellipsis) }
         }
         Row(Modifier.fillMaxWidth().padding(start = PremiumSpace.sm), verticalAlignment = Alignment.CenterVertically) {

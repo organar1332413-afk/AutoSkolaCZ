@@ -8,6 +8,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import java.util.Locale
+import cz.autoskola.app.feature.catalog.SignCategoryLabels
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk=[28],application=Application::class)
 class LocaleResourcesTest {
@@ -27,4 +28,23 @@ class LocaleResourcesTest {
         assertTrue(c.getString(R.string.stats_history_score,42,60).contains("60"))
         assertTrue(c.getString(R.string.home_last_exam_score,42,60).contains("60"))
     } }
+    @Test fun signCountsUseRealCzechRussianAndUkrainianPlurals() {
+        val counts = listOf(0, 1, 2, 5, 11, 21, 22, 25, 408)
+        val expected = mapOf(
+            "cs" to listOf("značek", "značka", "značky", "značek", "značek", "značek", "značek", "značek", "značek"),
+            "ru" to listOf("знаков", "знак", "знака", "знаков", "знаков", "знак", "знака", "знаков", "знаков"),
+            "uk" to listOf("знаків", "знак", "знаки", "знаків", "знаків", "знак", "знаки", "знаків", "знаків")
+        )
+        expected.forEach { (locale, nouns) -> counts.forEachIndexed { i, count ->
+            assertEquals("$locale/$count", "$count ${nouns[i]}", context(locale).resources.getQuantityString(R.plurals.sign_count, count, count))
+        } }
+    }
+    @Test fun allLegalCategoryKeysHaveDistinctLabelsInEveryInterfaceLanguage() {
+        assertEquals(11, SignCategoryLabels.size)
+        listOf("cs", "ru", "uk").forEach { tag ->
+            val labels = SignCategoryLabels.values.map { context(tag).getString(it) }
+            assertEquals(tag, 11, labels.toSet().size)
+            assertTrue(labels.all { it.isNotBlank() })
+        }
+    }
 }

@@ -12,6 +12,7 @@ import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.customActions
@@ -79,6 +80,7 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
     var layout by remember(value) { mutableStateOf<TextLayoutResult?>(null) }
     var origin by remember { mutableStateOf(androidx.compose.ui.geometry.Offset.Zero) }
     val tokens = remember(value) { czechWordRanges(value) }
+    val context = LocalContext.current
     fun select(token: MatchResult, offset: Int = token.range.first) {
         val result = layout ?: return
         val box: Rect = result.getBoundingBox(offset)
@@ -88,7 +90,7 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
     }
     ClickableText(AnnotatedString(value), modifier.onGloballyPositioned { origin = it.positionInWindow() }
         .semantics { customActions = tokens.distinctBy { it.value }.map { token ->
-            CustomAccessibilityAction("Překlad: ${token.value}") { select(token); true }
+            CustomAccessibilityAction(context.getString(R.string.word_translation_action, token.value)) { select(token); true }
         } }, style = style, onTextLayout = { layout = it }, onClick = { offset ->
         tokens.firstOrNull { offset in it.range }?.let { select(it, offset) }
     })
@@ -117,41 +119,44 @@ internal class LearningWordPopupPosition(private val word: IntRect, private val 
     val density = androidx.compose.ui.platform.LocalDensity.current
     val gap = with(density) { PremiumSpace.xs.roundToPx() }
     val position = remember(selection.boundsInWindow, gap) { LearningWordPopupPosition(selection.boundsInWindow, gap) }
-    val unknown = if(policy.translationTag == "uk") "Переклад поки недоступний" else "Перевод пока недоступен"
+    // A Popup has its own Android composition/LocalContext. Preserve the selected UI
+    // resources in that window instead of falling back to the Activity/device locale.
+    val interfaceContext = LocalContext.current
+    val interfaceConfiguration = LocalConfiguration.current
     BackHandler { dismiss() }
     Popup(popupPositionProvider = position, onDismissRequest = dismiss,
         properties = PopupProperties(focusable = true, dismissOnBackPress = true, dismissOnClickOutside = true)) {
-        Surface(modifier = Modifier.width(minOf(PremiumSize.wordPopupMaxWidth,
-            LocalConfiguration.current.screenWidthDp.dp - PremiumSpace.lg * 2)).testTag("learning-word-popup"),
-            shape = PremiumShapes.card, color = LocalPremiumPalette.current.elevatedSurface,
-            shadowElevation = PremiumElevation.hero) {
-            Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                    Text(selection.token, Modifier.weight(1f).testTag("translation-token"), style = MaterialTheme.typography.titleMedium)
-                    IconButton(onClick = dismiss, modifier = Modifier.size(PremiumSize.touch).testTag("translation-close")) {
-                        Icon(Icons.Default.Close, text(R.string.close))
+        CompositionLocalProvider(LocalContext provides interfaceContext, LocalConfiguration provides interfaceConfiguration) {
+            Surface(modifier = Modifier.width(minOf(PremiumSize.wordPopupMaxWidth,
+                LocalConfiguration.current.screenWidthDp.dp - PremiumSpace.lg * 2)).testTag("learning-word-popup"),
+                shape = PremiumShapes.card, color = LocalPremiumPalette.current.elevatedSurface,
+                shadowElevation = PremiumElevation.hero) {
+                Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
+                    Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                        Text(selection.token, Modifier.weight(1f).testTag("translation-token"), style = MaterialTheme.typography.titleMedium)
+                        IconButton(onClick = dismiss, modifier = Modifier.size(PremiumSize.touch).testTag("translation-close")) {
+                            Icon(Icons.Default.Close, text(R.string.close))
+                        }
                     }
-                }
-                Text(if(policy.translationTag == "uk") "UA" else "RU", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
-                if(word != null) {
-                    Text(requireNotNull(word.translation), Modifier.testTag("word-translation"), style = MaterialTheme.typography.bodyMedium)
-                    word.meaning?.takeIf { it.isNotBlank() && it != word.translation }?.let {
-                        Text(it, Modifier.testTag("word-explanation"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(if(policy.translationTag == "uk") "UA" else "RU", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
+                    if(word != null) {
+                        Text(requireNotNull(word.translation), Modifier.testTag("word-translation"), style = MaterialTheme.typography.bodyMedium)
+                        word.meaning?.takeIf { it.isNotBlank() && it != word.translation }?.let {
+                            Text(it, Modifier.testTag("word-explanation"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                    } else if(dictionaryState != DictionaryLoadState.READY) {
+                        Text(text(if(dictionaryState == DictionaryLoadState.LOADING) R.string.word_dictionary_loading
+                            else R.string.word_dictionary_error), Modifier.testTag("word-dictionary-status"),
+                            style = MaterialTheme.typography.bodyMedium)
+                    } else {
+                        Text(text(R.string.word_translation_unavailable), Modifier.testTag("word-translation-unavailable"), style = MaterialTheme.typography.bodyMedium)
                     }
-                } else if(dictionaryState != DictionaryLoadState.READY) {
-                    Text(text(if(dictionaryState == DictionaryLoadState.LOADING) R.string.word_dictionary_loading
-                        else R.string.word_dictionary_error), Modifier.testTag("word-dictionary-status"),
-                        style = MaterialTheme.typography.bodyMedium)
-                } else {
-                    Text("Překlad zatím není k dispozici", style = MaterialTheme.typography.bodyMedium)
-                    Text(unknown, Modifier.testTag("word-translation-unavailable"), style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant)
-                }
-                Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                    TextButton(onClick = { if(entry != null) save(entry.id) else saveUnknown(normalizeLearningWord(selection.token)) },
-                        enabled = !saved && dictionaryState == DictionaryLoadState.READY,
-                        modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
-                        Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
+                    Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                        TextButton(onClick = { if(entry != null) save(entry.id) else saveUnknown(normalizeLearningWord(selection.token)) },
+                            enabled = !saved && dictionaryState == DictionaryLoadState.READY,
+                            modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
+                            Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
+                        }
                     }
                 }
             }

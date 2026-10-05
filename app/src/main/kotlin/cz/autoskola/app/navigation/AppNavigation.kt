@@ -87,7 +87,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         Scaffold(
             topBar={
                 AppTopBar(
-                    title=when(route) { SignRoutes.catalog -> "Dopravní značky"; SignRoutes.detailPattern -> "Dopravní značka"; else -> "Autoškola CZ" },
+                    title=SignRoutes.titleResource(route)?.let { text(it) } ?: "Autoškola CZ",
                     navigationIcon={
                         if(route !in topLevelRoutes) {
                             IconButton(onClick={nav.popBackStack()}) { Icon(Icons.AutoMirrored.Filled.ArrowBack, text(R.string.back)) }

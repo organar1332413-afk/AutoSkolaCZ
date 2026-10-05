@@ -18,4 +18,24 @@
     <string name="sign_text_translation_unavailable">Překlad tohoto textu zatím není k dispozici.</string>
     <string name="word_dictionary_loading">Slovník se načítá…</string>
     <string name="word_dictionary_error">Slovník se nepodařilo načíst. Zkuste znovu spustit aplikaci.</string>
+    <string name="sign_detail_title">Dopravní značka</string>
+    <string name="sign_catalog_loading">Načítání značek…</string>
+    <string name="sign_meaning_title">Co znamená</string>
+    <string name="sign_action_title">Co má řidič udělat</string>
+    <string name="sign_memory_title">Zapamatuj si</string>
+    <string name="sign_source_title">Oficiální zdroj</string>
+    <string name="sign_info_zone">Informativní zónové</string>
+    <string name="sign_info_traffic">Informativní provozní</string>
+    <string name="sign_info_direction">Informativní směrové</string>
+    <string name="sign_info_other">Informativní jiné</string>
+    <string name="sign_section_expanded">Rozbaleno</string>
+    <string name="sign_section_collapsed">Sbaleno</string>
+    <string name="word_translation_action">Přeložit: %1$s</string>
+    <string name="word_translation_unavailable">Překlad zatím není k dispozici</string>
+    <plurals name="sign_count">
+        <item quantity="one">%1$d značka</item>
+        <item quantity="few">%1$d značky</item>
+        <item quantity="many">%1$d značky</item>
+        <item quantity="other">%1$d značek</item>
+    </plurals>
 </resources>

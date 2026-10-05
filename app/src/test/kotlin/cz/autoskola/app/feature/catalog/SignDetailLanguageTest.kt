@@ -23,7 +23,7 @@ import org.robolectric.annotation.Config
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class SignDetailLanguageTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
-    @Test fun allThreeBlocksAndAdditionalTextFollowGlobalLanguageAndEverySectionIsTappable() {
+    @Test fun allThreeBlocksAndAdditionalTextFollowMaterialLanguageAndEverySectionIsTappable() {
         val sign = SignCatalog.load(RuntimeEnvironment.getApplication()).single { it.code == "A 12a" }
         val tag = mutableStateOf<String?>("ru")
         compose.setContent { AutoSkolaTheme {
