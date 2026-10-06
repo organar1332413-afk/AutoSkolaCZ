@@ -87,9 +87,9 @@ class SignTranslationDeviceTest {
             compose.onNodeWithTag("word-translation").assertTextEquals("водій")
             compose.onNodeWithTag("translation-save").assertIsNotEnabled()
             compose.onNodeWithTag("translation-close").performClick()
-            tapWord("action-cs", "respektujte")
-            compose.onNodeWithTag("word-translation").assertTextEquals("дотримуватися, враховувати")
-            compose.onNodeWithTag("word-explanation").assertTextEquals("Дотримуватися вказаного правила чи враховувати іншого учасника.")
+            tapWord("action-cs", "neužívejte")
+            compose.onNodeWithTag("word-translation").assertTextEquals("не користуватися")
+            compose.onNodeWithTag("word-explanation").assertTextEquals("Не використовувати вказаний шлях, якщо немає дозволеного винятку.")
             compose.onNodeWithText("Озвучить по-чешски").assertDoesNotExist()
             compose.onNodeWithText("Přehrát česky").assertDoesNotExist()
         } finally {
@@ -314,7 +314,9 @@ class SignTranslationDeviceTest {
         val layouts = mutableListOf<TextLayoutResult>()
         node.performSemanticsAction(SemanticsActions.GetTextLayoutResult) { it(layouts) }
         val result = layouts.single()
-        val box = result.getBoundingBox(result.layoutInput.text.text.indexOf(word))
+        val index = result.layoutInput.text.text.indexOf(word)
+        assertTrue("Word '$word' is missing from '$tag'", index >= 0)
+        val box = result.getBoundingBox(index)
         node.performTouchInput { click(Offset(box.center.x, box.center.y)) }
     }
     private fun screenshot(name: String) {

@@ -42,7 +42,8 @@ class SignDetailLanguageTest {
             }
         }
         compose.onNodeWithText("Další informace").performScrollTo().performClick()
-        compose.onNodeWithTag("additional-0-helper").performScrollTo().assertTextEquals(sign.helperFor(sign.mistakeCs!!, "uk")!!)
+        val firstAdditional = sign.additionalLearningTexts.first()
+        compose.onNodeWithTag("additional-0-helper").performScrollTo().assertTextEquals(sign.helperFor(firstAdditional, "uk")!!)
         tapFirstWord("additional-0-cs")
         compose.onNodeWithTag("learning-word-popup").assertIsDisplayed()
         compose.onNodeWithTag("translation-close").performClick()
