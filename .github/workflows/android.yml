@@ -37,6 +37,7 @@ jobs:
           rm core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json
           set -o pipefail
           gradle :core:domain:test :core:data:testDebugUnitTest :app:testDebugUnitTest :app:assembleDebug :app:assembleRelease --stacktrace 2>&1 | tee build/verification/build.log
+          gradle :app:testReleaseUnitTest --tests cz.autoskola.app.ui.BundledDictionaryRuntimeTest --stacktrace 2>&1 | tee build/verification/release-dictionary-tests.log
           diff -u build/verification/room-v2-committed.json core/data/schemas/cz.autoskola.data.db.AutoSkolaDatabase/2.json
       - run: python tools/validate_structure.py
       - run: python -m unittest discover -s tools -p 'test_*.py' -v
@@ -64,6 +65,7 @@ jobs:
             app/build/reports/tests
             app/build/test-results
             app/build/reports
+            app/build/outputs/premium-ui
             core/data/schemas
   room-tests:
     runs-on: ubuntu-latest
@@ -80,7 +82,9 @@ jobs:
         with:
           api-level: 29
           arch: x86_64
-          script: bash .github/scripts/run-room-tests.sh
+          script: |
+            bash .github/scripts/run-room-tests.sh
+            gradle :app:connectedDebugAndroidTest --stacktrace
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -88,3 +92,6 @@ jobs:
           path: |
             core/data/build/reports/androidTests
             core/data/build/outputs/androidTest-results
+            app/build/reports/androidTests
+            app/build/outputs/androidTest-results
+            app/build/outputs/connected_android_test_additional_output

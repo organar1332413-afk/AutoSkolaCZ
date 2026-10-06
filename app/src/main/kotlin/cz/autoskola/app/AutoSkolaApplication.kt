@@ -13,6 +13,7 @@ class AppContainer(internal val application: Application) {
     internal val db = Room.databaseBuilder(application, AutoSkolaDatabase::class.java, "autoskola.db").addMigrations(MIGRATION_1_2).build()
     val settings = SettingsStore(application)
     val study = RoomStudyRepository(db)
+    val dictionary = BundledDictionary(application, db)
     val learning = LearningRepository(db)
     val assessments = QuestionAssessmentStore(application)
     val exams = ExamRepository(db, mediaRoot = File(application.filesDir, "content"))

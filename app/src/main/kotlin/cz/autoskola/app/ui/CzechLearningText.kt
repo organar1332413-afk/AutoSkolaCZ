@@ -1,0 +1,165 @@
+package cz.autoskola.app.ui
+
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.ClickableText
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInWindow
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.unit.*
+import androidx.compose.ui.window.Popup
+import androidx.compose.ui.window.PopupPositionProvider
+import androidx.compose.ui.window.PopupProperties
+import cz.autoskola.app.R
+import cz.autoskola.design.*
+import cz.autoskola.domain.Lexeme
+import cz.autoskola.data.DictionaryLoadState
+import java.text.Normalizer
+import java.util.Locale
+import kotlin.math.roundToInt
+
+private val czechWords = Regex("[\\p{L}\\p{M}]+(?:[-’'][\\p{L}\\p{M}]+)*")
+// Codes/URLs/SI labels have no lexical meaning; leave their display untouched.
+private val nonWords = Regex("(?i:https?)://\\S+|\\b(?:A|B|C|D|E|IP|IS|IZ|IJ|P|S|V|Z)\\s*\\d+[a-z]?\\b")
+private val technicalLabels = setOf("b", "d", "e", "h", "m", "mm", "km", "n", "p", "r", "t")
+fun czechWordRanges(value: String): List<MatchResult> {
+    val excluded = nonWords.findAll(value).map { it.range }.toList()
+    return czechWords.findAll(value).filter { word ->
+        excluded.none { word.range.first <= it.last && word.range.last >= it.first } &&
+            value.getOrNull(word.range.first - 1)?.let { !it.isDigit() && it != '_' } != false &&
+            value.getOrNull(word.range.last + 1)?.let { !it.isDigit() && it != '_' } != false &&
+            normalizeLearningWord(word.value) !in technicalLabels
+    }.toList()
+}
+fun normalizeLearningWord(token: String): String = Normalizer.normalize(
+    czechWords.find(token)?.value.orEmpty(), Normalizer.Form.NFC).lowercase(Locale.forLanguageTag("cs"))
+
+/** Existing Room dictionary, including imported inflected forms; no runtime translation. */
+private fun matchingLearningWords(token: String, words: List<Lexeme>, translationTag: String?): List<Lexeme> {
+    if(translationTag == null) return emptyList()
+    val normalized = normalizeLearningWord(token)
+    if(normalized.isEmpty()) return emptyList()
+    return words.filter { word -> word.locale == translationTag &&
+        (normalizeLearningWord(word.lemma) == normalized || word.forms.any { normalizeLearningWord(it) == normalized }) }
+}
+fun findLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
+    matchingLearningWords(token, words, translationTag).firstOrNull { !it.translation.isNullOrBlank() }
+fun findLearningEntry(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
+    findLearningWord(token, words, translationTag) ?: matchingLearningWords(token, words, translationTag).firstOrNull()
+fun findSavedLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
+    words.firstOrNull { it.locale == translationTag && it.saved &&
+        (normalizeLearningWord(it.lemma) == normalizeLearningWord(token) || it.forms.any { form -> normalizeLearningWord(form) == normalizeLearningWord(token) }) }
+
+/** Callers must pass their learning/exam policy explicitly. CZ-only and strict exam deny lookup. */
+data class WordTranslationPolicy(val translationTag: String?, val enabled: Boolean) {
+    val allowsLookup get() = enabled && translationTag in setOf("ru", "uk")
+    companion object { val StrictExam = WordTranslationPolicy(null, false) }
+}
+data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
+
+/** Original text is unchanged. Hit testing uses the laid-out character under the finger. */
+@Suppress("DEPRECATION")
+@Composable fun CzechLearningText(value: String, policy: WordTranslationPolicy,
+    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier) {
+    val style = (if(prominent) MaterialTheme.typography.titleLarge else MaterialTheme.typography.bodyLarge)
+        .copy(color = MaterialTheme.colorScheme.onSurface)
+    if(!policy.allowsLookup) { Text(value, modifier, style = style); return }
+    var layout by remember(value) { mutableStateOf<TextLayoutResult?>(null) }
+    var origin by remember { mutableStateOf(androidx.compose.ui.geometry.Offset.Zero) }
+    val tokens = remember(value) { czechWordRanges(value) }
+    val context = LocalContext.current
+    fun select(token: MatchResult, offset: Int = token.range.first) {
+        val result = layout ?: return
+        val box: Rect = result.getBoundingBox(offset)
+        val position = box.translate(origin)
+        onWord(LearningWordSelection(token.value, IntRect(position.left.roundToInt(), position.top.roundToInt(),
+            position.right.roundToInt(), position.bottom.roundToInt())))
+    }
+    ClickableText(AnnotatedString(value), modifier.onGloballyPositioned { origin = it.positionInWindow() }
+        .semantics { customActions = tokens.distinctBy { it.value }.map { token ->
+            CustomAccessibilityAction(context.getString(R.string.word_translation_action, token.value)) { select(token); true }
+        } }, style = style, onTextLayout = { layout = it }, onClick = { offset ->
+        tokens.firstOrNull { offset in it.range }?.let { select(it, offset) }
+    })
+}
+
+/** Below the tapped character, or above it when the bottom of the window is close. */
+internal class LearningWordPopupPosition(private val word: IntRect, private val gap: Int) : PopupPositionProvider {
+    override fun calculatePosition(anchorBounds: IntRect, windowSize: IntSize,
+        layoutDirection: LayoutDirection, popupContentSize: IntSize): IntOffset {
+        val x = (word.left + word.width / 2 - popupContentSize.width / 2)
+            .coerceIn(gap, (windowSize.width - popupContentSize.width - gap).coerceAtLeast(gap))
+        val below = word.bottom + gap
+        val y = if(below + popupContentSize.height <= windowSize.height - gap) below else word.top - popupContentSize.height - gap
+        return IntOffset(x, y.coerceIn(gap, (windowSize.height - popupContentSize.height - gap).coerceAtLeast(gap)))
+    }
+}
+
+/** Focusable lightweight surface: outside tap and Back dismiss without navigating or scrolling. */
+@Composable fun LearningWordPopup(selection: LearningWordSelection?, policy: WordTranslationPolicy,
+    words: List<Lexeme>, save: (String) -> Unit, saveUnknown: (String) -> Unit,
+    dictionaryState: DictionaryLoadState = DictionaryLoadState.READY, dismiss: () -> Unit) {
+    if(selection == null || !policy.allowsLookup) return
+    val entry = findLearningEntry(selection.token, words, policy.translationTag)
+    val word = entry?.takeIf { !it.translation.isNullOrBlank() }
+    val saved = entry?.saved == true || findSavedLearningWord(selection.token, words, policy.translationTag) != null
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val gap = with(density) { PremiumSpace.xs.roundToPx() }
+    val position = remember(selection.boundsInWindow, gap) { LearningWordPopupPosition(selection.boundsInWindow, gap) }
+    // A Popup has its own Android composition/LocalContext. Preserve the selected UI
+    // resources in that window instead of falling back to the Activity/device locale.
+    val interfaceContext = LocalContext.current
+    val interfaceConfiguration = LocalConfiguration.current
+    BackHandler { dismiss() }
+    Popup(popupPositionProvider = position, onDismissRequest = dismiss,
+        properties = PopupProperties(focusable = true, dismissOnBackPress = true, dismissOnClickOutside = true)) {
+        CompositionLocalProvider(LocalContext provides interfaceContext, LocalConfiguration provides interfaceConfiguration) {
+            Surface(modifier = Modifier.width(minOf(PremiumSize.wordPopupMaxWidth,
+                LocalConfiguration.current.screenWidthDp.dp - PremiumSpace.lg * 2)).testTag("learning-word-popup"),
+                shape = PremiumShapes.card, color = LocalPremiumPalette.current.elevatedSurface,
+                shadowElevation = PremiumElevation.hero) {
+                Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
+                    Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                        Text(selection.token, Modifier.weight(1f).testTag("translation-token"), style = MaterialTheme.typography.titleMedium)
+                        IconButton(onClick = dismiss, modifier = Modifier.size(PremiumSize.touch).testTag("translation-close")) {
+                            Icon(Icons.Default.Close, text(R.string.close))
+                        }
+                    }
+                    Text(if(policy.translationTag == "uk") "UA" else "RU", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
+                    if(word != null) {
+                        Text(requireNotNull(word.translation), Modifier.testTag("word-translation"), style = MaterialTheme.typography.bodyMedium)
+                        word.meaning?.takeIf { it.isNotBlank() && it != word.translation }?.let {
+                            Text(it, Modifier.testTag("word-explanation"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                    } else if(dictionaryState != DictionaryLoadState.READY) {
+                        Text(text(if(dictionaryState == DictionaryLoadState.LOADING) R.string.word_dictionary_loading
+                            else R.string.word_dictionary_error), Modifier.testTag("word-dictionary-status"),
+                            style = MaterialTheme.typography.bodyMedium)
+                    } else {
+                        Text(text(R.string.word_translation_unavailable), Modifier.testTag("word-translation-unavailable"), style = MaterialTheme.typography.bodyMedium)
+                    }
+                    Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                        TextButton(onClick = { if(entry != null) save(entry.id) else saveUnknown(normalizeLearningWord(selection.token)) },
+                            enabled = !saved && dictionaryState == DictionaryLoadState.READY,
+                            modifier = Modifier.heightIn(min = PremiumSize.touch).testTag("translation-save")) {
+                            Text(if(saved) "✓ ${text(R.string.word_saved)}" else "＋ ${text(R.string.save_word)}")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

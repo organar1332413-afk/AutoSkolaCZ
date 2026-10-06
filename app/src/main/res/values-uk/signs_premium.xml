@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_filters">Фільтри</string>
+    <string name="sign_clear_search">Очистити пошук</string>
+    <string name="sign_catalog_error">Не вдалося завантажити каталог.</string>
+    <string name="sign_empty">Знаки не знайдено</string>
+    <string name="sign_empty_help">Змініть назву, код або фільтри.</string>
+    <string name="sign_reset_filters">Скинути фільтри</string>
+    <string name="sign_favorites_only">Лише обрані</string>
+    <string name="sign_state_all">Усі знаки</string>
+    <string name="sign_viewed">Переглянуто</string>
+    <string name="sign_unviewed">Не переглянуто</string>
+    <string name="sign_source_open">Відкрити офіційне джерело</string>
+    <string name="sign_source_unavailable">Не вдалося відкрити джерело.</string>
+    <string name="sign_more_information">Додаткова інформація</string>
+    <string name="sign_word_hint">Натисніть на чеське слово, щоб переглянути доступний переклад.</string>
+    <string name="sign_detail_missing">Знак не знайдено.</string>
+    <string name="sign_text_translation_unavailable">Переклад цього тексту поки недоступний.</string>
+    <string name="word_dictionary_loading">Словник завантажується…</string>
+    <string name="word_dictionary_error">Не вдалося завантажити словник. Спробуйте перезапустити застосунок.</string>
+    <string name="sign_detail_title">Дорожній знак</string>
+    <string name="sign_catalog_loading">Завантаження знаків…</string>
+    <string name="sign_meaning_title">Що означає</string>
+    <string name="sign_action_title">Що має зробити водій</string>
+    <string name="sign_memory_title">Запам’ятай</string>
+    <string name="sign_source_title">Офіційне джерело</string>
+    <string name="sign_info_zone">Зональні</string>
+    <string name="sign_info_traffic">Інформація про рух</string>
+    <string name="sign_info_direction">Покажчики напрямків</string>
+    <string name="sign_info_other">Інші інформаційні</string>
+    <string name="sign_section_expanded">Розгорнуто</string>
+    <string name="sign_section_collapsed">Згорнуто</string>
+    <string name="word_translation_action">Перекласти: %1$s</string>
+    <string name="word_translation_unavailable">Переклад поки недоступний</string>
+    <plurals name="sign_count">
+        <item quantity="one">%1$d знак</item>
+        <item quantity="few">%1$d знаки</item>
+        <item quantity="many">%1$d знаків</item>
+        <item quantity="other">%1$d знаків</item>
+    </plurals>
+</resources>

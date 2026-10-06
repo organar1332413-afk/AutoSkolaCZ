@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_filters">Фильтры</string>
+    <string name="sign_clear_search">Очистить поиск</string>
+    <string name="sign_catalog_error">Не удалось загрузить каталог.</string>
+    <string name="sign_empty">Знаки не найдены</string>
+    <string name="sign_empty_help">Измените название, код или фильтры.</string>
+    <string name="sign_reset_filters">Сбросить фильтры</string>
+    <string name="sign_favorites_only">Только избранные</string>
+    <string name="sign_state_all">Все знаки</string>
+    <string name="sign_viewed">Просмотрено</string>
+    <string name="sign_unviewed">Не просмотрено</string>
+    <string name="sign_source_open">Открыть официальный источник</string>
+    <string name="sign_source_unavailable">Не удалось открыть источник.</string>
+    <string name="sign_more_information">Дополнительная информация</string>
+    <string name="sign_word_hint">Нажмите на чешское слово, чтобы посмотреть доступный перевод.</string>
+    <string name="sign_detail_missing">Знак не найден.</string>
+    <string name="sign_text_translation_unavailable">Перевод этого текста пока недоступен.</string>
+    <string name="word_dictionary_loading">Словарь загружается…</string>
+    <string name="word_dictionary_error">Не удалось загрузить словарь. Попробуйте перезапустить приложение.</string>
+    <string name="sign_detail_title">Дорожный знак</string>
+    <string name="sign_catalog_loading">Загрузка знаков…</string>
+    <string name="sign_meaning_title">Что означает</string>
+    <string name="sign_action_title">Что должен сделать водитель</string>
+    <string name="sign_memory_title">Запомни</string>
+    <string name="sign_source_title">Официальный источник</string>
+    <string name="sign_info_zone">Зональные</string>
+    <string name="sign_info_traffic">Информация о движении</string>
+    <string name="sign_info_direction">Указатели направлений</string>
+    <string name="sign_info_other">Прочие информационные</string>
+    <string name="sign_section_expanded">Развёрнуто</string>
+    <string name="sign_section_collapsed">Свёрнуто</string>
+    <string name="word_translation_action">Перевести: %1$s</string>
+    <string name="word_translation_unavailable">Перевод пока недоступен</string>
+    <plurals name="sign_count">
+        <item quantity="one">%1$d знак</item>
+        <item quantity="few">%1$d знака</item>
+        <item quantity="many">%1$d знаков</item>
+        <item quantity="other">%1$d знаков</item>
+    </plurals>
+</resources>

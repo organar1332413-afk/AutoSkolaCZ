@@ -1,0 +1,4312 @@
+{
+  "schema_version": 1,
+  "base_head": "6c24b6b99b610c4fb06dd30015df0793e6a9cbad",
+  "review_date": "2026-10-06",
+  "changed_cards": 102,
+  "records": [
+    {
+      "sign_code": "A 11",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Восстановлено официальное сочетание неожиданности и недостаточной видимости, а не только одно из условий.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 11",
+        "confusedWith": [
+          "IP 6"
+        ],
+        "driverActionsCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+        "exceptionsCs": [],
+        "meaningCs": "Upozorňuje na přechod pro chodce, který řidič nemusí očekávat nebo včas vidět.",
+        "memoryCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+        "mistakeCs": "Nezaměňujte výstrahu A 11 s informativní značkou IP 6.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Предупреждает о пешеходном переходе, который можно не заметить заранее.",
+        "simpleCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 11",
+        "titleCs": "Přechod pro chodce",
+        "titleRu": "Пешеходный переход",
+        "titleUk": "Пішохідний перехід",
+        "uk": "Попереджає про пішохідний перехід, який можна не помітити завчасно."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 12a",
+      "previous_overall": "WRONG",
+      "adjudicated_before_fix": "WRONG",
+      "reclassification_reason": null,
+      "resolution": "Убрано ложное безусловное право пешехода; предупреждение отделено от правил перехода.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "54"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 12a",
+        "confusedWith": [
+          "A 11"
+        ],
+        "driverActionsCs": "Sledujte okraje vozovky a možné místo pro přecházení.",
+        "exceptionsCs": [],
+        "meaningCs": "Varuje před častým pohybem nebo přecházením chodců i mimo přechod.",
+        "memoryCs": "Chodci nejsou vázáni na přechod.",
+        "mistakeCs": "Nečekejte nutně vyznačený přechod.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Пешеходы могут часто выходить на дорогу и там, где нет обозначенного перехода.",
+        "simpleCs": "Sledujte okraje vozovky a možné místo pro přecházení.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 12a",
+        "titleCs": "Chodci",
+        "titleRu": "Пешеходы",
+        "titleUk": "Пішоходи",
+        "uk": "Пішоходи можуть часто виходити на дорогу й там, де немає позначеного переходу."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 21",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходное описание особого режима верно; отсутствие полного пересказа § 27 и § 46 само по себе не правовая ошибка предупреждающего знака.",
+      "resolution": "Добавлены полезные конкретные правила тоннеля короткими отдельными пояснениями.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27",
+        "46"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 21",
+        "confusedWith": [
+          "IP 5"
+        ],
+        "driverActionsCs": "Připravte se na vjezd do tunelu a sledujte jeho provozní pokyny.",
+        "exceptionsCs": [],
+        "meaningCs": "Upozorňuje na tunel, v němž platí zvláštní pravidla provozu.",
+        "memoryCs": "V tunelu sledujte také místní signalizaci.",
+        "mistakeCs": "Nejde jen o varování před tmou.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Впереди тоннель; подготовьтесь к его особым правилам и сигналам.",
+        "simpleCs": "Připravte se na vjezd do tunelu a sledujte jeho provozní pokyny.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 21",
+        "titleCs": "Tunel",
+        "titleRu": "Тоннель",
+        "titleUk": "Тунель",
+        "uk": "Попереду тунель; підготуйтеся до його особливих правил і сигналів."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 29",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходная карточка не отменяет правила переезда и не даёт ложного права; это полезное дополнение поведения, а не ошибка официального значения знака.",
+      "resolution": "Добавлены ограничения 30/50 и условия безопасного въезда; значение предупреждения и условной остановки сохранено.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "28",
+        "29"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 29",
+        "confusedWith": [
+          "A 30",
+          "A 31a"
+        ],
+        "driverActionsCs": "Sledujte světla, závory a provoz před přejezdem.",
+        "exceptionsCs": [],
+        "meaningCs": "Upozorňuje na železniční přejezd vybavený závorami.",
+        "memoryCs": "Závory jsou jedním z prvků zabezpečení.",
+        "mistakeCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Впереди железнодорожный переезд со шлагбаумом. Выполняйте сигналы и проверьте безопасность.",
+        "simpleCs": "Sledujte světla, závory a provoz před přejezdem.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 29",
+        "titleCs": "Železniční přejezd se závorami",
+        "titleRu": "Переезд со шлагбаумом",
+        "titleUk": "Переїзд зі шлагбаумом",
+        "uk": "Попереду залізничний переїзд зі шлагбаумом. Виконуйте сигнали й перевірте безпеку."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 2a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Убрана ошибочная ссылка на стрелку; короткая мнемоника указывает первый поворот.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 2a",
+        "confusedWith": [
+          "A 1a",
+          "A 2b"
+        ],
+        "driverActionsCs": "Zpomalte před první zatáčkou a počítejte s další.",
+        "exceptionsCs": [],
+        "meaningCs": "Upozorňuje na nejméně dvě nebezpečné zatáčky; první je vpravo.",
+        "memoryCs": "První oblouk určuje šipku na značce.",
+        "mistakeCs": "Nečekejte, že po první zatáčce bude rovná silnice.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Впереди несколько крутых поворотов; первый направо. Снизьте скорость ещё до первого.",
+        "simpleCs": "Zpomalte před první zatáčkou a počítejte s další.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 2a",
+        "titleCs": "Dvojitá zatáčka, první vpravo",
+        "titleRu": "Двойной поворот, первый направо",
+        "titleUk": "Подвійний поворот, перший праворуч",
+        "uk": "Попереду кілька крутих поворотів; перший праворуч. Зменште швидкість ще до першого."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 2b",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Убрана ошибочная ссылка на стрелку; короткая мнемоника указывает первый поворот.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 2b",
+        "confusedWith": [
+          "A 1b",
+          "A 2a"
+        ],
+        "driverActionsCs": "Zpomalte před první zatáčkou a počítejte s další.",
+        "exceptionsCs": [],
+        "meaningCs": "Upozorňuje na nejméně dvě nebezpečné zatáčky; první je vlevo.",
+        "memoryCs": "První oblouk určuje šipku na značce.",
+        "mistakeCs": "Nepředpokládejte, že výstraha končí první zatáčkou.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Впереди несколько крутых поворотов; первый налево. Снизьте скорость заранее.",
+        "simpleCs": "Zpomalte před první zatáčkou a počítejte s další.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 2b",
+        "titleCs": "Dvojitá zatáčka, první vlevo",
+        "titleRu": "Двойной поворот, первый налево",
+        "titleUk": "Подвійний поворот, перший ліворуч",
+        "uk": "Попереду кілька крутих поворотів; перший ліворуч. Зменште швидкість заздалегідь."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 30",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходная карточка не отменяет правила переезда и не даёт ложного права; это полезное дополнение поведения, а не ошибка официального значения знака.",
+      "resolution": "Добавлены ограничения 30/50 и условия безопасного въезда; значение предупреждения и условной остановки сохранено.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "28",
+        "29"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 30",
+        "confusedWith": [
+          "A 29",
+          "A 31a"
+        ],
+        "driverActionsCs": "Sledujte výstražné signály a ověřte, zda se neblíží vlak.",
+        "exceptionsCs": [],
+        "meaningCs": "Upozorňuje na železniční přejezd bez závor.",
+        "memoryCs": "Absence závory vyžaduje pozornost.",
+        "mistakeCs": "Bez závory neznamená bez výstražného zařízení.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Впереди переезд без шлагбаума. Следите за сигналами и приближением поезда.",
+        "simpleCs": "Sledujte výstražné signály a ověřte, zda se neblíží vlak.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 30",
+        "titleCs": "Železniční přejezd bez závor",
+        "titleRu": "Переезд без шлагбаума",
+        "titleUk": "Переїзд без шлагбаума",
+        "uk": "Попереду переїзд без шлагбаума. Стежте за сигналами та наближенням поїзда."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 31a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "RU/UA больше не называют установленное расстояние приблизительным.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 31a",
+        "confusedWith": [
+          "A 31b",
+          "A 31c"
+        ],
+        "driverActionsCs": "Všímejte si další desky a přizpůsobte jízdu před přejezdem.",
+        "exceptionsCs": [],
+        "meaningCs": "Tři šikmé pruhy označují přiblížení k přejezdu ze vzdálenosti 240 m.",
+        "memoryCs": "Tři pruhy jsou nejdále od přejezdu.",
+        "mistakeCs": "Nezaměňujte počet pruhů za počet kolejí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Три полосы: до переезда ориентировочно 240 м. Подготовьтесь к безопасному проезду.",
+        "simpleCs": "Všímejte si další desky a přizpůsobte jízdu před přejezdem.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31a",
+        "titleCs": "Návěstní deska (240 m)",
+        "titleRu": "Указатель перед переездом, 240 м",
+        "titleUk": "Вказівник перед переїздом, 240 м",
+        "uk": "Три смуги: до переїзду орієнтовно 240 м. Підготуйтеся до безпечного проїзду."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 31b",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "RU/UA больше не называют установленное расстояние приблизительным.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 31b",
+        "confusedWith": [
+          "A 31a",
+          "A 31c"
+        ],
+        "driverActionsCs": "Pokračujte s pozorností k přejezdu a jeho signálům.",
+        "exceptionsCs": [],
+        "meaningCs": "Dva šikmé pruhy označují přiblížení k přejezdu ze vzdálenosti 160 m.",
+        "memoryCs": "Dva pruhy jsou uprostřed řady.",
+        "mistakeCs": "Počet pruhů neudává počet kolejí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Две полосы: до переезда ориентировочно 160 м. Следите за сигналами.",
+        "simpleCs": "Pokračujte s pozorností k přejezdu a jeho signálům.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31b",
+        "titleCs": "Návěstní deska (160 m)",
+        "titleRu": "Указатель перед переездом, 160 м",
+        "titleUk": "Вказівник перед переїздом, 160 м",
+        "uk": "Дві смуги: до переїзду орієнтовно 160 м. Стежте за сигналами."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 31c",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "RU/UA больше не называют установленное расстояние приблизительным.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 31c",
+        "confusedWith": [
+          "A 31a",
+          "A 31b"
+        ],
+        "driverActionsCs": "Buďte připraveni reagovat na zabezpečení přejezdu.",
+        "exceptionsCs": [],
+        "meaningCs": "Jeden šikmý pruh označuje přiblížení k přejezdu ze vzdálenosti 80 m.",
+        "memoryCs": "Jeden pruh je nejblíže přejezdu.",
+        "mistakeCs": "Počet pruhů neudává počet kolejí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Одна полоса: до переезда ориентировочно 80 м. Будьте готовы к остановке при соответствующем сигнале.",
+        "simpleCs": "Buďte připraveni reagovat na zabezpečení přejezdu.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 31c",
+        "titleCs": "Návěstní deska (80 m)",
+        "titleRu": "Указатель перед переездом, 80 м",
+        "titleUk": "Вказівник перед переїздом, 80 м",
+        "uk": "Одна смуга: до переїзду орієнтовно 80 м. Будьте готові зупинитися за відповідного сигналу."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 32a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходная карточка не отменяет правила переезда и не даёт ложного права; это полезное дополнение поведения, а не ошибка официального значения знака.",
+      "resolution": "Добавлены ограничения 30/50 и условия безопасного въезда; значение предупреждения и условной остановки сохранено.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "28",
+        "29"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 32a",
+        "confusedWith": [
+          "A 32b",
+          "A 31c"
+        ],
+        "driverActionsCs": "Před křížem zastavte, vyžaduje-li to pravidlo nebo signál.",
+        "exceptionsCs": [],
+        "meaningCs": "Výstražný kříž označuje jednokolejný železniční přejezd.",
+        "memoryCs": "Jeden pár ramen – jedna kolej.",
+        "mistakeCs": "Nejde o návěstní desku udávající vzdálenost.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Крест обозначает переезд с одним путём. Если остановка обязательна, остановитесь перед ним.",
+        "simpleCs": "Před křížem zastavte, vyžaduje-li to pravidlo nebo signál.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 32a",
+        "titleCs": "Výstražný kříž pro železniční přejezd jednokolejný",
+        "titleRu": "Однопутный железнодорожный переезд",
+        "titleUk": "Одноколійний залізничний переїзд",
+        "uk": "Хрест позначає переїзд з однією колією. Якщо зупинка обов’язкова, зупиніться перед ним."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "A 32b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходная карточка не отменяет правила переезда и не даёт ложного права; это полезное дополнение поведения, а не ошибка официального значения знака.",
+      "resolution": "Добавлены ограничения 30/50 и условия безопасного въезда; значение предупреждения и условной остановки сохранено.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "28",
+        "29"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "A 32b",
+        "confusedWith": [
+          "A 32a"
+        ],
+        "driverActionsCs": "Před křížem zastavte, je-li zastavení přikázáno; sledujte všechny koleje.",
+        "exceptionsCs": [],
+        "meaningCs": "Výstražný kříž označuje vícekolejný přejezd; vlaky mohou jet z obou směrů.",
+        "memoryCs": "Více kolejí znamená více možných vlaků.",
+        "mistakeCs": "Nepředpokládejte, že po jednom vlaku je přejezd už volný.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Крест обозначает переезд с несколькими путями. Проверяйте все пути; при обязательной остановке остановитесь перед знаком.",
+        "simpleCs": "Před křížem zastavte, je-li zastavení přikázáno; sledujte všechny koleje.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 1 k vyhlášce č. 294/2015 Sb., A 32b",
+        "titleCs": "Výstražný kříž pro železniční přejezd vícekolejný",
+        "titleRu": "Многопутный железнодорожный переезд",
+        "titleUk": "Багатоколійний залізничний переїзд",
+        "uk": "Хрест позначає переїзд із кількома коліями. Перевіряйте всі колії; за обов’язкової зупинки зупиніться перед знаком."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "P 4",
+      "previous_overall": "OK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Исправлена пропущенная первым аудитом двусмысленность: преимущество нужно уступить, знак его водителю не даёт.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "22"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "P 4",
+        "confusedWith": [
+          "P 6"
+        ],
+        "driverActionsCs": "Zpomalte a dejte přednost; zastavte, je-li to pro bezpečný průjezd nutné.",
+        "exceptionsCs": [
+          "Zastavení není automaticky povinné; rozhoduje možnost bezpečně dát přednost."
+        ],
+        "meaningCs": "Označuje vedlejší komunikaci nebo místo, kde je nutné dát přednost.",
+        "memoryCs": "Trojúhelník: přednost ano, povinné zastavení ne.",
+        "mistakeCs": "Nezaměňujte povinnost dát přednost s povinností vždy zastavit.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Уступите дорогу имеющим преимущество. Остановка нужна, если без неё нельзя безопасно уступить.",
+        "simpleCs": "Zpomalte a dejte přednost; zastavte, je-li to pro bezpečný průjezd nutné.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 4",
+        "titleCs": "Dej přednost v jízdě!",
+        "titleRu": "Уступите дорогу",
+        "titleUk": "Дайте дорогу",
+        "uk": "Дайте дорогу тим, хто має перевагу. Зупиніться, якщо без цього не можна безпечно поступитися."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "P 6",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Уточнено место остановки у переезда; короткая остановка и обзор не смешаны.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "28"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "P 6",
+        "confusedWith": [
+          "P 4"
+        ],
+        "driverActionsCs": "Zastavte na místě s rozhledem; teprve potom pokračujte, když můžete dát přednost.",
+        "exceptionsCs": [
+          "Před přejezdem lze použít v kombinaci s výstražným křížem."
+        ],
+        "meaningCs": "Přikazuje zastavit s náležitým rozhledem a následně dát přednost.",
+        "memoryCs": "STOP znamená zastavit, pak dát přednost.",
+        "mistakeCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Полностью остановитесь там, откуда хорошо видно перекрёсток, затем уступите дорогу.",
+        "simpleCs": "Zastavte na místě s rozhledem; teprve potom pokračujte, když můžete dát přednost.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 6",
+        "titleCs": "Stůj, dej přednost v jízdě!",
+        "titleRu": "Стоп, уступите дорогу",
+        "titleUk": "Стоп, дайте дорогу",
+        "uk": "Повністю зупиніться там, звідки добре видно перехрестя, потім дайте дорогу."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "P 8",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлен цвет: стрелка белая на синем поле, а не синяя.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "P 8",
+        "confusedWith": [
+          "P 7"
+        ],
+        "driverActionsCs": "Přesto sledujte, zda lze úsek skutečně projet bezpečně.",
+        "exceptionsCs": [],
+        "meaningCs": "Informuje, že protijedoucí může do úzkého úseku vjet jen při bezpečném vyhnutí.",
+        "memoryCs": "Modrá šipka je na vaší straně.",
+        "mistakeCs": "Přednost neopravňuje k nebezpečnému vjezdu do obsazeného úseku.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "У вас преимущество на узком участке, но проезжайте только тогда, когда это безопасно.",
+        "simpleCs": "Přesto sledujte, zda lze úsek skutečně projet bezpečně.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 2 k vyhlášce č. 294/2015 Sb., P 8",
+        "titleCs": "Přednost před protijedoucími vozidly",
+        "titleRu": "Преимущество перед встречным транспортом",
+        "titleUk": "Перевага перед зустрічним транспортом",
+        "uk": "У вас перевага на вузькій ділянці, але проїжджайте лише тоді, коли це безпечно."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 1",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "RU/UA теперь передают запрет въезда, а не всякого движения за знаком.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 1",
+        "confusedWith": [
+          "B 2"
+        ],
+        "driverActionsCs": "Nevjíždějte za značku ani z jedné strany.",
+        "exceptionsCs": [],
+        "meaningCs": "Zakazuje vjezd všem vozidlům z obou směrů.",
+        "memoryCs": "Bílý kruh s červeným okrajem uzavírá oba směry.",
+        "mistakeCs": "Nepovažujte ji za zákaz pouze z jedné strany jednosměrné ulice.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "За знаком движение любых транспортных средств запрещено в обоих направлениях.",
+        "simpleCs": "Nevjíždějte za značku ani z jedné strany.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 1",
+        "titleCs": "Zákaz vjezdu všech vozidel v obou směrech",
+        "titleRu": "Движение всех транспортных средств запрещено",
+        "titleUk": "Рух усіх транспортних засобів заборонено",
+        "uk": "За знаком рух будь-яких транспортних засобів заборонено в обох напрямках."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 13",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Основная масса каждого ТС отделена от суммарной массы состава при Jediné vozidlo.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "meaningCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 13",
+        "confusedWith": [
+          "B 14",
+          "B 4"
+        ],
+        "driverActionsCs": "Srovnejte skutečnou hmotnost s údajem; u soupravy posuďte pravidlo pro jednotlivá vozidla a tabulku.",
+        "exceptionsCs": [
+          "Tabulka „Jediné vozidlo ... t“ může stanovit zvláštní mez pro jednotlivé vozidlo."
+        ],
+        "meaningCs": "Zakazuje vjezd vozidlu, jehož okamžitá hmotnost překračuje uvedenou mez.",
+        "memoryCs": "Tady se váží skutečný stav.",
+        "mistakeCs": "Nezaměňujte okamžitou hmotnost za největší povolenou hmotnost.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Сравните текущую фактическую массу с числом на знаке. Для автопоезда и таблички «одно транспортное средство» действуют особые условия.",
+        "simpleCs": "Srovnejte skutečnou hmotnost s údajem; u soupravy posuďte pravidlo pro jednotlivá vozidla a tabulku.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 13",
+        "titleCs": "Zákaz vjezdu vozidel, jejichž okamžitá hmotnost přesahuje vyznačenou mez",
+        "titleRu": "Ограничение фактической массы",
+        "titleUk": "Обмеження фактичної маси",
+        "uk": "Порівняйте поточну фактичну масу з числом на знаку. Для автопоїзда й таблички «один транспортний засіб» діють особливі умови."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 17",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлено согласование украинского перевода мнемоники.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 17",
+        "confusedWith": [
+          "B 15",
+          "B 16"
+        ],
+        "driverActionsCs": "Srovnejte skutečnou délku celé soupravy s uvedeným číslem.",
+        "exceptionsCs": [],
+        "meaningCs": "Zakazuje vjezd delším vozidlům nebo soupravám než vyznačená mez, včetně nákladu.",
+        "memoryCs": "Celá souprava se počítá.",
+        "mistakeCs": "Neposuzujte jen samotný tahač bez přípojného vozidla.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Учитывайте фактическую длину всей сцепки вместе с грузом.",
+        "simpleCs": "Srovnejte skutečnou délku celé soupravy s uvedeným číslem.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 17",
+        "titleCs": "Zákaz vjezdu vozidel nebo souprav, jejichž délka přesahuje vyznačenou mez",
+        "titleRu": "Ограничение длины",
+        "titleUk": "Обмеження довжини",
+        "uk": "Враховуйте фактичну довжину всього автопоїзда разом із вантажем."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 22a",
+      "previous_overall": "WRONG",
+      "adjudicated_before_fix": "WRONG",
+      "reclassification_reason": null,
+      "resolution": "Уточнена группа тракторов и восстановлены запрет обгона моторного ТС слева и обязательная правая полоса.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 22a",
+        "confusedWith": [
+          "B 21a",
+          "B 22b"
+        ],
+        "driverActionsCs": "Jste-li v dotčeném vozidle, držte se pravého pruhu s výjimkou nutného objíždění.",
+        "exceptionsCs": [
+          "Jiný než pravý pruh lze použít, je-li to nutné k objíždění."
+        ],
+        "meaningCs": "Pro stanovené těžké nákladní automobily a traktory omezuje předjíždění i užití jiného než pravého pruhu.",
+        "memoryCs": "U těžkých vozidel sledujte i jízdní pruh.",
+        "mistakeCs": "Neomezujte význam značky jen na samotný manévr předjíždění.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Для указанных грузовиков и тракторов свыше 3,5 т обгон слева запрещён; на многополосной дороге обычно нужен правый ряд.",
+        "simpleCs": "Jste-li v dotčeném vozidle, držte se pravého pruhu s výjimkou nutného objíždění.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 22a",
+        "titleCs": "Zákaz předjíždění pro nákladní automobily",
+        "titleRu": "Обгон грузовым автомобилям запрещён",
+        "titleUk": "Обгін вантажним автомобілям заборонено",
+        "uk": "Для зазначених вантажівок і тракторів понад 3,5 т обгін ліворуч заборонено; на багатосмуговій дорозі зазвичай потрібна права смуга."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 24a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Уточнена область запрета, включая место вне дороги.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 24a",
+        "confusedWith": [
+          "B 24b",
+          "C 2b"
+        ],
+        "driverActionsCs": "Na nejbližším místě neodbočujte vpravo.",
+        "exceptionsCs": [],
+        "meaningCs": "Zakazuje nejbližší odbočení vpravo, včetně odbočení do účelové komunikace nebo mimo silnici.",
+        "memoryCs": "Šipka vpravo je přeškrtnutá.",
+        "mistakeCs": "Zákaz se může týkat i vjezdu do připojené účelové komunikace.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Правый поворот на ближайшем перекрёстке или съезде запрещён.",
+        "simpleCs": "Na nejbližším místě neodbočujte vpravo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 24a",
+        "titleCs": "Zákaz odbočování vpravo",
+        "titleRu": "Поворот направо запрещён",
+        "titleUk": "Поворот праворуч заборонено",
+        "uk": "Поворот праворуч на найближчому перехресті або з’їзді заборонено."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 24b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Уточнена область запрета, включая место вне дороги.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 24b",
+        "confusedWith": [
+          "B 24a",
+          "B 25"
+        ],
+        "driverActionsCs": "Na nejbližším místě neodbočujte vlevo.",
+        "exceptionsCs": [],
+        "meaningCs": "Zakazuje nejbližší odbočení vlevo, včetně připojené účelové komunikace.",
+        "memoryCs": "Šipka vlevo je přeškrtnutá.",
+        "mistakeCs": "Nezaměňujte zákaz odbočení vlevo se zákazem otočení.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Левый поворот на ближайшем перекрёстке или съезде запрещён.",
+        "simpleCs": "Na nejbližším místě neodbočujte vlevo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 24b",
+        "titleCs": "Zákaz odbočování vlevo",
+        "titleRu": "Поворот налево запрещён",
+        "titleUk": "Поворот ліворуч заборонено",
+        "uk": "Поворот ліворуч на найближчому перехресті або з’їзді заборонено."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 4",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Заменена устаревшая трактовка MD актуальной группой ТС из приложения; уточнены массы состава.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "reviewStatus",
+        "ru",
+        "sourceIds",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 4",
+        "confusedWith": [
+          "B 6"
+        ],
+        "driverActionsCs": "Před vjezdem ověřte, zda zákaz platí pro druh vašeho vozidla a případnou dodatkovou tabulku.",
+        "exceptionsCs": [
+          "Nevztahuje se na obytné automobily; údaj o hmotnosti na značce či tabulce omezuje rozsah."
+        ],
+        "meaningCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
+        "memoryCs": "B 4 se liší od B 6 (zákaz vjezdu traktorů).",
+        "mistakeCs": "Nezaměňujte B 4 a B 6.",
+        "questionLinks": [],
+        "reviewStatus": "MINISTRY_GUIDANCE_VERIFIED",
+        "ru": "Запрещает въезд грузовых автомобилей; уточнение касается и транспорта, конструктивно производного от грузовиков. Учитывайте дополнительную табличку.",
+        "simpleCs": "Před vjezdem ověřte, zda zákaz platí pro druh vašeho vozidla a případnou dodatkovou tabulku.",
+        "sourceIds": [
+          "md-sign-changes-2025",
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 4",
+        "titleCs": "Zákaz vjezdu nákladních automobilů",
+        "titleRu": "Въезд грузовых автомобилей запрещён",
+        "titleUk": "В’їзд вантажних автомобілів заборонено",
+        "uk": "Забороняє в’їзд вантажних автомобілів; уточнення стосується й транспорту, конструктивно похідного від вантажівок. Враховуйте додаткову табличку."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 6",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Конкретно перечислены запрещённые виды ТС; синхронизированы RU/UA.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 6",
+        "confusedWith": [
+          "B 4"
+        ],
+        "driverActionsCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
+        "exceptionsCs": [],
+        "meaningCs": "Zakazuje vjezd traktorům včetně některých pracovních strojů a motorových ručních vozíků.",
+        "memoryCs": "Pracovní stroje patří do rozsahu této značky.",
+        "mistakeCs": "Nepovažujte zákaz za omezení pouze zemědělských traktorů.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Запрещён въезд тракторов, в том числе одноосных, а также указанных рабочих машин.",
+        "simpleCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 6",
+        "titleCs": "Zákaz vjezdu traktorů",
+        "titleRu": "Въезд тракторов запрещён",
+        "titleUk": "В’їзд тракторів заборонено",
+        "uk": "Заборонено в’їзд тракторів, зокрема одноосьових, а також зазначених робочих машин."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "B 9",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "В RU/UA восстановлен запрет въезда вместо общего запрета движения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "B 9",
+        "confusedWith": [
+          "B 31"
+        ],
+        "driverActionsCs": "S potahovým vozidlem za značku nevjíždějte.",
+        "exceptionsCs": [],
+        "meaningCs": "Zakazuje vjezd potahovým vozidlům.",
+        "memoryCs": "Povoz není jezdec na zvířeti.",
+        "mistakeCs": "Nezaměňujte potahové vozidlo s jezdcem na zvířeti.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Движение повозок с тягловыми животными запрещено.",
+        "simpleCs": "S potahovým vozidlem za značku nevjíždějte.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 3 k vyhlášce č. 294/2015 Sb., B 9",
+        "titleCs": "Zákaz vjezdu potahových vozidel",
+        "titleRu": "Въезд гужевых повозок запрещён",
+        "titleUk": "В’їзд гужових возів заборонено",
+        "uk": "Рух возів із тягловими тваринами заборонено."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 10a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Сохранены собственные полосы и конкретные законные случаи выхода в соседнюю.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "53",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 10a",
+        "confusedWith": [
+          "C 9a"
+        ],
+        "driverActionsCs": "Každá skupina užívá svůj vyznačený pruh; sledujte pořadí symbolů.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje stezku s oddělenými pruhy pro chodce a cyklisty.",
+        "memoryCs": "Dělící čára znamená oddělené pruhy.",
+        "mistakeCs": "Nezaměňujte ji se společnou stezkou bez rozdělení.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Пешеходам и велосипедистам выделены разные полосы; их расположение показано на знаке.",
+        "simpleCs": "Každá skupina užívá svůj vyznačený pruh; sledujte pořadí symbolů.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 10a",
+        "titleCs": "Stezka pro chodce a cyklisty dělená",
+        "titleRu": "Разделённая дорожка для пешеходов и велосипедистов",
+        "titleUk": "Розділена доріжка для пішоходів і велосипедистів",
+        "uk": "Пішоходам і велосипедистам виділено різні смуги; їх розташування показане на знаку."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 11a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Указаны обязательное использование всадником и запрет другим участникам.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "60"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 11a",
+        "confusedWith": [
+          "C 8a"
+        ],
+        "driverActionsCs": "Respektujte vyznačené určení stezky.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje stezku určenou pro jezdce na zvířeti.",
+        "memoryCs": "Symbol ukazuje jezdce na zvířeti.",
+        "mistakeCs": "Jezdec na zvířeti není totéž jako potahové vozidlo.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Дорожка предназначена для верховой езды; не путайте её с дорожкой для велосипедов.",
+        "simpleCs": "Respektujte vyznačené určení stezky.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 11a",
+        "titleCs": "Stezka pro jezdce na zvířeti",
+        "titleRu": "Дорожка для всадников",
+        "titleUk": "Доріжка для вершників",
+        "uk": "Доріжка призначена для верхової їзди; не плутайте її з велосипедною доріжкою."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 12a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлено запрещение не только помех, но и опасности при разрешённом въезде других ТС.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 12a",
+        "confusedWith": [
+          "C 12b"
+        ],
+        "driverActionsCs": "Zkontrolujte symbol vozidla a při přejezdu pruhu nikoho neomezujte.",
+        "exceptionsCs": [
+          "Jiná vozidla smějí do pruhu při objíždění, odbočení, otočení či vjezdu/výjezdu, neomezí-li určené vozidlo."
+        ],
+        "meaningCs": "Přikazuje vyznačenému druhu vozidla užít označený jízdní pruh.",
+        "memoryCs": "Symbol určuje, komu je pruh přikázán.",
+        "mistakeCs": "Nezaměňujte přikázaný pruh s běžným informačním pruhem.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Обозначенный вид транспорта обязан пользоваться этой полосой; другим въезд допускается лишь при определённых манёврах без помех.",
+        "simpleCs": "Zkontrolujte symbol vozidla a při přejezdu pruhu nikoho neomezujte.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 12a",
+        "titleCs": "Přikázaný jízdní pruh",
+        "titleRu": "Обязательная полоса движения",
+        "titleUk": "Обов’язкова смуга руху",
+        "uk": "Позначений вид транспорту зобов’язаний користуватися цією смугою; іншим в’їзд допускається лише за визначених маневрів без перешкод."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 13a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Конкретизированы огни недостаточной видимости, короткая память исключает одни ДХО.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "32"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 13a",
+        "confusedWith": [
+          "C 13b"
+        ],
+        "driverActionsCs": "Zapněte předepsané osvětlení pro zhoršenou viditelnost.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje rozsvítit světla stanovená pro jízdu za snížené viditelnosti.",
+        "memoryCs": "Použijte osvětlení pro sníženou viditelnost.",
+        "mistakeCs": "Nezaměňujte tento příkaz s běžným denním svícením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Включите освещение, предусмотренное для движения при недостаточной видимости.",
+        "simpleCs": "Zapněte předepsané osvětlení pro zhoršenou viditelnost.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 13a",
+        "titleCs": "Rozsviť světla",
+        "titleRu": "Включите свет",
+        "titleUk": "Увімкніть світло",
+        "uk": "Увімкніть освітлення, передбачене для руху за недостатньої видимості."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 13b",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Уточнено, что конец местного предписания не отменяет свет при движении даже днём.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "32"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 13b",
+        "confusedWith": [
+          "C 13a"
+        ],
+        "driverActionsCs": "Dál sviťte, ukládají-li to obecná pravidla.",
+        "exceptionsCs": [],
+        "meaningCs": "Ukončuje místní příkaz C 13a, nikoli obecné povinnosti osvětlit vozidlo.",
+        "memoryCs": "Obecné osvětlení zůstává podle situace.",
+        "mistakeCs": "Nepovažujte konec místní značky za povolení zhasnout za špatné viditelnosti.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Местное требование закончилось, но общая обязанность включать свет может сохраняться.",
+        "simpleCs": "Dál sviťte, ukládají-li to obecná pravidla.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 13b",
+        "titleCs": "Rozsviť světla - konec",
+        "titleRu": "Конец требования включённого света",
+        "titleUk": "Кінець вимоги ввімкненого світла",
+        "uk": "Місцева вимога завершилася, але загальний обов’язок вмикати світло може залишатися."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 15a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Действие сокращено до зимних шин; условия по массе, осям, протектору и запаске вынесены отдельно.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "40a"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 15a",
+        "confusedWith": [
+          "C 5a",
+          "C 15b"
+        ],
+        "driverActionsCs": "Před pokračováním ověřte zákonné podmínky zimní výbavy; tabulka může měnit dobu platnosti.",
+        "exceptionsCs": [
+          "Dodatková tabulka může stanovit odlišnou dobu platnosti."
+        ],
+        "meaningCs": "Přikazuje vozidlům kategorií M a N splnit podmínky zimního provozu bez ohledu na datum či počasí.",
+        "memoryCs": "Zimní výbava není jen řetěz.",
+        "mistakeCs": "Nezaměňujte ji s povinností nasadit sněhové řetězy C 5a.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Для транспорта категорий M и N зимнее оснащение обязательно независимо от даты и текущей погоды; табличка может изменить период.",
+        "simpleCs": "Před pokračováním ověřte zákonné podmínky zimní výbavy; tabulka může měnit dobu platnosti.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 15a",
+        "titleCs": "Zimní výbava",
+        "titleRu": "Зимнее оснащение обязательно",
+        "titleUk": "Зимове спорядження обов’язкове",
+        "uk": "Для транспорту категорій M і N зимове спорядження обов’язкове незалежно від дати й поточної погоди; табличка може змінити період."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 2a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлены цвет и краткая однозначная мнемоника официального изображения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 2a",
+        "confusedWith": [
+          "B 24a",
+          "B 24b"
+        ],
+        "driverActionsCs": "Na nejbližším místě zvolte jen vyobrazený směr: přímo.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje pokračovat jen ve směru přímo.",
+        "memoryCs": "Modré šipky ukazují dovolené směry.",
+        "mistakeCs": "Nezaměňujte přikázaný směr s pouhým doporučením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разрешено продолжить только прямо; другие направления этим знаком исключены.",
+        "simpleCs": "Na nejbližším místě zvolte jen vyobrazený směr: přímo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2a",
+        "titleCs": "Přikázaný směr jízdy přímo",
+        "titleRu": "Обязательное направление: прямо",
+        "titleUk": "Обов’язковий напрямок: прямо",
+        "uk": "Дозволено продовжити лише прямо; інші напрямки цим знаком виключені."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 2b",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлены цвет и краткая однозначная мнемоника официального изображения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 2b",
+        "confusedWith": [
+          "B 24a",
+          "B 24b"
+        ],
+        "driverActionsCs": "Na nejbližším místě zvolte jen vyobrazený směr: vpravo.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje pokračovat jen ve směru vpravo.",
+        "memoryCs": "Modré šipky ukazují dovolené směry.",
+        "mistakeCs": "Nezaměňujte přikázaný směr s pouhým doporučením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разрешено продолжить только направо; другие направления этим знаком исключены.",
+        "simpleCs": "Na nejbližším místě zvolte jen vyobrazený směr: vpravo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2b",
+        "titleCs": "Přikázaný směr jízdy vpravo",
+        "titleRu": "Обязательное направление: направо",
+        "titleUk": "Обов’язковий напрямок: праворуч",
+        "uk": "Дозволено продовжити лише праворуч; інші напрямки цим знаком виключені."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 2c",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлены цвет и краткая однозначная мнемоника официального изображения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 2c",
+        "confusedWith": [
+          "B 24a",
+          "B 24b"
+        ],
+        "driverActionsCs": "Na nejbližším místě zvolte jen vyobrazený směr: vlevo.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje pokračovat jen ve směru vlevo.",
+        "memoryCs": "Modré šipky ukazují dovolené směry.",
+        "mistakeCs": "Nezaměňujte přikázaný směr s pouhým doporučením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разрешено продолжить только налево; другие направления этим знаком исключены.",
+        "simpleCs": "Na nejbližším místě zvolte jen vyobrazený směr: vlevo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2c",
+        "titleCs": "Přikázaný směr jízdy vlevo",
+        "titleRu": "Обязательное направление: налево",
+        "titleUk": "Обов’язковий напрямок: ліворуч",
+        "uk": "Дозволено продовжити лише ліворуч; інші напрямки цим знаком виключені."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 2d",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлены цвет и краткая однозначная мнемоника официального изображения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 2d",
+        "confusedWith": [
+          "B 24a",
+          "B 24b"
+        ],
+        "driverActionsCs": "Na nejbližším místě zvolte jen vyobrazený směr: přímo nebo vpravo.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje pokračovat jen ve směru přímo nebo vpravo.",
+        "memoryCs": "Modré šipky ukazují dovolené směry.",
+        "mistakeCs": "Nezaměňujte přikázaný směr s pouhým doporučením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разрешено продолжить только прямо или направо; другие направления этим знаком исключены.",
+        "simpleCs": "Na nejbližším místě zvolte jen vyobrazený směr: přímo nebo vpravo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2d",
+        "titleCs": "Přikázaný směr jízdy přímo a vpravo",
+        "titleRu": "Обязательное направление: прямо или направо",
+        "titleUk": "Обов’язковий напрямок: прямо або праворуч",
+        "uk": "Дозволено продовжити лише прямо або праворуч; інші напрямки цим знаком виключені."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 2e",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлены цвет и краткая однозначная мнемоника официального изображения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 2e",
+        "confusedWith": [
+          "B 24a",
+          "B 24b"
+        ],
+        "driverActionsCs": "Na nejbližším místě zvolte jen vyobrazený směr: přímo nebo vlevo.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje pokračovat jen ve směru přímo nebo vlevo.",
+        "memoryCs": "Modré šipky ukazují dovolené směry.",
+        "mistakeCs": "Nezaměňujte přikázaný směr s pouhým doporučením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разрешено продолжить только прямо или налево; другие направления этим знаком исключены.",
+        "simpleCs": "Na nejbližším místě zvolte jen vyobrazený směr: přímo nebo vlevo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2e",
+        "titleCs": "Přikázaný směr jízdy přímo a vlevo",
+        "titleRu": "Обязательное направление: прямо или налево",
+        "titleUk": "Обов’язковий напрямок: прямо або ліворуч",
+        "uk": "Дозволено продовжити лише прямо або ліворуч; інші напрямки цим знаком виключені."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 2f",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Исправлены цвет и краткая однозначная мнемоника официального изображения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "memoryCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 2f",
+        "confusedWith": [
+          "B 24a",
+          "B 24b"
+        ],
+        "driverActionsCs": "Na nejbližším místě zvolte jen vyobrazený směr: vpravo nebo vlevo.",
+        "exceptionsCs": [],
+        "meaningCs": "Přikazuje pokračovat jen ve směru vpravo nebo vlevo.",
+        "memoryCs": "Modré šipky ukazují dovolené směry.",
+        "mistakeCs": "Nezaměňujte přikázaný směr s pouhým doporučením.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разрешено продолжить только направо или налево; другие направления этим знаком исключены.",
+        "simpleCs": "Na nejbližším místě zvolte jen vyobrazený směr: vpravo nebo vlevo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 2f",
+        "titleCs": "Přikázaný směr jízdy vpravo a vlevo",
+        "titleRu": "Обязательное направление: направо или налево",
+        "titleUk": "Обов’язковий напрямок: праворуч або ліворуч",
+        "uk": "Дозволено продовжити лише праворуч або ліворуч; інші напрямки цим знаком виключені."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 5a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Добавлен практический максимум скорости при цепях, без потери исключения для шипованных шин.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "18"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 5a",
+        "confusedWith": [
+          "C 5b",
+          "C 15a"
+        ],
+        "driverActionsCs": "Před pokračováním nasaďte předepsané řetězy, pokud se na vás příkaz vztahuje.",
+        "exceptionsCs": [
+          "Nevztahuje se na vozidla s pneumatikami s protiskluzovými hroty."
+        ],
+        "meaningCs": "Přikazuje nasadit sněhové řetězy na nejméně dvě hnací kola motorového vozidla se třemi a více koly.",
+        "memoryCs": "Řetězy patří na hnací kola.",
+        "mistakeCs": "Povinnost nezaměňujte za pouhé doporučení zimních pneumatik.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Для машины с тремя и более колёсами нужны цепи минимум на двух ведущих колёсах; проверьте указанное исключение.",
+        "simpleCs": "Před pokračováním nasaďte předepsané řetězy, pokud se na vás příkaz vztahuje.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 5a",
+        "titleCs": "Sněhové řetězy",
+        "titleRu": "Снежные цепи обязательны",
+        "titleUk": "Ланцюги протиковзання обов’язкові",
+        "uk": "Для авто з трьома й більше колесами потрібні ланцюги мінімум на двох ведучих колесах; перевірте зазначений виняток."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 7a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Вместо общего совета названы запрет пользования автомобилем и правила пешеходов.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "53",
+        "2"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 7a",
+        "confusedWith": [
+          "C 8a",
+          "C 9a"
+        ],
+        "driverActionsCs": "Jako řidič vozidla respektujte určení stezky pro chodce.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje stezku určenou pro chodce.",
+        "memoryCs": "Samotný chodec znamená pěší stezku.",
+        "mistakeCs": "Symbol chodce není společná stezka pro chodce a cyklisty.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Дорожка предназначена для пешеходов; не считайте её велосипедной дорожкой.",
+        "simpleCs": "Jako řidič vozidla respektujte určení stezky pro chodce.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 7a",
+        "titleCs": "Stezka pro chodce",
+        "titleRu": "Пешеходная дорожка",
+        "titleUk": "Пішохідна доріжка",
+        "uk": "Доріжка призначена для пішоходів; не вважайте її велосипедною доріжкою."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 8a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлено обязательное использование дорожки в данном месте/направлении с исключением безопасности.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 8a",
+        "confusedWith": [
+          "C 7a",
+          "C 9a"
+        ],
+        "driverActionsCs": "Na stezce sledujte její určený provoz a ostatní značení.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje stezku určenou pro cyklisty.",
+        "memoryCs": "Samotné kolo znamená cyklistickou stezku.",
+        "mistakeCs": "Nezaměňujte ji se společnou stezkou C 9a.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Это дорожка для велосипедистов, а не общая пешеходная дорожка.",
+        "simpleCs": "Na stezce sledujte její určený provoz a ostatní značení.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 8a",
+        "titleCs": "Stezka pro cyklisty",
+        "titleRu": "Велосипедная дорожка",
+        "titleUk": "Велосипедна доріжка",
+        "uk": "Це доріжка для велосипедистів, а не спільна пішохідна доріжка."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "C 9a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлен взаимный запрет создавать опасность, а не только совет учитывать другую группу.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "53",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "C 9a",
+        "confusedWith": [
+          "C 10a"
+        ],
+        "driverActionsCs": "Chodci a cyklisté sdílejí plochu; počítejte s druhou skupinou.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje společnou stezku bez oddělených pruhů.",
+        "memoryCs": "Bez dělicí čáry se prostor sdílí.",
+        "mistakeCs": "Nezaměňujte společnou stezku s oddělenými pruhy.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Пешеходы и велосипедисты используют одно пространство без разделительной полосы.",
+        "simpleCs": "Chodci a cyklisté sdílejí plochu; počítejte s druhou skupinou.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 4 k vyhlášce č. 294/2015 Sb., C 9a",
+        "titleCs": "Stezka pro chodce a cyklisty společná",
+        "titleRu": "Общая дорожка для пешеходов и велосипедистов",
+        "titleUk": "Спільна доріжка для пішоходів і велосипедистів",
+        "uk": "Пішоходи й велосипедисти користуються одним простором без роздільної смуги."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 10a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлены 20 км/ч, безусловное преимущество трамвая и различия парковки.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "39b"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 10a",
+        "confusedWith": [
+          "IZ 5a",
+          "IZ 10b"
+        ],
+        "driverActionsCs": "Při vjezdu respektujte sdílený prostor a jeho pravidla.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje sdílenou zónu se zvláštními pravidly provozu.",
+        "memoryCs": "Sdílení prostoru má vlastní zónovou značku.",
+        "mistakeCs": "Nezaměňujte sdílenou zónu s obytnou zónou.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Начинается зона совместного движения с особыми правилами; это отдельный тип зоны.",
+        "simpleCs": "Při vjezdu respektujte sdílený prostor a jeho pravidla.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 10a",
+        "titleCs": "Sdílená zóna",
+        "titleRu": "Общая зона движения",
+        "titleUk": "Зона спільного руху",
+        "uk": "Починається зона спільного руху з особливими правилами; це окремий тип зони."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 1a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Добавлены условия допуска и основные запреты; не создано ложное требование постоянной скорости 80.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "35",
+        "36",
+        "38"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 1a",
+        "confusedWith": [
+          "IZ 2a",
+          "IZ 1b"
+        ],
+        "driverActionsCs": "Před vjezdem ověřte oprávnění vozidla a případný poplatek nebo tabulku.",
+        "exceptionsCs": [
+          "Tabulka může změnit informaci o zpoplatnění."
+        ],
+        "meaningCs": "Označuje začátek dálnice se zvláštními pravidly provozu.",
+        "memoryCs": "Zelená dálniční značka otevírá zvláštní režim.",
+        "mistakeCs": "Nezaměňujte dálnici se silnicí pro motorová vozidla.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Въезд на автомагистраль: действуют особые правила; проверьте платный режим и табличку.",
+        "simpleCs": "Před vjezdem ověřte oprávnění vozidla a případný poplatek nebo tabulku.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 1a",
+        "titleCs": "Dálnice",
+        "titleRu": "Автомагистраль",
+        "titleUk": "Автомагістраль",
+        "uk": "В’їзд на автомагістраль: діють особливі правила; перевірте платний режим і табличку."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 2a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Добавлены условия допуска и основные запреты; не создано ложное требование постоянной скорости 80.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "35",
+        "36",
+        "38"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 2a",
+        "confusedWith": [
+          "IZ 1a",
+          "IZ 2b"
+        ],
+        "driverActionsCs": "Sledujte pravidla této silnice a případné tabulky o zpoplatnění.",
+        "exceptionsCs": [
+          "Tabulka může stanovit zpoplatnění."
+        ],
+        "meaningCs": "Označuje silnici pro motorová vozidla se zvláštními pravidly.",
+        "memoryCs": "Modrá automobilová značka je jiná než dálnice.",
+        "mistakeCs": "Není to automaticky dálnice.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Начинается дорога для моторного транспорта с особым режимом; платность уточняет табличка.",
+        "simpleCs": "Sledujte pravidla této silnice a případné tabulky o zpoplatnění.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 2a",
+        "titleCs": "Silnice pro motorová vozidla",
+        "titleRu": "Дорога для автомобилей",
+        "titleUk": "Дорога для автомобілів",
+        "uk": "Починається дорога для моторного транспорту з особливим режимом; платність уточнює табличка."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 3a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходное описание особого режима верно; отсутствие полного пересказа § 27 и § 46 само по себе не правовая ошибка предупреждающего знака.",
+      "resolution": "Добавлены полезные конкретные правила тоннеля короткими отдельными пояснениями.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27",
+        "46"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 3a",
+        "confusedWith": [
+          "A 21",
+          "IZ 3b"
+        ],
+        "driverActionsCs": "Sledujte značení a světelné signály tunelu; u delších tunelů i údaj o délce.",
+        "exceptionsCs": [
+          "U tunelů delších než 500 m se uvádí délka."
+        ],
+        "meaningCs": "Označuje vjezd do tunelu se zvláštními pravidly.",
+        "memoryCs": "Začátek tunelu je režim, výstraha je před ním.",
+        "mistakeCs": "Nezaměňujte varování A 21 za samotný začátek tunelu.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Начало тоннеля с особыми правилами; на длинном тоннеле указана длина.",
+        "simpleCs": "Sledujte značení a světelné signály tunelu; u delších tunelů i údaj o délce.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 3a",
+        "titleCs": "Tunel",
+        "titleRu": "Тоннель",
+        "titleUk": "Тунель",
+        "uk": "Початок тунелю з особливими правилами; для довгого тунелю зазначено довжину."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 4d",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "В названии RU/UA обозначен конец населённого пункта, а не конец его названия.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "titleRu",
+        "titleUk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 4d",
+        "confusedWith": [
+          "IZ 4b",
+          "IZ 4c"
+        ],
+        "driverActionsCs": "Změnu dopravního režimu posuďte stejně jako u konce obce.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje konec obce i v jazyce národnostní menšiny.",
+        "memoryCs": "Druhý jazyk, stejný konec obce.",
+        "mistakeCs": "Nejde o jiný druh obce s jinými pravidly.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Дублирует обозначение конца населённого пункта на языке меньшинства.",
+        "simpleCs": "Změnu dopravního režimu posuďte stejně jako u konce obce.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 4d",
+        "titleCs": "Konec obce v jazyce národnostní menšiny",
+        "titleRu": "Конец названия населённого пункта на языке меньшинства",
+        "titleUk": "Кінець назви населеного пункту мовою меншини",
+        "uk": "Дублює позначення кінця населеного пункту мовою меншини."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 5a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлены 20 км/ч, защита пешеходов, остановка при необходимости и парковка.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "39",
+        "67"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 5a",
+        "confusedWith": [
+          "IZ 5b",
+          "IZ 6a"
+        ],
+        "driverActionsCs": "Při vjezdu změňte způsob jízdy podle režimu obytné zóny.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje oblast se zvláštními pravidly provozu v obytné zóně.",
+        "memoryCs": "Zóna znamená zvláštní pravidla až do jejího konce.",
+        "mistakeCs": "Nevykládejte ji jako pouhé upozornění na obytné domy.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Начинается жилая зона с особыми правилами; это не обычная городская улица.",
+        "simpleCs": "Při vjezdu změňte způsob jízdy podle režimu obytné zóny.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 5a",
+        "titleCs": "Obytná zóna",
+        "titleRu": "Жилая зона",
+        "titleUk": "Житлова зона",
+        "uk": "Починається житлова зона з особливими правилами; це не звичайна міська вулиця."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 5b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Общий совет о приоритете заменён обязанностью уступить при выезде на другую дорогу.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "23"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 5b",
+        "confusedWith": [
+          "IZ 5a"
+        ],
+        "driverActionsCs": "Při výjezdu sledujte přednost a navazující značky.",
+        "exceptionsCs": [
+          "Může být umístěna vlevo z opačné strany značky začátku."
+        ],
+        "meaningCs": "Označuje konec obytné zóny.",
+        "memoryCs": "Přeškrtnutá zóna končí.",
+        "mistakeCs": "Nezaměňujte konec zóny za přednost v jízdě.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Режим жилой зоны заканчивается; при выезде внимательно проверьте приоритет.",
+        "simpleCs": "Při výjezdu sledujte přednost a navazující značky.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 5b",
+        "titleCs": "Konec obytné zóny",
+        "titleRu": "Конец жилой зоны",
+        "titleUk": "Кінець житлової зони",
+        "uk": "Режим житлової зони завершується; при виїзді уважно перевірте пріоритет."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 6a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Проверка допуска отделена от обязанностей уже въехавшего водителя: 20, защита пешеходов, парковка.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "39",
+        "67"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 6a",
+        "confusedWith": [
+          "IZ 6b",
+          "IZ 5a"
+        ],
+        "driverActionsCs": "Před vjezdem přečtěte dolní pole s výjimkami pro vozidla.",
+        "exceptionsCs": [
+          "Vjezd určených vozidel může být povolen uvedeným symbolem a dobou."
+        ],
+        "meaningCs": "Označuje pěší zónu; povolená vozidla a případný čas se uvádějí na značce.",
+        "memoryCs": "Spodní pole určuje výjimky.",
+        "mistakeCs": "Nepředpokládejte, že do zóny může vjet každé vozidlo.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Пешеходная зона; допуск отдельных машин и время разрешения написаны внизу знака.",
+        "simpleCs": "Před vjezdem přečtěte dolní pole s výjimkami pro vozidla.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 6a",
+        "titleCs": "Pěší zóna",
+        "titleRu": "Пешеходная зона",
+        "titleUk": "Пішохідна зона",
+        "uk": "Пішохідна зона; допуск окремих авто та дозволений час зазначені внизу знака."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 6b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Общий совет о приоритете заменён обязанностью уступить при выезде на другую дорогу.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "23"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 6b",
+        "confusedWith": [
+          "IZ 6a"
+        ],
+        "driverActionsCs": "Po výjezdu sledujte pravidla navazující komunikace.",
+        "exceptionsCs": [],
+        "meaningCs": "Ukončuje zvláštní režim pěší zóny.",
+        "memoryCs": "Přeškrtnutá pěší zóna končí.",
+        "mistakeCs": "Není to začátek obytné zóny.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Заканчивается пешеходная зона; далее следуйте новым знакам.",
+        "simpleCs": "Po výjezdu sledujte pravidla navazující komunikace.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 6b",
+        "titleCs": "Konec pěší zóny",
+        "titleRu": "Конец пешеходной зоны",
+        "titleUk": "Кінець пішохідної зони",
+        "uk": "Завершується пішохідна зона; далі дотримуйтеся нових знаків."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 9a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлены 30 км/ч, защита велосипедистов, остановка при необходимости и парковка.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "39a"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 9a",
+        "confusedWith": [
+          "IZ 9b",
+          "C 8a"
+        ],
+        "driverActionsCs": "Druhý druh vozidla smí vjet jen tehdy, je-li na značce uveden.",
+        "exceptionsCs": [
+          "Jiná vozidla mohou být povolena nápisem nebo symbolem."
+        ],
+        "meaningCs": "Označuje oblast se zvláštními pravidly pro cyklistickou zónu.",
+        "memoryCs": "Spodní symbol ukáže další povolená vozidla.",
+        "mistakeCs": "Nepředpokládejte automaticky vjezd všech druhů vozidel.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Велосипедная зона с особыми правилами; другие виды транспорта допускаются, если указаны внизу.",
+        "simpleCs": "Druhý druh vozidla smí vjet jen tehdy, je-li na značce uveden.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9a",
+        "titleCs": "Zóna pro cyklisty",
+        "titleRu": "Велосипедная зона",
+        "titleUk": "Велосипедна зона",
+        "uk": "Велосипедна зона з особливими правилами; інші види транспорту допускаються, якщо зазначені внизу."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IZ 9b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Общий совет о приоритете заменён обязанностью уступить при выезде на другую дорогу.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "23"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IZ 9b",
+        "confusedWith": [
+          "IZ 9a",
+          "C 8b"
+        ],
+        "driverActionsCs": "Po opuštění oblasti sledujte další režim komunikace.",
+        "exceptionsCs": [
+          "Může stát vlevo z opačné strany počáteční značky."
+        ],
+        "meaningCs": "Označuje konec cyklistické zóny.",
+        "memoryCs": "Končí oblast, nikoli všechny cyklotrasy.",
+        "mistakeCs": "Nejde o konec každé cyklostezky za zónou.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Велосипедная зона заканчивается; дальше проверьте действующие знаки.",
+        "simpleCs": "Po opuštění oblasti sledujte další režim komunikace.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 1 k vyhlášce č. 294/2015 Sb., IZ 9b",
+        "titleCs": "Konec zóny pro cyklisty",
+        "titleRu": "Конец велосипедной зоны",
+        "titleUk": "Кінець велосипедної зони",
+        "uk": "Велосипедна зона закінчується; далі перевірте чинні знаки."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 1",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Указан конкретный запрет стоянки на обозначенном кольце.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 1",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte číslo okruhu a směrové tabule.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje dopravní okruh pro objíždění obce nebo její části.",
+        "memoryCs": "Sledujte číslo okruhu a směrové tabule.",
+        "mistakeCs": "Není to příkaz k jízdě po kruhovém objezdu.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Указывает кольцевой маршрут объезда города или его части; следите за названием либо номером маршрута.",
+        "simpleCs": "Sledujte číslo okruhu a směrové tabule.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 1",
+        "titleCs": "Okruh",
+        "titleRu": "Кольцевой маршрут",
+        "titleUk": "Кільцевий маршрут",
+        "uk": "Позначає кільцевий маршрут для об’їзду міста або його частини; стежте за назвою чи номером маршруту."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 11d",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Уточнены запрещённые виды ТС и граница разрешённой массы при стоянке на тротуаре.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 11d",
+        "confusedWith": [],
+        "driverActionsCs": "Dodržte přesně polohu symbolu a omezení druhu vozidla.",
+        "exceptionsCs": [],
+        "meaningCs": "Značka vymezuje kolmé nebo šikmé stání na chodníku.",
+        "memoryCs": "Dodržte přesně polohu symbolu a omezení druhu vozidla.",
+        "mistakeCs": "Povolení na chodníku neplatí pro všechna vozidla.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Парковка на тротуаре разрешена только в показанном положении; для ряда тяжёлых и специальных машин запрещена.",
+        "simpleCs": "Dodržte přesně polohu symbolu a omezení druhu vozidla.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11d",
+        "titleCs": "Parkoviště stání na chodníku kolmé nebo šikmé",
+        "titleRu": "Парковка на тротуаре поперёк или под углом",
+        "titleUk": "Паркування на тротуарі перпендикулярно або під кутом",
+        "uk": "Паркування на тротуарі дозволене лише в указаному положенні; для низки важких і спеціальних машин заборонене."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 11e",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Уточнены запрещённые виды ТС и граница разрешённой массы при стоянке на тротуаре.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 11e",
+        "confusedWith": [],
+        "driverActionsCs": "Dodržte vyznačenou polohu i omezení vozidel.",
+        "exceptionsCs": [],
+        "meaningCs": "Značka vymezuje podélné stání na chodníku.",
+        "memoryCs": "Dodržte vyznačenou polohu i omezení vozidel.",
+        "mistakeCs": "Nejde o obecné povolení stát kdekoli na chodníku.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Паркуйте вдоль тротуара как на схеме; тяжёлые и некоторые специальные машины туда не допускаются.",
+        "simpleCs": "Dodržte vyznačenou polohu i omezení vozidel.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11e",
+        "titleCs": "Parkoviště stání na chodníku podélné",
+        "titleRu": "Продольная парковка на тротуаре",
+        "titleUk": "Поздовжнє паркування на тротуарі",
+        "uk": "Паркуйте вздовж тротуару як на схемі; важкі та деякі спеціальні машини туди не допускаються."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 11f",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Уточнены запрещённые виды ТС и граница разрешённой массы при стоянке на тротуаре.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 11f",
+        "confusedWith": [],
+        "driverActionsCs": "Umístěte vozidlo podle symbolu, ne celé na chodník.",
+        "exceptionsCs": [],
+        "meaningCs": "Značka vymezuje částečné kolmé nebo šikmé stání na chodníku.",
+        "memoryCs": "Umístěte vozidlo podle symbolu, ne celé na chodník.",
+        "mistakeCs": "Částečné stání není totéž jako celé stání na chodníku.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Часть автомобиля стоит на тротуаре, часть на проезжей части; положение задаёт символ, для ряда машин есть запрет.",
+        "simpleCs": "Umístěte vozidlo podle symbolu, ne celé na chodník.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11f",
+        "titleCs": "Parkoviště částečné stání na chodníku kolmé nebo šikmé",
+        "titleRu": "Частичная парковка на тротуаре поперёк или под углом",
+        "titleUk": "Часткове паркування на тротуарі перпендикулярно або під кутом",
+        "uk": "Частина автомобіля стоїть на тротуарі, частина на дорозі; положення задає символ, для низки машин є заборона."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 11g",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Уточнены запрещённые виды ТС и граница разрешённой массы при стоянке на тротуаре.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 11g",
+        "confusedWith": [],
+        "driverActionsCs": "Nechte vozidlo jen v předepsané poloze.",
+        "exceptionsCs": [],
+        "meaningCs": "Značka vymezuje částečné podélné stání na chodníku.",
+        "memoryCs": "Nechte vozidlo jen v předepsané poloze.",
+        "mistakeCs": "Nezaměňujte s IP 11e, kde je stání na chodníku celé.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Стоянка вдоль края дороги частично на тротуаре; соблюдайте положение и ограничения для типа машины.",
+        "simpleCs": "Nechte vozidlo jen v předepsané poloze.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 11g",
+        "titleCs": "Parkoviště částečné stání na chodníku podélné",
+        "titleRu": "Частичная продольная парковка на тротуаре",
+        "titleUk": "Часткове поздовжнє паркування на тротуарі",
+        "uk": "Стоянка вздовж краю дороги частково на тротуарі; дотримуйтеся положення й обмежень для типу авто."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 12",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Добавлены условное трёхминутное исключение, его неприменимость к месту инвалидов и зарядка.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27",
+        "67"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 12",
+        "confusedWith": [],
+        "driverActionsCs": "Před stáním ověřte, komu a kdy je místo vyhrazeno.",
+        "exceptionsCs": [],
+        "meaningCs": "Místo je vyhrazeno vozidlům uvedeným na značce nebo tabulce.",
+        "memoryCs": "Před stáním ověřte, komu a kdy je místo vyhrazeno.",
+        "mistakeCs": "Mimo dobu vyhrazení může platit i jiné omezení.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Стоянка предназначена указанному виду транспорта или лицам; время и условия уточняются на знаке либо табличке.",
+        "simpleCs": "Před stáním ověřte, komu a kdy je místo vyhrazeno.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 12",
+        "titleCs": "Vyhrazené parkoviště",
+        "titleRu": "Выделенная парковка",
+        "titleUk": "Зарезервоване паркування",
+        "uk": "Стоянка призначена зазначеному виду транспорту чи особам; час і умови уточнюють знак або табличка."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 13d",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "В RU/UA возможность пересадки не подана как обязанность.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 13d",
+        "confusedWith": [],
+        "driverActionsCs": "Hledejte návazné spojení a podmínky parkoviště.",
+        "exceptionsCs": [],
+        "meaningCs": "Parkoviště navazuje na veřejnou hromadnou dopravu.",
+        "memoryCs": "Hledejte návazné spojení a podmínky parkoviště.",
+        "mistakeCs": "P+R není místo pro rychlé vysazení osob.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Оставьте автомобиль и продолжите поездку общественным транспортом.",
+        "simpleCs": "Hledejte návazné spojení a podmínky parkoviště.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 13d",
+        "titleCs": "Parkoviště P+R",
+        "titleRu": "Парковка P+R",
+        "titleUk": "Паркування P+R",
+        "uk": "Залиште авто й продовжуйте подорож громадським транспортом."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 18b",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Убрана рекомендация преждевременно уходить из исчезающей полосы без учёта zip.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "12"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 18b",
+        "confusedWith": [],
+        "driverActionsCs": "Připravte se včas na bezpečné zařazení.",
+        "exceptionsCs": [],
+        "meaningCs": "Oznamuje úbytek pruhů a vyznačuje průběžný pruh.",
+        "memoryCs": "Připravte se včas na bezpečné zařazení.",
+        "mistakeCs": "Nečekejte až na konec mizícího pruhu.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Полос становится меньше; следите, какая продолжается.",
+        "simpleCs": "Připravte se včas na bezpečné zařazení.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 18b",
+        "titleCs": "Snížení počtu jízdních pruhů",
+        "titleRu": "Сокращение числа полос",
+        "titleUk": "Зменшення кількості смуг",
+        "uk": "Смуг стає менше; стежте, яка продовжується."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 18c",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Вместо неопределённого выбора полосы восстановлены оба критерия её обязательного использования.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 18c",
+        "confusedWith": [],
+        "driverActionsCs": "Použijte přídatný pruh podle rychlosti svého vozidla.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje přídatný pruh pro pomalá vozidla na dálnici či silnici pro motorová vozidla.",
+        "memoryCs": "Použijte přídatný pruh podle rychlosti svého vozidla.",
+        "mistakeCs": "Nejde o odstavný pruh pro nouzové stání.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Дополнительная полоса предусмотрена для машин, не достигающих на этом участке 80 км/ч, и значительно более медленных машин.",
+        "simpleCs": "Použijte přídatný pruh podle rychlosti svého vozidla.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 18c",
+        "titleCs": "Jízdní pruh pro pomalá vozidla",
+        "titleRu": "Полоса для медленных машин",
+        "titleUk": "Смуга для повільних машин",
+        "uk": "Додаткова смуга передбачена для машин, які тут не досягають 80 км/год, та значно повільніших машин."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 20a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Разделены разрешённый въезд, содействие выезду, защита назначенных ТС и TAXI.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "13",
+        "14"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 20a",
+        "confusedWith": [],
+        "driverActionsCs": "Do vyhrazeného pruhu vjíždějte jen v dovolených situacích.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje jízdní pruh vyhrazený zobrazenému druhu vozidel.",
+        "memoryCs": "Do vyhrazeného pruhu vjíždějte jen v dovolených situacích.",
+        "mistakeCs": "Samotný volný pruh není volný pro každé vozidlo.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Полоса выделена указанному виду транспорта, например автобусам; смотрите часы действия.",
+        "simpleCs": "Do vyhrazeného pruhu vjíždějte jen v dovolených situacích.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 20a",
+        "titleCs": "Vyhrazený jízdní pruh",
+        "titleRu": "Выделенная полоса",
+        "titleUk": "Виділена смуга",
+        "uk": "Смуга виділена зазначеному виду транспорту, наприклад автобусам; дивіться години дії."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 23c",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "CS теперь прямо требует позволить перестроение; обязанность выезжающего вынесена отдельно.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "14"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 23c",
+        "confusedWith": [],
+        "driverActionsCs": "Podle potřeby zpomalte, případně zastavte.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje místo výjezdu vozidel veřejné dopravy z tramvajového pásu.",
+        "memoryCs": "Podle potřeby zpomalte, případně zastavte.",
+        "mistakeCs": "Neignorujte vozidlo veřejné dopravy opouštějící pás.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Автобус или другой общественный транспорт съезжает с трамвайной полосы; водитель в соседней полосе должен позволить перестроение.",
+        "simpleCs": "Podle potřeby zpomalte, případně zastavte.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 23c",
+        "titleCs": "Sjíždění vozidel veřejné hromadné dopravy osob z tramvajového pásu",
+        "titleRu": "Съезд общественного транспорта с трамвайного пути",
+        "titleUk": "З’їзд громадського транспорту з трамвайної колії",
+        "uk": "Автобус чи інший громадський транспорт з’їжджає з трамвайної смуги; водій сусідньої смуги має дати можливість перестроїтися."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 29",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "В RU/UA сохранено обязательное условие souběžná jízda; краткое определение отдельно.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "12"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 29",
+        "confusedWith": [],
+        "driverActionsCs": "Při souběžné jízdě umožněte střídavé zařazení.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje místo střídavého řazení při souběžné jízdě.",
+        "memoryCs": "Při souběžné jízdě umožněte střídavé zařazení.",
+        "mistakeCs": "Nejde o přednost celé kolony vozidel najednou.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "В месте слияния потоков автомобили перестраиваются поочерёдно.",
+        "simpleCs": "Při souběžné jízdě umožněte střídavé zařazení.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 29",
+        "titleCs": "Střídavé řazení",
+        "titleRu": "Попеременное перестроение",
+        "titleUk": "Почергове перестроювання",
+        "uk": "У місці злиття потоків автомобілі перестроюються почергово."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 32",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Уточнены нормальные условия и максимально разрешённая скорость в CS, согласованы переводы.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 32",
+        "confusedWith": [],
+        "driverActionsCs": "Za horších podmínek ponechte ještě větší odstup.",
+        "exceptionsCs": [],
+        "meaningCs": "Spolu s vodorovnou značkou ukazuje minimální odstup mezi jedoucími vozidly.",
+        "memoryCs": "Za horších podmínek ponechte ještě větší odstup.",
+        "mistakeCs": "Dvě šipky nejsou zárukou bezpečí za každého počasí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Сверяйте расстояние с дорожной разметкой: две стрелки между машинами показывают минимум при обычных условиях и разрешённой скорости.",
+        "simpleCs": "Za horších podmínek ponechte ještě větší odstup.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 32",
+        "titleCs": "Bezpečný odstup",
+        "titleRu": "Безопасная дистанция",
+        "titleUk": "Безпечна дистанція",
+        "uk": "Зіставляйте відстань із розміткою: дві стрілки між авто показують мінімум за звичайних умов та дозволеної швидкості."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 6",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлена конкретная защита пешехода, необходимость остановки и существенные условия.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "5",
+        "54"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 6",
+        "confusedWith": [],
+        "driverActionsCs": "Přibližujte se k přechodu s pozorností vůči chodcům.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje přechod vyznačený také na vozovce.",
+        "memoryCs": "Přibližujte se k přechodu s pozorností vůči chodcům.",
+        "mistakeCs": "Nezaměňujte označení místa přechodu s předběžnou výstrahou A 11.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Здесь обозначен пешеходный переход с разметкой на дороге.",
+        "simpleCs": "Přibližujte se k přechodu s pozorností vůči chodcům.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 6",
+        "titleCs": "Přechod pro chodce",
+        "titleRu": "Пешеходный переход",
+        "titleUk": "Пішохідний перехід",
+        "uk": "Тут позначено пішохідний перехід із розміткою на дорозі."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IP 7",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Назван запрет создавать опасность пересекающему велосипедисту и условия его въезда.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "5",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IP 7",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte cyklisty přijíždějící k přejezdu.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje přejezd pro cyklisty vyznačený na vozovce.",
+        "memoryCs": "Sledujte cyklisty přijíždějící k přejezdu.",
+        "mistakeCs": "Značka sama neurčuje přednost ve všech situacích.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Здесь велосипедисты пересекают проезжую часть по обозначенному переезду.",
+        "simpleCs": "Sledujte cyklisty přijíždějící k přejezdu.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 2 k vyhlášce č. 294/2015 Sb., IP 7",
+        "titleCs": "Přejezd pro cyklisty",
+        "titleRu": "Велосипедный переезд",
+        "titleUk": "Велосипедний переїзд",
+        "uk": "Тут велосипедисти перетинають проїзну частину позначеним переїздом."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IS 6d",
+      "previous_overall": "WRONG",
+      "adjudicated_before_fix": "WRONG",
+      "reclassification_reason": null,
+      "resolution": "Убрано ошибочное размещение над проезжей частью; восстановлены сведения о полосах.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IS 6d",
+        "confusedWith": [],
+        "driverActionsCs": "Včas se zařaďte k požadovanému cíli.",
+        "exceptionsCs": [],
+        "meaningCs": "Před křižovatkou ukazuje cíle pro přímý směr a odbočení.",
+        "memoryCs": "Včas se zařaďte k požadovanému cíli.",
+        "mistakeCs": "Nečekejte s volbou pruhu až na samotný výjezd.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Перед развязкой показывает направления и цели; размещение над полосами может показывать их распределение.",
+        "simpleCs": "Včas se zařaďte k požadovanému cíli.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6d",
+        "titleCs": "Návěst před křižovatkou",
+        "titleRu": "Предварительный указатель перед развязкой",
+        "titleUk": "Попередній вказівник перед розв’язкою",
+        "uk": "Перед розв’язкою показує напрямки й цілі; розміщення над смугами може показувати їхній розподіл."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IS 6g",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Сохранено отличительное обычное размещение у начала полосы поворота.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IS 6g",
+        "confusedWith": [],
+        "driverActionsCs": "Zařaďte se včas do odbočovacího pruhu.",
+        "exceptionsCs": [],
+        "meaningCs": "Ukazuje cíle odbočení a počet příslušných pruhů.",
+        "memoryCs": "Zařaďte se včas do odbočovacího pruhu.",
+        "mistakeCs": "Neodbočujte z pruhu označeného pro jiný cíl.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Подсказывает перед съездом или поворотом, какие полосы ведут к показанным целям.",
+        "simpleCs": "Zařaďte se včas do odbočovacího pruhu.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 6g",
+        "titleCs": "Směrová návěst před odbočením",
+        "titleRu": "Предварительный указатель перед поворотом",
+        "titleUk": "Попередній вказівник перед поворотом",
+        "uk": "Підказує перед з’їздом чи поворотом, які смуги ведуть до показаних цілей."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IS 9e",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Запрещённое направление не сужено до поворота; соблюдено предварительное размещение.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IS 9e",
+        "confusedWith": [],
+        "driverActionsCs": "Neodbočte zakázaným směrem.",
+        "exceptionsCs": [],
+        "meaningCs": "V následující křižovatce ukazuje zakázaný směr a možnou objížďku.",
+        "memoryCs": "Neodbočte zakázaným směrem.",
+        "mistakeCs": "Nespoléhejte na navigaci proti zobrazenému zákazu.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Следующий поворот в показанном направлении запрещён; следуйте обозначенному обходному пути.",
+        "simpleCs": "Neodbočte zakázaným směrem.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 3 k vyhlášce č. 294/2015 Sb., IS 9e",
+        "titleCs": "Návěst před křižovatkou s omezením",
+        "titleRu": "Предупреждение о запрещённом направлении",
+        "titleUk": "Попередження про заборонений напрямок",
+        "uk": "Наступний поворот у показаному напрямку заборонений; дотримуйтеся позначеного об’їзду."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IJ 4a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IJ 4a",
+        "confusedWith": [],
+        "driverActionsCs": "Při jízdě u zastávky sledujte cestující.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje zastávku linkové dopravy; označení může uvádět dopravce či druh vozidla.",
+        "memoryCs": "Při jízdě u zastávky sledujte cestující.",
+        "mistakeCs": "Nápis TAXI označuje stanoviště taxislužby, nikoli autobus.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Обозначает остановку общественного транспорта; смотрите символ или название оператора.",
+        "simpleCs": "Při jízdě u zastávky sledujte cestující.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4a",
+        "titleCs": "Označník zastávky",
+        "titleRu": "Обозначение остановки",
+        "titleUk": "Позначення зупинки",
+        "uk": "Позначає зупинку громадського транспорту; дивіться символ чи назву перевізника."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IJ 4b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IJ 4b",
+        "confusedWith": [],
+        "driverActionsCs": "V okolí zastávky očekávejte cestující.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje zastávku linkové dopravy v jiném provedení označníku.",
+        "memoryCs": "V okolí zastávky očekávejte cestující.",
+        "mistakeCs": "Jiná podoba označníku nemění jeho účel.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Ещё один установленный вариант обозначения остановки, с названием, символом или словом ZASTÁVKA.",
+        "simpleCs": "V okolí zastávky očekávejte cestující.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4b",
+        "titleCs": "Označník zastávky",
+        "titleRu": "Обозначение остановки",
+        "titleUk": "Позначення зупинки",
+        "uk": "Ще один установлений варіант позначення зупинки з назвою, символом чи словом ZASTÁVKA."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IJ 4c",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IJ 4c",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte vystupující a nastupující osoby.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje začátek autobusové zastávky, případně stanoviště taxi.",
+        "memoryCs": "Sledujte vystupující a nastupující osoby.",
+        "mistakeCs": "Nezaměňujte variantu TAXI s autobusovým symbolem.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Здесь начинается автобусная остановка; знак с надписью TAXI обозначает стоянку такси.",
+        "simpleCs": "Sledujte vystupující a nastupující osoby.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4c",
+        "titleCs": "Zastávka autobusu",
+        "titleRu": "Автобусная остановка",
+        "titleUk": "Автобусна зупинка",
+        "uk": "Тут починається автобусна зупинка; знак із написом TAXI позначає стоянку таксі."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IJ 4d",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IJ 4d",
+        "confusedWith": [],
+        "driverActionsCs": "Počítejte s pohybem cestujících u tramvaje.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje začátek zastávky tramvaje.",
+        "memoryCs": "Počítejte s pohybem cestujících u tramvaje.",
+        "mistakeCs": "Společná zastávka může mít více symbolů.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Обозначает начало трамвайной остановки, иногда совместной с другим транспортом.",
+        "simpleCs": "Počítejte s pohybem cestujících u tramvaje.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4d",
+        "titleCs": "Zastávka tramvaje",
+        "titleRu": "Трамвайная остановка",
+        "titleUk": "Трамвайна зупинка",
+        "uk": "Позначає початок трамвайної зупинки, іноді спільної з іншим транспортом."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "IJ 4e",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "IJ 4e",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte pohyb cestujících kolem zastávky.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje začátek zastávky trolejbusu.",
+        "memoryCs": "Sledujte pohyb cestujících kolem zastávky.",
+        "mistakeCs": "Nezaměňujte trolejbusovou zastávku s autobusovou.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Обозначает начало троллейбусной остановки, в том числе общей.",
+        "simpleCs": "Sledujte pohyb cestujících kolem zastávky.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 5, bod 4 k vyhlášce č. 294/2015 Sb., IJ 4e",
+        "titleCs": "Zastávka trolejbusu",
+        "titleRu": "Троллейбусная остановка",
+        "titleUk": "Тролейбусна зупинка",
+        "uk": "Позначає початок тролейбусної зупинки, зокрема спільної."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 11a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Различены виньетка и mýtné без кальки «временная плата» и русско-украинского смешения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 11a",
+        "confusedWith": [],
+        "driverActionsCs": "Rozlišujte časový poplatek a mýtné.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje úsek bez časového poplatku.",
+        "memoryCs": "Rozlišujte časový poplatek a mýtné.",
+        "mistakeCs": "Bez časového poplatku nemusí znamenat bez mýtného.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "На указанном участке временная плата за пользование дорогой не требуется.",
+        "simpleCs": "Rozlišujte časový poplatek a mýtné.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 11a",
+        "titleCs": "Bez časového poplatku",
+        "titleRu": "Без временного дорожного сбора",
+        "titleUk": "Без часового дорожнього збору",
+        "uk": "На зазначеній ділянці часовий збір за користування дорогою не потрібен."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 11b",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Различены виньетка и mýtné без кальки «временная плата» и русско-украинского смешения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 11b",
+        "confusedWith": [],
+        "driverActionsCs": "Před vjezdem ověřte splnění poplatku.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje úsek zpoplatněný časovým poplatkem.",
+        "memoryCs": "Před vjezdem ověřte splnění poplatku.",
+        "mistakeCs": "Časový poplatek není totéž co mýtné.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Для этого участка требуется временная дорожная плата по действующим условиям.",
+        "simpleCs": "Před vjezdem ověřte splnění poplatku.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 11b",
+        "titleCs": "S časovým poplatkem",
+        "titleRu": "С временным дорожным сбором",
+        "titleUk": "Із часовим дорожнім збором",
+        "uk": "Для цієї ділянки потрібен часовий дорожній збір за чинними умовами."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 11c",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Различены виньетка и mýtné без кальки «временная плата» и русско-украинского смешения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 11c",
+        "confusedWith": [],
+        "driverActionsCs": "Rozlišujte mýtné od časového poplatku.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje úsek bez mýtného.",
+        "memoryCs": "Rozlišujte mýtné od časového poplatku.",
+        "mistakeCs": "Bez mýtného nemusí znamenat zcela bez poplatku.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "На указанном участке не взимается дорожное мито; временный сбор — отдельный вопрос.",
+        "simpleCs": "Rozlišujte mýtné od časového poplatku.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 11c",
+        "titleCs": "Bez mýtného",
+        "titleRu": "Без дорожной пошлины",
+        "titleUk": "Без дорожнього мита",
+        "uk": "На зазначеній ділянці не стягується дорожнє мито; часовий збір — окреме питання."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 11d",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Различены виньетка и mýtné без кальки «временная плата» и русско-украинского смешения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 11d",
+        "confusedWith": [],
+        "driverActionsCs": "Před jízdou zkontrolujte mýtné povinnosti.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje úsek zpoplatněný mýtným.",
+        "memoryCs": "Před jízdou zkontrolujte mýtné povinnosti.",
+        "mistakeCs": "Mýtné není prostá jednodenní parkovací platba.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Указанный участок облагается дорожным мито по применимым правилам.",
+        "simpleCs": "Před jízdou zkontrolujte mýtné povinnosti.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 11d",
+        "titleCs": "S mýtným",
+        "titleRu": "С дорожной пошлиной",
+        "titleUk": "Із дорожнім митом",
+        "uk": "Зазначена ділянка підлягає дорожньому миту за чинними правилами."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 11e",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Различены виньетка и mýtné без кальки «временная плата» и русско-украинского смешения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 11e",
+        "confusedWith": [],
+        "driverActionsCs": "Rozlišujte tento dvojí údaj od jednotlivých tabulek.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje úsek bez časového poplatku i bez mýtného.",
+        "memoryCs": "Rozlišujte tento dvojí údaj od jednotlivých tabulek.",
+        "mistakeCs": "Nevztahujte osvobození automaticky na navazující úsek.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "На этом участке не действуют ни временный дорожный сбор, ни мито.",
+        "simpleCs": "Rozlišujte tento dvojí údaj od jednotlivých tabulek.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 11e",
+        "titleCs": "Bez časového poplatku a mýtného",
+        "titleRu": "Без временного сбора и мита",
+        "titleUk": "Без часового збору й мита",
+        "uk": "На цій ділянці не діють ані часовий дорожній збір, ані мито."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 11f",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Различены виньетка и mýtné без кальки «временная плата» и русско-украинского смешения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "titleRu",
+        "titleUk",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 11f",
+        "confusedWith": [],
+        "driverActionsCs": "Ověřte režim platný pro své vozidlo.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje úsek s časovým poplatkem i mýtným.",
+        "memoryCs": "Ověřte režim platný pro své vozidlo.",
+        "mistakeCs": "Dvojí údaj neznamená, že každý řidič platí obojí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "На участке предусмотрены оба вида дорожной платы в зависимости от транспортного средства.",
+        "simpleCs": "Ověřte režim platný pro své vozidlo.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 11f",
+        "titleCs": "S časovým poplatkem a mýtným",
+        "titleRu": "С временным сбором и митом",
+        "titleUk": "Із часовим збором і митом",
+        "uk": "На ділянці передбачені обидва види дорожньої плати залежно від транспортного засобу."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 12b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Исключение явно связано с B 2 на односторонней дороге, а не любой запрещающей маркой.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 12b",
+        "confusedWith": [],
+        "driverActionsCs": "Přečtěte tabulku spolu se zákazovou značkou.",
+        "exceptionsCs": [],
+        "meaningCs": "Pod zákazem vjezdu dovoluje cyklistům vjezd do jednosměrky v protisměru.",
+        "memoryCs": "Přečtěte tabulku spolu se zákazovou značkou.",
+        "mistakeCs": "Nevztahujte výjimku na jiné druhy vozidel.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Под знаком запрета въезда эта табличка разрешает встречный въезд велосипедистам.",
+        "simpleCs": "Přečtěte tabulku spolu se zákazovou značkou.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 12b",
+        "titleCs": "Vjezd cyklistů v protisměru povolen",
+        "titleRu": "Встречный въезд велосипедистов разрешён",
+        "titleUk": "Зустрічний в’їзд велосипедистів дозволено",
+        "uk": "Під знаком заборони в’їзду ця табличка дозволяє зустрічний в’їзд велосипедистам."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "E 17",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Предупреждение об ограниченном габарите не утверждает, что конкретное ТС заведомо не проедет.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "meaningCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "E 17",
+        "confusedWith": [],
+        "driverActionsCs": "Před úsekem posuďte rozměry svého vozidla.",
+        "exceptionsCs": [],
+        "meaningCs": "S hlavní výstrahou upozorňuje na omezený průjezdní profil.",
+        "memoryCs": "Před úsekem posuďte rozměry svého vozidla.",
+        "mistakeCs": "Nejde jen o výškové omezení bez dalších rozměrů.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Вместе со знаком опасности предупреждает, что места для проезда машины недостаточно.",
+        "simpleCs": "Před úsekem posuďte rozměry svého vozidla.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 6 k vyhlášce č. 294/2015 Sb., E 17",
+        "titleCs": "Nedostatečný průjezdní profil vozovky",
+        "titleRu": "Недостаточный габарит проезда",
+        "titleUk": "Недостатній габарит проїзду",
+        "uk": "Разом зі знаком небезпеки попереджає, що простору для проїзду авто замало."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 10a",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Уточнено направление запрещённого выступа — в проезжую часть; устранены категоричные повторы.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 10a",
+        "confusedWith": [],
+        "driverActionsCs": "Postavte celé vozidlo do vyznačené plochy.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje prostor podélného stání.",
+        "memoryCs": "Postavte celé vozidlo do vyznačené plochy.",
+        "mistakeCs": "Nezasahujte obrysem ani nákladem mimo vyznačené místo.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Парковочное место обозначено вдоль края дороги; машина не должна выходить за его границы.",
+        "simpleCs": "Postavte celé vozidlo do vyznačené plochy.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10a",
+        "titleCs": "Stání podélné",
+        "titleRu": "Продольная парковка",
+        "titleUk": "Поздовжнє паркування",
+        "uk": "Місце паркування позначене вздовж краю дороги; авто не має виходити за його межі."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 10d",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Слишком широкий запрет выступать куда угодно заменён точным условием в проезжую часть.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 10d",
+        "confusedWith": [],
+        "driverActionsCs": "Nenechte vozidlo přečnívat mimo plochu.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje pruh pro dovolené zastavení a stání.",
+        "memoryCs": "Nenechte vozidlo přečnívat mimo plochu.",
+        "mistakeCs": "Parkovací pruh není běžným jízdním pruhem.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "В пределах парковочной полосы разрешена остановка и стоянка при соблюдении остальных правил.",
+        "simpleCs": "Nenechte vozidlo přečnívat mimo plochu.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10d",
+        "titleCs": "Parkovací pruh",
+        "titleRu": "Парковочная полоса",
+        "titleUk": "Паркувальна смуга",
+        "uk": "У межах паркувальної смуги дозволено зупинку і стоянку за дотримання інших правил."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 10f",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходное требование соответствующего удостоверения верно; дополнительная проверка держателя полезна, но исходник не разрешал использовать чужой документ.",
+      "resolution": "Объяснены связь парковочного удостоверения с его держателем и отсутствие общего трёхминутного исключения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "67"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 10f",
+        "confusedWith": [],
+        "driverActionsCs": "Ověřte oprávnění a doprovodnou značku.",
+        "exceptionsCs": [],
+        "meaningCs": "Plocha je vyhrazena vozidlu s příslušným parkovacím průkazem.",
+        "memoryCs": "Ověřte oprávnění a doprovodnou značku.",
+        "mistakeCs": "Převoz osoby bez příslušného průkazu sám nestačí.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Здесь вправе остановиться и стоять только машина с соответствующим парковочным разрешением; разметку дополняет вертикальный знак.",
+        "simpleCs": "Ověřte oprávnění a doprovodnou značku.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 10f",
+        "titleCs": "Vyhrazené parkoviště pro vozidlo přepravující osobu těžce postiženou nebo osobu těžce pohybově postiženou",
+        "titleRu": "Парковка для транспорта человека с инвалидностью",
+        "titleUk": "Паркування для транспорту людини з інвалідністю",
+        "uk": "Тут має право зупинитися й стояти лише авто з відповідним паркувальним посвідченням; розмітку доповнює вертикальний знак."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 11a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 11a",
+        "confusedWith": [],
+        "driverActionsCs": "V okolí sledujte cestující a provoz vozidel.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje prostor zastávky linkové dopravy.",
+        "memoryCs": "V okolí sledujte cestující a provoz vozidel.",
+        "mistakeCs": "Záměna nápisu BUS za TAXI mění určení místa.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Надпись BUS показывает место остановки общественного транспорта; TAXI указывает стоянку такси.",
+        "simpleCs": "V okolí sledujte cestující a provoz vozidel.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 11a",
+        "titleCs": "Zastávka autobusu nebo trolejbusu",
+        "titleRu": "Остановка автобуса или троллейбуса",
+        "titleUk": "Зупинка автобуса або тролейбуса",
+        "uk": "Напис BUS показує місце зупинки громадського транспорту; TAXI вказує стоянку таксі."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 11b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходный текст правильно обозначает назначение остановки и не разрешает там парковку; отсутствие полного § 27 — недостаток полноты, а не искажение знака.",
+      "resolution": "Полезный запрет остановки объяснён с условием отсутствия островка и точными границами; TAXI не перенесено на неподходящие варианты.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "27"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 11b",
+        "confusedWith": [],
+        "driverActionsCs": "Dávejte pozor na tramvaj a cestující.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje prostor tramvajové zastávky.",
+        "memoryCs": "Dávejte pozor na tramvaj a cestující.",
+        "mistakeCs": "Nezaměňujte s jízdním pruhem pro auta.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разметка отмечает пространство остановки трамвая.",
+        "simpleCs": "Dávejte pozor na tramvaj a cestující.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 11b",
+        "titleCs": "Zastávka tramvaje",
+        "titleRu": "Трамвайная остановка",
+        "titleUk": "Трамвайна зупинка",
+        "uk": "Розмітка позначає простір трамвайної зупинки."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 13",
+      "previous_overall": "IMPROVE",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": null,
+      "resolution": "Точный запрет и конкретные исключения вместо общего описания обычного движения.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 13",
+        "confusedWith": [],
+        "driverActionsCs": "Objíždějte plochu při běžné jízdě.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje plochu, do níž se běžně nevjíždí ani nezasahuje nákladem.",
+        "memoryCs": "Objíždějte plochu při běžné jízdě.",
+        "mistakeCs": "Neberte šrafování jako další jízdní pruh.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Заштрихованный участок не используют для обычного движения; существуют ограниченные исключения для объезда и въезда/выезда.",
+        "simpleCs": "Objíždějte plochu při běžné jízdě.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 13",
+        "titleCs": "Šikmé rovnoběžné čáry",
+        "titleRu": "Наклонная штриховка",
+        "titleUk": "Похила штриховка",
+        "uk": "Заштриховану ділянку не використовують для звичайного руху; є обмежені винятки для об’їзду та в’їзду/виїзду."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 14",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "IMPROVE",
+      "reclassification_reason": "IMPROVE: исходник правильно обозначает полосу/дорожку и не разрешает автомобилю пользоваться ею; выбор между режимами требует дополнительной разметки.",
+      "resolution": "Объяснены режим по типу разметки, безопасный въезд и дополнительное разрешение из-за недостаточной ширины.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "13",
+        "14",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 14",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte pohyb cyklistů v odděleném prostoru.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje pruh nebo stezku pro cyklisty.",
+        "memoryCs": "Sledujte pohyb cyklistů v odděleném prostoru.",
+        "mistakeCs": "Nepovažujte pruh pro kola za volný pruh pro auto.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Нарисованный велосипед обозначает полосу или дорожку велосипедистов.",
+        "simpleCs": "Sledujte pohyb cyklistů v odděleném prostoru.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 14",
+        "titleCs": "Jízdní pruh pro cyklisty",
+        "titleRu": "Велосипедная полоса",
+        "titleUk": "Велосипедна смуга",
+        "uk": "Намальований велосипед позначає смугу чи доріжку велосипедистів."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 1a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Смысл запрета отделён от строго перечисленных исключений; поворот вне дороги не заменён любым поворотом.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 1a",
+        "confusedWith": [],
+        "driverActionsCs": "Při protisměrném oddělení jeďte vpravo od čáry.",
+        "exceptionsCs": [],
+        "meaningCs": "Odděluje pruhy; přes čáru se běžně nepřejíždí, zákon uvádí omezené výjimky.",
+        "memoryCs": "Při protisměrném oddělení jeďte vpravo od čáry.",
+        "mistakeCs": "Výjimku pro cyklistu nepřenášejte na běžné předjíždění auta.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Сплошную обычно не пересекают; для объезда, обгона велосипедиста и некоторых въездов/поворотов есть установленные исключения.",
+        "simpleCs": "Při protisměrném oddělení jeďte vpravo od čáry.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 1a",
+        "titleCs": "Podélná čára souvislá",
+        "titleRu": "Сплошная продольная линия",
+        "titleUk": "Суцільна поздовжня лінія",
+        "uk": "Суцільну зазвичай не перетинають; для об’їзду, обгону велосипедиста та деяких в’їздів/поворотів є визначені винятки."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 7a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлена конкретная защита пешехода, необходимость остановки и существенные условия.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "5",
+        "54"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 7a",
+        "confusedWith": [],
+        "driverActionsCs": "Před přechodem sledujte chodce.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje plochu pro přecházení chodců.",
+        "memoryCs": "Před přechodem sledujte chodce.",
+        "mistakeCs": "Nezaměňujte se zvláštním místem pro přecházení V 7b.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Разметка «зебра» обозначает пешеходный переход.",
+        "simpleCs": "Před přechodem sledujte chodce.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 7a",
+        "titleCs": "Přechod pro chodce",
+        "titleRu": "Пешеходный переход",
+        "titleUk": "Пішохідний перехід",
+        "uk": "Розмітка «зебра» позначає пішохідний перехід."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 8a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Назван запрет создавать опасность пересекающему велосипедисту и условия его въезда.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "5",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 8a",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte cyklisty u vyznačené plochy.",
+        "exceptionsCs": [],
+        "meaningCs": "Vyznačuje plochu pro přejezd cyklistů přes komunikaci.",
+        "memoryCs": "Sledujte cyklisty u vyznačené plochy.",
+        "mistakeCs": "Samotná plocha neuděluje bez dalšího všem cyklistům přednost.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Отмечает дорожку, по которой велосипедисты пересекают дорогу.",
+        "simpleCs": "Sledujte cyklisty u vyznačené plochy.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8a",
+        "titleCs": "Přejezd pro cyklisty",
+        "titleRu": "Велосипедный переезд",
+        "titleUk": "Велосипедний переїзд",
+        "uk": "Позначає місце, де велосипедисти перетинають дорогу."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 8b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Назван запрет создавать опасность пересекающему велосипедисту и условия его въезда.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "5",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 8b",
+        "confusedWith": [],
+        "driverActionsCs": "Vnímejte dvě sousední plochy a jejich uživatele.",
+        "exceptionsCs": [],
+        "meaningCs": "Plocha cyklistů bezprostředně sousedí s přechodem chodců.",
+        "memoryCs": "Vnímejte dvě sousední plochy a jejich uživatele.",
+        "mistakeCs": "Nezaměňujte jízdu cyklisty s chůzí přes přechod.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Велосипедный переезд расположен непосредственно рядом с «зеброй».",
+        "simpleCs": "Vnímejte dvě sousední plochy a jejich uživatele.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8b",
+        "titleCs": "Přejezd pro cyklisty přimknutý k přechodu pro chodce",
+        "titleRu": "Велопереезд рядом с пешеходным переходом",
+        "titleUk": "Велопереїзд поруч із пішохідним переходом",
+        "uk": "Велосипедний переїзд розташований безпосередньо поруч із «зеброю»."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "V 8c",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Разделены разные обязанности по пешеходной и велосипедной части.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "5",
+        "54",
+        "57"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "memoryCs",
+        "mistakeCs",
+        "simpleCs"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "V 8c",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte chodce i cyklisty současně.",
+        "exceptionsCs": [],
+        "meaningCs": "Označuje sdruženou plochu pro chodce a cyklisty.",
+        "memoryCs": "Sledujte chodce i cyklisty současně.",
+        "mistakeCs": "Nehledejte nutně dvě zcela oddělené plochy.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Здесь совмещены пешеходный переход и пересечение дороги велосипедистами.",
+        "simpleCs": "Sledujte chodce i cyklisty současně.",
+        "sourceIds": [
+          "decree-294-2015"
+        ],
+        "sourceProvision": "Příloha č. 8 k vyhlášce č. 294/2015 Sb., V 8c",
+        "titleCs": "Sdružený přechod pro chodce a přejezd pro cyklisty",
+        "titleRu": "Совмещённый переход и велопереезд",
+        "titleUk": "Суміщений перехід і велопереїзд",
+        "uk": "Тут поєднані пішохідний перехід і перетин дороги велосипедистами."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 10b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Остановка и исключение ближнего сигнала отделены от разрешённого завершения переезда к дальнему.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "70",
+        "73"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 10b",
+        "confusedWith": [],
+        "driverActionsCs": "Cyklista se připraví zastavit.",
+        "exceptionsCs": [],
+        "meaningCs": "Cyklistický signál Pozor upozorňuje na změnu a vyžaduje bezpečné zastavení.",
+        "memoryCs": "Cyklista se připraví zastavit.",
+        "mistakeCs": "Žlutá neznamená zrychlit přes přejezd.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Жёлтый символ велосипеда предупреждает об остановке, если она безопасна.",
+        "simpleCs": "Cyklista se připraví zastavit.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 10b",
+        "titleCs": "Signál pro cyklisty se znamením „Pozor!“",
+        "titleRu": "Жёлтый сигнал для велосипедистов",
+        "titleUk": "Жовтий сигнал для велосипедистів",
+        "uk": "Жовтий символ велосипеда попереджає про зупинку, якщо вона безпечна."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 11a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Общее ожидание заменено запретом нового выхода/въезда; право пешехода закончить переход не потеряно.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "73",
+        "74"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 11a",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte společný symbol na signalizaci.",
+        "exceptionsCs": [],
+        "meaningCs": "Společný signál Stůj platí chodcům i cyklistům.",
+        "memoryCs": "Sledujte společný symbol na signalizaci.",
+        "mistakeCs": "Neplatí jen pro jednu ze dvou skupin.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Оба участника — пешеход и велосипедист — должны ждать.",
+        "simpleCs": "Sledujte společný symbol na signalizaci.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 11a",
+        "titleCs": "Signál pro chodce a cyklisty se znamením „Stůj!“",
+        "titleRu": "Красный для пешеходов и велосипедистов",
+        "titleUk": "Червоний для пішоходів і велосипедистів",
+        "uk": "Обидва учасники — пішохід і велосипедист — мають чекати."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 1c",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Названы обязательное уступание пешеходам/велосипедистам в свободном направлении и выбор полного сигнала справа.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "70",
+        "21"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 1c",
+        "confusedWith": [],
+        "driverActionsCs": "Jeďte jen při bezpečném průjezdu.",
+        "exceptionsCs": [],
+        "meaningCs": "Plné zelené světlo dovoluje pokračovat při dodržení ostatních pravidel.",
+        "memoryCs": "Jeďte jen při bezpečném průjezdu.",
+        "mistakeCs": "Zelená neznamená přednost před každým účastníkem.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Зелёный разрешает движение, но следите за пешеходами, встречными и безопасностью поворота.",
+        "simpleCs": "Jeďte jen při bezpečném průjezdu.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 1c",
+        "titleCs": "Signál se zeleným světlem „Volno“",
+        "titleRu": "Зелёный сигнал: движение разрешено",
+        "titleUk": "Зелений сигнал: рух дозволено",
+        "uk": "Зелений дозволяє рух, але стежте за пішоходами, зустрічними й безпекою повороту."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 2b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлена обязанность остановиться и точное исключение близости при включении сигнала.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "70"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 2b",
+        "confusedWith": [],
+        "driverActionsCs": "Je-li bezpečné zastavit, zastavte.",
+        "exceptionsCs": [],
+        "meaningCs": "Žlutá směrová šipka varuje a ukládá zastavení ve vyznačeném směru, lze-li bezpečně.",
+        "memoryCs": "Je-li bezpečné zastavit, zastavte.",
+        "mistakeCs": "Není to pokyn zrychlit do odbočení.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Жёлтая стрелка предупреждает о прекращении разрешённого движения в данном направлении.",
+        "simpleCs": "Je-li bezpečné zastavit, zastavte.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 2b",
+        "titleCs": "Signál se směrovou šipkou se žlutým světlem „Pozor!“",
+        "titleRu": "Жёлтая стрелка: внимание",
+        "titleUk": "Жовта стрілка: увага",
+        "uk": "Жовта стрілка попереджає про припинення дозволеного руху в цьому напрямку."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 3b",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Восстановлена обязанность остановиться и точное исключение близости при включении сигнала.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "70"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 3b",
+        "confusedWith": [],
+        "driverActionsCs": "Sledujte všechny vyznačené směry.",
+        "exceptionsCs": [],
+        "meaningCs": "Žlutý kombinovaný směrový signál upozorňuje na změnu pro vyznačené směry.",
+        "memoryCs": "Sledujte všechny vyznačené směry.",
+        "mistakeCs": "Žlutá stále není trvalé povolení odbočení.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Жёлтые стрелки требуют внимания и остановки, если она безопасна, для указанных направлений.",
+        "simpleCs": "Sledujte všechny vyznačené směry.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 3b",
+        "titleCs": "Signál s kombinovanou směrovou šipkou se žlutým světlem „Pozor!“",
+        "titleRu": "Жёлтая комбинированная стрелка",
+        "titleUk": "Жовта комбінована стрілка",
+        "uk": "Жовті стрілки вимагають уваги й зупинки, якщо вона безпечна, для зазначених напрямків."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 5",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Условие ограничено красным/жёлтым; названы конкретные уступание и защита пешеходов.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "70"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 5",
+        "confusedWith": [],
+        "driverActionsCs": "Při jízdě po šipce dejte přednost dotčeným účastníkům.",
+        "exceptionsCs": [],
+        "meaningCs": "Doplňková zelená šipka dovoluje směr šipky za stanovených podmínek i při jiném hlavním světle.",
+        "memoryCs": "Při jízdě po šipce dejte přednost dotčeným účastníkům.",
+        "mistakeCs": "Doplňková šipka není totéž co zelený směrový signál.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Можно ехать по стрелке, соблюдая особую осторожность и пропуская тех, кому это положено.",
+        "simpleCs": "Při jízdě po šipce dejte přednost dotčeným účastníkům.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 5",
+        "titleCs": "Doplňková zelená šipka",
+        "titleRu": "Дополнительная зелёная стрелка",
+        "titleUk": "Додаткова зелена стрілка",
+        "uk": "Можна їхати за стрілкою, дотримуючись особливої обережності й пропускаючи тих, кому це належить."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 8a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Запрет использования распространяется и на уже находящегося в полосе водителя.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "71"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "driverActionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "simpleCs",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 8a",
+        "confusedWith": [],
+        "driverActionsCs": "Nevjíždějte do uzavřeného pruhu.",
+        "exceptionsCs": [],
+        "meaningCs": "Světelný signál nad pruhem zakazuje do tohoto pruhu vjet.",
+        "memoryCs": "Nevjíždějte do uzavřeného pruhu.",
+        "mistakeCs": "Signál nad pruhem není zákaz pro celou vozovku.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Показанная полоса закрыта для въезда; выберите другую разрешённую.",
+        "simpleCs": "Nevjíždějte do uzavřeného pruhu.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 8a",
+        "titleCs": "Zakázaný vjezd vozidel do jízdního pruhu",
+        "titleRu": "Закрытая полоса",
+        "titleUk": "Закрита смуга",
+        "uk": "Позначена смуга закрита для в’їзду; оберіть іншу дозволену."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    },
+    {
+      "sign_code": "S 9a",
+      "previous_overall": "RISK",
+      "adjudicated_before_fix": "RISK",
+      "reclassification_reason": null,
+      "resolution": "Красный запрещает новый выход, а не требует остановки уже переходящего пешехода.",
+      "reviewed_overall": "OK",
+      "additional_law_sections": [
+        "74"
+      ],
+      "changed_fields": [
+        "checkedAt",
+        "exceptionsCs",
+        "meaningCs",
+        "memoryCs",
+        "mistakeCs",
+        "ru",
+        "uk"
+      ],
+      "before_card": {
+        "checkedAt": "2026-09-27",
+        "code": "S 9a",
+        "confusedWith": [],
+        "driverActionsCs": "Jako řidič přesto sledujte osoby u přechodu.",
+        "exceptionsCs": [],
+        "meaningCs": "Chodecký signál Stůj zakazuje chodci vstup na vozovku.",
+        "memoryCs": "Jako řidič přesto sledujte osoby u přechodu.",
+        "mistakeCs": "Červená pro chodce nedává řidiči povolení jet proti svému signálu.",
+        "questionLinks": [],
+        "reviewStatus": "LEGAL_ANNEX_VERIFIED",
+        "ru": "Красная фигура требует от пешеходов ждать на месте.",
+        "simpleCs": "Jako řidič přesto sledujte osoby u přechodu.",
+        "sourceIds": [
+          "decree-294-2015",
+          "act-361-2000"
+        ],
+        "sourceProvision": "Příloha č. 9 k vyhlášce č. 294/2015 Sb., S 9a",
+        "titleCs": "Signál pro chodce se znamením „Stůj!“",
+        "titleRu": "Красный сигнал для пешеходов",
+        "titleUk": "Червоний сигнал для пішоходів",
+        "uk": "Червона фігура вимагає від пішоходів чекати на місці."
+      },
+      "cs_ru_ua_review": "REVIEWED"
+    }
+  ]
+}
