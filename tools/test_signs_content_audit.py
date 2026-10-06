@@ -1,6 +1,7 @@
 """Coverage and failure-mode checks for the production content audit guard."""
 import copy
 import csv
+from collections import Counter
 import unittest
 
 from validate_signs_content_audit import (
@@ -23,6 +24,20 @@ class SignsContentAuditTest(unittest.TestCase):
     def assert_rejected(self, mutate, expected):
         with self.assertRaisesRegex(AuditValidationError, expected):
             validate_core(**self.changed_audit(mutate))
+
+    @staticmethod
+    def finding(audit, verdict):
+        # Negative cases must still test RISK/WRONG when production has none.
+        row = audit['records'][0]
+        row.update(overall=verdict,
+                   legal={'IMPROVE': 'LEGAL_OK', 'RISK': 'LEGAL_RISK', 'WRONG': 'LEGAL_WRONG'}[verdict],
+                   pedagogy='PEDAGOGY_IMPROVE', reasons=['Synthetic negative-test finding'],
+                   proposed_correction=[dict(block='meaning', operation='replace',
+                                             **row['displayed_blocks']['meaning'])])
+        for field in ('legal', 'pedagogy', 'overall', 'confidence'):
+            counts = Counter(r[field] for r in audit['records'])
+            audit['counts'][field] = {k: counts[k] for k in audit['counts'][field]}
+        return row
 
     def test_complete_checked_in_audit_and_exports(self):
         validate()
@@ -48,17 +63,17 @@ class SignsContentAuditTest(unittest.TestCase):
     def test_reject_risk_wrong_without_reason(self):
         for verdict in ('RISK', 'WRONG'):
             with self.subTest(verdict=verdict):
-                self.assert_rejected(lambda a: next(r for r in a['records'] if r['overall'] == verdict)
-                                     .update(reasons=[]), 'requires a reason')
+                self.assert_rejected(lambda a: self.finding(a, verdict).update(reasons=[]),
+                                     'requires a reason')
 
     def test_reject_each_required_proposal_and_language(self):
         for verdict in ('IMPROVE', 'RISK', 'WRONG'):
             with self.subTest(verdict=verdict):
-                self.assert_rejected(lambda a: next(r for r in a['records'] if r['overall'] == verdict)
-                                     .update(proposed_correction=[]), 'proposed correction required')
+                self.assert_rejected(lambda a: self.finding(a, verdict).update(proposed_correction=[]),
+                                     'proposed correction required')
         for lang in ('cs', 'ru', 'ua'):
             with self.subTest(lang=lang):
-                self.assert_rejected(lambda a: next(r for r in a['records'] if r['overall'] == 'RISK')
+                self.assert_rejected(lambda a: self.finding(a, 'RISK')
                                      ['proposed_correction'][0].update({lang: ' '}), f'corrected {lang}')
 
     def test_reject_changed_production(self):
@@ -83,13 +98,31 @@ class SignsContentAuditTest(unittest.TestCase):
 
     def test_reject_summary_missing_risk_and_wrong_count(self):
         summary = (ROOT / AUDIT_DIR / 'signs-content-audit-summary.md').read_text(encoding='utf-8')
-        code = next(r['sign_code'] for r in self.bundle['audit']['records'] if r['overall'] == 'RISK')
-        changed = summary.replace(f'| {code} |', '| B 999 |', 1)
+        # Test the full nonempty list against an intentionally omitted row.
+        synthetic = copy.deepcopy(self.bundle['audit'])
+        self.finding(synthetic, 'RISK')
+        changed = summary
+        for field in ('legal', 'pedagogy', 'overall', 'confidence'):
+            for value, count in self.bundle['audit']['counts'][field].items():
+                changed = changed.replace(f'| {value} | {count} |',
+                                          f'| {value} | {synthetic["counts"][field][value]} |')
         with self.assertRaisesRegex(AuditValidationError, 'RISK list differs'):
-            validate_summary(self.bundle['audit'], changed)
-        changed = summary.replace('| HIGH | 389 |', '| HIGH | 388 |')
+            validate_summary(synthetic, changed)
+        high = self.bundle['audit']['counts']['confidence']['HIGH']
+        changed = summary.replace(f'| HIGH | {high} |', f'| HIGH | {high-1} |')
         with self.assertRaisesRegex(AuditValidationError, 'Summary count differs'):
             validate_summary(self.bundle['audit'], changed)
+
+    def test_revision_decisions_and_translation_review_are_required(self):
+        from validate_signs_content_audit import read_json, validate_revision
+        decisions = read_json(ROOT / AUDIT_DIR / 'production-revision-decisions.json')
+        for field, value, error in [('cs_ru_ua_review', 'PENDING', 'not reviewed'),
+                                    ('changed_fields', [], 'field list differs')]:
+            with self.subTest(field=field):
+                changed = copy.deepcopy(decisions)
+                changed['records'][0][field] = value
+                with self.assertRaisesRegex(AuditValidationError, error):
+                    validate_revision(self.bundle['audit']['records'], changed)
 
 
 if __name__ == '__main__':

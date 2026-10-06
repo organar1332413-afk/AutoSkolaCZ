@@ -58,7 +58,8 @@
       "vozidlo",
       "vozidlu",
       "vozidly",
-      "vozidlům"
+      "vozidlům",
+      "vozidlech"
     ],
     "translations": [
       {
@@ -104,7 +105,7 @@
     "id": "sign-word-ca978112ca1bbdca",
     "lemma": "a",
     "context": "road_traffic",
-    "exampleCs": "Přibližujte se k přechodu pozorně a včas sledujte chodce.",
+    "exampleCs": "Upozorňuje na přechod, který by řidič jinak neočekával a který není viditelný z dostatečné vzdálenosti.",
     "forms": [
       "a"
     ],
@@ -221,7 +222,7 @@
     "id": "sign-word-5c85bb36f3869809",
     "lemma": "ale",
     "context": "road_traffic",
-    "exampleCs": "Déšť mohl skončit, ale vozovka zůstává mokrá.",
+    "exampleCs": "S tabulkou „Jediné vozidlo ... t“ lze překročit mez na značce, ale ne mez na tabulce. U soupravy se pro tuto tabulku sčítají okamžité hmotnosti všech vozidel.",
     "forms": [
       "ale"
     ],
@@ -244,7 +245,7 @@
     "id": "sign-word-96ec17f299fc23dd",
     "lemma": "alespoň",
     "context": "road_traffic",
-    "exampleCs": "Nechte alespoň vyznačenou vzdálenost od předcházejícího vozidla.",
+    "exampleCs": "Platí pro nákladní automobily s největší povolenou hmotností přes 3500 kg a traktory s touto hmotností přes 3500 kg a konstrukční rychlostí alespoň 80 km/h.",
     "forms": [
       "alespoň"
     ],
@@ -290,7 +291,7 @@
     "id": "sign-word-5eb59fe89054e538",
     "lemma": "ano",
     "context": "road_traffic",
-    "exampleCs": "Trojúhelník: přednost ano, povinné zastavení ne.",
+    "exampleCs": "Slovo „ano“ v dopravním kontextu.",
     "forms": [
       "ano"
     ],
@@ -392,9 +393,10 @@
     "id": "sign-word-87bfb81c01fb8a8e",
     "lemma": "automatický",
     "context": "road_traffic",
-    "exampleCs": "Zastavení není automaticky povinné; rozhoduje možnost bezpečně dát přednost.",
+    "exampleCs": "Po konci neplatí automaticky společný režim C 9a.",
     "forms": [
       "automaticky",
+      "automatická",
       "automatické",
       "automatický"
     ],
@@ -424,7 +426,8 @@
       "automobilová",
       "automobilu",
       "automobily",
-      "automobilů"
+      "automobilů",
+      "automobilům"
     ],
     "translations": [
       {
@@ -538,7 +541,7 @@
     "id": "sign-word-6db3101af99d0ab8",
     "lemma": "bezpečnost",
     "context": "road_traffic",
-    "exampleCs": "Rychlost pod vyznačenou hodnotu volte, když to vyžaduje bezpečnost nebo provoz.",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
     "forms": [
       "bezpečnost",
       "bezpečnosti"
@@ -566,7 +569,9 @@
     "forms": [
       "bezpečnou",
       "bezpečné",
+      "bezpečného",
       "bezpečném",
+      "bezpečnému",
       "bezpečný",
       "bezpečně",
       "bezpečí"
@@ -860,6 +865,7 @@
     "forms": [
       "bude",
       "buďte",
+      "by",
       "bylo",
       "byste",
       "být",
@@ -867,6 +873,8 @@
       "je",
       "je-li",
       "jsou",
+      "jsou-li",
+      "jste",
       "jste-li"
     ],
     "translations": [
@@ -888,10 +896,12 @@
     "id": "sign-word-52e8276b0696143b",
     "lemma": "bílý",
     "context": "road_traffic",
-    "exampleCs": "Bílá tabule s názvem zahajuje obec.",
+    "exampleCs": "Váš směr ukazuje bílá šipka.",
     "forms": [
       "bílá",
       "bílé",
+      "bílého",
+      "bílém",
       "bílý",
       "bílým"
     ],
@@ -1016,7 +1026,7 @@
     "id": "sign-word-60435b3d92ede161",
     "lemma": "celý",
     "context": "road_traffic",
-    "exampleCs": "Signál nad pruhem není zákaz pro celou vozovku.",
+    "exampleCs": "Je-li značka nad vozovkou, platí pro celou její šířku v daném směru.",
     "forms": [
       "celou",
       "celá",
@@ -1169,7 +1179,7 @@
     "id": "sign-word-48685ac0a3de8080",
     "lemma": "chodník",
     "context": "road_traffic",
-    "exampleCs": "Umístěte vozidlo podle symbolu, ne celé na chodník.",
+    "exampleCs": "Chodci musí používat především chodník nebo stezku pro chodce. Jiní účastníci je nesmějí užívat, pokud zákon nestanoví výjimku.",
     "forms": [
       "chodník",
       "chodníku"
@@ -1193,7 +1203,7 @@
     "id": "sign-word-235b4cec2f5a28dc",
     "lemma": "chůze",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte jízdu cyklisty s chůzí přes přechod.",
+    "exampleCs": "Slovo „chůze“ v dopravním kontextu.",
     "forms": [
       "chůze",
       "chůzí"
@@ -1240,7 +1250,7 @@
     "id": "sign-word-49eb0c5323382440",
     "lemma": "cyklista",
     "context": "road_traffic",
-    "exampleCs": "Cyklista se připraví zastavit.",
+    "exampleCs": "Cyklista může použít pěší pruh při objíždění, předjíždění, otáčení, odbočování a vjíždění na stezku; nesmí ohrozit chodce.",
     "forms": [
       "cyklista",
       "cyklistovi",
@@ -1273,6 +1283,7 @@
     "forms": [
       "cyklistickou",
       "cyklistické",
+      "cyklistického",
       "cyklistický"
     ],
     "translations": [
@@ -1294,7 +1305,7 @@
     "id": "sign-word-1da22e52eec530ac",
     "lemma": "cyklostezka",
     "context": "road_traffic",
-    "exampleCs": "Nejde o konec každé cyklostezky za zónou.",
+    "exampleCs": "Slovo „cyklostezka“ v dopravním kontextu.",
     "forms": [
       "cyklostezka",
       "cyklostezky"
@@ -1397,8 +1408,9 @@
     "id": "sign-word-a1ea134db4cc3c78",
     "lemma": "daný",
     "context": "road_traffic",
-    "exampleCs": "Neprojíždějte jen proto, že v daný okamžik jedno světlo nesvítí.",
+    "exampleCs": "Je-li značka nad vozovkou, platí pro celou její šířku v daném směru.",
     "forms": [
+      "daném",
       "daný"
     ],
     "translations": [
@@ -1521,7 +1533,7 @@
     "id": "sign-word-8f46cde4d50b26d4",
     "lemma": "denní",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte tento příkaz s běžným denním svícením.",
+    "exampleCs": "Samotné denní svícení nestačí.",
     "forms": [
       "denní",
       "denním"
@@ -1664,11 +1676,12 @@
     "id": "sign-word-7712f3c4dc3abeb4",
     "lemma": "doba",
     "context": "road_traffic",
-    "exampleCs": "Vjezd určených vozidel může být povolen uvedeným symbolem a dobou.",
+    "exampleCs": "Značka platí bez ohledu na datum a počasí; tabulka může určit jinou dobu platnosti. Výjimka se týká náhradní pneumatiky pro nouzové dojetí.",
     "forms": [
       "doba",
       "dobou",
-      "dobu"
+      "dobu",
+      "době"
     ],
     "translations": [
       {
@@ -1762,7 +1775,7 @@
     "id": "sign-word-8507c80fa69f013e",
     "lemma": "dodržet",
     "context": "road_traffic",
-    "exampleCs": "Plné zelené světlo dovoluje pokračovat při dodržení ostatních pravidel.",
+    "exampleCs": "Plná zelená dovoluje pokračovat při dodržení pravidel odbočování a ostatních povinností.",
     "forms": [
       "dodržení",
       "dodržet",
@@ -1815,7 +1828,7 @@
     "id": "sign-word-1119af568ab2c890",
     "lemma": "dolní",
     "context": "road_traffic",
-    "exampleCs": "Před vjezdem přečtěte dolní pole s výjimkami pro vozidla.",
+    "exampleCs": "Slovo „dolní“ v dopravním kontextu.",
     "forms": [
       "dolní"
     ],
@@ -1838,7 +1851,7 @@
     "id": "sign-word-a4f3be9ffba255ef",
     "lemma": "dům",
     "context": "road_traffic",
-    "exampleCs": "Nevykládejte ji jako pouhé upozornění na obytné domy.",
+    "exampleCs": "Slovo „dům“ v dopravním kontextu.",
     "forms": [
       "domy",
       "dům"
@@ -2015,7 +2028,7 @@
     "id": "sign-word-bfc90fb611a6f915",
     "lemma": "doprava",
     "context": "road_traffic",
-    "exampleCs": "Parkoviště navazuje na veřejnou hromadnou dopravu.",
+    "exampleCs": "V úseku procházejícím obcí je pro veřejnou hromadnou dopravu výjimka od 65 km/h konstrukční rychlosti.",
     "forms": [
       "doprava",
       "dopravu",
@@ -2090,7 +2103,7 @@
     "id": "sign-word-1ca3d987c911fee1",
     "lemma": "dotčený",
     "context": "road_traffic",
-    "exampleCs": "Jste-li v dotčeném vozidle, držte se pravého pruhu s výjimkou nutného objíždění.",
+    "exampleCs": "Zakazuje dotčeným nákladním automobilům a traktorům předjíždět motorové vozidlo vlevo.",
     "forms": [
       "dotčeném",
       "dotčený",
@@ -2115,10 +2128,12 @@
     "id": "sign-word-a78f8752cbbe35f6",
     "lemma": "dovolit",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje jízdu na osobním přepravníku; jeho vedení jako chodec je dovoleno.",
+    "exampleCs": "Dovolena jsou motorová vozidla a soupravy s konstrukční rychlostí alespoň 80 km/h; to není povinnost stále jet 80 km/h.",
     "forms": [
+      "dovolena",
       "dovoleno",
       "dovolenou",
+      "dovoleny",
       "dovolená",
       "dovolené",
       "dovolených",
@@ -2197,11 +2212,12 @@
     "id": "sign-word-d5f2842b4e153697",
     "lemma": "druhý",
     "context": "road_traffic",
-    "exampleCs": "Chodci a cyklisté sdílejí plochu; počítejte s druhou skupinou.",
+    "exampleCs": "Neaplikujte druhé odbočení na první křižovatku.",
     "forms": [
       "druhou",
       "druhé",
       "druhého",
+      "druhém",
       "druhý"
     ],
     "translations": [
@@ -2227,7 +2243,8 @@
     "forms": [
       "dráha",
       "dráhou",
-      "dráhu"
+      "dráhu",
+      "dráhy"
     ],
     "translations": [
       {
@@ -2272,7 +2289,7 @@
     "id": "sign-word-d27a5f4846f9a2e4",
     "lemma": "dva",
     "context": "road_traffic",
-    "exampleCs": "Dva šikmé pruhy označují přiblížení k přejezdu ze vzdálenosti 160 m.",
+    "exampleCs": "Dva pruhy jsou uprostřed řady.",
     "forms": [
       "dva",
       "dvou",
@@ -2345,7 +2362,7 @@
     "id": "sign-word-caac3b23530e4961",
     "lemma": "dvojí",
     "context": "road_traffic",
-    "exampleCs": "Rozlišujte tento dvojí údaj od jednotlivých tabulek.",
+    "exampleCs": "Dvojí údaj není dvojí platba pro každého.",
     "forms": [
       "dvojí",
       "dvojímu"
@@ -2393,10 +2410,11 @@
     "id": "sign-word-7b8ff8e0e517c4b7",
     "lemma": "dálkový",
     "context": "road_traffic",
-    "exampleCs": "Dálková návěst s šipkou",
+    "exampleCs": "Rozsviťte obrysová a potkávací nebo dálková světla, pokud je jimi vozidlo vybaveno. Dálkovými nesmíte oslňovat.",
     "forms": [
       "dálková",
-      "dálkový"
+      "dálkový",
+      "dálkovými"
     ],
     "translations": [
       {
@@ -2856,7 +2874,8 @@
     "exampleCs": "Zákaz vjezdu vozidel, jejichž okamžitá hmotnost přesahuje vyznačenou mez",
     "forms": [
       "hmotnost",
-      "hmotnosti"
+      "hmotnosti",
+      "hmotností"
     ],
     "translations": [
       {
@@ -2877,9 +2896,10 @@
     "id": "sign-word-1ee656049b7de239",
     "lemma": "hnací",
     "context": "road_traffic",
-    "exampleCs": "Přikazuje nasadit sněhové řetězy na nejméně dvě hnací kola motorového vozidla se třemi a více koly.",
+    "exampleCs": "Nad 3500 kg musí být na všech kolech hnacích náprav s trvalým přenosem hnací síly a dezén nejméně 6 mm. Jde o maximální přípustnou hmotnost vozidla.",
     "forms": [
-      "hnací"
+      "hnací",
+      "hnacích"
     ],
     "translations": [
       {
@@ -2903,6 +2923,7 @@
     "exampleCs": "Zakazuje jízdu, vedení i hnaní zvířete za značkou.",
     "forms": [
       "hnaní",
+      "hnaných",
       "hnát"
     ],
     "translations": [
@@ -3067,7 +3088,7 @@
     "id": "sign-word-40dd7018bbffdefb",
     "lemma": "hromadný",
     "context": "road_traffic",
-    "exampleCs": "Parkoviště navazuje na veřejnou hromadnou dopravu.",
+    "exampleCs": "V úseku procházejícím obcí je pro veřejnou hromadnou dopravu výjimka od 65 km/h konstrukční rychlosti.",
     "forms": [
       "hromadnou",
       "hromadné",
@@ -3092,7 +3113,7 @@
     "id": "sign-word-cb6941a24018fc40",
     "lemma": "hrot",
     "context": "road_traffic",
-    "exampleCs": "Nevztahuje se na vozidla s pneumatikami s protiskluzovými hroty.",
+    "exampleCs": "Příkaz se nevztahuje na vozidla s pneumatikami s protiskluzovými hroty.",
     "forms": [
       "hrot",
       "hroty"
@@ -3187,7 +3208,7 @@
     "id": "sign-word-de7d1b721a1e0632",
     "lemma": "i",
     "context": "road_traffic",
-    "exampleCs": "Varuje před častým pohybem nebo přecházením chodců i mimo přechod.",
+    "exampleCs": "Nehledejte pouze vyznačený přechod; dítě se může objevit i jinde.",
     "forms": [
       "i"
     ],
@@ -3210,7 +3231,7 @@
     "id": "sign-word-a6b9493e8de81174",
     "lemma": "ignorovat",
     "context": "road_traffic",
-    "exampleCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+    "exampleCs": "Nezaměňujte symbol s povolením ignorovat přechod.",
     "forms": [
       "ignorovat"
     ],
@@ -3307,7 +3328,8 @@
     "exampleCs": "Informuje, že tato komunikace již na nejbližší křižovatce není hlavní.",
     "forms": [
       "informovat",
-      "informuje"
+      "informuje",
+      "informujte"
     ],
     "translations": [
       {
@@ -3399,7 +3421,7 @@
     "id": "sign-word-753ad2121ea8ef50",
     "lemma": "jít",
     "context": "road_traffic",
-    "exampleCs": "Jde o hygienický servis, nikoli běžnou opravnu.",
+    "exampleCs": "Nad 3500 kg musí být na všech kolech hnacích náprav s trvalým přenosem hnací síly a dezén nejméně 6 mm. Jde o maximální přípustnou hmotnost vozidla.",
     "forms": [
       "jde",
       "jdoucích",
@@ -3424,7 +3446,7 @@
     "id": "sign-word-a64f46febefb8eca",
     "lemma": "jet",
     "context": "road_traffic",
-    "exampleCs": "Odděluje protisměr; řidič jede vpravo a čáru nepřejíždí kromě nutného objíždění.",
+    "exampleCs": "Cyklista musí před vjezdem ověřit bezpečnost a nesmí donutit přijíždějící řidiče k náhlé změně směru nebo rychlosti. Na přejezdu jede vpravo.",
     "forms": [
       "jede",
       "jedete",
@@ -3450,7 +3472,7 @@
     "id": "sign-word-77b2883fafabdd43",
     "lemma": "jeden",
     "context": "road_traffic",
-    "exampleCs": "Jeden šikmý pruh označuje přiblížení k přejezdu ze vzdálenosti 80 m.",
+    "exampleCs": "Jeden pruh je nejblíže přejezdu.",
     "forms": [
       "jeden",
       "jedna",
@@ -3480,7 +3502,7 @@
     "id": "sign-word-e1ccef25eda1d0d2",
     "lemma": "jediný",
     "context": "road_traffic",
-    "exampleCs": "Tabulka „Jediné vozidlo ... t“ může stanovit zvláštní mez pro jednotlivé vozidlo.",
+    "exampleCs": "S tabulkou „Jediné vozidlo ... t“ lze překročit mez na značce, ale ne mez na tabulce. U soupravy se pro tuto tabulku sčítají okamžité hmotnosti všech vozidel.",
     "forms": [
       "jediné",
       "jediný"
@@ -3504,7 +3526,7 @@
     "id": "sign-word-faa6cf71ec4b00c6",
     "lemma": "jednodenní",
     "context": "road_traffic",
-    "exampleCs": "Mýtné není prostá jednodenní parkovací platba.",
+    "exampleCs": "Slovo „jednodenní“ v dopravním kontextu.",
     "forms": [
       "jednodenní"
     ],
@@ -3624,7 +3646,7 @@
     "id": "sign-word-1b514226a9674626",
     "lemma": "jednotlivý",
     "context": "road_traffic",
-    "exampleCs": "Srovnejte skutečnou hmotnost s údajem; u soupravy posuďte pravidlo pro jednotlivá vozidla a tabulku.",
+    "exampleCs": "Rozlišujte jednotlivé křižovatky v pořadí.",
     "forms": [
       "jednotlivá",
       "jednotlivé",
@@ -3653,6 +3675,7 @@
     "exampleCs": "Ukončuje zákazy stanovené pro jedoucí vozidla.",
     "forms": [
       "jedoucí",
+      "jedoucího",
       "jedoucími"
     ],
     "translations": [
@@ -3702,8 +3725,10 @@
     "forms": [
       "jej",
       "ji",
+      "ni",
       "ní",
       "ním",
+      "něj",
       "něm",
       "němu",
       "němž",
@@ -3728,7 +3753,7 @@
     "id": "sign-word-79e9e90241e9ce9a",
     "lemma": "jejich",
     "context": "road_traffic",
-    "exampleCs": "Počítejte s jejich náhlým vjezdem do vozovky.",
+    "exampleCs": "Upozorňuje na zvýšený výskyt chodců nebo jejich časté přecházení mimo přechod.",
     "forms": [
       "jejich",
       "jejichž"
@@ -3757,7 +3782,8 @@
       "její",
       "jejích",
       "jejího",
-      "jejím"
+      "jejím",
+      "jejímu"
     ],
     "translations": [
       {
@@ -3852,6 +3878,8 @@
     "forms": [
       "jezdce",
       "jezdcem",
+      "jezdců",
+      "jezdcům",
       "jezdec"
     ],
     "translations": [
@@ -3896,7 +3924,7 @@
     "id": "sign-word-ac1c1cbfe304b91a",
     "lemma": "jinak",
     "context": "road_traffic",
-    "exampleCs": "Upozorňuje na zvedací nebo jinak pohyblivý most.",
+    "exampleCs": "Upozorňuje na přechod, který by řidič jinak neočekával a který není viditelný z dostatečné vzdálenosti.",
     "forms": [
       "jinak"
     ],
@@ -3950,6 +3978,7 @@
       "jiného",
       "jiném",
       "jinému",
+      "jiní",
       "jiný",
       "jiných",
       "jiným",
@@ -4169,7 +4198,7 @@
     "id": "sign-word-dd1fdff1ccc34854",
     "lemma": "kategorie",
     "context": "road_traffic",
-    "exampleCs": "Kategorie tunelu",
+    "exampleCs": "S vozidlem kategorie M nebo N pokračujte jen se zimními pneumatikami splňujícími předepsané podmínky.",
     "forms": [
       "kategorie",
       "kategorii",
@@ -4247,7 +4276,7 @@
     "id": "sign-word-41f02f8ffa5151be",
     "lemma": "kdekoli",
     "context": "road_traffic",
-    "exampleCs": "Nejde o obecné povolení stát kdekoli na chodníku.",
+    "exampleCs": "Slovo „kdekoli“ v dopravním kontextu.",
     "forms": [
       "kdekoli"
     ],
@@ -4510,6 +4539,7 @@
       "kol",
       "kola",
       "kole",
+      "kolech",
       "kolo",
       "koly"
     ],
@@ -4632,7 +4662,7 @@
     "id": "sign-word-aba46761be1dc61e",
     "lemma": "kombinace",
     "context": "road_traffic",
-    "exampleCs": "Před přejezdem lze použít v kombinaci s výstražným křížem.",
+    "exampleCs": "Slovo „kombinace“ v dopravním kontextu.",
     "forms": [
       "kombinace",
       "kombinaci"
@@ -4703,7 +4733,7 @@
     "id": "sign-word-959e3b370f8508ad",
     "lemma": "kdo",
     "context": "road_traffic",
-    "exampleCs": "Symbol určuje, komu je pruh přikázán.",
+    "exampleCs": "Kdo začal přecházet na zelenou, smí dokončit přecházení k zařízení s tímto signálem.",
     "forms": [
       "kdo",
       "komu"
@@ -4828,7 +4858,7 @@
     "id": "sign-word-7895e81ce729de10",
     "lemma": "konstrukčně",
     "context": "road_traffic",
-    "exampleCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
+    "exampleCs": "Slovo „konstrukčně“ v dopravním kontextu.",
     "forms": [
       "konstrukčně"
     ],
@@ -5092,7 +5122,7 @@
     "id": "sign-word-d7ccf4848f1a0d15",
     "lemma": "kromě",
     "context": "road_traffic",
-    "exampleCs": "Vjezd motorových vozidel je zakázán kromě motocyklů bez postranního vozíku.",
+    "exampleCs": "Viditelný či slyšitelný přijíždějící vlak také zakazuje vjezd, kromě případu přerušovaného bílého světla.",
     "forms": [
       "kromě"
     ],
@@ -5222,6 +5252,7 @@
       "která",
       "které",
       "kterého",
+      "kterému",
       "který"
     ],
     "translations": [
@@ -5415,7 +5446,7 @@
     "id": "sign-word-a943b925d0ac6cd4",
     "lemma": "ledaže",
     "context": "road_traffic",
-    "exampleCs": "Plné žluté světlo znamená pozor a povinnost zastavit, ledaže již nelze bezpečně zastavit.",
+    "exampleCs": "Jako cyklista stezku v daném místě a směru použijte, ledaže by tím mohla být ohrožena bezpečnost nebo plynulost provozu.",
     "forms": [
       "ledaže"
     ],
@@ -5583,7 +5614,7 @@
     "id": "sign-word-e272c9402fe94567",
     "lemma": "lze",
     "context": "road_traffic",
-    "exampleCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+    "exampleCs": "Přesto sledujte, zda lze úsek skutečně projet bezpečně.",
     "forms": [
       "lze",
       "lze-li"
@@ -5655,7 +5686,7 @@
     "id": "sign-word-0796f793307c2878",
     "lemma": "nikdo",
     "context": "road_traffic",
-    "exampleCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+    "exampleCs": "Používejte pruh určený pro svou skupinu. Do druhého pruhu vstupujte nebo vjíždějte jen v dovolených případech a nikoho v něm neohrozte.",
     "forms": [
       "nikdo",
       "nikoho"
@@ -5679,7 +5710,7 @@
     "id": "sign-word-04e027e4990a203f",
     "lemma": "bus",
     "context": "road_traffic",
-    "exampleCs": "Záměna nápisu BUS za TAXI mění určení místa.",
+    "exampleCs": "Slovo „bus“ v dopravním kontextu.",
     "forms": [
       "bus"
     ],
@@ -5726,7 +5757,7 @@
     "id": "sign-word-3e6bd558558bb2b7",
     "lemma": "manévr",
     "context": "road_traffic",
-    "exampleCs": "Neomezujte význam značky jen na samotný manévr předjíždění.",
+    "exampleCs": "Otočka je samostatný manévr.",
     "forms": [
       "manévr",
       "manévru"
@@ -5847,7 +5878,8 @@
     "context": "road_traffic",
     "exampleCs": "Zákaz vjezdu vozidel, jejichž okamžitá hmotnost přesahuje vyznačenou mez",
     "forms": [
-      "mez"
+      "mez",
+      "mezí"
     ],
     "translations": [
       {
@@ -5939,7 +5971,7 @@
     "id": "sign-word-7dd887dc71b51e81",
     "lemma": "mimo",
     "context": "road_traffic",
-    "exampleCs": "Varuje před častým pohybem nebo přecházením chodců i mimo přechod.",
+    "exampleCs": "Upozorňuje na zvýšený výskyt chodců nebo jejich časté přecházení mimo přechod.",
     "forms": [
       "mimo"
     ],
@@ -6009,7 +6041,7 @@
     "id": "sign-word-6ce934296d2838e2",
     "lemma": "minimální",
     "context": "road_traffic",
-    "exampleCs": "Spolu s vodorovnou značkou ukazuje minimální odstup mezi jedoucími vozidly.",
+    "exampleCs": "Dvě šipky mezi vozidly ukazují minimální odstup za běžných podmínek.",
     "forms": [
       "minimální"
     ],
@@ -6032,7 +6064,7 @@
     "id": "sign-word-f1b16661f7edcdb1",
     "lemma": "ministerstvo",
     "context": "road_traffic",
-    "exampleCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
+    "exampleCs": "Slovo „ministerstvo“ v dopravním kontextu.",
     "forms": [
       "ministerstvo"
     ],
@@ -6055,7 +6087,7 @@
     "id": "sign-word-42660169a7178667",
     "lemma": "mizet",
     "context": "road_traffic",
-    "exampleCs": "Nečekejte až na konec mizícího pruhu.",
+    "exampleCs": "Slovo „mizet“ v dopravním kontextu.",
     "forms": [
       "mizet",
       "mizícího"
@@ -6151,10 +6183,11 @@
     "id": "sign-word-3817f566191bf851",
     "lemma": "modrý",
     "context": "road_traffic",
-    "exampleCs": "Modrá šipka je na vaší straně.",
+    "exampleCs": "Modrá automobilová značka je jiná než dálnice.",
     "forms": [
       "modrá",
       "modré",
+      "modrém",
       "modrý"
     ],
     "translations": [
@@ -6180,6 +6213,7 @@
     "forms": [
       "moci",
       "mohl",
+      "mohla",
       "mohli",
       "mohou",
       "může",
@@ -6304,7 +6338,7 @@
     "id": "sign-word-851230bb157e7ed2",
     "lemma": "motorový",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte dálnici se silnicí pro motorová vozidla.",
+    "exampleCs": "Patří-li vaše vozidlo do této skupiny, nepředjíždějte motorová vozidla vlevo. Při dvou a více pruzích v jednom směru užijte pravý pruh; jiný jen při nutném objíždění.",
     "forms": [
       "motorová",
       "motorové",
@@ -6332,7 +6366,7 @@
     "id": "sign-word-d425199a38d05148",
     "lemma": "možnost",
     "context": "road_traffic",
-    "exampleCs": "Zastavení není automaticky povinné; rozhoduje možnost bezpečně dát přednost.",
+    "exampleCs": "Nezaměňujte možnost poplatku za automatický zákaz každého vjezdu.",
     "forms": [
       "možnost",
       "možnosti"
@@ -6356,7 +6390,7 @@
     "id": "sign-word-a182b82e56919c70",
     "lemma": "možný",
     "context": "road_traffic",
-    "exampleCs": "V následující křižovatce ukazuje zakázaný směr a možnou objížďku.",
+    "exampleCs": "Sledujte okraje vozovky a možné místo pro přecházení.",
     "forms": [
       "možnou",
       "možné",
@@ -6387,6 +6421,7 @@
     "forms": [
       "museli",
       "muset",
+      "musí",
       "musíte"
     ],
     "translations": [
@@ -6461,6 +6496,7 @@
     "forms": [
       "míst",
       "místa",
+      "místech",
       "místem",
       "místo",
       "místu",
@@ -6537,7 +6573,7 @@
     "id": "sign-word-366ad3bc664901a9",
     "lemma": "mýtný",
     "context": "road_traffic",
-    "exampleCs": "Rozlišujte časový poplatek a mýtné.",
+    "exampleCs": "Bez mýtného",
     "forms": [
       "mýtné",
       "mýtného",
@@ -6564,7 +6600,7 @@
     "id": "sign-word-e3b20d800285fa6c",
     "lemma": "měnit",
     "context": "road_traffic",
-    "exampleCs": "Před pokračováním ověřte zákonné podmínky zimní výbavy; tabulka může měnit dobu platnosti.",
+    "exampleCs": "Sesednutí mění způsob pohybu.",
     "forms": [
       "měnit",
       "mění"
@@ -6684,7 +6720,7 @@
     "id": "sign-word-25a330095914047e",
     "lemma": "nadchod",
     "context": "road_traffic",
-    "exampleCs": "Podchod nebo nadchod",
+    "exampleCs": "Je-li blíže než 50 m řízená křižovatka, přechod, místo pro přecházení nebo označený nadchod či podchod, chodec je musí použít.",
     "forms": [
       "nadchod",
       "nadchodu"
@@ -6778,7 +6814,7 @@
     "id": "sign-word-e17790a046859044",
     "lemma": "najednou",
     "context": "road_traffic",
-    "exampleCs": "Nejde o přednost celé kolony vozidel najednou.",
+    "exampleCs": "Slovo „najednou“ v dopravním kontextu.",
     "forms": [
       "najednou"
     ],
@@ -6944,7 +6980,7 @@
     "id": "sign-word-ce72b69c27fe21ff",
     "lemma": "nasadit",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte ji s povinností nasadit sněhové řetězy C 5a.",
+    "exampleCs": "Přikazuje nasadit sněhové řetězy na nejméně dvě hnací kola motorového vozidla se třemi a více koly.",
     "forms": [
       "nasadit",
       "nasazení",
@@ -7336,8 +7372,9 @@
     "id": "sign-word-c32eb2a44b3437cd",
     "lemma": "nedostatečný",
     "context": "road_traffic",
-    "exampleCs": "Nedostatečný průjezdní profil vozovky",
+    "exampleCs": "U cyklistického pruhu vyznačeného vodorovně lze vjet podélně i při nedostatečné šířce přilehlého pruhu pro vaše vozidlo; nesmíte ohrozit cyklistu. Tuto výjimku nepřenášejte na vyhrazený pruh IP 20a.",
     "forms": [
+      "nedostatečné",
       "nedostatečný"
     ],
     "translations": [
@@ -7359,7 +7396,7 @@
     "id": "sign-word-b5a06d037f526746",
     "lemma": "nedávat",
     "context": "road_traffic",
-    "exampleCs": "Přerušovaná čára sama nedává přednost při přejetí.",
+    "exampleCs": "Výstraha sama nedává chodcům přednost.",
     "forms": [
       "nedávat",
       "nedává"
@@ -7410,7 +7447,8 @@
     "exampleCs": "Nehoda",
     "forms": [
       "nehoda",
-      "nehody"
+      "nehody",
+      "nehodě"
     ],
     "translations": [
       {
@@ -7455,7 +7493,7 @@
     "id": "sign-word-d5ece770f8fe6400",
     "lemma": "neignorovat",
     "context": "road_traffic",
-    "exampleCs": "Neignorujte vozidlo veřejné dopravy opouštějící pás.",
+    "exampleCs": "Neignorujte symbol, soustředíte-li se na název cíle.",
     "forms": [
       "neignorovat",
       "neignorujte"
@@ -7574,11 +7612,12 @@
     "id": "sign-word-b1fcbbff6a9df882",
     "lemma": "nejet",
     "context": "road_traffic",
-    "exampleCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+    "exampleCs": "Bílá není záruka, že nikdy nejede vlak.",
     "forms": [
       "nejede",
       "nejet",
-      "nejezděte"
+      "nejezděte",
+      "nejeďte"
     ],
     "translations": [
       {
@@ -7646,11 +7685,12 @@
     "id": "sign-word-399c1992364aec32",
     "lemma": "nebýt",
     "context": "road_traffic",
-    "exampleCs": "Chodci nejsou vázáni na přechod.",
+    "exampleCs": "Dvě šipky nejsou zárukou bezpečí za každého počasí.",
     "forms": [
       "nebýt",
       "nejsou",
-      "není"
+      "není",
+      "není-li"
     ],
     "translations": [
       {
@@ -7792,7 +7832,8 @@
     "exampleCs": "Přikazuje dát přednost protijedoucím, pokud se vozidla nemohou bezpečně vyhnout.",
     "forms": [
       "nemoci",
-      "nemohou"
+      "nemohou",
+      "nemůžete"
     ],
     "translations": [
       {
@@ -7840,7 +7881,8 @@
     "exampleCs": "Upozorňuje na světelné signály, které řidič nemusí očekávat nebo včas vidět.",
     "forms": [
       "nemuset",
-      "nemusí"
+      "nemusí",
+      "nemusíte"
     ],
     "translations": [
       {
@@ -7861,8 +7903,9 @@
     "id": "sign-word-b0c1ec705f51666d",
     "lemma": "nemít",
     "context": "road_traffic",
-    "exampleCs": "Ukládá příkaz vyjádřený nápisem, který nemá samostatnou značku.",
+    "exampleCs": "Chodec a cyklista nemají stejný režim.",
     "forms": [
+      "nemají",
       "nemá",
       "nemít"
     ],
@@ -8028,7 +8071,7 @@
     "id": "sign-word-f185aea40958b5c0",
     "lemma": "neodbočit",
     "context": "road_traffic",
-    "exampleCs": "Neodbočte zakázaným směrem.",
+    "exampleCs": "Na nejbližším místě neodbočujte vpravo.",
     "forms": [
       "neodbočit",
       "neodbočte",
@@ -8077,9 +8120,11 @@
     "id": "sign-word-f687f5320fae4fda",
     "lemma": "neohrozit",
     "context": "road_traffic",
-    "exampleCs": "Neohrožte chodce, který již přechází.",
+    "exampleCs": "Používejte pruh určený pro svou skupinu. Do druhého pruhu vstupujte nebo vjíždějte jen v dovolených případech a nikoho v něm neohrozte.",
     "forms": [
       "neohrozit",
+      "neohrozte",
+      "neohrozí",
       "neohrožte"
     ],
     "translations": [
@@ -8126,7 +8171,7 @@
     "id": "sign-word-273422e856160666",
     "lemma": "neomezovat",
     "context": "road_traffic",
-    "exampleCs": "Neomezujte význam značky jen na samotný manévr předjíždění.",
+    "exampleCs": "Neohrožujte ani neomezujte chodce na přechodu nebo zjevně hodlajícího přejít; podle potřeby zastavte.",
     "forms": [
       "neomezovat",
       "neomezujte",
@@ -8247,7 +8292,7 @@
     "id": "sign-word-735872a32a963acd",
     "lemma": "neplatit",
     "context": "road_traffic",
-    "exampleCs": "Po konci neplatí automaticky společný režim C 9a.",
+    "exampleCs": "Zakazuje vjezd nákladním automobilům, vozidlům zvláštního určení a stanoveným traktorům. Neplatí pro obytné automobily.",
     "forms": [
       "neplatit",
       "neplatí"
@@ -8464,7 +8509,7 @@
     "id": "sign-word-fc0b87bcdc1e0c9d",
     "lemma": "nepřejíždět",
     "context": "road_traffic",
-    "exampleCs": "Odděluje pruhy; přes čáru se běžně nepřejíždí, zákon uvádí omezené výjimky.",
+    "exampleCs": "Odděluje protisměr; řidič jede vpravo a čáru nepřejíždí kromě nutného objíždění.",
     "forms": [
       "nepřejíždí",
       "nepřejíždět"
@@ -8730,7 +8775,7 @@
     "id": "sign-word-ead57631ab8c0b96",
     "lemma": "nestanovit",
     "context": "road_traffic",
-    "exampleCs": "Značka sama nestanoví zvláštní rychlost.",
+    "exampleCs": "Porovnejte skutečnou hmotnost s mezí na značce. U soupravy posuzujte každé vozidlo zvlášť, pokud tabulka nestanoví zvláštní režim.",
     "forms": [
       "nestanovit",
       "nestanoví"
@@ -8754,7 +8799,7 @@
     "id": "sign-word-b4c954352d5a4a0e",
     "lemma": "nestačit",
     "context": "road_traffic",
-    "exampleCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+    "exampleCs": "Samotné denní svícení nestačí.",
     "forms": [
       "nestačit",
       "nestačí"
@@ -8826,7 +8871,7 @@
     "id": "sign-word-3088e97ea920084b",
     "lemma": "neudávat",
     "context": "road_traffic",
-    "exampleCs": "Počet pruhů neudává počet kolejí.",
+    "exampleCs": "Konec zóny sám neudává přednost.",
     "forms": [
       "neudávat",
       "neudává"
@@ -9067,7 +9112,7 @@
     "id": "sign-word-630996742aa1d383",
     "lemma": "nevjíždět",
     "context": "road_traffic",
-    "exampleCs": "Vyznačuje plochu, do níž se běžně nevjíždí ani nezasahuje nákladem.",
+    "exampleCs": "Nevjíždějte na krajnici bez důvodu a držte bezpečnou stopu.",
     "forms": [
       "nevjíždí",
       "nevjíždějte",
@@ -9262,7 +9307,8 @@
     "forms": [
       "nevztahovat",
       "nevztahuje",
-      "nevztahujte"
+      "nevztahujte",
+      "nevztahují"
     ],
     "translations": [
       {
@@ -9428,7 +9474,7 @@
     "id": "sign-word-d8c64110cc7c2470",
     "lemma": "neznamenat",
     "context": "road_traffic",
-    "exampleCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+    "exampleCs": "Neznamená automatické povolení předjíždět na každém místě.",
     "forms": [
       "neznamenat",
       "neznamená"
@@ -9456,6 +9502,7 @@
     "forms": [
       "nezávisle",
       "nezávislá",
+      "nezávislé",
       "nezávislý"
     ],
     "translations": [
@@ -9501,7 +9548,7 @@
     "id": "sign-word-f82e30c05a87898b",
     "lemma": "nečekat",
     "context": "road_traffic",
-    "exampleCs": "Nečekejte nutně vyznačený přechod.",
+    "exampleCs": "Nečekejte s brzděním až do zatáčky.",
     "forms": [
       "nečekat",
       "nečekejte"
@@ -9573,7 +9620,7 @@
     "id": "sign-word-7d3b1dc40fbc0db6",
     "lemma": "než",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje vjezd ručních vozíků širších než 600 mm.",
+    "exampleCs": "Je-li blíže než 50 m řízená křižovatka, přechod, místo pro přecházení nebo označený nadchod či podchod, chodec je musí použít.",
     "forms": [
       "než"
     ],
@@ -9643,8 +9690,9 @@
     "id": "sign-word-c0d4480ab84a3780",
     "lemma": "oni",
     "context": "road_traffic",
-    "exampleCs": "Přečtěte všechny symboly, ne jen první z nich.",
+    "exampleCs": "Rozsviťte obrysová a potkávací nebo dálková světla, pokud je jimi vozidlo vybaveno. Dálkovými nesmíte oslňovat.",
     "forms": [
+      "jimi",
       "nich",
       "oni"
     ],
@@ -9760,7 +9808,7 @@
     "id": "sign-word-c2d161c9fcb6dc47",
     "lemma": "nouzový",
     "context": "road_traffic",
-    "exampleCs": "Nejde o odstavný pruh pro nouzové stání.",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
     "forms": [
       "nouzové",
       "nouzový"
@@ -9838,6 +9886,7 @@
     "forms": [
       "nutné",
       "nutného",
+      "nutném",
       "nutný",
       "nutně"
     ],
@@ -9886,6 +9935,7 @@
     "exampleCs": "Upozorňuje na místo, kde se často pohybují děti nebo mohou náhle vběhnout do vozovky.",
     "forms": [
       "náhle",
+      "náhlé",
       "náhlý",
       "náhlým",
       "náhlými"
@@ -9909,7 +9959,7 @@
     "id": "sign-word-b019ed62ecc7a733",
     "lemma": "náhradní",
     "context": "road_traffic",
-    "exampleCs": "Směrová tabule pro náhradní trasu dálnice (přímo, vlevo nebo vpravo)",
+    "exampleCs": "Značka platí bez ohledu na datum a počasí; tabulka může určit jinou dobu platnosti. Výjimka se týká náhradní pneumatiky pro nouzové dojetí.",
     "forms": [
       "náhradní",
       "náhradou"
@@ -10324,7 +10374,7 @@
     "id": "sign-word-35086b34822e47e8",
     "lemma": "některý",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje vjezd traktorům včetně některých pracovních strojů a motorových ručních vozíků.",
+    "exampleCs": "Slovo „některý“ v dopravním kontextu.",
     "forms": [
       "některý",
       "některých"
@@ -10401,6 +10451,7 @@
     "forms": [
       "obce",
       "obci",
+      "obcí",
       "obec"
     ],
     "translations": [
@@ -10674,7 +10725,7 @@
     "id": "sign-word-887404ca961e6951",
     "lemma": "oblouk",
     "context": "road_traffic",
-    "exampleCs": "První oblouk určuje šipku na značce.",
+    "exampleCs": "Slovo „oblouk“ v dopravním kontextu.",
     "forms": [
       "oblouk"
     ],
@@ -10697,7 +10748,7 @@
     "id": "sign-word-d6afe5e12c375f16",
     "lemma": "obojí",
     "context": "road_traffic",
-    "exampleCs": "Dvojí údaj neznamená, že každý řidič platí obojí.",
+    "exampleCs": "Slovo „obojí“ v dopravním kontextu.",
     "forms": [
       "obojí"
     ],
@@ -10743,7 +10794,7 @@
     "id": "sign-word-4f730447c4936a67",
     "lemma": "obrys",
     "context": "road_traffic",
-    "exampleCs": "Nezasahujte obrysem ani nákladem mimo vyznačené místo.",
+    "exampleCs": "Dodržte vyznačený způsob stání. Vozidlo obrysem ani nákladem nesmí přesahovat plochu do vozovky.",
     "forms": [
       "obrys",
       "obrysem"
@@ -10767,7 +10818,7 @@
     "id": "sign-word-d20bcd6ab6526c98",
     "lemma": "obrázek",
     "context": "road_traffic",
-    "exampleCs": "Vozovka se výrazně zužuje vlevo nebo vpravo podle obrázku.",
+    "exampleCs": "Je-li symbol na stezce, řiďte se režimem této stezky. Rozhoduje celé značení, ne samotný obrázek kola.",
     "forms": [
       "obrázek",
       "obrázku"
@@ -10862,7 +10913,7 @@
     "id": "sign-word-62a0ca63950069ab",
     "lemma": "obytný",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte sdílenou zónu s obytnou zónou.",
+    "exampleCs": "Obytná zóna",
     "forms": [
       "obytnou",
       "obytná",
@@ -10936,7 +10987,7 @@
     "id": "sign-word-bc2abf82bcf3990d",
     "lemma": "odbočit",
     "context": "road_traffic",
-    "exampleCs": "Přeškrtnutí není příkaz odbočit.",
+    "exampleCs": "Zakazuje odbočit vpravo na nejbližší křižovatce, na připojenou účelovou komunikaci nebo na místo mimo pozemní komunikaci.",
     "forms": [
       "odbočit",
       "odbočte"
@@ -10960,7 +11011,7 @@
     "id": "sign-word-8817184bc88ab171",
     "lemma": "odbočení",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje nejbližší odbočení vpravo, včetně odbočení do účelové komunikace nebo mimo silnici.",
+    "exampleCs": "Nezaměňujte zákaz odbočení vlevo se zákazem otočení.",
     "forms": [
       "odbočení",
       "odbočením",
@@ -11009,7 +11060,7 @@
     "id": "sign-word-c5b215120636a4c2",
     "lemma": "odbočující",
     "context": "road_traffic",
-    "exampleCs": "Předem označuje odbočující komunikaci, po níž nelze pokračovat.",
+    "exampleCs": "Směrová šipka upřesní přejezd na odbočující komunikaci.",
     "forms": [
       "odbočující"
     ],
@@ -11132,7 +11183,7 @@
     "id": "sign-word-18eb97f7b2ef0b41",
     "lemma": "odlišný",
     "context": "road_traffic",
-    "exampleCs": "Dodatková tabulka může stanovit odlišnou dobu platnosti.",
+    "exampleCs": "Nepovažujte obě zrcadlové grafiky za dvě odlišná právní pravidla.",
     "forms": [
       "odlišnou",
       "odlišná",
@@ -11329,7 +11380,7 @@
     "id": "sign-word-b08f17fb9bc8e23a",
     "lemma": "odstavný",
     "context": "road_traffic",
-    "exampleCs": "Nejde o odstavný pruh pro nouzové stání.",
+    "exampleCs": "Pomalý pruh není odstavný pruh.",
     "forms": [
       "odstavný"
     ],
@@ -11375,7 +11426,7 @@
     "id": "sign-word-1741214f413ae8b5",
     "lemma": "odvozený",
     "context": "road_traffic",
-    "exampleCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
+    "exampleCs": "Slovo „odvozený“ v dopravním kontextu.",
     "forms": [
       "odvozená",
       "odvozený"
@@ -11516,7 +11567,7 @@
     "id": "sign-word-06a389df4c4e9444",
     "lemma": "okamžitý",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte okamžitou hmotnost za největší povolenou hmotnost.",
+    "exampleCs": "Nezaměňujte okamžitou hmotnost za největší povolenou.",
     "forms": [
       "okamžitou",
       "okamžitá",
@@ -11542,9 +11593,10 @@
     "id": "sign-word-8e7498425c1e1a0b",
     "lemma": "okolnost",
     "context": "road_traffic",
-    "exampleCs": "Přikazuje jet alespoň vyznačenou rychlostí, dovolují-li to okolnosti provozu.",
+    "exampleCs": "Jiná vozidla smějí podélně vjet při objíždění, předjíždění, odbočování, otáčení, vjíždění na komunikaci nebo zvláštních okolnostech, například nedostatku místa. Nesmějí ohrozit ani omezit určená vozidla.",
     "forms": [
       "okolnost",
+      "okolnostech",
       "okolnosti"
     ],
     "translations": [
@@ -11805,7 +11857,7 @@
     "id": "sign-word-4a98ef4c324b60a6",
     "lemma": "opouštějící",
     "context": "road_traffic",
-    "exampleCs": "Neignorujte vozidlo veřejné dopravy opouštějící pás.",
+    "exampleCs": "Slovo „opouštějící“ v dopravním kontextu.",
     "forms": [
       "opouštějící"
     ],
@@ -11925,9 +11977,10 @@
     "id": "sign-word-06cf326c9ee3d24d",
     "lemma": "opustit",
     "context": "road_traffic",
-    "exampleCs": "Svítící šipka vyžaduje opustit pruh nebo objet překážku vlevo.",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
     "forms": [
       "opustit",
+      "opusťte",
       "opuštění"
     ],
     "translations": [
@@ -12122,7 +12175,8 @@
     "context": "road_traffic",
     "exampleCs": "Přikazuje objet ostrůvek či překážku vpravo.",
     "forms": [
-      "ostrůvek"
+      "ostrůvek",
+      "ostrůvku"
     ],
     "translations": [
       {
@@ -12143,7 +12197,7 @@
     "id": "sign-word-8fadaf35301fa23c",
     "lemma": "osvobození",
     "context": "road_traffic",
-    "exampleCs": "Nevztahujte osvobození automaticky na navazující úsek.",
+    "exampleCs": "O případném osvobození od poplatku informuje dodatková tabulka; ověřte režim svého vozidla.",
     "forms": [
       "osvobození"
     ],
@@ -12166,7 +12220,7 @@
     "id": "sign-word-2fd980a272ac7dee",
     "lemma": "osvětlení",
     "context": "road_traffic",
-    "exampleCs": "Zapněte předepsané osvětlení pro zhoršenou viditelnost.",
+    "exampleCs": "Ukončuje místní příkaz C 13a, nikoli obecné povinnosti osvětlení.",
     "forms": [
       "osvětlení"
     ],
@@ -12189,7 +12243,7 @@
     "id": "sign-word-fdf874dafccb6862",
     "lemma": "osvětlit",
     "context": "road_traffic",
-    "exampleCs": "Ukončuje místní příkaz C 13a, nikoli obecné povinnosti osvětlit vozidlo.",
+    "exampleCs": "Slovo „osvětlit“ v dopravním kontextu.",
     "forms": [
       "osvětlit"
     ],
@@ -12309,7 +12363,7 @@
     "id": "sign-word-6d4cf03ac2e27b46",
     "lemma": "ověřit",
     "context": "road_traffic",
-    "exampleCs": "Sledujte výstražné signály a ověřte, zda se neblíží vlak.",
+    "exampleCs": "Cyklista musí před vjezdem ověřit bezpečnost a nesmí donutit přijíždějící řidiče k náhlé změně směru nebo rychlosti. Na přejezdu jede vpravo.",
     "forms": [
       "ověřit",
       "ověřte"
@@ -12365,6 +12419,7 @@
       "označeného",
       "označeném",
       "označený",
+      "označených",
       "označeným"
     ],
     "translations": [
@@ -12412,6 +12467,7 @@
     "exampleCs": "Označník zastávky",
     "forms": [
       "označník",
+      "označníkem",
       "označníku"
     ],
     "translations": [
@@ -12433,7 +12489,7 @@
     "id": "sign-word-26dff683fe2a5111",
     "lemma": "označovat",
     "context": "road_traffic",
-    "exampleCs": "Jeden šikmý pruh označuje přiblížení k přejezdu ze vzdálenosti 80 m.",
+    "exampleCs": "Označuje vzdálenost 240 m před železničním přejezdem.",
     "forms": [
       "označovat",
       "označuje",
@@ -12552,7 +12608,7 @@
     "id": "sign-word-7fce66c9ae80234d",
     "lemma": "parkovací",
     "context": "road_traffic",
-    "exampleCs": "Mýtné není prostá jednodenní parkovací platba.",
+    "exampleCs": "Parkovací pruh",
     "forms": [
       "parkovací",
       "parkovacím"
@@ -12603,6 +12659,7 @@
     "exampleCs": "Informuje o krytém parkovišti nebo garáži.",
     "forms": [
       "parkovišti",
+      "parkovištích",
       "parkoviště",
       "parkovištěm"
     ],
@@ -12628,7 +12685,8 @@
     "exampleCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
     "forms": [
       "patřit",
-      "patří"
+      "patří",
+      "patří-li"
     ],
     "translations": [
       {
@@ -12744,7 +12802,7 @@
     "id": "sign-word-c159c97038c0b7b2",
     "lemma": "platba",
     "context": "road_traffic",
-    "exampleCs": "Mýtné není prostá jednodenní parkovací platba.",
+    "exampleCs": "Dvojí údaj není dvojí platba pro každého.",
     "forms": [
       "platba",
       "platbu"
@@ -12768,7 +12826,7 @@
     "id": "sign-word-6f03b4e94a1313aa",
     "lemma": "platit",
     "context": "road_traffic",
-    "exampleCs": "Mimo dobu vyhrazení může platit i jiné omezení.",
+    "exampleCs": "Zákaz může platit i pro přímý směr.",
     "forms": [
       "platit",
       "platí"
@@ -12844,8 +12902,10 @@
     "exampleCs": "Zkrácené mezery upozorňují na přechod v plnou čáru nebo místo zvýšené pozornosti.",
     "forms": [
       "plnou",
+      "plná",
       "plné",
-      "plný"
+      "plný",
+      "plných"
     ],
     "translations": [
       {
@@ -12988,11 +13048,12 @@
     "id": "sign-word-5e07e1fe5edcc6bc",
     "lemma": "pneumatika",
     "context": "road_traffic",
-    "exampleCs": "Povinnost nezaměňujte za pouhé doporučení zimních pneumatik.",
+    "exampleCs": "S vozidlem kategorie M nebo N pokračujte jen se zimními pneumatikami splňujícími předepsané podmínky.",
     "forms": [
       "pneumatik",
       "pneumatika",
-      "pneumatikami"
+      "pneumatikami",
+      "pneumatiky"
     ],
     "translations": [
       {
@@ -13059,7 +13120,7 @@
     "id": "sign-word-ee2c3a99f0009423",
     "lemma": "podchod",
     "context": "road_traffic",
-    "exampleCs": "Podchod nebo nadchod",
+    "exampleCs": "Je-li blíže než 50 m řízená křižovatka, přechod, místo pro přecházení nebo označený nadchod či podchod, chodec je musí použít.",
     "forms": [
       "podchod",
       "podchodu"
@@ -13400,7 +13461,7 @@
     "id": "sign-word-c1b852094a1f7677",
     "lemma": "pokud",
     "context": "road_traffic",
-    "exampleCs": "Přikazuje dát přednost protijedoucím, pokud se vozidla nemohou bezpečně vyhnout.",
+    "exampleCs": "Na rozdíl od P 6 nemusíte vždy zastavit. Zastavte, pokud bez toho nemůžete bezpečně dát přednost.",
     "forms": [
       "pokud"
     ],
@@ -13447,7 +13508,7 @@
     "id": "sign-word-b9425afde1f5e5eb",
     "lemma": "pole",
     "context": "road_traffic",
-    "exampleCs": "Před vjezdem přečtěte dolní pole s výjimkami pro vozidla.",
+    "exampleCs": "Spodní pole určuje výjimky.",
     "forms": [
       "pole"
     ],
@@ -13473,6 +13534,7 @@
     "exampleCs": "Policie",
     "forms": [
       "policie",
+      "policii",
       "policií"
     ],
     "translations": [
@@ -13622,7 +13684,8 @@
     "forms": [
       "poplatek",
       "poplatkem",
-      "poplatku"
+      "poplatku",
+      "poplatků"
     ],
     "translations": [
       {
@@ -13643,7 +13706,7 @@
     "id": "sign-word-6b0bf626ef8980b8",
     "lemma": "porovnat",
     "context": "road_traffic",
-    "exampleCs": "Porovnejte cíl, šipku a vzdálenost.",
+    "exampleCs": "Porovnejte skutečnou hmotnost s mezí na značce. U soupravy posuzujte každé vozidlo zvlášť, pokud tabulka nestanoví zvláštní režim.",
     "forms": [
       "porovnat",
       "porovnejte"
@@ -13936,7 +13999,7 @@
     "id": "sign-word-54fb6b99d259aca7",
     "lemma": "pouhý",
     "context": "road_traffic",
-    "exampleCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+    "exampleCs": "Pouhé zpomalení nesplňuje pokyn STOP.",
     "forms": [
       "pouhé",
       "pouhý",
@@ -13984,11 +14047,12 @@
     "id": "sign-word-62cbd2c160f2a5aa",
     "lemma": "použít",
     "context": "road_traffic",
-    "exampleCs": "Použijte osvětlení pro sníženou viditelnost.",
+    "exampleCs": "Řídíte-li vyznačený druh vozidla, použijte přikázaný pruh. Jiná vozidla do něj smějí jen v dovolených případech.",
     "forms": [
       "použijte",
       "použít",
-      "používat"
+      "používat",
+      "používejte"
     ],
     "translations": [
       {
@@ -14032,7 +14096,7 @@
     "id": "sign-word-8f2a255a8a4a8c86",
     "lemma": "povinnost",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte povinnost dát přednost s povinností vždy zastavit.",
+    "exampleCs": "Nejde o povinnost zvukové znamení použít.",
     "forms": [
       "povinnost",
       "povinnosti",
@@ -14057,7 +14121,7 @@
     "id": "sign-word-9e5c3ac600ab1b58",
     "lemma": "povinný",
     "context": "road_traffic",
-    "exampleCs": "Trojúhelník: přednost ano, povinné zastavení ne.",
+    "exampleCs": "Ukazuje místo, kde je při značce STOP povinné zastavit.",
     "forms": [
       "povinné",
       "povinnému",
@@ -14082,7 +14146,7 @@
     "id": "sign-word-07c0f003f24e6660",
     "lemma": "povolený",
     "context": "road_traffic",
-    "exampleCs": "Vjezd určených vozidel může být povolen uvedeným symbolem a dobou.",
+    "exampleCs": "Vjezd je povolen jen vozidlům uvedeným ve spodní části značky a v uvedené době; platí také zákonné výjimky pro oprávněná vozidla.",
     "forms": [
       "povolen",
       "povolena",
@@ -14300,7 +14364,7 @@
     "id": "sign-word-adb181a33b13457b",
     "lemma": "počet",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte počet pruhů za počet kolejí.",
+    "exampleCs": "Ukazuje počet a uspořádání jízdních pruhů.",
     "forms": [
       "počet",
       "počtu"
@@ -14324,7 +14388,7 @@
     "id": "sign-word-fdb5f0f75895cffb",
     "lemma": "počáteční",
     "context": "road_traffic",
-    "exampleCs": "Může stát vlevo z opačné strany počáteční značky.",
+    "exampleCs": "Slovo „počáteční“ v dopravním kontextu.",
     "forms": [
       "počáteční"
     ],
@@ -14447,7 +14511,8 @@
     "exampleCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
     "forms": [
       "pracovní",
-      "pracovních"
+      "pracovních",
+      "pracovním"
     ],
     "translations": [
       {
@@ -14543,7 +14608,7 @@
     "id": "sign-word-ceedae50ecbd3c01",
     "lemma": "pravý",
     "context": "road_traffic",
-    "exampleCs": "Pro stanovené těžké nákladní automobily a traktory omezuje předjíždění i užití jiného než pravého pruhu.",
+    "exampleCs": "Patří-li vaše vozidlo do této skupiny, nepředjíždějte motorová vozidla vlevo. Při dvou a více pruzích v jednom směru užijte pravý pruh; jiný jen při nutném objíždění.",
     "forms": [
       "pravého",
       "pravý"
@@ -14754,7 +14819,7 @@
     "id": "sign-word-dc78d9d0f5b86307",
     "lemma": "prostý",
     "context": "road_traffic",
-    "exampleCs": "Mýtné není prostá jednodenní parkovací platba.",
+    "exampleCs": "Nepovažujte ji za trvale stejně prostý úsek jako V 2a.",
     "forms": [
       "prostá",
       "prostý"
@@ -14897,7 +14962,7 @@
     "id": "sign-word-3f0c824205134f89",
     "lemma": "protiskluzový",
     "context": "road_traffic",
-    "exampleCs": "Nevztahuje se na vozidla s pneumatikami s protiskluzovými hroty.",
+    "exampleCs": "Příkaz se nevztahuje na vozidla s pneumatikami s protiskluzovými hroty.",
     "forms": [
       "protiskluzový",
       "protiskluzovými"
@@ -15094,7 +15159,8 @@
       "pruhem",
       "pruhu",
       "pruhy",
-      "pruhů"
+      "pruhů",
+      "pruzích"
     ],
     "translations": [
       {
@@ -15232,7 +15298,7 @@
     "id": "sign-word-355cd822755273c5",
     "lemma": "průběžný",
     "context": "road_traffic",
-    "exampleCs": "Šipka není povolením vytlačit vozidlo z průběžného pruhu.",
+    "exampleCs": "Při souběžné jízdě se vozidla do průběžného pruhu řadí střídavě po jednom.",
     "forms": [
       "průběžného",
       "průběžný",
@@ -15327,7 +15393,7 @@
     "id": "sign-word-a75dca609d2062d6",
     "lemma": "průkaz",
     "context": "road_traffic",
-    "exampleCs": "Plocha je vyhrazena vozidlu s příslušným parkovacím průkazem.",
+    "exampleCs": "Průkaz je vázán na svého držitele.",
     "forms": [
       "průkaz",
       "průkazem",
@@ -15399,7 +15465,7 @@
     "id": "sign-word-da46481ba23982e2",
     "lemma": "pás",
     "context": "road_traffic",
-    "exampleCs": "Neignorujte vozidlo veřejné dopravy opouštějící pás.",
+    "exampleCs": "Zastavení a stání je dovoleno jen na označených parkovištích; nouzové stání má zvláštní pravidla. Otáčení, couvání a vjezd na střední dělicí pás jsou zakázány.",
     "forms": [
       "pás",
       "pásu"
@@ -15469,7 +15535,7 @@
     "id": "sign-word-43a743548b005c77",
     "lemma": "pěší",
     "context": "road_traffic",
-    "exampleCs": "Samotný chodec znamená pěší stezku.",
+    "exampleCs": "Cyklista může použít pěší pruh při objíždění, předjíždění, otáčení, odbočování a vjíždění na stezku; nesmí ohrozit chodce.",
     "forms": [
       "pěší"
     ],
@@ -15545,7 +15611,7 @@
     "id": "sign-word-f7fdc7cce5a46c7f",
     "lemma": "před",
     "context": "road_traffic",
-    "exampleCs": "Varuje před častým pohybem nebo přecházením chodců i mimo přechod.",
+    "exampleCs": "Varuje před častým pohybem osob na osobních přepravnících.",
     "forms": [
       "před"
     ],
@@ -15568,7 +15634,7 @@
     "id": "sign-word-afdebdee5356d35f",
     "lemma": "předběžný",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte označení místa přechodu s předběžnou výstrahou A 11.",
+    "exampleCs": "Nezaměňujte tabuli v místě odbočení s předběžnou návěstí.",
     "forms": [
       "předběžnou",
       "předběžné",
@@ -15714,7 +15780,7 @@
     "id": "sign-word-03339d00e49a691b",
     "lemma": "přednost",
     "context": "road_traffic",
-    "exampleCs": "Výstraha sama neurčuje přednost; posuďte další značky a pravidla.",
+    "exampleCs": "Výstraha sama nedává chodcům přednost.",
     "forms": [
       "přednost",
       "přednosti"
@@ -15885,7 +15951,7 @@
     "id": "sign-word-00b593c4b59c5c43",
     "lemma": "překročit",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje vjezd vozidlu, jehož okamžitá hmotnost překračuje uvedenou mez.",
+    "exampleCs": "Zakazuje vjezd vozidlu, jehož okamžitá hmotnost překračuje mez na značce.",
     "forms": [
       "překračuje",
       "překročit",
@@ -16087,6 +16153,7 @@
       "přerušovanou",
       "přerušovaná",
       "přerušované",
+      "přerušovaného",
       "přerušovaném",
       "přerušovaný",
       "přerušovaných"
@@ -16110,7 +16177,7 @@
     "id": "sign-word-d2ab49d5010a3ed6",
     "lemma": "přes",
     "context": "road_traffic",
-    "exampleCs": "Nespoléhejte na pokračování přímo přes překážku.",
+    "exampleCs": "Platí pro nákladní automobily s největší povolenou hmotností přes 3500 kg a traktory s touto hmotností přes 3500 kg a konstrukční rychlostí alespoň 80 km/h.",
     "forms": [
       "přes"
     ],
@@ -16133,7 +16200,7 @@
     "id": "sign-word-0aaca63aeca951ca",
     "lemma": "přesahovat",
     "context": "road_traffic",
-    "exampleCs": "Zákaz vjezdu vozidel, jejichž okamžitá hmotnost přesahuje vyznačenou mez",
+    "exampleCs": "Dodržte vyznačený způsob stání. Vozidlo obrysem ani nákladem nesmí přesahovat plochu do vozovky.",
     "forms": [
       "přesahovat",
       "přesahuje",
@@ -16299,7 +16366,7 @@
     "id": "sign-word-0533a42d96be7ffe",
     "lemma": "převoz",
     "context": "road_traffic",
-    "exampleCs": "Převoz osoby bez příslušného průkazu sám nestačí.",
+    "exampleCs": "Slovo „převoz“ v dopravním kontextu.",
     "forms": [
       "převoz"
     ],
@@ -16322,7 +16389,7 @@
     "id": "sign-word-6e7c683298e4c11b",
     "lemma": "přečnívat",
     "context": "road_traffic",
-    "exampleCs": "Nenechte vozidlo přečnívat mimo plochu.",
+    "exampleCs": "Slovo „přečnívat“ v dopravním kontextu.",
     "forms": [
       "přečnívat"
     ],
@@ -16559,7 +16626,7 @@
     "id": "sign-word-b815e1b74b5592f8",
     "lemma": "přijíždějící",
     "context": "road_traffic",
-    "exampleCs": "Sledujte koleje i přijíždějící tramvaj.",
+    "exampleCs": "Mimo přechod nesmí chodec donutit přijíždějící řidiče k náhlé změně směru nebo rychlosti.",
     "forms": [
       "přijíždějící"
     ],
@@ -16728,6 +16795,7 @@
     "exampleCs": "Zjistěte druh nebezpečí z dodatkové tabulky, je-li připojena.",
     "forms": [
       "připojena",
+      "připojenou",
       "připojené",
       "připojený",
       "připojeným"
@@ -16800,8 +16868,9 @@
     "id": "sign-word-649e760261f95355",
     "lemma": "přizpůsobit",
     "context": "road_traffic",
-    "exampleCs": "Zvětšete odstup a přizpůsobte rychlost povrchu.",
+    "exampleCs": "Na odděleném tramvajovém pásu je přejezd jen příčný na přizpůsobeném místě.",
     "forms": [
+      "přizpůsobeném",
       "přizpůsobit",
       "přizpůsobte"
     ],
@@ -16973,6 +17042,7 @@
       "případnou",
       "případná",
       "případné",
+      "případném",
       "případný",
       "případně"
     ],
@@ -17074,7 +17144,8 @@
       "příslušného",
       "příslušný",
       "příslušných",
-      "příslušným"
+      "příslušným",
+      "příslušnými"
     ],
     "translations": [
       {
@@ -17168,7 +17239,7 @@
     "id": "sign-word-653aefef938540e9",
     "lemma": "přítomnost",
     "context": "road_traffic",
-    "exampleCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+    "exampleCs": "Slovo „přítomnost“ v dopravním kontextu.",
     "forms": [
       "přítomnost"
     ],
@@ -17407,9 +17478,10 @@
     "id": "sign-word-4673f7c0c5417d5e",
     "lemma": "režim",
     "context": "road_traffic",
-    "exampleCs": "Po konci neplatí automaticky společný režim C 9a.",
+    "exampleCs": "Porovnejte skutečnou hmotnost s mezí na značce. U soupravy posuzujte každé vozidlo zvlášť, pokud tabulka nestanoví zvláštní režim.",
     "forms": [
       "režim",
+      "režimem",
       "režimu"
     ],
     "translations": [
@@ -17527,7 +17599,7 @@
     "id": "sign-word-098b61e8990a9981",
     "lemma": "rozdělení",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte ji se společnou stezkou bez rozdělení.",
+    "exampleCs": "Slovo „rozdělení“ v dopravním kontextu.",
     "forms": [
       "rozdělení"
     ],
@@ -17625,7 +17697,7 @@
     "id": "sign-word-daf2b7994bca54e9",
     "lemma": "rozlišovat",
     "context": "road_traffic",
-    "exampleCs": "Rozlišujte časový poplatek a mýtné.",
+    "exampleCs": "Rozlišujte jednotlivé křižovatky v pořadí.",
     "forms": [
       "rozlišovat",
       "rozlišujte"
@@ -17698,7 +17770,7 @@
     "id": "sign-word-8636914c0bb7bfd9",
     "lemma": "rozsah",
     "context": "road_traffic",
-    "exampleCs": "Nevztahuje se na obytné automobily; údaj o hmotnosti na značce či tabulce omezuje rozsah.",
+    "exampleCs": "Stejná horní značka může mít podle textu jiný rozsah.",
     "forms": [
       "rozsah",
       "rozsahu"
@@ -17725,6 +17797,7 @@
     "exampleCs": "Rozsviť světla",
     "forms": [
       "rozsviť",
+      "rozsviťte",
       "rozsvícené",
       "rozsvítit"
     ],
@@ -17774,7 +17847,8 @@
     "forms": [
       "ruční",
       "ručních",
-      "ručního"
+      "ručního",
+      "ručním"
     ],
     "translations": [
       {
@@ -17966,7 +18040,7 @@
     "id": "sign-word-1979a23eae73f67e",
     "lemma": "sám",
     "context": "road_traffic",
-    "exampleCs": "Značka sama neoznačuje letiště ani zákaz vjezdu.",
+    "exampleCs": "Výstraha sama nedává chodcům přednost.",
     "forms": [
       "sama",
       "samo",
@@ -18116,7 +18190,7 @@
     "id": "sign-word-8cd1f0b3eee8eddd",
     "lemma": "sdílet",
     "context": "road_traffic",
-    "exampleCs": "Chodci a cyklisté sdílejí plochu; počítejte s druhou skupinou.",
+    "exampleCs": "Bez dělicí čáry se prostor sdílí.",
     "forms": [
       "sdílejí",
       "sdílení",
@@ -18338,7 +18412,7 @@
     "id": "sign-word-301d4520441f8d7e",
     "lemma": "signalizace",
     "context": "road_traffic",
-    "exampleCs": "V tunelu sledujte také místní signalizaci.",
+    "exampleCs": "Žlutý signál pro cyklisty ukládá zastavení; pravidlo závisí i na umístění signalizace.",
     "forms": [
       "signalizace",
       "signalizaci",
@@ -18369,6 +18443,7 @@
       "signálem",
       "signálu",
       "signály",
+      "signálů",
       "signálům"
     ],
     "translations": [
@@ -18464,7 +18539,7 @@
     "id": "sign-word-023586c8c04d668e",
     "lemma": "situace",
     "context": "road_traffic",
-    "exampleCs": "Obecné osvětlení zůstává podle situace.",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
     "forms": [
       "situace",
       "situaci",
@@ -18562,12 +18637,14 @@
     "id": "sign-word-65cdfd414e8bee86",
     "lemma": "skupina",
     "context": "road_traffic",
-    "exampleCs": "Neplatí jen pro jednu ze dvou skupin.",
+    "exampleCs": "Používejte pruh určený pro svou skupinu. Do druhého pruhu vstupujte nebo vjíždějte jen v dovolených případech a nikoho v něm neohrozte.",
     "forms": [
       "skupin",
       "skupina",
       "skupinou",
-      "skupiny"
+      "skupinu",
+      "skupiny",
+      "skupinám"
     ],
     "translations": [
       {
@@ -18811,7 +18888,7 @@
     "id": "sign-word-62104b3f67e91369",
     "lemma": "smět",
     "context": "road_traffic",
-    "exampleCs": "Druhý druh vozidla smí vjet jen tehdy, je-li na značce uveden.",
+    "exampleCs": "Jiné vozidlo smí zastavit nebo stát nejvýše 3 minuty, pokud nikoho neohrozí ani neomezí a neomezí oprávněná vozidla. To neplatí pro místo vyhrazené pro osoby se zdravotním postižením.",
     "forms": [
       "smí",
       "smíte",
@@ -18940,7 +19017,7 @@
     "id": "sign-word-985bf190e7e2ad5c",
     "lemma": "snížený",
     "context": "road_traffic",
-    "exampleCs": "Použijte osvětlení pro sníženou viditelnost.",
+    "exampleCs": "Přikazuje rozsvítit světla stanovená pro jízdu za snížené viditelnosti.",
     "forms": [
       "sníženou",
       "snížené",
@@ -18965,10 +19042,11 @@
     "id": "sign-word-727df1042fa9e3bc",
     "lemma": "sněhový",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte ji s povinností nasadit sněhové řetězy C 5a.",
+    "exampleCs": "Sněhové řetězy",
     "forms": [
       "sněhové",
-      "sněhový"
+      "sněhový",
+      "sněhových"
     ],
     "translations": [
       {
@@ -19012,7 +19090,7 @@
     "id": "sign-word-21bff47a556ff741",
     "lemma": "souběžný",
     "context": "road_traffic",
-    "exampleCs": "Není to zelená pro souběžná osobní auta.",
+    "exampleCs": "Souběžná jízda vzniká, když hustý provoz tvoří souvislé proudy a rychlost závisí na vozidlech vpředu. Vozidla se řadí střídavě po jednom.",
     "forms": [
       "souběžná",
       "souběžné",
@@ -19163,6 +19241,7 @@
     "forms": [
       "souvislou",
       "souvislá",
+      "souvislé",
       "souvislý"
     ],
     "translations": [
@@ -19184,7 +19263,7 @@
     "id": "sign-word-825ba2cf62091f89",
     "lemma": "současně",
     "context": "road_traffic",
-    "exampleCs": "Sledujte chodce i cyklisty současně.",
+    "exampleCs": "Ne každé zobrazené číslo současně platí.",
     "forms": [
       "současně"
     ],
@@ -19349,7 +19428,7 @@
     "id": "sign-word-9b9295056bffdd2c",
     "lemma": "společný",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte ji se společnou stezkou bez rozdělení.",
+    "exampleCs": "Nezaměňujte ji se společnou stezkou C 9a.",
     "forms": [
       "společnou",
       "společná",
@@ -19376,7 +19455,7 @@
     "id": "sign-word-34cc01c0160983a4",
     "lemma": "spolu",
     "context": "road_traffic",
-    "exampleCs": "Spolu s vodorovnou značkou ukazuje minimální odstup mezi jedoucími vozidly.",
+    "exampleCs": "Ukazuje změnu vedení pruhů spolu s omezením konkrétního pruhu.",
     "forms": [
       "spolu"
     ],
@@ -19424,7 +19503,7 @@
     "id": "sign-word-d193449640af8623",
     "lemma": "srovnat",
     "context": "road_traffic",
-    "exampleCs": "Srovnejte skutečnou hmotnost s údajem; u soupravy posuďte pravidlo pro jednotlivá vozidla a tabulku.",
+    "exampleCs": "Srovnejte skutečnou délku celé soupravy s uvedeným číslem.",
     "forms": [
       "srovnat",
       "srovnejte"
@@ -19502,7 +19581,8 @@
       "stanovené",
       "stanovenému",
       "stanovený",
-      "stanovených"
+      "stanovených",
+      "stanoveným"
     ],
     "translations": [
       {
@@ -19523,8 +19603,9 @@
     "id": "sign-word-98de1e78b1a13af4",
     "lemma": "stanovit",
     "context": "road_traffic",
-    "exampleCs": "Tabulka „Jediné vozidlo ... t“ může stanovit zvláštní mez pro jednotlivé vozidlo.",
+    "exampleCs": "Mimo dobu vyhrazení mohou místo užít i jiná vozidla, není-li stanoveno jinak. Symbol elektromobilu s „POUZE DOBÍJENÍ“ dovoluje stání jen po dobu dobíjení.",
     "forms": [
+      "stanoveno",
       "stanovit"
     ],
     "translations": [
@@ -19546,7 +19627,7 @@
     "id": "sign-word-9b3adf64a22afdc4",
     "lemma": "stanoviště",
     "context": "road_traffic",
-    "exampleCs": "Nápis TAXI označuje stanoviště taxislužby, nikoli autobus.",
+    "exampleCs": "Varianta TAXI označuje stanoviště taxi se střešní svítilnou TAXI. Výše uvedené vzdálenosti autobusové zastávky na ni nepřenášejte.",
     "forms": [
       "stanoviště",
       "stanovištěm"
@@ -19741,7 +19822,9 @@
       "stejnou",
       "stejná",
       "stejné",
+      "stejném",
       "stejný",
+      "stejným",
       "stejně"
     ],
     "translations": [
@@ -19763,7 +19846,7 @@
     "id": "sign-word-851410c0d3c287cb",
     "lemma": "stezka",
     "context": "road_traffic",
-    "exampleCs": "Na stezce sledujte její určený provoz a ostatní značení.",
+    "exampleCs": "Cyklista nesmí ohrozit chodce a chodec nesmí ohrozit cyklistu jedoucího po stezce.",
     "forms": [
       "stezce",
       "stezka",
@@ -19933,11 +20016,12 @@
     "id": "sign-word-dc32869d751b767f",
     "lemma": "stroj",
     "context": "road_traffic",
-    "exampleCs": "Pracovní stroje patří do rozsahu této značky.",
+    "exampleCs": "Na chodníku nesmí zastavit ani stát vozidlo s nejvyšší povolenou hmotností přes 3500 kg, jednonápravový traktor, motorový ruční vozík ani samojízdný pracovní stroj.",
     "forms": [
       "stroj",
       "stroje",
-      "strojů"
+      "strojů",
+      "strojům"
     ],
     "translations": [
       {
@@ -19981,7 +20065,7 @@
     "id": "sign-word-1f9b7f7bb5a58b4c",
     "lemma": "stále",
     "context": "road_traffic",
-    "exampleCs": "Nepředpokládejte, že každý pruh vede stále rovně.",
+    "exampleCs": "Dovolena jsou motorová vozidla a soupravy s konstrukční rychlostí alespoň 80 km/h; to není povinnost stále jet 80 km/h.",
     "forms": [
       "stále"
     ],
@@ -20004,7 +20088,7 @@
     "id": "sign-word-9b3434930652eb4d",
     "lemma": "stání",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje dobrovolné zastavení i stání; nevztahuje se na nucené zastavení provozem.",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
     "forms": [
       "stání",
       "stáním"
@@ -20028,7 +20112,7 @@
     "id": "sign-word-771a4acd69295d37",
     "lemma": "stát",
     "context": "road_traffic",
-    "exampleCs": "Může stát vlevo z opačné strany značky začátku.",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
     "forms": [
       "stát",
       "stůj"
@@ -20229,6 +20313,7 @@
       "svícení",
       "svícením",
       "svítit",
+      "svítí",
       "svítící"
     ],
     "translations": [
@@ -20250,7 +20335,7 @@
     "id": "sign-word-39261783ecb283a4",
     "lemma": "svůj",
     "context": "road_traffic",
-    "exampleCs": "Ověřte, zda pro svou trasu potřebujete úhradu.",
+    "exampleCs": "Používejte pruh určený pro svou skupinu. Do druhého pruhu vstupujte nebo vjíždějte jen v dovolených případech a nikoho v něm neohrozte.",
     "forms": [
       "svou",
       "své",
@@ -20385,7 +20470,8 @@
     "exampleCs": "Větrný rukáv, je-li přítomen, ukazuje aktuální směr a sílu větru.",
     "forms": [
       "síla",
-      "sílu"
+      "sílu",
+      "síly"
     ],
     "translations": [
       {
@@ -20431,7 +20517,7 @@
     "id": "sign-word-673dc6c1aa560a8f",
     "lemma": "tabulka",
     "context": "road_traffic",
-    "exampleCs": "Nevztahuje se na obytné automobily; údaj o hmotnosti na značce či tabulce omezuje rozsah.",
+    "exampleCs": "S tabulkou „Jediné vozidlo ... t“ lze překročit mez na značce, ale ne mez na tabulce. U soupravy se pro tuto tabulku sčítají okamžité hmotnosti všech vozidel.",
     "forms": [
       "tabulce",
       "tabulek",
@@ -20575,7 +20661,7 @@
     "id": "sign-word-12796d3d5f4e1323",
     "lemma": "taxi",
     "context": "road_traffic",
-    "exampleCs": "Nápis TAXI označuje stanoviště taxislužby, nikoli autobus.",
+    "exampleCs": "TAXI znamená vozidla taxislužby se střešní svítilnou TAXI. Sledujte dobu, po kterou je pruh vyhrazen.",
     "forms": [
       "taxi"
     ],
@@ -20598,7 +20684,7 @@
     "id": "sign-word-f1bbfcc825f4593d",
     "lemma": "taxislužba",
     "context": "road_traffic",
-    "exampleCs": "Nápis TAXI označuje stanoviště taxislužby, nikoli autobus.",
+    "exampleCs": "TAXI znamená vozidla taxislužby se střešní svítilnou TAXI. Sledujte dobu, po kterou je pruh vyhrazen.",
     "forms": [
       "taxislužba",
       "taxislužby"
@@ -20767,8 +20853,13 @@
     "forms": [
       "tato",
       "tento",
+      "toho",
+      "tomuto",
+      "tuto",
+      "tyto",
       "této",
-      "tímto"
+      "tímto",
+      "těch"
     ],
     "translations": [
       {
@@ -20859,7 +20950,7 @@
     "id": "sign-word-16a8a610d4f6d8fe",
     "lemma": "tma",
     "context": "road_traffic",
-    "exampleCs": "Nejde jen o varování před tmou.",
+    "exampleCs": "Slovo „tma“ v dopravním kontextu.",
     "forms": [
       "tma",
       "tmou"
@@ -20935,7 +21026,7 @@
     "id": "sign-word-3d40bc828710762c",
     "lemma": "traktor",
     "context": "road_traffic",
-    "exampleCs": "Pro stanovené těžké nákladní automobily a traktory omezuje předjíždění i užití jiného než pravého pruhu.",
+    "exampleCs": "Na chodníku nesmí zastavit ani stát vozidlo s nejvyšší povolenou hmotností přes 3500 kg, jednonápravový traktor, motorový ruční vozík ani samojízdný pracovní stroj.",
     "forms": [
       "traktor",
       "traktory",
@@ -20992,6 +21083,7 @@
       "tramvajovou",
       "tramvajové",
       "tramvajového",
+      "tramvajovém",
       "tramvajový"
     ],
     "translations": [
@@ -21109,7 +21201,7 @@
     "id": "sign-word-d737677e60e7d539",
     "lemma": "trojúhelník",
     "context": "road_traffic",
-    "exampleCs": "Trojúhelník: přednost ano, povinné zastavení ne.",
+    "exampleCs": "Trojúhelníky",
     "forms": [
       "trojúhelník",
       "trojúhelníky"
@@ -21133,7 +21225,7 @@
     "id": "sign-word-a70dac1a3048e9ae",
     "lemma": "trolejbus",
     "context": "road_traffic",
-    "exampleCs": "Zastávka trolejbusu",
+    "exampleCs": "U zastávky autobusu, tramvaje nebo trolejbusu bez nástupního ostrůvku nesmějí jiná vozidla zastavit ani stát. Výjimkou jsou vozidla, pro která je zastávka určena.",
     "forms": [
       "trolejbus",
       "trolejbusu"
@@ -21157,7 +21249,7 @@
     "id": "sign-word-94124f133d21d8d5",
     "lemma": "trolejbusový",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte trolejbusovou zastávku s autobusovou.",
+    "exampleCs": "Slovo „trolejbusový“ v dopravním kontextu.",
     "forms": [
       "trolejbusovou",
       "trolejbusový"
@@ -21233,7 +21325,8 @@
       "trvale",
       "trvalou",
       "trvalé",
-      "trvalý"
+      "trvalý",
+      "trvalým"
     ],
     "translations": [
       {
@@ -21516,7 +21609,7 @@
     "id": "sign-word-c70ee7843d8a14dc",
     "lemma": "těžký",
     "context": "road_traffic",
-    "exampleCs": "Pro stanovené těžké nákladní automobily a traktory omezuje předjíždění i užití jiného než pravého pruhu.",
+    "exampleCs": "Slovo „těžký“ v dopravním kontextu.",
     "forms": [
       "těžké",
       "těžký",
@@ -21925,7 +22018,7 @@
     "id": "sign-word-34ffa9ebe22a2d96",
     "lemma": "umožnit",
     "context": "road_traffic",
-    "exampleCs": "Při souběžné jízdě umožněte střídavé zařazení.",
+    "exampleCs": "Chodci smějí užívat celou šířku komunikace, ale musí umožnit vozidlům jízdu. Stání je dovoleno jen na označených parkovištích.",
     "forms": [
       "umožnit",
       "umožněte"
@@ -21949,7 +22042,7 @@
     "id": "sign-word-213f45b107021cdc",
     "lemma": "umístěný",
     "context": "road_traffic",
-    "exampleCs": "Může být umístěna vlevo z opačné strany značky začátku.",
+    "exampleCs": "Signál dvou vedle sebe umístěných střídavě přerušovaných červených světel",
     "forms": [
       "umístěna",
       "umístěný",
@@ -21974,7 +22067,7 @@
     "id": "sign-word-c97bf50ecd99fd74",
     "lemma": "umístit",
     "context": "road_traffic",
-    "exampleCs": "Umístěte vozidlo podle symbolu, ne celé na chodník.",
+    "exampleCs": "IS 6d se nesmí umístit nad vozovku. Při použití jako předzvěstná značka uvádí vzdálenost.",
     "forms": [
       "umístit",
       "umístěte"
@@ -22144,10 +22237,11 @@
     "id": "sign-word-29928b71f11c1cab",
     "lemma": "upřesnit",
     "context": "road_traffic",
-    "exampleCs": "Zákaz vjezdu nákladních automobilů; ministerstvo upřesnilo použití i na vozidla konstrukčně odvozená od nákladních vozidel.",
+    "exampleCs": "Před křižovatkou sledujte, kudy vede hlavní silnice; její průběh může upřesnit dodatková tabulka.",
     "forms": [
       "upřesnilo",
       "upřesnit",
+      "upřesní",
       "upřesňuje",
       "upřesňují"
     ],
@@ -22170,10 +22264,14 @@
     "id": "sign-word-043d40fb3e5312c9",
     "lemma": "určený",
     "context": "road_traffic",
-    "exampleCs": "Označuje stezku určenou pro jezdce na zvířeti.",
+    "exampleCs": "U zastávky autobusu, tramvaje nebo trolejbusu bez nástupního ostrůvku nesmějí jiná vozidla zastavit ani stát. Výjimkou jsou vozidla, pro která je zastávka určena.",
     "forms": [
+      "určena",
       "určenou",
+      "určená",
       "určené",
+      "určeného",
+      "určenému",
       "určený",
       "určených",
       "určeným"
@@ -22197,7 +22295,7 @@
     "id": "sign-word-45dfef4a2d88bddf",
     "lemma": "určení",
     "context": "road_traffic",
-    "exampleCs": "Respektujte vyznačené určení stezky.",
+    "exampleCs": "Zakazuje vjezd nákladním automobilům, vozidlům zvláštního určení a stanoveným traktorům. Neplatí pro obytné automobily.",
     "forms": [
       "určení"
     ],
@@ -22225,6 +22323,7 @@
       "určete",
       "určit",
       "určuje",
+      "určují",
       "určující"
     ],
     "translations": [
@@ -22295,9 +22394,10 @@
     "id": "sign-word-b38a04a0af41ec7a",
     "lemma": "uvedený",
     "context": "road_traffic",
-    "exampleCs": "Druhý druh vozidla smí vjet jen tehdy, je-li na značce uveden.",
+    "exampleCs": "Je-li uvedena mez největší povolené hmotnosti, zákaz platí při jejím překročení. U soupravy se sčítají největší povolené hmotnosti všech vozidel.",
     "forms": [
       "uveden",
+      "uvedena",
       "uvedenou",
       "uvedená",
       "uvedené",
@@ -22348,7 +22448,7 @@
     "id": "sign-word-26a108cc3284ce55",
     "lemma": "uvádět",
     "context": "road_traffic",
-    "exampleCs": "U tunelů delších než 500 m se uvádí délka.",
+    "exampleCs": "Označuje začátek území s pravidly provozu v obci a uvádí její název.",
     "forms": [
       "uvádí",
       "uvádějí",
@@ -22470,7 +22570,7 @@
     "id": "sign-word-623fd2262314324b",
     "lemma": "už",
     "context": "road_traffic",
-    "exampleCs": "Nepředpokládejte, že po jednom vlaku je přejezd už volný.",
+    "exampleCs": "Za značkou už neplatí tento místní příkaz k nasazení řetězů.",
     "forms": [
       "už"
     ],
@@ -22493,7 +22593,7 @@
     "id": "sign-word-ca88d33f525a5b82",
     "lemma": "užití",
     "context": "road_traffic",
-    "exampleCs": "Pro stanovené těžké nákladní automobily a traktory omezuje předjíždění i užití jiného než pravého pruhu.",
+    "exampleCs": "Zakazuje užívání zvukových výstražných znamení.",
     "forms": [
       "užití",
       "užívání"
@@ -22517,10 +22617,11 @@
     "id": "sign-word-d1a1f441622da299",
     "lemma": "uživatel",
     "context": "road_traffic",
-    "exampleCs": "Vnímejte dvě sousední plochy a jejich uživatele.",
+    "exampleCs": "Ověřte, zda jste oprávněným uživatelem.",
     "forms": [
       "uživatel",
-      "uživatele"
+      "uživatele",
+      "uživatelem"
     ],
     "translations": [
       {
@@ -22541,8 +22642,9 @@
     "id": "sign-word-aab13c39fe25c799",
     "lemma": "užít",
     "context": "road_traffic",
-    "exampleCs": "Přikazuje vyznačenému druhu vozidla užít označený jízdní pruh.",
+    "exampleCs": "Patří-li vaše vozidlo do této skupiny, nepředjíždějte motorová vozidla vlevo. Při dvou a více pruzích v jednom směru užijte pravý pruh; jiný jen při nutném objíždění.",
     "forms": [
+      "užijte",
       "užít",
       "užívat",
       "užívá"
@@ -22613,7 +22715,7 @@
     "id": "sign-word-d97d3e75b9fecc4f",
     "lemma": "varianta",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte variantu TAXI s autobusovým symbolem.",
+    "exampleCs": "Nad vozovkou šipky ukazují řazení před křižovatkou. Předzvěstná varianta uvádí vzdálenost.",
     "forms": [
       "varianta",
       "variantu"
@@ -22683,7 +22785,7 @@
     "id": "sign-word-ee85f9184c881093",
     "lemma": "varovat",
     "context": "road_traffic",
-    "exampleCs": "Varuje před častým pohybem nebo přecházením chodců i mimo přechod.",
+    "exampleCs": "Varuje před častým pohybem osob na osobních přepravnících.",
     "forms": [
       "varovat",
       "varuje"
@@ -22707,7 +22809,7 @@
     "id": "sign-word-6a2805e0e5ce83e4",
     "lemma": "váš",
     "context": "road_traffic",
-    "exampleCs": "Před vjezdem ověřte, zda vaše pracovní vozidlo patří do zakázané skupiny.",
+    "exampleCs": "Patří-li vaše vozidlo do této skupiny, nepředjíždějte motorová vozidla vlevo. Při dvou a více pruzích v jednom směru užijte pravý pruh; jiný jen při nutném objíždění.",
     "forms": [
       "vaše",
       "vašeho",
@@ -22855,7 +22957,7 @@
     "id": "sign-word-d00b779e05c66e33",
     "lemma": "veřejný",
     "context": "road_traffic",
-    "exampleCs": "Parkoviště navazuje na veřejnou hromadnou dopravu.",
+    "exampleCs": "V úseku procházejícím obcí je pro veřejnou hromadnou dopravu výjimka od 65 km/h konstrukční rychlosti.",
     "forms": [
       "veřejnou",
       "veřejné",
@@ -22906,7 +23008,7 @@
     "id": "sign-word-e2ee651d6866fe9c",
     "lemma": "viditelnost",
     "context": "road_traffic",
-    "exampleCs": "Zapněte předepsané osvětlení pro zhoršenou viditelnost.",
+    "exampleCs": "Sledujte prostor kolem silnice, zvláště při horší viditelnosti.",
     "forms": [
       "viditelnost",
       "viditelnosti"
@@ -23051,7 +23153,7 @@
     "id": "sign-word-1f5e952505eef389",
     "lemma": "vlak",
     "context": "road_traffic",
-    "exampleCs": "Sledujte výstražné signály a ověřte, zda se neblíží vlak.",
+    "exampleCs": "Viditelný či slyšitelný přijíždějící vlak také zakazuje vjezd, kromě případu přerušovaného bílého světla.",
     "forms": [
       "vlak",
       "vlaku",
@@ -23077,7 +23179,7 @@
     "id": "sign-word-dcdbc0093919a857",
     "lemma": "vlastní",
     "context": "road_traffic",
-    "exampleCs": "Sdílení prostoru má vlastní zónovou značku.",
+    "exampleCs": "Značka nestanoví vlastní číselný limit.",
     "forms": [
       "vlastní"
     ],
@@ -23243,11 +23345,12 @@
     "id": "sign-word-b9947d641ca29906",
     "lemma": "vodorovný",
     "context": "road_traffic",
-    "exampleCs": "Spolu s vodorovnou značkou ukazuje minimální odstup mezi jedoucími vozidly.",
+    "exampleCs": "S vodorovnou značkou ukazuje odstup: dvě šipky mezi vozidly označují minimum při nejvyšší dovolené rychlosti za běžných podmínek.",
     "forms": [
       "vodorovnou",
       "vodorovné",
-      "vodorovný"
+      "vodorovný",
+      "vodorovně"
     ],
     "translations": [
       {
@@ -23271,7 +23374,8 @@
     "exampleCs": "Nečekejte s volbou pruhu až na samotný výjezd.",
     "forms": [
       "volba",
-      "volbou"
+      "volbou",
+      "volby"
     ],
     "translations": [
       {
@@ -23320,6 +23424,7 @@
       "volná",
       "volné",
       "volného",
+      "volném",
       "volný",
       "volně"
     ],
@@ -23394,6 +23499,7 @@
     "forms": [
       "vozovce",
       "vozovka",
+      "vozovkou",
       "vozovku",
       "vozovky"
     ],
@@ -23421,7 +23527,8 @@
       "vozík",
       "vozíku",
       "vozíky",
-      "vozíků"
+      "vozíků",
+      "vozíkům"
     ],
     "translations": [
       {
@@ -23512,8 +23619,9 @@
     "id": "sign-word-09d4a3d57c819e14",
     "lemma": "vybavený",
     "context": "road_traffic",
-    "exampleCs": "Ukazuje vybavené místo pro krátký odpočinek.",
+    "exampleCs": "Rozsviťte obrysová a potkávací nebo dálková světla, pokud je jimi vozidlo vybaveno. Dálkovými nesmíte oslňovat.",
     "forms": [
+      "vybaveno",
       "vybavené",
       "vybavený"
     ],
@@ -23536,7 +23644,7 @@
     "id": "sign-word-055263d6579c8cd4",
     "lemma": "vybavení",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte s táborem jen pro jeden typ vybavení.",
+    "exampleCs": "Stezku mohou užívat i lidé na lyžích, kolečkových bruslích nebo obdobném sportovním vybavení; řídí se příslušnými pravidly pro cyklisty.",
     "forms": [
       "vybavení"
     ],
@@ -23583,8 +23691,9 @@
     "id": "sign-word-706b2d0a6fbc2f9d",
     "lemma": "vyhrazený",
     "context": "road_traffic",
-    "exampleCs": "Plocha je vyhrazena vozidlu s příslušným parkovacím průkazem.",
+    "exampleCs": "TAXI znamená vozidla taxislužby se střešní svítilnou TAXI. Sledujte dobu, po kterou je pruh vyhrazen.",
     "forms": [
+      "vyhrazen",
       "vyhrazena",
       "vyhrazeno",
       "vyhrazené",
@@ -23610,7 +23719,7 @@
     "id": "sign-word-5c7553b1e5628079",
     "lemma": "vyhrazení",
     "context": "road_traffic",
-    "exampleCs": "Mimo dobu vyhrazení může platit i jiné omezení.",
+    "exampleCs": "Mimo dobu vyhrazení mohou místo užít i jiná vozidla, není-li stanoveno jinak. Symbol elektromobilu s „POUZE DOBÍJENÍ“ dovoluje stání jen po dobu dobíjení.",
     "forms": [
       "vyhrazení"
     ],
@@ -24094,7 +24203,7 @@
     "id": "sign-word-1fe10a392b68fb39",
     "lemma": "vyžadovat",
     "context": "road_traffic",
-    "exampleCs": "Absence závory vyžaduje pozornost.",
+    "exampleCs": "Výjimka z červené, zvukové výstrahy či závor vyžaduje před přejezdem ústní souhlas pověřeného zaměstnance dráhy; dodržte jeho pokyny.",
     "forms": [
       "vyžadovat",
       "vyžaduje",
@@ -24120,7 +24229,7 @@
     "id": "sign-word-7d42651b59756700",
     "lemma": "vzdálenost",
     "context": "road_traffic",
-    "exampleCs": "Nejde o návěstní desku udávající vzdálenost.",
+    "exampleCs": "Označuje vzdálenost 240 m před železničním přejezdem.",
     "forms": [
       "vzdálenost",
       "vzdálenosti",
@@ -24196,7 +24305,7 @@
     "id": "sign-word-d95eaa172f6827cb",
     "lemma": "vázaný",
     "context": "road_traffic",
-    "exampleCs": "Chodci nejsou vázáni na přechod.",
+    "exampleCs": "Slovo „vázaný“ v dopravním kontextu.",
     "forms": [
       "vázaný",
       "vázáni"
@@ -24220,9 +24329,10 @@
     "id": "sign-word-67897032328de52d",
     "lemma": "vázat",
     "context": "road_traffic",
-    "exampleCs": "Váže platnost hlavní značky na vozidlo přesahující uvedenou největší povolenou hmotnost.",
+    "exampleCs": "Průkaz je vázán na svého držitele.",
     "forms": [
       "vázat",
+      "vázán",
       "váže"
     ],
     "translations": [
@@ -24386,7 +24496,7 @@
     "id": "sign-word-8e5f38c86ed7adbd",
     "lemma": "výjezd",
     "context": "road_traffic",
-    "exampleCs": "Připravte se na správný výjezd podle čísla.",
+    "exampleCs": "Umožněte výjezd, ne jen zpomalte.",
     "forms": [
       "výjezd",
       "výjezdu"
@@ -24434,8 +24544,9 @@
     "id": "sign-word-f9303b5fe182f26b",
     "lemma": "výjimka",
     "context": "road_traffic",
-    "exampleCs": "Výjimka se nevztahuje na protijízdu aut.",
+    "exampleCs": "Vyznačuje plochu, do které nesmíte vjíždět ani nad ni zasahovat nákladem, kromě stanovených výjimek.",
     "forms": [
+      "výjimek",
       "výjimka",
       "výjimkami",
       "výjimkou",
@@ -24508,7 +24619,7 @@
     "id": "sign-word-a89f8f86bb0e709b",
     "lemma": "výskyt",
     "context": "road_traffic",
-    "exampleCs": "Varuje před častým výskytem domácích zvířat na vozovce.",
+    "exampleCs": "Upozorňuje na zvýšený výskyt chodců nebo jejich časté přecházení mimo přechod.",
     "forms": [
       "výskyt",
       "výskytem"
@@ -24532,12 +24643,13 @@
     "id": "sign-word-cb19e7293bded169",
     "lemma": "výstraha",
     "context": "road_traffic",
-    "exampleCs": "Výstraha sama neurčuje přednost; posuďte další značky a pravidla.",
+    "exampleCs": "Výstraha sama nedává chodcům přednost.",
     "forms": [
       "výstraha",
       "výstrahou",
       "výstrahu",
-      "výstrahy"
+      "výstrahy",
+      "výstraze"
     ],
     "translations": [
       {
@@ -24634,7 +24746,7 @@
     "id": "sign-word-7c13480ec2225df7",
     "lemma": "význam",
     "context": "road_traffic",
-    "exampleCs": "Neomezujte význam značky jen na samotný manévr předjíždění.",
+    "exampleCs": "Přečtěte přesný nápis; například zákaz průjezdu má specifický význam.",
     "forms": [
       "význam"
     ],
@@ -24850,7 +24962,8 @@
       "všechen",
       "všechna",
       "všechny",
-      "všem"
+      "všem",
+      "všichni"
     ],
     "translations": [
       {
@@ -24895,7 +25008,7 @@
     "id": "sign-word-c72c02f555cede45",
     "lemma": "vůči",
     "context": "road_traffic",
-    "exampleCs": "Přibližujte se k přechodu s pozorností vůči chodcům.",
+    "exampleCs": "Tyto povinnosti vůči chodcům se nevztahují na řidiče tramvaje; chodec musí tramvaji dát přednost.",
     "forms": [
       "vůči"
     ],
@@ -24964,7 +25077,7 @@
     "id": "sign-word-594e519ae499312b",
     "lemma": "z",
     "context": "road_traffic",
-    "exampleCs": "Zvěř přichází z volné přírody.",
+    "exampleCs": "Upozorňuje na přechod, který by řidič jinak neočekával a který není viditelný z dostatečné vzdálenosti.",
     "forms": [
       "z",
       "ze"
@@ -25129,7 +25242,7 @@
     "id": "sign-word-6fdf400d30f937c7",
     "lemma": "zakazovat",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje vjezd všem vozidlům z obou směrů.",
+    "exampleCs": "Viditelný či slyšitelný přijíždějící vlak také zakazuje vjezd, kromě případu přerušovaného bílého světla.",
     "forms": [
       "zakazovat",
       "zakazuje"
@@ -25160,7 +25273,9 @@
       "zakázanému",
       "zakázaný",
       "zakázaným",
-      "zakázán"
+      "zakázán",
+      "zakázáno",
+      "zakázány"
     ],
     "translations": [
       {
@@ -25229,7 +25344,7 @@
     "id": "sign-word-6815d1d5c2eb542a",
     "lemma": "zapnout",
     "context": "road_traffic",
-    "exampleCs": "Zapněte předepsané osvětlení pro zhoršenou viditelnost.",
+    "exampleCs": "Slovo „zapnout“ v dopravním kontextu.",
     "forms": [
       "zapnout",
       "zapněte"
@@ -25301,7 +25416,7 @@
     "id": "sign-word-72b8ae5df7d117c2",
     "lemma": "zastavit",
     "context": "road_traffic",
-    "exampleCs": "Nezaměňujte povinnost dát přednost s povinností vždy zastavit.",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
     "forms": [
       "zastavit",
       "zastavte"
@@ -25496,7 +25611,7 @@
     "id": "sign-word-f2efa3a4b473e1a9",
     "lemma": "zařízení",
     "context": "road_traffic",
-    "exampleCs": "Bez závory neznamená bez výstražného zařízení.",
+    "exampleCs": "Nezapomeňte na náklad nebo zařízení na střeše.",
     "forms": [
       "zařízení"
     ],
@@ -25519,7 +25634,7 @@
     "id": "sign-word-3f5a276e281704c7",
     "lemma": "zcela",
     "context": "road_traffic",
-    "exampleCs": "Bez mýtného nemusí znamenat zcela bez poplatku.",
+    "exampleCs": "Slovo „zcela“ v dopravním kontextu.",
     "forms": [
       "zcela"
     ],
@@ -25611,8 +25726,9 @@
     "id": "sign-word-0f2a357db8ca4546",
     "lemma": "zelený",
     "context": "road_traffic",
-    "exampleCs": "Zelená dálniční značka otevírá zvláštní režim.",
+    "exampleCs": "Je-li signalizace za komunikací a začali jste přejezd na zelenou, při rozsvícení žluté smíte dokončit přejetí k tomuto zařízení.",
     "forms": [
+      "zelenou",
       "zelená",
       "zelené",
       "zelený",
@@ -25708,7 +25824,7 @@
     "id": "sign-word-81165af8909ae59e",
     "lemma": "zhasnout",
     "context": "road_traffic",
-    "exampleCs": "Nepovažujte konec místní značky za povolení zhasnout za špatné viditelnosti.",
+    "exampleCs": "Slovo „zhasnout“ v dopravním kontextu.",
     "forms": [
       "zhasnout"
     ],
@@ -25731,7 +25847,7 @@
     "id": "sign-word-3f79ab28342956ca",
     "lemma": "zhoršený",
     "context": "road_traffic",
-    "exampleCs": "Zapněte předepsané osvětlení pro zhoršenou viditelnost.",
+    "exampleCs": "Slovo „zhoršený“ v dopravním kontextu.",
     "forms": [
       "zhoršenou",
       "zhoršený"
@@ -25759,7 +25875,8 @@
     "forms": [
       "zimní",
       "zimních",
-      "zimního"
+      "zimního",
+      "zimními"
     ],
     "translations": [
       {
@@ -25971,12 +26088,13 @@
     "id": "sign-word-d4b6a55b7e1abc0c",
     "lemma": "změna",
     "context": "road_traffic",
-    "exampleCs": "Přidání pruhu není samo o sobě změna přednosti.",
+    "exampleCs": "Na okruhu označeném značkou „Okruh“ nebo „Změna směru okruhu“ je zakázáno stání. Samo o sobě to není zákaz krátkého zastavení.",
     "forms": [
       "změna",
       "změnou",
       "změnu",
-      "změny"
+      "změny",
+      "změně"
     ],
     "translations": [
       {
@@ -26072,7 +26190,7 @@
     "id": "sign-word-4bf353dd445d3d6d",
     "lemma": "znamení",
     "context": "road_traffic",
-    "exampleCs": "Zákaz zvukových výstražných znamení",
+    "exampleCs": "Nevjíždějte při červené nebo zvukové výstraze, při pohybu či sklopení závor, při znamení zaměstnance dráhy k zastavení ani bez místa za přejezdem.",
     "forms": [
       "znamení",
       "znamením"
@@ -26269,9 +26387,10 @@
     "id": "sign-word-97766d6ec460d84b",
     "lemma": "zpomalení",
     "context": "road_traffic",
-    "exampleCs": "Pouhé zpomalení, i když nikdo nejede, nestačí.",
+    "exampleCs": "Pouhé zpomalení nesplňuje pokyn STOP.",
     "forms": [
-      "zpomalení"
+      "zpomalení",
+      "zpomalením"
     ],
     "translations": [
       {
@@ -26340,7 +26459,7 @@
     "id": "sign-word-84559e8b15b8fca1",
     "lemma": "zpoplatnění",
     "context": "road_traffic",
-    "exampleCs": "Tabulka může změnit informaci o zpoplatnění.",
+    "exampleCs": "Sledujte pravidla této silnice a případné tabulky o zpoplatnění.",
     "forms": [
       "zpoplatnění"
     ],
@@ -26363,8 +26482,9 @@
     "id": "sign-word-11bbf5e570b4cef6",
     "lemma": "zpoplatněný",
     "context": "road_traffic",
-    "exampleCs": "Označuje úsek zpoplatněný časovým poplatkem.",
+    "exampleCs": "Tato komunikace není zpoplatněna, pokud tabulka pod značkou nestanoví jinak.",
     "forms": [
+      "zpoplatněna",
       "zpoplatněný"
     ],
     "translations": [
@@ -26575,7 +26695,7 @@
     "id": "sign-word-af7213e60438e815",
     "lemma": "zrychlit",
     "context": "road_traffic",
-    "exampleCs": "Žlutá neznamená zrychlit přes přejezd.",
+    "exampleCs": "Žlutá není pokyn zrychlit.",
     "forms": [
       "zrychlit"
     ],
@@ -26719,7 +26839,7 @@
     "id": "sign-word-5dc92ebeed8f206f",
     "lemma": "zvolit",
     "context": "road_traffic",
-    "exampleCs": "Před přepravou takového nákladu zvolte jinou trasu.",
+    "exampleCs": "Návěst pomáhá zvolit odbočovací pruh.",
     "forms": [
       "zvolit",
       "zvolte"
@@ -26743,7 +26863,7 @@
     "id": "sign-word-ae572b2e63b4c5aa",
     "lemma": "zvukový",
     "context": "road_traffic",
-    "exampleCs": "Nejde o povinnost zvukové znamení použít.",
+    "exampleCs": "Nevjíždějte při červené nebo zvukové výstraze, při pohybu či sklopení závor, při znamení zaměstnance dráhy k zastavení ani bez místa za přejezdem.",
     "forms": [
       "zvukové",
       "zvukový",
@@ -26797,6 +26917,8 @@
     "forms": [
       "zvířat",
       "zvířata",
+      "zvířatech",
+      "zvířaty",
       "zvíře",
       "zvířete",
       "zvířetem",
@@ -26970,7 +27092,7 @@
     "id": "sign-word-2ae688085ba4eb33",
     "lemma": "zákon",
     "context": "road_traffic",
-    "exampleCs": "Odděluje pruhy; přes čáru se běžně nepřejíždí, zákon uvádí omezené výjimky.",
+    "exampleCs": "Chodci musí používat především chodník nebo stezku pro chodce. Jiní účastníci je nesmějí užívat, pokud zákon nestanoví výjimku.",
     "forms": [
       "zákon"
     ],
@@ -26996,6 +27118,7 @@
     "exampleCs": "Nepřehlédněte zákonnou výjimku pro motocykl bez postranního vozíku.",
     "forms": [
       "zákonnou",
+      "zákonná",
       "zákonné",
       "zákonný"
     ],
@@ -27018,7 +27141,7 @@
     "id": "sign-word-79a59fff3a06ab98",
     "lemma": "záměna",
     "context": "road_traffic",
-    "exampleCs": "Záměna nápisu BUS za TAXI mění určení místa.",
+    "exampleCs": "Slovo „záměna“ v dopravním kontextu.",
     "forms": [
       "záměna"
     ],
@@ -27112,7 +27235,7 @@
     "id": "sign-word-e8675d16045571ce",
     "lemma": "závora",
     "context": "road_traffic",
-    "exampleCs": "Přítomnost závor neznamená, že lze ignorovat signály.",
+    "exampleCs": "Nevjíždějte při červené nebo zvukové výstraze, při pohybu či sklopení závor, při znamení zaměstnance dráhy k zastavení ani bez místa za přejezdem.",
     "forms": [
       "závor",
       "závora",
@@ -27165,7 +27288,7 @@
     "id": "sign-word-d9b330134a94e752",
     "lemma": "zónový",
     "context": "road_traffic",
-    "exampleCs": "Sdílení prostoru má vlastní zónovou značku.",
+    "exampleCs": "Označuje oblast, v níž platí omezení zobrazené uvnitř zónové značky.",
     "forms": [
       "zónovou",
       "zónové",
@@ -27621,8 +27744,9 @@
     "id": "sign-word-c2eca81b4af82621",
     "lemma": "účastník",
     "context": "road_traffic",
-    "exampleCs": "Zelená neznamená přednost před každým účastníkem.",
+    "exampleCs": "Jako jezdec na zvířeti musíte stezku použít. Ostatní účastníci ji nesmějí užívat.",
     "forms": [
+      "účastníci",
       "účastník",
       "účastníkem",
       "účastníků",
@@ -27670,8 +27794,9 @@
     "id": "sign-word-203aeeaf5b37d8fb",
     "lemma": "účelový",
     "context": "road_traffic",
-    "exampleCs": "Zakazuje nejbližší odbočení vpravo, včetně odbočení do účelové komunikace nebo mimo silnici.",
+    "exampleCs": "Zakazuje odbočit vpravo na nejbližší křižovatce, na připojenou účelovou komunikaci nebo na místo mimo pozemní komunikaci.",
     "forms": [
+      "účelovou",
       "účelové",
       "účelový"
     ],
@@ -27774,6 +27899,7 @@
     "exampleCs": "Upozorňuje na místo, kde se často pohybují děti nebo mohou náhle vběhnout do vozovky.",
     "forms": [
       "často",
+      "časté",
       "častý",
       "častým"
     ],
@@ -27896,7 +28022,7 @@
     "id": "sign-word-bda2ec54e5d61cff",
     "lemma": "či",
     "context": "road_traffic",
-    "exampleCs": "Varuje před pracemi na vozovce či těsně u ní.",
+    "exampleCs": "Je-li blíže než 50 m řízená křižovatka, přechod, místo pro přecházení nebo označený nadchod či podchod, chodec je musí použít.",
     "forms": [
       "či"
     ],
@@ -28014,7 +28140,7 @@
     "id": "sign-word-dc6299e5f2e0eca1",
     "lemma": "část",
     "context": "road_traffic",
-    "exampleCs": "Označuje dopravní okruh pro objíždění obce nebo její části.",
+    "exampleCs": "Vjezd je povolen jen vozidlům uvedeným ve spodní části značky a v uvedené době; platí také zákonné výjimky pro oprávněná vozidla.",
     "forms": [
       "část",
       "části"
@@ -28181,7 +28307,7 @@
     "id": "sign-word-cb701589ab1d980e",
     "lemma": "řetěz",
     "context": "road_traffic",
-    "exampleCs": "Zimní výbava není jen řetěz.",
+    "exampleCs": "Zimní pneumatiky; řetězy přikazuje C 5a.",
     "forms": [
       "řetěz",
       "řetězy",
@@ -28211,6 +28337,7 @@
       "řiďte",
       "řídit",
       "řídí",
+      "řídí-li",
       "řídíte-li"
     ],
     "translations": [
@@ -28232,8 +28359,9 @@
     "id": "sign-word-78610379d197774d",
     "lemma": "řízený",
     "context": "road_traffic",
-    "exampleCs": "Signál dovoluje řízené tramvaji nebo veřejné dopravě jízdu přímo.",
+    "exampleCs": "Je-li blíže než 50 m řízená křižovatka, přechod, místo pro přecházení nebo označený nadchod či podchod, chodec je musí použít.",
     "forms": [
+      "řízená",
       "řízené",
       "řízený"
     ],
@@ -28279,7 +28407,7 @@
     "id": "sign-word-e5b48f249f3fa56e",
     "lemma": "šikmý",
     "context": "road_traffic",
-    "exampleCs": "Tři šikmé pruhy označují přiblížení k přejezdu ze vzdálenosti 240 m.",
+    "exampleCs": "Parkoviště kolmé nebo šikmé stání",
     "forms": [
       "šikmé",
       "šikmého",
@@ -28304,7 +28432,7 @@
     "id": "sign-word-0b2bb325fefb8579",
     "lemma": "šipka",
     "context": "road_traffic",
-    "exampleCs": "Při jízdě po šipce dejte přednost dotčeným účastníkům.",
+    "exampleCs": "Přikazuje jet po kruhovém objezdu ve směru šipek na značce.",
     "forms": [
       "šipce",
       "šipek",
@@ -28381,7 +28509,7 @@
     "id": "sign-word-fdcb3d95e87c867c",
     "lemma": "špatný",
     "context": "road_traffic",
-    "exampleCs": "Nepovažujte konec místní značky za povolení zhasnout za špatné viditelnosti.",
+    "exampleCs": "Za deště či špatné viditelnosti odstup zvětšete.",
     "forms": [
       "špatné",
       "špatný"
@@ -28429,7 +28557,7 @@
     "id": "sign-word-c984237102ae7b6d",
     "lemma": "šrafování",
     "context": "road_traffic",
-    "exampleCs": "Neberte šrafování jako další jízdní pruh.",
+    "exampleCs": "Šrafování není další jízdní pruh.",
     "forms": [
       "šrafování"
     ],
@@ -28525,7 +28653,9 @@
     "context": "road_traffic",
     "exampleCs": "Železniční přejezd se závorami",
     "forms": [
-      "železniční"
+      "železniční",
+      "železničního",
+      "železničním"
     ],
     "translations": [
       {
@@ -28639,6 +28769,2934 @@
         "locale": "uk",
         "translation": "жовтий",
         "meaning": "Колір світлового сигналу чи елемента розмітки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-8a8a1a9fe8565d64",
+    "lemma": "den",
+    "context": "road_traffic",
+    "exampleCs": "Motorové vozidlo za jízdy svítí i ve dne.",
+    "forms": [
+      "den",
+      "dne"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "день",
+        "meaning": "В выражении «днём» речь о светлом времени суток.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "день",
+        "meaning": "У вислові «удень» ідеться про світлу пору доби.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-5b26e23049cefb5a",
+    "lemma": "bezpodmínečný",
+    "context": "road_traffic",
+    "exampleCs": "Samotné vyznačení přejezdu nedává cyklistovi bezpodmínečnou přednost; sledujte i další značky a signály.",
+    "forms": [
+      "bezpodmínečnou",
+      "bezpodmínečný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "безусловный",
+        "meaning": "Не зависит от дополнительных условий.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "безумовний",
+        "meaning": "Не залежить від додаткових умов.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cc60233e86e3f0f3",
+    "lemma": "blízko",
+    "context": "road_traffic",
+    "exampleCs": "U signalizace před komunikací zastavte před příslušnou čárou, jinak před signalizací. Výjimka platí, jste-li při rozsvícení již příliš blízko k bezpečnému zastavení.",
+    "forms": [
+      "blízko",
+      "blíže"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "близко, ближе",
+        "meaning": "Указывает небольшое расстояние до места или объекта.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "близько, ближче",
+        "meaning": "Указує невелику відстань до місця чи об'єкта.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-6a168aab796b3506",
+    "lemma": "brusle",
+    "context": "road_traffic",
+    "exampleCs": "Osoba vedoucí kolo nebo moped je chodcem. Osoby na bruslích, lyžích či vozíku pro invalidy nesmějí ohrozit ostatní chodce.",
+    "forms": [
+      "brusle",
+      "bruslích"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "коньки",
+        "meaning": "В дорожном контексте в том числе роликовые коньки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "ковзани",
+        "meaning": "У дорожньому контексті зокрема роликові ковзани.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-c2168366203807d9",
+    "lemma": "couvání",
+    "context": "road_traffic",
+    "exampleCs": "Zastavení a stání je dovoleno jen na označených parkovištích; nouzové stání má zvláštní pravidla. Otáčení, couvání a vjezd na střední dělicí pás jsou zakázány.",
+    "forms": [
+      "couvání"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "движение задним ходом",
+        "meaning": "Перемещение транспортного средства назад.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "рух заднім ходом",
+        "meaning": "Переміщення транспортного засобу назад.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-44ba8373308d96d3",
+    "lemma": "dezén",
+    "context": "road_traffic",
+    "exampleCs": "Do 3500 kg včetně musí být zimní pneumatiky na všech kolech a dezén nejméně 4 mm.",
+    "forms": [
+      "dezén"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "рисунок протектора",
+        "meaning": "Рельеф шины; его глубина определяет выполнение требования.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "рисунок протектора",
+        "meaning": "Рельєф шини; його глибина визначає виконання вимоги.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-bb61b3abd4f1205c",
+    "lemma": "dobíjení",
+    "context": "road_traffic",
+    "exampleCs": "Mimo dobu vyhrazení mohou místo užít i jiná vozidla, není-li stanoveno jinak. Symbol elektromobilu s „POUZE DOBÍJENÍ“ dovoluje stání jen po dobu dobíjení.",
+    "forms": [
+      "dobíjení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "зарядка",
+        "meaning": "Пополнение заряда аккумулятора электромобиля.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "заряджання",
+        "meaning": "Поповнення заряду акумулятора електромобіля.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-6feb7c357aff1355",
+    "lemma": "dohled",
+    "context": "road_traffic",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
+    "forms": [
+      "dohled"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "надзор, наблюдение",
+        "meaning": "Здесь служба, контролирующая безопасность тоннеля.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "нагляд, спостереження",
+        "meaning": "Тут служба, що контролює безпеку тунелю.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-558ee335430a8b39",
+    "lemma": "dojetí",
+    "context": "road_traffic",
+    "exampleCs": "Značka platí bez ohledu na datum a počasí; tabulka může určit jinou dobu platnosti. Výjimka se týká náhradní pneumatiky pro nouzové dojetí.",
+    "forms": [
+      "dojetí"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "доезд",
+        "meaning": "Здесь аварийный доезд с запасной шиной.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "доїзд",
+        "meaning": "Тут аварійний доїзд із запасною шиною.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-06fd3644fcda2423",
+    "lemma": "dole",
+    "context": "road_traffic",
+    "exampleCs": "Jiná vozidla než kola smějí vjet jen, jsou-li uvedena dole na značce. Stání je dovoleno jen na označených parkovištích.",
+    "forms": [
+      "dole"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "внизу",
+        "meaning": "В нижней части знака или изображения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "унизу",
+        "meaning": "У нижній частині знака чи зображення.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-15f68cff0696e528",
+    "lemma": "donutit",
+    "context": "road_traffic",
+    "exampleCs": "Mimo přechod nesmí chodec donutit přijíždějící řidiče k náhlé změně směru nebo rychlosti.",
+    "forms": [
+      "donutit"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "вынудить",
+        "meaning": "Заставить другого участника изменить скорость или направление.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "змусити",
+        "meaning": "Змусити іншого учасника змінити швидкість чи напрямок.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9f00b3f8c3dd648c",
+    "lemma": "dostatečný",
+    "context": "road_traffic",
+    "exampleCs": "Upozorňuje na přechod, který by řidič jinak neočekával a který není viditelný z dostatečné vzdálenosti.",
+    "forms": [
+      "dostatečné",
+      "dostatečný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "достаточный",
+        "meaning": "Соответствует необходимой величине, например расстоянию видимости.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "достатній",
+        "meaning": "Відповідає необхідній величині, наприклад відстані видимості.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-f3c8e11c2c56cbd8",
+    "lemma": "držitel",
+    "context": "road_traffic",
+    "exampleCs": "Parkovací průkaz lze použít jen, řídí-li vozidlo jeho držitel nebo je-li v něm přepravován.",
+    "forms": [
+      "držitel",
+      "držitele"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "владелец, обладатель",
+        "meaning": "Здесь человек, которому выдан парковочный документ.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "власник, держатель",
+        "meaning": "Тут людина, якій видано паркувальний документ.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-a2f74e06b0661e8f",
+    "lemma": "elektromobil",
+    "context": "road_traffic",
+    "exampleCs": "Mimo dobu vyhrazení mohou místo užít i jiná vozidla, není-li stanoveno jinak. Symbol elektromobilu s „POUZE DOBÍJENÍ“ dovoluje stání jen po dobu dobíjení.",
+    "forms": [
+      "elektromobil",
+      "elektromobilu"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "электромобиль",
+        "meaning": "Автомобиль с электрическим приводом.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "електромобіль",
+        "meaning": "Автомобіль з електричним приводом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-c5c39b3483934cfb",
+    "lemma": "hodlat",
+    "context": "road_traffic",
+    "exampleCs": "Neohrožujte ani neomezujte chodce na přechodu nebo zjevně hodlajícího přejít; podle potřeby zastavte.",
+    "forms": [
+      "hodlajícího",
+      "hodlat"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "намереваться",
+        "meaning": "О пешеходе, который явно собирается перейти дорогу.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "мати намір",
+        "meaning": "Про пішохода, який явно збирається перейти дорогу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-96f47b4c39f37b3d",
+    "lemma": "hra",
+    "context": "road_traffic",
+    "exampleCs": "Hry dětí na komunikaci jsou dovoleny v obytné, nikoli v pěší zóně.",
+    "forms": [
+      "hra",
+      "hry"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "игра",
+        "meaning": "Здесь игры детей на проезжей части.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "гра",
+        "meaning": "Тут ігри дітей на проїзній частині.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-db25420160d3fe9e",
+    "lemma": "ihned",
+    "context": "road_traffic",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
+    "forms": [
+      "ihned"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "немедленно",
+        "meaning": "Действие требуется без промедления.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "негайно",
+        "meaning": "Дія потрібна без зволікання.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-b78facc50ad48fb5",
+    "lemma": "invalida",
+    "context": "road_traffic",
+    "exampleCs": "Osoba vedoucí kolo nebo moped je chodcem. Osoby na bruslích, lyžích či vozíku pro invalidy nesmějí ohrozit ostatní chodce.",
+    "forms": [
+      "invalida",
+      "invalidy"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "человек с инвалидностью",
+        "meaning": "В названии кресла или тележки для человека с инвалидностью.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "людина з інвалідністю",
+        "meaning": "У назві крісла чи візка для людини з інвалідністю.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-105196f64e17b973",
+    "lemma": "jednonápravový",
+    "context": "road_traffic",
+    "exampleCs": "Na chodníku nesmí zastavit ani stát vozidlo s nejvyšší povolenou hmotností přes 3500 kg, jednonápravový traktor, motorový ruční vozík ani samojízdný pracovní stroj.",
+    "forms": [
+      "jednonápravový",
+      "jednonápravových"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "одноосный",
+        "meaning": "Имеющий одну ось; здесь разновидность трактора.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "одноосьовий",
+        "meaning": "Що має одну вісь; тут різновид трактора.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-131ed734290d30f3",
+    "lemma": "kg",
+    "context": "road_traffic",
+    "exampleCs": "Platí pro nákladní automobily s největší povolenou hmotností přes 3500 kg a traktory s touto hmotností přes 3500 kg a konstrukční rychlostí alespoň 80 km/h.",
+    "forms": [
+      "kg"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "кг, килограмм",
+        "meaning": "Единица массы, используемая в ограничениях для транспортных средств.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "кг, кілограм",
+        "meaning": "Одиниця маси, яку використовують в обмеженнях для транспортних засобів.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-d65df245d0bdd9d9",
+    "lemma": "kolečkový",
+    "context": "road_traffic",
+    "exampleCs": "Stezku mohou užívat i lidé na lyžích, kolečkových bruslích nebo obdobném sportovním vybavení; řídí se příslušnými pravidly pro cyklisty.",
+    "forms": [
+      "kolečkový",
+      "kolečkových"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "роликовый, на колёсах",
+        "meaning": "В выражении «роликовые коньки».",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "роликовий, на колесах",
+        "meaning": "У вислові «роликові ковзани».",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-61a3446edb36bc19",
+    "lemma": "konstrukční",
+    "context": "road_traffic",
+    "exampleCs": "Platí pro nákladní automobily s největší povolenou hmotností přes 3500 kg a traktory s touto hmotností přes 3500 kg a konstrukční rychlostí alespoň 80 km/h.",
+    "forms": [
+      "konstrukční"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "конструкционный",
+        "meaning": "Конструкционная скорость определяется устройством транспортного средства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "конструкційний",
+        "meaning": "Конструкційну швидкість визначає будова транспортного засобу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-da7283ffd82a33f2",
+    "lemma": "kouřit",
+    "context": "road_traffic",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
+    "forms": [
+      "kouřit"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "курить",
+        "meaning": "Курение в месте, где действует соответствующее ограничение.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "курити",
+        "meaning": "Куріння в місці, де діє відповідне обмеження.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-39dd6defe272bec8",
+    "lemma": "člověk",
+    "context": "road_traffic",
+    "exampleCs": "Stezku mohou užívat i lidé na lyžích, kolečkových bruslích nebo obdobném sportovním vybavení; řídí se příslušnými pravidly pro cyklisty.",
+    "forms": [
+      "lidé",
+      "člověk"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "человек, люди",
+        "meaning": "Участники движения или пользователи обозначенной дорожки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "людина, люди",
+        "meaning": "Учасники руху або користувачі позначеної доріжки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-89c0939a9d015503",
+    "lemma": "lyže",
+    "context": "road_traffic",
+    "exampleCs": "Osoba vedoucí kolo nebo moped je chodcem. Osoby na bruslích, lyžích či vozíku pro invalidy nesmějí ohrozit ostatní chodce.",
+    "forms": [
+      "lyže",
+      "lyžích"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "лыжи",
+        "meaning": "Спортивное снаряжение, упомянутое в правилах использования дорожки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "лижі",
+        "meaning": "Спортивне спорядження, згадане в правилах користування доріжкою.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-8a64ff09886cc35f",
+    "lemma": "maximum",
+    "context": "road_traffic",
+    "exampleCs": "50 m před přejezdem a na něm je maximum 30 km/h; při přerušovaném bílém světle 50 km/h.",
+    "forms": [
+      "maximum"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "максимум",
+        "meaning": "Наибольшая разрешённая величина в указанном условии.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "максимум",
+        "meaning": "Найбільша дозволена величина за вказаної умови.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-366e15273687c9d6",
+    "lemma": "maximální",
+    "context": "road_traffic",
+    "exampleCs": "Nad 3500 kg musí být na všech kolech hnacích náprav s trvalým přenosem hnací síly a dezén nejméně 6 mm. Jde o maximální přípustnou hmotnost vozidla.",
+    "forms": [
+      "maximální"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "максимальный",
+        "meaning": "Относится к верхней границе разрешённой величины.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "максимальний",
+        "meaning": "Стосується верхньої межі дозволеної величини.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-1ec9931421dc37f1",
+    "lemma": "minuta",
+    "context": "road_traffic",
+    "exampleCs": "Jiné vozidlo smí zastavit nebo stát nejvýše 3 minuty, pokud nikoho neohrozí ani neomezí a neomezí oprávněná vozidla. To neplatí pro místo vyhrazené pro osoby se zdravotním postižením.",
+    "forms": [
+      "minuta",
+      "minuty"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "минута",
+        "meaning": "Единица времени, здесь продолжительность остановки или стоянки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "хвилина",
+        "meaning": "Одиниця часу, тут тривалість зупинки або стоянки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-a536d01c41b35285",
+    "lemma": "moped",
+    "context": "road_traffic",
+    "exampleCs": "Osoba vedoucí kolo nebo moped je chodcem. Osoby na bruslích, lyžích či vozíku pro invalidy nesmějí ohrozit ostatní chodce.",
+    "forms": [
+      "moped"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "мопед",
+        "meaning": "Моторное двухколёсное транспортное средство, упомянутое в тексте.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "мопед",
+        "meaning": "Моторний двоколісний транспортний засіб, згаданий у тексті.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-02983856320b180c",
+    "lemma": "motor",
+    "context": "road_traffic",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
+    "forms": [
+      "motor"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "двигатель",
+        "meaning": "Устройство, обеспечивающее движение транспортного средства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "двигун",
+        "meaning": "Пристрій, що забезпечує рух транспортного засобу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-6a379c9900260ec2",
+    "lemma": "méně",
+    "context": "road_traffic",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
+    "forms": [
+      "méně"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "меньше, менее",
+        "meaning": "Указывает величину ниже названного значения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "менше",
+        "meaning": "Указує величину нижче за назване значення.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-447cb45f34d1fd84",
+    "lemma": "nedostatek",
+    "context": "road_traffic",
+    "exampleCs": "Jiná vozidla smějí podélně vjet při objíždění, předjíždění, odbočování, otáčení, vjíždění na komunikaci nebo zvláštních okolnostech, například nedostatku místa. Nesmějí ohrozit ani omezit určená vozidla.",
+    "forms": [
+      "nedostatek",
+      "nedostatku"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "недостаток, нехватка",
+        "meaning": "Здесь недостаточно места для движения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "нестача, брак",
+        "meaning": "Тут недостатньо місця для руху.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-b3e7d1c365f3676b",
+    "lemma": "nedosáhnout",
+    "context": "road_traffic",
+    "exampleCs": "Použijte tento pruh, pokud zde nedosáhnete 80 km/h nebo jedete výrazně pomaleji než ostatní vozidla ve stejném směru.",
+    "forms": [
+      "nedosáhnete",
+      "nedosáhnout"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не достичь",
+        "meaning": "Не иметь возможности набрать указанную скорость.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не досягти",
+        "meaning": "Не мати змоги набрати вказану швидкість.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-7548d7b785f3785d",
+    "lemma": "nemožnost",
+    "context": "road_traffic",
+    "exampleCs": "Žlutá směrová šipka ukládá povinnost zastavit pro vyznačené směry, s výjimkou nemožnosti bezpečně zastavit při rozsvícení.",
+    "forms": [
+      "nemožnost",
+      "nemožnosti"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "невозможность",
+        "meaning": "Отсутствие возможности безопасно выполнить указанное действие.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "неможливість",
+        "meaning": "Відсутність змоги безпечно виконати вказану дію.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cfdb1d7ef4c6faff",
+    "lemma": "neohrožovat",
+    "context": "road_traffic",
+    "exampleCs": "Jeďte nejvýše 20 km/h, nikoho neohrožujte a tramvaji dejte vždy přednost; nesmíte ji ani omezit.",
+    "forms": [
+      "neohrožovat",
+      "neohrožujte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не подвергать опасности",
+        "meaning": "Не создавать угрозу другим участникам движения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не наражати на небезпеку",
+        "meaning": "Не створювати загрози іншим учасникам руху.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9b27e1d8c63717c3",
+    "lemma": "neomezit",
+    "context": "road_traffic",
+    "exampleCs": "Jiné vozidlo smí zastavit nebo stát nejvýše 3 minuty, pokud nikoho neohrozí ani neomezí a neomezí oprávněná vozidla. To neplatí pro místo vyhrazené pro osoby se zdravotním postižením.",
+    "forms": [
+      "neomezit",
+      "neomezí"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не создать помех",
+        "meaning": "Не помешать другому участнику продолжить движение.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не створити перешкод",
+        "meaning": "Не завадити іншому учаснику продовжити рух.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-b922f957b6e6fa66",
+    "lemma": "neočekávat",
+    "context": "road_traffic",
+    "exampleCs": "Upozorňuje na přechod, který by řidič jinak neočekával a který není viditelný z dostatečné vzdálenosti.",
+    "forms": [
+      "neočekával",
+      "neočekávat"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не ожидать",
+        "meaning": "О дорожном объекте, появления которого водитель не предполагал.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не очікувати",
+        "meaning": "Про дорожній об'єкт, появи якого водій не передбачав.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-641701b4e7bce522",
+    "lemma": "nepokračovat",
+    "context": "road_traffic",
+    "exampleCs": "Do pruhu nevjíždějte ani v něm nepokračujte. Opusťte jej při dodržení pravidel bezpečného řazení a další signalizace.",
+    "forms": [
+      "nepokračovat",
+      "nepokračujte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не продолжать",
+        "meaning": "Призыв прекратить движение в указанной полосе.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не продовжувати",
+        "meaning": "Заклик припинити рух у вказаній смузі.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-173f168e03679213",
+    "lemma": "nepředjíždět",
+    "context": "road_traffic",
+    "exampleCs": "Patří-li vaše vozidlo do této skupiny, nepředjíždějte motorová vozidla vlevo. Při dvou a více pruzích v jednom směru užijte pravý pruh; jiný jen při nutném objíždění.",
+    "forms": [
+      "nepředjíždějte",
+      "nepředjíždět"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не обгонять",
+        "meaning": "Не выполнять обгон в указанном условии.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не обганяти",
+        "meaning": "Не виконувати обгін за вказаної умови.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-0b872176a2256a0d",
+    "lemma": "nesmět",
+    "context": "road_traffic",
+    "exampleCs": "Mimo přechod nesmí chodec donutit přijíždějící řidiče k náhlé změně směru nebo rychlosti.",
+    "forms": [
+      "nesmí",
+      "nesmíte",
+      "nesmějí",
+      "nesmět"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не иметь права, запрещено",
+        "meaning": "Выражает запрет указанного действия.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не мати права, заборонено",
+        "meaning": "Виражає заборону вказаної дії.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cc799ae91e356401",
+    "lemma": "neužívat",
+    "context": "road_traffic",
+    "exampleCs": "Jako řidič vozidla stezku neužívejte, pokud pro vás neplatí zákonná výjimka.",
+    "forms": [
+      "neužívat",
+      "neužívejte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не пользоваться",
+        "meaning": "Не использовать указанный путь, если отсутствует разрешённое исключение.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не користуватися",
+        "meaning": "Не використовувати вказаний шлях, якщо немає дозволеного винятку.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-908590a2f455459d",
+    "lemma": "nevypovídat",
+    "context": "road_traffic",
+    "exampleCs": "Jeden poplatek nevypovídá o druhém.",
+    "forms": [
+      "nevypovídat",
+      "nevypovídá"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не свидетельствовать",
+        "meaning": "Одно обозначение не сообщает о другом режиме оплаты.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не свідчити",
+        "meaning": "Одне позначення не повідомляє про інший режим оплати.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9f461ab3a2ab4287",
+    "lemma": "nezačínat",
+    "context": "road_traffic",
+    "exampleCs": "Červená: nezačínejte přecházet.",
+    "forms": [
+      "nezačínat",
+      "nezačínejte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "не начинать",
+        "meaning": "Призыв не начинать переход при запрещающем сигнале.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "не починати",
+        "meaning": "Заклик не починати перехід за заборонного сигналу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-a2681aebecdabdf2",
+    "lemma": "nástupní",
+    "context": "road_traffic",
+    "exampleCs": "U zastávky autobusu, tramvaje nebo trolejbusu bez nástupního ostrůvku nesmějí jiná vozidla zastavit ani stát. Výjimkou jsou vozidla, pro která je zastávka určena.",
+    "forms": [
+      "nástupní",
+      "nástupního"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "посадочный",
+        "meaning": "Относится к месту посадки пассажиров на остановке.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "посадковий",
+        "meaning": "Стосується місця посадки пасажирів на зупинці.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-ac6ca8d09ee2e76c",
+    "lemma": "obcházení",
+    "context": "road_traffic",
+    "exampleCs": "Chodec může použít cyklistický pruh při obcházení, vcházení na stezku a vycházení z ní; nesmí ohrozit cyklisty.",
+    "forms": [
+      "obcházení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "обход",
+        "meaning": "Движение пешехода в обход препятствия.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "обхід",
+        "meaning": "Рух пішохода в обхід перешкоди.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-2065dd67f91a5934",
+    "lemma": "obdobný",
+    "context": "road_traffic",
+    "exampleCs": "Stezku mohou užívat i lidé na lyžích, kolečkových bruslích nebo obdobném sportovním vybavení; řídí se příslušnými pravidly pro cyklisty.",
+    "forms": [
+      "obdobném",
+      "obdobný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "подобный, аналогичный",
+        "meaning": "Сходный по назначению предмет или условие.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "подібний, аналогічний",
+        "meaning": "Схожий за призначенням предмет або умова.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-a21a832a7e0951c3",
+    "lemma": "obrysový",
+    "context": "road_traffic",
+    "exampleCs": "Rozsviťte obrysová a potkávací nebo dálková světla, pokud je jimi vozidlo vybaveno. Dálkovými nesmíte oslňovat.",
+    "forms": [
+      "obrysová",
+      "obrysový"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "габаритный",
+        "meaning": "О габаритных огнях транспортного средства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "габаритний",
+        "meaning": "Про габаритні вогні транспортного засобу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-fd7c66c4ce860755",
+    "lemma": "oheň",
+    "context": "road_traffic",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
+    "forms": [
+      "oheň"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "огонь",
+        "meaning": "Здесь открытый огонь, создающий опасность в тоннеле.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "вогонь",
+        "meaning": "Тут відкритий вогонь, що створює небезпеку в тунелі.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-7004c72d5e7bd622",
+    "lemma": "ohleduplný",
+    "context": "road_traffic",
+    "exampleCs": "Chodci a cyklisté mohou užívat celou šířku komunikace. Všichni musí být zvlášť ohleduplní.",
+    "forms": [
+      "ohleduplní",
+      "ohleduplný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "внимательный к другим",
+        "meaning": "Учитывает безопасность и потребности других участников движения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "уважний до інших",
+        "meaning": "Ураховує безпеку й потреби інших учасників руху.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-ffb69e9e5fd3061b",
+    "lemma": "ohrožený",
+    "context": "road_traffic",
+    "exampleCs": "Jako cyklista stezku v daném místě a směru použijte, ledaže by tím mohla být ohrožena bezpečnost nebo plynulost provozu.",
+    "forms": [
+      "ohrožena",
+      "ohrožený"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "подвергнутый опасности",
+        "meaning": "Здесь безопасность, которой может угрожать действие.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "підданий небезпеці",
+        "meaning": "Тут безпека, якій може загрожувати дія.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-d72b7282a079aef6",
+    "lemma": "oprávněný",
+    "context": "road_traffic",
+    "exampleCs": "Vjezd je povolen jen vozidlům uvedeným ve spodní části značky a v uvedené době; platí také zákonné výjimky pro oprávněná vozidla.",
+    "forms": [
+      "oprávněná",
+      "oprávněný",
+      "oprávněným"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "имеющий право, уполномоченный",
+        "meaning": "Имеет право пользоваться указанным местом или режимом.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що має право, уповноважений",
+        "meaning": "Має право користуватися вказаним місцем або режимом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-6aae23c6aca44a3c",
+    "lemma": "organizovaný",
+    "context": "road_traffic",
+    "exampleCs": "Přednost se týká vozidel, jezdců na zvířatech, organizovaného útvaru chodců a průvodců hnaných zvířat se zvířaty na jiné komunikaci.",
+    "forms": [
+      "organizovaného",
+      "organizovaný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "организованный",
+        "meaning": "Об участниках, которые движутся организованной группой.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "організований",
+        "meaning": "Про учасників, які рухаються організованою групою.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-08dadbabf472d3da",
+    "lemma": "oslňovat",
+    "context": "road_traffic",
+    "exampleCs": "Rozsviťte obrysová a potkávací nebo dálková světla, pokud je jimi vozidlo vybaveno. Dálkovými nesmíte oslňovat.",
+    "forms": [
+      "oslňovat"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "ослеплять светом",
+        "meaning": "Мешать зрению другого участника слишком ярким светом.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "засліплювати світлом",
+        "meaning": "Заважати зору іншого учасника надто яскравим світлом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-088ba5b62c8be394",
+    "lemma": "otevřený",
+    "context": "road_traffic",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
+    "forms": [
+      "otevřený"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "открытый",
+        "meaning": "Здесь о пламени без защитного ограждения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "відкритий",
+        "meaning": "Тут про полум'я без захисного огородження.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-e763ae59cf44068b",
+    "lemma": "plynulost",
+    "context": "road_traffic",
+    "exampleCs": "Jako cyklista stezku v daném místě a směru použijte, ledaže by tím mohla být ohrožena bezpečnost nebo plynulost provozu.",
+    "forms": [
+      "plynulost"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "плавность, бесперебойность",
+        "meaning": "Движение без неоправданных задержек и помех.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "плавність, безперервність",
+        "meaning": "Рух без невиправданих затримок і перешкод.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-eeaacc62e982baed",
+    "lemma": "pomáhat",
+    "context": "road_traffic",
+    "exampleCs": "Návěst pomáhá zvolit odbočovací pruh.",
+    "forms": [
+      "pomáhat",
+      "pomáhá"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "помогать",
+        "meaning": "Способствовать ориентированию или выполнению действия.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "допомагати",
+        "meaning": "Сприяти орієнтуванню або виконанню дії.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-90d6d4623d5d48e7",
+    "lemma": "porucha",
+    "context": "road_traffic",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
+    "forms": [
+      "porucha",
+      "poruše"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "неисправность",
+        "meaning": "Техническая поломка, которая может помешать дальнейшему движению.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "несправність",
+        "meaning": "Технічна поломка, яка може завадити подальшому руху.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-0023e49b0c8f3a31",
+    "lemma": "postižení",
+    "context": "road_traffic",
+    "exampleCs": "Jiné vozidlo smí zastavit nebo stát nejvýše 3 minuty, pokud nikoho neohrozí ani neomezí a neomezí oprávněná vozidla. To neplatí pro místo vyhrazené pro osoby se zdravotním postižením.",
+    "forms": [
+      "postižení",
+      "postižením"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "нарушение здоровья, инвалидность",
+        "meaning": "В выражении о человеке с нарушением здоровья.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "порушення здоров'я, інвалідність",
+        "meaning": "У вислові про людину з порушенням здоров'я.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-65bf5ac75ab4ffab",
+    "lemma": "posuzovat",
+    "context": "road_traffic",
+    "exampleCs": "Porovnejte skutečnou hmotnost s mezí na značce. U soupravy posuzujte každé vozidlo zvlášť, pokud tabulka nestanoví zvláštní režim.",
+    "forms": [
+      "posuzovat",
+      "posuzujte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "оценивать, рассматривать",
+        "meaning": "Определять значение массы или применимость условия.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "оцінювати, розглядати",
+        "meaning": "Визначати значення маси або застосовність умови.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-b1745dbed8ee7a45",
+    "lemma": "potkávací",
+    "context": "road_traffic",
+    "exampleCs": "Rozsviťte obrysová a potkávací nebo dálková světla, pokud je jimi vozidlo vybaveno. Dálkovými nesmíte oslňovat.",
+    "forms": [
+      "potkávací"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "ближнего света",
+        "meaning": "О фарах ближнего света транспортного средства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "ближнього світла",
+        "meaning": "Про фари ближнього світла транспортного засобу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-ab9e82bac92e0ab0",
+    "lemma": "povolovat",
+    "context": "road_traffic",
+    "exampleCs": "Pod značkou B 2 povoluje cyklistům vjezd v protisměru do jednosměrné komunikace.",
+    "forms": [
+      "povolovat",
+      "povoluje"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "разрешать",
+        "meaning": "Допускает указанное действие при названных условиях.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "дозволяти",
+        "meaning": "Допускає вказану дію за названих умов.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9841b880df799dd6",
+    "lemma": "pověřený",
+    "context": "road_traffic",
+    "exampleCs": "Výjimka z červené, zvukové výstrahy či závor vyžaduje před přejezdem ústní souhlas pověřeného zaměstnance dráhy; dodržte jeho pokyny.",
+    "forms": [
+      "pověřeného",
+      "pověřený"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "уполномоченный",
+        "meaning": "Имеющий полномочия дать соответствующее разрешение или указание.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "уповноважений",
+        "meaning": "Що має повноваження надати відповідний дозвіл або вказівку.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-793e54dc7b2ddc86",
+    "lemma": "pozorování",
+    "context": "road_traffic",
+    "exampleCs": "Pozorování chodce samo nestačí.",
+    "forms": [
+      "pozorování"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "наблюдение",
+        "meaning": "Слежение за участником движения само по себе не выполняет все обязанности.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "спостереження",
+        "meaning": "Стеження за учасником руху саме собою не виконує всіх обов'язків.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-7349974582c51391",
+    "lemma": "procházející",
+    "context": "road_traffic",
+    "exampleCs": "V úseku procházejícím obcí je pro veřejnou hromadnou dopravu výjimka od 65 km/h konstrukční rychlosti.",
+    "forms": [
+      "procházející",
+      "procházejícím"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "проходящий",
+        "meaning": "Здесь участок дороги, проходящий через населённый пункт.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що проходить",
+        "meaning": "Тут ділянка дороги, що проходить через населений пункт.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-d069c85283b98c2c",
+    "lemma": "proud",
+    "context": "road_traffic",
+    "exampleCs": "Souběžná jízda vzniká, když hustý provoz tvoří souvislé proudy a rychlost závisí na vozidlech vpředu. Vozidla se řadí střídavě po jednom.",
+    "forms": [
+      "proud",
+      "proudy"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "поток",
+        "meaning": "Последовательность движущихся по дороге транспортных средств.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "потік",
+        "meaning": "Послідовність транспортних засобів, що рухаються дорогою.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-50612804e145202a",
+    "lemma": "průvodce",
+    "context": "road_traffic",
+    "exampleCs": "Přednost se týká vozidel, jezdců na zvířatech, organizovaného útvaru chodců a průvodců hnaných zvířat se zvířaty na jiné komunikaci.",
+    "forms": [
+      "průvodce",
+      "průvodců"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "сопровождающий, проводник",
+        "meaning": "Здесь человек, сопровождающий перегоняемых животных.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "супровідник, провідник",
+        "meaning": "Тут людина, що супроводжує тварин під час перегону.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-737ded9e9824140c",
+    "lemma": "především",
+    "context": "road_traffic",
+    "exampleCs": "Chodci musí používat především chodník nebo stezku pro chodce. Jiní účastníci je nesmějí užívat, pokud zákon nestanoví výjimku.",
+    "forms": [
+      "především"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "прежде всего",
+        "meaning": "Указывает основной способ или место выполнения действия.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "передусім",
+        "meaning": "Указує основний спосіб або місце виконання дії.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-d2dbb40d4e482311",
+    "lemma": "předzvěstný",
+    "context": "road_traffic",
+    "exampleCs": "IS 6d se nesmí umístit nad vozovku. Při použití jako předzvěstná značka uvádí vzdálenost.",
+    "forms": [
+      "předzvěstná",
+      "předzvěstný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "предварительный, предупреждающий",
+        "meaning": "Знак заранее сообщает о следующем дорожном объекте.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "попередній, попереджувальний",
+        "meaning": "Знак заздалегідь повідомляє про наступний дорожній об'єкт.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9f519214fe65a067",
+    "lemma": "přejít",
+    "context": "road_traffic",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
+    "forms": [
+      "přejít"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "перейти",
+        "meaning": "Пройти пешком через дорогу или к указанному месту.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "перейти",
+        "meaning": "Пройти пішки через дорогу або до вказаного місця.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-48d01c3ca84a921b",
+    "lemma": "přejíždějící",
+    "context": "road_traffic",
+    "exampleCs": "Nesmíte ohrozit cyklistu přejíždějícího po přejezdu.",
+    "forms": [
+      "přejíždějící",
+      "přejíždějícího"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "переезжающий",
+        "meaning": "О велосипедисте, который пересекает дорогу по переезду.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що переїжджає",
+        "meaning": "Про велосипедиста, який перетинає дорогу переїздом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-99411d5da3374c2f",
+    "lemma": "přejíždět",
+    "context": "road_traffic",
+    "exampleCs": "Souvislá čára odděluje jízdní pruhy. Nesmíte ji přejíždět ani přesahovat nákladem, kromě stanovených výjimek.",
+    "forms": [
+      "přejíždět"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "переезжать, пересекать",
+        "meaning": "Пересекать линию разметки или проезжую часть.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "переїжджати, перетинати",
+        "meaning": "Перетинати лінію розмітки або проїзну частину.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-c09d2fe86b04cae7",
+    "lemma": "překročení",
+    "context": "road_traffic",
+    "exampleCs": "Je-li uvedena mez největší povolené hmotnosti, zákaz platí při jejím překročení. U soupravy se sčítají největší povolené hmotnosti všech vozidel.",
+    "forms": [
+      "překročení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "превышение",
+        "meaning": "Выход за указанную границу массы или другой величины.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "перевищення",
+        "meaning": "Вихід за вказану межу маси чи іншої величини.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9cd107ec45a302f3",
+    "lemma": "přenos",
+    "context": "road_traffic",
+    "exampleCs": "Nad 3500 kg musí být na všech kolech hnacích náprav s trvalým přenosem hnací síly a dezén nejméně 6 mm. Jde o maximální přípustnou hmotnost vozidla.",
+    "forms": [
+      "přenos",
+      "přenosem"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "передача",
+        "meaning": "Здесь передача тягового усилия на ведущие колёса.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "передавання",
+        "meaning": "Тут передавання тягового зусилля на ведучі колеса.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cb0d1f54f65853df",
+    "lemma": "přepravovaný",
+    "context": "road_traffic",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
+    "forms": [
+      "přepravované",
+      "přepravovaný",
+      "přepravován"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "перевозимый",
+        "meaning": "О пассажире или человеке, которого перевозят в транспортном средстве.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що перевозиться",
+        "meaning": "Про пасажира чи людину, яку перевозять у транспортному засобі.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-1972de9d69e2ed6c",
+    "lemma": "přilehlý",
+    "context": "road_traffic",
+    "exampleCs": "U cyklistického pruhu vyznačeného vodorovně lze vjet podélně i při nedostatečné šířce přilehlého pruhu pro vaše vozidlo; nesmíte ohrozit cyklistu. Tuto výjimku nepřenášejte na vyhrazený pruh IP 20a.",
+    "forms": [
+      "přilehlého",
+      "přilehlém",
+      "přilehlý"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "прилегающий, соседний",
+        "meaning": "Находящийся непосредственно рядом, например соседняя полоса.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "прилеглий, сусідній",
+        "meaning": "Розташований безпосередньо поруч, наприклад сусідня смуга.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-762f8be7b16d6318",
+    "lemma": "příliš",
+    "context": "road_traffic",
+    "exampleCs": "U signalizace před komunikací zastavte před příslušnou čárou, jinak před signalizací. Výjimka platí, jste-li při rozsvícení již příliš blízko k bezpečnému zastavení.",
+    "forms": [
+      "příliš"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "слишком",
+        "meaning": "Указывает чрезмерную близость или другую величину.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "надто",
+        "meaning": "Указує надмірну близькість чи іншу величину.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-2b740860f260703d",
+    "lemma": "případ",
+    "context": "road_traffic",
+    "exampleCs": "Používejte pruh určený pro svou skupinu. Do druhého pruhu vstupujte nebo vjíždějte jen v dovolených případech a nikoho v něm neohrozte.",
+    "forms": [
+      "případ",
+      "případech",
+      "případu"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "случай",
+        "meaning": "Конкретная ситуация, в которой действует правило или исключение.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "випадок",
+        "meaning": "Конкретна ситуація, у якій діє правило або виняток.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-3872af2b54511013",
+    "lemma": "přípustný",
+    "context": "road_traffic",
+    "exampleCs": "Nad 3500 kg musí být na všech kolech hnacích náprav s trvalým přenosem hnací síly a dezén nejméně 6 mm. Jde o maximální přípustnou hmotnost vozidla.",
+    "forms": [
+      "přípustnou",
+      "přípustný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "допустимый",
+        "meaning": "Относится к допустимой величине, здесь массе транспортного средства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "допустимий",
+        "meaning": "Стосується допустимої величини, тут маси транспортного засобу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-bec3bd4eac86e236",
+    "lemma": "rozsvícení",
+    "context": "road_traffic",
+    "exampleCs": "U signalizace před komunikací zastavte před příslušnou čárou, jinak před signalizací. Výjimka platí, jste-li při rozsvícení již příliš blízko k bezpečnému zastavení.",
+    "forms": [
+      "rozsvícení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "включение света",
+        "meaning": "Момент, когда световой сигнал начинает гореть.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "увімкнення світла",
+        "meaning": "Момент, коли світловий сигнал починає світитися.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-e30ffc6a439c81ce",
+    "lemma": "samojízdný",
+    "context": "road_traffic",
+    "exampleCs": "Na chodníku nesmí zastavit ani stát vozidlo s nejvyšší povolenou hmotností přes 3500 kg, jednonápravový traktor, motorový ruční vozík ani samojízdný pracovní stroj.",
+    "forms": [
+      "samojízdný",
+      "samojízdným"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "самоходный",
+        "meaning": "О рабочей машине, которая передвигается своим приводом.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "самохідний",
+        "meaning": "Про робочу машину, яка пересувається власним приводом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-7b9ee75cd2c3bb1d",
+    "lemma": "sklopení",
+    "context": "road_traffic",
+    "exampleCs": "Nevjíždějte při červené nebo zvukové výstraze, při pohybu či sklopení závor, při znamení zaměstnance dráhy k zastavení ani bez místa za přejezdem.",
+    "forms": [
+      "sklopení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "опускание",
+        "meaning": "Здесь опускание шлагбаума перед железнодорожным переездом.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "опускання",
+        "meaning": "Тут опускання шлагбаума перед залізничним переїздом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cd3eaa43c7feee88",
+    "lemma": "slyšitelný",
+    "context": "road_traffic",
+    "exampleCs": "Viditelný či slyšitelný přijíždějící vlak také zakazuje vjezd, kromě případu přerušovaného bílého světla.",
+    "forms": [
+      "slyšitelný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "слышимый",
+        "meaning": "Воспринимаемый на слух, например приближающийся поезд.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "чутний",
+        "meaning": "Що сприймається на слух, наприклад поїзд, що наближається.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-1958e5d2614dc123",
+    "lemma": "souhlas",
+    "context": "road_traffic",
+    "exampleCs": "Výjimka z červené, zvukové výstrahy či závor vyžaduje před přejezdem ústní souhlas pověřeného zaměstnance dráhy; dodržte jeho pokyny.",
+    "forms": [
+      "souhlas"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "согласие, разрешение",
+        "meaning": "Здесь устное разрешение уполномоченного железнодорожного работника.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "згода, дозвіл",
+        "meaning": "Тут усний дозвіл уповноваженого залізничного працівника.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-343d364f1c5c773b",
+    "lemma": "splňující",
+    "context": "road_traffic",
+    "exampleCs": "S vozidlem kategorie M nebo N pokračujte jen se zimními pneumatikami splňujícími předepsané podmínky.",
+    "forms": [
+      "splňující",
+      "splňujícími"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "соответствующий требованиям",
+        "meaning": "Об оборудовании, которое выполняет предписанные условия.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що відповідає вимогам",
+        "meaning": "Про обладнання, яке відповідає приписаним умовам.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-12a770b4429b9291",
+    "lemma": "sportovní",
+    "context": "road_traffic",
+    "exampleCs": "Stezku mohou užívat i lidé na lyžích, kolečkových bruslích nebo obdobném sportovním vybavení; řídí se příslušnými pravidly pro cyklisty.",
+    "forms": [
+      "sportovní",
+      "sportovním"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "спортивный",
+        "meaning": "Относится к снаряжению для занятий спортом.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "спортивний",
+        "meaning": "Стосується спорядження для занять спортом.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-d92e129be9b11780",
+    "lemma": "střední",
+    "context": "road_traffic",
+    "exampleCs": "Zastavení a stání je dovoleno jen na označených parkovištích; nouzové stání má zvláštní pravidla. Otáčení, couvání a vjezd na střední dělicí pás jsou zakázány.",
+    "forms": [
+      "střední"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "средний, центральный",
+        "meaning": "Здесь центральная разделительная полоса дороги.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "середній, центральний",
+        "meaning": "Тут центральна розділювальна смуга дороги.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-df12927590101d90",
+    "lemma": "střešní",
+    "context": "road_traffic",
+    "exampleCs": "TAXI znamená vozidla taxislužby se střešní svítilnou TAXI. Sledujte dobu, po kterou je pruh vyhrazen.",
+    "forms": [
+      "střešní"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "на крыше",
+        "meaning": "О фонаре TAXI, установленном на крыше автомобиля.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "на даху",
+        "meaning": "Про ліхтар TAXI, установлений на даху автомобіля.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-eee369c8f7aca689",
+    "lemma": "svítilna",
+    "context": "road_traffic",
+    "exampleCs": "TAXI znamená vozidla taxislužby se střešní svítilnou TAXI. Sledujte dobu, po kterou je pruh vyhrazen.",
+    "forms": [
+      "svítilna",
+      "svítilnou"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "фонарь",
+        "meaning": "Световое устройство, здесь опознавательный фонарь TAXI.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "ліхтар",
+        "meaning": "Світловий пристрій, тут розпізнавальний ліхтар TAXI.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-dd827b01bb2571d0",
+    "lemma": "sčítat",
+    "context": "road_traffic",
+    "exampleCs": "S tabulkou „Jediné vozidlo ... t“ lze překročit mez na značce, ale ne mez na tabulce. U soupravy se pro tuto tabulku sčítají okamžité hmotnosti všech vozidel.",
+    "forms": [
+      "sčítají",
+      "sčítat"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "складывать, суммировать",
+        "meaning": "Получать общую массу сложением масс отдельных транспортных средств.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "додавати, підсумовувати",
+        "meaning": "Отримувати загальну масу додаванням мас окремих транспортних засобів.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-e4432baa90819aae",
+    "lemma": "ten",
+    "context": "road_traffic",
+    "exampleCs": "Při odbočení vpravo platí z plných signálů jen ten vpravo od vašeho odbočovacího pruhu nebo nad ním.",
+    "forms": [
+      "ten"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "тот, этот",
+        "meaning": "Указывает на конкретный сигнал или ранее названный объект.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "той, цей",
+        "meaning": "Указує на конкретний сигнал чи раніше названий об'єкт.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-076f53d4823b39f5",
+    "lemma": "topení",
+    "context": "road_traffic",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
+    "forms": [
+      "topení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "отопление",
+        "meaning": "Здесь независимый обогреватель транспортного средства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "опалення",
+        "meaning": "Тут незалежний обігрівач транспортного засобу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-196e98c04bf099c6",
+    "lemma": "tvořit",
+    "context": "road_traffic",
+    "exampleCs": "Souběžná jízda vzniká, když hustý provoz tvoří souvislé proudy a rychlost závisí na vozidlech vpředu. Vozidla se řadí střídavě po jednom.",
+    "forms": [
+      "tvořit",
+      "tvoří"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "образовывать",
+        "meaning": "Здесь транспортные средства образуют непрерывные потоки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "утворювати",
+        "meaning": "Тут транспортні засоби утворюють безперервні потоки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-62a16d6f60ce3709",
+    "lemma": "tříminutový",
+    "context": "road_traffic",
+    "exampleCs": "Bez příslušného označení nesmíte zastavit ani stát. Tříminutová výjimka běžného vyhrazeného parkoviště zde neplatí.",
+    "forms": [
+      "tříminutová",
+      "tříminutový"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "трёхминутный",
+        "meaning": "Продолжительностью три минуты; относится к исключению для стоянки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "трихвилинний",
+        "meaning": "Тривалістю три хвилини; стосується винятку для стоянки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cb9c6ab00dcf6c65",
+    "lemma": "umístění",
+    "context": "road_traffic",
+    "exampleCs": "Žlutý signál pro cyklisty ukládá zastavení; pravidlo závisí i na umístění signalizace.",
+    "forms": [
+      "umístění"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "размещение",
+        "meaning": "Место установки знака или сигнализации.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "розміщення",
+        "meaning": "Місце встановлення знака чи сигналізації.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-4025c90637c9808a",
+    "lemma": "učinit",
+    "context": "road_traffic",
+    "exampleCs": "Zpomalte nebo zastavte i tehdy, když tak před přechodem učiní ostatní řidiči jedoucí stejným směrem.",
+    "forms": [
+      "učinit",
+      "učiní"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "сделать, выполнить",
+        "meaning": "Здесь совершить указанное действие, например остановку.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "зробити, виконати",
+        "meaning": "Тут виконати вказану дію, наприклад зупинку.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-0db78d41852c0ab0",
+    "lemma": "vcházení",
+    "context": "road_traffic",
+    "exampleCs": "Chodec může použít cyklistický pruh při obcházení, vcházení na stezku a vycházení z ní; nesmí ohrozit cyklisty.",
+    "forms": [
+      "vcházení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "вход, вхождение",
+        "meaning": "Здесь вход пешехода на дорожку.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "вхід, входження",
+        "meaning": "Тут вхід пішохода на доріжку.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9fc35a06ba906bbe",
+    "lemma": "vedoucí",
+    "context": "road_traffic",
+    "exampleCs": "Osoba vedoucí kolo nebo moped je chodcem. Osoby na bruslích, lyžích či vozíku pro invalidy nesmějí ohrozit ostatní chodce.",
+    "forms": [
+      "vedoucí"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "ведущий",
+        "meaning": "О человеке, который ведёт велосипед или мопед пешком.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що веде",
+        "meaning": "Про людину, яка веде велосипед чи мопед пішки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-f734ad4e842854d4",
+    "lemma": "ven",
+    "context": "road_traffic",
+    "exampleCs": "V této situaci nesmíte kouřit ani používat otevřený oheň. Přepravované osoby musí opustit vozidlo a přejít na určená místa, případně ven z tunelu.",
+    "forms": [
+      "ven"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "наружу",
+        "meaning": "Направление из тоннеля или другого закрытого пространства.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "назовні",
+        "meaning": "Напрямок із тунелю чи іншого закритого простору.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9ff124d8d3c63c4f",
+    "lemma": "viditelný",
+    "context": "road_traffic",
+    "exampleCs": "Upozorňuje na přechod, který by řidič jinak neočekával a který není viditelný z dostatečné vzdálenosti.",
+    "forms": [
+      "viditelný"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "видимый",
+        "meaning": "Об объекте, который можно увидеть с соответствующего расстояния.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "видимий",
+        "meaning": "Про об'єкт, який можна побачити з відповідної відстані.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-05fe6b028af9234d",
+    "lemma": "vjíždění",
+    "context": "road_traffic",
+    "exampleCs": "Cyklista může použít pěší pruh při objíždění, předjíždění, otáčení, odbočování a vjíždění na stezku; nesmí ohrozit chodce.",
+    "forms": [
+      "vjíždění"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "въезд",
+        "meaning": "Действие въезда на дорогу или дорожку.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "в'їзд",
+        "meaning": "Дія в'їзду на дорогу чи доріжку.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-a849de3a3222f95a",
+    "lemma": "vjíždět",
+    "context": "road_traffic",
+    "exampleCs": "Vyznačuje plochu, do které nesmíte vjíždět ani nad ni zasahovat nákladem, kromě stanovených výjimek.",
+    "forms": [
+      "vjíždět"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "въезжать",
+        "meaning": "Въезжать на обозначенную часть дороги или площадь.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "в'їжджати",
+        "meaning": "В'їжджати на позначену частину дороги чи площу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-5db9896cea15e8ab",
+    "lemma": "vstoupit",
+    "context": "road_traffic",
+    "exampleCs": "Červený signál zakazuje chodci vstoupit na vozovku.",
+    "forms": [
+      "vstoupit"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "вступить, выйти на",
+        "meaning": "Здесь начать переход, выйдя на проезжую часть.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "ступити, вийти на",
+        "meaning": "Тут почати перехід, вийшовши на проїзну частину.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-8c157b83216fdb3f",
+    "lemma": "vstupovat",
+    "context": "road_traffic",
+    "exampleCs": "Používejte pruh určený pro svou skupinu. Do druhého pruhu vstupujte nebo vjíždějte jen v dovolených případech a nikoho v něm neohrozte.",
+    "forms": [
+      "vstupovat",
+      "vstupujte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "входить, выходить на",
+        "meaning": "Здесь входить на полосу дорожки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "входити, виходити на",
+        "meaning": "Тут входити на смугу доріжки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-0e1c0f0eda0a4029",
+    "lemma": "vy",
+    "context": "road_traffic",
+    "exampleCs": "Přednost musíte dát vy.",
+    "forms": [
+      "vy"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "вы",
+        "meaning": "Обращение к водителю, который должен выполнить действие.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "ви",
+        "meaning": "Звернення до водія, який має виконати дію.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-200e3282a0c738b2",
+    "lemma": "vycházení",
+    "context": "road_traffic",
+    "exampleCs": "Chodec může použít cyklistický pruh při obcházení, vcházení na stezku a vycházení z ní; nesmí ohrozit cyklisty.",
+    "forms": [
+      "vycházení"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выход",
+        "meaning": "Здесь выход пешехода с дорожки.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "вихід",
+        "meaning": "Тут вихід пішохода з доріжки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-7bbcab22ffe1ea2c",
+    "lemma": "vyjetí",
+    "context": "road_traffic",
+    "exampleCs": "V přilehlém pruhu umožněte vyjetí určeného vozidla zpomalením, případně zastavením. Vyjíždějící řidič dává znamení a nesmí ostatní ohrozit.",
+    "forms": [
+      "vyjetí"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выезд",
+        "meaning": "Действие выезда из обозначенной полосы.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "виїзд",
+        "meaning": "Дія виїзду з позначеної смуги.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-d4e1da2729d1c084",
+    "lemma": "vyjíždějící",
+    "context": "road_traffic",
+    "exampleCs": "V přilehlém pruhu umožněte vyjetí určeného vozidla zpomalením, případně zastavením. Vyjíždějící řidič dává znamení a nesmí ostatní ohrozit.",
+    "forms": [
+      "vyjíždějící"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выезжающий",
+        "meaning": "О водителе, который покидает полосу или въезжает на дорогу.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що виїжджає",
+        "meaning": "Про водія, який залишає смугу чи в'їжджає на дорогу.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-61006151c6bda710",
+    "lemma": "vyjíždění",
+    "context": "road_traffic",
+    "exampleCs": "Jiná vozidla smějí vjet jen při objíždění, odbočování, otáčení, vjíždění na komunikaci nebo vyjíždění z ní. Nesmějí ohrozit ani omezit řidiče vozidla, kterému je pruh přikázán.",
+    "forms": [
+      "vyjíždění"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выезд",
+        "meaning": "Действие выезда с дороги или обозначенного места.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "виїзд",
+        "meaning": "Дія виїзду з дороги або позначеного місця.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-be39a74008a1976f",
+    "lemma": "vypnout",
+    "context": "road_traffic",
+    "exampleCs": "V tunelu ani méně než 15 m před ním a za ním nesmíte zastavit ani stát. Nouzové stání na označeném místě je výjimkou; vypněte motor.",
+    "forms": [
+      "vypnout",
+      "vypněte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выключить",
+        "meaning": "Отключить двигатель или отопитель.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "вимкнути",
+        "meaning": "Вимкнути двигун чи обігрівач.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-15092caae789710e",
+    "lemma": "vznikat",
+    "context": "road_traffic",
+    "exampleCs": "Souběžná jízda vzniká, když hustý provoz tvoří souvislé proudy a rychlost závisí na vozidlech vpředu. Vozidla se řadí střídavě po jednom.",
+    "forms": [
+      "vznikat",
+      "vzniká"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "возникать",
+        "meaning": "Начало или формирование определённой дорожной ситуации.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "виникати",
+        "meaning": "Початок або формування певної дорожньої ситуації.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-883e66b968584d6a",
+    "lemma": "výše",
+    "context": "road_traffic",
+    "exampleCs": "Varianta TAXI označuje stanoviště taxi se střešní svítilnou TAXI. Výše uvedené vzdálenosti autobusové zastávky na ni nepřenášejte.",
+    "forms": [
+      "výše"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выше",
+        "meaning": "Здесь ссылка на ранее приведённую часть текста.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "вище",
+        "meaning": "Тут посилання на раніше наведену частину тексту.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-2d5f4eb1071c658a",
+    "lemma": "zajistit",
+    "context": "road_traffic",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
+    "forms": [
+      "zajistit",
+      "zajistěte"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "обеспечить",
+        "meaning": "Принять меры, чтобы обеспечить безопасность.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "забезпечити",
+        "meaning": "Ужити заходів, щоб забезпечити безпеку.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-cdb0363973840c83",
+    "lemma": "zaměstnanec",
+    "context": "road_traffic",
+    "exampleCs": "Nevjíždějte při červené nebo zvukové výstraze, při pohybu či sklopení závor, při znamení zaměstnance dráhy k zastavení ani bez místa za přejezdem.",
+    "forms": [
+      "zaměstnance",
+      "zaměstnanec"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "работник",
+        "meaning": "Здесь работник железной дороги, подающий сигнал или разрешение.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "працівник",
+        "meaning": "Тут працівник залізниці, що подає сигнал або дозвіл.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-8b7e79dac7fad4a4",
+    "lemma": "zasahovat",
+    "context": "road_traffic",
+    "exampleCs": "Vyznačuje plochu, do které nesmíte vjíždět ani nad ni zasahovat nákladem, kromě stanovených výjimek.",
+    "forms": [
+      "zasahovat"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "заходить, выступать за пределы",
+        "meaning": "Здесь выступать грузом над обозначенной площадью.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "заходити, виступати за межі",
+        "meaning": "Тут виступати вантажем над позначеною площею.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-16a95c9eb8a5b84e",
+    "lemma": "začít",
+    "context": "road_traffic",
+    "exampleCs": "Chodec, který začal na zelenou, smí dokončit přecházení k signalizaci. Nejde o pokyn čekat uprostřed vozovky.",
+    "forms": [
+      "začal",
+      "začali",
+      "začít"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "начать",
+        "meaning": "Приступить к переходу или переезду на разрешающий сигнал.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "почати",
+        "meaning": "Розпочати перехід або переїзд на дозвільний сигнал.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-383365cb9f4a6318",
+    "lemma": "zdravotní",
+    "context": "road_traffic",
+    "exampleCs": "Jiné vozidlo smí zastavit nebo stát nejvýše 3 minuty, pokud nikoho neohrozí ani neomezí a neomezí oprávněná vozidla. To neplatí pro místo vyhrazené pro osoby se zdravotním postižením.",
+    "forms": [
+      "zdravotní",
+      "zdravotním"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "относящийся к здоровью",
+        "meaning": "В выражении о нарушениях здоровья человека.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що стосується здоров'я",
+        "meaning": "У вислові про порушення здоров'я людини.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-4a70fe9aa6436e02",
+    "lemma": "zip",
+    "context": "road_traffic",
+    "exampleCs": "Zip platí při souběžné jízdě.",
+    "forms": [
+      "zip"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "замок-молния, чередование",
+        "meaning": "Здесь поочерёдное слияние рядов при параллельном движении.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "застібка-блискавка, чергування",
+        "meaning": "Тут почергове злиття рядів за паралельного руху.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-235395d36f531b19",
+    "lemma": "zjevně",
+    "context": "road_traffic",
+    "exampleCs": "Neohrožujte ani neomezujte chodce na přechodu nebo zjevně hodlajícího přejít; podle potřeby zastavte.",
+    "forms": [
+      "zjevně"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "явно",
+        "meaning": "Намерение участника видно из его поведения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "явно",
+        "meaning": "Намір учасника видно з його поведінки.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-39b709eee1225d91",
+    "lemma": "znemožňující",
+    "context": "road_traffic",
+    "exampleCs": "Při poruše znemožňující jízdu nebo nehodě ihned vypněte motor i nezávislé topení, zajistěte bezpečnost a informujte policii nebo dohled tunelu.",
+    "forms": [
+      "znemožňující"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "делающий невозможным",
+        "meaning": "О неисправности, из-за которой нельзя продолжать движение.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "що унеможливлює",
+        "meaning": "Про несправність, через яку не можна продовжувати рух.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-49bf66213ad1a684",
+    "lemma": "zvlášť",
+    "context": "road_traffic",
+    "exampleCs": "Porovnejte skutečnou hmotnost s mezí na značce. U soupravy posuzujte každé vozidlo zvlášť, pokud tabulka nestanoví zvláštní režim.",
+    "forms": [
+      "zvlášť"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "отдельно, особенно",
+        "meaning": "Каждый объект рассматривается отдельно; также усиление требования.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "окремо, особливо",
+        "meaning": "Кожен об'єкт розглядають окремо; також посилення вимоги.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-368488b1aa558f4e",
+    "lemma": "záviset",
+    "context": "road_traffic",
+    "exampleCs": "Souběžná jízda vzniká, když hustý provoz tvoří souvislé proudy a rychlost závisí na vozidlech vpředu. Vozidla se řadí střídavě po jednom.",
+    "forms": [
+      "záviset",
+      "závisí"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "зависеть",
+        "meaning": "Здесь скорость определяется движением впереди идущих автомобилей.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "залежати",
+        "meaning": "Тут швидкість визначає рух автомобілів попереду.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-9d777f28b5691154",
+    "lemma": "ústní",
+    "context": "road_traffic",
+    "exampleCs": "Výjimka z červené, zvukové výstrahy či závor vyžaduje před přejezdem ústní souhlas pověřeného zaměstnance dráhy; dodržte jeho pokyny.",
+    "forms": [
+      "ústní"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "устный",
+        "meaning": "Разрешение или сообщение, переданное словами.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "усний",
+        "meaning": "Дозвіл чи повідомлення, передане словами.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-c18c3542de7f5adc",
+    "lemma": "útvar",
+    "context": "road_traffic",
+    "exampleCs": "Přednost se týká vozidel, jezdců na zvířatech, organizovaného útvaru chodců a průvodců hnaných zvířat se zvířaty na jiné komunikaci.",
+    "forms": [
+      "útvar",
+      "útvaru",
+      "útvarům"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "формирование, группа",
+        "meaning": "Здесь организованная группа пешеходов.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "формування, група",
+        "meaning": "Тут організована група пішоходів.",
+        "exampleTranslation": ""
+      }
+    ]
+  },
+  {
+    "id": "sign-word-bb5f55ae171f59c7",
+    "lemma": "řadit",
+    "context": "road_traffic",
+    "exampleCs": "Při souběžné jízdě se vozidla do průběžného pruhu řadí střídavě po jednom.",
+    "forms": [
+      "řadit",
+      "řadí"
+    ],
+    "translations": [
+      {
+        "locale": "ru",
+        "translation": "выстраивать, включать в ряд",
+        "meaning": "Здесь выстраиваться поочерёдно в общую полосу движения.",
+        "exampleTranslation": ""
+      },
+      {
+        "locale": "uk",
+        "translation": "шикувати, включати до ряду",
+        "meaning": "Тут шикуватися почергово в спільну смугу руху.",
         "exampleTranslation": ""
       }
     ]

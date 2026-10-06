@@ -25,12 +25,12 @@ class SignVocabularyCoverageTest {
             val signs = SignCatalog.load(app)
             assertEquals(408, signs.size)
             val texts = signs.flatMap { sign -> sign.tappableTexts().map { (field, text) -> Triple(sign.code, field, text) } }
-            assertEquals(1802, texts.size)
+            assertEquals(1878, texts.size)
             val occurrences = texts.flatMap { (code, field, text) ->
                 czechWordRanges(text).map { Triple(normalizeLearningWord(it.value), "$code / $field", text) }
             }
-            assertEquals(11313, occurrences.size)
-            assertEquals(2275, occurrences.map { it.first }.toSet().size)
+            assertEquals(13325, occurrences.size)
+            assertEquals(2459, occurrences.map { it.first }.toSet().size)
             val errors = mutableListOf<String>()
             for(locale in listOf("ru", "uk")) {
                 val words = container.study.words(locale).first()

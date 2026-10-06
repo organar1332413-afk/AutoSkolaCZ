@@ -34,9 +34,9 @@ class FullSignVocabularyTest(unittest.TestCase):
         words=json.loads(ASSET.read_text())
         metrics,missing,forms=audit(words)
         self.assertEqual(408,metrics['sign_cards_scanned'])
-        self.assertEqual(1802,metrics['tappable_text_fields_scanned'])
-        self.assertEqual(11313,metrics['token_occurrences'])
-        self.assertEqual(2275,metrics['unique_normalized_forms'])
+        self.assertEqual(1878,metrics['tappable_text_fields_scanned'])
+        self.assertEqual(13325,metrics['token_occurrences'])
+        self.assertEqual(2459,metrics['unique_normalized_forms'])
         failures=[]
         for kind,tokens in missing.items():
             for token in tokens:
@@ -52,19 +52,23 @@ class FullSignVocabularyTest(unittest.TestCase):
         import re,unicodedata
         from sign_vocabulary import normalize,tokens,corpus
         _,corpus_forms=corpus()
+        retained={w['id']:w for w in json.loads((ROOT/'content/dictionary/retained-sign-forms.json').read_text())['retained']}
         words=json.loads(ASSET.read_text())
         for word in words:
             with self.subTest(lemma=word['lemma']):
                 self.assertEqual(normalize(word['lemma']),word['lemma'])
                 self.assertEqual(len(word['forms']),len(set(word['forms'])))
-                self.assertTrue(any(f in corpus_forms for f in word['forms']))
+                legacy=retained.get(word['id'], {'forms':[], 'contexts':[]})
+                historical={t for row in legacy['contexts'] for t in tokens(row['cs'])}
+                self.assertTrue(set(legacy['forms'])<=historical)
+                self.assertTrue(any(f in corpus_forms or f in historical for f in word['forms']))
                 self.assertTrue(word['exampleCs'].strip())
                 for form in word['forms']:
                     self.assertEqual(normalize(form),form)
                     self.assertEqual(form,unicodedata.normalize('NFC',form))
                     self.assertNotRegex(form,r'[\d_\ufffd]|Ã|Ä|Å')
                     self.assertEqual([form],list(tokens(form)),f'Technical token: {form}')
-                    self.assertTrue(form in corpus_forms or form==word['lemma'],f'Unobserved surface form: {form}')
+                    self.assertTrue(form in corpus_forms or form==word['lemma'] or form in legacy['forms'],f'Unobserved surface form: {form}')
                 for text in word['translations']:
                     for field in ['translation','meaning']:
                         self.assertTrue(text[field].strip(),field)
@@ -75,11 +79,48 @@ class FullSignVocabularyTest(unittest.TestCase):
                     self.assertLessEqual(len(text['meaning']),145)
                     self.assertNotIn('\n',text['meaning'])
 
+    def test_revision_preserves_existing_ids_translations_and_forms(self):
+        import hashlib
+        from sign_vocabulary import corpus
+        fixture=json.loads((ROOT/'content/dictionary/retained-sign-forms.json').read_text())
+        words={w['id']:w for w in json.loads(ASSET.read_text())}
+        self.assertEqual(1178,len(fixture['baseline']))
+        self.assertTrue(set(fixture['baseline'])<=set(words))
+        for identifier,before in fixture['baseline'].items():
+            with self.subTest(identifier=identifier):
+                after=words[identifier]
+                self.assertEqual(before['lemma'],after['lemma'])
+                self.assertTrue(set(before['forms'])<=set(after['forms']))
+                digest=hashlib.sha256(json.dumps(after['translations'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()
+                self.assertEqual(before['translations_sha256'],digest)
+        # Every addition must be a surface form of today's corpus or its real lemma.
+        _,current=corpus()
+        for identifier,word in words.items():
+            previous=set(fixture['baseline'].get(identifier,{}).get('forms',[]))
+            for form in set(word['forms'])-previous:
+                self.assertTrue(form in current or form==word['lemma'],form)
+            if identifier not in fixture['baseline']:
+                self.assertTrue(any(f in current for f in word['forms']),word['lemma'])
+
     def test_tokenizer_excludes_identifiers_but_keeps_czech_prepositions(self):
         from sign_vocabulary import tokens,normalize
         self.assertEqual(['chodci','tvar','bus'],list(tokens('A 12a · Chodci, (Tvar). V 2b; https://example.cz/road 408 ID_abc km m BUS.')))
         self.assertEqual(['v','s','a','řidič'],list(tokens('v 2 s 3 a řidič')))
         self.assertEqual('tvar',normalize('(TVAR,)'))
+
+    def test_new_obligation_and_prohibition_forms_keep_both_language_meanings(self):
+        words=json.loads(ASSET.read_text())
+        index={f:w for w in words for f in w['forms']}
+        for token in ('nesmí','nesmíte','nesmějí'):
+            self.assertEqual('nesmět',index[token]['lemma'])
+            texts={t['locale']:t for t in index[token]['translations']}
+            self.assertIn('запрещено',texts['ru']['translation'])
+            self.assertIn('заборонено',texts['uk']['translation'])
+        self.assertEqual('muset',index['musí']['lemma'])
+        self.assertEqual('nemuset',index['nemusíte']['lemma'])
+        for token in ('neohrožujte','nepředjíždějte','nepokračujte','neužívejte','nezačínejte','neomezí'):
+            for text in index[token]['translations']:
+                self.assertTrue(text['translation'].startswith('не '),token)
 
 if __name__ == "__main__":
     unittest.main()

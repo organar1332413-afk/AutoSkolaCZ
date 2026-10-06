@@ -15,7 +15,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT_DIR = Path('docs/signs-audit')
-SOURCE_HEAD = '0e71596ed5c129646c9fb88f075060fe4c22f463'
+SOURCE_HEAD = '6c24b6b99b610c4fb06dd30015df0793e6a9cbad'
 ENUMS = {
     'legal': {'LEGAL_OK', 'LEGAL_RISK', 'LEGAL_WRONG', 'UNVERIFIED'},
     'pedagogy': {'PEDAGOGY_OK', 'PEDAGOGY_IMPROVE'},
@@ -31,7 +31,7 @@ CSV_COLUMNS = ['sign_code', 'production_title_cs', 'official_title_cs', 'legal',
                'pedagogy', 'overall', 'confidence', 'reason', 'issue_kind',
                'source_urls', 'official_meaning_and_conditions_cs',
                'original_card_json', 'displayed_blocks_json', 'review_checks_json',
-               'proposed_correction_json']
+               'proposed_correction_json', 'revision_json']
 
 
 class AuditValidationError(ValueError):
@@ -92,8 +92,10 @@ def expected_displayed(sign, card, translations):
 
 
 def validate_core(audit, catalog, cards, current_hashes, evidence, translations):
-    require(audit.get('schema_version') == 1, 'Unknown audit schema')
+    require(audit.get('schema_version') == 2, 'Unknown audit schema')
     require(audit.get('audited_source_head') == SOURCE_HEAD, 'Wrong audited source HEAD')
+    require(audit.get('snapshot_stage') == 'POST_REVISION_WORKTREE',
+            'Revision audit must identify the exact revised worktree snapshot')
     require(audit.get('branch') == 'stage4b-premium-ui', 'Wrong audit branch')
     require(audit.get('expected_count') == audit.get('audited_count') == 408,
             'Audit metadata must state 408 records')
@@ -187,7 +189,8 @@ def csv_record(r):
                     [r['official']['citation_url']] + [x['url'] for x in r['official']['driver_duties_and_exceptions_references']])),
                 official_meaning_and_conditions_cs=r['official']['meaning_and_conditions_cs'],
                 original_card_json=r['original_card'], displayed_blocks_json=r['displayed_blocks'],
-                review_checks_json=r['review_checks'], proposed_correction_json=r['proposed_correction'])
+                review_checks_json=r['review_checks'], proposed_correction_json=r['proposed_correction'],
+                revision_json=r.get('revision', {}))
 
 
 def validate_csv(rows, csv_rows, columns):
@@ -195,7 +198,7 @@ def validate_csv(rows, csv_rows, columns):
     require(len(csv_rows) == 408, 'CSV must contain 408 rows')
     for r, exported in zip(rows, csv_rows):
         actual = dict(exported)
-        for field in ('original_card_json', 'displayed_blocks_json', 'review_checks_json', 'proposed_correction_json'):
+        for field in ('original_card_json', 'displayed_blocks_json', 'review_checks_json', 'proposed_correction_json', 'revision_json'):
             try:
                 actual[field] = json.loads(actual[field])
             except (ValueError, TypeError) as exc:
@@ -235,6 +238,10 @@ def validate(root=ROOT):
     path = root / AUDIT_DIR
     require(bundle['audit']['official_evidence_sha256'] == sha256(path / 'official-sources.json'),
             'Official evidence SHA-256 differs')
+    decisions = read_json(path / 'production-revision-decisions.json')
+    require(bundle['audit']['revision_decisions_sha256'] == sha256(path / 'production-revision-decisions.json'),
+            'Revision decisions SHA-256 differs')
+    validate_revision(rows, decisions)
     for image in bundle['evidence'].get('images', {}).values():
         require(sha256(path / image['path']) == image['sha256'], 'Official source image changed')
     with (path / 'signs-content-audit.csv').open(encoding='utf-8', newline='') as f:
@@ -242,6 +249,35 @@ def validate(root=ROOT):
         validate_csv(rows, list(reader), reader.fieldnames)
     validate_summary(bundle['audit'], (path / 'signs-content-audit-summary.md').read_text(encoding='utf-8'))
     return bundle['audit']['counts']
+
+
+def validate_revision(rows, decisions):
+    require(decisions.get('base_head') == SOURCE_HEAD, 'Wrong revision base HEAD')
+    edits = decisions.get('records', [])
+    codes = [e.get('sign_code') for e in edits]
+    require(len(codes) == len(set(codes)) == decisions.get('changed_cards'),
+            'Duplicate/missing revision decisions')
+    revised = {r['sign_code']: r for r in rows if r.get('revision')}
+    require(set(codes) == set(revised), 'Revision records differ from decisions')
+    for edit in edits:
+        code = edit['sign_code']
+        row = revised[code]
+        history = row['revision']
+        require(edit.get('cs_ru_ua_review') == history.get('cs_ru_ua_review') == 'REVIEWED',
+                f'{code}: revision translations were not reviewed')
+        require(edit.get('reviewed_overall') == row['overall'], f'{code}: verdict differs from revision decision')
+        require(text_present(edit.get('resolution')) and edit['resolution'] == history.get('resolution'),
+                f'{code}: revision resolution missing')
+        require(edit.get('previous_overall') == history.get('previous_overall'),
+                f'{code}: previous verdict differs')
+        before = edit.get('before_card', {})
+        current = row['original_card']
+        changes = [k for k, value in current.items() if before.get(k) != value]
+        require(changes and changes == edit.get('changed_fields') == history.get('changed_fields'),
+                f'{code}: revision field list differs from actual production change')
+        if history.get('adjudicated_before_fix') != history.get('previous_overall'):
+            require(text_present(history.get('reclassification_reason')) or code == 'P 4',
+                    f'{code}: reclassification needs an explanation')
 
 
 def main():
