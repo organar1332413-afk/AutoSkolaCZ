@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-09",
+  "sources": [
+    {
+      "id": "md-bulletin",
+      "title": "MD ČR · Bulletin 02.04.2026 / 08.10.2026",
+      "url": "https://etesty.md.gov.cz/ro/Bulletin"
+    },
+    {
+      "id": "erc-bls-2025",
+      "title": "ČRR / ERC 2025 · Základní resuscitace",
+      "url": "https://www.resuscitace.cz/files/files/0/ua1nm/07-bls-step-by-step-p-cs-v1-1.pdf"
+    },
+    {
+      "id": "erc-first-aid-2025",
+      "title": "ČRR / ERC 2025 · První pomoc",
+      "url": "https://www.resuscitace.cz/files/files/0/xt4i5/36-first-aid-key-messages-p-cs-v1-0.pdf"
+    },
+    {
+      "id": "erc-position-2025",
+      "title": "ČRR / ERC 2025 · Polohování",
+      "url": "https://www.resuscitace.cz/files/files/0/innty/39-first-aid-algorithm-a-cs-v1-1.pdf"
+    },
+    {
+      "id": "zzs-cpr",
+      "title": "ZZS Praha · Resuscitace",
+      "url": "https://www.zzshmp.cz/prvni-pomoc/bezvedomi-resuscitace/"
+    },
+    {
+      "id": "zzs-trauma",
+      "title": "ZZS Praha · Závažný úraz",
+      "url": "https://www.zzshmp.cz/prvni-pomoc/zavazny-uraz/"
+    },
+    {
+      "id": "zzs-call",
+      "title": "ZZS Praha · Volání 155",
+      "url": "https://www.zzshmp.cz/prvni-pomoc/volani-na-linku-155/"
+    },
+    {
+      "id": "zzs-unconscious",
+      "title": "ZZS Praha · Bezvědomí",
+      "url": "https://www.zzshmp.cz/prvni-pomoc/bezvedomi/"
+    },
+    {
+      "id": "zzs-bleeding",
+      "title": "ZZS Praha · Krvácení",
+      "url": "https://www.zzshmp.cz/prvni-pomoc/krvaceni/"
+    },
+    {
+      "id": "criminal-code",
+      "title": "Trestní zákoník · §§ 150–151",
+      "url": "https://www.zakonyprolidi.cz/cs/2009-40"
+    },
+    {
+      "id": "eu-112",
+      "title": "EU · Tísňová linka 112",
+      "url": "https://europa.eu/youreurope/citizens/travel/security-and-emergencies/emergency/index_cs.htm"
+    },
+    {
+      "id": "helmet-review-pending",
+      "title": "Přilba · odborná kontrola čeká",
+      "url": "https://etesty.md.gov.cz/ro/Bulletin"
+    },
+    {
+      "id": "extrication-review-pending",
+      "title": "Vyproštění · odborná kontrola čeká",
+      "url": "https://etesty.md.gov.cz/ro/Bulletin"
+    },
+    {
+      "id": "zzs-aed",
+      "title": "ZZS Praha · AED",
+      "url": "https://www.zzshmp.cz/prvni-pomoc/automatizovany-externi-defibrilator-aed/"
+    }
+  ]
+}

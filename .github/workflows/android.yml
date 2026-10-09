@@ -66,6 +66,7 @@ jobs:
             app/build/test-results
             app/build/reports
             app/build/outputs/premium-ui
+            app/build/outputs/first-aid
             core/data/schemas
   room-tests:
     runs-on: ubuntu-latest

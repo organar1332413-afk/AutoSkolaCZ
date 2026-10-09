@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "RP0604245",
+      "question": {
+        "cs": "Zraněný si po dopravní nehodě stěžuje na bolesti břicha a pocit žízně:",
+        "ru": "После ДТП пострадавший жалуется на боль в животе и жажду:",
+        "uk": "Після ДТП постраждалий скаржиться на біль у животі та спрагу:"
+      },
+      "answer": {
+        "cs": "Nepodáváme mu žádné nápoje.",
+        "ru": "Не даём никаких напитков.",
+        "uk": "Не даємо жодних напоїв."
+      },
+      "sourceSha256": "9d7c27c8e82abf466d6abb4f9f42e0107acfd2a8b7eb9829b4f0994ccd105ea8",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP0605237",
+      "question": {
+        "cs": "První pomoc je povinen poskytnout:",
+        "ru": "Кто обязан оказать первую помощь?",
+        "uk": "Хто зобов’язаний надати першу допомогу?"
+      },
+      "answer": {
+        "cs": "Každý, kdo tak může učinit bez nebezpečí pro sebe nebo jiného.",
+        "ru": "Каждый, кто может сделать это без опасности для себя или другого.",
+        "uk": "Кожен, хто може зробити це без небезпеки для себе чи іншого."
+      },
+      "sourceSha256": "1883d433d8995b5d8a655ed4ba9a6b85e31445e43f88a417dabcb7380bdcda1f",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP0606299",
+      "question": {
+        "cs": "Hrozí trestní postih, pokud neposkytnete první pomoc?",
+        "ru": "Грозит ли уголовное наказание за неоказание первой помощи?",
+        "uk": "Чи загрожує кримінальне покарання за ненадання першої допомоги?"
+      },
+      "answer": {
+        "cs": "Ano, s možností nepodmíněného trestu odnětí svobody.",
+        "ru": "Да, возможно лишение свободы без условного срока.",
+        "uk": "Так, можливе позбавлення волі без умовного строку."
+      },
+      "sourceSha256": "ba6c2318ed5d0991f9de0822d710c97ca54fc3489db11437feb796d311ced8c8",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP0904008",
+      "question": {
+        "cs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+        "ru": "Правильная частота нажатий на грудину у взрослого:",
+        "uk": "Правильна частота натискань на грудину в дорослого:"
+      },
+      "answer": {
+        "cs": "Přibližně 100 stlačení za minutu.",
+        "ru": "Приблизительно 100 нажатий в минуту.",
+        "uk": "Приблизно 100 натискань на хвилину."
+      },
+      "sourceSha256": "7180251fdb736c383bd38ce3bda2b9a50f29a31252d76a4e96b406ce7ba9b318",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP0904012",
+      "question": {
+        "cs": "Rychlou zdravotnickou záchranou službu přivoláme na telefonním čísle:",
+        "ru": "По какому номеру вызывают скорую медицинскую помощь?",
+        "uk": "За яким номером викликають екстрену медичну допомогу?"
+      },
+      "answer": {
+        "cs": "155.",
+        "ru": "155.",
+        "uk": "155."
+      },
+      "sourceSha256": "5292b73dc9bdc33abe044fa3f3a744764619ef718844fc2a63136ef63c369168",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP0904016",
+      "question": {
+        "cs": "Při úrazu hlavy nejvíce poraněného ohrožuje:",
+        "ru": "Что больше всего угрожает пострадавшему при травме головы?",
+        "uk": "Що найбільше загрожує постраждалому при травмі голови?"
+      },
+      "answer": {
+        "cs": "Následné bezvědomí.",
+        "ru": "Последующая потеря сознания.",
+        "uk": "Подальша втрата свідомості."
+      },
+      "sourceSha256": "3c757df66a235868a2a481b2370ff2be06bc86ab839b8406d9014a9f2d35095d",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1007061",
+      "question": {
+        "cs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+        "ru": "Правильная частота нажатий на грудину у взрослого:",
+        "uk": "Правильна частота натискань на грудину в дорослого:"
+      },
+      "answer": {
+        "cs": "Přibližně 100 stlačení za minutu.",
+        "ru": "Приблизительно 100 нажатий в минуту.",
+        "uk": "Приблизно 100 натискань на хвилину."
+      },
+      "sourceSha256": "506111fcb1413c6715db3c6d02ea0015d165dc135d9b51bab11763a263584243",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1007062",
+      "question": {
+        "cs": "Jak budete postupovat u zraněného v bezvědomí, který nedýchá a opakovaně se Vám nedaří uvolnit jeho dýchací cesty:",
+        "ru": "Пострадавший без сознания и не дышит; дыхательные пути неоднократно не удаётся открыть. Что делать?",
+        "uk": "Постраждалий без свідомості й не дихає; дихальні шляхи неодноразово не вдається відкрити. Що робити?"
+      },
+      "answer": {
+        "cs": "Zahájím srdeční masáž.",
+        "ru": "Начну массаж сердца.",
+        "uk": "Почну масаж серця."
+      },
+      "sourceSha256": "19a74dfe18adbd7890658155c4d0c733aded88640f8da34af15b786ee943d1a2",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102001",
+      "question": {
+        "cs": "Jak se zachováte při kolapsovém stavu, kdy postižený upadne a ztrácí vědomí?",
+        "ru": "Что делать при коллапсе, когда человек падает и теряет сознание?",
+        "uk": "Що робити при колапсі, коли людина падає та втрачає свідомість?"
+      },
+      "answer": {
+        "cs": "zvednu nohy postiženého a zajistím volné dýchací cesty",
+        "ru": "Подниму ноги и обеспечу свободные дыхательные пути.",
+        "uk": "Підніму ноги та забезпечу вільні дихальні шляхи."
+      },
+      "sourceSha256": "301a7b05fb8df844ea4119efdf92d075cd3f7e414ee52185b264ccff0bf5363d",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102002",
+      "question": {
+        "cs": "Kdy zahájíte zevní srdeční masáž:",
+        "ru": "Когда начинать наружный массаж сердца?",
+        "uk": "Коли починати зовнішній масаж серця?"
+      },
+      "answer": {
+        "cs": "pokud je poraněný v hlubokém bezvědomí a nedýchá",
+        "ru": "Если пострадавший глубоко без сознания и не дышит.",
+        "uk": "Якщо постраждалий глибоко без свідомості та не дихає."
+      },
+      "sourceSha256": "6528f8f052ed3c73d66aee5820c35bb83601a3b2e4486fb82b5e9619ed616a2a",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102006",
+      "question": {
+        "cs": "U dopravní nehody s poraněním voláme jako první:",
+        "ru": "Кого при ДТП с пострадавшими вызываем первым?",
+        "uk": "Кого при ДТП із постраждалими викликаємо першим?"
+      },
+      "answer": {
+        "cs": "záchrannou službu (155)",
+        "ru": "Скорую помощь — 155.",
+        "uk": "Екстрену медичну допомогу — 155."
+      },
+      "sourceSha256": "7cd37d5e7ee8a8f99d33f7e033f5da5fbbddee2d877292b27770f92e67f416dc",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102008",
+      "question": {
+        "cs": "Poraněný se po dopravní nehodě domáhá tekutin, jak se zachováte:",
+        "ru": "После ДТП пострадавший требует пить. Что делать?",
+        "uk": "Після ДТП постраждалий вимагає пити. Що робити?"
+      },
+      "answer": {
+        "cs": "nedám mu napít ani přes jeho naléhání",
+        "ru": "Не дам пить, даже если настаивает.",
+        "uk": "Не дам пити, навіть якщо наполягає."
+      },
+      "sourceSha256": "db264b5c291e6b5146c0ddd3a2630d85853acca9f1d935b3f8cd3d411e9e0370",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102009",
+      "question": {
+        "cs": "Při umělém dýchání z plic do plic u dospělého:",
+        "ru": "При искусственном дыхании изо рта в рот взрослому:",
+        "uk": "При штучному диханні рот у рот дорослому:"
+      },
+      "answer": {
+        "cs": "dýchám úplně normálně frekvencí 6-8 vdechů/min, bez extrémního nádechu a vdechu do poraněného",
+        "ru": "Дышу обычно: 6–8 вдохов в минуту, без чрезмерного вдоха и вдувания.",
+        "uk": "Дихаю звичайно: 6–8 вдихів на хвилину, без надмірного вдиху та вдування."
+      },
+      "sourceSha256": "ca990fc46ef4184332c5e2148494ed1a5ce2b459f3710092be29641942556ae3",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102010",
+      "question": {
+        "cs": "Jak budete postupovat, jste-li sami a opakovaně se Vám nedaří zajistit dýchací cesty:",
+        "ru": "Что делать, если вы один и неоднократно не удаётся обеспечить дыхательные пути?",
+        "uk": "Що робити, якщо ви один і неодноразово не вдається забезпечити дихальні шляхи?"
+      },
+      "answer": {
+        "cs": "přeruším snažení po 3-4 pokusech a zahájím zevní srdeční masáž",
+        "ru": "После 3–4 попыток прекращу попытки и начну наружный массаж сердца.",
+        "uk": "Після 3–4 спроб припиню спроби та почну зовнішній масаж серця."
+      },
+      "sourceSha256": "67bca87a053c0ac020df0e6c650deec879eaa147d2ea60f9cb944c6aa50eaef2",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102011",
+      "question": {
+        "cs": "U poraněného v hlubokém bezvědomí a bezdeší nastávají nezvratné změny mozkové tkáně do:",
+        "ru": "За какое время у глубоко бессознательного пострадавшего без дыхания наступают необратимые изменения мозговой ткани?",
+        "uk": "За який час у постраждалого глибоко без свідомості та без дихання настають незворотні зміни мозкової тканини?"
+      },
+      "answer": {
+        "cs": "5 min.",
+        "ru": "До 5 минут.",
+        "uk": "До 5 хвилин."
+      },
+      "sourceSha256": "3c13175f8b5305583cf232660c4a2a367b0123436970847afbfba233ebe23df1",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102012",
+      "question": {
+        "cs": "Při poranění motorkáře, který je v bezvědomí a nedýchá:",
+        "ru": "Мотоциклист без сознания и не дышит:",
+        "uk": "Мотоцикліст без свідомості та не дихає:"
+      },
+      "answer": {
+        "cs": "je nejlepší vyproštění hlavy ve dvou zachráncích, kdy jeden pevně svírá hlavu poraněného a druhý opatrně sejme přilbu",
+        "ru": "Лучше освобождать голову вдвоём: один удерживает голову, второй осторожно снимает шлем.",
+        "uk": "Краще звільняти голову вдвох: один утримує голову, другий обережно знімає шолом."
+      },
+      "sourceSha256": "5b5e632b8c012e558aaf41c3060ee17e2f35874c87b8499ad7378eceec3fb2fe",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102013",
+      "question": {
+        "cs": "Při úrazu hlavy s drobnějším viditelným krvácením nejvíce poraněného ohrožuje:",
+        "ru": "Что больше всего угрожает при травме головы с небольшим видимым кровотечением?",
+        "uk": "Що найбільше загрожує при травмі голови з невеликою видимою кровотечею?"
+      },
+      "answer": {
+        "cs": "následné bezvědomí při poranění mozkové tkáně",
+        "ru": "Последующая потеря сознания при повреждении ткани мозга.",
+        "uk": "Подальша втрата свідомості при пошкодженні тканини мозку."
+      },
+      "sourceSha256": "5b584d441345bf834656090600e3484d3732352c806048a58c411a352483eeb0",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102014",
+      "question": {
+        "cs": "Při provádění zevní srdeční masáže je správné stlačení hrudní kosti asi o:",
+        "ru": "При наружном массаже сердца грудину правильно сдавливают примерно на:",
+        "uk": "При зовнішньому масажі серця грудину правильно стискають приблизно на:"
+      },
+      "answer": {
+        "cs": "4-5 cm u dospělého tj. na šířku dvou palců zachraňovaného",
+        "ru": "4–5 см у взрослого, то есть на ширину двух больших пальцев пострадавшего.",
+        "uk": "4–5 см у дорослого, тобто на ширину двох великих пальців постраждалого."
+      },
+      "sourceSha256": "10b6e1962baec615797fbd2432ddf69b1740d880677983cf0e6e7e12bff3fa63",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102015",
+      "question": {
+        "cs": "Jak budete postupovat u poraněného, který má po pádu z motocyklu zlomenou dolní končetinu a reaguje na oslovení:",
+        "ru": "После падения с мотоцикла у человека сломана нога, он отвечает на обращение. Что делать?",
+        "uk": "Після падіння з мотоцикла в людини зламана нога, вона відповідає на звернення. Що робити?"
+      },
+      "answer": {
+        "cs": "zavolám pomoc, případně stabilizuji zlomeniny a do příjezdu ZS budu u poraněného nadále sledovat stav vědomí a dýchání",
+        "ru": "Вызову помощь, при необходимости зафиксирую переломы и буду следить за сознанием и дыханием до приезда скорой.",
+        "uk": "Викличу допомогу, за потреби зафіксую переломи та стежитиму за свідомістю і диханням до приїзду швидкої."
+      },
+      "sourceSha256": "d966c9365ca9efae56943dd69b20ecac5422488f28c04387a028a5f8551ae017",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102016",
+      "question": {
+        "cs": "Poraněný je v bezvědomí, leží na zádech a zatím dýchá. Náhle začne zvracet. Jak budete postupovat:",
+        "ru": "Пострадавший без сознания лежит на спине и пока дышит. Началась рвота. Что делать?",
+        "uk": "Постраждалий без свідомості лежить на спині та поки дихає. Почалося блювання. Що робити?"
+      },
+      "answer": {
+        "cs": "otočím mu hlavu na stranu a snažím se mu vyčistit dutinu ústní",
+        "ru": "Поверну голову в сторону и постараюсь очистить полость рта.",
+        "uk": "Поверну голову вбік і спробую очистити порожнину рота."
+      },
+      "sourceSha256": "81de3e8fe3e3c92debe080af26fa77480346cef31aab783f35bc484823a49390",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102018",
+      "question": {
+        "cs": "Hrozí trestní postih, pokud neposkytnete první pomoc:",
+        "ru": "Грозит ли уголовное наказание за неоказание первой помощи?",
+        "uk": "Чи загрожує кримінальне покарання за ненадання першої допомоги?"
+      },
+      "answer": {
+        "cs": "ano",
+        "ru": "Да.",
+        "uk": "Так."
+      },
+      "sourceSha256": "d7086d4556d94afabeb749a8ff41b685214dfe0ef5ed670505bb5d7a70214ed2",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102019",
+      "question": {
+        "cs": "Pokud vidíte, že účastník nehody masivně krvácí:",
+        "ru": "Вы видите массивное кровотечение у участника ДТП:",
+        "uk": "Ви бачите масивну кровотечу в учасника ДТП:"
+      },
+      "answer": {
+        "cs": "neprodleně krvácející místo stlačím prsty, dlaní nebo složeným kusem oděvu",
+        "ru": "Немедленно прижму место кровотечения пальцами, ладонью или сложенной одеждой.",
+        "uk": "Негайно притисну місце кровотечі пальцями, долонею або складеним одягом."
+      },
+      "sourceSha256": "82e910479486fecaf32573a14c842809edb5cd454f1a04f0b0418094a77efab7",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102020",
+      "question": {
+        "cs": "Jak zjistíte stav vědomí pacienta:",
+        "ru": "Как проверить сознание пациента?",
+        "uk": "Як перевірити свідомість пацієнта?"
+      },
+      "answer": {
+        "cs": "oslovím ho, zkusím bolestivý podnět (štípnutí do ušního lalůčku)",
+        "ru": "Обращусь к нему и попробую болевой стимул — щипок за мочку уха.",
+        "uk": "Звернуся до нього та спробую больовий стимул — щипок за мочку вуха."
+      },
+      "sourceSha256": "1d278a29557cc6576056d7027d810805017933544531f2850498f5c43bc9b684",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102021",
+      "question": {
+        "cs": "Jak jednoznačně zjistíte, že poraněný dýchá:",
+        "ru": "Как однозначно определить, что пострадавший дышит?",
+        "uk": "Як однозначно визначити, що постраждалий дихає?"
+      },
+      "answer": {
+        "cs": "při sklonění se k ústům poraněného slyším jeho dech a cítím ho na své tváři",
+        "ru": "Наклонившись к его рту, слышу дыхание и ощущаю его на щеке.",
+        "uk": "Нахилившись до його рота, чую дихання та відчуваю його на щоці."
+      },
+      "sourceSha256": "85c77f4843950f2dd62ad19d5b955d1108da780131b8755740f849c07a10a7be",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102022",
+      "question": {
+        "cs": "Jak zajistíte průchodnost dýchacích cest:",
+        "ru": "Как обеспечить проходимость дыхательных путей?",
+        "uk": "Як забезпечити прохідність дихальних шляхів?"
+      },
+      "answer": {
+        "cs": "zakloním mírně hlavu a předsunu dolní čelist směrem vzhůru, event. vyčistím ústa od cizích těles(zvratků, krve..)",
+        "ru": "Слегка запрокину голову и выдвину нижнюю челюсть вверх; при необходимости очищу рот от инородного содержимого — рвоты, крови.",
+        "uk": "Трохи закину голову та висуну нижню щелепу вгору; за потреби очищу рот від стороннього вмісту — блювоти, крові."
+      },
+      "sourceSha256": "8b73b1715b072823a37539f8b3a8cb782f6859b7d3258a16bc23b3b0c5dbbbd5",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102023",
+      "question": {
+        "cs": "Po zahájení resuscitace je nejdůležitější:",
+        "ru": "Что важнее всего после начала реанимации?",
+        "uk": "Що найважливіше після початку реанімації?"
+      },
+      "answer": {
+        "cs": "resuscitaci nepřerušovat do příjezdu ZS, obnovení dýchání nebo vlastního vyčerpání",
+        "ru": "Не прерывать до приезда скорой, восстановления дыхания или собственного истощения.",
+        "uk": "Не переривати до приїзду швидкої, відновлення дихання чи власного виснаження."
+      },
+      "sourceSha256": "3a8f574b39c1bbac47bf6af9f01c8859744be6c433615fc2068fa4cb5f36d1e5",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102024",
+      "question": {
+        "cs": "Jste svědek dopravní nehody, na místě jsou dva zranění, z nichž jeden je v bezvědomí, druhý při vědomí, ale výrazně krvácí. Jaký bude Váš postup?",
+        "ru": "На месте ДТП двое: один без сознания, второй в сознании, но сильно кровоточит. Что делать?",
+        "uk": "На місці ДТП двоє: один без свідомості, другий при свідомості, але сильно кровоточить. Що робити?"
+      },
+      "answer": {
+        "cs": "neprodleně zastavím masivní krvácení, zjistím stav poraněného v bezvědomí, zavolám ZS a zajistím místo nehody",
+        "ru": "Немедленно остановлю массивное кровотечение, проверю состояние бессознательного, вызову скорую и обезопашу место ДТП.",
+        "uk": "Негайно зупиню масивну кровотечу, перевірю стан непритомного, викличу швидку та убезпечу місце ДТП."
+      },
+      "sourceSha256": "7bd03c2e57c7324b13ac463e2ae0f2fa5965d6de5b2e65e2c25b73d07850bb75",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102025",
+      "question": {
+        "cs": "Zjistíte, že poraněný má v ráně zabodnuté cizí těleso. Co uděláte?",
+        "ru": "В ране застрял инородный предмет. Что делать?",
+        "uk": "У рані застряг сторонній предмет. Що робити?"
+      },
+      "answer": {
+        "cs": "těleso ponechám v ráně, ošetřím okolní krvácení, zajistím životní funkce",
+        "ru": "Оставлю предмет в ране, остановлю кровотечение вокруг и обеспечу жизненные функции.",
+        "uk": "Залишу предмет у рані, зупиню кровотечу навколо та забезпечу життєві функції."
+      },
+      "sourceSha256": "67c5ac4fee92a801aecbb9ef58c7370e46d8d7ac3e8a335dc80afd167918af49",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102026",
+      "question": {
+        "cs": "Poraněný je při vědomí a velmi silně krvácí z rány na krku. Co uděláte?",
+        "ru": "Человек в сознании и очень сильно кровоточит из раны на шее. Что делать?",
+        "uk": "Людина при свідомості й дуже сильно кровоточить із рани на шиї. Що робити?"
+      },
+      "answer": {
+        "cs": "neprodleně krvácející místo stlačím prsty, dlaní nebo složeným kusem oděvu",
+        "ru": "Немедленно прижму место кровотечения пальцами, ладонью или сложенной одеждой.",
+        "uk": "Негайно притисну місце кровотечі пальцями, долонею або складеним одягом."
+      },
+      "sourceSha256": "d36901e681f0c5a66f14c6600c94705401c5b0f381851ba3a4b7c4880ebf032a",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102027",
+      "question": {
+        "cs": "Poraněný je při vědomí a stěžuje si na silnou bolest v oblasti zad, eventuálně na brnění nebo necitlivost dolních končetin. Jaké by mohl mít poranění?",
+        "ru": "После травмы сильная боль в спине, возможно покалывание или онемение ног. Какая травма вероятна?",
+        "uk": "Після травми сильний біль у спині, можливе поколювання чи оніміння ніг. Яка травма ймовірна?"
+      },
+      "answer": {
+        "cs": "poranění páteře, při změně citlivosti také poranění míchy",
+        "ru": "Травма позвоночника; при изменении чувствительности также спинного мозга.",
+        "uk": "Травма хребта; при зміні чутливості також спинного мозку."
+      },
+      "sourceSha256": "5bda384156c460aa153ab68bfbaf59fa27cfd598c8cb805412b9d95f2ce0dd66",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102028",
+      "question": {
+        "cs": "Poraněný je v bezvědomí a dýchá. Jakou pomoc mu poskytnete?",
+        "ru": "Пострадавший без сознания и дышит. Как помочь?",
+        "uk": "Постраждалий без свідомості та дихає. Як допомогти?"
+      },
+      "answer": {
+        "cs": "mírně zakloním hlavu a předsunu dolní čelist, uvolním mu tak dýchací cesty a budu ho sledovat do příjezdu ZS, pokud dýchat přestane, ihned zahájím oživování",
+        "ru": "Слегка запрокину голову и выдвину нижнюю челюсть, освобожу дыхательные пути и буду наблюдать до приезда скорой. Если дыхание прекратится, сразу начну оживление.",
+        "uk": "Трохи закину голову й висуну нижню щелепу, звільню дихальні шляхи та спостерігатиму до приїзду швидкої. Якщо дихання припиниться, негайно почну оживлення."
+      },
+      "sourceSha256": "ba2ef05b0126b0900aa93b5ef4b90cfae12bbf08a03a76d1db51de27e74387ae",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1102029",
+      "question": {
+        "cs": "Pro kvalitně prováděnou srdeční masáž je nejdůležitější",
+        "ru": "Что важнее всего для качественного массажа сердца?",
+        "uk": "Що найважливіше для якісного масажу серця?"
+      },
+      "answer": {
+        "cs": "dostatečná hloubka stlačení hrudní kosti a frekvence.",
+        "ru": "Достаточная глубина нажатий на грудину и частота.",
+        "uk": "Достатня глибина натискань на грудину та частота."
+      },
+      "sourceSha256": "7bcd24065c862cb68846d6c1d20615a5f1850718ee04d631bad333f41730357b",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1108004",
+      "question": {
+        "cs": "U poraněného s podezřením na úraz páteře:",
+        "ru": "При подозрении на травму позвоночника:",
+        "uk": "За підозри на травму хребта:"
+      },
+      "answer": {
+        "cs": "manipuluji s poraněným co nejméně, pouze v souvislosti se zajištěním životních funkcí.",
+        "ru": "Двигаю пострадавшего как можно меньше, только для обеспечения жизненных функций.",
+        "uk": "Рухаю постраждалого якомога менше, лише для забезпечення життєвих функцій."
+      },
+      "sourceSha256": "15bba6a57499cb2e57d0727573a475802d9c6cb80d367e57fdf6e5bf8d1109ee",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1305001",
+      "question": {
+        "cs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+        "ru": "Правильная частота нажатий на грудину у взрослого:",
+        "uk": "Правильна частота натискань на грудину в дорослого:"
+      },
+      "answer": {
+        "cs": "Přibližně 100 stlačení za minutu.",
+        "ru": "Приблизительно 100 нажатий в минуту.",
+        "uk": "Приблизно 100 натискань на хвилину."
+      },
+      "sourceSha256": "51c38b984d6cd185ce3c0aa8106665bca1332928677e8f090b0c97bd8a7ed2fa",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "id": "RP1309001",
+      "question": {
+        "cs": "Pří zevní srdeční masáži",
+        "ru": "При наружном массаже сердца:",
+        "uk": "При зовнішньому масажі серця:"
+      },
+      "answer": {
+        "cs": "zahájím nepřímou srdeční masáž i v nevýhodné poloze (např. v sedu při zaklínění ve voze), pokud nelze poraněného rychle vyprostit",
+        "ru": "Начну непрямой массаж сердца даже в неудобной позе — например, сидя при зажатии в автомобиле, если быстро освободить пострадавшего невозможно.",
+        "uk": "Почну непрямий масаж серця навіть у незручній позі — наприклад, сидячи при затисненні в автомобілі, якщо швидко звільнити постраждалого неможливо."
+      },
+      "sourceSha256": "00cc3c3be2b1eb91c07bb0bce12d2342948fa2982a9e6c3890d66a44a6928431",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    }
+  ]
+}

@@ -42,4 +42,13 @@ class RoomStudyRepository(private val db: AutoSkolaDatabase) : StudyRepository {
         saveWord(id)
     }
     override suspend fun saveWord(id: String) { db.words().save(SavedWordEntity(id, System.currentTimeMillis(), 0, 0, null)) }
+    /** Only a user-selected first-aid companion entry; never replaces existing dictionary content. */
+    suspend fun saveAidWord(word: Lexeme) = db.withTransaction {
+        require(word.id.startsWith("aid-") && word.locale in setOf("ru", "uk") && !word.translation.isNullOrBlank())
+        db.words().insertWords(listOf(DictionaryWordEntity(word.id, word.lemma, "first aid learning companion", word.exampleCs, "draft")))
+        db.words().insertForms((word.forms + word.lemma).distinct().map { DictionaryFormEntity(word.id, it) })
+        db.words().insertTranslations(listOf(DictionaryTranslationEntity(word.id, word.locale,
+            requireNotNull(word.translation), word.meaning.orEmpty(), word.exampleTranslation.orEmpty())))
+        saveWord(word.id)
+    }
 }

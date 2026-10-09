@@ -1,0 +1,232 @@
+RP0604245 Zraněný si po dopravní nehodě stěžuje na bolesti břicha a pocit žízně:
+                          a) Nepodáváme mu žádné nápoje.
+                          b) Podáváme mu studené nápoje.
+                          c) Podáváme mu dostatek vlažných nápojů.
+KEY a
+
+RP0605237 První pomoc je povinen poskytnout:
+                          a) Jen ten, kdo prošel jakýmkoli zdravotnickým školením.
+                          b) Každý, kdo tak může učinit bez nebezpečí pro sebe nebo jiného.
+                          c) Každý, pokud již dosáhl věku 18 let.
+KEY b
+
+RP0606299 Hrozí trestní postih, pokud neposkytnete první pomoc?
+                          a) Ano, s možností nepodmíněného trestu odnětí svobody.
+                          b) Ne, v žádném případě, je to moje vlastní vůle.
+                          c) Podle závažnosti úrazu nebo postižení poraněného.
+KEY a
+
+RP0904008 Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:
+                          a) Přibližně 60 stlačení za minutu.
+                          b) Přibližně 100 stlačení za minutu.
+                          c) Přibližně 160 stlačení za minutu.
+KEY b
+
+RP0904012 Rychlou zdravotnickou záchranou službu přivoláme na telefonním čísle:
+                          a) 155.
+                          b) 150.
+                          c) 158.
+KEY a
+
+RP0904016 Při úrazu hlavy nejvíce poraněného ohrožuje:
+                          a) Viditelné krvácení.
+                          b) Následné bezvědomí.
+                          c) Zlomeniny kostí lebky.
+KEY b
+
+RP1007061 Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:
+                          a) Přibližně 160 stlačení za minutu.
+                          b) Přibližně 100 stlačení za minutu.
+                          c) Přibližně 200 stlačení za minutu.
+KEY b
+
+RP1007062 Jak budete postupovat u zraněného v bezvědomí, který nedýchá a
+                          opakovaně se Vám nedaří uvolnit jeho dýchací cesty:
+                          a) Budu pokračovat v opakovaných pokusech, dokud se mi to nepodaří.
+                          b) Zahájím srdeční masáž.
+                          c) Vzdám se jakékoliv dalších aktivit, protože jsou zbytečné.
+KEY b
+
+RP1102001 Jak se zachováte při kolapsovém stavu, kdy postižený upadne a ztrácí
+                          vědomí?
+                          a) ihned zahájím resuscitaci
+                          b) zvednu nohy postiženého a zajistím volné dýchací cesty
+                          c) postiženého posadím a zavolám záchranou službu
+KEY b
+
+RP1102002 Kdy zahájíte zevní srdeční masáž:
+                          a) jen pokud u poraněného nehmatám pulz
+                          b) pokud je poraněný v hlubokém bezvědomí a nedýchá
+                          c) pokud masivně krvácí
+KEY b
+
+RP1102006 U dopravní nehody s poraněním voláme jako první:
+                          a) hasiče (150)
+                          b) policii (158)
+                          c) záchrannou službu (155)
+KEY c
+
+RP1102008 Poraněný se po dopravní nehodě domáhá tekutin, jak se zachováte:
+                          a) poskytnu mu tekutiny v neomezeném množství
+                          b) nedám mu napít ani přes jeho naléhání
+                          c) mohu mu dát i najíst
+KEY b
+
+RP1102009 Při umělém dýchání z plic do plic u dospělého:
+                          a) dýchám frekvencí alespoň 20 vdechů/min a vždy se snažím o co největší vdech
+                          b) dýchám úplně normálně frekvencí 6-8 vdechů/min, bez extrémního nádechu a
+                          vdechu do poraněného
+                          c) vdechuji do plic poraněného jen obsah vzduchu ve svých ústech
+KEY b
+
+RP1102010 Jak budete postupovat, jste-li sami a opakovaně se Vám nedaří zajistit
+                          dýchací cesty:
+                          a) budu pokračovat v opakovaných pokusech, dokud se mi to nepodaří
+                          b) přeruším snažení po 3-4 pokusech a zahájím zevní srdeční masáž
+                          c) vzdám se jakékoliv další aktivity
+KEY b
+
+RP1102011 U poraněného v hlubokém bezvědomí a bezdeší nastávají nezvratné
+                          změny mozkové tkáně do:
+                          a) 5 min.
+                          b) 10 min.
+                          c) 20 min.
+KEY a
+
+RP1102012 Při poranění motorkáře, který je v bezvědomí a nedýchá:
+                          a) nikdy nesundávám přilbu
+                          b) je nejlepší vyproštění hlavy ve dvou zachráncích, kdy jeden pevně svírá hlavu
+                          poraněného a druhý opatrně sejme přilbu
+                          c) mohu sejmout přilbu jakýmkoliv způsobem
+KEY b
+
+RP1102013 Při úrazu hlavy s drobnějším viditelným krvácením nejvíce poraněného
+                          ohrožuje:
+                          a) krvácení
+                          b) následné bezvědomí při poranění mozkové tkáně
+                          c) zlomeniny kostí lebky
+KEY b
+
+RP1102014 Při provádění zevní srdeční masáže je správné stlačení hrudní kosti asi o:
+                          a) 4-5 cm u dospělého tj. na šířku dvou palců zachraňovaného
+                          b) stačí 1-2 cm
+                          c) 8-10 cm
+KEY a
+
+RP1102015 Jak budete postupovat u poraněného, který má po pádu z motocyklu
+                          zlomenou dolní končetinu a reaguje na oslovení:
+                          a) zavolám pomoc, případně stabilizuji zlomeniny a do příjezdu ZS budu u
+                          poraněného nadále sledovat stav vědomí a dýchání
+                          b) stabilizuji zlomeninu a teprve potom zavolám ZS
+                          c) poraněného se nebudu vůbec dotýkat, aby nedošlo ke zhoršení jeho stavu
+KEY a
+
+RP1102016 Poraněný je v bezvědomí, leží na zádech a zatím dýchá. Náhle začne
+                          zvracet. Jak budete postupovat:
+                          a) nechám ho zvracet, nehrozí mu žádné nebezpečí
+                          b) otočím mu hlavu na stranu a snažím se mu vyčistit dutinu ústní
+                          c) nesmím mu pohnout hlavou (může mít poraněnou páteř) a nevadí, že může
+                          zvratky vdechnout do dýchacích cest
+KEY b
+
+RP1102018 Hrozí trestní postih, pokud neposkytnete první pomoc:
+                          a) ano
+                          b) ne
+KEY a
+
+RP1102019 Pokud vidíte, že účastník nehody masivně krvácí:
+                          a) vrátím se k vlastnímu vozu a začnu hledat v lékárničce obvazový materiál
+                          b) neprodleně krvácející místo stlačím prsty, dlaní nebo složeným kusem oděvu
+                          c) krvácející místo nebudu ošetřovat, začnu poraněnému zajišťovat životní funkce tj.
+                          umělé dýchání, zevní srdeční masáž
+KEY b
+
+RP1102020 Jak zjistíte stav vědomí pacienta:
+                          a) oslovím ho, zkusím bolestivý podnět (štípnutí do ušního lalůčku)
+                          b) zkusím bolestivý podnět ostrým předmětem
+                          c) poraněného hlasitě oslovím a zkusím posadit
+KEY a
+
+RP1102021 Jak jednoznačně zjistíte, že poraněný dýchá:
+                          a) je růžový
+                          b) při sklonění se k ústům poraněného slyším jeho dech a cítím ho na své tváři
+                          c) nemá příznaky cyanózy
+KEY b
+
+RP1102022 Jak zajistíte průchodnost dýchacích cest:
+                          a) zakloním mírně hlavu a předsunu dolní čelist směrem vzhůru, event. vyčistím ústa
+                          od cizích těles(zvratků, krve..)
+                          b) předkloním mu hlavu
+                          c) chytnu jazyk poraněného a snažím se ho vytáhnout z dutiny ústní
+KEY a
+
+RP1102023 Po zahájení resuscitace je nejdůležitější:
+                          a) resuscitovat v přesně daném poměru 30:2
+                          b) resuscitaci nepřerušovat do příjezdu ZS, obnovení dýchání nebo vlastního
+                          vyčerpání
+                          c) pravidelně kontrolovat puls a dech poraněného
+KEY b
+
+RP1102024 Jste svědek dopravní nehody, na místě jsou dva zranění, z nichž jeden je v
+                          bezvědomí, druhý při vědomí, ale výrazně krvácí. Jaký bude Váš postup?
+                          a) nejdříve zjistím, zda poraněný v bezvědomí dýchá
+                          b) neprodleně zastavím masivní krvácení, zjistím stav poraněného v bezvědomí,
+                          zavolám ZS a zajistím místo nehody
+                          c) zajistím parkovací místo vozidlu ZS a vyčkám jeho příjezdu
+KEY b
+
+RP1102025 Zjistíte, že poraněný má v ráně zabodnuté cizí těleso. Co uděláte?
+                          a) snažím se těleso opatrně z rány vyndat a zastavit krvácení
+                          b) těleso ponechám v ráně, ošetřím okolní krvácení, zajistím životní funkce
+                          c) poraněného nemusím sledovat a kontrolovat, pouze přivolám ZS
+KEY b
+
+RP1102026 Poraněný je při vědomí a velmi silně krvácí z rány na krku. Co uděláte?
+                          a) vrátím se k vozu a začnu hledat v lékárničce vhodný obvazový materiál
+                          b) neprodleně krvácející místo stlačím prsty, dlaní nebo složeným kusem oděvu
+                          c) krvácející místo nebudu ošetřovat, začnu poraněnému zajišťovat životní funkce tj.
+                          umělé dýchání, zevní srdeční masáž
+KEY b
+
+RP1102027 Poraněný je při vědomí a stěžuje si na silnou bolest v oblasti zad,
+                          eventuálně na brnění nebo necitlivost dolních končetin. Jaké by mohl mít
+                          poranění?
+                          a) zlomeniny dolních končetin
+                          b) poranění hrudníku
+                          c) poranění páteře, při změně citlivosti také poranění míchy
+KEY c
+
+RP1102028 Poraněný je v bezvědomí a dýchá. Jakou pomoc mu poskytnete?
+                          a) mírně zakloním hlavu a předsunu dolní čelist, uvolním mu tak dýchací cesty a
+                          budu ho sledovat do příjezdu ZS, pokud dýchat přestane, ihned zahájím oživování
+
+
+                          b) přivolám pouze ZS, pokud poraněný dýchá, nemusím ho dále sledovat
+                          c) neprodleně zahájím srdeční masáž
+KEY a
+
+RP1102029 Pro kvalitně prováděnou srdeční masáž je nejdůležitější
+                          a) dostatečná hloubka stlačení hrudní kosti a frekvence.
+                          b) jen frekvence.
+                          c) jen hloubka stlačení hrudní kosti.
+KEY a
+
+RP1108004 U poraněného s podezřením na úraz páteře:
+                          a) smím s poraněným manipulovat bez omezení.
+                          b) manipuluji s poraněným co nejméně, pouze v souvislosti se zajištěním životních
+                          funkcí.
+                          c) s poraněným v žádném případě nehýbu.
+KEY b
+
+RP1305001 Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:
+                          a) Přibližně 60 stlačení za minutu.
+                          b) Přibližně 100 stlačení za minutu.
+                          c) Přibližně 20 stlačení za minutu.
+KEY b
+
+RP1309001 Pří zevní srdeční masáži
+                          a) vždy poraněného přesunu na pevnou podložku
+                          b) zahájím nepřímou srdeční masáž i v nevýhodné poloze (např. v sedu při zaklínění
+                          ve voze), pokud nelze poraněného rychle vyprostit
+                          c) pokud není poraněný na pevné podložce, srdeční masáž nezahájím
+KEY b

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aid_official_questions">Oficiální otázky · 35 RP</string>
+    <string name="aid_review_pending">Výukový návrh: odborná zdravotnická kontrola dosud neproběhla.</string>
+    <string name="aid_search">Hledat kartu nebo RP</string>
+    <string name="aid_all">Vše</string>
+    <string name="aid_resuscitation">KPR</string>
+    <string name="aid_trauma">Úrazy</string>
+    <string name="aid_load_error">První pomoc se nepodařilo načíst.</string>
+    <string name="aid_missing">Karta nebo otázka nebyla nalezena.</string>
+    <string name="aid_empty">Žádné výsledky. Změň hledání nebo filtr.</string>
+    <string name="aid_image_error">Ilustrace není dostupná.</string>
+    <string name="aid_exam_block">Ke zkoušce</string>
+    <string name="aid_clinical_block">Aktuální doporučení</string>
+    <string name="aid_exam_version">MD ČR · 08.10.2026, shodné s 02.04.2026. Znění testu, ne současný návod.</string>
+    <string name="aid_exact_answers">Přesné odpovědi a související otázky</string>
+    <string name="aid_hide_answers">Skrýt odpovědi</string>
+    <string name="aid_open_question">Otevřít celou otázku</string>
+    <string name="aid_more">Postup a důležité výjimky</string>
+    <string name="aid_less">Skrýt podrobnosti</string>
+    <string name="aid_next">Další karta</string>
+    <string name="aid_sources">Zdroje a stav kontroly</string>
+    <string name="aid_translation_draft">CS/RU/UK: odborná a jazyková kontrola čeká. Ilustrace nejsou klinicky schválené.</string>
+    <string name="aid_source_error">Zdroj se nepodařilo otevřít.</string>
+    <string name="aid_official_variants">Původní varianty MD · česky</string>
+    <string name="aid_related_material">Související výukové karty</string>
+</resources>

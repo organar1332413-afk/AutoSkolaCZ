@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "bulletinVersion": "2026-10-08",
+  "sourceUrl": "https://etesty.md.gov.cz/ro/Bulletin/List?id=58&pagex=1&pageSize=100",
+  "verificationStatus": "VERIFIED_MD_PDF_2026_04_02_AND_2026_10_08",
+  "questions": [
+    {
+      "id": "RP0604245",
+      "questionCs": "Zraněný si po dopravní nehodě stěžuje na bolesti břicha a pocit žízně:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Nepodáváme mu žádné nápoje.",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "Podáváme mu studené nápoje.",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "Podáváme mu dostatek vlažných nápojů.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP0605237",
+      "questionCs": "První pomoc je povinen poskytnout:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Jen ten, kdo prošel jakýmkoli zdravotnickým školením.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "Každý, kdo tak může učinit bez nebezpečí pro sebe nebo jiného.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "Každý, pokud již dosáhl věku 18 let.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP0606299",
+      "questionCs": "Hrozí trestní postih, pokud neposkytnete první pomoc?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Ano, s možností nepodmíněného trestu odnětí svobody.",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "Ne, v žádném případě, je to moje vlastní vůle.",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "Podle závažnosti úrazu nebo postižení poraněného.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP0904008",
+      "questionCs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Přibližně 60 stlačení za minutu.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "Přibližně 100 stlačení za minutu.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "Přibližně 160 stlačení za minutu.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP0904012",
+      "questionCs": "Rychlou zdravotnickou záchranou službu přivoláme na telefonním čísle:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "155.",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "150.",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "158.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP0904016",
+      "questionCs": "Při úrazu hlavy nejvíce poraněného ohrožuje:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Viditelné krvácení.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "Následné bezvědomí.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "Zlomeniny kostí lebky.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1007061",
+      "questionCs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Přibližně 160 stlačení za minutu.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "Přibližně 100 stlačení za minutu.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "Přibližně 200 stlačení za minutu.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1007062",
+      "questionCs": "Jak budete postupovat u zraněného v bezvědomí, který nedýchá a opakovaně se Vám nedaří uvolnit jeho dýchací cesty:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Budu pokračovat v opakovaných pokusech, dokud se mi to nepodaří.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "Zahájím srdeční masáž.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "Vzdám se jakékoliv dalších aktivit, protože jsou zbytečné.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102001",
+      "questionCs": "Jak se zachováte při kolapsovém stavu, kdy postižený upadne a ztrácí vědomí?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "ihned zahájím resuscitaci",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "zvednu nohy postiženého a zajistím volné dýchací cesty",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "postiženého posadím a zavolám záchranou službu",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102002",
+      "questionCs": "Kdy zahájíte zevní srdeční masáž:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "jen pokud u poraněného nehmatám pulz",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "pokud je poraněný v hlubokém bezvědomí a nedýchá",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "pokud masivně krvácí",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102006",
+      "questionCs": "U dopravní nehody s poraněním voláme jako první:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "hasiče (150)",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "policii (158)",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "záchrannou službu (155)",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "RP1102008",
+      "questionCs": "Poraněný se po dopravní nehodě domáhá tekutin, jak se zachováte:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "poskytnu mu tekutiny v neomezeném množství",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "nedám mu napít ani přes jeho naléhání",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "mohu mu dát i najíst",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102009",
+      "questionCs": "Při umělém dýchání z plic do plic u dospělého:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "dýchám frekvencí alespoň 20 vdechů/min a vždy se snažím o co největší vdech",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "dýchám úplně normálně frekvencí 6-8 vdechů/min, bez extrémního nádechu a vdechu do poraněného",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "vdechuji do plic poraněného jen obsah vzduchu ve svých ústech",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102010",
+      "questionCs": "Jak budete postupovat, jste-li sami a opakovaně se Vám nedaří zajistit dýchací cesty:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "budu pokračovat v opakovaných pokusech, dokud se mi to nepodaří",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "přeruším snažení po 3-4 pokusech a zahájím zevní srdeční masáž",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "vzdám se jakékoliv další aktivity",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102011",
+      "questionCs": "U poraněného v hlubokém bezvědomí a bezdeší nastávají nezvratné změny mozkové tkáně do:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "5 min.",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "10 min.",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "20 min.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102012",
+      "questionCs": "Při poranění motorkáře, který je v bezvědomí a nedýchá:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "nikdy nesundávám přilbu",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "je nejlepší vyproštění hlavy ve dvou zachráncích, kdy jeden pevně svírá hlavu poraněného a druhý opatrně sejme přilbu",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "mohu sejmout přilbu jakýmkoliv způsobem",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102013",
+      "questionCs": "Při úrazu hlavy s drobnějším viditelným krvácením nejvíce poraněného ohrožuje:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "krvácení",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "následné bezvědomí při poranění mozkové tkáně",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "zlomeniny kostí lebky",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102014",
+      "questionCs": "Při provádění zevní srdeční masáže je správné stlačení hrudní kosti asi o:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "4-5 cm u dospělého tj. na šířku dvou palců zachraňovaného",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "stačí 1-2 cm",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "8-10 cm",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102015",
+      "questionCs": "Jak budete postupovat u poraněného, který má po pádu z motocyklu zlomenou dolní končetinu a reaguje na oslovení:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "zavolám pomoc, případně stabilizuji zlomeniny a do příjezdu ZS budu u poraněného nadále sledovat stav vědomí a dýchání",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "stabilizuji zlomeninu a teprve potom zavolám ZS",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "poraněného se nebudu vůbec dotýkat, aby nedošlo ke zhoršení jeho stavu",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102016",
+      "questionCs": "Poraněný je v bezvědomí, leží na zádech a zatím dýchá. Náhle začne zvracet. Jak budete postupovat:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "nechám ho zvracet, nehrozí mu žádné nebezpečí",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "otočím mu hlavu na stranu a snažím se mu vyčistit dutinu ústní",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "nesmím mu pohnout hlavou (může mít poraněnou páteř) a nevadí, že může zvratky vdechnout do dýchacích cest",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102018",
+      "questionCs": "Hrozí trestní postih, pokud neposkytnete první pomoc:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "ano",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "ne",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102019",
+      "questionCs": "Pokud vidíte, že účastník nehody masivně krvácí:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "vrátím se k vlastnímu vozu a začnu hledat v lékárničce obvazový materiál",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "neprodleně krvácející místo stlačím prsty, dlaní nebo složeným kusem oděvu",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "krvácející místo nebudu ošetřovat, začnu poraněnému zajišťovat životní funkce tj. umělé dýchání, zevní srdeční masáž",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102020",
+      "questionCs": "Jak zjistíte stav vědomí pacienta:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "oslovím ho, zkusím bolestivý podnět (štípnutí do ušního lalůčku)",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "zkusím bolestivý podnět ostrým předmětem",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "poraněného hlasitě oslovím a zkusím posadit",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102021",
+      "questionCs": "Jak jednoznačně zjistíte, že poraněný dýchá:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "je růžový",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "při sklonění se k ústům poraněného slyším jeho dech a cítím ho na své tváři",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "nemá příznaky cyanózy",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102022",
+      "questionCs": "Jak zajistíte průchodnost dýchacích cest:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "zakloním mírně hlavu a předsunu dolní čelist směrem vzhůru, event. vyčistím ústa od cizích těles(zvratků, krve..)",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "předkloním mu hlavu",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "chytnu jazyk poraněného a snažím se ho vytáhnout z dutiny ústní",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102023",
+      "questionCs": "Po zahájení resuscitace je nejdůležitější:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "resuscitovat v přesně daném poměru 30:2",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "resuscitaci nepřerušovat do příjezdu ZS, obnovení dýchání nebo vlastního vyčerpání",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "pravidelně kontrolovat puls a dech poraněného",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102024",
+      "questionCs": "Jste svědek dopravní nehody, na místě jsou dva zranění, z nichž jeden je v bezvědomí, druhý při vědomí, ale výrazně krvácí. Jaký bude Váš postup?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "nejdříve zjistím, zda poraněný v bezvědomí dýchá",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "neprodleně zastavím masivní krvácení, zjistím stav poraněného v bezvědomí, zavolám ZS a zajistím místo nehody",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "zajistím parkovací místo vozidlu ZS a vyčkám jeho příjezdu",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102025",
+      "questionCs": "Zjistíte, že poraněný má v ráně zabodnuté cizí těleso. Co uděláte?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "snažím se těleso opatrně z rány vyndat a zastavit krvácení",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "těleso ponechám v ráně, ošetřím okolní krvácení, zajistím životní funkce",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "poraněného nemusím sledovat a kontrolovat, pouze přivolám ZS",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102026",
+      "questionCs": "Poraněný je při vědomí a velmi silně krvácí z rány na krku. Co uděláte?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "vrátím se k vozu a začnu hledat v lékárničce vhodný obvazový materiál",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "neprodleně krvácející místo stlačím prsty, dlaní nebo složeným kusem oděvu",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "krvácející místo nebudu ošetřovat, začnu poraněnému zajišťovat životní funkce tj. umělé dýchání, zevní srdeční masáž",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102027",
+      "questionCs": "Poraněný je při vědomí a stěžuje si na silnou bolest v oblasti zad, eventuálně na brnění nebo necitlivost dolních končetin. Jaké by mohl mít poranění?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "zlomeniny dolních končetin",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "poranění hrudníku",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "poranění páteře, při změně citlivosti také poranění míchy",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "RP1102028",
+      "questionCs": "Poraněný je v bezvědomí a dýchá. Jakou pomoc mu poskytnete?",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "mírně zakloním hlavu a předsunu dolní čelist, uvolním mu tak dýchací cesty a budu ho sledovat do příjezdu ZS, pokud dýchat přestane, ihned zahájím oživování",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "přivolám pouze ZS, pokud poraněný dýchá, nemusím ho dále sledovat",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "neprodleně zahájím srdeční masáž",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1102029",
+      "questionCs": "Pro kvalitně prováděnou srdeční masáž je nejdůležitější",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "dostatečná hloubka stlačení hrudní kosti a frekvence.",
+          "correct": true
+        },
+        {
+          "label": "B",
+          "textCs": "jen frekvence.",
+          "correct": false
+        },
+        {
+          "label": "C",
+          "textCs": "jen hloubka stlačení hrudní kosti.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1108004",
+      "questionCs": "U poraněného s podezřením na úraz páteře:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "smím s poraněným manipulovat bez omezení.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "manipuluji s poraněným co nejméně, pouze v souvislosti se zajištěním životních funkcí.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "s poraněným v žádném případě nehýbu.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1305001",
+      "questionCs": "Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "Přibližně 60 stlačení za minutu.",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "Přibližně 100 stlačení za minutu.",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "Přibližně 20 stlačení za minutu.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "RP1309001",
+      "questionCs": "Pří zevní srdeční masáži",
+      "options": [
+        {
+          "label": "A",
+          "textCs": "vždy poraněného přesunu na pevnou podložku",
+          "correct": false
+        },
+        {
+          "label": "B",
+          "textCs": "zahájím nepřímou srdeční masáž i v nevýhodné poloze (např. v sedu při zaklínění ve voze), pokud nelze poraněného rychle vyprostit",
+          "correct": true
+        },
+        {
+          "label": "C",
+          "textCs": "pokud není poraněný na pevné podložce, srdeční masáž nezahájím",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

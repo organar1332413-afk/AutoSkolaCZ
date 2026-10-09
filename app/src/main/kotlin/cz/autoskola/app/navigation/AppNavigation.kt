@@ -24,6 +24,7 @@ import cz.autoskola.app.feature.words.WordsScreen
 import cz.autoskola.app.feature.catalog.*
 import cz.autoskola.app.feature.statistics.StatisticsScreen
 import cz.autoskola.app.feature.onboarding.OnboardingScreen
+import cz.autoskola.app.feature.firstaid.*
 import cz.autoskola.app.ui.*
 import cz.autoskola.domain.*
 
@@ -71,6 +72,8 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         val signProgress by vm.signProgress.collectAsStateWithLifecycle()
         val lookupTipSeen by vm.lookupTipSeen.collectAsStateWithLifecycle()
         val dictionaryState by vm.dictionaryState.collectAsStateWithLifecycle()
+        val (aidContent, retryAid) = rememberFirstAidContent()
+        val aidState = rememberUpdatedState(AidDestinationState(aidContent.value, settings, words, dictionaryState))
         val signDestinationState = rememberUpdatedState(SignDestinationState(
             signCatalog,signProgress,settings,words,questions.mapTo(mutableSetOf()) { it.officialId }, lookupTipSeen, dictionaryState))
 
@@ -87,7 +90,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
         Scaffold(
             topBar={
                 AppTopBar(
-                    title=SignRoutes.titleResource(route)?.let { text(it) } ?: "Autoškola CZ",
+                    title=(SignRoutes.titleResource(route) ?: AidRoutes.titleResource(route))?.let { text(it) } ?: "Autoškola CZ",
                     navigationIcon={
                         if(route !in topLevelRoutes) {
                             IconButton(onClick={nav.popBackStack()}) { Icon(Icons.AutoMirrored.Filled.ArrowBack, text(R.string.back)) }
@@ -215,10 +218,7 @@ private data class Tab(val route:String,val title:Int,val icon:ImageVector)
                         }
                         signDestinations(nav,signDestinationState,
                             vm::viewSign,vm::favoriteSign,vm::saveWord,vm::reloadSigns,vm::saveUnknownWord,vm::dismissLookupTip) { open("question/$it") }
-                        composable("first_aid") { FirstAidScreen(open) }
-                        composable("aid_questions") {
-                            QuestionsScreen(questions.filter { it.category=="first_aid" },status,learning) { open("question/$it") }
-                        }
+                        firstAidDestinations(nav, aidState, retryAid, vm::saveWord, vm::saveUnknownWord, vm::saveAidWord)
                         composable("statistics") { StatisticsScreen(learning,questions,status,words,settings.licenceGroup) }
                     }
                 }

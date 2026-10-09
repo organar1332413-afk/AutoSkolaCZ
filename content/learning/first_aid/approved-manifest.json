@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "project": "AutoSkolaCZ",
+  "scope": "First Aid cards design/reference",
+  "created": "2026-10-09",
+  "originalBulletin": "2026-04-02",
+  "latestBulletinAtPreparation": "2026-10-08",
+  "sourceNote": "Question text and alternative-catalog answer keys in source matrix are NOT completely MD-certified. Keep official exam answer separate from current clinical recommendation.",
+  "visualSystem": "16 first-aid mockups C01-C16 visually approved by user on 2026-10-09. NOT medical, factual, legal or publication approval.",
+  "counts": {
+    "questions": 35,
+    "cards": 16,
+    "mockups": 16,
+    "cardsWithoutDirectRP": 2,
+    "pendingNewMockupReview": 0,
+    "approvedVisualMockups": 16
+  },
+  "cards": [
+    {
+      "id": "C01",
+      "titleCs": "Povinnost pomoci a bezpečí",
+      "titleRu": "Обязанность помочь и безопасность",
+      "contentNote": "Личная безопасность; обязанность помочь и пределы риска; §§150–151 УК Чехии",
+      "questionIds": [
+        "RP0605237",
+        "RP0606299",
+        "RP1102018"
+      ],
+      "designReference": "mockups/approved_style/C01.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": false,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C02",
+      "titleCs": "Volání 155 a 112",
+      "titleRu": "Вызов 155 и 112",
+      "contentNote": "155 для ZZS, 112 общеевропейская экстренная линия; оператор, место, состояние",
+      "questionIds": [
+        "RP0904012",
+        "RP1102006"
+      ],
+      "designReference": "mockups/approved_style/C02.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C03",
+      "titleCs": "Kontrola vědomí a dýchání",
+      "titleRu": "Проверка сознания и дыхания",
+      "contentNote": "Сознание, дыхание не более 10 с, открытие дыхательных путей",
+      "questionIds": [
+        "RP1102020",
+        "RP1102021",
+        "RP1102022"
+      ],
+      "designReference": "mockups/approved_style/C03.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C04",
+      "titleCs": "Přivolání pomoci",
+      "titleRu": "Вызов помощи",
+      "contentNote": "Структура обращения 155; разъяснения на случай отсутствия нормального дыхания; нужны мостики к C03/C05",
+      "questionIds": [
+        "RP1007062",
+        "RP1102002",
+        "RP1102010"
+      ],
+      "designReference": "mockups/approved_style/C04.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C05",
+      "titleCs": "Kvalitní srdeční masáž",
+      "titleRu": "Качественный массаж сердца",
+      "contentNote": "Частота 100–120; глубина 5–6 см; 30:2 только при подготовке; непрерывность; отдельный экзаменационный ответ",
+      "questionIds": [
+        "RP0904008",
+        "RP1007061",
+        "RP1305001",
+        "RP1102014",
+        "RP1102029",
+        "RP1102009",
+        "RP1102023"
+      ],
+      "designReference": "mockups/approved_style/C05.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C06",
+      "titleCs": "AED co nejdříve",
+      "titleRu": "AED как можно скорее",
+      "contentNote": "Раннее AED, точное положение электродов, не касаться во время анализа/разряда; связанная практическая карточка",
+      "questionIds": [],
+      "designReference": "mockups/approved_style/C06.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C07",
+      "titleCs": "Zotavovací poloha",
+      "titleRu": "Стабильное боковое положение",
+      "contentNote": "Без сознания, но нормальное дыхание; рвота и коллапс; 155 и повторная проверка дыхания",
+      "questionIds": [
+        "RP1102016",
+        "RP1102028",
+        "RP1102001"
+      ],
+      "designReference": "mockups/approved_style/C07.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C08",
+      "titleCs": "Silné krvácení",
+      "titleRu": "Сильное кровотечение",
+      "contentNote": "Прямое давление, шейное кровотечение, 155, дополнительные методы только по показаниям",
+      "questionIds": [
+        "RP1102019",
+        "RP1102026"
+      ],
+      "designReference": "mockups/approved_style/C08.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C09",
+      "titleCs": "Cizí těleso v ráně",
+      "titleRu": "Инородный предмет в ране",
+      "contentNote": "Не извлекать предмет, стабилизировать повязкой, контролировать кровотечение вокруг",
+      "questionIds": [
+        "RP1102025"
+      ],
+      "designReference": "mockups/approved_style/C09.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C10",
+      "titleCs": "Poranění páteře",
+      "titleRu": "Травма позвоночника",
+      "contentNote": "В том числе опасность ухудшения при травме головы, признаки повреждения позвоночника и осторожное обращение",
+      "questionIds": [
+        "RP0904016",
+        "RP1102013",
+        "RP1102027",
+        "RP1108004"
+      ],
+      "designReference": "mockups/approved_style/C10.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C11",
+      "titleCs": "Motocyklová přilba",
+      "titleRu": "Мотоциклетный шлем",
+      "contentNote": "Мотоциклист без дыхания: доступ к дыхательным путям важнее фиксации шлема; перелом ноги",
+      "questionIds": [
+        "RP1102012",
+        "RP1102015"
+      ],
+      "designReference": "mockups/approved_style/C11.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C12",
+      "titleCs": "Více postižených",
+      "titleRu": "Несколько пострадавших",
+      "contentNote": "Общий обзор безопасной сцены и нескольких пострадавших; вводная практическая карточка, отдельный официальный RP не присвоен",
+      "questionIds": [],
+      "designReference": "mockups/approved_style/C12.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C13",
+      "titleCs": "Komu pomoci jako první",
+      "titleRu": "Кому помогать первым",
+      "contentNote": "Строгая логика конкретного случая из RP1102024: массивное кровотечение у сознательного и другой без сознания; НЕ вводить универсальное правило",
+      "questionIds": [
+        "RP1102024"
+      ],
+      "designReference": "mockups/approved_style/C13.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C14",
+      "titleCs": "Postižený ve vozidle",
+      "titleRu": "Пострадавший в автомобиле",
+      "contentNote": "Безопасность, контроль состояния, тяжелая травма: не давать пить",
+      "questionIds": [
+        "RP0604245",
+        "RP1102008"
+      ],
+      "designReference": "mockups/approved_style/C14.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C15",
+      "titleCs": "Vyproštění z vozidla",
+      "titleRu": "Извлечение из автомобиля",
+      "contentNote": "Вопрос о компрессиях для зажатого в машине; условия извлечения, безопасность, доступ к дыхательным путям/СЛР",
+      "questionIds": [
+        "RP1309001"
+      ],
+      "designReference": "mockups/approved_style/C15.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    },
+    {
+      "id": "C16",
+      "titleCs": "Proč rozhodují minuty",
+      "titleRu": "Почему важны минуты",
+      "contentNote": "Экзаменационная формулировка о 5 мин отдельно от практической: немедленно 155, CPR, AED",
+      "questionIds": [
+        "RP1102011"
+      ],
+      "designReference": "mockups/approved_style/C16.png",
+      "designApproval": "approved-visual-only-2026-10-09",
+      "illustrationSuggested": true,
+      "medicalReview": "required"
+    }
+  ],
+  "sourceLinks": {
+    "bulletin": "https://etesty.md.gov.cz/ro/Bulletin",
+    "zzsPraha": "https://www.zzshmp.cz/prvni-pomoc/",
+    "ceskaResuscitacniRada": "https://www.resuscitace.cz/ke-stazeni"
+  },
+  "visualApprovalStatus": "approved-16-of-16-on-2026-10-09",
+  "medicalQaStatus": "not-complete",
+  "approvedDesignReferenceNote": "Full screen mockups are design references only; image anatomy and texts require independent QA; do not bake interface text into bitmaps."
+}

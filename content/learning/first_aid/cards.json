@@ -1,0 +1,882 @@
+{
+  "schemaVersion": 1,
+  "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+  "publicationReady": false,
+  "cards": [
+    {
+      "id": "C01",
+      "category": "safety",
+      "title": {
+        "cs": "Povinnost pomoci a bezpečí",
+        "ru": "Обязанность помочь и безопасность",
+        "uk": "Обов’язок допомогти та безпека"
+      },
+      "summary": {
+        "cs": "Pomoz podle svých možností. Nejprve chraň sebe i ostatní.",
+        "ru": "Помогай по своим возможностям. Сначала обезопась себя и других.",
+        "uk": "Допомагай за своїми можливостями. Спочатку убезпеч себе та інших."
+      },
+      "clinical": {
+        "cs": "Nevstupuj do nebezpečného provozu. Pokud to lze bezpečně, označ místo nehody a přivolej pomoc. Poskytnutí pomoci nesmí ohrozit tebe ani další osoby. Volání 155 a pokyny operátora jsou součástí pomoci.",
+        "ru": "Не выходи под движущийся транспорт. Если безопасно, обозначь место ДТП и вызови помощь. Помощь не должна подвергать опасности тебя или других. Звонок 155 и выполнение указаний диспетчера — часть помощи.",
+        "uk": "Не виходь під рухомий транспорт. Якщо безпечно, познач місце ДТП та виклич допомогу. Допомога не повинна наражати тебе чи інших на небезпеку. Дзвінок 155 і виконання вказівок диспетчера — частина допомоги."
+      },
+      "badges": [
+        {
+          "cs": "Bezpečí",
+          "ru": "Безопасность",
+          "uk": "Безпека"
+        },
+        {
+          "cs": "Volej 155",
+          "ru": "Звони 155",
+          "uk": "Телефонуй 155"
+        },
+        {
+          "cs": "Pomoz",
+          "ru": "Помоги",
+          "uk": "Допоможи"
+        }
+      ],
+      "questionIds": [
+        "RP0605237",
+        "RP0606299",
+        "RP1102018"
+      ],
+      "image": "first_aid/graphics/C01.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr",
+        "criminal-code"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Pomáhá každý, kdo může bez nebezpečí pro sebe nebo jiného. Neposkytnutí pomoci může být trestné.",
+        "ru": "Помогает каждый, кто может без опасности для себя или другого. Неоказание помощи может быть наказуемо.",
+        "uk": "Допомагає кожен, хто може без небезпеки для себе чи іншого. Ненадання допомоги може бути караним."
+      }
+    },
+    {
+      "id": "C02",
+      "category": "safety",
+      "title": {
+        "cs": "Volání 155 a 112",
+        "ru": "Вызов 155 и 112",
+        "uk": "Виклик 155 і 112"
+      },
+      "summary": {
+        "cs": "Při zdravotní nouzi v ČR volej přímo 155.",
+        "ru": "При медицинской экстренной ситуации в Чехии звони прямо 155.",
+        "uk": "У медичній екстреній ситуації в Чехії телефонуй безпосередньо 155."
+      },
+      "clinical": {
+        "cs": "155 je zdravotnická záchranná služba; 112 je evropská tísňová linka. Volej pokud možno od postiženého. Uveď přesné místo, co se stalo a počet postižených. Popisuj, co vidíš: reakci, dýchání a krvácení. Odpovídej operátorovi a řiď se jeho pokyny.",
+        "ru": "155 — скорая медицинская помощь, 112 — европейская экстренная линия. По возможности звони рядом с пострадавшим. Сообщи точное место, что случилось и число пострадавших. Опиши наблюдаемое: реакцию, дыхание и кровотечение. Отвечай диспетчеру и выполняй его указания.",
+        "uk": "155 — екстрена медична допомога, 112 — європейська екстрена лінія. За можливості телефонуй біля постраждалого. Повідом точне місце, що сталося та кількість постраждалих. Опиши те, що бачиш: реакцію, дихання і кровотечу. Відповідай диспетчеру та виконуй його вказівки."
+      },
+      "badges": [
+        {
+          "cs": "155 · ZZS",
+          "ru": "155 · скорая",
+          "uk": "155 · швидка"
+        },
+        {
+          "cs": "112 · nouze",
+          "ru": "112 · экстренно",
+          "uk": "112 · екстрено"
+        },
+        {
+          "cs": "Kde a co?",
+          "ru": "Где и что?",
+          "uk": "Де і що?"
+        }
+      ],
+      "questionIds": [
+        "RP0904012",
+        "RP1102006"
+      ],
+      "image": "first_aid/graphics/C02.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr",
+        "zzs-call",
+        "eu-112"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "ZZS přivoláš na 155. U nehody s poraněním voláš jako první ZZS.",
+        "ru": "Скорую вызывают по 155. При ДТП с ранениями первой вызывают скорую.",
+        "uk": "Швидку викликають за 155. При ДТП із пораненнями першою викликають швидку."
+      }
+    },
+    {
+      "id": "C03",
+      "category": "resuscitation",
+      "title": {
+        "cs": "Kontrola vědomí a dýchání",
+        "ru": "Проверка сознания и дыхания",
+        "uk": "Перевірка свідомості та дихання"
+      },
+      "summary": {
+        "cs": "Nereaguje? Volej 155. Dýchání kontroluj nejvýše 10 sekund.",
+        "ru": "Не реагирует? Звони 155. Проверяй дыхание не дольше 10 секунд.",
+        "uk": "Не реагує? Телефонуй 155. Перевіряй дихання не довше 10 секунд."
+      },
+      "clinical": {
+        "cs": "Hlasitě oslov postiženého a jemně zatřes rameny. Pokud nereaguje, přivolej 155 s hlasitým odposlechem. Uvolni dýchací cesty záklonem hlavy a zvednutím brady. Nejvýše 10 sekund sleduj hrudník, poslouchej a vnímej dech. Lapavé, pomalé či nepravidelné nádechy nejsou normální dýchání. Nereaguje a nedýchá normálně: ihned KPR a AED. Bolestivé štípání ušního lalůčku není současný doporučený postup pro laika.",
+        "ru": "Громко обратись к пострадавшему и осторожно потряси за плечи. Нет реакции — вызови 155 по громкой связи. Открой дыхательные пути запрокидыванием головы и подъёмом подбородка. Не дольше 10 секунд наблюдай грудь, слушай и ощущай дыхание. Редкие судорожные или нерегулярные вдохи — не нормальное дыхание. Нет реакции и нормального дыхания — сразу СЛР и AED. Болезненное щипание мочки уха не является современной рекомендацией для неспециалиста.",
+        "uk": "Голосно звернися до постраждалого та обережно потряси за плечі. Немає реакції — виклич 155 на гучному зв’язку. Відкрий дихальні шляхи закиданням голови та підняттям підборіддя. Не довше 10 секунд спостерігай за грудьми, слухай і відчувай дихання. Рідкі судомні чи нерегулярні вдихи — не нормальне дихання. Немає реакції та нормального дихання — негайно СЛР і AED. Болюче щипання мочки вуха не є сучасною рекомендацією для неспеціаліста."
+      },
+      "badges": [
+        {
+          "cs": "Max. 10 s",
+          "ru": "Макс. 10 с",
+          "uk": "Макс. 10 с"
+        },
+        {
+          "cs": "Dýchá normálně?",
+          "ru": "Дышит нормально?",
+          "uk": "Дихає нормально?"
+        },
+        {
+          "cs": "Jinak KPR",
+          "ru": "Иначе СЛР",
+          "uk": "Інакше СЛР"
+        }
+      ],
+      "questionIds": [
+        "RP1102020",
+        "RP1102021",
+        "RP1102022"
+      ],
+      "image": "first_aid/graphics/C03.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr"
+      ],
+      "relatedCards": [
+        "C04",
+        "C05"
+      ],
+      "examSummary": {
+        "cs": "Test uvádí oslovení a bolestivý podnět; dech slyšíš a cítíš na tváři. Dýchací cesty uvolníš záklonem hlavy a předsunutím čelisti.",
+        "ru": "Тест указывает обращение и болевой стимул; дыхание слышишь и ощущаешь щекой. Дыхательные пути открывают запрокидыванием головы и выдвижением челюсти.",
+        "uk": "Тест вказує звернення і больовий стимул; дихання чуєш і відчуваєш щокою. Дихальні шляхи відкривають закиданням голови та висуванням щелепи."
+      }
+    },
+    {
+      "id": "C04",
+      "category": "resuscitation",
+      "title": {
+        "cs": "Přivolání pomoci",
+        "ru": "Вызов помощи",
+        "uk": "Виклик допомоги"
+      },
+      "summary": {
+        "cs": "Nereaguje a nedýchá normálně: volání nesmí oddálit KPR.",
+        "ru": "Нет реакции и нормального дыхания: звонок не должен задерживать СЛР.",
+        "uk": "Немає реакції та нормального дихання: дзвінок не має затримувати СЛР."
+      },
+      "clinical": {
+        "cs": "Volej 155 na hlasitý odposlech nebo pověř konkrétního svědka. Dalšího pošli pro AED. Po kontrole podle C03 zahaj stlačování hrudníku podle C05. Pokud se nedaří zprůchodnit dýchací cesty či provést vdechy, neztrácej čas opakovanými pokusy a pokračuj v kompresích podle operátora. Historický počet 3–4 pokusů z testu není pokynem čekat s KPR.",
+        "ru": "Звони 155 по громкой связи или поручай звонок конкретному свидетелю. Другого отправь за AED. После проверки по C03 начни компрессии по C05. Если не удаётся открыть дыхательные пути или сделать вдохи, не теряй время на повторные попытки: продолжай компрессии по указаниям диспетчера. Исторические 3–4 попытки в тесте не означают, что надо откладывать СЛР.",
+        "uk": "Телефонуй 155 на гучному зв’язку або доручи дзвінок конкретному свідку. Іншого відправ по AED. Після перевірки за C03 почни компресії за C05. Якщо не вдається відкрити дихальні шляхи чи зробити вдихи, не витрачай час на повторні спроби: продовжуй компресії за вказівками диспетчера. Історичні 3–4 спроби в тесті не означають, що слід відкладати СЛР."
+      },
+      "badges": [
+        {
+          "cs": "Hlasitý odposlech",
+          "ru": "Громкая связь",
+          "uk": "Гучний зв’язок"
+        },
+        {
+          "cs": "Pošli pro AED",
+          "ru": "Пошли за AED",
+          "uk": "Відправ по AED"
+        },
+        {
+          "cs": "Zahaj KPR",
+          "ru": "Начни СЛР",
+          "uk": "Почни СЛР"
+        }
+      ],
+      "questionIds": [
+        "RP1007062",
+        "RP1102002",
+        "RP1102010"
+      ],
+      "image": "first_aid/graphics/C04.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr"
+      ],
+      "relatedCards": [
+        "C03",
+        "C05"
+      ],
+      "examSummary": {
+        "cs": "Při hlubokém bezvědomí a bezdeší zahájíš masáž. Při neúspěšném zajištění dýchacích cest test uvádí přechod ke kompresím.",
+        "ru": "При глубоком бессознательном состоянии без дыхания начинают массаж. Если открыть дыхательные пути не удалось, тест требует перейти к компрессиям.",
+        "uk": "За глибокого несвідомого стану без дихання починають масаж. Якщо відкрити дихальні шляхи не вдалося, тест вимагає перейти до компресій."
+      }
+    },
+    {
+      "id": "C05",
+      "category": "resuscitation",
+      "title": {
+        "cs": "Kvalitní srdeční masáž",
+        "ru": "Качественный массаж сердца",
+        "uk": "Якісний масаж серця"
+      },
+      "summary": {
+        "cs": "U dospělého: 100–120/min, hloubka 5–6 cm.",
+        "ru": "У взрослого: 100–120/мин, глубина 5–6 см.",
+        "uk": "У дорослого: 100–120/хв, глибина 5–6 см."
+      },
+      "clinical": {
+        "cs": "U dospělého stlačuj frekvencí 100–120/min a do hloubky 5–6 cm. Stlačuj dolní polovinu hrudní kosti uprostřed hrudníku, pokud možno na pevné podložce. Propni lokty, propleť prsty, po každém stlačení nech hrudník plně uvolnit. Pokud jsi vyškolený a schopný, střídej 30 stlačení a 2 vdechy; jinak prováděj nepřetržité komprese. Pauza na vdechy má být kratší než 10 sekund. Pokračuj do převzetí ZZS, obnovení normálního dýchání a známek života, úplného vyčerpání nebo ohrožení bezpečnosti. Čísla 100/min, 4–5 cm a 6–8 vdechů/min v testech nejsou současným návodem pro KPR dospělého.",
+        "ru": "У взрослого выполняй 100–120 нажатий/мин на глубину 5–6 см. Надавливай на нижнюю половину грудины в центре груди, по возможности на твёрдой поверхности. Локти прямые, пальцы сцеплены; после каждого нажатия дай груди полностью расправиться. Если обучен и способен, чередуй 30 нажатий и 2 вдоха; иначе выполняй непрерывные компрессии. Пауза для вдохов — менее 10 секунд. Продолжай до передачи скорой, нормального дыхания и признаков жизни, полного истощения или угрозы безопасности. Числа 100/мин, 4–5 см и 6–8 вдохов/мин в тестах не являются современной инструкцией СЛР взрослого.",
+        "uk": "У дорослого виконуй 100–120 натискань/хв на глибину 5–6 см. Натискай на нижню половину грудини в центрі грудей, за можливості на твердій поверхні. Лікті прямі, пальці зчеплені; після кожного натискання дай грудям повністю розправитися. Якщо навчений і здатний, чергуй 30 натискань і 2 вдихи; інакше виконуй безперервні компресії. Пауза для вдихів — менше ніж 10 секунд. Продовжуй до передачі швидкій, нормального дихання й ознак життя, повного виснаження або загрози безпеці. Числа 100/хв, 4–5 см і 6–8 вдихів/хв у тестах не є сучасною інструкцією СЛР дорослого."
+      },
+      "badges": [
+        {
+          "cs": "100–120/min",
+          "ru": "100–120/мин",
+          "uk": "100–120/хв"
+        },
+        {
+          "cs": "5–6 cm",
+          "ru": "5–6 см",
+          "uk": "5–6 см"
+        },
+        {
+          "cs": "30:2 · vyškolení",
+          "ru": "30:2 · обученные",
+          "uk": "30:2 · навчені"
+        }
+      ],
+      "questionIds": [
+        "RP0904008",
+        "RP1007061",
+        "RP1305001",
+        "RP1102014",
+        "RP1102029",
+        "RP1102009",
+        "RP1102023"
+      ],
+      "image": "first_aid/graphics/C05.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Testy uvádějí přibližně 100/min, hloubku 4–5 cm a 6–8 vdechů/min. Rozhodují hloubka, frekvence a nepřerušovaná pomoc.",
+        "ru": "Тесты указывают около 100/мин, глубину 4–5 см и 6–8 вдохов/мин. Важны глубина, частота и непрерывность помощи.",
+        "uk": "Тести вказують близько 100/хв, глибину 4–5 см і 6–8 вдихів/хв. Важливі глибина, частота та безперервність допомоги."
+      }
+    },
+    {
+      "id": "C06",
+      "category": "resuscitation",
+      "title": {
+        "cs": "AED co nejdříve",
+        "ru": "AED как можно скорее",
+        "uk": "AED якомога раніше"
+      },
+      "summary": {
+        "cs": "Zapni AED, nalep elektrody a řiď se přístrojem.",
+        "ru": "Включи AED, наклей электроды и следуй его командам.",
+        "uk": "Увімкни AED, наклей електроди та виконуй його команди."
+      },
+      "clinical": {
+        "cs": "Pošli dalšího zachránce pro AED a pokračuj v KPR. Zapni přístroj a nalep elektrody na obnažený hrudník podle obrázků: u dospělého jednu pod pravou klíční kost, druhou na levý bok hrudníku pod podpaží. Při více zachráncích pokračují komprese i během přípravy elektrod. Při analýze a výboji se postiženého nikdo nedotýká. Po výboji nebo pokynu bez výboje ihned obnov KPR. Tato praktická karta nemá samostatný RP v předaném souboru.",
+        "ru": "Отправь другого спасателя за AED и продолжай СЛР. Включи прибор и наклей электроды на обнажённую грудь по рисункам: у взрослого один под правой ключицей, второй слева сбоку на груди под подмышкой. При нескольких спасателях компрессии продолжаются во время подготовки электродов. Во время анализа и разряда никто не касается пострадавшего. После разряда или команды без разряда сразу возобнови СЛР. У этой практической карточки нет отдельного RP в переданном наборе.",
+        "uk": "Відправ іншого рятувальника по AED та продовжуй СЛР. Увімкни прилад і наклей електроди на оголені груди за малюнками: у дорослого один під правою ключицею, другий ліворуч збоку на грудях під пахвою. За кількох рятувальників компресії тривають під час підготовки електродів. Під час аналізу й розряду ніхто не торкається постраждалого. Після розряду або команди без розряду негайно віднови СЛР. Ця практична картка не має окремого RP у переданому наборі."
+      },
+      "badges": [
+        {
+          "cs": "Zapni AED",
+          "ru": "Включи AED",
+          "uk": "Увімкни AED"
+        },
+        {
+          "cs": "Nalep elektrody",
+          "ru": "Наклей электроды",
+          "uk": "Наклей електроди"
+        },
+        {
+          "cs": "Při výboji odstup",
+          "ru": "При разряде отойди",
+          "uk": "При розряді відійди"
+        }
+      ],
+      "questionIds": [],
+      "image": "first_aid/graphics/C06.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Praktické rozšíření: tato karta nemá vlastní RP v souboru 35 otázek.",
+        "ru": "Практическое дополнение: у карточки нет своего RP в наборе 35 вопросов.",
+        "uk": "Практичне доповнення: картка не має власного RP у наборі 35 питань."
+      }
+    },
+    {
+      "id": "C07",
+      "category": "resuscitation",
+      "title": {
+        "cs": "Zotavovací poloha",
+        "ru": "Стабильное боковое положение",
+        "uk": "Стабільне бокове положення"
+      },
+      "summary": {
+        "cs": "Jen při normálním dýchání; vždy zvaž úraz.",
+        "ru": "Только при нормальном дыхании; всегда учитывай травму.",
+        "uk": "Лише за нормального дихання; завжди враховуй травму."
+      },
+      "clinical": {
+        "cs": "Nereagujícího s normálním dýcháním bez známek úrazu lze uložit na bok. ZZS Praha zdůrazňuje tuto polohu zejména při riziku zvracení. Při podezření na úraz nepřetáčej rutinně; udržuj dýchací cesty a řiď se 155. Zvracení nebo neprůchodné dýchací cesty vyžadují jejich ochranu i při úrazu, pokud možno s pomocí dalších osob. Odstraň jen viditelný obsah úst, neprováděj slepé vytírání prsty. Neustále kontroluj dýchání. Pokud přestane být normální, otoč na záda a zahaj KPR. Zvednutí nohou při kolapsu z testu nepřenášej na každé bezvědomí či úraz.",
+        "ru": "Не реагирующего человека с нормальным дыханием без признаков травмы можно уложить на бок. ZZS Praha особо выделяет риск рвоты. При подозрении на травму не поворачивай автоматически: поддерживай проходимость дыхательных путей и следуй 155. Рвота или непроходимость требуют защиты дыхательных путей даже при травме, по возможности с помощниками. Удаляй только видимое содержимое рта; не очищай вслепую пальцами. Постоянно следи за дыханием. Если оно перестаёт быть нормальным, поверни на спину и начни СЛР. Подъём ног при обмороке из теста нельзя переносить на любое бессознательное состояние или травму.",
+        "uk": "Людину без реакції з нормальним диханням без ознак травми можна покласти на бік. ZZS Praha особливо виділяє ризик блювання. За підозри на травму не повертай автоматично: підтримуй прохідність дихальних шляхів і виконуй вказівки 155. Блювання чи непрохідність потребують захисту дихальних шляхів навіть за травми, за можливості з помічниками. Видаляй лише видимий вміст рота; не очищай наосліп пальцями. Постійно стеж за диханням. Якщо воно перестає бути нормальним, поверни на спину та почни СЛР. Підняття ніг при непритомності з тесту не можна переносити на будь-який несвідомий стан чи травму."
+      },
+      "badges": [
+        {
+          "cs": "Dýchá normálně",
+          "ru": "Дышит нормально",
+          "uk": "Дихає нормально"
+        },
+        {
+          "cs": "Zvaž úraz",
+          "ru": "Учти травму",
+          "uk": "Врахуй травму"
+        },
+        {
+          "cs": "Sleduj dýchání",
+          "ru": "Следи за дыханием",
+          "uk": "Стеж за диханням"
+        }
+      ],
+      "questionIds": [
+        "RP1102016",
+        "RP1102028",
+        "RP1102001"
+      ],
+      "image": "first_aid/graphics/C07.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr",
+        "erc-position-2025",
+        "zzs-unconscious"
+      ],
+      "relatedCards": [
+        "C03",
+        "C05"
+      ],
+      "examSummary": {
+        "cs": "U dýchajícího v bezvědomí zajisti dýchací cesty a sleduj stav. Při zvracení test uvádí otočení hlavy a vyčištění úst; při kolapsu zvednutí nohou.",
+        "ru": "Без сознания, но дышит — обеспечь дыхательные пути и наблюдай. При рвоте тест указывает поворот головы и очистку рта; при коллапсе — подъём ног.",
+        "uk": "Без свідомості, але дихає — забезпеч дихальні шляхи та спостерігай. При блюванні тест вказує поворот голови й очищення рота; при колапсі — підняття ніг."
+      }
+    },
+    {
+      "id": "C08",
+      "category": "trauma",
+      "title": {
+        "cs": "Silné krvácení",
+        "ru": "Сильное кровотечение",
+        "uk": "Сильна кровотеча"
+      },
+      "summary": {
+        "cs": "Život ohrožující krvácení zastav přímým tlakem.",
+        "ru": "Останови угрожающее жизни кровотечение прямым давлением.",
+        "uk": "Зупини небезпечну для життя кровотечу прямим тиском."
+      },
+      "clinical": {
+        "cs": "Chraň se rukavicemi, pokud jsou ihned dostupné. Tlač přímo na krvácející ránu rukou přes obvaz nebo čistou tkaninu. Přivolej 155 a tlak nepovoluj. Při nezvládnutelném život ohrožujícím krvácení z končetiny lze použít turniket, pokud víš jak, nebo podle operátora; po nasazení jej nepovoluj. U rány na krku tlač místně na ránu, nikdy nestahuj celý krk obvazem a neomezuj dýchání. Kontroluj stav do příjezdu pomoci.",
+        "ru": "Используй перчатки, если они доступны сразу. Дави прямо на кровоточащую рану рукой через бинт или чистую ткань. Вызови 155 и сохраняй давление. При неостанавливаемом угрожающем жизни кровотечении из конечности можно использовать турникет, если умеешь, или по указанию диспетчера; не ослабляй его после наложения. При ране на шее дави только на рану: не обматывай туго всю шею и не мешай дыханию. Следи за состоянием до приезда помощи.",
+        "uk": "Використовуй рукавички, якщо вони доступні одразу. Тисни прямо на рану рукою через бинт або чисту тканину. Виклич 155 і зберігай тиск. При незупинній небезпечній для життя кровотечі з кінцівки можна застосувати турнікет, якщо вмієш, або за вказівкою диспетчера; не послаблюй його після накладання. При рані на шиї тисни лише на рану: не обмотуй туго всю шию та не заважай диханню. Стеж за станом до прибуття допомоги."
+      },
+      "badges": [
+        {
+          "cs": "Tlak na ránu",
+          "ru": "Дави на рану",
+          "uk": "Тисни на рану"
+        },
+        {
+          "cs": "Volej 155",
+          "ru": "Звони 155",
+          "uk": "Телефонуй 155"
+        },
+        {
+          "cs": "Nepovoluj tlak",
+          "ru": "Не ослабляй",
+          "uk": "Не послаблюй"
+        }
+      ],
+      "questionIds": [
+        "RP1102019",
+        "RP1102026"
+      ],
+      "image": "first_aid/graphics/C08.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025",
+        "zzs-bleeding"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Masivní krvácení, i na krku, zastav bez prodlení tlakem na krvácející místo.",
+        "ru": "Массивное кровотечение, в том числе на шее, останавливай без задержки давлением на кровоточащее место.",
+        "uk": "Масивну кровотечу, зокрема на шиї, зупиняй без затримки тиском на місце кровотечі."
+      }
+    },
+    {
+      "id": "C09",
+      "category": "trauma",
+      "title": {
+        "cs": "Cizí těleso v ráně",
+        "ru": "Инородный предмет в ране",
+        "uk": "Сторонній предмет у рані"
+      },
+      "summary": {
+        "cs": "Předmět nevytahuj. Krvácení ošetři kolem něj.",
+        "ru": "Не вытаскивай предмет. Останавливай кровотечение вокруг него.",
+        "uk": "Не витягай предмет. Зупиняй кровотечу навколо нього."
+      },
+      "clinical": {
+        "cs": "Ponech zabodnutý předmět v ráně a nehýbej s ním. Oblož jej krytím, aby se nepohyboval; tlač kolem rány, ne na předmět. Volej 155, sleduj vědomí a dýchání. Při masivním krvácení popiš situaci operátorovi. Obrázek není návodem k vytažení předmětu ani k zatlačení do rány.",
+        "ru": "Оставь застрявший предмет в ране и не двигай его. Обложи перевязочным материалом для фиксации; дави вокруг раны, а не на предмет. Звони 155, следи за сознанием и дыханием. При массивном кровотечении опиши ситуацию диспетчеру. Рисунок не является инструкцией по извлечению или вдавливанию предмета.",
+        "uk": "Залиш застряглий предмет у рані та не рухай його. Обклади перев’язувальним матеріалом для фіксації; тисни навколо рани, а не на предмет. Телефонуй 155, стеж за свідомістю й диханням. При масивній кровотечі опиши ситуацію диспетчеру. Малюнок не є інструкцією з витягання чи вдавлювання предмета."
+      },
+      "badges": [
+        {
+          "cs": "Nevytahuj",
+          "ru": "Не вытаскивай",
+          "uk": "Не витягай"
+        },
+        {
+          "cs": "Oblož kolem",
+          "ru": "Обложи вокруг",
+          "uk": "Обклади навколо"
+        },
+        {
+          "cs": "Volej 155",
+          "ru": "Звони 155",
+          "uk": "Телефонуй 155"
+        }
+      ],
+      "questionIds": [
+        "RP1102025"
+      ],
+      "image": "first_aid/graphics/C09.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Předmět ponech v ráně, ošetři okolní krvácení a zajisti životní funkce.",
+        "ru": "Оставь предмет в ране, останови кровотечение вокруг и обеспечь жизненные функции.",
+        "uk": "Залиш предмет у рані, зупини кровотечу навколо та забезпеч життєві функції."
+      }
+    },
+    {
+      "id": "C10",
+      "category": "trauma",
+      "title": {
+        "cs": "Poranění páteře",
+        "ru": "Травма позвоночника",
+        "uk": "Травма хребта"
+      },
+      "summary": {
+        "cs": "Omez zbytečný pohyb; dýchací cesty mají přednost.",
+        "ru": "Ограничь лишние движения; дыхательные пути важнее.",
+        "uk": "Обмеж зайві рухи; дихальні шляхи важливіші."
+      },
+      "clinical": {
+        "cs": "Bolest zad, brnění či necitlivost končetin po nehodě mohou znamenat poranění páteře nebo míchy. Zavolej 155. S postiženým zbytečně nehýbej, nenarovnávej násilím hlavu a neprováděj tah za krk. Pokud je to vhodné a umíš to, ručně omez pohyb hlavy. U poranění hlavy sleduj zhoršení vědomí a dýchání i při malém viditelném krvácení. Zajištění dýchacích cest, KPR a únik z bezprostředního nebezpečí mají přednost před omezením pohybu.",
+        "ru": "Боль в спине, покалывание или онемение конечностей после ДТП могут означать травму позвоночника или спинного мозга. Вызови 155. Не двигай пострадавшего без необходимости, не выпрямляй голову силой и не тяни за шею. Если уместно и умеешь, ограничь движения головы руками. При травме головы следи за ухудшением сознания и дыхания даже при небольшом наружном кровотечении. Дыхательные пути, СЛР и уход от непосредственной опасности важнее ограничения движения.",
+        "uk": "Біль у спині, поколювання чи оніміння кінцівок після ДТП можуть означати травму хребта або спинного мозку. Виклич 155. Не рухай постраждалого без потреби, не випрямляй голову силою і не тягни за шию. Якщо доречно й умієш, обмеж рухи голови руками. При травмі голови стеж за погіршенням свідомості та дихання навіть за невеликої зовнішньої кровотечі. Дихальні шляхи, СЛР і вихід із безпосередньої небезпеки важливіші за обмеження рухів."
+      },
+      "badges": [
+        {
+          "cs": "Nehýbej zbytečně",
+          "ru": "Не двигай зря",
+          "uk": "Не рухай зайвий раз"
+        },
+        {
+          "cs": "Sleduj dýchání",
+          "ru": "Следи за дыханием",
+          "uk": "Стеж за диханням"
+        },
+        {
+          "cs": "Volej 155",
+          "ru": "Звони 155",
+          "uk": "Телефонуй 155"
+        }
+      ],
+      "questionIds": [
+        "RP0904016",
+        "RP1102013",
+        "RP1102027",
+        "RP1108004"
+      ],
+      "image": "first_aid/graphics/C10.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Úraz hlavy ohrožuje následným bezvědomím. Bolest zad a porucha citlivosti ukazují na páteř či míchu; manipuluj jen pro zajištění životních funkcí.",
+        "ru": "Травма головы угрожает последующей потерей сознания. Боль в спине и нарушение чувствительности указывают на позвоночник или спинной мозг; перемещают лишь ради жизненных функций.",
+        "uk": "Травма голови загрожує подальшою втратою свідомості. Біль у спині й порушення чутливості вказують на хребет або спинний мозок; переміщують лише заради життєвих функцій."
+      }
+    },
+    {
+      "id": "C11",
+      "category": "trauma",
+      "title": {
+        "cs": "Motocyklová přilba",
+        "ru": "Мотоциклетный шлем",
+        "uk": "Мотоциклетний шолом"
+      },
+      "summary": {
+        "cs": "Přilbu nesnímej rutinně; přístup k dýchacím cestám nesmí čekat.",
+        "ru": "Не снимай шлем автоматически; доступ к дыхательным путям нельзя откладывать.",
+        "uk": "Не знімай шолом автоматично; доступ до дихальних шляхів не можна відкладати."
+      },
+      "clinical": {
+        "cs": "Otevři hledí a zjisti reakci a normální dýchání. Volej 155. Pokud postižený normálně dýchá, přilbu bez důvodu nesnímej a omez pohyb hlavy. Pokud nedýchá normálně nebo přilba brání zajištění dýchacích cest či KPR, je třeba umožnit přístup; pokud možno spolupracují dva zachránci, jeden stabilizuje hlavu. Neodkládej život zachraňující pomoc čekáním na druhého: řiď se operátorem. Zlomenou nohu nenarovnávej, sleduj stav. Podrobný postup snímání přilby vyžaduje praktický výcvik; obrázek jej nenahrazuje.",
+        "ru": "Открой визор и проверь реакцию и нормальное дыхание. Звони 155. Если дышит нормально, не снимай шлем без причины и ограничь движения головы. Если нормального дыхания нет или шлем мешает дыхательным путям либо СЛР, обеспечь доступ; по возможности работают двое, один удерживает голову. Не откладывай жизненно важную помощь в ожидании второго: следуй диспетчеру. Не выпрямляй сломанную ногу, следи за состоянием. Снятие шлема требует практического обучения; рисунок его не заменяет.",
+        "uk": "Відкрий візор та перевір реакцію й нормальне дихання. Телефонуй 155. Якщо дихає нормально, не знімай шолом без причини й обмеж рухи голови. Якщо нормального дихання немає або шолом заважає дихальним шляхам чи СЛР, забезпеч доступ; за можливості працюють двоє, один утримує голову. Не відкладай життєво важливу допомогу в очікуванні другого: виконуй вказівки диспетчера. Не випрямляй зламану ногу, стеж за станом. Зняття шолома потребує практичного навчання; малюнок його не замінює."
+      },
+      "badges": [
+        {
+          "cs": "Zkontroluj dýchání",
+          "ru": "Проверь дыхание",
+          "uk": "Перевір дихання"
+        },
+        {
+          "cs": "Dýchací cesty",
+          "ru": "Дыхательные пути",
+          "uk": "Дихальні шляхи"
+        },
+        {
+          "cs": "Řiď se 155",
+          "ru": "Следуй 155",
+          "uk": "Виконуй 155"
+        }
+      ],
+      "questionIds": [
+        "RP1102012",
+        "RP1102015"
+      ],
+      "image": "first_aid/graphics/C11.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025",
+        "helmet-review-pending"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Nedýchajícímu motocyklistovi test doporučuje sejmutí přilby ve dvou se stabilizací hlavy. U reagujícího se zlomeninou sleduj vědomí a dýchání.",
+        "ru": "Не дышащему мотоциклисту тест рекомендует снять шлем вдвоём с удержанием головы. У реагирующего с переломом наблюдай сознание и дыхание.",
+        "uk": "Мотоциклісту, який не дихає, тест рекомендує зняти шолом удвох з утриманням голови. У того, хто реагує та має перелом, спостерігай свідомість і дихання."
+      }
+    },
+    {
+      "id": "C12",
+      "category": "trauma",
+      "title": {
+        "cs": "Více postižených",
+        "ru": "Несколько пострадавших",
+        "uk": "Кілька постраждалих"
+      },
+      "summary": {
+        "cs": "Bezpečný přehled, včasné volání a rozdělení úkolů.",
+        "ru": "Безопасный обзор, своевременный звонок и распределение задач.",
+        "uk": "Безпечний огляд, своєчасний дзвінок і розподіл завдань."
+      },
+      "clinical": {
+        "cs": "Z bezpečného místa odhadni počet postižených a sděl jej 155. Rozpoznej život ohrožující krvácení a bezvědomí bez normálního dýchání; zapoj svědky podle pokynů operátora. Není univerzální pořadí pro všechny nehody. Konkrétní testový případ se silným krvácením je v C13. Tato karta je praktické rozšíření a nemá vlastní RP v předaném souboru.",
+        "ru": "Из безопасного места оцени число пострадавших и сообщи 155. Выяви угрожающее жизни кровотечение и отсутствие реакции с ненормальным дыханием; привлеки свидетелей по указаниям диспетчера. Универсального порядка для всех ДТП нет. Конкретный экзаменационный случай с сильным кровотечением — в C13. Это практическое дополнение без собственного RP в переданном наборе.",
+        "uk": "Із безпечного місця оціни кількість постраждалих та повідом 155. Виявляй небезпечну для життя кровотечу й відсутність реакції з ненормальним диханням; залучи свідків за вказівками диспетчера. Універсального порядку для всіх ДТП немає. Конкретний екзаменаційний випадок із сильною кровотечею — у C13. Це практичне доповнення без власного RP у переданому наборі."
+      },
+      "badges": [
+        {
+          "cs": "Rozhlédni se",
+          "ru": "Осмотрись",
+          "uk": "Озирнися"
+        },
+        {
+          "cs": "Volej 155",
+          "ru": "Звони 155",
+          "uk": "Телефонуй 155"
+        },
+        {
+          "cs": "Rozděl úkoly",
+          "ru": "Распредели задачи",
+          "uk": "Розподіли завдання"
+        }
+      ],
+      "questionIds": [],
+      "image": "first_aid/graphics/C12.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Praktické rozšíření: tato karta nemá vlastní RP v souboru 35 otázek.",
+        "ru": "Практическое дополнение: у карточки нет своего RP в наборе 35 вопросов.",
+        "uk": "Практичне доповнення: картка не має власного RP у наборі 35 питань."
+      }
+    },
+    {
+      "id": "C13",
+      "category": "trauma",
+      "title": {
+        "cs": "Komu pomoci jako první",
+        "ru": "Кому помогать первым",
+        "uk": "Кому допомагати першим"
+      },
+      "summary": {
+        "cs": "V případu RP1102024: nejprve zastav masivní krvácení.",
+        "ru": "В случае RP1102024: сначала останови массивное кровотечение.",
+        "uk": "У випадку RP1102024: спочатку зупини масивну кровотечу."
+      },
+      "clinical": {
+        "cs": "V konkrétním testu jsou dva zranění: jeden v bezvědomí, druhý při vědomí výrazně krvácí. Správná odpověď B začíná zástavou masivního krvácení. Poté zjisti stav druhého, přivolej ZZS a zajisti místo podle možností. V praxi bezpečnost platí od začátku; pokud jsou pomocníci, úkoly rozděl souběžně. Nejde o pravidlo, že krvácení má vždy přednost před KPR v každé situaci. Řiď se stavem obou lidí a operátorem 155.",
+        "ru": "В конкретном тесте двое раненых: один без сознания, другой в сознании и сильно кровоточит. Правильный ответ B начинается с остановки массивного кровотечения. Затем проверь второго, вызови скорую и по возможности обезопась место. На практике безопасность важна с самого начала; с помощниками распределяй задачи параллельно. Это не правило, что кровотечение всегда важнее СЛР в любой ситуации. Учитывай состояние обоих и указания 155.",
+        "uk": "У конкретному тесті двоє поранених: один без свідомості, інший при свідомості й сильно кровоточить. Правильна відповідь B починається із зупинки масивної кровотечі. Потім перевір другого, виклич швидку та за можливості убезпеч місце. На практиці безпека важлива від початку; із помічниками розподіляй завдання паралельно. Це не правило, що кровотеча завжди важливіша за СЛР у будь-якій ситуації. Враховуй стан обох і вказівки 155."
+      },
+      "badges": [
+        {
+          "cs": "Zastav krvácení",
+          "ru": "Останови кровь",
+          "uk": "Зупини кровотечу"
+        },
+        {
+          "cs": "Zkontroluj druhého",
+          "ru": "Проверь второго",
+          "uk": "Перевір другого"
+        },
+        {
+          "cs": "Rozděl úkoly",
+          "ru": "Распредели задачи",
+          "uk": "Розподіли завдання"
+        }
+      ],
+      "questionIds": [
+        "RP1102024"
+      ],
+      "image": "first_aid/graphics/C13.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025"
+      ],
+      "relatedCards": [
+        "C08",
+        "C12"
+      ],
+      "examSummary": {
+        "cs": "RP1102024 · B: nejprve zastav masivní krvácení, poté zjisti stav druhého, volej ZZS a zajisti místo.",
+        "ru": "RP1102024 · B: сначала останови массивное кровотечение, затем проверь второго, вызови скорую и обезопась место.",
+        "uk": "RP1102024 · B: спочатку зупини масивну кровотечу, потім перевір другого, виклич швидку та убезпеч місце."
+      }
+    },
+    {
+      "id": "C14",
+      "category": "trauma",
+      "title": {
+        "cs": "Postižený ve vozidle",
+        "ru": "Пострадавший в автомобиле",
+        "uk": "Постраждалий в автомобілі"
+      },
+      "summary": {
+        "cs": "Zajisti bezpečí, sleduj stav, nepodávej nápoje.",
+        "ru": "Обеспечь безопасность, следи за состоянием, не давай пить.",
+        "uk": "Забезпеч безпеку, стеж за станом, не давай пити."
+      },
+      "clinical": {
+        "cs": "K vozidlu přistupuj jen bezpečně. Pokud to lze bez rizika, vypni motor a zajisti vozidlo proti pohybu. Mluv s postiženým a sleduj reakci a dýchání. Volej 155. Po závažném úrazu nepodávej jídlo ani nápoje, ani při žízni. Zbytečně s postiženým nehýbej; při bezprostředním ohrožení nebo potřebě život zachraňující pomoci přejdi na C15.",
+        "ru": "Подходи к автомобилю только безопасно. Если без риска, выключи двигатель и предотврати движение автомобиля. Разговаривай с пострадавшим, следи за реакцией и дыханием. Звони 155. После тяжёлой травмы не давай еду или питьё даже при жажде. Не двигай без необходимости; при непосредственной опасности или необходимости жизненно важной помощи смотри C15.",
+        "uk": "Підходь до автомобіля лише безпечно. Якщо без ризику, вимкни двигун і запобіжи руху автомобіля. Розмовляй із постраждалим, стеж за реакцією та диханням. Телефонуй 155. Після тяжкої травми не давай їжу чи пиття навіть за спраги. Не рухай без потреби; за безпосередньої небезпеки або потреби життєво важливої допомоги дивись C15."
+      },
+      "badges": [
+        {
+          "cs": "Zajisti vozidlo",
+          "ru": "Зафиксируй авто",
+          "uk": "Зафіксуй авто"
+        },
+        {
+          "cs": "Mluv a sleduj",
+          "ru": "Говори и следи",
+          "uk": "Говори та стеж"
+        },
+        {
+          "cs": "Nedávej pít",
+          "ru": "Не давай пить",
+          "uk": "Не давай пити"
+        }
+      ],
+      "questionIds": [
+        "RP0604245",
+        "RP1102008"
+      ],
+      "image": "first_aid/graphics/C14.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025"
+      ],
+      "relatedCards": [],
+      "examSummary": {
+        "cs": "Při bolesti břicha a žízni po nehodě nepodávej žádné nápoje, ani přes naléhání.",
+        "ru": "При боли в животе и жажде после ДТП не давай пить, даже если настаивает.",
+        "uk": "При болю в животі та спразі після ДТП не давай пити, навіть якщо наполягає."
+      }
+    },
+    {
+      "id": "C15",
+      "category": "trauma",
+      "title": {
+        "cs": "Vyproštění z vozidla",
+        "ru": "Извлечение из автомобиля",
+        "uk": "Вивільнення з автомобіля"
+      },
+      "summary": {
+        "cs": "Není jen požár: rozhoduje nebezpečí a možnost zachránit život.",
+        "ru": "Причина не только пожар: важны опасность и возможность спасти жизнь.",
+        "uk": "Причина не лише пожежа: важливі небезпека та можливість урятувати життя."
+      },
+      "clinical": {
+        "cs": "Nevytahuj postiženého rutinně. Přesun může být nutný při bezprostředním nebezpečí nebo když bez něj nelze zajistit dýchací cesty či KPR. Volej 155 a řiď se operátorem, neohrožuj sebe. Při zaklínění neprováděj násilné vyprošťování, přivolej odbornou pomoc. RP1309001 uvádí zahájení masáže i v nevýhodné poloze, pokud rychlé vyproštění není možné. To není rovnocenné kvalitní KPR na pevné podložce: pokud postižený nereaguje a nedýchá normálně, sděl zaklínění operátorovi a poskytni dostupnou pomoc podle jeho pokynů. Konkrétní technika vyproštění a kompresí při zaklínění vyžaduje odborný výcvik.",
+        "ru": "Не извлекай пострадавшего автоматически. Перемещение может потребоваться при непосредственной опасности или если иначе невозможно обеспечить дыхательные пути либо СЛР. Звони 155, следуй диспетчеру, не рискуй собой. Не пытайся силой освободить зажатого человека, вызови специалистов. RP1309001 указывает начать массаж и в неудобной позе, если быстрое извлечение невозможно. Это не равно качественной СЛР на твёрдой поверхности: если нет реакции и нормального дыхания, сообщи диспетчеру о зажатии и оказывай доступную помощь по его указаниям. Техника извлечения и компрессий при зажатии требует специального обучения.",
+        "uk": "Не витягай постраждалого автоматично. Переміщення може знадобитися за безпосередньої небезпеки або якщо інакше неможливо забезпечити дихальні шляхи чи СЛР. Телефонуй 155, виконуй вказівки диспетчера, не ризикуй собою. Не намагайся силою звільнити затиснуту людину, виклич фахівців. RP1309001 вказує почати масаж і в незручній позі, якщо швидке вивільнення неможливе. Це не дорівнює якісній СЛР на твердій поверхні: якщо немає реакції та нормального дихання, повідом диспетчеру про затиснення й надавай доступну допомогу за його вказівками. Техніка вивільнення та компресій при затисненні потребує спеціального навчання."
+      },
+      "badges": [
+        {
+          "cs": "Zvaž nebezpečí",
+          "ru": "Оцени опасность",
+          "uk": "Оціни небезпеку"
+        },
+        {
+          "cs": "Dýchací cesty / KPR",
+          "ru": "Дыхание / СЛР",
+          "uk": "Дихання / СЛР"
+        },
+        {
+          "cs": "Pokyny 155",
+          "ru": "Указания 155",
+          "uk": "Вказівки 155"
+        }
+      ],
+      "questionIds": [
+        "RP1309001"
+      ],
+      "image": "first_aid/graphics/C15.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "zzs-trauma",
+        "erc-first-aid-2025",
+        "extrication-review-pending"
+      ],
+      "relatedCards": [
+        "C14",
+        "C05"
+      ],
+      "examSummary": {
+        "cs": "RP1309001 · B: zahaj masáž i v nevýhodné poloze při zaklínění, pokud nelze rychle vyprostit.",
+        "ru": "RP1309001 · B: начни массаж даже в неудобной позе при зажатии, если быстрое извлечение невозможно.",
+        "uk": "RP1309001 · B: почни масаж навіть у незручній позі при затисненні, якщо швидке вивільнення неможливе."
+      }
+    },
+    {
+      "id": "C16",
+      "category": "resuscitation",
+      "title": {
+        "cs": "Proč rozhodují minuty",
+        "ru": "Почему важны минуты",
+        "uk": "Чому важливі хвилини"
+      },
+      "summary": {
+        "cs": "Nečekej: volej 155, zahaj KPR a použij AED.",
+        "ru": "Не жди: звони 155, начинай СЛР и используй AED.",
+        "uk": "Не чекай: телефонуй 155, починай СЛР та використовуй AED."
+      },
+      "clinical": {
+        "cs": "Bez normálního dýchání a oběhu je potřeba jednat ihned. Každé zdržení snižuje šanci na přežití. Testový údaj „5 min.“ v RP1102011 je zjednodušená zkoušková odpověď, ne klinická hranice ani důvod pomoc vzdát. Doba poškození závisí na okolnostech; neodhaduj ji pro rozhodnutí, zda zahájit KPR. U nereagujícího bez normálního dýchání volej 155, stlačuj hrudník a použij AED co nejdříve. Postup a ukončení KPR viz C05.",
+        "ru": "При отсутствии нормального дыхания и кровообращения действуй сразу. Каждая задержка снижает шанс выжить. «5 мин.» в RP1102011 — упрощённый экзаменационный ответ, а не клиническая граница и не причина отказаться от помощи. Время повреждения зависит от обстоятельств; не оценивай его для решения о начале СЛР. Нет реакции и нормального дыхания — звони 155, выполняй компрессии и используй AED как можно раньше. Порядок и завершение СЛР — в C05.",
+        "uk": "За відсутності нормального дихання та кровообігу дій негайно. Кожна затримка знижує шанс вижити. «5 хв.» у RP1102011 — спрощена екзаменаційна відповідь, а не клінічна межа чи причина відмовитися від допомоги. Час пошкодження залежить від обставин; не оцінюй його для рішення про початок СЛР. Немає реакції та нормального дихання — телефонуй 155, виконуй компресії й застосуй AED якомога раніше. Порядок і завершення СЛР — у C05."
+      },
+      "badges": [
+        {
+          "cs": "Volej 155",
+          "ru": "Звони 155",
+          "uk": "Телефонуй 155"
+        },
+        {
+          "cs": "Stlačuj hrudník",
+          "ru": "Нажимай на грудь",
+          "uk": "Натискай на груди"
+        },
+        {
+          "cs": "Použij AED",
+          "ru": "Используй AED",
+          "uk": "Використай AED"
+        }
+      ],
+      "questionIds": [
+        "RP1102011"
+      ],
+      "image": "first_aid/graphics/C16.webp",
+      "clinicalReview": "PENDING_INDEPENDENT_REVIEW",
+      "translationReview": "DRAFT_REVIEW_REQUIRED",
+      "sourceIds": [
+        "erc-bls-2025",
+        "zzs-cpr"
+      ],
+      "relatedCards": [
+        "C05",
+        "C06"
+      ],
+      "examSummary": {
+        "cs": "RP1102011 · A: test uvádí „5 min.“ pro nezvratné změny mozkové tkáně.",
+        "ru": "RP1102011 · A: тест указывает «5 мин.» до необратимых изменений ткани мозга.",
+        "uk": "RP1102011 · A: тест вказує «5 хв.» до незворотних змін тканини мозку."
+      }
+    }
+  ]
+}

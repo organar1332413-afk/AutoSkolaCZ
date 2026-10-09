@@ -128,6 +128,7 @@ class MainViewModel(internal val container: AppContainer) : ViewModel() {
     fun licenceGroup(v:LicenceGroup)=update { container.settings.setLicenceGroup(v) }
     fun onboarding(v:UserSettings)=update { container.settings.completeOnboarding(v) }
     fun saveWord(id:String)=update { container.study.saveWord(id) }
+    fun saveAidWord(word:cz.autoskola.domain.Lexeme)=update { container.study.saveAidWord(word) }
     fun saveUnknownWord(token:String)=update { container.study.saveUnknownWord(token) }
     fun removeWord(id:String)=update { container.learning.removeWord(id) }
     fun wordReview(id:String,correct:Boolean)=update { container.learning.wordReview(id,correct) }

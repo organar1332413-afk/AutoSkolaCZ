@@ -1,0 +1,71 @@
+{
+  "created": "2026-10-09",
+  "method": "built-in OpenAI imagegen, one call per standalone image",
+  "shared": "Original medical training illustration, realistic soft 3D textbook shading, white background, red/navy/gray, landscape 3:2, main scene left 75%, no text/numbers/UI/logo; no third-party image inputs.",
+  "subjects": [
+    {
+      "id": "C01",
+      "prompt": "Roadside safety: adult by safely stopped car wearing fluorescent yellow reflective vest, warning triangle on road behind, talking on a plain phone. No active traffic or danger. Practical safety illustration."
+    },
+    {
+      "id": "C02",
+      "prompt": "Close view of a hand holding a generic unbranded smartphone with blank dark screen; calm female emergency dispatcher with headset in small secondary scene, no ambulance logos."
+    },
+    {
+      "id": "C03",
+      "prompt": "Unresponsive adult supine, rescuer red polo kneeling next to head. One hand on forehead and fingertips of other hand under bony chin performing gentle head tilt chin lift, rescuer ear near patient's mouth to assess breathing. No fingers pressing soft neck."
+    },
+    {
+      "id": "C04",
+      "prompt": "Adult rescuer in red polo using smartphone speakerphone placed beside unresponsive supine patient while preparing CPR. Blank phone screen, no numbers."
+    },
+    {
+      "id": "C06",
+      "prompt": "AED used on adult lying supine, bare chest, correct anterolateral pads: one below patient's RIGHT clavicle beside sternum, other on patient's LEFT lateral chest below armpit; AED beside torso, rescuer red polo kneeling and hands fully lifted away during analysis. Clearly show anatomical laterality, no rescuer contact."
+    },
+    {
+      "id": "C07",
+      "prompt": "Adult in stable side lying recovery position on floor, lower arm extending forward at right angle, upper hand supports cheek, upper knee bent to support body, face tilted slightly down for drainage. Rescuer red polo nearby observing breathing without pushing. No trauma scene."
+    },
+    {
+      "id": "C08",
+      "prompt": "Direct pressure to profusely bleeding calf wound: rescuer red polo kneeling beside conscious adult supine and pressing dressing directly on wound with both blue gloved hands. Small red stain under dressing, no gore; not a tourniquet demonstration."
+    },
+    {
+      "id": "C09",
+      "prompt": "Close view torso wound with a clearly protruding small foreign object, padded dressings either side stabilizing object, blue gloved hands pressing dressings AROUND object, never on object. Full patient supine and rescuer red polo smaller in scene. No gore."
+    },
+    {
+      "id": "C10",
+      "prompt": "Adult supine after injury, rescuer red polo kneeling at HEAD keeping head still by blue gloved hands on sides of head, head aligned naturally with trunk without traction, patient gray top dark trousers. No collar, no moving injured patient."
+    },
+    {
+      "id": "C11",
+      "prompt": "Motorcyclist supine wearing intact plain full-face black helmet and protective black clothes; rescuer red polo kneeling by head gently opening visor to assess breathing. Do NOT illustrate unsafe one-person helmet removal; no hands on patient's neck."
+    },
+    {
+      "id": "C12",
+      "prompt": "Safe emergency scene with three adults needing assistance, one sitting alert holding injured arm, another lying on side, another supine, rescuer red polo making overview from nearby with phone. Do not indicate universal triage order, no numbers or arrows."
+    },
+    {
+      "id": "C13",
+      "prompt": "Two first-aid training mannequins, one seated with white leg dressing under instructor direct pressure, second supine with helper checking breathing. No actual injury, no blood, no numbered order."
+    },
+    {
+      "id": "C14",
+      "prompt": "Stopped car with open driver door, adult injured driver seated, rescuer red polo outside door speaking calmly and observing breathing without moving patient. No drinks, no extrication or flames, no logos."
+    },
+    {
+      "id": "C15",
+      "prompt": "Conscious injured adult inside stationary car with open door, red-shirt rescuer standing beside door speaking on phone and looking at injured person. Educational overview only; no unverified manual extraction grip, no pulling neck or spine. Main car scene plus small secondary separate supine adult CPR scene in circular inset, straight elbows, hands on sternum, shows CPR after safe access not on trapped seated person."
+    },
+    {
+      "id": "C16",
+      "prompt": "Three coordinated rescuers red polo shirt: one calling phone, one kneeling performing adult chest compressions with straight arms and hands on lower sternum, one bringing AED. One supine patient. Phone screen blank, no text or numbers or countdown clock."
+    },
+    {
+      "id": "C05",
+      "prompt": "Adult supine on firm surface, red polo rescuer kneeling alongside chest, straight elbows, shoulders above interlocked hands, heel of lower hand on lower half of sternum; no abdominal pressure."
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-09",
+  "method": "Whitespace-only normalization. Every question and A/B/C text from official PDF compared with current MD HTML. Keys from official PDF answer table.",
+  "snapshots": {
+    "2026-04-02": {
+      "url": "https://etesty.md.gov.cz/binary_content_storage/Vestnik/etesty_za_20260402_193602.pdf",
+      "pdfSha256": "426eb081a0f8ead136cf8993555dbbd1b2466bb9a443e735de609f482f461c3c",
+      "verified": [
+        {
+          "id": "RP0604245",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0605237",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0606299",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0904008",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0904012",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0904016",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1007061",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1007062",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102001",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102002",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102006",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102008",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102009",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102010",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102011",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102012",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102013",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102014",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102015",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102016",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102018",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102019",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102020",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102021",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102022",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102023",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102024",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102025",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102026",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102027",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102028",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102029",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1108004",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1305001",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1309001",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        }
+      ]
+    },
+    "2026-10-08": {
+      "url": "https://etesty.md.gov.cz/binary_content_storage/Vestnik/etesty_za_20261008_195641.pdf",
+      "pdfSha256": "c50ac53afb63821d6baa68b4008031c6fe40ae7fe3cdd0fac3aad8af84018af9",
+      "verified": [
+        {
+          "id": "RP0604245",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0605237",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0606299",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0904008",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0904012",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP0904016",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1007061",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1007062",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102001",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102002",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102006",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102008",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102009",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102010",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102011",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102012",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102013",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102014",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102015",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102016",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102018",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102019",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102020",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102021",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102022",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102023",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102024",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102025",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102026",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102027",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102028",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1102029",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1108004",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1305001",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        },
+        {
+          "id": "RP1309001",
+          "questionAndAllOptionsMatch": true,
+          "correctKeyMatch": true
+        }
+      ]
+    }
+  },
+  "changesIn35Questions": []
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aid_official_questions">Официальные вопросы · 35 RP</string>
+    <string name="aid_review_pending">Учебный проект: независимая медицинская проверка ещё не проведена.</string>
+    <string name="aid_search">Найти карточку или RP</string>
+    <string name="aid_all">Все</string>
+    <string name="aid_resuscitation">СЛР</string>
+    <string name="aid_trauma">Травмы</string>
+    <string name="aid_load_error">Не удалось загрузить первую помощь.</string>
+    <string name="aid_missing">Карточка или вопрос не найдены.</string>
+    <string name="aid_empty">Нет результатов. Измени поиск или фильтр.</string>
+    <string name="aid_image_error">Иллюстрация недоступна.</string>
+    <string name="aid_exam_block">К экзамену</string>
+    <string name="aid_clinical_block">Современные рекомендации</string>
+    <string name="aid_exam_version">MD ČR · 08.10.2026, совпадает с 02.04.2026. Формулировки теста, не современная инструкция.</string>
+    <string name="aid_exact_answers">Точные ответы и связанные вопросы</string>
+    <string name="aid_hide_answers">Скрыть ответы</string>
+    <string name="aid_open_question">Открыть вопрос целиком</string>
+    <string name="aid_more">Порядок действий и важные условия</string>
+    <string name="aid_less">Скрыть подробности</string>
+    <string name="aid_next">Следующая карточка</string>
+    <string name="aid_sources">Источники и статус проверки</string>
+    <string name="aid_translation_draft">CS/RU/UK: медицинская и языковая редактура ожидается. Иллюстрации не одобрены клинически.</string>
+    <string name="aid_source_error">Не удалось открыть источник.</string>
+    <string name="aid_official_variants">Исходные варианты MD · по-чешски</string>
+    <string name="aid_related_material">Связанные учебные карточки</string>
+</resources>

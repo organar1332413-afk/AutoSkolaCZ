@@ -1,0 +1,721 @@
+{
+  "schemaVersion": 1,
+  "words": [
+    {
+      "lemma": "vědomí",
+      "ru": "сознание",
+      "uk": "свідомість",
+      "forms": [
+        "vědomí",
+        "vědomím"
+      ],
+      "exampleCs": "vědomí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dýchání",
+      "ru": "дыхание",
+      "uk": "дихання",
+      "forms": [
+        "dýchání",
+        "dýcháním"
+      ],
+      "exampleCs": "dýchání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dýchat",
+      "ru": "дышать",
+      "uk": "дихати",
+      "forms": [
+        "dýchat",
+        "dýchá",
+        "dýchají",
+        "dýcháš"
+      ],
+      "exampleCs": "dýchat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedýchat",
+      "ru": "не дышать",
+      "uk": "не дихати",
+      "forms": [
+        "nedýchat",
+        "nedýchá",
+        "nedýchají",
+        "nedýcháš"
+      ],
+      "exampleCs": "nedýchat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hrudník",
+      "ru": "грудная клетка",
+      "uk": "грудна клітка",
+      "forms": [
+        "hrudník",
+        "hrudníku",
+        "hrudníkem"
+      ],
+      "exampleCs": "hrudník",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "krvácení",
+      "ru": "кровотечение",
+      "uk": "кровотеча",
+      "forms": [
+        "krvácení",
+        "krvácením"
+      ],
+      "exampleCs": "krvácení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rána",
+      "ru": "рана",
+      "uk": "рана",
+      "forms": [
+        "rána",
+        "ráně",
+        "ránu",
+        "rány"
+      ],
+      "exampleCs": "rána",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přilba",
+      "ru": "шлем",
+      "uk": "шолом",
+      "forms": [
+        "přilba",
+        "přilbu",
+        "přilby",
+        "přilbě"
+      ],
+      "exampleCs": "přilba",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "páteř",
+      "ru": "позвоночник",
+      "uk": "хребет",
+      "forms": [
+        "páteř",
+        "páteře",
+        "páteří"
+      ],
+      "exampleCs": "páteř",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "mícha",
+      "ru": "спинной мозг",
+      "uk": "спинний мозок",
+      "forms": [
+        "mícha",
+        "míchy",
+        "míchu"
+      ],
+      "exampleCs": "mícha",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "záchranář",
+      "ru": "спасатель",
+      "uk": "рятувальник",
+      "forms": [
+        "záchranář",
+        "záchranáře",
+        "záchranáři"
+      ],
+      "exampleCs": "záchranář",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "postižený",
+      "ru": "пострадавший",
+      "uk": "постраждалий",
+      "forms": [
+        "postižený",
+        "postiženého",
+        "postiženým",
+        "postižených"
+      ],
+      "exampleCs": "postižený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poraněný",
+      "ru": "раненый",
+      "uk": "поранений",
+      "forms": [
+        "poraněný",
+        "poraněného",
+        "poraněným",
+        "poraněných"
+      ],
+      "exampleCs": "poraněný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "masáž",
+      "ru": "массаж",
+      "uk": "масаж",
+      "forms": [
+        "masáž",
+        "masáže",
+        "masáži"
+      ],
+      "exampleCs": "masáž",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stlačení",
+      "ru": "нажатие",
+      "uk": "натискання",
+      "forms": [
+        "stlačení",
+        "stlačeních"
+      ],
+      "exampleCs": "stlačení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hloubka",
+      "ru": "глубина",
+      "uk": "глибина",
+      "forms": [
+        "hloubka",
+        "hloubku",
+        "hloubky"
+      ],
+      "exampleCs": "hloubka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "frekvence",
+      "ru": "частота",
+      "uk": "частота",
+      "forms": [
+        "frekvence",
+        "frekvencí"
+      ],
+      "exampleCs": "frekvence",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vdech",
+      "ru": "вдох",
+      "uk": "вдих",
+      "forms": [
+        "vdech",
+        "vdechy",
+        "vdechů",
+        "vdeších"
+      ],
+      "exampleCs": "vdech",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pomoc",
+      "ru": "помощь",
+      "uk": "допомога",
+      "forms": [
+        "pomoc",
+        "pomoci"
+      ],
+      "exampleCs": "pomoc",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bezpečí",
+      "ru": "безопасность",
+      "uk": "безпека",
+      "forms": [
+        "bezpečí"
+      ],
+      "exampleCs": "bezpečí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nebezpečí",
+      "ru": "опасность",
+      "uk": "небезпека",
+      "forms": [
+        "nebezpečí"
+      ],
+      "exampleCs": "nebezpečí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zlomenina",
+      "ru": "перелом",
+      "uk": "перелом",
+      "forms": [
+        "zlomenina",
+        "zlomeniny",
+        "zlomeninou"
+      ],
+      "exampleCs": "zlomenina",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "úraz",
+      "ru": "травма",
+      "uk": "травма",
+      "forms": [
+        "úraz",
+        "úrazu",
+        "úrazem"
+      ],
+      "exampleCs": "úraz",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zvracení",
+      "ru": "рвота",
+      "uk": "блювання",
+      "forms": [
+        "zvracení",
+        "zvracením"
+      ],
+      "exampleCs": "zvracení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hlava",
+      "ru": "голова",
+      "uk": "голова",
+      "forms": [
+        "hlava",
+        "hlavu",
+        "hlavy",
+        "hlavě"
+      ],
+      "exampleCs": "hlava",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "brada",
+      "ru": "подбородок",
+      "uk": "підборіддя",
+      "forms": [
+        "brada",
+        "brady",
+        "bradu"
+      ],
+      "exampleCs": "brada",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "čelist",
+      "ru": "челюсть",
+      "uk": "щелепа",
+      "forms": [
+        "čelist",
+        "čelisti"
+      ],
+      "exampleCs": "čelist",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "krk",
+      "ru": "шея",
+      "uk": "шия",
+      "forms": [
+        "krk",
+        "krku"
+      ],
+      "exampleCs": "krk",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "končetina",
+      "ru": "конечность",
+      "uk": "кінцівка",
+      "forms": [
+        "končetina",
+        "končetiny",
+        "končetinu",
+        "končetin"
+      ],
+      "exampleCs": "končetina",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obvaz",
+      "ru": "бинт, повязка",
+      "uk": "бинт, пов’язка",
+      "forms": [
+        "obvaz",
+        "obvazem",
+        "obvazu"
+      ],
+      "exampleCs": "obvaz",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tlak",
+      "ru": "давление",
+      "uk": "тиск",
+      "forms": [
+        "tlak",
+        "tlakem",
+        "tlaku"
+      ],
+      "exampleCs": "tlak",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "elektroda",
+      "ru": "электрод",
+      "uk": "електрод",
+      "forms": [
+        "elektroda",
+        "elektrody",
+        "elektrod"
+      ],
+      "exampleCs": "elektroda",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "výboj",
+      "ru": "разряд",
+      "uk": "розряд",
+      "forms": [
+        "výboj",
+        "výboji",
+        "výbojem"
+      ],
+      "exampleCs": "výboj",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyproštění",
+      "ru": "извлечение, освобождение",
+      "uk": "вивільнення",
+      "forms": [
+        "vyproštění"
+      ],
+      "exampleCs": "vyproštění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zaklínění",
+      "ru": "зажатие",
+      "uk": "затиснення",
+      "forms": [
+        "zaklínění"
+      ],
+      "exampleCs": "zaklínění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "záchranný",
+      "ru": "спасательный",
+      "uk": "рятувальний",
+      "forms": [
+        "záchranný",
+        "záchranná",
+        "záchrannou",
+        "záchranné"
+      ],
+      "exampleCs": "záchranný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "volej",
+      "ru": "звони",
+      "uk": "телефонуй",
+      "forms": [
+        "volej",
+        "voláš",
+        "volání",
+        "volejte"
+      ],
+      "exampleCs": "volej",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stlačovat",
+      "ru": "надавливать",
+      "uk": "натискати",
+      "forms": [
+        "stlačovat",
+        "stlačuj",
+        "stlačování"
+      ],
+      "exampleCs": "stlačovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zastavit",
+      "ru": "остановить",
+      "uk": "зупинити",
+      "forms": [
+        "zastavit",
+        "zastav",
+        "zastavím"
+      ],
+      "exampleCs": "zastavit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sledovat",
+      "ru": "наблюдать",
+      "uk": "спостерігати",
+      "forms": [
+        "sledovat",
+        "sleduj",
+        "sleduji"
+      ],
+      "exampleCs": "sledovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "normálně",
+      "ru": "нормально",
+      "uk": "нормально",
+      "forms": [
+        "normálně"
+      ],
+      "exampleCs": "normálně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neprodleně",
+      "ru": "немедленно",
+      "uk": "негайно",
+      "forms": [
+        "neprodleně"
+      ],
+      "exampleCs": "neprodleně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ihned",
+      "ru": "сразу",
+      "uk": "негайно",
+      "forms": [
+        "ihned"
+      ],
+      "exampleCs": "ihned",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nezvratný",
+      "ru": "необратимый",
+      "uk": "незворотний",
+      "forms": [
+        "nezvratný",
+        "nezvratné"
+      ],
+      "exampleCs": "nezvratný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bezvědomí",
+      "ru": "бессознательное состояние",
+      "uk": "несвідомий стан",
+      "forms": [
+        "bezvědomí"
+      ],
+      "exampleCs": "bezvědomí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zotavovací",
+      "ru": "восстановительный",
+      "uk": "відновний",
+      "forms": [
+        "zotavovací"
+      ],
+      "exampleCs": "zotavovací",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poloha",
+      "ru": "положение",
+      "uk": "положення",
+      "forms": [
+        "poloha",
+        "poloze",
+        "polohu"
+      ],
+      "exampleCs": "poloha",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dýchací",
+      "ru": "дыхательный",
+      "uk": "дихальний",
+      "forms": [
+        "dýchací"
+      ],
+      "exampleCs": "dýchací",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "cesta",
+      "ru": "путь",
+      "uk": "шлях",
+      "forms": [
+        "cesta",
+        "cesty",
+        "cest"
+      ],
+      "exampleCs": "cesta",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "srdeční",
+      "ru": "сердечный",
+      "uk": "серцевий",
+      "forms": [
+        "srdeční"
+      ],
+      "exampleCs": "srdeční",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kost",
+      "ru": "кость",
+      "uk": "кістка",
+      "forms": [
+        "kost",
+        "kosti"
+      ],
+      "exampleCs": "kost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dolní",
+      "ru": "нижний",
+      "uk": "нижній",
+      "forms": [
+        "dolní",
+        "dolních"
+      ],
+      "exampleCs": "dolní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "minuta",
+      "ru": "минута",
+      "uk": "хвилина",
+      "forms": [
+        "minuta",
+        "minuty",
+        "minut",
+        "minutu"
+      ],
+      "exampleCs": "minuta",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sekunda",
+      "ru": "секунда",
+      "uk": "секунда",
+      "forms": [
+        "sekunda",
+        "sekund",
+        "sekundy"
+      ],
+      "exampleCs": "sekunda",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rameno",
+      "ru": "плечо",
+      "uk": "плече",
+      "forms": [
+        "rameno",
+        "rameny",
+        "ramena"
+      ],
+      "exampleCs": "rameno",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "prst",
+      "ru": "палец",
+      "uk": "палець",
+      "forms": [
+        "prst",
+        "prsty",
+        "prstů"
+      ],
+      "exampleCs": "prst",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "podpaží",
+      "ru": "подмышка",
+      "uk": "пахва",
+      "forms": [
+        "podpaží"
+      ],
+      "exampleCs": "podpaží",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "klíční",
+      "ru": "ключичный",
+      "uk": "ключичний",
+      "forms": [
+        "klíční"
+      ],
+      "exampleCs": "klíční",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hluboký",
+      "ru": "глубокий",
+      "uk": "глибокий",
+      "forms": [
+        "hluboký",
+        "hlubokém",
+        "hlubokého"
+      ],
+      "exampleCs": "hluboký",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "čistý",
+      "ru": "чистый",
+      "uk": "чистий",
+      "forms": [
+        "čistý",
+        "čistou",
+        "čisté"
+      ],
+      "exampleCs": "čistý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "krev",
+      "ru": "кровь",
+      "uk": "кров",
+      "forms": [
+        "krev",
+        "krve"
+      ],
+      "exampleCs": "krev",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "průchodnost",
+      "ru": "проходимость",
+      "uk": "прохідність",
+      "forms": [
+        "průchodnost",
+        "průchodnosti"
+      ],
+      "exampleCs": "průchodnost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    }
+  ]
+}
