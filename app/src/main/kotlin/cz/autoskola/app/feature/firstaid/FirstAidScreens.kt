@@ -28,11 +28,12 @@ import cz.autoskola.design.*
 import cz.autoskola.domain.*
 
 @Composable private fun AidLearning(value: AidText, tag: String?, policy: WordTranslationPolicy,
-    onWord: (LearningWordSelection) -> Unit, modifier: Modifier = Modifier, prominent: Boolean = false) {
+    onWord: (LearningWordSelection) -> Unit, modifier: Modifier = Modifier, prominent: Boolean = false, compact: Boolean = false) {
     Column(modifier, verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
-        CzechLearningText(value.cs, policy, onWord, prominent, Modifier.testTag("aid-learning-cs"), lookupPhrases = aidLookupPhrases)
+        CzechLearningText(value.cs, policy, onWord, prominent, Modifier.testTag("aid-learning-cs"), lookupPhrases = aidLookupPhrases,
+            textStyle = if(compact) MaterialTheme.typography.titleSmall else if(prominent) MaterialTheme.typography.headlineSmall else null)
         value.helper(tag)?.let { Text(it, Modifier.testTag("aid-learning-helper"),
-            style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            style = if(compact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
     }
 }
 
@@ -143,7 +144,7 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
                             Column(Modifier.padding(PremiumSpace.sm), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
                                 Icon(aidBadgeIcon(card.id, badgeIndex), null, Modifier.size(24.dp),
                                     tint = listOf(Color(0xFFDB3948), Color(0xFF2785D6), Color(0xFF238959))[badgeIndex])
-                                AidLearning(badge, tag, policy, select)
+                                AidLearning(badge, tag, policy, select, compact = true)
                             }
                         }
                     }

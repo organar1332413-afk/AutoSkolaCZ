@@ -77,8 +77,8 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
 /** Original text is unchanged. Hit testing uses the laid-out character under the finger. */
 @Suppress("DEPRECATION")
 @Composable fun CzechLearningText(value: String, policy: WordTranslationPolicy,
-    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier, lookupPhrases: List<String> = emptyList()) {
-    val style = (if(prominent) MaterialTheme.typography.titleLarge else MaterialTheme.typography.bodyLarge)
+    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier, lookupPhrases: List<String> = emptyList(), textStyle: androidx.compose.ui.text.TextStyle? = null) {
+    val style = (textStyle ?: if(prominent) MaterialTheme.typography.titleLarge else MaterialTheme.typography.bodyLarge)
         .copy(color = MaterialTheme.colorScheme.onSurface)
     if(!policy.allowsLookup) { Text(value, modifier, style = style); return }
     var layout by remember(value) { mutableStateOf<TextLayoutResult?>(null) }

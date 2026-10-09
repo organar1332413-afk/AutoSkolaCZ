@@ -1,6 +1,7 @@
 package cz.autoskola.app.feature.firstaid
 
 import android.app.Application
+import androidx.compose.runtime.mutableStateOf
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.semantics.SemanticsActions
@@ -63,6 +64,31 @@ class FirstAidExamTest {
         compose.onNodeWithTag("aid-select-A").performClick()
         compose.onNodeWithTag("aid-check").performClick()
         compose.onNodeWithTag("aid-result").assertTextEquals("Верно")
+    }
+    @Test fun all35QuestionsHideKeysUntilCheckAndUseTheirOriginalCorrectOption() {
+        val b = bundle
+        val active = mutableStateOf(b.questions.first())
+        compose.setContent { InterfaceLanguage(UiLanguage.CS) { AutoSkolaTheme {
+            AidQuestionScreen(active.value, b,
+                AidDestinationState(AidLoadState(b, false), UserSettings(materialMode = MaterialMode.CS_ONLY), emptyList()), {}, {}, {})
+        } } }
+        b.questions.forEach { q ->
+            compose.runOnIdle { active.value = q }
+            val list = compose.onNodeWithTag("aid-question-detail-${q.id}")
+            compose.onNodeWithTag("aid-result").assertDoesNotExist()
+            q.options.forEach { o ->
+                list.performScrollToNode(hasTestTag("aid-option-text-${o.label}"))
+                compose.onNodeWithTag("aid-option-text-${o.label}").assertTextEquals(o.cs)
+                compose.onNodeWithTag("aid-correct-${o.label}").assertDoesNotExist()
+            }
+            list.performScrollToNode(hasTestTag("aid-select-${q.correct.label}"))
+            compose.onNodeWithTag("aid-select-${q.correct.label}").performClick()
+            list.performScrollToNode(hasTestTag("aid-check"))
+            compose.onNodeWithTag("aid-check").performClick()
+            compose.onNodeWithTag("aid-result").assertTextEquals("Správně")
+            list.performScrollToNode(hasTestTag("aid-correct-${q.correct.label}"))
+            compose.onNodeWithTag("aid-correct-${q.correct.label}").assertIsDisplayed()
+        }
     }
     @Test fun russianWordTapAndAnswerChoiceAreIndependent() = exercise("ru")
     @Test fun ukrainianWordTapAndAnswerChoiceAreIndependent() = exercise("uk")
