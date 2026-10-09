@@ -296,12 +296,32 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
 }
 
 private fun aidBadgeIcon(card: String, index: Int): androidx.compose.ui.graphics.vector.ImageVector = when(card) {
-    "C05" -> listOf(Icons.Default.Favorite, Icons.Default.Height, Icons.Default.Air)[index]
-    "C02" -> listOf(Icons.Default.Phone, Icons.Default.Sos, Icons.Default.LocationOn)[index]
-    "C06" -> listOf(Icons.Default.PowerSettingsNew, Icons.Default.Favorite, Icons.Default.Bolt)[index]
-    "C08", "C09", "C13" -> listOf(Icons.Default.BackHand, Icons.Default.HealthAndSafety, Icons.Default.Phone)[index]
-    "C16" -> listOf(Icons.Default.Timer, Icons.Default.Favorite, Icons.Default.Phone)[index]
-    else -> listOf(Icons.Default.HealthAndSafety, Icons.Default.Visibility, Icons.Default.Phone)[index]
+    "C05" -> listOf(Icons.Default.Favorite, AidHintIcons.Depth, AidHintIcons.Breath)[index]
+    "C02" -> listOf(Icons.Default.Phone, AidHintIcons.Emergency, Icons.Default.LocationOn)[index]
+    "C06" -> listOf(AidHintIcons.Power, Icons.Default.Favorite, AidHintIcons.Bolt)[index]
+    "C08", "C09", "C13" -> listOf(AidHintIcons.Hand, AidHintIcons.Shield, Icons.Default.Phone)[index]
+    "C16" -> listOf(AidHintIcons.Clock, Icons.Default.Favorite, Icons.Default.Phone)[index]
+    else -> listOf(AidHintIcons.Shield, AidHintIcons.Eye, Icons.Default.Phone)[index]
 }
 
 internal val aidLookupPhrases = listOf("odnětí svobody", "řídit se", "řiď se", "hlasitý odposlech", "s hlasitým odposlechem", "první pomoc", "první pomoci", "dýchací cesty", "dýchacích cest", "lapavé dechy")
+
+// Small native vectors avoid the large material-icons-extended dependency.
+private object AidHintIcons {
+    private fun vector(name: String, data: String) = androidx.compose.ui.graphics.vector.ImageVector.Builder(
+        name, 24.dp, 24.dp, 24f, 24f).apply {
+        addPath(pathData = androidx.compose.ui.graphics.vector.PathParser().parsePathString(data).toNodes(),
+            stroke = androidx.compose.ui.graphics.SolidColor(Color.Black), strokeLineWidth = 1.8f,
+            strokeLineCap = androidx.compose.ui.graphics.StrokeCap.Round,
+            strokeLineJoin = androidx.compose.ui.graphics.StrokeJoin.Round)
+    }.build()
+    val Depth = vector("Depth", "M12 3V21M8 7L12 3L16 7M8 17L12 21L16 17")
+    val Breath = vector("Breath", "M3 8H15C20 8 20 3 16 3M3 12H19M3 16H14C19 16 19 21 15 21")
+    val Emergency = vector("Emergency", "M12 3L22 21H2ZM12 9V14M12 17V18")
+    val Power = vector("Power", "M12 2V12M7 5C-1 10 3 22 12 22C21 22 25 10 17 5")
+    val Bolt = vector("Bolt", "M13 2L4 14H11L10 22L20 10H13Z")
+    val Shield = vector("Shield", "M12 2L21 6V12C21 17 16 21 12 23C8 21 3 17 3 12V6ZM12 7V17M7 12H17")
+    val Clock = vector("Clock", "M12 3A9 9 0 1 1 12 21A9 9 0 1 1 12 3M12 7V12L16 15")
+    val Eye = vector("Eye", "M2 12C7 3 17 3 22 12C17 21 7 21 2 12ZM12 9A3 3 0 1 1 12 15A3 3 0 1 1 12 9")
+    val Hand = vector("Hand", "M7 12V5Q7 3 9 5V11V3Q11 1 12 3V11V4Q14 2 15 4V12V7Q18 5 18 7V15Q18 22 12 22Q8 22 6 18L2 12Q3 9 5 12L7 14")
+}
