@@ -296,13 +296,23 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
 }
 
 private fun aidBadgeIcon(card: String, index: Int): androidx.compose.ui.graphics.vector.ImageVector = when(card) {
-    "C05" -> listOf(Icons.Default.Favorite, AidHintIcons.Depth, AidHintIcons.Breath)[index]
-    "C02" -> listOf(Icons.Default.Phone, AidHintIcons.Emergency, Icons.Default.LocationOn)[index]
-    "C06" -> listOf(AidHintIcons.Power, Icons.Default.Favorite, AidHintIcons.Bolt)[index]
-    "C08", "C09", "C13" -> listOf(AidHintIcons.Hand, AidHintIcons.Shield, Icons.Default.Phone)[index]
-    "C16" -> listOf(AidHintIcons.Clock, Icons.Default.Favorite, Icons.Default.Phone)[index]
-    else -> listOf(AidHintIcons.Shield, AidHintIcons.Eye, Icons.Default.Phone)[index]
-}
+    "C01" -> listOf(AidHintIcons.Shield, Icons.Default.Phone, AidHintIcons.Hand)
+    "C02" -> listOf(Icons.Default.Phone, AidHintIcons.Emergency, Icons.Default.LocationOn)
+    "C03" -> listOf(AidHintIcons.Eye, AidHintIcons.Breath, Icons.Default.Favorite)
+    "C04" -> listOf(Icons.Default.Phone, AidHintIcons.Bolt, Icons.Default.Favorite)
+    "C05" -> listOf(Icons.Default.Favorite, AidHintIcons.Depth, AidHintIcons.Breath)
+    "C06" -> listOf(AidHintIcons.Power, Icons.Default.Favorite, AidHintIcons.Bolt)
+    "C07" -> listOf(AidHintIcons.Breath, AidHintIcons.Shield, AidHintIcons.Eye)
+    "C08" -> listOf(AidHintIcons.Hand, Icons.Default.Phone, AidHintIcons.Hand)
+    "C09" -> listOf(AidHintIcons.Hand, AidHintIcons.Shield, Icons.Default.Phone)
+    "C10" -> listOf(AidHintIcons.Shield, AidHintIcons.Breath, Icons.Default.Phone)
+    "C11" -> listOf(AidHintIcons.Breath, AidHintIcons.Breath, Icons.Default.Phone)
+    "C12" -> listOf(AidHintIcons.Eye, Icons.Default.Phone, AidHintIcons.Hand)
+    "C13" -> listOf(AidHintIcons.Hand, AidHintIcons.Eye, AidHintIcons.Hand)
+    "C14" -> listOf(AidHintIcons.Shield, AidHintIcons.Eye, AidHintIcons.NoDrink)
+    "C15" -> listOf(AidHintIcons.Shield, AidHintIcons.Breath, Icons.Default.Phone)
+    else -> listOf(AidHintIcons.Clock, Icons.Default.Favorite, Icons.Default.Phone)
+}[index]
 
 internal val aidLookupPhrases = listOf("odnětí svobody", "řídit se", "řiď se", "hlasitý odposlech", "s hlasitým odposlechem", "první pomoc", "první pomoci", "dýchací cesty", "dýchacích cest", "lapavé dechy")
 
@@ -323,5 +333,6 @@ private object AidHintIcons {
     val Shield = vector("Shield", "M12 2L21 6V12C21 17 16 21 12 23C8 21 3 17 3 12V6ZM12 7V17M7 12H17")
     val Clock = vector("Clock", "M12 3A9 9 0 1 1 12 21A9 9 0 1 1 12 3M12 7V12L16 15")
     val Eye = vector("Eye", "M2 12C7 3 17 3 22 12C17 21 7 21 2 12ZM12 9A3 3 0 1 1 12 15A3 3 0 1 1 12 9")
+    val NoDrink = vector("NoDrink", "M6 3H18L16 21H8ZM3 3L21 21")
     val Hand = vector("Hand", "M7 12V5Q7 3 9 5V11V3Q11 1 12 3V11V4Q14 2 15 4V12V7Q18 5 18 7V15Q18 22 12 22Q8 22 6 18L2 12Q3 9 5 12L7 14")
 }
