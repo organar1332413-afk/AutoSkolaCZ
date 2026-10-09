@@ -16,7 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
@@ -80,9 +80,9 @@ import cz.autoskola.domain.*
 
 @Composable private fun AidGraphic(card: AidCard, modifier: Modifier = Modifier) {
     var failed by remember(card.image) { mutableStateOf(false) }
-    val context = LocalContext.current
+    val configuration = LocalConfiguration.current
     Box(modifier) {
-        AsyncImage("file:///android_asset/${card.image}", card.title.language(context.resources.configuration.locales[0].language),
+        AsyncImage("file:///android_asset/${card.image}", card.title.language(configuration.locales[0].language),
             Modifier.fillMaxSize().testTag("aid-image-${card.id}"), contentScale = ContentScale.Fit,
             onError = { failed = true })
         if(failed) Text(text(R.string.aid_image_error), Modifier.align(Alignment.Center), style = MaterialTheme.typography.bodySmall)
