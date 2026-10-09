@@ -47,13 +47,17 @@ fun czechWordRanges(value: String): List<MatchResult> {
 fun normalizeLearningWord(token: String): String = Normalizer.normalize(
     czechWords.find(token)?.value.orEmpty(), Normalizer.Form.NFC).lowercase(Locale.forLanguageTag("cs"))
 
+// Phrase keys must retain all words; matching only their first word gives unrelated translations.
+fun normalizeLearningExpression(value: String): String = czechWords.findAll(value)
+    .joinToString(" ") { normalizeLearningWord(it.value) }
+
 /** Existing Room dictionary, including imported inflected forms; no runtime translation. */
 private fun matchingLearningWords(token: String, words: List<Lexeme>, translationTag: String?): List<Lexeme> {
     if(translationTag == null) return emptyList()
-    val normalized = normalizeLearningWord(token)
+    val normalized = normalizeLearningExpression(token)
     if(normalized.isEmpty()) return emptyList()
     return words.filter { word -> word.locale == translationTag &&
-        (normalizeLearningWord(word.lemma) == normalized || word.forms.any { normalizeLearningWord(it) == normalized }) }
+        (normalizeLearningExpression(word.lemma) == normalized || word.forms.any { normalizeLearningExpression(it) == normalized }) }
 }
 fun findLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
     matchingLearningWords(token, words, translationTag).firstOrNull { !it.translation.isNullOrBlank() }
@@ -61,7 +65,7 @@ fun findLearningEntry(token: String, words: List<Lexeme>, translationTag: String
     findLearningWord(token, words, translationTag) ?: matchingLearningWords(token, words, translationTag).firstOrNull()
 fun findSavedLearningWord(token: String, words: List<Lexeme>, translationTag: String?): Lexeme? =
     words.firstOrNull { it.locale == translationTag && it.saved &&
-        (normalizeLearningWord(it.lemma) == normalizeLearningWord(token) || it.forms.any { form -> normalizeLearningWord(form) == normalizeLearningWord(token) }) }
+        (normalizeLearningExpression(it.lemma) == normalizeLearningExpression(token) || it.forms.any { form -> normalizeLearningExpression(form) == normalizeLearningExpression(token) }) }
 
 /** Callers must pass their learning/exam policy explicitly. CZ-only and strict exam deny lookup. */
 data class WordTranslationPolicy(val translationTag: String?, val enabled: Boolean) {
@@ -73,7 +77,7 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
 /** Original text is unchanged. Hit testing uses the laid-out character under the finger. */
 @Suppress("DEPRECATION")
 @Composable fun CzechLearningText(value: String, policy: WordTranslationPolicy,
-    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier) {
+    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier, lookupPhrases: List<String> = emptyList()) {
     val style = (if(prominent) MaterialTheme.typography.titleLarge else MaterialTheme.typography.bodyLarge)
         .copy(color = MaterialTheme.colorScheme.onSurface)
     if(!policy.allowsLookup) { Text(value, modifier, style = style); return }
@@ -85,7 +89,11 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
         val result = layout ?: return
         val box: Rect = result.getBoundingBox(offset)
         val position = box.translate(origin)
-        onWord(LearningWordSelection(token.value, IntRect(position.left.roundToInt(), position.top.roundToInt(),
+        val phrase = lookupPhrases.sortedByDescending { it.length }.firstNotNullOfOrNull { phrase ->
+            Regex("(?<![\\p{L}\\p{M}])" + Regex.escape(phrase) + "(?![\\p{L}\\p{M}])", RegexOption.IGNORE_CASE)
+                .findAll(value).firstOrNull { offset in it.range }?.value
+        }
+        onWord(LearningWordSelection(phrase ?: token.value, IntRect(position.left.roundToInt(), position.top.roundToInt(),
             position.right.roundToInt(), position.bottom.roundToInt())))
     }
     ClickableText(AnnotatedString(value), modifier.onGloballyPositioned { origin = it.positionInWindow() }

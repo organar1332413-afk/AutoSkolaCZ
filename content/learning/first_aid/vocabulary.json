@@ -31,7 +31,8 @@
         "dýchat",
         "dýchá",
         "dýchají",
-        "dýcháš"
+        "dýcháš",
+        "dýchám"
       ],
       "exampleCs": "dýchat",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -155,7 +156,9 @@
         "poraněný",
         "poraněného",
         "poraněným",
-        "poraněných"
+        "poraněných",
+        "poraněnou",
+        "poraněnému"
       ],
       "exampleCs": "poraněný",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -214,7 +217,8 @@
         "vdech",
         "vdechy",
         "vdechů",
-        "vdeších"
+        "vdeších",
+        "vdechu"
       ],
       "exampleCs": "vdech",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -257,7 +261,8 @@
       "forms": [
         "zlomenina",
         "zlomeniny",
-        "zlomeninou"
+        "zlomeninou",
+        "zlomeninu"
       ],
       "exampleCs": "zlomenina",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -293,7 +298,8 @@
         "hlava",
         "hlavu",
         "hlavy",
-        "hlavě"
+        "hlavě",
+        "hlavou"
       ],
       "exampleCs": "hlava",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -388,7 +394,8 @@
       "forms": [
         "výboj",
         "výboji",
-        "výbojem"
+        "výbojem",
+        "výboje"
       ],
       "exampleCs": "výboj",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -521,7 +528,8 @@
       "ru": "бессознательное состояние",
       "uk": "несвідомий стан",
       "forms": [
-        "bezvědomí"
+        "bezvědomí",
+        "bezvědomím"
       ],
       "exampleCs": "bezvědomí",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -553,7 +561,9 @@
       "ru": "дыхательный",
       "uk": "дихальний",
       "forms": [
-        "dýchací"
+        "dýchací",
+        "dýchacích",
+        "dýchacím"
       ],
       "exampleCs": "dýchací",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -565,7 +575,8 @@
       "forms": [
         "cesta",
         "cesty",
-        "cest"
+        "cest",
+        "cestám"
       ],
       "exampleCs": "cesta",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -586,7 +597,8 @@
       "uk": "кістка",
       "forms": [
         "kost",
-        "kosti"
+        "kosti",
+        "kostí"
       ],
       "exampleCs": "kost",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
@@ -715,6 +727,5191 @@
         "průchodnosti"
       ],
       "exampleCs": "průchodnost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "aed",
+      "ru": "автоматический наружный дефибриллятор",
+      "uk": "автоматичний зовнішній дефібрилятор",
+      "forms": [
+        "aed"
+      ],
+      "exampleCs": "aed",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "aktivita",
+      "ru": "активность",
+      "uk": "активність",
+      "forms": [
+        "aktivita",
+        "aktivit",
+        "aktivity"
+      ],
+      "exampleCs": "aktivita",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "analýza",
+      "ru": "анализ",
+      "uk": "аналіз",
+      "forms": [
+        "analýza",
+        "analýze"
+      ],
+      "exampleCs": "analýza",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "asi",
+      "ru": "примерно",
+      "uk": "приблизно",
+      "forms": [
+        "asi"
+      ],
+      "exampleCs": "asi",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bezdeší",
+      "ru": "отсутствие дыхания",
+      "uk": "відсутність дихання",
+      "forms": [
+        "bezdeší"
+      ],
+      "exampleCs": "bezdeší",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bezprostřední",
+      "ru": "непосредственный",
+      "uk": "безпосередній",
+      "forms": [
+        "bezprostřední",
+        "bezprostředního",
+        "bezprostředním"
+      ],
+      "exampleCs": "bezprostřední",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bolest",
+      "ru": "боль",
+      "uk": "біль",
+      "forms": [
+        "bolest",
+        "bolesti"
+      ],
+      "exampleCs": "bolest",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bolestivý",
+      "ru": "болевой, болезненный",
+      "uk": "больовий, болісний",
+      "forms": [
+        "bolestivý",
+        "bolestivé"
+      ],
+      "exampleCs": "bolestivý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "brnění",
+      "ru": "покалывание",
+      "uk": "поколювання",
+      "forms": [
+        "brnění"
+      ],
+      "exampleCs": "brnění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "bránit",
+      "ru": "препятствовать, защищать",
+      "uk": "перешкоджати, захищати",
+      "forms": [
+        "bránit",
+        "brání"
+      ],
+      "exampleCs": "bránit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "být",
+      "ru": "быть",
+      "uk": "бути",
+      "forms": [
+        "být",
+        "budete",
+        "budu",
+        "jsi"
+      ],
+      "exampleCs": "být",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "během",
+      "ru": "во время",
+      "uk": "під час",
+      "forms": [
+        "během"
+      ],
+      "exampleCs": "během",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "břicho",
+      "ru": "живот",
+      "uk": "живіт",
+      "forms": [
+        "břicho",
+        "břicha"
+      ],
+      "exampleCs": "břicho",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "chránit",
+      "ru": "защищать",
+      "uk": "захищати",
+      "forms": [
+        "chránit",
+        "chraň"
+      ],
+      "exampleCs": "chránit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "chytnout",
+      "ru": "схватить",
+      "uk": "схопити",
+      "forms": [
+        "chytnout",
+        "chytnu"
+      ],
+      "exampleCs": "chytnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "citlivost",
+      "ru": "чувствительность",
+      "uk": "чутливість",
+      "forms": [
+        "citlivost",
+        "citlivosti"
+      ],
+      "exampleCs": "citlivost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "cizí",
+      "ru": "чужой, инородный",
+      "uk": "чужий, сторонній",
+      "forms": [
+        "cizí",
+        "cizích"
+      ],
+      "exampleCs": "cizí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "cm",
+      "ru": "сантиметр",
+      "uk": "сантиметр",
+      "forms": [
+        "cm"
+      ],
+      "exampleCs": "cm",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "cyanóza",
+      "ru": "синюшность",
+      "uk": "синюшність",
+      "forms": [
+        "cyanóza",
+        "cyanózy"
+      ],
+      "exampleCs": "cyanóza",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "cítit",
+      "ru": "чувствовать",
+      "uk": "відчувати",
+      "forms": [
+        "cítit",
+        "cítím",
+        "cítíš"
+      ],
+      "exampleCs": "cítit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dech",
+      "ru": "дыхание",
+      "uk": "дихання",
+      "forms": [
+        "dech"
+      ],
+      "exampleCs": "dech",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dlaň",
+      "ru": "ладонь",
+      "uk": "долоня",
+      "forms": [
+        "dlaň",
+        "dlaní"
+      ],
+      "exampleCs": "dlaň",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dokud",
+      "ru": "пока",
+      "uk": "поки",
+      "forms": [
+        "dokud"
+      ],
+      "exampleCs": "dokud",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "domáhat",
+      "ru": "настойчиво требовать",
+      "uk": "наполегливо вимагати",
+      "forms": [
+        "domáhat",
+        "domáhá"
+      ],
+      "exampleCs": "domáhat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "doporučený",
+      "ru": "рекомендованный",
+      "uk": "рекомендований",
+      "forms": [
+        "doporučený"
+      ],
+      "exampleCs": "doporučený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dospělý",
+      "ru": "взрослый",
+      "uk": "дорослий",
+      "forms": [
+        "dospělý",
+        "dospělého"
+      ],
+      "exampleCs": "dospělý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dostatek",
+      "ru": "достаточное количество",
+      "uk": "достатня кількість",
+      "forms": [
+        "dostatek"
+      ],
+      "exampleCs": "dostatek",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dostatečný",
+      "ru": "достаточный",
+      "uk": "достатній",
+      "forms": [
+        "dostatečný",
+        "dostatečná"
+      ],
+      "exampleCs": "dostatečný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dostupný",
+      "ru": "доступный",
+      "uk": "доступний",
+      "forms": [
+        "dostupný",
+        "dostupnou"
+      ],
+      "exampleCs": "dostupný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dosáhnout",
+      "ru": "достичь",
+      "uk": "досягти",
+      "forms": [
+        "dosáhnout",
+        "dosáhl"
+      ],
+      "exampleCs": "dosáhnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dotýkat",
+      "ru": "касаться",
+      "uk": "торкатися",
+      "forms": [
+        "dotýkat"
+      ],
+      "exampleCs": "dotýkat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "drobný",
+      "ru": "небольшой",
+      "uk": "невеликий",
+      "forms": [
+        "drobný",
+        "drobnějším"
+      ],
+      "exampleCs": "drobný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dutina",
+      "ru": "полость",
+      "uk": "порожнина",
+      "forms": [
+        "dutina",
+        "dutinu",
+        "dutiny"
+      ],
+      "exampleCs": "dutina",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dýchající",
+      "ru": "дышащий",
+      "uk": "той, хто дихає",
+      "forms": [
+        "dýchající",
+        "dýchajícího"
+      ],
+      "exampleCs": "dýchající",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "eventuálně",
+      "ru": "при необходимости, возможно",
+      "uk": "за потреби, можливо",
+      "forms": [
+        "eventuálně",
+        "event"
+      ],
+      "exampleCs": "eventuálně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "evropský",
+      "ru": "европейский",
+      "uk": "європейський",
+      "forms": [
+        "evropský",
+        "evropská"
+      ],
+      "exampleCs": "evropský",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "extrémní",
+      "ru": "чрезвычайный",
+      "uk": "надзвичайний",
+      "forms": [
+        "extrémní",
+        "extrémního"
+      ],
+      "exampleCs": "extrémní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "funkce",
+      "ru": "функция",
+      "uk": "функція",
+      "forms": [
+        "funkce",
+        "funkcí"
+      ],
+      "exampleCs": "funkce",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hasič",
+      "ru": "пожарный",
+      "uk": "пожежник",
+      "forms": [
+        "hasič",
+        "hasiče"
+      ],
+      "exampleCs": "hasič",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "historický",
+      "ru": "исторический",
+      "uk": "історичний",
+      "forms": [
+        "historický"
+      ],
+      "exampleCs": "historický",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hlasitý",
+      "ru": "громкий",
+      "uk": "гучний",
+      "forms": [
+        "hlasitý",
+        "hlasitým"
+      ],
+      "exampleCs": "hlasitý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hlasitě",
+      "ru": "громко",
+      "uk": "голосно",
+      "forms": [
+        "hlasitě"
+      ],
+      "exampleCs": "hlasitě",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hledí",
+      "ru": "визор шлема",
+      "uk": "візор шолома",
+      "forms": [
+        "hledí"
+      ],
+      "exampleCs": "hledí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "on",
+      "ru": "он",
+      "uk": "він",
+      "forms": [
+        "on",
+        "ho",
+        "mu"
+      ],
+      "exampleCs": "on",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hrozit",
+      "ru": "угрожать",
+      "uk": "загрожувати",
+      "forms": [
+        "hrozit",
+        "hrozí"
+      ],
+      "exampleCs": "hrozit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hrudní",
+      "ru": "грудной",
+      "uk": "грудний",
+      "forms": [
+        "hrudní"
+      ],
+      "exampleCs": "hrudní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jak",
+      "ru": "как",
+      "uk": "як",
+      "forms": [
+        "jak"
+      ],
+      "exampleCs": "jak",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jaký",
+      "ru": "какой",
+      "uk": "який",
+      "forms": [
+        "jaký",
+        "jakou",
+        "jaké"
+      ],
+      "exampleCs": "jaký",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jakýkoliv",
+      "ru": "любой",
+      "uk": "будь-який",
+      "forms": [
+        "jakýkoliv",
+        "jakékoliv",
+        "jakýmkoli",
+        "jakýmkoliv"
+      ],
+      "exampleCs": "jakýkoliv",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jednat",
+      "ru": "действовать",
+      "uk": "діяти",
+      "forms": [
+        "jednat"
+      ],
+      "exampleCs": "jednat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jednoznačně",
+      "ru": "однозначно",
+      "uk": "однозначно",
+      "forms": [
+        "jednoznačně"
+      ],
+      "exampleCs": "jednoznačně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jemně",
+      "ru": "осторожно, мягко",
+      "uk": "обережно, м’яко",
+      "forms": [
+        "jemně"
+      ],
+      "exampleCs": "jemně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jídlo",
+      "ru": "еда",
+      "uk": "їжа",
+      "forms": [
+        "jídlo"
+      ],
+      "exampleCs": "jídlo",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "karta",
+      "ru": "карточка",
+      "uk": "картка",
+      "forms": [
+        "karta"
+      ],
+      "exampleCs": "karta",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "klinický",
+      "ru": "клинический",
+      "uk": "клінічний",
+      "forms": [
+        "klinický",
+        "klinická"
+      ],
+      "exampleCs": "klinický",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kolapsový",
+      "ru": "связанный с коллапсом",
+      "uk": "пов’язаний з колапсом",
+      "forms": [
+        "kolapsový",
+        "kolapsovém"
+      ],
+      "exampleCs": "kolapsový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kolaps",
+      "ru": "коллапс, обморок",
+      "uk": "колапс, зомління",
+      "forms": [
+        "kolaps",
+        "kolapsu"
+      ],
+      "exampleCs": "kolaps",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "komprese",
+      "ru": "сжатие, нажатие",
+      "uk": "стискання, натискання",
+      "forms": [
+        "komprese",
+        "kompresí",
+        "kompresích",
+        "kompresím"
+      ],
+      "exampleCs": "komprese",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kontrolovat",
+      "ru": "проверять",
+      "uk": "перевіряти",
+      "forms": [
+        "kontrolovat",
+        "kontroluj"
+      ],
+      "exampleCs": "kontrolovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kpr",
+      "ru": "сердечно-лёгочная реанимация",
+      "uk": "серцево-легенева реанімація",
+      "forms": [
+        "kpr"
+      ],
+      "exampleCs": "kpr",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kratší",
+      "ru": "более короткий",
+      "uk": "коротший",
+      "forms": [
+        "kratší"
+      ],
+      "exampleCs": "kratší",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "krvácející",
+      "ru": "кровоточащий",
+      "uk": "той, що кровоточить",
+      "forms": [
+        "krvácející"
+      ],
+      "exampleCs": "krvácející",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "krvácet",
+      "ru": "кровоточить",
+      "uk": "кровоточити",
+      "forms": [
+        "krvácet",
+        "krvácí"
+      ],
+      "exampleCs": "krvácet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "krytí",
+      "ru": "покрытие, повязка",
+      "uk": "покриття, пов’язка",
+      "forms": [
+        "krytí",
+        "krytím"
+      ],
+      "exampleCs": "krytí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kus",
+      "ru": "кусок",
+      "uk": "шматок",
+      "forms": [
+        "kus",
+        "kusem"
+      ],
+      "exampleCs": "kus",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kvalitní",
+      "ru": "качественный",
+      "uk": "якісний",
+      "forms": [
+        "kvalitní"
+      ],
+      "exampleCs": "kvalitní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "kvalitně",
+      "ru": "качественно",
+      "uk": "якісно",
+      "forms": [
+        "kvalitně"
+      ],
+      "exampleCs": "kvalitně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "laik",
+      "ru": "неспециалист",
+      "uk": "неспеціаліст",
+      "forms": [
+        "laik",
+        "laika"
+      ],
+      "exampleCs": "laik",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "lalůček",
+      "ru": "мочка",
+      "uk": "мочка",
+      "forms": [
+        "lalůček",
+        "lalůčku"
+      ],
+      "exampleCs": "lalůček",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "lapavý",
+      "ru": "судорожный, хватающий",
+      "uk": "судомний, хапальний",
+      "forms": [
+        "lapavý",
+        "lapavé"
+      ],
+      "exampleCs": "lapavý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "lebka",
+      "ru": "череп",
+      "uk": "череп",
+      "forms": [
+        "lebka",
+        "lebky"
+      ],
+      "exampleCs": "lebka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rok",
+      "ru": "год",
+      "uk": "рік",
+      "forms": [
+        "rok",
+        "let"
+      ],
+      "exampleCs": "rok",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "levý",
+      "ru": "левый",
+      "uk": "лівий",
+      "forms": [
+        "levý"
+      ],
+      "exampleCs": "levý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ležet",
+      "ru": "лежать",
+      "uk": "лежати",
+      "forms": [
+        "ležet",
+        "leží"
+      ],
+      "exampleCs": "ležet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "člověk",
+      "ru": "человек",
+      "uk": "людина",
+      "forms": [
+        "člověk",
+        "lidí"
+      ],
+      "exampleCs": "člověk",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "linka",
+      "ru": "линия",
+      "uk": "лінія",
+      "forms": [
+        "linka"
+      ],
+      "exampleCs": "linka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "loket",
+      "ru": "локоть",
+      "uk": "лікоть",
+      "forms": [
+        "loket",
+        "lokty"
+      ],
+      "exampleCs": "loket",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "lékárnička",
+      "ru": "аптечка",
+      "uk": "аптечка",
+      "forms": [
+        "lékárnička",
+        "lékárničce"
+      ],
+      "exampleCs": "lékárnička",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "mít",
+      "ru": "иметь",
+      "uk": "мати",
+      "forms": [
+        "mít",
+        "mají"
+      ],
+      "exampleCs": "mít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "malý",
+      "ru": "маленький",
+      "uk": "малий",
+      "forms": [
+        "malý",
+        "malém"
+      ],
+      "exampleCs": "malý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "manipulovat",
+      "ru": "перемещать, обращаться с",
+      "uk": "переміщувати, поводитися з",
+      "forms": [
+        "manipulovat",
+        "manipuluj",
+        "manipuluji"
+      ],
+      "exampleCs": "manipulovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "masivní",
+      "ru": "массивный, обильный",
+      "uk": "масивний, рясний",
+      "forms": [
+        "masivní",
+        "masivního",
+        "masivním"
+      ],
+      "exampleCs": "masivní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "masivně",
+      "ru": "обильно",
+      "uk": "рясно",
+      "forms": [
+        "masivně"
+      ],
+      "exampleCs": "masivně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "materiál",
+      "ru": "материал",
+      "uk": "матеріал",
+      "forms": [
+        "materiál"
+      ],
+      "exampleCs": "materiál",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "max",
+      "ru": "максимум",
+      "uk": "максимум",
+      "forms": [
+        "max"
+      ],
+      "exampleCs": "max",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "já",
+      "ru": "я",
+      "uk": "я",
+      "forms": [
+        "já",
+        "mi"
+      ],
+      "exampleCs": "já",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "min",
+      "ru": "минута",
+      "uk": "хвилина",
+      "forms": [
+        "min"
+      ],
+      "exampleCs": "min",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "mluvit",
+      "ru": "говорить",
+      "uk": "говорити",
+      "forms": [
+        "mluvit",
+        "mluv"
+      ],
+      "exampleCs": "mluvit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "moci",
+      "ru": "мочь",
+      "uk": "могти",
+      "forms": [
+        "moci",
+        "mohu"
+      ],
+      "exampleCs": "moci",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "můj",
+      "ru": "мой",
+      "uk": "мій",
+      "forms": [
+        "můj",
+        "moje"
+      ],
+      "exampleCs": "můj",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "motocyklista",
+      "ru": "мотоциклист",
+      "uk": "мотоцикліст",
+      "forms": [
+        "motocyklista",
+        "motocyklistovi"
+      ],
+      "exampleCs": "motocyklista",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "motocyklový",
+      "ru": "мотоциклетный",
+      "uk": "мотоциклетний",
+      "forms": [
+        "motocyklový",
+        "motocyklová"
+      ],
+      "exampleCs": "motocyklový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "motorkář",
+      "ru": "мотоциклист",
+      "uk": "мотоцикліст",
+      "forms": [
+        "motorkář",
+        "motorkáře"
+      ],
+      "exampleCs": "motorkář",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "mozkový",
+      "ru": "мозговой",
+      "uk": "мозковий",
+      "forms": [
+        "mozkový",
+        "mozkové"
+      ],
+      "exampleCs": "mozkový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "možno",
+      "ru": "можно",
+      "uk": "можна",
+      "forms": [
+        "možno"
+      ],
+      "exampleCs": "možno",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "možnost",
+      "ru": "возможность",
+      "uk": "можливість",
+      "forms": [
+        "možnost",
+        "možností"
+      ],
+      "exampleCs": "možnost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "mírně",
+      "ru": "слегка",
+      "uk": "злегка",
+      "forms": [
+        "mírně"
+      ],
+      "exampleCs": "mírně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "místně",
+      "ru": "местно, локально",
+      "uk": "місцево, локально",
+      "forms": [
+        "místně"
+      ],
+      "exampleCs": "místně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "najíst",
+      "ru": "поесть",
+      "uk": "поїсти",
+      "forms": [
+        "najíst"
+      ],
+      "exampleCs": "najíst",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nalepit",
+      "ru": "наклеить",
+      "uk": "наклеїти",
+      "forms": [
+        "nalepit",
+        "nalep"
+      ],
+      "exampleCs": "nalepit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "naléhání",
+      "ru": "настаивание, настойчивая просьба",
+      "uk": "наполягання, наполегливе прохання",
+      "forms": [
+        "naléhání"
+      ],
+      "exampleCs": "naléhání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "napít",
+      "ru": "напиться",
+      "uk": "напитися",
+      "forms": [
+        "napít"
+      ],
+      "exampleCs": "napít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nastávat",
+      "ru": "наступать",
+      "uk": "наставати",
+      "forms": [
+        "nastávat",
+        "nastávají"
+      ],
+      "exampleCs": "nastávat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nebezpečný",
+      "ru": "опасный",
+      "uk": "небезпечний",
+      "forms": [
+        "nebezpečný",
+        "nebezpečného"
+      ],
+      "exampleCs": "nebezpečný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nebýt",
+      "ru": "не быть",
+      "uk": "не бути",
+      "forms": [
+        "nebýt",
+        "nebudu"
+      ],
+      "exampleCs": "nebýt",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nechat",
+      "ru": "оставить",
+      "uk": "залишити",
+      "forms": [
+        "nechat",
+        "nech",
+        "nechám"
+      ],
+      "exampleCs": "nechat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "necitlivost",
+      "ru": "потеря чувствительности",
+      "uk": "втрата чутливості",
+      "forms": [
+        "necitlivost"
+      ],
+      "exampleCs": "necitlivost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedařit",
+      "ru": "не удаваться",
+      "uk": "не вдаватися",
+      "forms": [
+        "nedařit",
+        "nedaří"
+      ],
+      "exampleCs": "nedařit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedotýkat",
+      "ru": "не касаться",
+      "uk": "не торкатися",
+      "forms": [
+        "nedotýkat",
+        "nedotýká"
+      ],
+      "exampleCs": "nedotýkat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedojít",
+      "ru": "не произойти",
+      "uk": "не відбутися",
+      "forms": [
+        "nedojít",
+        "nedošlo"
+      ],
+      "exampleCs": "nedojít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedat",
+      "ru": "не дать",
+      "uk": "не дати",
+      "forms": [
+        "nedat",
+        "nedám"
+      ],
+      "exampleCs": "nedat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedávat",
+      "ru": "не давать",
+      "uk": "не давати",
+      "forms": [
+        "nedávat",
+        "nedávej"
+      ],
+      "exampleCs": "nedávat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nedýchající",
+      "ru": "не дышащий",
+      "uk": "той, хто не дихає",
+      "forms": [
+        "nedýchající",
+        "nedýchajícímu"
+      ],
+      "exampleCs": "nedýchající",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nehmatat",
+      "ru": "не ощупывать, не прощупывать",
+      "uk": "не обмацувати",
+      "forms": [
+        "nehmatat",
+        "nehmatám"
+      ],
+      "exampleCs": "nehmatat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nehrozit",
+      "ru": "не угрожать",
+      "uk": "не загрожувати",
+      "forms": [
+        "nehrozit",
+        "nehrozí"
+      ],
+      "exampleCs": "nehrozit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nehýbat",
+      "ru": "не двигать",
+      "uk": "не рухати",
+      "forms": [
+        "nehýbat",
+        "nehýbej",
+        "nehýbu"
+      ],
+      "exampleCs": "nehýbat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nejdůležitější",
+      "ru": "самый важный",
+      "uk": "найважливіший",
+      "forms": [
+        "nejdůležitější"
+      ],
+      "exampleCs": "nejdůležitější",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nejlepší",
+      "ru": "лучший",
+      "uk": "найкращий",
+      "forms": [
+        "nejlepší"
+      ],
+      "exampleCs": "nejlepší",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nejprve",
+      "ru": "сначала",
+      "uk": "спочатку",
+      "forms": [
+        "nejprve"
+      ],
+      "exampleCs": "nejprve",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nejvíce",
+      "ru": "больше всего",
+      "uk": "найбільше",
+      "forms": [
+        "nejvíce"
+      ],
+      "exampleCs": "nejvíce",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nemuset",
+      "ru": "не быть обязанным",
+      "uk": "не бути зобов’язаним",
+      "forms": [
+        "nemuset",
+        "nemusím"
+      ],
+      "exampleCs": "nemuset",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nenarovnávat",
+      "ru": "не выпрямлять",
+      "uk": "не випрямляти",
+      "forms": [
+        "nenarovnávat",
+        "nenarovnávej"
+      ],
+      "exampleCs": "nenarovnávat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neodhadovat",
+      "ru": "не оценивать приблизительно",
+      "uk": "не оцінювати приблизно",
+      "forms": [
+        "neodhadovat",
+        "neodhaduj"
+      ],
+      "exampleCs": "neodhadovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neodkládat",
+      "ru": "не откладывать",
+      "uk": "не відкладати",
+      "forms": [
+        "neodkládat",
+        "neodkládej"
+      ],
+      "exampleCs": "neodkládat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neohrožovat",
+      "ru": "не подвергать опасности",
+      "uk": "не наражати на небезпеку",
+      "forms": [
+        "neohrožovat",
+        "neohrožuj"
+      ],
+      "exampleCs": "neohrožovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neomezený",
+      "ru": "неограниченный",
+      "uk": "необмежений",
+      "forms": [
+        "neomezený",
+        "neomezeném"
+      ],
+      "exampleCs": "neomezený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neomezovat",
+      "ru": "не ограничивать",
+      "uk": "не обмежувати",
+      "forms": [
+        "neomezovat",
+        "neomezuj"
+      ],
+      "exampleCs": "neomezovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepodařit",
+      "ru": "не удасться",
+      "uk": "не вдатися",
+      "forms": [
+        "nepodařit",
+        "nepodaří"
+      ],
+      "exampleCs": "nepodařit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepodmíněný",
+      "ru": "безусловный",
+      "uk": "безумовний",
+      "forms": [
+        "nepodmíněný",
+        "nepodmíněného"
+      ],
+      "exampleCs": "nepodmíněný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepodávat",
+      "ru": "не давать, не подавать",
+      "uk": "не давати, не подавати",
+      "forms": [
+        "nepodávat",
+        "nepodávej",
+        "nepodáváme"
+      ],
+      "exampleCs": "nepodávat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepohybovat",
+      "ru": "не двигать",
+      "uk": "не рухати",
+      "forms": [
+        "nepohybovat",
+        "nepohyboval"
+      ],
+      "exampleCs": "nepohybovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neposkytnout",
+      "ru": "не предоставить, не оказать",
+      "uk": "не надати",
+      "forms": [
+        "neposkytnout",
+        "neposkytnete"
+      ],
+      "exampleCs": "neposkytnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neposkytnutí",
+      "ru": "неоказание",
+      "uk": "ненадання",
+      "forms": [
+        "neposkytnutí"
+      ],
+      "exampleCs": "neposkytnutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepovolovat",
+      "ru": "не ослаблять",
+      "uk": "не послаблювати",
+      "forms": [
+        "nepovolovat",
+        "nepovoluj"
+      ],
+      "exampleCs": "nepovolovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepravidelný",
+      "ru": "нерегулярный",
+      "uk": "нерегулярний",
+      "forms": [
+        "nepravidelný",
+        "nepravidelné"
+      ],
+      "exampleCs": "nepravidelný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neprovádět",
+      "ru": "не проводить",
+      "uk": "не проводити",
+      "forms": [
+        "neprovádět",
+        "neprováděj"
+      ],
+      "exampleCs": "neprovádět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neprůchodný",
+      "ru": "непроходимый",
+      "uk": "непрохідний",
+      "forms": [
+        "neprůchodný",
+        "neprůchodné"
+      ],
+      "exampleCs": "neprůchodný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepřenášet",
+      "ru": "не переносить",
+      "uk": "не переносити",
+      "forms": [
+        "nepřenášet",
+        "nepřenášej"
+      ],
+      "exampleCs": "nepřenášet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepřerušovaný",
+      "ru": "непрерывный",
+      "uk": "безперервний",
+      "forms": [
+        "nepřerušovaný",
+        "nepřerušovaná"
+      ],
+      "exampleCs": "nepřerušovaný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepřerušovat",
+      "ru": "не прерывать",
+      "uk": "не переривати",
+      "forms": [
+        "nepřerušovat"
+      ],
+      "exampleCs": "nepřerušovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepřetržitý",
+      "ru": "непрерывный",
+      "uk": "безперервний",
+      "forms": [
+        "nepřetržitý",
+        "nepřetržité"
+      ],
+      "exampleCs": "nepřetržitý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepřetáčet",
+      "ru": "не поворачивать, не скручивать",
+      "uk": "не повертати, не скручувати",
+      "forms": [
+        "nepřetáčet",
+        "nepřetáčej"
+      ],
+      "exampleCs": "nepřetáčet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nepřímý",
+      "ru": "непрямой",
+      "uk": "непрямий",
+      "forms": [
+        "nepřímý",
+        "nepřímou"
+      ],
+      "exampleCs": "nepřímý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nereagovat",
+      "ru": "не реагировать",
+      "uk": "не реагувати",
+      "forms": [
+        "nereagovat",
+        "nereaguje"
+      ],
+      "exampleCs": "nereagovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nereagující",
+      "ru": "не реагирующий",
+      "uk": "той, хто не реагує",
+      "forms": [
+        "nereagující",
+        "nereagujícího"
+      ],
+      "exampleCs": "nereagující",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nesmět",
+      "ru": "не иметь права",
+      "uk": "не мати права",
+      "forms": [
+        "nesmět",
+        "nesmím"
+      ],
+      "exampleCs": "nesmět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nesnímat",
+      "ru": "не снимать",
+      "uk": "не знімати",
+      "forms": [
+        "nesnímat",
+        "nesnímej"
+      ],
+      "exampleCs": "nesnímat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nestahovat",
+      "ru": "не стягивать",
+      "uk": "не стягувати",
+      "forms": [
+        "nestahovat",
+        "nestahuj"
+      ],
+      "exampleCs": "nestahovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nesundávat",
+      "ru": "не снимать",
+      "uk": "не знімати",
+      "forms": [
+        "nesundávat",
+        "nesundávám"
+      ],
+      "exampleCs": "nesundávat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neustále",
+      "ru": "постоянно",
+      "uk": "постійно",
+      "forms": [
+        "neustále"
+      ],
+      "exampleCs": "neustále",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nevadit",
+      "ru": "не мешать",
+      "uk": "не заважати",
+      "forms": [
+        "nevadit",
+        "nevadí"
+      ],
+      "exampleCs": "nevadit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nevstupovat",
+      "ru": "не входить",
+      "uk": "не входити",
+      "forms": [
+        "nevstupovat",
+        "nevstupuj"
+      ],
+      "exampleCs": "nevstupovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nevytahovat",
+      "ru": "не вытаскивать",
+      "uk": "не витягувати",
+      "forms": [
+        "nevytahovat",
+        "nevytahuj"
+      ],
+      "exampleCs": "nevytahovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nevýhodný",
+      "ru": "неудобный, невыгодный",
+      "uk": "незручний, невигідний",
+      "forms": [
+        "nevýhodný",
+        "nevýhodné"
+      ],
+      "exampleCs": "nevýhodný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nezahájit",
+      "ru": "не начать",
+      "uk": "не розпочати",
+      "forms": [
+        "nezahájit",
+        "nezahájím"
+      ],
+      "exampleCs": "nezahájit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neztrácet",
+      "ru": "не терять",
+      "uk": "не втрачати",
+      "forms": [
+        "neztrácet",
+        "neztrácej"
+      ],
+      "exampleCs": "neztrácet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nezvládnutelný",
+      "ru": "неподдающийся контролю",
+      "uk": "неконтрольований",
+      "forms": [
+        "nezvládnutelný",
+        "nezvládnutelném"
+      ],
+      "exampleCs": "nezvládnutelný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "neúspěšný",
+      "ru": "неудачный",
+      "uk": "невдалий",
+      "forms": [
+        "neúspěšný",
+        "neúspěšném"
+      ],
+      "exampleCs": "neúspěšný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nečekat",
+      "ru": "не ждать",
+      "uk": "не чекати",
+      "forms": [
+        "nečekat",
+        "nečekej"
+      ],
+      "exampleCs": "nečekat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "jenž",
+      "ru": "который",
+      "uk": "який",
+      "forms": [
+        "jenž",
+        "nichž"
+      ],
+      "exampleCs": "jenž",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "noha",
+      "ru": "нога",
+      "uk": "нога",
+      "forms": [
+        "noha",
+        "nohou",
+        "nohu",
+        "nohy"
+      ],
+      "exampleCs": "noha",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "normální",
+      "ru": "нормальный",
+      "uk": "нормальний",
+      "forms": [
+        "normální",
+        "normálního",
+        "normálním"
+      ],
+      "exampleCs": "normální",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nádech",
+      "ru": "вдох",
+      "uk": "вдих",
+      "forms": [
+        "nádech",
+        "nádechu",
+        "nádechy"
+      ],
+      "exampleCs": "nádech",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "nápoj",
+      "ru": "напиток",
+      "uk": "напій",
+      "forms": [
+        "nápoj",
+        "nápoje",
+        "nápojů"
+      ],
+      "exampleCs": "nápoj",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "násilný",
+      "ru": "насильственный, резкий",
+      "uk": "насильницький, різкий",
+      "forms": [
+        "násilný",
+        "násilné"
+      ],
+      "exampleCs": "násilný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "násilím",
+      "ru": "силой",
+      "uk": "силою",
+      "forms": [
+        "násilím"
+      ],
+      "exampleCs": "násilím",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "následný",
+      "ru": "последующий",
+      "uk": "наступний",
+      "forms": [
+        "následný",
+        "následné",
+        "následným"
+      ],
+      "exampleCs": "následný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "návod",
+      "ru": "инструкция",
+      "uk": "інструкція",
+      "forms": [
+        "návod",
+        "návodem"
+      ],
+      "exampleCs": "návod",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obložit",
+      "ru": "обложить",
+      "uk": "обкласти",
+      "forms": [
+        "obložit",
+        "oblož"
+      ],
+      "exampleCs": "obložit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obnažený",
+      "ru": "обнажённый",
+      "uk": "оголений",
+      "forms": [
+        "obnažený"
+      ],
+      "exampleCs": "obnažený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obnovit",
+      "ru": "восстановить",
+      "uk": "відновити",
+      "forms": [
+        "obnovit",
+        "obnov"
+      ],
+      "exampleCs": "obnovit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obnovení",
+      "ru": "восстановление",
+      "uk": "відновлення",
+      "forms": [
+        "obnovení"
+      ],
+      "exampleCs": "obnovení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obrázek",
+      "ru": "изображение",
+      "uk": "зображення",
+      "forms": [
+        "obrázek",
+        "obrázků"
+      ],
+      "exampleCs": "obrázek",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "obvazový",
+      "ru": "перевязочный",
+      "uk": "перев’язувальний",
+      "forms": [
+        "obvazový"
+      ],
+      "exampleCs": "obvazový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "oběh",
+      "ru": "кровообращение, обращение",
+      "uk": "кровообіг, обіг",
+      "forms": [
+        "oběh",
+        "oběhu"
+      ],
+      "exampleCs": "oběh",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ochrana",
+      "ru": "защита",
+      "uk": "захист",
+      "forms": [
+        "ochrana",
+        "ochranu"
+      ],
+      "exampleCs": "ochrana",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odborný",
+      "ru": "профессиональный",
+      "uk": "фаховий",
+      "forms": [
+        "odborný",
+        "odbornou"
+      ],
+      "exampleCs": "odborný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "oddálit",
+      "ru": "отсрочить",
+      "uk": "відтермінувати",
+      "forms": [
+        "oddálit"
+      ],
+      "exampleCs": "oddálit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odhadnout",
+      "ru": "оценить приблизительно",
+      "uk": "оцінити приблизно",
+      "forms": [
+        "odhadnout",
+        "odhadni"
+      ],
+      "exampleCs": "odhadnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odnětí",
+      "ru": "лишение",
+      "uk": "позбавлення",
+      "forms": [
+        "odnětí"
+      ],
+      "exampleCs": "odnětí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odposlech",
+      "ru": "прослушивание; здесь громкая связь",
+      "uk": "прослуховування; тут гучний зв’язок",
+      "forms": [
+        "odposlech",
+        "odposlechem"
+      ],
+      "exampleCs": "odposlech",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odpovídat",
+      "ru": "отвечать",
+      "uk": "відповідати",
+      "forms": [
+        "odpovídat",
+        "odpovídej"
+      ],
+      "exampleCs": "odpovídat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odpověď",
+      "ru": "ответ",
+      "uk": "відповідь",
+      "forms": [
+        "odpověď"
+      ],
+      "exampleCs": "odpověď",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odstranit",
+      "ru": "удалить",
+      "uk": "видалити",
+      "forms": [
+        "odstranit",
+        "odstraň"
+      ],
+      "exampleCs": "odstranit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "oděv",
+      "ru": "одежда",
+      "uk": "одяг",
+      "forms": [
+        "oděv",
+        "oděvu"
+      ],
+      "exampleCs": "oděv",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ohrožovat",
+      "ru": "угрожать",
+      "uk": "загрожувати",
+      "forms": [
+        "ohrožovat",
+        "ohrožuje"
+      ],
+      "exampleCs": "ohrožovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ohrožující",
+      "ru": "угрожающий",
+      "uk": "загрозливий",
+      "forms": [
+        "ohrožující",
+        "ohrožujícím"
+      ],
+      "exampleCs": "ohrožující",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "omezit",
+      "ru": "ограничить",
+      "uk": "обмежити",
+      "forms": [
+        "omezit",
+        "omez"
+      ],
+      "exampleCs": "omezit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "opakovaný",
+      "ru": "повторный",
+      "uk": "повторний",
+      "forms": [
+        "opakovaný",
+        "opakovaných",
+        "opakovanými"
+      ],
+      "exampleCs": "opakovaný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "opakovaně",
+      "ru": "повторно",
+      "uk": "повторно",
+      "forms": [
+        "opakovaně"
+      ],
+      "exampleCs": "opakovaně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "opatrně",
+      "ru": "осторожно",
+      "uk": "обережно",
+      "forms": [
+        "opatrně"
+      ],
+      "exampleCs": "opatrně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "operátor",
+      "ru": "оператор, диспетчер",
+      "uk": "оператор, диспетчер",
+      "forms": [
+        "operátor",
+        "operátora",
+        "operátorem",
+        "operátorovi"
+      ],
+      "exampleCs": "operátor",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "oslovit",
+      "ru": "обратиться к кому-либо",
+      "uk": "звернутися до когось",
+      "forms": [
+        "oslovit",
+        "oslov",
+        "oslovím"
+      ],
+      "exampleCs": "oslovit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "oslovení",
+      "ru": "обращение",
+      "uk": "звертання",
+      "forms": [
+        "oslovení"
+      ],
+      "exampleCs": "oslovení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ostrý",
+      "ru": "острый",
+      "uk": "гострий",
+      "forms": [
+        "ostrý",
+        "ostrým"
+      ],
+      "exampleCs": "ostrý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "otevřít",
+      "ru": "открыть",
+      "uk": "відкрити",
+      "forms": [
+        "otevřít",
+        "otevři"
+      ],
+      "exampleCs": "otevřít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "otočit",
+      "ru": "повернуть",
+      "uk": "повернути",
+      "forms": [
+        "otočit",
+        "otoč",
+        "otočím"
+      ],
+      "exampleCs": "otočit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "otázka",
+      "ru": "вопрос",
+      "uk": "запитання",
+      "forms": [
+        "otázka",
+        "otázek"
+      ],
+      "exampleCs": "otázka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "označit",
+      "ru": "обозначить",
+      "uk": "позначити",
+      "forms": [
+        "označit",
+        "označ"
+      ],
+      "exampleCs": "označit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ošetřit",
+      "ru": "обработать, оказать помощь",
+      "uk": "обробити, надати допомогу",
+      "forms": [
+        "ošetřit",
+        "ošetři",
+        "ošetřím"
+      ],
+      "exampleCs": "ošetřit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ošetřovat",
+      "ru": "обрабатывать, оказывать помощь",
+      "uk": "обробляти, надавати допомогу",
+      "forms": [
+        "ošetřovat"
+      ],
+      "exampleCs": "ošetřovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "oživování",
+      "ru": "реанимация, оживление",
+      "uk": "реанімація, оживлення",
+      "forms": [
+        "oživování"
+      ],
+      "exampleCs": "oživování",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pacient",
+      "ru": "пациент",
+      "uk": "пацієнт",
+      "forms": [
+        "pacient",
+        "pacienta"
+      ],
+      "exampleCs": "pacient",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "palec",
+      "ru": "большой палец",
+      "uk": "великий палець",
+      "forms": [
+        "palec",
+        "palců"
+      ],
+      "exampleCs": "palec",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pauza",
+      "ru": "пауза",
+      "uk": "пауза",
+      "forms": [
+        "pauza"
+      ],
+      "exampleCs": "pauza",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pevný",
+      "ru": "твёрдый, прочный",
+      "uk": "твердий, міцний",
+      "forms": [
+        "pevný",
+        "pevnou",
+        "pevné"
+      ],
+      "exampleCs": "pevný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pevně",
+      "ru": "крепко",
+      "uk": "міцно",
+      "forms": [
+        "pevně"
+      ],
+      "exampleCs": "pevně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "plíce",
+      "ru": "лёгкие",
+      "uk": "легені",
+      "forms": [
+        "plíce",
+        "plic"
+      ],
+      "exampleCs": "plíce",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "plně",
+      "ru": "полностью",
+      "uk": "повністю",
+      "forms": [
+        "plně"
+      ],
+      "exampleCs": "plně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pocit",
+      "ru": "ощущение",
+      "uk": "відчуття",
+      "forms": [
+        "pocit"
+      ],
+      "exampleCs": "pocit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "podezření",
+      "ru": "подозрение",
+      "uk": "підозра",
+      "forms": [
+        "podezření",
+        "podezřením"
+      ],
+      "exampleCs": "podezření",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "podložka",
+      "ru": "подстилка, опорная поверхность",
+      "uk": "підстилка, опорна поверхня",
+      "forms": [
+        "podložka",
+        "podložce",
+        "podložku"
+      ],
+      "exampleCs": "podložka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "podnět",
+      "ru": "раздражитель, стимул",
+      "uk": "подразник, стимул",
+      "forms": [
+        "podnět"
+      ],
+      "exampleCs": "podnět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "podrobný",
+      "ru": "подробный",
+      "uk": "докладний",
+      "forms": [
+        "podrobný"
+      ],
+      "exampleCs": "podrobný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "podávat",
+      "ru": "давать, подавать",
+      "uk": "давати, подавати",
+      "forms": [
+        "podávat",
+        "podáváme"
+      ],
+      "exampleCs": "podávat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pohnout",
+      "ru": "подвинуть",
+      "uk": "посунути",
+      "forms": [
+        "pohnout"
+      ],
+      "exampleCs": "pohnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pokračovat",
+      "ru": "продолжать",
+      "uk": "продовжувати",
+      "forms": [
+        "pokračovat",
+        "pokračuj",
+        "pokračují"
+      ],
+      "exampleCs": "pokračovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pokus",
+      "ru": "попытка",
+      "uk": "спроба",
+      "forms": [
+        "pokus",
+        "pokusech",
+        "pokusy",
+        "pokusů"
+      ],
+      "exampleCs": "pokus",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pokyn",
+      "ru": "указание",
+      "uk": "вказівка",
+      "forms": [
+        "pokyn",
+        "pokynem",
+        "pokynu",
+        "pokynů"
+      ],
+      "exampleCs": "pokyn",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "polovina",
+      "ru": "половина",
+      "uk": "половина",
+      "forms": [
+        "polovina",
+        "polovinu"
+      ],
+      "exampleCs": "polovina",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pomalý",
+      "ru": "медленный",
+      "uk": "повільний",
+      "forms": [
+        "pomalý",
+        "pomalé"
+      ],
+      "exampleCs": "pomalý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pomocník",
+      "ru": "помощник",
+      "uk": "помічник",
+      "forms": [
+        "pomocník",
+        "pomocníci"
+      ],
+      "exampleCs": "pomocník",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pomocí",
+      "ru": "с помощью",
+      "uk": "за допомогою",
+      "forms": [
+        "pomocí"
+      ],
+      "exampleCs": "pomocí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pomoci",
+      "ru": "помочь",
+      "uk": "допомогти",
+      "forms": [
+        "pomoci",
+        "pomoz"
+      ],
+      "exampleCs": "pomoci",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poměr",
+      "ru": "соотношение",
+      "uk": "співвідношення",
+      "forms": [
+        "poměr",
+        "poměru"
+      ],
+      "exampleCs": "poměr",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ponechat",
+      "ru": "оставить",
+      "uk": "залишити",
+      "forms": [
+        "ponechat",
+        "ponech",
+        "ponechám"
+      ],
+      "exampleCs": "ponechat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "popisovat",
+      "ru": "описывать",
+      "uk": "описувати",
+      "forms": [
+        "popisovat",
+        "popisuj"
+      ],
+      "exampleCs": "popisovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "popsat",
+      "ru": "описать",
+      "uk": "описати",
+      "forms": [
+        "popsat",
+        "popiš"
+      ],
+      "exampleCs": "popsat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poranění",
+      "ru": "ранение, травма",
+      "uk": "поранення, травма",
+      "forms": [
+        "poranění",
+        "poraněním"
+      ],
+      "exampleCs": "poranění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "posadit",
+      "ru": "посадить",
+      "uk": "посадити",
+      "forms": [
+        "posadit",
+        "posadím"
+      ],
+      "exampleCs": "posadit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poskytnout",
+      "ru": "оказать, предоставить",
+      "uk": "надати",
+      "forms": [
+        "poskytnout",
+        "poskytnete",
+        "poskytni",
+        "poskytnu"
+      ],
+      "exampleCs": "poskytnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poskytnutí",
+      "ru": "оказание, предоставление",
+      "uk": "надання",
+      "forms": [
+        "poskytnutí"
+      ],
+      "exampleCs": "poskytnutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poslouchat",
+      "ru": "слушать",
+      "uk": "слухати",
+      "forms": [
+        "poslouchat",
+        "poslouchej"
+      ],
+      "exampleCs": "poslouchat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "postih",
+      "ru": "наказание, санкция",
+      "uk": "покарання, санкція",
+      "forms": [
+        "postih"
+      ],
+      "exampleCs": "postih",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "postup",
+      "ru": "порядок действий",
+      "uk": "порядок дій",
+      "forms": [
+        "postup"
+      ],
+      "exampleCs": "postup",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "postupovat",
+      "ru": "действовать, следовать порядку",
+      "uk": "діяти, дотримуватися порядку",
+      "forms": [
+        "postupovat"
+      ],
+      "exampleCs": "postupovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poté",
+      "ru": "затем",
+      "uk": "потім",
+      "forms": [
+        "poté"
+      ],
+      "exampleCs": "poté",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "potřeba",
+      "ru": "необходимость",
+      "uk": "потреба",
+      "forms": [
+        "potřeba",
+        "potřebě"
+      ],
+      "exampleCs": "potřeba",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "použít",
+      "ru": "использовать",
+      "uk": "використати",
+      "forms": [
+        "použít",
+        "použij"
+      ],
+      "exampleCs": "použít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "povinen",
+      "ru": "обязан",
+      "uk": "зобов’язаний",
+      "forms": [
+        "povinen"
+      ],
+      "exampleCs": "povinen",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pověřit",
+      "ru": "поручить",
+      "uk": "доручити",
+      "forms": [
+        "pověřit",
+        "pověř"
+      ],
+      "exampleCs": "pověřit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poškození",
+      "ru": "повреждение",
+      "uk": "пошкодження",
+      "forms": [
+        "poškození"
+      ],
+      "exampleCs": "poškození",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "poslat",
+      "ru": "послать",
+      "uk": "послати",
+      "forms": [
+        "poslat",
+        "pošli"
+      ],
+      "exampleCs": "poslat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "požár",
+      "ru": "пожар",
+      "uk": "пожежа",
+      "forms": [
+        "požár"
+      ],
+      "exampleCs": "požár",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "praha",
+      "ru": "Прага",
+      "uk": "Прага",
+      "forms": [
+        "praha"
+      ],
+      "exampleCs": "praha",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "praktický",
+      "ru": "практический",
+      "uk": "практичний",
+      "forms": [
+        "praktický",
+        "praktická",
+        "praktické"
+      ],
+      "exampleCs": "praktický",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pravidelně",
+      "ru": "регулярно",
+      "uk": "регулярно",
+      "forms": [
+        "pravidelně"
+      ],
+      "exampleCs": "pravidelně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pravý",
+      "ru": "правый",
+      "uk": "правий",
+      "forms": [
+        "pravý",
+        "pravou"
+      ],
+      "exampleCs": "pravý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "praxe",
+      "ru": "практика",
+      "uk": "практика",
+      "forms": [
+        "praxe",
+        "praxi"
+      ],
+      "exampleCs": "praxe",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "prodlení",
+      "ru": "задержка, промедление",
+      "uk": "затримка, зволікання",
+      "forms": [
+        "prodlení"
+      ],
+      "exampleCs": "prodlení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "proplést",
+      "ru": "переплести",
+      "uk": "переплести",
+      "forms": [
+        "proplést",
+        "propleť"
+      ],
+      "exampleCs": "proplést",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "propnout",
+      "ru": "выпрямить, разогнуть",
+      "uk": "випрямити, розігнути",
+      "forms": [
+        "propnout",
+        "propni"
+      ],
+      "exampleCs": "propnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "protože",
+      "ru": "потому что",
+      "uk": "тому що",
+      "forms": [
+        "protože"
+      ],
+      "exampleCs": "protože",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "provádět",
+      "ru": "выполнять",
+      "uk": "виконувати",
+      "forms": [
+        "provádět",
+        "prováděj"
+      ],
+      "exampleCs": "provádět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "prováděný",
+      "ru": "выполняемый",
+      "uk": "виконуваний",
+      "forms": [
+        "prováděný",
+        "prováděnou"
+      ],
+      "exampleCs": "prováděný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "provádění",
+      "ru": "выполнение",
+      "uk": "виконання",
+      "forms": [
+        "provádění"
+      ],
+      "exampleCs": "provádění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "provést",
+      "ru": "выполнить",
+      "uk": "виконати",
+      "forms": [
+        "provést"
+      ],
+      "exampleCs": "provést",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "proč",
+      "ru": "почему",
+      "uk": "чому",
+      "forms": [
+        "proč"
+      ],
+      "exampleCs": "proč",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "projít",
+      "ru": "пройти",
+      "uk": "пройти",
+      "forms": [
+        "projít",
+        "prošel"
+      ],
+      "exampleCs": "projít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "puls",
+      "ru": "пульс",
+      "uk": "пульс",
+      "forms": [
+        "puls",
+        "pulz"
+      ],
+      "exampleCs": "puls",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pád",
+      "ru": "падение",
+      "uk": "падіння",
+      "forms": [
+        "pád",
+        "pádu"
+      ],
+      "exampleCs": "pád",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pít",
+      "ru": "пить",
+      "uk": "пити",
+      "forms": [
+        "pít"
+      ],
+      "exampleCs": "pít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "předaný",
+      "ru": "переданный",
+      "uk": "переданий",
+      "forms": [
+        "předaný",
+        "předaném"
+      ],
+      "exampleCs": "předaný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "předklonit",
+      "ru": "наклонить вперёд",
+      "uk": "нахилити вперед",
+      "forms": [
+        "předklonit",
+        "předkloním"
+      ],
+      "exampleCs": "předklonit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "předmět",
+      "ru": "предмет",
+      "uk": "предмет",
+      "forms": [
+        "předmět",
+        "předmětem",
+        "předmětu"
+      ],
+      "exampleCs": "předmět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "předsunout",
+      "ru": "выдвинуть вперёд",
+      "uk": "висунути вперед",
+      "forms": [
+        "předsunout",
+        "předsunu"
+      ],
+      "exampleCs": "předsunout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "předsunutí",
+      "ru": "выдвижение вперёд",
+      "uk": "висування вперед",
+      "forms": [
+        "předsunutí",
+        "předsunutím"
+      ],
+      "exampleCs": "předsunutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přejít",
+      "ru": "перейти",
+      "uk": "перейти",
+      "forms": [
+        "přejít",
+        "přejdi"
+      ],
+      "exampleCs": "přejít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přerušit",
+      "ru": "прервать",
+      "uk": "перервати",
+      "forms": [
+        "přerušit",
+        "přeruším"
+      ],
+      "exampleCs": "přerušit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přesný",
+      "ru": "точный",
+      "uk": "точний",
+      "forms": [
+        "přesný",
+        "přesné"
+      ],
+      "exampleCs": "přesný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přestat",
+      "ru": "перестать",
+      "uk": "перестати",
+      "forms": [
+        "přestat",
+        "přestane"
+      ],
+      "exampleCs": "přestat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přesun",
+      "ru": "перемещение",
+      "uk": "переміщення",
+      "forms": [
+        "přesun",
+        "přesunu"
+      ],
+      "exampleCs": "přesun",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "převzetí",
+      "ru": "принятие, передача ответственности",
+      "uk": "прийняття, передача відповідальності",
+      "forms": [
+        "převzetí"
+      ],
+      "exampleCs": "převzetí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přežití",
+      "ru": "выживание",
+      "uk": "виживання",
+      "forms": [
+        "přežití"
+      ],
+      "exampleCs": "přežití",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přibližně",
+      "ru": "приблизительно",
+      "uk": "приблизно",
+      "forms": [
+        "přibližně"
+      ],
+      "exampleCs": "přibližně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přistupovat",
+      "ru": "подходить, приступать",
+      "uk": "підходити, братися",
+      "forms": [
+        "přistupovat",
+        "přistupuj"
+      ],
+      "exampleCs": "přistupovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přivolat",
+      "ru": "вызвать",
+      "uk": "викликати",
+      "forms": [
+        "přivolat",
+        "přivolej",
+        "přivolám",
+        "přivoláme",
+        "přivoláš"
+      ],
+      "exampleCs": "přivolat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přivolání",
+      "ru": "вызов",
+      "uk": "виклик",
+      "forms": [
+        "přivolání"
+      ],
+      "exampleCs": "přivolání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "pří",
+      "ru": "при (опечатка в источнике: při)",
+      "uk": "при (описка у джерелі: při)",
+      "forms": [
+        "pří"
+      ],
+      "exampleCs": "pří",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přímý",
+      "ru": "прямой",
+      "uk": "прямий",
+      "forms": [
+        "přímý",
+        "přímým"
+      ],
+      "exampleCs": "přímý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "případ",
+      "ru": "случай",
+      "uk": "випадок",
+      "forms": [
+        "případ",
+        "případě"
+      ],
+      "exampleCs": "případ",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "příprava",
+      "ru": "подготовка",
+      "uk": "підготовка",
+      "forms": [
+        "příprava",
+        "přípravy"
+      ],
+      "exampleCs": "příprava",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "přístroj",
+      "ru": "прибор",
+      "uk": "прилад",
+      "forms": [
+        "přístroj",
+        "přístrojem"
+      ],
+      "exampleCs": "přístroj",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "příznak",
+      "ru": "признак, симптом",
+      "uk": "ознака, симптом",
+      "forms": [
+        "příznak",
+        "příznaky"
+      ],
+      "exampleCs": "příznak",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "reagovat",
+      "ru": "реагировать",
+      "uk": "реагувати",
+      "forms": [
+        "reagovat",
+        "reaguje"
+      ],
+      "exampleCs": "reagovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "reagující",
+      "ru": "реагирующий",
+      "uk": "той, хто реагує",
+      "forms": [
+        "reagující",
+        "reagujícího"
+      ],
+      "exampleCs": "reagující",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "reakce",
+      "ru": "реакция",
+      "uk": "реакція",
+      "forms": [
+        "reakce",
+        "reakci"
+      ],
+      "exampleCs": "reakce",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "resuscitace",
+      "ru": "реанимация",
+      "uk": "реанімація",
+      "forms": [
+        "resuscitace",
+        "resuscitaci"
+      ],
+      "exampleCs": "resuscitace",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "resuscitovat",
+      "ru": "реанимировать",
+      "uk": "реанімувати",
+      "forms": [
+        "resuscitovat"
+      ],
+      "exampleCs": "resuscitovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "riziko",
+      "ru": "риск",
+      "uk": "ризик",
+      "forms": [
+        "riziko",
+        "rizika",
+        "riziku"
+      ],
+      "exampleCs": "riziko",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rovnocenný",
+      "ru": "равноценный",
+      "uk": "рівноцінний",
+      "forms": [
+        "rovnocenný",
+        "rovnocenné"
+      ],
+      "exampleCs": "rovnocenný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rozdělit",
+      "ru": "разделить, распределить",
+      "uk": "розділити, розподілити",
+      "forms": [
+        "rozdělit",
+        "rozděl"
+      ],
+      "exampleCs": "rozdělit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rozhlédnout",
+      "ru": "осмотреться",
+      "uk": "озирнутися",
+      "forms": [
+        "rozhlédnout",
+        "rozhlédni"
+      ],
+      "exampleCs": "rozhlédnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rozhodnutí",
+      "ru": "решение",
+      "uk": "рішення",
+      "forms": [
+        "rozhodnutí"
+      ],
+      "exampleCs": "rozhodnutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rozpoznat",
+      "ru": "распознать",
+      "uk": "розпізнати",
+      "forms": [
+        "rozpoznat",
+        "rozpoznej"
+      ],
+      "exampleCs": "rozpoznat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rozšíření",
+      "ru": "расширение, дополнение",
+      "uk": "розширення, доповнення",
+      "forms": [
+        "rozšíření"
+      ],
+      "exampleCs": "rozšíření",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rp",
+      "ru": "идентификатор экзаменационного вопроса",
+      "uk": "ідентифікатор екзаменаційного запитання",
+      "forms": [
+        "rp"
+      ],
+      "exampleCs": "rp",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rukavice",
+      "ru": "перчатка",
+      "uk": "рукавичка",
+      "forms": [
+        "rukavice",
+        "rukavicemi"
+      ],
+      "exampleCs": "rukavice",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ruka",
+      "ru": "рука",
+      "uk": "рука",
+      "forms": [
+        "ruka",
+        "rukou"
+      ],
+      "exampleCs": "ruka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rutinně",
+      "ru": "рутинно, по привычке",
+      "uk": "рутинно, за звичкою",
+      "forms": [
+        "rutinně"
+      ],
+      "exampleCs": "rutinně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ručně",
+      "ru": "вручную",
+      "uk": "вручну",
+      "forms": [
+        "ručně"
+      ],
+      "exampleCs": "ručně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "rychlý",
+      "ru": "быстрый",
+      "uk": "швидкий",
+      "forms": [
+        "rychlý",
+        "rychlou"
+      ],
+      "exampleCs": "rychlý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "růžový",
+      "ru": "розовый",
+      "uk": "рожевий",
+      "forms": [
+        "růžový"
+      ],
+      "exampleCs": "růžový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sám",
+      "ru": "сам",
+      "uk": "сам",
+      "forms": [
+        "sám",
+        "sami"
+      ],
+      "exampleCs": "sám",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "schopný",
+      "ru": "способный",
+      "uk": "здатний",
+      "forms": [
+        "schopný"
+      ],
+      "exampleCs": "schopný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sdělit",
+      "ru": "сообщить",
+      "uk": "повідомити",
+      "forms": [
+        "sdělit",
+        "sděl"
+      ],
+      "exampleCs": "sdělit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sed",
+      "ru": "сидячее положение",
+      "uk": "сидяче положення",
+      "forms": [
+        "sed",
+        "sedu"
+      ],
+      "exampleCs": "sed",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sejmout",
+      "ru": "снять",
+      "uk": "зняти",
+      "forms": [
+        "sejmout",
+        "sejme"
+      ],
+      "exampleCs": "sejmout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sejmutí",
+      "ru": "снятие",
+      "uk": "зняття",
+      "forms": [
+        "sejmutí"
+      ],
+      "exampleCs": "sejmutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "silný",
+      "ru": "сильный",
+      "uk": "сильний",
+      "forms": [
+        "silný",
+        "silnou",
+        "silné",
+        "silným"
+      ],
+      "exampleCs": "silný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "silně",
+      "ru": "сильно",
+      "uk": "сильно",
+      "forms": [
+        "silně"
+      ],
+      "exampleCs": "silně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "sklonění",
+      "ru": "наклон",
+      "uk": "нахил",
+      "forms": [
+        "sklonění"
+      ],
+      "exampleCs": "sklonění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "slepý",
+      "ru": "слепой, вслепую",
+      "uk": "сліпий, наосліп",
+      "forms": [
+        "slepý",
+        "slepé"
+      ],
+      "exampleCs": "slepý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "složený",
+      "ru": "сложенный",
+      "uk": "складений",
+      "forms": [
+        "složený",
+        "složeným"
+      ],
+      "exampleCs": "složený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "služba",
+      "ru": "служба",
+      "uk": "служба",
+      "forms": [
+        "služba",
+        "službu"
+      ],
+      "exampleCs": "služba",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "slyšet",
+      "ru": "слышать",
+      "uk": "чути",
+      "forms": [
+        "slyšet",
+        "slyším",
+        "slyšíš"
+      ],
+      "exampleCs": "slyšet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "smět",
+      "ru": "иметь разрешение, мочь",
+      "uk": "мати дозвіл, могти",
+      "forms": [
+        "smět",
+        "smím"
+      ],
+      "exampleCs": "smět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "snažení",
+      "ru": "старания",
+      "uk": "старання",
+      "forms": [
+        "snažení"
+      ],
+      "exampleCs": "snažení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "snažit",
+      "ru": "стараться",
+      "uk": "намагатися",
+      "forms": [
+        "snažit",
+        "snažím"
+      ],
+      "exampleCs": "snažit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "snižovat",
+      "ru": "снижать",
+      "uk": "знижувати",
+      "forms": [
+        "snižovat",
+        "snižuje"
+      ],
+      "exampleCs": "snižovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "snímání",
+      "ru": "снятие",
+      "uk": "зняття",
+      "forms": [
+        "snímání"
+      ],
+      "exampleCs": "snímání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "soubor",
+      "ru": "набор, файл",
+      "uk": "набір, файл",
+      "forms": [
+        "soubor",
+        "souboru"
+      ],
+      "exampleCs": "soubor",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "souběžně",
+      "ru": "одновременно",
+      "uk": "одночасно",
+      "forms": [
+        "souběžně"
+      ],
+      "exampleCs": "souběžně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "současný",
+      "ru": "нынешний, одновременный",
+      "uk": "сучасний, одночасний",
+      "forms": [
+        "současný",
+        "současným"
+      ],
+      "exampleCs": "současný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "spolupracovat",
+      "ru": "сотрудничать",
+      "uk": "співпрацювати",
+      "forms": [
+        "spolupracovat",
+        "spolupracují"
+      ],
+      "exampleCs": "spolupracovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "správný",
+      "ru": "правильный",
+      "uk": "правильний",
+      "forms": [
+        "správný",
+        "správná"
+      ],
+      "exampleCs": "správný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stabilizace",
+      "ru": "стабилизация",
+      "uk": "стабілізація",
+      "forms": [
+        "stabilizace",
+        "stabilizací"
+      ],
+      "exampleCs": "stabilizace",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stabilizovat",
+      "ru": "стабилизировать, фиксировать",
+      "uk": "стабілізувати, фіксувати",
+      "forms": [
+        "stabilizovat",
+        "stabilizuje",
+        "stabilizuji"
+      ],
+      "exampleCs": "stabilizovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stát",
+      "ru": "стоять; stát se — случиться",
+      "uk": "стояти; stát se — статися",
+      "forms": [
+        "stát",
+        "stalo"
+      ],
+      "exampleCs": "stát",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stav",
+      "ru": "состояние",
+      "uk": "стан",
+      "forms": [
+        "stav",
+        "stavem"
+      ],
+      "exampleCs": "stav",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stačit",
+      "ru": "быть достаточным",
+      "uk": "бути достатнім",
+      "forms": [
+        "stačit",
+        "stačí"
+      ],
+      "exampleCs": "stačit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stlačit",
+      "ru": "сжать, надавить",
+      "uk": "стиснути, натиснути",
+      "forms": [
+        "stlačit",
+        "stlačím"
+      ],
+      "exampleCs": "stlačit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "strana",
+      "ru": "сторона",
+      "uk": "сторона",
+      "forms": [
+        "strana",
+        "stranu"
+      ],
+      "exampleCs": "strana",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "studený",
+      "ru": "холодный",
+      "uk": "холодний",
+      "forms": [
+        "studený",
+        "studené"
+      ],
+      "exampleCs": "studený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "stěžovat",
+      "ru": "жаловаться",
+      "uk": "скаржитися",
+      "forms": [
+        "stěžovat",
+        "stěžuje"
+      ],
+      "exampleCs": "stěžovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "střídat",
+      "ru": "чередовать, сменяться",
+      "uk": "чергувати, змінюватися",
+      "forms": [
+        "střídat",
+        "střídej"
+      ],
+      "exampleCs": "střídat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "svoboda",
+      "ru": "свобода",
+      "uk": "свобода",
+      "forms": [
+        "svoboda",
+        "svobody"
+      ],
+      "exampleCs": "svoboda",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "svírat",
+      "ru": "сжимать",
+      "uk": "стискати",
+      "forms": [
+        "svírat",
+        "svírá"
+      ],
+      "exampleCs": "svírat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "svůj",
+      "ru": "свой",
+      "uk": "свій",
+      "forms": [
+        "svůj",
+        "svých"
+      ],
+      "exampleCs": "svůj",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "svědek",
+      "ru": "свидетель",
+      "uk": "свідок",
+      "forms": [
+        "svědek",
+        "svědka",
+        "svědky"
+      ],
+      "exampleCs": "svědek",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tah",
+      "ru": "тяга, потягивание",
+      "uk": "тяга, потягування",
+      "forms": [
+        "tah"
+      ],
+      "exampleCs": "tah",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ty",
+      "ru": "ты",
+      "uk": "ти",
+      "forms": [
+        "ty",
+        "tebe"
+      ],
+      "exampleCs": "ty",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tekutina",
+      "ru": "жидкость",
+      "uk": "рідина",
+      "forms": [
+        "tekutina",
+        "tekutin",
+        "tekutiny"
+      ],
+      "exampleCs": "tekutina",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "telefonní",
+      "ru": "телефонный",
+      "uk": "телефонний",
+      "forms": [
+        "telefonní",
+        "telefonním"
+      ],
+      "exampleCs": "telefonní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "test",
+      "ru": "тест",
+      "uk": "тест",
+      "forms": [
+        "test",
+        "testech",
+        "testu",
+        "testy"
+      ],
+      "exampleCs": "test",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "testový",
+      "ru": "тестовый",
+      "uk": "тестовий",
+      "forms": [
+        "testový"
+      ],
+      "exampleCs": "testový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tj",
+      "ru": "то есть",
+      "uk": "тобто",
+      "forms": [
+        "tj"
+      ],
+      "exampleCs": "tj",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tkanina",
+      "ru": "ткань, тканевый материал",
+      "uk": "тканина, тканинний матеріал",
+      "forms": [
+        "tkanina",
+        "tkaninu"
+      ],
+      "exampleCs": "tkanina",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tkáň",
+      "ru": "ткань организма",
+      "uk": "тканина організму",
+      "forms": [
+        "tkáň",
+        "tkáně"
+      ],
+      "exampleCs": "tkáň",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tlačit",
+      "ru": "давить",
+      "uk": "тиснути",
+      "forms": [
+        "tlačit",
+        "tlač"
+      ],
+      "exampleCs": "tlačit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "trestný",
+      "ru": "наказуемый",
+      "uk": "караний",
+      "forms": [
+        "trestný",
+        "trestné"
+      ],
+      "exampleCs": "trestný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "trestní",
+      "ru": "уголовный",
+      "uk": "кримінальний",
+      "forms": [
+        "trestní"
+      ],
+      "exampleCs": "trestní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "trest",
+      "ru": "наказание",
+      "uk": "покарання",
+      "forms": [
+        "trest",
+        "trestu"
+      ],
+      "exampleCs": "trest",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "turniket",
+      "ru": "кровоостанавливающий жгут",
+      "uk": "кровоспинний турнікет",
+      "forms": [
+        "turniket"
+      ],
+      "exampleCs": "turniket",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tvář",
+      "ru": "лицо, щека",
+      "uk": "обличчя, щока",
+      "forms": [
+        "tvář",
+        "tváři"
+      ],
+      "exampleCs": "tvář",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "tísňový",
+      "ru": "экстренный",
+      "uk": "екстрений",
+      "forms": [
+        "tísňový",
+        "tísňová"
+      ],
+      "exampleCs": "tísňový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "těleso",
+      "ru": "тело, предмет",
+      "uk": "тіло, предмет",
+      "forms": [
+        "těleso",
+        "těles"
+      ],
+      "exampleCs": "těleso",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "udržovat",
+      "ru": "поддерживать",
+      "uk": "підтримувати",
+      "forms": [
+        "udržovat",
+        "udržuj"
+      ],
+      "exampleCs": "udržovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "udělat",
+      "ru": "сделать",
+      "uk": "зробити",
+      "forms": [
+        "udělat",
+        "uděláte"
+      ],
+      "exampleCs": "udělat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "uložit",
+      "ru": "уложить, сохранить",
+      "uk": "покласти, зберегти",
+      "forms": [
+        "uložit"
+      ],
+      "exampleCs": "uložit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "umět",
+      "ru": "уметь",
+      "uk": "уміти",
+      "forms": [
+        "umět",
+        "umíš"
+      ],
+      "exampleCs": "umět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "umělý",
+      "ru": "искусственный",
+      "uk": "штучний",
+      "forms": [
+        "umělý",
+        "umělé",
+        "umělém"
+      ],
+      "exampleCs": "umělý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "upadnout",
+      "ru": "упасть, впасть",
+      "uk": "впасти",
+      "forms": [
+        "upadnout",
+        "upadne"
+      ],
+      "exampleCs": "upadnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "uvést",
+      "ru": "указать",
+      "uk": "зазначити",
+      "forms": [
+        "uvést",
+        "uveď"
+      ],
+      "exampleCs": "uvést",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "uvolnit",
+      "ru": "освободить",
+      "uk": "звільнити",
+      "forms": [
+        "uvolnit",
+        "uvolni",
+        "uvolním",
+        "uvolníš"
+      ],
+      "exampleCs": "uvolnit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ušní",
+      "ru": "ушной",
+      "uk": "вушний",
+      "forms": [
+        "ušní",
+        "ušního"
+      ],
+      "exampleCs": "ušní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vdechnout",
+      "ru": "вдохнуть",
+      "uk": "вдихнути",
+      "forms": [
+        "vdechnout"
+      ],
+      "exampleCs": "vdechnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vdechovat",
+      "ru": "вдыхать, вдувать",
+      "uk": "вдихати, вдувати",
+      "forms": [
+        "vdechovat",
+        "vdechuji"
+      ],
+      "exampleCs": "vdechovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "velmi",
+      "ru": "очень",
+      "uk": "дуже",
+      "forms": [
+        "velmi"
+      ],
+      "exampleCs": "velmi",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "viditelný",
+      "ru": "видимый",
+      "uk": "видимий",
+      "forms": [
+        "viditelný",
+        "viditelné",
+        "viditelném",
+        "viditelným"
+      ],
+      "exampleCs": "viditelný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vidět",
+      "ru": "видеть",
+      "uk": "бачити",
+      "forms": [
+        "vidět",
+        "vidíte",
+        "vidíš"
+      ],
+      "exampleCs": "vidět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "viz",
+      "ru": "смотри",
+      "uk": "дивись",
+      "forms": [
+        "viz"
+      ],
+      "exampleCs": "viz",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vlastní",
+      "ru": "собственный",
+      "uk": "власний",
+      "forms": [
+        "vlastní",
+        "vlastního",
+        "vlastnímu"
+      ],
+      "exampleCs": "vlastní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vlažný",
+      "ru": "чуть тёплый",
+      "uk": "теплуватий",
+      "forms": [
+        "vlažný",
+        "vlažných"
+      ],
+      "exampleCs": "vlažný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vnímat",
+      "ru": "воспринимать",
+      "uk": "сприймати",
+      "forms": [
+        "vnímat",
+        "vnímej"
+      ],
+      "exampleCs": "vnímat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "volat",
+      "ru": "звонить, звать",
+      "uk": "телефонувати, кликати",
+      "forms": [
+        "volat",
+        "voláme"
+      ],
+      "exampleCs": "volat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vůz",
+      "ru": "автомобиль",
+      "uk": "автомобіль",
+      "forms": [
+        "vůz",
+        "voze",
+        "vozu"
+      ],
+      "exampleCs": "vůz",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vrátit",
+      "ru": "вернуть",
+      "uk": "повернути",
+      "forms": [
+        "vrátit",
+        "vrátím"
+      ],
+      "exampleCs": "vrátit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyndat",
+      "ru": "вынуть",
+      "uk": "вийняти",
+      "forms": [
+        "vyndat"
+      ],
+      "exampleCs": "vyndat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vypnout",
+      "ru": "выключить",
+      "uk": "вимкнути",
+      "forms": [
+        "vypnout",
+        "vypni"
+      ],
+      "exampleCs": "vypnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyprostit",
+      "ru": "высвободить",
+      "uk": "вивільнити",
+      "forms": [
+        "vyprostit"
+      ],
+      "exampleCs": "vyprostit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyprošťování",
+      "ru": "высвобождение",
+      "uk": "вивільнення",
+      "forms": [
+        "vyprošťování"
+      ],
+      "exampleCs": "vyprošťování",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vytažení",
+      "ru": "извлечение",
+      "uk": "витягування",
+      "forms": [
+        "vytažení"
+      ],
+      "exampleCs": "vytažení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vytáhnout",
+      "ru": "вытащить",
+      "uk": "витягнути",
+      "forms": [
+        "vytáhnout"
+      ],
+      "exampleCs": "vytáhnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vytírání",
+      "ru": "вытирание",
+      "uk": "витирання",
+      "forms": [
+        "vytírání"
+      ],
+      "exampleCs": "vytírání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyčerpání",
+      "ru": "истощение",
+      "uk": "виснаження",
+      "forms": [
+        "vyčerpání"
+      ],
+      "exampleCs": "vyčerpání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyčistit",
+      "ru": "очистить",
+      "uk": "очистити",
+      "forms": [
+        "vyčistit",
+        "vyčistím"
+      ],
+      "exampleCs": "vyčistit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyčištění",
+      "ru": "очистка",
+      "uk": "очищення",
+      "forms": [
+        "vyčištění"
+      ],
+      "exampleCs": "vyčištění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyčkat",
+      "ru": "подождать",
+      "uk": "почекати",
+      "forms": [
+        "vyčkat",
+        "vyčkám"
+      ],
+      "exampleCs": "vyčkat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyškolení",
+      "ru": "обучение; обученные люди",
+      "uk": "навчання; навчені люди",
+      "forms": [
+        "vyškolení"
+      ],
+      "exampleCs": "vyškolení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyškolený",
+      "ru": "обученный",
+      "uk": "навчений",
+      "forms": [
+        "vyškolený"
+      ],
+      "exampleCs": "vyškolený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vyžadovat",
+      "ru": "требовать",
+      "uk": "вимагати",
+      "forms": [
+        "vyžadovat",
+        "vyžadují"
+      ],
+      "exampleCs": "vyžadovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vzduch",
+      "ru": "воздух",
+      "uk": "повітря",
+      "forms": [
+        "vzduch",
+        "vzduchu"
+      ],
+      "exampleCs": "vzduch",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vzdát",
+      "ru": "отказаться, сдаться",
+      "uk": "відмовитися, здатися",
+      "forms": [
+        "vzdát",
+        "vzdám"
+      ],
+      "exampleCs": "vzdát",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vzhůru",
+      "ru": "вверх",
+      "uk": "угору",
+      "forms": [
+        "vzhůru"
+      ],
+      "exampleCs": "vzhůru",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vědět",
+      "ru": "знать",
+      "uk": "знати",
+      "forms": [
+        "vědět",
+        "víš"
+      ],
+      "exampleCs": "vědět",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "výcvik",
+      "ru": "подготовка, обучение",
+      "uk": "підготовка, навчання",
+      "forms": [
+        "výcvik"
+      ],
+      "exampleCs": "výcvik",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "včasný",
+      "ru": "своевременный",
+      "uk": "своєчасний",
+      "forms": [
+        "včasný",
+        "včasné"
+      ],
+      "exampleCs": "včasný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "věk",
+      "ru": "возраст",
+      "uk": "вік",
+      "forms": [
+        "věk",
+        "věku"
+      ],
+      "exampleCs": "věk",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vůbec",
+      "ru": "вообще",
+      "uk": "взагалі",
+      "forms": [
+        "vůbec"
+      ],
+      "exampleCs": "vůbec",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "vůle",
+      "ru": "воля",
+      "uk": "воля",
+      "forms": [
+        "vůle"
+      ],
+      "exampleCs": "vůle",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zabodnutý",
+      "ru": "вонзившийся",
+      "uk": "встромлений",
+      "forms": [
+        "zabodnutý",
+        "zabodnuté"
+      ],
+      "exampleCs": "zabodnutý",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zachovat",
+      "ru": "сохранить",
+      "uk": "зберегти",
+      "forms": [
+        "zachovat",
+        "zachováte"
+      ],
+      "exampleCs": "zachovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zachraňovaný",
+      "ru": "спасаемый",
+      "uk": "той, кого рятують",
+      "forms": [
+        "zachraňovaný",
+        "zachraňovaného"
+      ],
+      "exampleCs": "zachraňovaný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zachraňující",
+      "ru": "спасающий",
+      "uk": "той, хто рятує",
+      "forms": [
+        "zachraňující"
+      ],
+      "exampleCs": "zachraňující",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zachránce",
+      "ru": "спасатель",
+      "uk": "рятувальник",
+      "forms": [
+        "zachránce",
+        "zachránci",
+        "zachráncích"
+      ],
+      "exampleCs": "zachránce",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zachránit",
+      "ru": "спасти",
+      "uk": "врятувати",
+      "forms": [
+        "zachránit"
+      ],
+      "exampleCs": "zachránit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "záda",
+      "ru": "спина",
+      "uk": "спина",
+      "forms": [
+        "záda",
+        "zad",
+        "zádech"
+      ],
+      "exampleCs": "záda",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zahájit",
+      "ru": "начать",
+      "uk": "розпочати",
+      "forms": [
+        "zahájit",
+        "zahaj",
+        "zahájím",
+        "zahájíte",
+        "zahájíš"
+      ],
+      "exampleCs": "zahájit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zahájení",
+      "ru": "начало",
+      "uk": "початок",
+      "forms": [
+        "zahájení"
+      ],
+      "exampleCs": "zahájení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zajistit",
+      "ru": "обеспечить",
+      "uk": "забезпечити",
+      "forms": [
+        "zajistit",
+        "zajisti",
+        "zajistím",
+        "zajistíte"
+      ],
+      "exampleCs": "zajistit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zajištění",
+      "ru": "обеспечение",
+      "uk": "забезпечення",
+      "forms": [
+        "zajištění",
+        "zajištěním"
+      ],
+      "exampleCs": "zajištění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zajišťovat",
+      "ru": "обеспечивать",
+      "uk": "забезпечувати",
+      "forms": [
+        "zajišťovat"
+      ],
+      "exampleCs": "zajišťovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zaklonit",
+      "ru": "запрокинуть",
+      "uk": "закинути назад",
+      "forms": [
+        "zaklonit",
+        "zakloním"
+      ],
+      "exampleCs": "zaklonit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zapnout",
+      "ru": "включить",
+      "uk": "увімкнути",
+      "forms": [
+        "zapnout",
+        "zapni"
+      ],
+      "exampleCs": "zapnout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zapojit",
+      "ru": "подключить",
+      "uk": "підключити",
+      "forms": [
+        "zapojit",
+        "zapoj"
+      ],
+      "exampleCs": "zapojit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zatlačení",
+      "ru": "нажатие",
+      "uk": "натискання",
+      "forms": [
+        "zatlačení"
+      ],
+      "exampleCs": "zatlačení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zatřást",
+      "ru": "потрясти",
+      "uk": "потрусити",
+      "forms": [
+        "zatřást",
+        "zatřes"
+      ],
+      "exampleCs": "zatřást",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zavolat",
+      "ru": "позвонить, позвать",
+      "uk": "зателефонувати, покликати",
+      "forms": [
+        "zavolat",
+        "zavolej",
+        "zavolám"
+      ],
+      "exampleCs": "zavolat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "začít",
+      "ru": "начать",
+      "uk": "почати",
+      "forms": [
+        "začít",
+        "začne",
+        "začnu"
+      ],
+      "exampleCs": "začít",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "začínat",
+      "ru": "начинать",
+      "uk": "починати",
+      "forms": [
+        "začínat",
+        "začíná"
+      ],
+      "exampleCs": "začínat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zbytečný",
+      "ru": "лишний, ненужный",
+      "uk": "зайвий, непотрібний",
+      "forms": [
+        "zbytečný",
+        "zbytečné"
+      ],
+      "exampleCs": "zbytečný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zbytečně",
+      "ru": "напрасно, без необходимости",
+      "uk": "даремно, без потреби",
+      "forms": [
+        "zbytečně"
+      ],
+      "exampleCs": "zbytečně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zdravotnický",
+      "ru": "медицинский",
+      "uk": "медичний",
+      "forms": [
+        "zdravotnický",
+        "zdravotnickou",
+        "zdravotnická",
+        "zdravotnickým"
+      ],
+      "exampleCs": "zdravotnický",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zdržení",
+      "ru": "задержка",
+      "uk": "затримка",
+      "forms": [
+        "zdržení"
+      ],
+      "exampleCs": "zdržení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zdůrazňovat",
+      "ru": "подчёркивать",
+      "uk": "наголошувати",
+      "forms": [
+        "zdůrazňovat",
+        "zdůrazňuje"
+      ],
+      "exampleCs": "zdůrazňovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zevní",
+      "ru": "наружный",
+      "uk": "зовнішній",
+      "forms": [
+        "zevní"
+      ],
+      "exampleCs": "zevní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zhoršení",
+      "ru": "ухудшение",
+      "uk": "погіршення",
+      "forms": [
+        "zhoršení"
+      ],
+      "exampleCs": "zhoršení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zjednodušený",
+      "ru": "упрощённый",
+      "uk": "спрощений",
+      "forms": [
+        "zjednodušený",
+        "zjednodušená"
+      ],
+      "exampleCs": "zjednodušený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zjistit",
+      "ru": "выяснить",
+      "uk": "з’ясувати",
+      "forms": [
+        "zjistit",
+        "zjisti",
+        "zjistím",
+        "zjistíte"
+      ],
+      "exampleCs": "zjistit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zkontrolovat",
+      "ru": "проверить",
+      "uk": "перевірити",
+      "forms": [
+        "zkontrolovat",
+        "zkontroluj"
+      ],
+      "exampleCs": "zkontrolovat",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zkouškový",
+      "ru": "экзаменационный",
+      "uk": "екзаменаційний",
+      "forms": [
+        "zkouškový",
+        "zkoušková"
+      ],
+      "exampleCs": "zkouškový",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zkusit",
+      "ru": "попробовать",
+      "uk": "спробувати",
+      "forms": [
+        "zkusit",
+        "zkusím"
+      ],
+      "exampleCs": "zkusit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zlomený",
+      "ru": "сломанный",
+      "uk": "зламаний",
+      "forms": [
+        "zlomený",
+        "zlomenou"
+      ],
+      "exampleCs": "zlomený",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "známka",
+      "ru": "признак",
+      "uk": "ознака",
+      "forms": [
+        "známka",
+        "známek"
+      ],
+      "exampleCs": "známka",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zprůchodnit",
+      "ru": "обеспечить проходимость",
+      "uk": "забезпечити прохідність",
+      "forms": [
+        "zprůchodnit"
+      ],
+      "exampleCs": "zprůchodnit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "způsob",
+      "ru": "способ",
+      "uk": "спосіб",
+      "forms": [
+        "způsob",
+        "způsobem"
+      ],
+      "exampleCs": "způsob",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zraněný",
+      "ru": "раненый",
+      "uk": "поранений",
+      "forms": [
+        "zraněný",
+        "zraněného"
+      ],
+      "exampleCs": "zraněný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zranění",
+      "ru": "ранение, травма",
+      "uk": "поранення, травма",
+      "forms": [
+        "zranění"
+      ],
+      "exampleCs": "zranění",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zs",
+      "ru": "спасательная служба (сокращение)",
+      "uk": "рятувальна служба (скорочення)",
+      "forms": [
+        "zs"
+      ],
+      "exampleCs": "zs",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ztrácet",
+      "ru": "терять",
+      "uk": "втрачати",
+      "forms": [
+        "ztrácet",
+        "ztrácí"
+      ],
+      "exampleCs": "ztrácet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zvážit",
+      "ru": "оценить, обдумать",
+      "uk": "оцінити, обміркувати",
+      "forms": [
+        "zvážit",
+        "zvaž"
+      ],
+      "exampleCs": "zvážit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zvednout",
+      "ru": "поднять",
+      "uk": "підняти",
+      "forms": [
+        "zvednout",
+        "zvednu"
+      ],
+      "exampleCs": "zvednout",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zvednutí",
+      "ru": "поднятие",
+      "uk": "підняття",
+      "forms": [
+        "zvednutí",
+        "zvednutím"
+      ],
+      "exampleCs": "zvednutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zvracet",
+      "ru": "рвать, испытывать рвоту",
+      "uk": "блювати",
+      "forms": [
+        "zvracet"
+      ],
+      "exampleCs": "zvracet",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zvratky",
+      "ru": "рвотные массы",
+      "uk": "блювотні маси",
+      "forms": [
+        "zvratky",
+        "zvratků"
+      ],
+      "exampleCs": "zvratky",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zzs",
+      "ru": "служба скорой медицинской помощи",
+      "uk": "служба екстреної медичної допомоги",
+      "forms": [
+        "zzs"
+      ],
+      "exampleCs": "zzs",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "záchrana",
+      "ru": "спасение",
+      "uk": "порятунок",
+      "forms": [
+        "záchrana",
+        "záchranou"
+      ],
+      "exampleCs": "záchrana",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "záklon",
+      "ru": "запрокидывание",
+      "uk": "закидання назад",
+      "forms": [
+        "záklon",
+        "záklonem"
+      ],
+      "exampleCs": "záklon",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "zástava",
+      "ru": "остановка",
+      "uk": "зупинка",
+      "forms": [
+        "zástava",
+        "zástavou"
+      ],
+      "exampleCs": "zástava",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "závažnost",
+      "ru": "тяжесть, серьёзность",
+      "uk": "тяжкість, серйозність",
+      "forms": [
+        "závažnost",
+        "závažnosti"
+      ],
+      "exampleCs": "závažnost",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "závažný",
+      "ru": "тяжёлый, серьёзный",
+      "uk": "тяжкий, серйозний",
+      "forms": [
+        "závažný",
+        "závažném"
+      ],
+      "exampleCs": "závažný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "úkol",
+      "ru": "задание",
+      "uk": "завдання",
+      "forms": [
+        "úkol",
+        "úkoly",
+        "úkolů"
+      ],
+      "exampleCs": "úkol",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "úplný",
+      "ru": "полный",
+      "uk": "повний",
+      "forms": [
+        "úplný",
+        "úplného"
+      ],
+      "exampleCs": "úplný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "úplně",
+      "ru": "полностью",
+      "uk": "повністю",
+      "forms": [
+        "úplně"
+      ],
+      "exampleCs": "úplně",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "ústa",
+      "ru": "рот",
+      "uk": "рот",
+      "forms": [
+        "ústa",
+        "úst",
+        "ústech",
+        "ústům"
+      ],
+      "exampleCs": "ústa",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "čekání",
+      "ru": "ожидание",
+      "uk": "очікування",
+      "forms": [
+        "čekání",
+        "čekáním"
+      ],
+      "exampleCs": "čekání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "číslo",
+      "ru": "номер, число",
+      "uk": "номер, число",
+      "forms": [
+        "číslo",
+        "čísle"
+      ],
+      "exampleCs": "číslo",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "řídit",
+      "ru": "управлять; řídit se — руководствоваться",
+      "uk": "керувати; řídit se — керуватися",
+      "forms": [
+        "řídit",
+        "řiď"
+      ],
+      "exampleCs": "řídit",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "šance",
+      "ru": "шанс",
+      "uk": "шанс",
+      "forms": [
+        "šance",
+        "šanci"
+      ],
+      "exampleCs": "šance",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "školení",
+      "ru": "обучение",
+      "uk": "навчання",
+      "forms": [
+        "školení",
+        "školením"
+      ],
+      "exampleCs": "školení",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "štípnutí",
+      "ru": "щипок",
+      "uk": "щипок",
+      "forms": [
+        "štípnutí"
+      ],
+      "exampleCs": "štípnutí",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "štípání",
+      "ru": "щипание",
+      "uk": "щипання",
+      "forms": [
+        "štípání"
+      ],
+      "exampleCs": "štípání",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "život",
+      "ru": "жизнь",
+      "uk": "життя",
+      "forms": [
+        "život",
+        "života"
+      ],
+      "exampleCs": "život",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "životní",
+      "ru": "жизненный",
+      "uk": "життєвий",
+      "forms": [
+        "životní",
+        "životních"
+      ],
+      "exampleCs": "životní",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "žádný",
+      "ru": "никакой",
+      "uk": "жодний",
+      "forms": [
+        "žádný",
+        "žádné",
+        "žádném"
+      ],
+      "exampleCs": "žádný",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "žízeň",
+      "ru": "жажда",
+      "uk": "спрага",
+      "forms": [
+        "žízeň",
+        "žízni",
+        "žízně"
+      ],
+      "exampleCs": "žízeň",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "odnětí svobody",
+      "ru": "лишение свободы",
+      "uk": "позбавлення волі",
+      "forms": [
+        "odnětí svobody"
+      ],
+      "exampleCs": "odnětí svobody",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "řídit se",
+      "ru": "руководствоваться, следовать указаниям",
+      "uk": "керуватися, дотримуватися вказівок",
+      "forms": [
+        "řídit se"
+      ],
+      "exampleCs": "řídit se",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "řiď se",
+      "ru": "следуй указаниям",
+      "uk": "дотримуйся вказівок",
+      "forms": [
+        "řiď se"
+      ],
+      "exampleCs": "řiď se",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "hlasitý odposlech",
+      "ru": "громкая связь",
+      "uk": "гучний зв’язок",
+      "forms": [
+        "hlasitý odposlech"
+      ],
+      "exampleCs": "hlasitý odposlech",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "s hlasitým odposlechem",
+      "ru": "с включённой громкой связью",
+      "uk": "з увімкненим гучним зв’язком",
+      "forms": [
+        "s hlasitým odposlechem"
+      ],
+      "exampleCs": "s hlasitým odposlechem",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "první pomoc",
+      "ru": "первая помощь",
+      "uk": "перша допомога",
+      "forms": [
+        "první pomoc"
+      ],
+      "exampleCs": "první pomoc",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "první pomoci",
+      "ru": "первой помощи",
+      "uk": "першої допомоги",
+      "forms": [
+        "první pomoci"
+      ],
+      "exampleCs": "první pomoci",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dýchací cesty",
+      "ru": "дыхательные пути",
+      "uk": "дихальні шляхи",
+      "forms": [
+        "dýchací cesty"
+      ],
+      "exampleCs": "dýchací cesty",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "dýchacích cest",
+      "ru": "дыхательных путей",
+      "uk": "дихальних шляхів",
+      "forms": [
+        "dýchacích cest"
+      ],
+      "exampleCs": "dýchacích cest",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "lapavé dechy",
+      "ru": "агональные, судорожные вдохи",
+      "uk": "агональні, судомні вдихи",
+      "forms": [
+        "lapavé dechy"
+      ],
+      "exampleCs": "lapavé dechy",
+      "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
+    },
+    {
+      "lemma": "c",
+      "ru": "обозначение варианта C",
+      "uk": "позначення варіанта C",
+      "forms": [
+        "c"
+      ],
+      "exampleCs": "C",
       "review": "DRAFT_TRANSLATION_REVIEW_REQUIRED"
     }
   ]

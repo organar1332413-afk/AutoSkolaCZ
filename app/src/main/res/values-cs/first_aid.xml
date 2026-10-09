@@ -24,4 +24,11 @@
     <string name="aid_source_error">Zdroj se nepodařilo otevřít.</string>
     <string name="aid_official_variants">Původní varianty MD · česky</string>
     <string name="aid_related_material">Související výukové karty</string>
+    <string name="aid_linked_questions">Související otázky</string>
+    <string name="aid_no_direct_questions">Téma nemá vlastní otázku v této sadě 35 otázek.</string>
+    <string name="aid_check">Zkontrolovat</string>
+    <string name="aid_correct_answer">Správná odpověď</string>
+    <string name="aid_result_correct">Správně</string>
+    <string name="aid_result_wrong">Nesprávně. Správná odpověď je označena.</string>
+    <string name="aid_try_again">Zkusit znovu</string>
 </resources>

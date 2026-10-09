@@ -24,4 +24,11 @@
     <string name="aid_source_error">Не удалось открыть источник.</string>
     <string name="aid_official_variants">Исходные варианты MD · по-чешски</string>
     <string name="aid_related_material">Связанные учебные карточки</string>
+    <string name="aid_linked_questions">Связанные вопросы</string>
+    <string name="aid_no_direct_questions">В этой базе из 35 вопросов нет отдельного вопроса по теме.</string>
+    <string name="aid_check">Проверить</string>
+    <string name="aid_correct_answer">Правильный ответ</string>
+    <string name="aid_result_correct">Верно</string>
+    <string name="aid_result_wrong">Неверно. Правильный ответ выделен.</string>
+    <string name="aid_try_again">Попробовать снова</string>
 </resources>

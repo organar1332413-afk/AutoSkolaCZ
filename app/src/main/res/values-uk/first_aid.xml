@@ -24,4 +24,11 @@
     <string name="aid_source_error">Не вдалося відкрити джерело.</string>
     <string name="aid_official_variants">Початкові варіанти MD · чеською</string>
     <string name="aid_related_material">Пов’язані навчальні картки</string>
+    <string name="aid_linked_questions">Пов’язані запитання</string>
+    <string name="aid_no_direct_questions">У цій базі з 35 запитань немає окремого запитання з теми.</string>
+    <string name="aid_check">Перевірити</string>
+    <string name="aid_correct_answer">Правильна відповідь</string>
+    <string name="aid_result_correct">Правильно</string>
+    <string name="aid_result_wrong">Неправильно. Правильну відповідь виділено.</string>
+    <string name="aid_try_again">Спробувати знову</string>
 </resources>

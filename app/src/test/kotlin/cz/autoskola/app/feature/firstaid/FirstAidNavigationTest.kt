@@ -122,6 +122,9 @@ class FirstAidNavigationTest {
             compose.runOnIdle { nav.navigate(AidRoutes.detail(c.id)) }
             compose.onNodeWithTag("aid-detail-${c.id}").assertIsDisplayed()
             compose.onNodeWithTag("aid-image-${c.id}").assertContentDescriptionEquals(c.title.ru)
+            (0..2).forEach { compose.onNodeWithTag("aid-badge-$it").assertExists() }
+            compose.onNodeWithTag("aid-progress").assertExists()
+            compose.onNodeWithTag("aid-clinical-toggle").assertDoesNotExist()
             screenshot("${c.id}.png")
             compose.runOnIdle { nav.popBackStack() }
         }

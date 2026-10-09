@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.material.icons.Icons
@@ -29,7 +30,7 @@ import cz.autoskola.domain.*
 @Composable private fun AidLearning(value: AidText, tag: String?, policy: WordTranslationPolicy,
     onWord: (LearningWordSelection) -> Unit, modifier: Modifier = Modifier, prominent: Boolean = false) {
     Column(modifier, verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
-        CzechLearningText(value.cs, policy, onWord, prominent, Modifier.testTag("aid-learning-cs"))
+        CzechLearningText(value.cs, policy, onWord, prominent, Modifier.testTag("aid-learning-cs"), lookupPhrases = aidLookupPhrases)
         value.helper(tag)?.let { Text(it, Modifier.testTag("aid-learning-helper"),
             style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
     }
@@ -115,30 +116,34 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
     val tag = current.settings.policy().translationTag
     val policy = WordTranslationPolicy(tag, current.settings.policy().canLookup)
     var selection by remember(card.id, tag, policy.enabled) { mutableStateOf<LearningWordSelection?>(null) }
-    var clinicalExpanded by rememberSaveable(card.id) { mutableStateOf(false) }
-    var answersExpanded by rememberSaveable(card.id) { mutableStateOf(false) }
-    val words = current.words + bundle.vocabulary.filter { it.locale == tag }
+    val words = bundle.vocabulary.filter { it.locale == tag } + current.words
     val index = bundle.cards.indexOfFirst { it.id == card.id }
     val next = bundle.cards.getOrNull(index + 1)
     val select: (LearningWordSelection) -> Unit = { selection = it }
-    LazyColumn(Modifier.fillMaxSize().testTag("aid-detail-${card.id}"),
+    LazyColumn(Modifier.fillMaxSize().testTag("aid-detail-${card.id}"), state = rememberLazyListState(),
         contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
         item("title") {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(card.id, color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelLarge)
                 Text("${index + 1} / ${bundle.cards.size}", style = MaterialTheme.typography.labelMedium)
             }
+            LinearProgressIndicator(progress = { (index + 1f) / bundle.cards.size },
+                modifier = Modifier.fillMaxWidth().padding(vertical = PremiumSpace.xs).testTag("aid-progress"))
             AidLearning(card.title, tag, policy, select, prominent = true)
         }
         item("hero") {
-            Box(Modifier.fillMaxWidth().heightIn(min = 208.dp)) {
-                AidGraphic(card, Modifier.fillMaxWidth().height(232.dp))
-                Column(Modifier.align(Alignment.CenterEnd).widthIn(max = 104.dp), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                    card.badges.forEach { badge ->
-                        Surface(shape = PremiumShapes.chip, color = MaterialTheme.colorScheme.surface, tonalElevation = PremiumElevation.card) {
-                            Column(Modifier.padding(PremiumSpace.xs)) {
-                                Text(badge.cs, style = MaterialTheme.typography.labelSmall)
-                                badge.helper(tag)?.let { Text(it, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
+                AidGraphic(card, Modifier.weight(1f).height(260.dp))
+                Column(Modifier.width(116.dp).testTag("aid-badges"), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
+                    card.badges.forEachIndexed { badgeIndex, badge ->
+                        Surface(Modifier.fillMaxWidth().testTag("aid-badge-$badgeIndex"),
+                            shape = PremiumShapes.card, color = MaterialTheme.colorScheme.surface,
+                            shadowElevation = PremiumElevation.card) {
+                            Column(Modifier.padding(PremiumSpace.sm), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
+                                Icon(aidBadgeIcon(card.id, badgeIndex), null, Modifier.size(24.dp),
+                                    tint = listOf(Color(0xFFDB3948), Color(0xFF2785D6), Color(0xFF238959))[badgeIndex])
+                                AidLearning(badge, tag, policy, select)
                             }
                         }
                     }
@@ -147,30 +152,17 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
         }
         item("exam") {
             AidSection(text(R.string.aid_exam_block), exam = true) {
-                Text(text(R.string.aid_exam_version), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 AidLearning(card.examSummary, tag, policy, select)
-                if(card.questionIds.isNotEmpty()) {
-                    TextButton({ answersExpanded = !answersExpanded }, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-answers-toggle")) {
-                        Text(text(if(answersExpanded) R.string.aid_hide_answers else R.string.aid_exact_answers))
-                    }
-                    if(answersExpanded) card.questionIds.forEach { id ->
-                        val q = bundle.questions.single { it.id == id }
-                        Text("$id · ${q.correct.label}", style = MaterialTheme.typography.labelMedium)
-                        AidLearning(q.answer, tag, policy, select)
-                        TextButton({ openQuestion(id) }, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-question-$id")) { Text(text(R.string.aid_open_question)) }
-                    }
-                }
+                Text(text(R.string.aid_exam_version), style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
-        item("clinical") {
-            AidSection(text(R.string.aid_clinical_block), exam = false) {
-                AidLearning(card.summary, tag, policy, select)
-                TextButton({ clinicalExpanded = !clinicalExpanded }, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-clinical-toggle")) {
-                    Text(text(if(clinicalExpanded) R.string.aid_less else R.string.aid_more))
-                }
-                if(clinicalExpanded) AidLearning(card.clinical, tag, policy, select, Modifier.testTag("aid-clinical-full"))
-                AidReviewNote()
-            }
+        item("question-heading") {
+            Text(text(R.string.aid_linked_questions) + " · ${card.questionIds.size}", style = MaterialTheme.typography.titleMedium)
+            if(card.questionIds.isEmpty()) Text(text(R.string.aid_no_direct_questions), style = MaterialTheme.typography.bodySmall)
+        }
+        items(card.questionIds, key = { "question-$it" }) { id ->
+            AidQuestionTile(bundle.questions.single { it.id == id }, tag) { openQuestion(id) }
         }
         if(card.relatedCards.isNotEmpty()) item("related") {
             card.relatedCards.forEach { id ->
@@ -189,7 +181,7 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
             }
             PrimaryButton(text(R.string.aid_next), { nextCard(next.id) }, Modifier.fillMaxWidth().testTag("aid-next"))
         }
-        item("sources") { AidSources(card, bundle) }
+        item("sources") { AidReviewNote(); AidSources(card, bundle) }
     }
     LearningWordPopup(selection, policy, words, saveWord, saveUnknownWord, current.dictionaryState) { selection = null }
 }
@@ -234,21 +226,47 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
     val tag = current.settings.policy().translationTag
     val policy = WordTranslationPolicy(tag, current.settings.policy().canLookup)
     var selection by remember(q.id, tag) { mutableStateOf<LearningWordSelection?>(null) }
-    var expanded by rememberSaveable(q.id) { mutableStateOf(false) }
-    LazyColumn(Modifier.fillMaxSize().testTag("aid-question-detail-${q.id}"), contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
-        item { Text(q.id, color = MaterialTheme.colorScheme.primary); AidLearning(q.question, tag, policy, { selection = it }, prominent = true) }
-        item {
-            AidSection(text(R.string.aid_exam_block), exam = true) {
-                Text(text(R.string.aid_exam_version), style = MaterialTheme.typography.labelSmall)
-                Text("✓ ${q.correct.label}", style = MaterialTheme.typography.titleMedium)
-                AidLearning(q.answer, tag, policy, { selection = it })
+    var selectedLabel by rememberSaveable(q.id) { mutableStateOf<String?>(null) }
+    var checked by rememberSaveable(q.id) { mutableStateOf(false) }
+    LazyColumn(Modifier.fillMaxSize().testTag("aid-question-detail-${q.id}"), state = rememberLazyListState(),
+        contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
+        item { Text(q.id, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            AidLearning(q.question, tag, policy, { selection = it }, prominent = true) }
+        items(q.options, key = { it.label }) { option ->
+            val correct = checked && option.correct
+            val wrong = checked && selectedLabel == option.label && !option.correct
+            Card(Modifier.fillMaxWidth().testTag("aid-option-${option.label}"), shape = PremiumShapes.card,
+                colors = CardDefaults.cardColors(containerColor = when {
+                    correct -> MaterialTheme.colorScheme.secondaryContainer
+                    wrong -> MaterialTheme.colorScheme.errorContainer
+                    else -> MaterialTheme.colorScheme.surface
+                }), border = BorderStroke(PremiumSize.border, if(selectedLabel == option.label)
+                    MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant)) {
+                Row(Modifier.padding(PremiumSpace.sm), verticalAlignment = Alignment.Top) {
+                    // A separate 48dp control keeps choosing an answer independent of word lookup.
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        RadioButton(selected = selectedLabel == option.label,
+                            onClick = { selectedLabel = option.label }, enabled = !checked,
+                            modifier = Modifier.size(PremiumSize.touch).testTag("aid-select-${option.label}"))
+                        Text(option.label, style = MaterialTheme.typography.labelLarge)
+                    }
+                    Column(Modifier.weight(1f).padding(top = PremiumSpace.xs)) {
+                        CzechLearningText(option.cs, policy, { selection = it }, modifier = Modifier.testTag("aid-option-text-${option.label}"), lookupPhrases = aidLookupPhrases)
+                        if(correct) Text(text(R.string.aid_correct_answer), Modifier.testTag("aid-correct-${option.label}"),
+                            style = MaterialTheme.typography.labelMedium)
+                    }
+                }
             }
         }
         item {
-            TextButton({ expanded = !expanded }, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-variants-toggle")) { Text(text(R.string.aid_official_variants)) }
-            if(expanded) q.options.forEach { option ->
-                Text("${if(option.correct) "✓" else ""} ${option.label}", style = MaterialTheme.typography.labelMedium)
-                CzechLearningText(option.cs, policy, { selection = it })
+            Button(onClick = { checked = true }, enabled = selectedLabel != null && !checked,
+                modifier = Modifier.fillMaxWidth().heightIn(min = PremiumSize.touch).testTag("aid-check")) {
+                Text(text(R.string.aid_check))
+            }
+            if(checked) {
+                Text(text(if(selectedLabel == q.correct.label) R.string.aid_result_correct else R.string.aid_result_wrong),
+                    Modifier.testTag("aid-result"), style = MaterialTheme.typography.titleMedium)
+                TextButton({ selectedLabel = null; checked = false }, Modifier.testTag("aid-retry")) { Text(text(R.string.aid_try_again)) }
             }
         }
         item { Text(text(R.string.aid_related_material), style = MaterialTheme.typography.titleMedium) }
@@ -259,6 +277,30 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
         }
         item { AidReviewNote() }
     }
-    val words = current.words + bundle.vocabulary.filter { it.locale == tag }
+    val words = bundle.vocabulary.filter { it.locale == tag } + current.words
     LearningWordPopup(selection, policy, words, save, saveUnknown, current.dictionaryState) { selection = null }
 }
+
+@Composable private fun AidQuestionTile(q: AidQuestion, tag: String?, open: () -> Unit) {
+    PremiumCard(Modifier.fillMaxWidth().testTag("aid-question-${q.id}"), onClick = open) {
+        Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
+            Text(q.question.cs, style = MaterialTheme.typography.bodyLarge, maxLines = 3,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
+            q.question.helper(tag)?.let { Text(it, style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 2,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis) }
+            Text(q.id, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
+}
+
+private fun aidBadgeIcon(card: String, index: Int): androidx.compose.ui.graphics.vector.ImageVector = when(card) {
+    "C05" -> listOf(Icons.Default.Favorite, Icons.Default.Height, Icons.Default.Air)[index]
+    "C02" -> listOf(Icons.Default.Phone, Icons.Default.Sos, Icons.Default.LocationOn)[index]
+    "C06" -> listOf(Icons.Default.PowerSettingsNew, Icons.Default.Favorite, Icons.Default.Bolt)[index]
+    "C08", "C09", "C13" -> listOf(Icons.Default.BackHand, Icons.Default.HealthAndSafety, Icons.Default.Phone)[index]
+    "C16" -> listOf(Icons.Default.Timer, Icons.Default.Favorite, Icons.Default.Phone)[index]
+    else -> listOf(Icons.Default.HealthAndSafety, Icons.Default.Visibility, Icons.Default.Phone)[index]
+}
+
+internal val aidLookupPhrases = listOf("odnětí svobody", "řídit se", "řiď se", "hlasitý odposlech", "s hlasitým odposlechem", "první pomoc", "první pomoci", "dýchací cesty", "dýchacích cest", "lapavé dechy")
