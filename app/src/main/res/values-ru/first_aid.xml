@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="aid_official_questions_title">Вопросы eTesty</string>
     <string name="aid_official_questions">Вопросы eTesty MD ČR · %1$d</string>
     <string name="aid_review_pending">Учебный проект: независимая медицинская проверка ещё не проведена.</string>
     <string name="aid_search">Найти карточку или вопрос</string>

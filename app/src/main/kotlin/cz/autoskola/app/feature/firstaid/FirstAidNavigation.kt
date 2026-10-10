@@ -23,7 +23,7 @@ object AidRoutes {
     fun question(id: String): String { require(id.matches(Regex("RP[0-9]{7}"))); return "aid_question/$id" }
     fun titleResource(route: String): Int? = when(route) {
         catalog, detailPattern -> R.string.first_aid
-        questions, questionPattern -> R.string.aid_official_questions
+        questions, questionPattern -> R.string.aid_official_questions_title
         else -> null
     }
 }

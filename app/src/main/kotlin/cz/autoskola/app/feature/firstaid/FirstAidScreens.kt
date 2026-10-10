@@ -311,7 +311,7 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
                     Column(Modifier.weight(1f).padding(top = PremiumSpace.xs)) {
                         CzechLearningText(option.cs, policy, { selection = it }, modifier = Modifier.testTag("aid-option-text-${option.label}"),
                             lookupPhrases = aidLookupPhrases, annotatedText = aidEmphasized(option.cs))
-                        option.helper(tag)?.let { helper ->
+                        option.helper(tag)?.takeIf { it.isNotBlank() && it.trim() != option.cs.trim() }?.let { helper ->
                             Text(aidEmphasized(helper), Modifier.padding(top = PremiumSpace.xxs).testTag("aid-option-helper-${option.label}"),
                                 style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }

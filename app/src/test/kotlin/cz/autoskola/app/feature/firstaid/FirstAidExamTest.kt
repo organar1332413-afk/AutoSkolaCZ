@@ -115,15 +115,25 @@ class FirstAidExamTest {
             compose.onNodeWithTag("aid-exam-caption").assertTextEquals("Formulace ke zkoušce")
             compose.onNodeWithTag("aid-result").assertDoesNotExist()
             q.options.forEach { o ->
-                list.performScrollToNode(hasTestTag("aid-option-helper-${o.label}"))
+                list.performScrollToNode(hasTestTag("aid-option-text-${o.label}"))
                 compose.onNodeWithTag("aid-option-text-${o.label}").assertTextEquals(o.cs)
                 val cs = layout("aid-option-text-${o.label}")
-                compose.onNodeWithTag("aid-option-helper-${o.label}").assertTextEquals(o.helper(tag)!!)
-                val helper = layout("aid-option-helper-${o.label}")
-                assertTrue(helper.layoutInput.style.fontSize < cs.layoutInput.style.fontSize)
-                assertFalse(helper.hasVisualOverflow)
+                val translated = o.helper(tag)!!
+                val helper = if(translated.trim() == o.cs.trim()) {
+                    // Numbers and unchanged acronyms should not display a pointless second line.
+                    compose.onNodeWithTag("aid-option-helper-${o.label}").assertDoesNotExist()
+                    null
+                } else {
+                    list.performScrollToNode(hasTestTag("aid-option-helper-${o.label}"))
+                    compose.onNodeWithTag("aid-option-helper-${o.label}").assertTextEquals(translated)
+                    layout("aid-option-helper-${o.label}")
+                }
+                if(helper != null) {
+                    assertTrue(helper.layoutInput.style.fontSize < cs.layoutInput.style.fontSize)
+                    assertFalse(helper.hasVisualOverflow)
+                }
                 assertFalse(cs.hasVisualOverflow)
-                listOf(cs, helper).forEach { result ->
+                listOfNotNull(cs, helper).forEach { result ->
                     val text = result.layoutInput.text
                     Regex("\\d").findAll(text.text).forEach { digit ->
                         assertTrue("${q.id}/${o.label}/$tag", text.spanStyles.any {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="aid_official_questions_title">Otázky eTesty</string>
     <string name="aid_official_questions">Otázky eTesty MD ČR · %1$d</string>
     <string name="aid_review_pending">Výukový návrh: odborná zdravotnická kontrola dosud neproběhla.</string>
     <string name="aid_search">Hledat kartu nebo otázku</string>

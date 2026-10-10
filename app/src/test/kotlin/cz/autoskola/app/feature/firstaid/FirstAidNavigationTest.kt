@@ -191,6 +191,19 @@ class FirstAidNavigationTest {
             compose.runOnIdle { nav.popBackStack() }
         }
     }
+    @Test fun questionToolbarTitleHasNoCountPlaceholderInAnyUiLanguage() {
+        val titleResource = requireNotNull(AidRoutes.titleResource(AidRoutes.questions))
+        assertEquals(titleResource, AidRoutes.titleResource(AidRoutes.questionPattern))
+        val application: Application = RuntimeEnvironment.getApplication()
+        listOf(UiLanguage.CS, UiLanguage.RU, UiLanguage.UK).forEach { language ->
+            val configuration = android.content.res.Configuration(application.resources.configuration)
+            configuration.setLocale(java.util.Locale.forLanguageTag(language.tag))
+            val title = application.createConfigurationContext(configuration).getString(titleResource)
+            assertFalse("Unformatted toolbar title for ${language.tag}: ${title}", title.contains("%"))
+            assertTrue(title.contains("eTesty"))
+        }
+    }
+
     private fun screenshot(name: String) {
         compose.waitForIdle()
         compose.runOnIdle {
