@@ -17,6 +17,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
@@ -31,9 +36,10 @@ import cz.autoskola.domain.*
     onWord: (LearningWordSelection) -> Unit, modifier: Modifier = Modifier, prominent: Boolean = false, compact: Boolean = false) {
     Column(modifier, verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
         CzechLearningText(value.cs, policy, onWord, prominent, Modifier.testTag("aid-learning-cs"), lookupPhrases = aidLookupPhrases,
-            textStyle = if(compact) MaterialTheme.typography.titleSmall else if(prominent) MaterialTheme.typography.headlineSmall else null)
+            textStyle = if(compact) MaterialTheme.typography.titleSmall.copy(fontSize = 13.sp, lineHeight = 17.sp) else if(prominent) MaterialTheme.typography.headlineSmall else null)
         value.helper(tag)?.let { Text(it, Modifier.testTag("aid-learning-helper"),
-            style = if(compact) MaterialTheme.typography.bodySmall else MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            style = if(compact) MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp, lineHeight = 14.sp) else MaterialTheme.typography.bodyMedium,
+            maxLines = if(compact) 2 else Int.MAX_VALUE, overflow = TextOverflow.Ellipsis, color = MaterialTheme.colorScheme.onSurfaceVariant) }
     }
 }
 
@@ -80,16 +86,51 @@ import cz.autoskola.domain.*
     }
 }
 
-@Composable private fun AidGraphic(card: AidCard, modifier: Modifier = Modifier) {
+@Composable private fun AidGraphic(card: AidCard, modifier: Modifier = Modifier, hero: Boolean = false) {
     var failed by remember(card.image) { mutableStateOf(false) }
+    var loaded by remember(card.image) { mutableStateOf(false) }
     val configuration = LocalConfiguration.current
-    Box(modifier) {
-        AsyncImage("file:///android_asset/${card.image}", card.title.language(configuration.locales[0].language),
-            Modifier.fillMaxSize().testTag("aid-image-${card.id}"), contentScale = ContentScale.Fit,
-            onError = { failed = true })
+    val bounds = if(hero) aidImageBounds.getValue(card.id) else null
+    Box(modifier.testTag(if(loaded) "aid-image-ready-${card.id}" else "aid-image-wait-${card.id}")) {
+        val image: @Composable () -> Unit = {
+            AsyncImage("file:///android_asset/${card.image}", card.title.language(configuration.locales[0].language),
+                Modifier.fillMaxSize().testTag("aid-image-${card.id}"), contentScale = ContentScale.Fit,
+                onSuccess = { loaded = true }, onError = { failed = true })
+        }
+        if(bounds == null) image()
+        else Layout(content = image, modifier = Modifier.fillMaxSize().clipToBounds()) { children, constraints ->
+            // Render the unchanged source, excluding only its empty outer canvas.
+            // All medical subjects are kept inside these audited bounds.
+            val scale = minOf(constraints.maxWidth.toFloat() / (bounds.right - bounds.left),
+                constraints.maxHeight.toFloat() / (bounds.bottom - bounds.top))
+            val child = children.single().measure(Constraints.fixed(
+                (bounds.width * scale).toInt().coerceAtLeast(1), (bounds.height * scale).toInt().coerceAtLeast(1)))
+            val x = ((constraints.maxWidth - (bounds.right - bounds.left) * scale) / 2 - bounds.left * scale).toInt()
+            val y = ((constraints.maxHeight - (bounds.bottom - bounds.top) * scale) / 2 - bounds.top * scale).toInt()
+            layout(constraints.maxWidth, constraints.maxHeight) { child.place(x, y) }
+        }
         if(failed) Text(text(R.string.aid_image_error), Modifier.align(Alignment.Center), style = MaterialTheme.typography.bodySmall)
     }
 }
+
+private data class AidImageBounds(val width: Int, val height: Int, val left: Int, val top: Int, val right: Int, val bottom: Int)
+private val aidImageBounds = mapOf(
+    "C01" to AidImageBounds(1024,683,0,14,698,683),
+    "C02" to AidImageBounds(1024,683,0,0,801,668),
+    "C03" to AidImageBounds(1024,683,0,8,723,669),
+    "C04" to AidImageBounds(1024,683,7,0,785,681),
+    "C05" to AidImageBounds(1024,683,0,0,737,683),
+    "C06" to AidImageBounds(1024,683,0,0,729,683),
+    "C07" to AidImageBounds(1024,683,3,0,1024,642),
+    "C08" to AidImageBounds(1024,683,0,0,719,683),
+    "C09" to AidImageBounds(1024,683,0,0,999,683),
+    "C10" to AidImageBounds(1024,683,0,0,1024,660),
+    "C11" to AidImageBounds(1024,683,0,0,745,671),
+    "C12" to AidImageBounds(1024,683,0,0,892,657),
+    "C13" to AidImageBounds(1024,683,0,0,758,677),
+    "C14" to AidImageBounds(1024,683,0,0,785,683),
+    "C15" to AidImageBounds(1024,683,0,0,1024,662),
+    "C16" to AidImageBounds(1024,683,0,0,1024,637))
 
 @Composable private fun AidSection(title: String, exam: Boolean, content: @Composable ColumnScope.() -> Unit) {
     val dark = MaterialTheme.colorScheme.background.luminanceValue() < 0.5f
@@ -101,7 +142,7 @@ import cz.autoskola.domain.*
         elevation = CardDefaults.cardElevation(PremiumElevation.card)) {
         Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                Icon(if(exam) Icons.Default.CheckCircle else Icons.Default.Favorite, null,
+                Icon(if(exam) AidHintIcons.Graduation else Icons.Default.Favorite, null,
                     tint = if(exam) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary)
                 Text(title, style = MaterialTheme.typography.titleMedium)
             }
@@ -125,26 +166,31 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
         contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
         item("title") {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(card.id, color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelLarge)
+                Surface(shape = PremiumShapes.chip, color = Color(0xFFE7F1FF)) {
+                    Text(card.id, Modifier.padding(horizontal = 10.dp, vertical = 4.dp), color = Color(0xFF2367D1), style = MaterialTheme.typography.labelLarge)
+                }
                 Text("${index + 1} / ${bundle.cards.size}", style = MaterialTheme.typography.labelMedium)
             }
             LinearProgressIndicator(progress = { (index + 1f) / bundle.cards.size },
-                modifier = Modifier.fillMaxWidth().padding(vertical = PremiumSpace.xs).testTag("aid-progress"))
+                modifier = Modifier.fillMaxWidth().padding(vertical = PremiumSpace.xs).testTag("aid-progress"),
+                color = Color(0xFF2468D5), trackColor = Color(0xFFE7F1FF))
             AidLearning(card.title, tag, policy, select, prominent = true)
         }
         item("hero") {
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                AidGraphic(card, Modifier.weight(1f).height(260.dp))
-                Column(Modifier.width(116.dp).testTag("aid-badges"), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
+                AidGraphic(card, Modifier.weight(1f).height(260.dp), hero = true)
+                Column(Modifier.width(128.dp).testTag("aid-badges"), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
                     card.badges.forEachIndexed { badgeIndex, badge ->
                         Surface(Modifier.fillMaxWidth().testTag("aid-badge-$badgeIndex"),
-                            shape = PremiumShapes.card, color = MaterialTheme.colorScheme.surface,
-                            shadowElevation = PremiumElevation.card) {
-                            Column(Modifier.padding(PremiumSpace.sm), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
-                                Icon(aidBadgeIcon(card.id, badgeIndex), null, Modifier.size(24.dp),
+                            shape = PremiumShapes.card, color = LocalPremiumPalette.current.elevatedSurface,
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.45f)),
+                            shadowElevation = PremiumElevation.hero) {
+                            Row(Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                Icon(aidBadgeIcon(card.id, badgeIndex), null, Modifier.size(22.dp),
                                     tint = listOf(Color(0xFFDB3948), Color(0xFF2785D6), Color(0xFF238959))[badgeIndex])
-                                AidLearning(badge, tag, policy, select, compact = true)
+                                AidLearning(badge, tag, policy, select, Modifier.weight(1f), compact = true)
                             }
                         }
                     }
@@ -154,7 +200,7 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
         item("exam") {
             AidSection(text(R.string.aid_exam_block), exam = true) {
                 AidLearning(card.examSummary, tag, policy, select)
-                Text(text(R.string.aid_exam_version), style = MaterialTheme.typography.labelSmall,
+                Text(text(R.string.aid_exam_warning), style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
@@ -180,7 +226,10 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
                     Icon(Icons.AutoMirrored.Filled.ArrowForward, null)
                 }
             }
-            PrimaryButton(text(R.string.aid_next), { nextCard(next.id) }, Modifier.fillMaxWidth().testTag("aid-next"))
+            Button({ nextCard(next.id) }, Modifier.fillMaxWidth().heightIn(min = 52.dp).testTag("aid-next"),
+                shape = PremiumShapes.button, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2468D5), contentColor = Color.White)) {
+                Text(text(R.string.aid_next), Modifier.weight(1f)); Icon(Icons.AutoMirrored.Filled.ArrowForward, null)
+            }
         }
         item("sources") { AidReviewNote(); AidSources(card, bundle) }
     }
@@ -193,6 +242,7 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
     val uri = LocalUriHandler.current
     TextButton({ expanded = !expanded }, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-source-toggle")) { Text(text(R.string.aid_sources)) }
     if(expanded) Column {
+        Text(text(R.string.aid_exam_version), style = MaterialTheme.typography.bodySmall)
         Text(text(R.string.aid_translation_draft), style = MaterialTheme.typography.bodySmall)
         (listOf("md-bulletin") + card.sourceIds).distinct().forEach { id ->
             bundle.sources.find { it.id == id }?.let { s ->
@@ -325,6 +375,7 @@ private object AidHintIcons {
             strokeLineCap = androidx.compose.ui.graphics.StrokeCap.Round,
             strokeLineJoin = androidx.compose.ui.graphics.StrokeJoin.Round)
     }.build()
+    val Graduation = vector("Graduation", "M2 8L12 3L22 8L12 13ZM6 11V17Q12 22 18 17V11M22 8V17")
     val Depth = vector("Depth", "M12 3V21M8 7L12 3L16 7M8 17L12 21L16 17")
     val Breath = vector("Breath", "M3 8H15C20 8 20 3 16 3M3 12H19M3 16H14C19 16 19 21 15 21")
     val Emergency = vector("Emergency", "M12 3L22 21H2ZM12 9V14M12 17V18")

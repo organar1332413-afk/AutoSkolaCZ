@@ -92,7 +92,8 @@ class FirstAidNavigationTest {
         launch()
         compose.onNodeWithTag("aid-search").performTextInput("C05")
         compose.onNodeWithTag("aid-C05").performClick()
-        compose.onNodeWithTag("aid-next").performScrollTo().performClick()
+        compose.onNodeWithTag("aid-detail-C05").performScrollToNode(hasTestTag("aid-next"))
+        compose.onNodeWithTag("aid-next").assertIsDisplayed().performClick()
         compose.onNodeWithTag("aid-detail-C06").assertIsDisplayed()
         compose.runOnIdle { nav.popBackStack() }
         compose.onNodeWithTag("aid-catalog").assertIsDisplayed()
@@ -125,7 +126,33 @@ class FirstAidNavigationTest {
             (0..2).forEach { compose.onNodeWithTag("aid-badge-$it").assertExists() }
             compose.onNodeWithTag("aid-progress").assertExists()
             compose.onNodeWithTag("aid-clinical-toggle").assertDoesNotExist()
+            compose.waitUntil(10_000) { compose.onAllNodesWithTag("aid-image-ready-${c.id}").fetchSemanticsNodes().isNotEmpty() }
             screenshot("${c.id}.png")
+            compose.runOnIdle { nav.popBackStack() }
+        }
+    }
+    @Test fun nextCardBackAlsoPreservesCategoryAndCatalogScroll() {
+        launch()
+        compose.onNodeWithTag("aid-category-resuscitation").performClick()
+        compose.onNodeWithTag("aid-grid").performScrollToIndex(4)
+        val before = compose.onNodeWithTag("aid-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
+        compose.onNodeWithTag("aid-C05").performClick()
+        compose.onNodeWithTag("aid-detail-C05").performScrollToNode(hasTestTag("aid-next"))
+        compose.onNodeWithTag("aid-next").performClick()
+        compose.onNodeWithTag("aid-detail-C06").assertIsDisplayed()
+        compose.runOnIdle { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("aid-category-resuscitation").assertIsSelected()
+        val after = compose.onNodeWithTag("aid-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
+        assertEquals(before, after, 0.001f)
+    }
+    @Test @Config(qualifiers = "w320dp-h740dp")
+    fun narrowScreensKeepAllThreeHintsAndIllustrationsAvailable() {
+        launch()
+        bundle.cards.forEach { c ->
+            compose.runOnIdle { nav.navigate(AidRoutes.detail(c.id)) }
+            compose.waitUntil(10_000) { compose.onAllNodesWithTag("aid-image-ready-${c.id}").fetchSemanticsNodes().isNotEmpty() }
+            (0..2).forEach { compose.onNodeWithTag("aid-badge-$it").assertIsDisplayed() }
+            screenshot("narrow-${c.id}.png")
             compose.runOnIdle { nav.popBackStack() }
         }
     }

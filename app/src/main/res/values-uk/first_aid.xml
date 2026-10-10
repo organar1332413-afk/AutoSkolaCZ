@@ -31,4 +31,5 @@
     <string name="aid_result_correct">Правильно</string>
     <string name="aid_result_wrong">Неправильно. Правильну відповідь виділено.</string>
     <string name="aid_try_again">Спробувати знову</string>
+    <string name="aid_exam_warning">Формулювання іспиту, не сучасна медична інструкція.</string>
 </resources>

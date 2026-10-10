@@ -31,4 +31,5 @@
     <string name="aid_result_correct">Správně</string>
     <string name="aid_result_wrong">Nesprávně. Správná odpověď je označena.</string>
     <string name="aid_try_again">Zkusit znovu</string>
+    <string name="aid_exam_warning">Znění testu, ne současný lékařský návod.</string>
 </resources>
