@@ -133,7 +133,7 @@ class FirstAidNavigationTest {
     }
     @Test fun nextCardBackAlsoPreservesCategoryAndCatalogScroll() {
         launch()
-        compose.onNodeWithTag("aid-category-resuscitation").performClick()
+        compose.onNodeWithTag("aid-category-all").performClick()
         compose.onNodeWithTag("aid-grid").performScrollToIndex(4)
         val before = compose.onNodeWithTag("aid-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
         compose.onNodeWithTag("aid-C05").performClick()
@@ -141,7 +141,7 @@ class FirstAidNavigationTest {
         compose.onNodeWithTag("aid-next").performClick()
         compose.onNodeWithTag("aid-detail-C06").assertIsDisplayed()
         compose.runOnIdle { compose.activity.onBackPressedDispatcher.onBackPressed() }
-        compose.onNodeWithTag("aid-category-resuscitation").assertIsSelected()
+        compose.onNodeWithTag("aid-category-all").assertIsSelected()
         val after = compose.onNodeWithTag("aid-grid").fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange].value()
         assertEquals(before, after, 0.001f)
     }
