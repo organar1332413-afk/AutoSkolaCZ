@@ -77,10 +77,12 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
 /** Original text is unchanged. Hit testing uses the laid-out character under the finger. */
 @Suppress("DEPRECATION")
 @Composable fun CzechLearningText(value: String, policy: WordTranslationPolicy,
-    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier, lookupPhrases: List<String> = emptyList(), textStyle: androidx.compose.ui.text.TextStyle? = null) {
+    onWord: (LearningWordSelection) -> Unit, prominent: Boolean = false, modifier: Modifier = Modifier, lookupPhrases: List<String> = emptyList(), textStyle: androidx.compose.ui.text.TextStyle? = null,
+    annotatedText: AnnotatedString = AnnotatedString(value)) {
+    require(annotatedText.text == value) { "Formatting must preserve original text and word offsets" }
     val style = (textStyle ?: if(prominent) MaterialTheme.typography.titleLarge else MaterialTheme.typography.bodyLarge)
         .copy(color = MaterialTheme.colorScheme.onSurface)
-    if(!policy.allowsLookup) { Text(value, modifier, style = style); return }
+    if(!policy.allowsLookup) { Text(annotatedText, modifier, style = style); return }
     var layout by remember(value) { mutableStateOf<TextLayoutResult?>(null) }
     var origin by remember { mutableStateOf(androidx.compose.ui.geometry.Offset.Zero) }
     val tokens = remember(value) { czechWordRanges(value) }
@@ -96,7 +98,7 @@ data class LearningWordSelection(val token: String, val boundsInWindow: IntRect)
         onWord(LearningWordSelection(phrase ?: token.value, IntRect(position.left.roundToInt(), position.top.roundToInt(),
             position.right.roundToInt(), position.bottom.roundToInt())))
     }
-    ClickableText(AnnotatedString(value), modifier.onGloballyPositioned { origin = it.positionInWindow() }
+    ClickableText(annotatedText, modifier.onGloballyPositioned { origin = it.positionInWindow() }
         .semantics { customActions = tokens.distinctBy { it.value }.map { token ->
             CustomAccessibilityAction(context.getString(R.string.word_translation_action, token.value)) { select(token); true }
         } }, style = style, onTextLayout = { layout = it }, onClick = { offset ->

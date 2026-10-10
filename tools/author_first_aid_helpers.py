@@ -2,6 +2,7 @@
 from pathlib import Path
 import json, hashlib
 from author_first_aid import tri, OUT
+from first_aid_option_helpers import OPTIONS
 
 # Question and correct-answer helpers, not replacement official texts.
 ROWS = [
@@ -55,17 +56,22 @@ tri('Předmět ponech v ráně, ošetři okolní krvácení a zajisti životní 
 tri('Úraz hlavy ohrožuje následným bezvědomím. Bolest zad a porucha citlivosti ukazují na páteř či míchu; manipuluj jen pro zajištění životních funkcí.','Травма головы угрожает последующей потерей сознания. Боль в спине и нарушение чувствительности указывают на позвоночник или спинной мозг; перемещают лишь ради жизненных функций.','Травма голови загрожує подальшою втратою свідомості. Біль у спині й порушення чутливості вказують на хребет або спинний мозок; переміщують лише заради життєвих функцій.'),
 tri('Nedýchajícímu motocyklistovi test doporučuje sejmutí přilby ve dvou se stabilizací hlavy. U reagujícího se zlomeninou sleduj vědomí a dýchání.','Не дышащему мотоциклисту тест рекомендует снять шлем вдвоём с удержанием головы. У реагирующего с переломом наблюдай сознание и дыхание.','Мотоциклісту, який не дихає, тест рекомендує зняти шолом удвох з утриманням голови. У того, хто реагує та має перелом, спостерігай свідомість і дихання.'),
 tri('Praktické rozšíření: tato karta nemá vlastní RP v souboru 35 otázek.','Практическое дополнение: у карточки нет своего RP в наборе 35 вопросов.','Практичне доповнення: картка не має власного RP у наборі 35 питань.'),
-tri('RP1102024 · B: nejprve zastav masivní krvácení, poté zjisti stav druhého, volej ZZS a zajisti místo.','RP1102024 · B: сначала останови массивное кровотечение, затем проверь второго, вызови скорую и обезопась место.','RP1102024 · B: спочатку зупини масивну кровотечу, потім перевір другого, виклич швидку та убезпеч місце.'),
+tri('nejprve zastav masivní krvácení, poté zjisti stav druhého, volej ZZS a zajisti místo.','сначала останови массивное кровотечение, затем проверь второго, вызови скорую и обезопась место.','спочатку зупини масивну кровотечу, потім перевір другого, виклич швидку та убезпеч місце.'),
 tri('Při bolesti břicha a žízni po nehodě nepodávej žádné nápoje, ani přes naléhání.','При боли в животе и жажде после ДТП не давай пить, даже если настаивает.','При болю в животі та спразі після ДТП не давай пити, навіть якщо наполягає.'),
-tri('RP1309001 · B: zahaj masáž i v nevýhodné poloze při zaklínění, pokud nelze rychle vyprostit.','RP1309001 · B: начни массаж даже в неудобной позе при зажатии, если быстрое извлечение невозможно.','RP1309001 · B: почни масаж навіть у незручній позі при затисненні, якщо швидке вивільнення неможливе.'),
-tri('RP1102011 · A: test uvádí „5 min.“ pro nezvratné změny mozkové tkáně.','RP1102011 · A: тест указывает «5 мин.» до необратимых изменений ткани мозга.','RP1102011 · A: тест вказує «5 хв.» до незворотних змін тканини мозку.'),
+tri('zahaj masáž i v nevýhodné poloze při zaklínění, pokud nelze rychle vyprostit.','начни массаж даже в неудобной позе при зажатии, если быстрое извлечение невозможно.','почни масаж навіть у незручній позі при затисненні, якщо швидке вивільнення неможливе.'),
+tri('test uvádí „5 min.“ pro nezvratné změny mozkové tkáně.','тест указывает «5 мин.» до необратимых изменений ткани мозга.','тест вказує «5 хв.» до незворотних змін тканини мозку.'),
 ]
 
 def main():
     originals=json.loads((OUT/'official-questions.json').read_text())['questions'];byid={q['id']:q for q in originals};rows=[]
+    assert set(OPTIONS) == set(byid), 'Option helpers must cover exactly the official questions'
     for cid,qr,qu,ar,au in ROWS:
         q=byid[cid];a=next(o for o in q['options'] if o['correct'])
+        assert set(OPTIONS[cid]) == {o['label'] for o in q['options']}, cid
+        options={label:dict(ru=ru,uk=uk) for label,(ru,uk) in OPTIONS[cid].items()}
+        assert all(value['ru'].strip() and value['uk'].strip() for value in options.values()), cid
         rows.append(dict(id=cid, question=tri(q['questionCs'],qr,qu), answer=tri(a['textCs'],ar,au),
+            options=options,
             sourceSha256=hashlib.sha256(json.dumps(q,ensure_ascii=False,sort_keys=True).encode()).hexdigest(), review='DRAFT_TRANSLATION_REVIEW_REQUIRED'))
     (OUT/'question-helpers.json').write_text(json.dumps(dict(schemaVersion=1,questions=rows),ensure_ascii=False,indent=2)+'\n')
     cards=json.loads((OUT/'cards.json').read_text())

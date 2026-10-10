@@ -19,6 +19,18 @@ class FirstAidContentTest {
         assertEquals(b.questions.map { it.id }.toSet(), b.cards.flatMap { it.questionIds }.toSet())
         b.questions.forEach { q -> assertEquals(1, q.options.count { it.correct }); assertTrue(b.cardsFor(q.id).isNotEmpty()) }
     }
+    @Test fun all104OriginalAlternativesHaveOfflineRussianAndUkrainianHelpers() {
+        val b = bundle()
+        assertEquals(104, b.questions.sumOf { it.options.size })
+        b.questions.forEach { q -> q.options.forEach { option ->
+            assertTrue("${q.id}/${option.label}/ru", option.helper("ru")!!.isNotBlank())
+            assertTrue("${q.id}/${option.label}/uk", option.helper("uk")!!.isNotBlank())
+            assertNull(option.helper(null))
+            val numbers = Regex("\\d+").findAll(option.cs).map { it.value }.toList()
+            listOf(option.ru, option.uk).forEach { assertEquals(numbers, Regex("\\d+").findAll(it).map { n -> n.value }.toList()) }
+        } }
+        assertEquals(listOf("A", "B"), b.questions.single { it.id == "RP1102018" }.options.map { it.label })
+    }
     @Test fun languageHelpersDoNotDependOnInterfaceAndCsOnlyHidesThem() {
         val card = bundle().cards.first()
         assertNull(card.title.helper(null)); assertEquals("Обязанность помочь и безопасность",card.title.helper("ru"))

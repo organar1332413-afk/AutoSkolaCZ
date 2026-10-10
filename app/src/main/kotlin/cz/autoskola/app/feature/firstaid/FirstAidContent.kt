@@ -16,7 +16,9 @@ data class AidText(val cs: String, val ru: String, val uk: String) {
 data class AidCard(val id: String, val category: String, val title: AidText, val summary: AidText,
     val examSummary: AidText, val clinical: AidText, val badges: List<AidText>, val questionIds: List<String>,
     val image: String, val sourceIds: List<String>, val relatedCards: List<String>)
-data class AidOption(val label: String, val cs: String, val correct: Boolean)
+data class AidOption(val label: String, val cs: String, val correct: Boolean, val ru: String, val uk: String) {
+    fun helper(tag: String?): String? = when(tag) { "ru" -> ru; "uk" -> uk; else -> null }
+}
 data class AidQuestion(val id: String, val question: AidText, val answer: AidText, val options: List<AidOption>) {
     val correct get() = options.single { it.correct }
 }
@@ -46,9 +48,16 @@ object FirstAidContent {
         val questions = asset("official-questions.json").getJSONArray("questions").let { a ->
             (0 until a.length()).map { i -> a.getJSONObject(i).let { q ->
                 val h = helpers.getValue(q.getString("id"))
+                val optionHelpers = h.getJSONObject("options")
                 val options = q.getJSONArray("options").let { o -> (0 until o.length()).map { index ->
-                    o.getJSONObject(index).let { AidOption(it.getString("label"), it.getString("textCs"), it.getBoolean("correct")) }
+                    o.getJSONObject(index).let {
+                        val helper = optionHelpers.getJSONObject(it.getString("label"))
+                        val ru = helper.getString("ru"); val uk = helper.getString("uk")
+                        require(ru.isNotBlank() && uk.isNotBlank())
+                        AidOption(it.getString("label"), it.getString("textCs"), it.getBoolean("correct"), ru, uk)
+                    }
                 } }
+                require(optionHelpers.keys().asSequence().toSet() == options.map { it.label }.toSet())
                 require(h.getJSONObject("question").getString("cs") == q.getString("questionCs"))
                 require(h.getJSONObject("answer").getString("cs") == options.single { it.correct }.cs)
                 AidQuestion(q.getString("id"), h.getJSONObject("question").aidText(), h.getJSONObject("answer").aidText(), options)

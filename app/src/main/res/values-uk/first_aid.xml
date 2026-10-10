@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="aid_official_questions">Офіційні питання · 35 RP</string>
+    <string name="aid_official_questions">Питання eTesty MD ČR · %1$d</string>
     <string name="aid_review_pending">Навчальний проєкт: незалежна медична перевірка ще не проведена.</string>
-    <string name="aid_search">Знайти картку або RP</string>
+    <string name="aid_search">Знайти картку або питання</string>
     <string name="aid_all">Усі</string>
     <string name="aid_resuscitation">СЛР</string>
     <string name="aid_trauma">Травми</string>
@@ -12,7 +12,7 @@
     <string name="aid_image_error">Ілюстрація недоступна.</string>
     <string name="aid_exam_block">До іспиту</string>
     <string name="aid_clinical_block">Сучасні рекомендації</string>
-    <string name="aid_exam_version">MD ČR · 08.10.2026, збігається з 02.04.2026. Формулювання тесту, не сучасна інструкція.</string>
+    <string name="aid_exam_version">eTesty MD ČR · 08.10.2026 / 02.04.2026</string>
     <string name="aid_exact_answers">Точні відповіді та пов’язані питання</string>
     <string name="aid_hide_answers">Приховати відповіді</string>
     <string name="aid_open_question">Відкрити питання повністю</string>
@@ -24,12 +24,12 @@
     <string name="aid_source_error">Не вдалося відкрити джерело.</string>
     <string name="aid_official_variants">Початкові варіанти MD · чеською</string>
     <string name="aid_related_material">Пов’язані навчальні картки</string>
-    <string name="aid_linked_questions">Пов’язані запитання</string>
-    <string name="aid_no_direct_questions">У цій базі з 35 запитань немає окремого запитання з теми.</string>
+    <string name="aid_linked_questions">Питання eTesty MD ČR · %1$d</string>
+    <string name="aid_no_direct_questions">До цієї картки не прив\'язано окремого питання з eTesty.</string>
     <string name="aid_check">Перевірити</string>
     <string name="aid_correct_answer">Правильна відповідь</string>
     <string name="aid_result_correct">Правильно</string>
     <string name="aid_result_wrong">Неправильно. Правильну відповідь виділено.</string>
     <string name="aid_try_again">Спробувати знову</string>
-    <string name="aid_exam_warning">Формулювання іспиту, не сучасна медична інструкція.</string>
+    <string name="aid_exam_warning">Формулювання до іспиту</string>
 </resources>

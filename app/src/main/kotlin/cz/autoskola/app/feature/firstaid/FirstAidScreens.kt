@@ -36,11 +36,17 @@ import cz.autoskola.domain.*
     onWord: (LearningWordSelection) -> Unit, modifier: Modifier = Modifier, prominent: Boolean = false, compact: Boolean = false) {
     Column(modifier, verticalArrangement = Arrangement.spacedBy(PremiumSpace.xxs)) {
         CzechLearningText(value.cs, policy, onWord, prominent, Modifier.testTag("aid-learning-cs"), lookupPhrases = aidLookupPhrases,
-            textStyle = if(compact) MaterialTheme.typography.titleSmall.copy(fontSize = 13.sp, lineHeight = 17.sp) else if(prominent) MaterialTheme.typography.headlineSmall else null)
-        value.helper(tag)?.let { Text(it, Modifier.testTag("aid-learning-helper"),
+            textStyle = if(compact) MaterialTheme.typography.titleSmall.copy(fontSize = 13.sp, lineHeight = 17.sp) else if(prominent) MaterialTheme.typography.headlineSmall else null,
+            annotatedText = aidEmphasized(value.cs))
+        value.helper(tag)?.let { Text(aidEmphasized(it), Modifier.testTag("aid-learning-helper"),
             style = if(compact) MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp, lineHeight = 14.sp) else MaterialTheme.typography.bodyMedium,
             maxLines = if(compact) 2 else Int.MAX_VALUE, overflow = TextOverflow.Ellipsis, color = MaterialTheme.colorScheme.onSurfaceVariant) }
     }
+}
+
+@Composable private fun AidExamCaption() {
+    Text(text(R.string.aid_exam_warning), Modifier.testTag("aid-exam-caption"),
+        style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
 }
 
 @Composable private fun AidReviewNote() {
@@ -57,7 +63,7 @@ import cz.autoskola.domain.*
         Column(Modifier.padding(horizontal = PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(text(R.string.first_aid), Modifier.weight(1f), style = MaterialTheme.typography.headlineSmall)
-                Text("${bundle.cards.size} · ${bundle.questions.size} RP", style = MaterialTheme.typography.labelMedium)
+                Text("${bundle.cards.size} · ${bundle.questions.size}", style = MaterialTheme.typography.labelMedium)
             }
             SearchField(query, { query = it }, text(R.string.aid_search), Modifier.testTag("aid-search"))
             LazyRow(horizontalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
@@ -66,7 +72,7 @@ import cz.autoskola.domain.*
                 }
             }
             AidReviewNote()
-            TextButton(questions, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-all-questions")) { Text(text(R.string.aid_official_questions)) }
+            TextButton(questions, Modifier.heightIn(min = PremiumSize.touch).testTag("aid-all-questions")) { Text(text(R.string.aid_official_questions, bundle.questions.size)) }
         }
         if(filtered.isEmpty()) Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { Text(text(R.string.aid_empty)) }
         else LazyVerticalGrid(GridCells.Adaptive(156.dp), state = grid,
@@ -200,13 +206,13 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
         item("exam") {
             AidSection(text(R.string.aid_exam_block), exam = true) {
                 AidLearning(card.examSummary, tag, policy, select)
-                Text(text(R.string.aid_exam_warning), style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+                AidExamCaption()
             }
         }
         item("question-heading") {
-            Text(text(R.string.aid_linked_questions) + " · ${card.questionIds.size}", style = MaterialTheme.typography.titleMedium)
-            if(card.questionIds.isEmpty()) Text(text(R.string.aid_no_direct_questions), style = MaterialTheme.typography.bodySmall)
+            Text(text(R.string.aid_linked_questions, card.questionIds.size), Modifier.testTag("aid-linked-heading"), style = MaterialTheme.typography.titleMedium)
+            if(card.questionIds.isEmpty()) Text(text(R.string.aid_no_direct_questions), Modifier.testTag("aid-no-direct-questions"),
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         items(card.questionIds, key = { "question-$it" }) { id ->
             AidQuestionTile(bundle.questions.single { it.id == id }, tag) { openQuestion(id) }
@@ -258,14 +264,14 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
     val shown = bundle.questions.filter { q -> query.isBlank() || (q.id + q.question.cs + q.question.helper(tag).orEmpty()).contains(query.trim(), ignoreCase = true) }
     LazyColumn(Modifier.fillMaxSize().testTag("aid-questions"), contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.sm)) {
         item { SearchField(query, { query = it }, text(R.string.aid_search), Modifier.testTag("aid-question-search")) }
-        item { Text(text(R.string.aid_exam_version)); Text("${shown.size} / 35 RP", style = MaterialTheme.typography.labelMedium) }
+        item { Text(text(R.string.aid_official_questions, shown.size), Modifier.testTag("aid-questions-heading")); AidExamCaption() }
         if(shown.isEmpty()) item { Text(text(R.string.aid_empty)) }
         items(shown, key = { it.id }) { q ->
             PremiumCard(Modifier.fillMaxWidth().testTag("aid-rp-${q.id}"), onClick = { open(q.id) }) {
                 Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-                    Text(q.id, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
-                    Text(q.question.cs, style = MaterialTheme.typography.bodyLarge)
-                    q.question.helper(tag)?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+                    Text(q.id, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(aidEmphasized(q.question.cs), style = MaterialTheme.typography.bodyLarge)
+                    q.question.helper(tag)?.let { Text(aidEmphasized(it), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
                 }
             }
         }
@@ -282,6 +288,7 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
     LazyColumn(Modifier.fillMaxSize().testTag("aid-question-detail-${q.id}"), state = rememberLazyListState(),
         contentPadding = PaddingValues(PremiumSpace.lg), verticalArrangement = Arrangement.spacedBy(PremiumSpace.md)) {
         item { Text(q.id, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            AidExamCaption()
             AidLearning(q.question, tag, policy, { selection = it }, prominent = true) }
         items(q.options, key = { it.label }) { option ->
             val correct = checked && option.correct
@@ -302,7 +309,12 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
                         Text(option.label, style = MaterialTheme.typography.labelLarge)
                     }
                     Column(Modifier.weight(1f).padding(top = PremiumSpace.xs)) {
-                        CzechLearningText(option.cs, policy, { selection = it }, modifier = Modifier.testTag("aid-option-text-${option.label}"), lookupPhrases = aidLookupPhrases)
+                        CzechLearningText(option.cs, policy, { selection = it }, modifier = Modifier.testTag("aid-option-text-${option.label}"),
+                            lookupPhrases = aidLookupPhrases, annotatedText = aidEmphasized(option.cs))
+                        option.helper(tag)?.let { helper ->
+                            Text(aidEmphasized(helper), Modifier.padding(top = PremiumSpace.xxs).testTag("aid-option-helper-${option.label}"),
+                                style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
                         if(correct) Text(text(R.string.aid_correct_answer), Modifier.testTag("aid-correct-${option.label}"),
                             style = MaterialTheme.typography.labelMedium)
                     }
@@ -335,9 +347,9 @@ private fun Color.luminanceValue(): Float = 0.2126f * red + 0.7152f * green + 0.
 @Composable private fun AidQuestionTile(q: AidQuestion, tag: String?, open: () -> Unit) {
     PremiumCard(Modifier.fillMaxWidth().testTag("aid-question-${q.id}"), onClick = open) {
         Column(Modifier.padding(PremiumSpace.md), verticalArrangement = Arrangement.spacedBy(PremiumSpace.xs)) {
-            Text(q.question.cs, style = MaterialTheme.typography.bodyLarge, maxLines = 3,
+            Text(aidEmphasized(q.question.cs), style = MaterialTheme.typography.bodyLarge, maxLines = 3,
                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
-            q.question.helper(tag)?.let { Text(it, style = MaterialTheme.typography.bodySmall,
+            q.question.helper(tag)?.let { Text(aidEmphasized(it), style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 2,
                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis) }
             Text(q.id, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)

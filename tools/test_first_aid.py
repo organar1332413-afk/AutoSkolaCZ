@@ -12,6 +12,33 @@ def read(name):
     return json.loads((DATA / name).read_text())
 
 class FirstAidIntegrityTest(unittest.TestCase):
+    def test_all_104_option_helpers_match_labels_and_preserve_every_number(self):
+        questions=read('official-questions.json')['questions']
+        helpers={h['id']:h for h in read('question-helpers.json')['questions']}
+        from first_aid_option_helpers import OPTIONS
+        self.assertEqual(set(helpers),set(OPTIONS))
+        self.assertEqual(104,sum(len(h['options']) for h in helpers.values()))
+        for q in questions:
+            options=helpers[q['id']]['options']
+            self.assertEqual({o['label'] for o in q['options']},set(options))
+            for o in q['options']:
+                for index,tag in enumerate(['ru','uk']):
+                    value=options[o['label']][tag]
+                    self.assertTrue(value.strip(),(q['id'],o['label'],tag))
+                    self.assertEqual(OPTIONS[q['id']][o['label']][index],value)
+                    self.assertEqual(re.findall(r'\d+',o['textCs']),re.findall(r'\d+',value),(q['id'],o['label'],tag))
+                    self.assertNotRegex(value,r'(?i)правильн|správn')
+
+    def test_etesty_labels_and_compact_captions_in_every_interface_language(self):
+        captions=['Formulace ke zkoušce','Formulace ke zkoušce','Формулировка экзамена','Формулювання до іспиту']
+        for folder,caption in zip(['values','values-cs','values-ru','values-uk'],captions):
+            strings={r.attrib['name']:r.text for r in ElementTree.parse(ROOT/f'app/src/main/res/{folder}/first_aid.xml').getroot()}
+            self.assertEqual(caption,strings['aid_exam_warning'])
+            for key in ['aid_linked_questions','aid_official_questions']:
+                self.assertIn('eTesty MD ČR · %1$d',strings[key]);self.assertNotIn('RP',strings[key])
+            self.assertIn('eTesty',strings['aid_no_direct_questions'])
+            self.assertNotIn('инструкция',strings['aid_exam_version'])
+
     def test_exact_contract_and_no_invented_questions(self):
         cards = read('cards.json')['cards']; questions = read('official-questions.json')['questions']
         approved = read('approved-manifest.json')['cards']

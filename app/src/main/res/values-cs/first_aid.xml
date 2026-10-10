@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="aid_official_questions">Oficiální otázky · 35 RP</string>
+    <string name="aid_official_questions">Otázky eTesty MD ČR · %1$d</string>
     <string name="aid_review_pending">Výukový návrh: odborná zdravotnická kontrola dosud neproběhla.</string>
-    <string name="aid_search">Hledat kartu nebo RP</string>
+    <string name="aid_search">Hledat kartu nebo otázku</string>
     <string name="aid_all">Vše</string>
     <string name="aid_resuscitation">KPR</string>
     <string name="aid_trauma">Úrazy</string>
@@ -12,7 +12,7 @@
     <string name="aid_image_error">Ilustrace není dostupná.</string>
     <string name="aid_exam_block">Ke zkoušce</string>
     <string name="aid_clinical_block">Aktuální doporučení</string>
-    <string name="aid_exam_version">MD ČR · 08.10.2026, shodné s 02.04.2026. Znění testu, ne současný návod.</string>
+    <string name="aid_exam_version">eTesty MD ČR · 08.10.2026 / 02.04.2026</string>
     <string name="aid_exact_answers">Přesné odpovědi a související otázky</string>
     <string name="aid_hide_answers">Skrýt odpovědi</string>
     <string name="aid_open_question">Otevřít celou otázku</string>
@@ -24,12 +24,12 @@
     <string name="aid_source_error">Zdroj se nepodařilo otevřít.</string>
     <string name="aid_official_variants">Původní varianty MD · česky</string>
     <string name="aid_related_material">Související výukové karty</string>
-    <string name="aid_linked_questions">Související otázky</string>
-    <string name="aid_no_direct_questions">Téma nemá vlastní otázku v této sadě 35 otázek.</string>
+    <string name="aid_linked_questions">Otázky eTesty MD ČR · %1$d</string>
+    <string name="aid_no_direct_questions">K této kartě není přiřazena žádná samostatná otázka z eTesty.</string>
     <string name="aid_check">Zkontrolovat</string>
     <string name="aid_correct_answer">Správná odpověď</string>
     <string name="aid_result_correct">Správně</string>
     <string name="aid_result_wrong">Nesprávně. Správná odpověď je označena.</string>
     <string name="aid_try_again">Zkusit znovu</string>
-    <string name="aid_exam_warning">Znění testu, ne současný lékařský návod.</string>
+    <string name="aid_exam_warning">Formulace ke zkoušce</string>
 </resources>

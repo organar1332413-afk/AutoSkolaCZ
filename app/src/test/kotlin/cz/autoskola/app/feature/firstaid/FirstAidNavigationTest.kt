@@ -128,7 +128,42 @@ class FirstAidNavigationTest {
             compose.onNodeWithTag("aid-clinical-toggle").assertDoesNotExist()
             compose.waitUntil(10_000) { compose.onAllNodesWithTag("aid-image-ready-${c.id}").fetchSemanticsNodes().isNotEmpty() }
             screenshot("${c.id}.png")
+            compose.onNodeWithTag("aid-detail-${c.id}").performScrollToNode(hasTestTag("aid-linked-heading"))
+            compose.onNodeWithTag("aid-linked-heading").assertTextEquals("Вопросы eTesty MD ČR · ${c.questionIds.size}")
+            if(c.questionIds.isEmpty()) compose.onNodeWithTag("aid-no-direct-questions").assertTextEquals("К этой карточке нет отдельного вопроса из eTesty.")
+            else compose.onNodeWithTag("aid-no-direct-questions").assertDoesNotExist()
             compose.runOnIdle { nav.popBackStack() }
+        }
+    }
+    @Test fun etestyHeadingsAndEmptyCardMessagesFollowUiLanguageIndependentlyOfMaterial() {
+        launch()
+        val locales = listOf(
+            Triple(UiLanguage.CS, "Otázky", "K této kartě není přiřazena žádná samostatná otázka z eTesty."),
+            Triple(UiLanguage.RU, "Вопросы", "К этой карточке нет отдельного вопроса из eTesty."),
+            Triple(UiLanguage.UK, "Питання", "До цієї картки не прив'язано окремого питання з eTesty."))
+        locales.forEach { (ui, heading, empty) ->
+            compose.runOnIdle { settings.value = settings.value.copy(uiLanguage = ui) }
+            compose.onNodeWithTag("aid-all-questions").assertTextEquals("$heading eTesty MD ČR · 35")
+            compose.onNodeWithTag("aid-all-questions").performClick()
+            compose.onNodeWithTag("aid-questions-heading").assertTextEquals("$heading eTesty MD ČR · 35")
+            compose.onNodeWithTag("aid-question-search").performTextInput("RP1102018")
+            compose.onNodeWithTag("aid-questions-heading").assertTextEquals("$heading eTesty MD ČR · 1")
+            compose.runOnIdle { nav.popBackStack() }
+            listOf("C06", "C12").forEach { id ->
+                compose.runOnIdle { nav.navigate(AidRoutes.detail(id)) }
+                val list = compose.onNodeWithTag("aid-detail-$id")
+                list.performScrollToNode(hasTestTag("aid-exam-caption"))
+                compose.onNodeWithTag("aid-exam-caption").assertTextEquals(when(ui) {
+                    UiLanguage.RU -> "Формулировка экзамена"
+                    UiLanguage.UK -> "Формулювання до іспиту"
+                    else -> "Formulace ke zkoušce"
+                })
+                list.performScrollToNode(hasTestTag("aid-no-direct-questions"))
+                compose.onNodeWithTag("aid-linked-heading").assertTextEquals("$heading eTesty MD ČR · 0")
+                compose.onNodeWithTag("aid-no-direct-questions").assertTextEquals(empty)
+                compose.onNodeWithTag("aid-clinical-toggle").assertDoesNotExist()
+                compose.runOnIdle { nav.popBackStack() }
+            }
         }
     }
     @Test fun nextCardBackAlsoPreservesCategoryAndCatalogScroll() {
